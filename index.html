@@ -795,7 +795,7 @@ function initTheme() {
 
 async function loadData() {
   try {
-    const res = await fetch("../data/study-index.json");
+    const res = await fetch("./data/study-index.json");
     const json = await res.json();
     state.generated_at = json.generated_at || "";
     state.counts = json.counts || {};
@@ -967,7 +967,7 @@ async function openScheda(item) {
   document.getElementById("crumbs").innerHTML = `<strong>${escapeHtml(item.theme)}</strong><span class="sep">/</span>${escapeHtml(item.title)}`;
 
   try {
-    const res = await fetch("../" + item.relative_path);
+    const res = await fetch("./" + item.relative_path);
     const text = await res.text();
     const { html, toc } = markdownToHtml(text);
     const related = themedItems(item.theme).filter(i => i.extension !== ".md");
