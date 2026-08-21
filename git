@@ -1,2 +1,0 @@
-cp ~/Downloads/sync_oncologia_dashboard.py ~/Documents/oncologia-concorso-pages/
-chmod +x ~/Documents/oncologia-concorso-pages/sync_oncologia_dashboard.py
