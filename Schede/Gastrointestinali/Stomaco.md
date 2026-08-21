@@ -101,17 +101,19 @@ La scelta di prima linea nella malattia avanzata non resecabile/metastatica dipe
 - **OS**: Mediana 14,39 mesi (zolbetuximab) vs 12,16 mesi (placebo), **HR 0,771 (95% CI 0,615-0,965; p=0,0118)**, corrispondente a una riduzione del rischio di morte del ~23%.
 - **PFS**: 8,0 vs 6,4 mesi (HR 0,79).
 
-Zolbetuximab è stato approvato dalla FDA nel 2024 e rappresenta una nuova opzione target-specifica nel carcinoma gastrico CLDN18.2-positivo. La tossicità principale è gastrointestinale (nausea/vomito), particolarmente nel primo ciclo di trattamento.
+Zolbetuximab è stato approvato dall'EMA il 24 settembre 2024 e dalla FDA il 18 ottobre 2024 (approvazione europea di circa un mese precedente a quella statunitense) e rappresenta una nuova opzione target-specifica nel carcinoma gastrico CLDN18.2-positivo. La tossicità principale è gastrointestinale (nausea/vomito), particolarmente nel primo ciclo di trattamento.
 
-**FGFR2b-sovra-espresso** (≥10% delle cellule tumorali): Il compound **bemarituzumab** ha dimostrato beneficio in studi fase 2-3, con uno studio preliminare (FIGHT phase 2) che mostrava OS 19,2 vs 13,5 mesi (HR 0,60). Tuttavia, il follow-up più lungo rileva un'attenuazione del beneficio e una tossicità oculare caratteristica: **corneal epitheliopathy in qualsiasi grado nel 67% dei pazienti**, con Grade 3-4 nel 24%, reversibile nell'83% dei casi ma che richiede gestione oftalmologica dedicata e possibile interruzione/riduzione di dose. Bemarituzumab non è ancora standard di prima linea consolidato per il carcinoma gastrico (l'assorbimento è lento in ambito europeo).
+**FGFR2b-sovra-espresso** (≥10% delle cellule tumorali): il compound **bemarituzumab** è stato valutato nel trial di fase III **FORTITUDE-101** (1L, FGFR2b+ ≥10%, bemarituzumab+FOLFOX vs placebo+FOLFOX). All'analisi ad interim, il beneficio in OS appariva marcato: ==**HR 0,61 (OS 17,9 vs 12,5 mesi)**==. Tuttavia, un'analisi successiva a follow-up più lungo (214 decessi) ha mostrato un'==**attenuazione sostanziale del beneficio: HR 0,82 (IC95% 0,62-1,08), non più statisticamente significativo, con OS 14,5 vs 13,2 mesi**== — un pattern che ricorda i casi di dissociazione tra analisi precoci e mature già visti in altri contesti oncologici. A questa incertezza di efficacia si aggiunge una tossicità oculare caratteristica: **corneal epitheliopathy in qualsiasi grado nel 67% dei pazienti**, con Grade 3-4 nel 24%, reversibile nell'83% dei casi ma che richiede gestione oftalmologica dedicata e possibile interruzione/riduzione di dose. Bemarituzumab non rappresenta quindi uno standard di prima linea consolidato per il carcinoma gastrico.
+
+> !!Verifica in letteratura — attenzione:!! FORTITUDE-101 mostra un pattern preoccupante di attenuazione del beneficio OS tra analisi ad interim (HR 0,61, risultato inizialmente promettente) e analisi a follow-up più lungo (HR 0,82, non più significativo) — un esempio istruttivo di come i dati precoci possano sovrastimare il beneficio reale. Non presentare bemarituzumab come opzione consolidata sulla base dei soli dati preliminari.
 
 **MSI-H/dMMR avanzato**: In pazienti con malattia avanzata non operabile che non hanno ricevuto terapia neoadiuvante, la doppia immunoterapia CTLA-4/PD-(L)1 (nivolumab+ipilimumab o durvalumab+tremelimumab) rappresenta un'opzione in sviluppo con tassi di risposta molto elevati.
 
 #### Punti chiave
 - **HER2+**: CT + trastuzumab ± pembrolizumab (se CPS≥5); T-DXd in valutazione (DESTINY-Gastric05).
 - **HER2-, PD-L1 CPS≥5**: CT + nivolumab (CheckMate 649, OS HR 0,71) o + pembrolizumab (KEYNOTE-859, OS HR 0,65).
-- **CLDN18.2+**: CT + zolbetuximab (GLOW, OS HR 0,77; approvazione FDA 2024).
-- **FGFR2b≥10%**: Bemarituzumab in sviluppo; tossicità oculare (67% corneal epitheliopathy) non standard.
+- **CLDN18.2+**: CT + zolbetuximab (GLOW, OS HR 0,77; approvazione EMA 09/2024, FDA 10/2024).
+- **FGFR2b≥10%**: Bemarituzumab (FORTITUDE-101) — beneficio OS attenuato da HR 0,61 (interim) a HR 0,82 non significativo (follow-up più lungo); tossicità oculare (67% corneal epitheliopathy) non standard.
 - **MSI-H/dMMR avanzato**: Doppia immunoterapia in sviluppo.
 
 
@@ -172,7 +174,7 @@ Nel carcinoma gastrico resecato la sorveglianza prevede esame clinico ogni 3-6 m
 - **KEYNOTE-585 (pembrolizumab perioperatorio)**: Fallito il primary endpoint su OS nonostante pCR e EFS significativi — trabocchetto classico: pCR non sempre predice OS.
 - **DESTINY-Gastric04**: T-DXd è nuovo standard di **seconda linea HER2+** (OS HR 0,70, -30% rischio morte), ma **attenzione all'ILD** (13,9% G≥3).
 - **GLOW (zolbetuximab CLDN18.2+)**: OS HR 0,77 — prima opzione target-specifica nel gastrico CLDN18.2-positivo (FDA 2024); tossicità principalmente GI (nausea/vomito).
-- **Bemarituzumab (FGFR2b)**: Beneficio promettente ma attenuato al follow-up più lungo; **tossicità oculare (67% corneal) non standard** — non consolidato ancora.
+- **Bemarituzumab/FORTITUDE-101 (FGFR2b)**: OS HR 0,61 all'interim → HR 0,82 non significativo al follow-up più lungo (attenuazione marcata); **tossicità oculare (67% corneal) non standard** — non consolidato ancora.
 - **MSI-H/dMMR**: Altissima sensibilità a doppia immunoterapia (NEONIPIGA/INFINITY pCR 59-60%) senza chemioterapia aggiuntiva — paradigm shift in sviluppo per non-operative management.
 - **HDGC (CDH1)**: Gastrectomia totale profilattica nei portatori asintomatici.
 
@@ -181,7 +183,7 @@ Nel carcinoma gastrico resecato la sorveglianza prevede esame clinico ogni 3-6 m
 
 - Non confondere PD-L1 **TAP** (perioperatorio, ~90% positivi) con **CPS** (malattia avanzata) — sono due punteggi distinti, non intercambiabili, eseguiti con metodiche diverse.
 - Non affermare che KEYNOTE-585 sia standard perioperatorio solo perché ha OS numericamente superiore — ha fallito il p<0,05 su OS (HR 0,86, p>0,05).
-- Non utilizzare bemarituzumab come standard di prima linea in FGFR2b-positivo — beneficio ancora incerto in fase 3, tossicità oculare severa.
+- Non utilizzare bemarituzumab come standard di prima linea in FGFR2b-positivo — FORTITUDE-101 mostra attenuazione del beneficio OS da HR 0,61 (interim) a HR 0,82 non significativo (follow-up più lungo), oltre a tossicità oculare severa.
 - Non indicare trifluridina/tipiracil in monoterapia in carcinoma gastrico avanzato HER2+ — è riservato al HER2-negativo, dove ramucirumab e T-DXd (quest'ultimo in HER2+ dopo trastuzumab) rimangono le opzioni consolidate.
 - Non dimenticare la **laparoscopia stadiativa con citologia peritoneale** prima della terapia perioperatoria in stadio localmente avanzato — è un passo fondamentale per escludere carcinosi occulta.
 - Non usare capecitabina in monoterapia in carcinosi peritoneale — PRODIGE 7 (HIPEC+citoriduzione nel CRC) dimostra l'inefficacia, è ragionevole estendere il concetto al gastrico.
