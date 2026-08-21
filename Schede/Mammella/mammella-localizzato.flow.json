@@ -1,0 +1,78 @@
+{
+  "id": "mammella-localizzato",
+  "root": { "text": "Carcinoma mammario infiltrante operabile (stadio I–III, M0)" },
+  "gate": { "text": "Valutazione sottotipo biologico", "detail": "HR, HER2, gBRCA, rischio clinico/genomico." },
+  "branches": [
+    {
+      "id": "HR",
+      "label": "HR+/HER2-",
+      "nodes": [
+        { "id": "HR1", "type": "criteria", "text": "Rischio clinico/genomico" },
+        { "id": "HR_low", "type": "outcome", "text": "Rischio basso",
+          "detail": "Chirurgia conservativa/mastectomia + RT secondo criteri. ET adiuvante 5–7(10) anni. OFS solo nell'alto rischio pre-menopausa.",
+          "aifa": "na" },
+        { "id": "HR_int", "type": "criteria", "text": "Rischio intermedio/alto",
+          "detail": "Zona grigia → valutare Oncotype DX / MammaPrint. Rimborsabilità del test genomico variabile a livello regionale in Italia." },
+        { "id": "HR_CT_ET", "type": "criteria", "text": "Indicazione chemioterapia", "detail": "CT adiuvante + ET." },
+        { "id": "HR_ET_solo", "type": "outcome", "text": "ET da sola", "detail": "No indicazione CT.", "aifa": "na" },
+        { "id": "HR_Olap", "type": "outcome", "text": "Olaparib 1 anno (adiuvante)",
+          "detail": "gBRCA1/2+ ad alto rischio, dopo CT adiuvante (OlympiA).",
+          "aifa": "reimbursed" },
+        { "id": "HR_bone", "type": "outcome", "text": "Bifosfonati/denosumab adiuvanti",
+          "detail": "Post-menopausa HR+ in ET, indipendentemente dal T-score (Nota AIFA 79).",
+          "aifa": "reimbursed" }
+      ],
+      "edges": [
+        ["HR", "HR1"], ["HR1", "HR_low"], ["HR1", "HR_int"],
+        ["HR_int", "HR_CT_ET"], ["HR_int", "HR_ET_solo"],
+        ["HR_CT_ET", "HR_Olap"], ["HR_low", "HR_bone"]
+      ]
+    },
+    {
+      "id": "H2",
+      "label": "HER2+",
+      "nodes": [
+        { "id": "H2_size", "type": "criteria", "text": "Stadio / dimensione / N" },
+        { "id": "H2_small", "type": "outcome", "text": "Paclitaxel + Trastuzumab 1 anno",
+          "detail": "T1a/b N0 — CT \"de-escalata\" (schema APT).",
+          "aifa": "reimbursed" },
+        { "id": "H2_std", "type": "criteria", "text": "CT + Trastuzumab 1 anno ± Pertuzumab",
+          "detail": "Stadio I–III con indicazione CT (antraciclina→taxano o TCH); + pertuzumab se N+." },
+        { "id": "H2_NAT", "type": "criteria", "text": "NAT eseguita?" },
+        { "id": "H2_pCR", "type": "outcome", "text": "Completare anti-HER2 ± ET se HR+",
+          "detail": "pCR dopo NAT.",
+          "aifa": "na" },
+        { "id": "H2_residuo", "type": "outcome", "text": "T-DM1 adiuvante",
+          "detail": "Malattia residua dopo NAT (KATHERINE).",
+          "aifa": "reimbursed" }
+      ],
+      "edges": [
+        ["H2", "H2_size"], ["H2_size", "H2_small"], ["H2_size", "H2_std"],
+        ["H2_std", "H2_NAT"], ["H2_NAT", "H2_pCR"], ["H2_NAT", "H2_residuo"]
+      ]
+    },
+    {
+      "id": "TN",
+      "label": "Triplo negativo",
+      "nodes": [
+        { "id": "TN_stage", "type": "criteria", "text": "Stadio II–III?" },
+        { "id": "TN_NAT", "type": "criteria", "text": "NAT: pembrolizumab + CT",
+          "detail": "Stadio II–III o alto rischio (antraciclina/taxano ± platino) — KEYNOTE-522." },
+        { "id": "TN_CT_adiuv", "type": "outcome", "text": "Chirurgia → CT adiuvante",
+          "detail": "Stadio I a più basso rischio, se >1cm e/o N+.",
+          "aifa": "na" },
+        { "id": "TN_resp", "type": "criteria", "text": "Risposta patologica" },
+        { "id": "TN_pCR", "type": "outcome", "text": "Pembrolizumab adiuvante",
+          "detail": "pCR — completa 1 anno di immunoterapia (KEYNOTE-522).",
+          "aifa": "reimbursed" },
+        { "id": "TN_residuo", "type": "outcome", "text": "Capecitabina ± Pembrolizumab",
+          "detail": "Malattia residua (CREATE-X). Se gBRCA1/2+ → Olaparib 1 anno.",
+          "aifa": "reimbursed" }
+      ],
+      "edges": [
+        ["TN", "TN_stage"], ["TN_stage", "TN_NAT"], ["TN_stage", "TN_CT_adiuv"],
+        ["TN_NAT", "TN_resp"], ["TN_resp", "TN_pCR"], ["TN_resp", "TN_residuo"]
+      ]
+    }
+  ]
+}

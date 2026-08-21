@@ -1,0 +1,124 @@
+{
+  "id": "mammella-avanzato",
+  "root": { "text": "Carcinoma mammario metastatico (M1)" },
+  "gate": { "text": "Ri-biopsia primitivo/metastasi", "detail": "Rivalutazione HR, HER2, PD-L1, gBRCA, mutazioni somatiche. Raccomandata alla prima diagnosi di malattia metastatica (variazione HR/HER2 nel 20%/10% dei casi)." },
+  "branches": [
+    {
+      "id": "HR",
+      "label": "HR+/HER2-",
+      "nodes": [
+        { "id": "HR_line1", "type": "criteria", "text": "Endocrino-sensibile? Crisi viscerale?" },
+        { "id": "HR_ET_CDK", "type": "outcome", "text": "AI + CDK4/6i (1ª linea)",
+          "detail": "Endocrino-sensibile — preferenza ribociclib; o Fulvestrant + CDK4/6i in resistenza primaria.",
+          "aifa": "reimbursed" },
+        { "id": "HR_CT", "type": "outcome", "text": "Chemioterapia ± bevacizumab",
+          "detail": "Crisi viscerale / rapido bisogno di risposta. Uso/rimborsabilità di bevacizumab in questo contesto da verificare (indicazione storicamente limitata in Italia).",
+          "aifa": "unknown" },
+        { "id": "HR_line2", "type": "milestone", "text": "Progressione dopo CDK4/6i", "detail": "Biopsia tissutale/liquida." },
+        { "id": "HR_ESR1", "type": "outcome", "text": "Elacestrant / Imlunestrant",
+          "detail": "Mutazione ESR1. Elacestrant approvato EMA 2023, imlunestrant più recente: verificare la rimborsabilità AIFA aggiornata per entrambi.",
+          "aifa": "unknown" },
+        { "id": "HR_PIK3CA_capi", "type": "outcome", "text": "Capivasertib + Fulvestrant",
+          "detail": "PIK3CA/AKT1/PTEN mutati. Approvazione EMA 2024: verificare lo stato di rimborso AIFA aggiornato.",
+          "aifa": "unknown" },
+        { "id": "HR_PIK3CA_alpe", "type": "outcome", "text": "Alpelisib + Fulvestrant",
+          "detail": "PIK3CA mutati, alternativa a capivasertib. Off-label in Italia, NON rimborsata AIFA.",
+          "aifa": "not_reimbursed" },
+        { "id": "HR_BRCA", "type": "outcome", "text": "PARP-inibitori (Olaparib/Talazoparib)",
+          "detail": "gBRCA1/2+ HER2-.",
+          "aifa": "reimbursed" },
+        { "id": "HR_evero", "type": "outcome", "text": "Everolimus + Exemestane",
+          "detail": "Nessuna alterazione target (o ET di seconda linea) — BOLERO-2.",
+          "aifa": "reimbursed" },
+        { "id": "HR_HER2low", "type": "outcome", "text": "Trastuzumab deruxtecan (T-DXd)",
+          "detail": "HER2-low / ultralow. Per l'indicazione HR+/HER2-low attualmente NON rimborsata AIFA (è invece rimborsata per HER2+ e per TNBC HER2-low).",
+          "aifa": "not_reimbursed" },
+        { "id": "HR_ADC", "type": "outcome", "text": "Sacituzumab govitecan / Datopotamab deruxtecan",
+          "detail": "Linee successive. Verificare la rimborsabilità AIFA aggiornata per l'indicazione HR+/HER2-.",
+          "aifa": "unknown" }
+      ],
+      "edges": [
+        ["HR", "HR_line1"], ["HR_line1", "HR_ET_CDK"], ["HR_line1", "HR_CT"],
+        ["HR_ET_CDK", "HR_line2"],
+        ["HR_line2", "HR_ESR1"], ["HR_line2", "HR_PIK3CA_capi"], ["HR_line2", "HR_PIK3CA_alpe"],
+        ["HR_line2", "HR_BRCA"], ["HR_line2", "HR_evero"], ["HR_line2", "HR_HER2low"],
+        ["HR_HER2low", "HR_ADC"]
+      ]
+    },
+    {
+      "id": "H2",
+      "label": "HER2+",
+      "nodes": [
+        { "id": "H2_line1", "type": "outcome", "text": "Taxano + Trastuzumab + Pertuzumab",
+          "detail": "1ª linea standard (CLEOPATRA).",
+          "aifa": "reimbursed" },
+        { "id": "H2_line2", "type": "milestone", "text": "Progressione" },
+        { "id": "H2_TDXd", "type": "outcome", "text": "Trastuzumab deruxtecan (T-DXd)",
+          "detail": "2ª linea (DESTINY-Breast03).",
+          "aifa": "reimbursed" },
+        { "id": "H2_BM", "type": "criteria", "text": "Metastasi encefaliche attive?" },
+        { "id": "H2_tuca", "type": "outcome", "text": "Tucatinib + Trastuzumab + Capecitabina",
+          "detail": "HER2CLIMB. Approvato EMA 2021; iter di rimborso AIFA storicamente lungo per questo farmaco — verificare lo stato attuale.",
+          "aifa": "unknown" },
+        { "id": "H2_TDM1", "type": "outcome", "text": "T-DM1",
+          "detail": "Se non utilizzato prima.",
+          "aifa": "reimbursed" },
+        { "id": "H2_later", "type": "outcome", "text": "T-DM1, lapatinib+capecitabina, CT sequenziale",
+          "detail": "Linee successive.",
+          "aifa": "reimbursed" }
+      ],
+      "edges": [
+        ["H2", "H2_line1"], ["H2_line1", "H2_line2"],
+        ["H2_line2", "H2_TDXd"], ["H2_line2", "H2_BM"],
+        ["H2_BM", "H2_tuca"], ["H2_BM", "H2_TDM1"],
+        ["H2_TDXd", "H2_later"]
+      ]
+    },
+    {
+      "id": "TN",
+      "label": "Triplo negativo",
+      "nodes": [
+        { "id": "TN_line1", "type": "criteria", "text": "PD-L1+? gBRCA1/2+?" },
+        { "id": "TN_PD1", "type": "outcome", "text": "Pembrolizumab + CT",
+          "detail": "PD-L1+ (SP142 o CPS≥10 22C3), 1ª linea (KEYNOTE-355).",
+          "aifa": "reimbursed" },
+        { "id": "TN_atezo", "type": "outcome", "text": "Atezolizumab + nab-paclitaxel",
+          "detail": "Storicamente alternativa PD-L1+ (IMpassion130). Indicazione RITIRATA a livello EMA dopo il fallimento del trial confermativo IMpassion131 (~2021): non più utilizzata come standard, riportata qui solo a scopo di studio/storico.",
+          "aifa": "not_reimbursed", "withdrawn": true },
+        { "id": "TN_PARPi", "type": "outcome", "text": "PARP-inibitori (Olaparib/Talazoparib)",
+          "detail": "gBRCA1/2+, o CT a base di platino.",
+          "aifa": "reimbursed" },
+        { "id": "TN_CT", "type": "outcome", "text": "Chemioterapia sequenziale",
+          "detail": "PD-L1- / BRCA wild-type (taxano ± platino, ± bevacizumab).",
+          "aifa": "na" },
+        { "id": "TN_line2", "type": "milestone", "text": "Progressione" },
+        { "id": "TN_saci", "type": "outcome", "text": "Sacituzumab govitecan",
+          "detail": "ASCENT — attenzione al genotipo UGT1A1*28.",
+          "aifa": "reimbursed" },
+        { "id": "TN_TDXd_TN", "type": "outcome", "text": "Trastuzumab deruxtecan (T-DXd)",
+          "detail": "HER2-low TNBC (DESTINY-Breast04).",
+          "aifa": "reimbursed" },
+        { "id": "TN_otherCT", "type": "outcome", "text": "Altra CT sequenziale",
+          "detail": "Capecitabina, eribulina, vinorelbina.",
+          "aifa": "na" }
+      ],
+      "edges": [
+        ["TN", "TN_line1"],
+        ["TN_line1", "TN_PD1"], ["TN_line1", "TN_atezo"], ["TN_line1", "TN_PARPi"], ["TN_line1", "TN_CT"],
+        ["TN_PD1", "TN_line2"], ["TN_atezo", "TN_line2"], ["TN_PARPi", "TN_line2"], ["TN_CT", "TN_line2"],
+        ["TN_line2", "TN_saci"], ["TN_line2", "TN_TDXd_TN"], ["TN_line2", "TN_otherCT"]
+      ]
+    },
+    {
+      "id": "OLIGO",
+      "label": "Malattia oligometastatica / metastasi encefaliche-ossee",
+      "entry": "root",
+      "nodes": [
+        { "id": "OLIGO_local", "type": "outcome", "text": "Terapie locoregionali + anti-riassorbitivi ossei",
+          "detail": "SRT su tutte le lesioni, chirurgia selezionata; denosumab/zoledronato (Nota AIFA 79).",
+          "aifa": "reimbursed" }
+      ],
+      "edges": [["OLIGO", "OLIGO_local"]]
+    }
+  ]
+}
