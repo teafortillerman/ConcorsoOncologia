@@ -1,139 +1,149 @@
 # Cervice
 
 ## Definizione e inquadramento
-- **Tumore / tema**: carcinoma della cervice uterina — malattia precoce (chirurgia), localmente avanzata (chemioradioterapia), avanzata/metastatica (chemio-immunoterapia).
-- **Ambito clinico**: oncologia ginecologica, integrazione con chirurgia ginecologica, radioterapia e patologia molecolare.
-- **Ultimo aggiornamento**: Congresso Grandangolo 2025 (Bartoletti, CRO Aviano). Non disponibili LG AIOM/ESMO specifiche in questa raccolta.
 
-> **Nota sulla completezza della fonte**: la fonte locale è una presentazione congressuale. Le sezioni su epidemiologia, fattori di rischio e prevenzione sono ben coperte; le sezioni su diagnosi/stadiazione dettagliata e follow-up sono integrate con nozioni standard consolidate. Da aggiornare con linee guida AIOM/ESMO dedicate quando disponibili.
+Il carcinoma della cervice uterina è una malattia con una storia naturale unica tra le neoplasie ginecologiche: è quasi interamente prevenibile, eppure resta un problema di salute pubblica globale enorme per il forte gradiente socio-economico che la caratterizza. Lo spettro clinico va dalla malattia precoce, dove la chirurgia è protagonista, alla malattia localmente avanzata trattata con chemioradioterapia, fino alla malattia avanzata/metastatica dove oggi l'immunoterapia ha cambiato lo scenario terapeutico. La gestione richiede una stretta integrazione tra chirurgia ginecologica, radioterapia e patologia molecolare.
+
+> ++Verifica in letteratura:++ la scheda precedente segnalava l'assenza di linee guida AIOM/ESMO dedicate in questa raccolta. In realtà l'**AIOM ha pubblicato nel 2024 le Linee Guida "Neoplasie dell'Utero: Endometrio e Cervice"** (documento congiunto), e restano disponibili le **ESGO/ESTRO/ESP Guidelines for the management of cervical cancer – Update 2023** (Cibula et al.), oltre alla ESMO CPG Cervical Cancer. Il contenuto di questa scheda è stato quindi integrato e riverificato anche su queste fonti, non più solo sulla presentazione congressuale Grandangolo 2025 (Bartoletti, CRO Aviano). [AIOM](https://www.aiom.it/linee-guida-aiom-2024-neoplasie-dellutero-endometrio-e-cervice/), [ESGO/ESTRO/ESP 2023 (PubMed)](https://pubmed.ncbi.nlm.nih.gov/37127326/).
 
 ## Epidemiologia
-- **2ª neoplasia per incidenza dopo il tumore della mammella nel mondo**; **5ª in Italia**.
-- **99% dei casi correlati a infezione da HPV ad alto rischio (HR)**.
-- **Unica neoplasia ginecologica** con programma di prevenzione primaria (vaccinazione HPV) e secondaria (screening PAP test e HPV test).
-- **Unica neoplasia per cui esiste un programma di eradicazione WHO 2020**: obiettivo incidenza <4 casi/100.000 donne/anno.
-- Forte gradiente socio-economico: incidenza molto più alta nei paesi a basso-medio reddito (LMIC) vs alto reddito (HIC).
+
+A livello mondiale il carcinoma della cervice è la seconda neoplasia per incidenza dopo il tumore della mammella; in Italia scende alla quinta posizione tra le neoplasie femminili. Il dato epidemiologico più rilevante da ricordare è che **il 99% dei casi è correlato a un'infezione da HPV ad alto rischio**: questo rende la cervice l'**unica neoplasia ginecologica dotata di un programma di prevenzione sia primaria (vaccinazione HPV) sia secondaria (screening con PAP test e HPV test)**, ed è anche l'unica per cui esiste un programma di eradicazione promosso dal WHO nel 2020, con l'obiettivo di scendere sotto i 4 casi/100.000 donne/anno. La distribuzione geografica è fortemente diseguale: l'incidenza resta molto più alta nei paesi a basso-medio reddito rispetto ai paesi ad alto reddito, un divario che riflette soprattutto l'accesso a vaccinazione e screening.
 
 ## Fattori di rischio
-- **HPV ad alto rischio (HR)**: 16, 18, 31, 33, 45, 52, 58 — responsabili del 99% dei casi.
-- **Fattori comportamentali**: inizio precoce attività sessuale, multipartner, fumo, immunosoppressione (HIV, trapianti), uso prolungato di contraccettivi orali.
-- **Fattori socio-economici**: basso livello di istruzione, mancato accesso a screening.
-- **Cofattori**: multiparità, co-infezioni sessualmente trasmesse (Chlamydia, HSV-2).
+
+Il fattore causale predominante è l'infezione persistente da **HPV ad alto rischio**, in particolare i genotipi 16, 18, 31, 33, 45, 52 e 58, responsabili insieme del 99% dei casi. A questo si sommano fattori comportamentali che favoriscono l'acquisizione e la persistenza dell'infezione — inizio precoce dell'attività sessuale, partner multipli, fumo, immunosoppressione (HIV, trapianti d'organo) e uso prolungato di contraccettivi orali — e fattori socio-economici come il basso livello di istruzione e il mancato accesso allo screening. Tra i cofattori riconosciuti figurano la multiparità e le co-infezioni sessualmente trasmesse, in particolare Chlamydia trachomatis e HSV-2.
+
+#### Punti chiave
+- **99% dei casi correlato a HPV-HR** (genotipi 16/18/31/33/45/52/58): è il dato epidemiologico più citato in assoluto.
+- Unica neoplasia ginecologica con prevenzione sia primaria (vaccino) sia secondaria (screening); unico programma di eradicazione WHO (obiettivo <4/100.000).
+- Forte gradiente socio-economico: LMIC vs HIC, accesso a vaccino/screening come determinante principale.
 
 ## Prevenzione
-- **Primaria**: vaccinazione HPV (raccomandata a 9-14 anni, catch-up fino a 26 anni; efficacia ridotta oltre). Copertura vaccinale in Italia in aumento ma ancora subottimale.
-- **Secondaria**: 
-  - PAP test ogni 3 anni (25-29 anni).
-  - HPV test (molecolare) ogni 5 anni (30-64 anni) — più sensibile, permette intervallo più lungo.
-  - Screening organizzato in Italia con inviti attivi.
+
+La prevenzione primaria si basa sulla vaccinazione anti-HPV, raccomandata tra i 9 e i 14 anni con possibilità di catch-up fino a 26 anni (l'efficacia si riduce progressivamente oltre questa età, perché aumenta la probabilità di un'esposizione già avvenuta). In Italia la copertura vaccinale è in aumento ma resta ancora subottimale rispetto agli obiettivi di eliminazione. La prevenzione secondaria si articola su due test con intervalli diversi: il PAP test, da ripetere ogni 3 anni nella fascia 25-29 anni, e l'HPV test molecolare, più sensibile e quindi utilizzabile con un intervallo più lungo (ogni 5 anni, 30-64 anni). In Italia lo screening è organizzato con inviti attivi alla popolazione target.
 
 ## Diagnosi
-- **Colposcopia con biopsia**: gold standard per la diagnosi di lesioni precancerose (CIN) e carcinoma invasivo.
-- **Esame istologico**: classificazione WHO 2020; sottotipi principali: squamoso (70-80%), adenocarcinoma (20-25%), adenosquamoso, neuroendocrino, piccole cellule.
-- **Stadiazione pre-trattamento**: 
-  - RM pelvica (valutazione parametri, invasione stromale, linfonodi).
-  - TC torace-addome (stadiazione a distanza).
-  - PET-TC (valutazione linfonodale e a distanza, soprattutto in malattia localmente avanzata).
-  - Esame sotto anestesia (EUA) per stadiazione clinica FIGO.
+
+La colposcopia con biopsia mirata resta il gold standard per la diagnosi delle lesioni precancerose (CIN) e del carcinoma invasivo. All'esame istologico, la classificazione WHO 2020 distingue il carcinoma squamoso (70-80% dei casi) dall'adenocarcinoma (20-25%), oltre a forme più rare come l'adenosquamoso e il neuroendocrino a piccole cellule. Il workup pre-trattamento si basa su RM pelvica (per valutare invasione parametriale e stromale e stato linfonodale), TC torace-addome per la stadiazione a distanza, PET-TC — soprattutto utile in malattia localmente avanzata per la valutazione linfonodale — ed esame sotto anestesia (EUA) per la stadiazione clinica FIGO.
 
 ## Stadiazione
-- **FIGO 2018** (aggiornamento della FIGO 2009):
-  - **IA**: carcinoma microscopico, invasione stromale ≤3 mm (IA1) o 3-5 mm (IA2), estensione orizzontale ≤7 mm.
-  - **IB**: lesione clinica >5 mm di profondità e >7 mm di estensione, limitata alla cervice. IB1: ≤2 cm; IB2: 2-4 cm; IB3: >4 cm.
-  - **II**: estensione oltre la cervice ma non alla parete pelvica o al terzo inferiore della vagina. IIA: senza invasione parametriale; IIB: con invasione parametriale.
-  - **III**: estensione alla parete pelvica e/o terzo inferiore della vagina e/o idronefrosi. IIIA: terzo inferiore vagina; IIIB: parete pelvica e/o idronefrosi; **IIIC: coinvolgimento linfonodale** (indipendentemente dalle dimensioni del tumore).
-  - **IV**: estensione a organi adiacenti (IVA: vescica/retto) o metastasi a distanza (IVB).
-- **Nota critica FIGO 2018**: gli stadi IIIC includono il coinvolgimento linfonodale (N+) anche se l'estensione locale rientra in criteri di stadio inferiore. La presentazione di Bartoletti segnala che gli stadi IIIC FIGO 2018 sono indicati solo se, oltre N+, l'estensione della malattia rientra tra i criteri degli stadi IIIA e IIIB FIGO 2014.
+
+La stadiazione FIGO 2018 ha aggiornato quella del 2009 introducendo, per la prima volta, il coinvolgimento linfonodale come criterio di stadio (stadio IIIC), oltre a suddividere ulteriormente lo stadio IB in base alle dimensioni.
+
+| Stadio | Definizione |
+|---|---|
+| IA1 / IA2 | Carcinoma microscopico, invasione stromale ≤3 mm (IA1) o 3-5 mm (IA2), estensione orizzontale ≤7 mm |
+| IB1 / IB2 / IB3 | Lesione clinica confinata alla cervice, >5 mm di profondità e >7 mm di estensione: ≤2 cm (IB1), 2-4 cm (IB2), >4 cm (IB3) |
+| IIA / IIB | Estensione oltre la cervice, non alla parete pelvica né al terzo inferiore vaginale: senza (IIA) o con (IIB) invasione parametriale |
+| IIIA / IIIB | Terzo inferiore vagina (IIIA); parete pelvica e/o idronefrosi/rene escluso (IIIB) |
+| **IIIC1 / IIIC2** | **Metastasi linfonodali pelviche (IIIC1) o paraortiche (IIIC2)**, indicate con il suffisso "r" (radiologico) o "p" (patologico) |
+| IVA / IVB | Estensione a vescica/retto (IVA) o metastasi a distanza (IVB) |
+
+Il punto concettualmente più importante — e più frequentemente frainteso — della FIGO 2018 è che **lo stadio IIIC si assegna sulla base del solo stato linfonodale (N+), indipendentemente dall'estensione locale del tumore**: una lesione che per estensione locale rientrerebbe in uno stadio IB o IIA, se accompagnata da linfonodi positivi, viene comunque classificata come IIIC. Questo rappresenta una discontinuità importante rispetto alla FIGO 2009, che non includeva lo stato linfonodale tra i criteri di stadio.
+
+#### Punti chiave
+- FIGO 2018 (vs 2009): introduce per la prima volta lo stato linfonodale come criterio di stadio (IIIC).
+- !!IIIC si assegna per il solo N+, indipendentemente dall'estensione locale del tumore!! — una malattia IB/IIA per estensione locale diventa IIIC se linfonodi positivi.
+- IIIC1 = linfonodi pelvici; IIIC2 = linfonodi paraortici; suffisso r/p per modalità di accertamento (radiologico/patologico).
 
 ## Biomarcatori
-- **HPV test**: diagnosi e screening; test di genotipizzazione per HPV 16/18.
-- **p16**: marcato di sopravvivenza cellulare legato a HPV (surrogato di infezione HR).
-- **PD-L1 CPS**: importante nella malattia avanzata per pembrolizumab (KEYNOTE-826).
-- **MMR/MSI**: raro nella cervice (~3-5%), ma se presente può guidare immunoterapia.
-- **HER2**: alterazioni in ~5-15% dei casi (mutazioni/amplificazioni), potenziale target futuro.
+
+L'HPV test guida sia lo screening sia la diagnosi, con la genotipizzazione mirata per HPV 16/18; il p16 è un marcatore surrogato di infezione persistente ad alto rischio. Nella malattia avanzata, il **PD-L1 CPS** è il biomarcatore chiave per l'accesso a pembrolizumab (KEYNOTE-826): a differenza del carcinoma renale, qui il PD-L1 è realmente predittivo di beneficio. L'instabilità dei microsatelliti (MSI-H/dMMR) è rara nella cervice (~3-5%) ma, quando presente, può orientare verso l'immunoterapia anche al di fuori delle indicazioni standard. Le alterazioni di HER2 (mutazioni o amplificazioni) sono presenti in circa il 5-15% dei casi e rappresentano un bersaglio terapeutico emergente, oggi supportato da dati clinici concreti (vedi terapie emergenti più sotto).
 
 ## Terapia della malattia localizzata/localmente avanzata
 
 ### Malattia precoce (IA1-IB2, selezionati IIA)
-- **Chirurgia**: isterectomia radicale (tipo B-C secondo Querleu-Morrow) + linfadenectomia pelvica ± paraortica.
-- **Fertility-sparing**: conizazione/trachelectomia radicale in casi selezionati (IA1 con invasione linfovascolare negativa, IA2-IB1 <2 cm, desiderio di fertilità).
-- **Approccio mininvasivo vs open**: studio LACC (Ramirez 2018) ha dimostrato sopravvivenza inferiore con approccio laparoscopico/robotico (PFS e OS peggiori) → **approccio open rimane standard** per isterectomia radicale.
-- **Radioterapia adiuvante**: se fattori di rischio (margini positivi, linfonodi positivi, parametri invasi) → chemioradioterapia adiuvante con cisplatino.
+
+Lo standard chirurgico è l'isterectomia radicale (tipo B-C secondo Querleu-Morrow) con linfadenectomia pelvica, eventualmente estesa alla paraortica. Nelle pazienti con desiderio di fertilità e caratteristiche favorevoli — IA1 senza invasione linfovascolare, oppure IA2-IB1 <2 cm — si può proporre un approccio fertility-sparing con conizzazione o trachelectomia radicale. Un punto di grande rilevanza pratica riguarda la via di accesso chirurgico: lo studio LACC (Ramirez, NEJM 2018) ha dimostrato che **l'approccio mininvasivo (laparoscopico/robotico) è associato a una sopravvivenza inferiore rispetto alla laparotomia**, sia in termini di PFS sia di OS, un risultato confermato dai dati di registro successivi. Di conseguenza, **l'approccio open rimane lo standard** per l'isterectomia radicale, con la chirurgia mininvasiva da riservare a contesti di studio o casi molto selezionati con adeguata informazione della paziente. In presenza di fattori di rischio post-operatori — margini positivi, linfonodi positivi, invasione parametriale — è indicata la chemioradioterapia adiuvante con cisplatino.
 
 ### Malattia localmente avanzata (IB3-IVA)
-- **Standard storico**: chemioradioterapia concomitante con cisplatino settimanale (40 mg/m², max 70 mg) + radioterapia pelvica + brachiterapia (dose ≥90 Gy al volume target).
-- **Studio INTERLACE (Lorusso, Lancet 2024)**: chemioterapia di induzione (carboplatino+paclitaxel settimanale x6) seguita da chemioradioterapia vs chemioradioterapia da sola. 
-  - **PFS e OS migliorate con induzione**: HR 0,65 per PFS, HR 0,61 per OS.
-  - **Controversie**: braccio di controllo non con IMRT moderna; rischio di tossicità che compromette la radioterapia; possibile controindicazione a IO successiva.
-  - **Opinione dell'autore (Bartoletti)**: potenzialmente utile in contesti con radioterapia subottimale (LMIC), ma con cautela in contesti con radioterapia di alta qualità.
-- **Pembrolizumab in combinazione a chemioradioterapia**: approvato FDA/EMA nel carcinoma localmente avanzato stadio FIGO (2014) III-IVA (oggi in EAP in Italia). Dati da KEYNOTE-826 estesi al setting locale.
+
+Lo standard storico resta la chemioradioterapia concomitante con cisplatino settimanale (40 mg/m², dose massima 70 mg) associata a radioterapia pelvica esterna e brachiterapia, quest'ultima con l'obiettivo di una dose ≥90 Gy al volume target per un controllo locale ottimale. Due novità recenti hanno arricchito questo scenario.
+
+La prima è lo studio **INTERLACE** (Lorusso, Lancet 2024): una chemioterapia di induzione con carboplatino+paclitaxel settimanale per 6 cicli, seguita dalla chemioradioterapia standard, ha mostrato un miglioramento sia di PFS (HR 0,65) sia di OS (HR 0,61) rispetto alla sola chemioradioterapia. Il dato è promettente ma non privo di limiti discussi in letteratura: il braccio di controllo non prevedeva sistematicamente tecniche di IMRT moderna, esiste il rischio che la tossicità dell'induzione comprometta la successiva radioterapia, e non è chiaro se l'induzione controindichi un'immunoterapia successiva. Il parere prevalente è che l'induzione possa essere particolarmente utile nei contesti in cui la qualità della radioterapia disponibile è subottimale, mentre va valutata con più cautela nei centri con radioterapia di alta qualità.
+
+La seconda, e più pratica-modificante, è l'ingresso dell'immunoterapia in questo setting attraverso lo studio **KEYNOTE-A18/ENGOT-cx11/GOG-3047**: pembrolizumab aggiunto alla chemioradioterapia concomitante, seguito da pembrolizumab di mantenimento, in pazienti con malattia localmente avanzata ad alto rischio (FIGO 2014 IB2-IIB con linfonodi positivi, o stadio III-IVA). Nell'analisi finale di sopravvivenza globale (follow-up mediano 29,9 mesi), l'OS a 36 mesi è stata dell'82,6% con pembrolizumab contro il 74,8% del placebo (HR 0,67), con una PFS a 36 mesi del 69,3% contro il 56,9% (HR 0,68). Sulla base di questi dati pembrolizumab+CRT ha ottenuto l'approvazione FDA e successivamente EMA come nuovo standard nella malattia localmente avanzata ad alto rischio.
+
+> !!Verifica in letteratura — attenzione:!! la scheda precedente attribuiva erroneamente questo risultato a **KEYNOTE-826**, definendolo genericamente come "dati estesi al setting locale". Si tratta in realtà di **due studi registrativi distinti**, con acronimi, popolazioni e disegni diversi, da non confondere: **KEYNOTE-826** riguarda la malattia avanzata/metastatica di prima linea (pembrolizumab + chemioterapia ± bevacizumab, vedi sezione dedicata più sotto), mentre **KEYNOTE-A18/ENGOT-cx11/GOG-3047** è lo studio dedicato alla malattia localmente avanzata (pembrolizumab + chemioradioterapia). Sono entrambi pratica-modificanti, ma rispondono a domande cliniche diverse e vanno tenuti ben distinti anche per l'orale. [Lancet (OS results)](https://www.sciencedirect.com/science/article/abs/pii/S0140673624018087), [ASCO Post](https://ascopost.com/issues/october-10-2024/keynote-a18-overall-survival-in-cervical-cancer-improved-by-pembrolizumab-plus-chemoradiotherapy/).
+
+Un trial concettualmente simile ma con esito opposto è il **CALLA** (durvalumab + CRT in malattia localmente avanzata), risultato negativo per PFS: un promemoria utile che non tutte le combinazioni IO+CRT funzionano allo stesso modo, e che i dati vanno sempre riferiti al farmaco e allo studio specifico.
+
+#### Punti chiave
+- Studio LACC: approccio mininvasivo peggiora PFS/OS nell'isterectomia radicale → **open resta lo standard**.
+- INTERLACE: induzione CT prima di CRT migliora PFS (HR 0,65) e OS (HR 0,61), ma con limiti (controllo non-IMRT, rischio tossicità, incertezza su IO successiva).
+- ++KEYNOTE-A18: OS a 36 mesi 82,6% vs 74,8% (HR 0,67) con pembrolizumab+CRT+mantenimento — nuovo standard nella malattia localmente avanzata ad alto rischio, approvato FDA/EMA++.
+- !!Non confondere KEYNOTE-A18 (localmente avanzato, + CRT) con KEYNOTE-826 (avanzato/metastatico, + CT ± bev)!! — sono due trial distinti.
+- CALLA (durvalumab+CRT): negativo — non generalizzare l'effetto positivo dell'IO a tutte le combinazioni con la radioterapia.
+- Dose brachiterapia ≥90 Gy al volume target per controllo locale ottimale.
 
 ## Terapia della malattia avanzata/metastatica
 
 ### Prima linea
-- **Standard storico**: cisplatino+paclitaxel ± bevacizumab (GOG-240, Tewari 2017): OS 16,8 vs 13,3 mesi con bevacizumab.
-- **KEYNOTE-826** (pembrolizumab + cisplatino/carboplatino+paclitaxel ± bevacizumab vs placebo):
-  - **Popolazione**: PD-L1 CPS ≥1 (89% dei pazienti arruolati).
-  - **PFS**: HR 0,62 (10,4 vs 8,2 mesi).
-  - **OS**: HR 0,64 (24,4 vs 16,5 mesi).
-  - **Beneficio maggiore in PD-L1 CPS ≥1**, ma anche in CPS <1 trend favorevole.
-  - **Approvazione**: pembrolizumab approvato in combinazione a terapia a base di platino ± bevacizumab in carcinoma avanzato/recidivo **PD-L1 CPS ≥1**.
-- **Cadonilimab** (anticorpo bispecifico anti-PD-1/CTLA-4): studio COMPASSION-16 in Cina, dati promettenti ma non ancora standard in Europa.
+
+Lo standard storico era la doppietta cisplatino+paclitaxel, con l'aggiunta di bevacizumab supportata dal GOG-240 (Tewari 2017, OS 16,8 vs 13,3 mesi). Il vero cambio di paradigma è arrivato con **KEYNOTE-826** (pembrolizumab + platino/paclitaxel ± bevacizumab vs placebo), condotto in una popolazione a maggioranza PD-L1 CPS ≥1 (89% degli arruolati): la PFS è risultata di 10,4 contro 8,2 mesi (HR 0,62) e l'OS di 24,4 contro 16,5 mesi (HR 0,64), con il beneficio più marcato nei CPS ≥1 ma un trend favorevole anche nei CPS <1. Pembrolizumab è oggi approvato in combinazione a platino ± bevacizumab nella malattia avanzata/recidivante con **PD-L1 CPS ≥1**, che resta il biomarcatore da verificare prima di prescriverlo. In Cina, il **cadonilimab** — un anticorpo bispecifico anti-PD-1/CTLA-4 — ha mostrato nello studio di fase III **COMPASSION-16** (cadonilimab + platino ± bevacizumab) una PFS di 13,3 contro 8,2 mesi (HR 0,62) e un'OS non ancora raggiunta contro 22,8 mesi (HR 0,64), risultati che hanno portato all'approvazione NMPA nel giugno 2025; il farmaco non è però ancora approvato in Europa e non rappresenta uno standard al di fuori della Cina.
 
 ### Seconda linea
-- **Cemiplimab** (EMPOWER-Cervical 1/GOG-3016/ENGOT-cx9, Tewari NEJM 2022):
-  - **OS**: 11,7 vs 8,5 mesi (HR 0,65).
-  - **PD-L1 ≥1%**: OS 12,1 vs 7,7 mesi (HR 0,614).
-  - **PD-L1 <1%**: OS 10,8 vs 7,0 mesi (HR 0,650).
-  - **Primo anti-PD-1 approvato in monoterapia in seconda linea** (indipendentemente da PD-L1).
-- **Tisotumab vedotin** (ADC anti-tissue factor): innovaTV 301, ORR 25%, approvato FDA 2024.
-- **HER2**: alterazioni presenti in ~5-15% (mutazioni/amplificazioni); potenziale target per trastuzumab deruxtecan (T-DXd) in futuro.
+
+Il **cemiplimab** (EMPOWER-Cervical 1/GOG-3016/ENGOT-cx9, Tewari NEJM 2022) è stato il primo anti-PD-1 approvato in monoterapia in seconda linea, indipendentemente dallo stato PD-L1. L'analisi finale di OS, con un follow-up mediano di 30,2 mesi, conferma il beneficio già osservato nell'analisi a interim: OS di 11,7 contro 8,5 mesi nella popolazione totale (HR 0,656), con un beneficio presente sia nell'istotipo squamoso sia nell'adenosquamoso. Il **tisotumab vedotin**, ADC diretto contro il tissue factor, ha mostrato nello studio innovaTV 301 un ORR del 25% ed è oggi approvato non solo dalla FDA (2024) ma anche dalla **Commissione Europea (marzo 2025)** per il carcinoma cervicale recidivante/metastatico pretrattato.
+
+> ++Verifica in letteratura:++ la scheda precedente riportava l'approvazione di tisotumab vedotin come solo FDA 2024. Da segnalare che nel marzo 2025 il farmaco ha ottenuto anche l'**approvazione della Commissione Europea**, ampliando quindi l'accesso anche ai pazienti europei. [Genmab](https://ir.genmab.com/news-releases/news-release-details/tivdakr-tisotumab-vedotin-approved-european-commission).
 
 ### Terapie emergenti
-- **Immunoterapia di combinazione**: nivolumab+ipilimumab, cadonilimab (PD-1/CTLA-4 bispecifico).
-- **ADC**: tisotumab vedotin (tissue factor), altri in sviluppo.
-- **Target molecolari**: HER2, FGFR, altri in fase di studio.
+
+Sul fronte HER2, il target un tempo definito solo "potenziale" ha oggi un primo dato clinico solido: nello studio **DESTINY-PanTumor02**, la coorte cervicale trattata con trastuzumab deruxtecan (T-DXd) ha mostrato un ORR complessivo del 50% (75% nei tumori IHC 3+), con una durata di risposta mediana di 14,2 mesi e una PFS mediana di 7,0 mesi — un segnale di attività clinicamente rilevante in un setting fortemente pretrattato, sebbene non ancora un'indicazione registrata per questa istologia. Restano in sviluppo le combinazioni di immunoterapia (nivolumab+ipilimumab, il già citato cadonilimab) e altri ADC oltre a tisotumab vedotin.
+
+> ++Verifica in letteratura:++ la scheda precedente citava HER2 solo come "potenziale target futuro" senza dati clinici a supporto. Il DESTINY-PanTumor02 fornisce oggi un primo segnale di attività concreto (ORR 50% nella coorte cervicale, 75% negli IHC 3+), utile da conoscere anche se non ancora un'indicazione approvata. [CancerNetwork](https://www.cancernetwork.com/view/trastuzumab-deruxtecan-showcases-clinical-efficacy-in-her2-gynecological-cancers).
+
+#### Punti chiave
+- KEYNOTE-826: pembrolizumab + CT ± bev in 1L avanzata, PFS HR 0,62, OS HR 0,64 — richiede **PD-L1 CPS ≥1**.
+- Cadonilimab (COMPASSION-16): PFS/OS positive, approvato solo NMPA (Cina) — non ancora standard in Europa.
+- EMPOWER-Cervical 1 (cemiplimab): analisi finale conferma OS HR 0,656 in 2L, indipendente da PD-L1 — primo anti-PD-1 in monoterapia in questo setting.
+- ++Tisotumab vedotin: oltre a FDA 2024, ora approvato anche EMA/Commissione Europea (marzo 2025)++.
+- ++T-DXd (DESTINY-PanTumor02): primo segnale clinico concreto in HER2, ORR 50% (75% se IHC 3+) — non ancora indicazione approvata++.
 
 ## Farmaci e classi rilevanti
 - **Chemioterapia**: cisplatino, carboplatino, paclitaxel, topotecan, gemcitabina, vinorelbina.
 - **Antiangiogenici**: bevacizumab.
-- **Immunoterapia**: pembrolizumab (1L con CT, localmente avanzato con CRT), cemiplimab (2L), nivolumab.
-- **ADC**: tisotumab vedotin.
+- **Immunoterapia**: pembrolizumab (1L con CT, e localmente avanzato con CRT), cemiplimab (2L), cadonilimab (solo Cina).
+- **ADC**: tisotumab vedotin (FDA+EMA), trastuzumab deruxtecan (dati emergenti, non ancora approvato in questa istologia).
 - **Target therapy**: in sviluppo (HER2, FGFR).
 
 ## Tossicità e criticità
-- **Chemioradioterapia**: cistite, proctite, vaginita, mielosoppressione, nefrotossicità (cisplatino).
-- **Bevacizumab**: ipertensione, proteinuria, sanguinamento, perforazione GI, fistole (rischio aumentato in malattia pelvica pretrattata con RT).
+- **Chemioradioterapia**: cistite, proctite, vaginite, mielosoppressione, nefrotossicità (cisplatino).
+- **Bevacizumab**: ipertensione, proteinuria, sanguinamento, perforazione GI, !!fistole — rischio aumentato in malattia pelvica pretrattata con RT!!.
 - **Immunoterapia**: tossicità immuno-relata (colite, epatite, pneumonite, endocrinopatie).
-- **Brachiterapia**: tossicità vaginale, stenosi, fistole (dose-dipendente).
+- **Brachiterapia**: tossicità vaginale, stenosi, fistole, dose-dipendenti.
 
 ## Follow-up
-- **Primi 2 anni**: visita ginecologica + esame obiettivo ogni 3-4 mesi.
-- **Anni 3-5**: ogni 6 mesi.
-- **Dopo 5 anni**: annualmente.
-- **Imaging**: TC/RM solo se sintomi o sospetto clinico; non di routine.
-- **PAP test**: non raccomandato dopo isterectomia radicale; se conservazione della cervice (trachelectomia), PAP test annuale.
+
+Nei primi due anni la visita ginecologica con esame obiettivo va ripetuta ogni 3-4 mesi, per poi diradarsi a ogni 6 mesi tra il terzo e il quinto anno e diventare annuale oltre i 5 anni. L'imaging (TC/RM) non è raccomandato di routine, ma solo in presenza di sintomi o sospetto clinico. Il PAP test non ha indicazione dopo isterectomia radicale, mentre resta annuale nelle pazienti sottoposte a trachelectomia con conservazione della cervice.
 
 ## Punti ad alta resa per orale
 - **HPV e prevenzione**: 99% correlato a HPV-HR; unica neoplasia con prevenzione primaria e secondaria; programma di eradicazione WHO 2020.
-- **Studio LACC**: chirurgia mininvasiva ha peggiorato la sopravvivenza → open rimane standard per isterectomia radicale.
-- **INTERLACE**: chemioterapia di induzione prima di CRT migliora PFS/OS, ma con controversie (braccio di controllo non IMRT, rischio di compromettere RT).
-- **KEYNOTE-826**: pembrolizumab + CT ± bev in 1L avanzata, PD-L1 CPS ≥1 — nuovo standard.
+- **Studio LACC**: chirurgia mininvasiva peggiora la sopravvivenza → open resta standard per isterectomia radicale.
+- **INTERLACE**: induzione CT prima di CRT migliora PFS/OS, ma con controversie (controllo non-IMRT, rischio di compromettere la RT).
+- **KEYNOTE-A18**: pembrolizumab+CRT+mantenimento in localmente avanzato ad alto rischio, OS HR 0,67 — da non confondere con KEYNOTE-826 (avanzato/metastatico).
+- **KEYNOTE-826**: pembrolizumab + CT ± bev in 1L avanzata, PD-L1 CPS ≥1 — standard.
 - **EMPOWER-Cervical 1**: cemiplimab in 2L, primo anti-PD-1 in monoterapia indipendentemente da PD-L1.
-- **Stadiazione FIGO 2018**: IIIC include N+ anche con tumore piccolo — attenzione alla differenza tra FIGO 2014 e 2018.
+- **Tisotumab vedotin**: ADC anti-tissue factor, ora approvato sia FDA sia EMA.
+- **Stadiazione FIGO 2018**: IIIC si assegna per il solo N+, indipendentemente dall'estensione locale — attenzione alla differenza con la FIGO 2009.
 - **Dose brachiterapia**: ≥90 Gy al volume target per controllo locale ottimale.
 
 ## Errori da evitare
-- Non confondere la stadiazione FIGO 2014 con la 2018 (IIIC include N+ nella 2018).
-- Non raccomandare chirurgia mininvasiva per isterectomia radicale (studio LACC).
+- Non confondere KEYNOTE-A18 (localmente avanzato, + CRT) con KEYNOTE-826 (avanzato/metastatico, + CT ± bev): sono due studi distinti.
+- Non confondere la stadiazione FIGO 2014 con la 2018 (IIIC si assegna per N+ indipendentemente dall'estensione locale).
+- Non raccomandare la chirurgia mininvasiva per l'isterectomia radicale (studio LACC).
 - Non dimenticare la brachiterapia come parte integrante del trattamento radiante nella malattia localmente avanzata.
-- Non applicare pembrolizumab in 1L avanzata senza valutare PD-L1 CPS.
+- Non applicare pembrolizumab in 1L avanzata senza valutare il PD-L1 CPS.
 - Non sottovalutare il rischio di fistole con bevacizumab in malattia pelvica pretrattata con RT.
+- Non considerare cadonilimab uno standard europeo: è approvato solo in Cina (NMPA).
 
 ## Fonti
-- AIOM: non disponibile documento dedicato in questa raccolta.
-- ESMO: non disponibile documento dedicato in questa raccolta.
-- Altre fonti: Congresso Grandangolo 2025 (Cervice, Bartoletti M., CRO Aviano) — fonte principale, integrata con nozioni standard consolidate.
+- AIOM: Linee Guida "Neoplasie dell'Utero: Endometrio e Cervice" 2024.
+- ESMO/ESGO: ESGO-ESTRO-ESP Guidelines for the management of cervical cancer – Update 2023 (Cibula D et al.).
+- Altre fonti: Congresso Grandangolo 2025 (Cervice, Bartoletti M., CRO Aviano).
+- Aggiornamenti verificati in questa revisione: Lancet, NEJM, ASCO Post, CancerNetwork, Genmab (vedi link nei blockquote di verifica).
 
 ## Note personali
 - 

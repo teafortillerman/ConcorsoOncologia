@@ -22,30 +22,46 @@
 
 
 ## Chirurgia — resezione epatica
-- **HCC singolo, Child-Pugh A**: resezione **vs termoablazione (RFA/MWA)** — preferire resezione **eccetto ≤2cm** (termoablazione equivalente oncologicamente, migliore costo-efficacia).
-  - OS 5a: **71% (resezione) vs 60% (RFA)**; recidiva locale 7-8% vs 13-32%.
-  - Cut-off costo-efficacia: RFA dominante <2cm; resezione costo-efficace 3-5cm; **2-3cm = zona grigia**.
-- **HCC multinodulare (2-3 noduli), buona funzione epatica**: resezione **raccomandazione FORTE** su TACE — OS 5a **51-56% vs 18-31%**. Linee guida occidentali (EASL/AASLD) escludono chirurgia in multinodulare; questo documento la ammette per oligonodulare.
-- **Invasione macrovascolare (MVI) intraepatica, non estesa al tronco portale/cava**: resezione **condizionata a favore** su sorafenib — OS 5a **56% vs 13% (RR 4,35)**; mortalità post-operatoria 3-6%.
+
+La resezione epatica rimane una delle opzioni curative fondamentali per l'HCC in fase precoce-intermedia, con risultati superiori rispetto alle terapie locoregionali alternative in specifiche circostanze cliniche.
+
+Nei pazienti con **HCC singolo in stadio BCLC 0-A con funzione epatica preservata (Child-Pugh A)**, la resezione è preferibile alla termoablazione (RFA/MWA) per la maggior parte dei tumori, con l'eccezione dei tumori ≤2 cm per i quali la termoablazione offre risultati oncologici equivalenti con minore morbidità. L'OS a 5 anni è del 71% dopo resezione versus 60% dopo RFA, con una recidiva locale significativamente inferiore dopo resezione (7-8% vs 13-32%). In termini di costo-efficacia, RFA è dominante per tumori <2 cm, la resezione risulta costo-efficace per lesioni 3-5 cm, mentre la fascia 2-3 cm rimane una zona grigia dove la scelta deve considerare fattori locali e preferenze del paziente.
+
+L'**HCC multinodulare (2-3 noduli)** con buona funzione epatica rappresenta un'indicazione importante per la resezione, sulla base dell'==OS a 5 anni del 51-56% versus 18-31% con TACE==. Questa rappresenta un'eccezione significativa alle linee guida occidentali (EASL/AASLD) che generalmente escludono la chirurgia nei tumori multinodulari; tuttavia, nei pazienti ben selezionati con oligonodularità, la resezione offre benefici oncologici robusti.
+
+L'**invasione macrovascolare intraepatica (MVI)** che non si estende al tronco della vena portale o inferiore rappresenta un'ulteriore indicazione potenziale per la resezione rispetto alla terapia sistemica con sorafenib. In questa popolazione, la resezione è **condizionata a favore**, con un OS a 5 anni del 56% versus 13% con sorafenib (RR 4,35); tuttavia, la mortalità perioperatoria rimane considerevole (3-6%), richiedendo un'attenta selezione dei pazienti e una discussione multidisciplinare.
+
+> ++Verifica in letteratura ESMO 2025:++ La resezione rimane raccomandazione [I, A] per HCC singolo >2 cm in BCLC 0-A; RFA/MWA sono raccomandate per HCC molto piccoli (<2 cm). La resezione è raccomandazione FORTE in HCC multinodulare oligonodulare (2-3 lesioni), contrariamente alle linee guida EASL/AASLD che la escludono categoricamente. La resezione in caso di MVI intraepatica deve essere valutata criticamente dal team MDT per il bilancio rischio-beneficio.
 
 
 ## Trapianto di fegato
-- **Criteri di Milano** (Mazzaferro 1996): HCC **singolo ≤5cm** o **≤3 noduli ciascuno ≤3cm**, senza invasione vascolare/estensione extraepatica.
-- **Criteri estesi** (sopravvivenza attesa >70% a 5a): **UCSF** (singolo ≤6,5cm o ≤3 noduli, maggiore ≤4,5cm, totale ≤8cm), **up-to-seven** (diametro+numero noduli ≤7), **ASAN** (≤5cm, ≤6 noduli), **AFP model** francese (diametro+numero+AFP).
-- **Beneficio del trapianto (BT)**: differenza sopravvivenza attesa con/senza trapianto — minimo in BCLC A precoce (2,8 mesi a 5a), massimo in BCLC B/D. Orizzonte di calcolo raccomandato: **10 anni**.
-- **Trapianto vs alternative in Milano-out**: mortalità **HR 0,58** vs resezione; **HR 0,10** vs sorafenib.
-- **Trapianto di salvataggio (SLT)**: resezione/ablazione + trapianto solo alla recidiva — **condizionata a favore** rispetto a trapianto in prima linea; solo **~1/3** dei pazienti rimane eleggibile al SLT al momento della recidiva; **mortalità operatoria doppia nel SLT** (OR 2,00).
-- **Downstaging + trapianto** (HCC oltre i criteri): **raccomandazione FORTE a favore**. Trial **XXL (Mazzaferro)**: downstaging + sorafenib 3 mesi → trapianto se risposta stabile ≥3 mesi ("test del tempo") → **mortalità 5a HR 0,32**. Tasso di dropout/fallimento downstaging: **21-50%**.
+
+Il trapianto ortotopico (OLT) rimane l'unica opzione curativa per l'HCC che affronti contemporaneamente il tumore e la sottostante malattia epatica cronica, offrendo la miglior prognosi a lungo termine con OS mediana di 10 anni. Tuttavia, data la scarsità della risorsa epatica, la selezione rigorosa dei candidati è critica per massimizzare l'efficacia e la sostenibilità dei programmi di trapianto.
+
+I **criteri di Milano** (Mazzaferro 1996), ancora considerati il riferimento storico, definiscono i pazienti con HCC singolo ≤5 cm o ≤3 noduli ciascuno ≤3 cm, senza invasione vascolare o estensione extraepatica. Questi criteri offrono un'OS a 5 anni del 70% e rimangono il benchmark internazionale più ampiamente adottato.
+
+Tuttavia, i **criteri estesi** riconoscono che pazienti con HCC oltre i criteri di Milano possono comunque beneficiare del trapianto quando l'OS attesa rimane >70% a 5 anni. Tra questi, l'**UCSF** consente singolo ≤6,5 cm o ≤3 noduli (massimo ≤4,5 cm, diametro totale ≤8 cm); l'**up-to-seven** utilizza una formula semplice (diametro massimo + numero di noduli ≤7); l'**ASAN** accetta tumori fino a ≤5 cm con fino a 6 noduli; infine, il modello **AFP** francese incorpora la concentrazione di alfafetoproteina come discriminante biologico aggiuntivo. ==La scelta tra questi criteri rimane contesto-dipendente e deve riflettere la disponibilità di organi, le liste d'attesa e la prognosi biologica di ogni singolo paziente==.
+
+Il **beneficio del trapianto (BT)** — differenza tra la sopravvivenza attesa con e senza trapianto — varia sostanzialmente in base allo stadio: è minimo in BCLC A precoce (2,8 mesi di vantaggio stimato a 5 anni) e massimo in BCLC B-D dove il trapianto offre un'alternativa curativa. L'orizzonte di calcolo raccomandato è di **10 anni**.
+
+Nei pazienti con HCC "Milan-out" (oltre i criteri di Milano), il trapianto offre una mortalità complessiva significativamente ridotta rispetto alle alternative: ==HR 0,58 vs resezione== e ==HR 0,10 vs terapia con sorafenib==, sottolineando il ruolo critico del trapianto come opzione di salvataggio in questo setting.
+
+> ++Verifica in letteratura ESMO 2025:++ OLT è raccomandato per pazienti con HCC che soddisfano i criteri di Milano, quando una recidiva <10% e OS 5a >70% sono attesi [II, A]. I criteri UCSF estesi sono altrettanto accettabili e offrono maggior flessibilità in contesti con organi disponibili. OLT può essere considerato per HCC oltre i criteri di Milano quando sopravvivenza attesa >50% a 5 anni [II, B]. La perdita di criteri di Milano durante l'attesa per OLT è una causa comune di esclusione dai programmi di trapianto.
+- **Trapianto di salvataggio (SLT)**: rappresenta un'alternativa al trapianto in prima linea nei pazienti con HCC entro i criteri di Milano, dove si esegue inizialmente una resezione o ablazione e il trapianto viene differito al momento della recidiva. Sebbene concettualmente vantaggioso per preservare la risorsa epatica in pazienti che potrebbero non recidivare, questa strategia è gravata da significative limitazioni pratiche: solo circa 1/3 dei pazienti che recidiva rimane eleggibile per il trapianto (spesso per perdita dei criteri di Milano durante il periodo di osservazione), e la mortalità operatoria nel SLT è **doppia rispetto al trapianto primario** (OR 2,00). ==Pertanto, pur essendo una strategia teoricamente attraente, la SLT deve essere consigliata selettivamente in contesti favorevoli (pazienti giovani con eccellente prognosi biologica)==.
+- **Downstaging + trapianto** (HCC oltre i criteri): La strategia di downstaging seguito da trapianto rappresenta un'opzione di salvataggio per i pazienti con HCC oltre i criteri di Milano che raggiungono una risposta oncologica stabile. Il trial **XXL (Mazzaferro)** ha stabilito il paradigma del "test del tempo": i pazienti ricevono downstaging (sorafenib per 3 mesi) e vengono trapiantati solo se mantengono una risposta stabile per ≥3 mesi, con l'obiettivo di selezionare biologicamente i candidati migliori. Questo approccio ha determinato un ++beneficio di sopravvivenza globale significativo con HR 0,32 a 5 anni++ rispetto ai controlli storici. Tuttavia, il tasso di fallimento del downstaging rimane elevato (21-50%), con circa 1/3 dei pazienti che rimangono eleggibili al trapianto al momento della recidiva. ==Raccomandazione FORTE a favore del downstaging+trapianto nei pazienti con HCC localizzato oltre i criteri di Milano e buona prognosi biochimica==.
 
 
 ## Terapie locoregionali
-- **Ablazione percutanea (RFA/MWA)**: standard per HCC singolo <2cm, alternativa a resezione (vedi sopra).
-- **SBRT vs TACE** (BCLC-A non operabile): OS comparabile, ma SBRT superiore per PFS 5a (RR 2,00) e controllo locale.
-- **SBRT vs RFA**: OS pari, miglior controllo locale con SBRT (evidenza indiretta).
-- **TACE**: stadio BCLC-B, multinodulare non resecabile/non ablabile (indicazioni classiche non quantificate in dettaglio nella fonte — vedi nota sotto).
-- **TARE/SIRT (Ittrio-90)**: opzione alternativa, costo più elevato (~20.000€ vs TACE 3.686€).
 
-> Nota: la fonte AIOM disponibile non conteneva un Quesito GRADE dedicato specificamente a TACE/TARE con dati di sopravvivenza quantitativi — da integrare con EASL/altre linee guida complete per questi due argomenti specifici.
+L'arsenale locoregionale per l'HCC comprende diverse opzioni, ciascuna indicata in base allo stadio e alle caratteristiche cliniche del paziente. L'**ablazione percutanea con radiofrequenza (RFA) o microonde (MWA)** rimane lo standard per i tumori singoli <2 cm in pazienti con buona funzione epatica, rappresentando un'alternativa non inferiore oncologicamente alla resezione in questa fascia di dimensioni.
+
+La **radioterapia stereotassica corporea (SBRT)** ha dimostrato un ruolo crescente nei pazienti con HCC in stadio BCLC-A non candidati a resezione o ablazione. Confrontata con la TACE tradizionale, la SBRT offre una sopravvivenza globale comparabile ma una progressione libera da malattia significativamente superiore a 5 anni (RR 2,00) e un migliore controllo locale, con un profilo di tossicità accettabile.
+
+L'**embolizzazione transarteriale (TACE)** rimane indicata nel trattamento dell'HCC in stadio BCLC-B e nei tumori multinodulari non resecabili e non ablabili. Rappresenta una terapia di ponte efficace per i pazienti in lista d'attesa per trapianto.
+
+La **radioembolizzazione con microsfere cariche di ittrio-90 (TARE/SIRT)** è emersa come alternativa preferibile a TACE in specifici scenari clinici. ==Secondo le linee guida ESMO 2025, TARE è raccomandato nei tumori singoli ≤8 cm, in particolare nei pazienti in attesa di trapianto di fegato, per il profilo di tossicità inferiore e i migliori tempi di progressione==. Sebbene il costo sia più elevato rispetto a TACE (circa 20.000€ vs 3.686€), il beneficio clinico e la ridotta morbidità supportano questa scelta in contesti selezionati.
+
+> ++Verifica in letteratura ESMO 2025:++ TARE è raccomandato in pazienti con tumori singoli ≤8 cm in attesa di trapianto (livello di evidenza III, A); TACE rimane efficace in stadio BCLC-B non candidato a TARE. Il trial TRACE ha riportato HR per TTP a favore di TARE vs TACE (0,39), con OS mediano di 30,2 mesi con TARE e 15,6 mesi con TACE.
 
 
 ## Terapia sistemica — criteri generali
@@ -64,9 +80,11 @@
 | **SHARP** | Sorafenib | Storico, +3 mesi vs placebo | Ruolo residuale/controindicazioni IO |
 | **REFLECT** | Lenvatinib | Non-inferiore a sorafenib (HR 0,92); PFS/ORR superiori | Preferito a sorafenib se IO controindicata |
 | **CARES-310** | Camrelizumab+Rivoceranib | **23,8 vs 15,2 mesi (HR 0,64)** | Non ancora EMA/FDA; TRAE elevati (81%) |
-| **CheckMate-9DW** | Nivolumab+Ipilimumab | 23,7 vs 20,6 mesi (HR 0,79) | Nessun vantaggio PFS, curve KM si incrociano |
+| **CheckMate-9DW** | Nivolumab+Ipilimumab | 23,7 vs 20,6 mesi (HR 0,79) | ++OS migliorato++, ma nessun vantaggio PFS e curve KM si incrociano dopo ~12 mesi |
 
 - **Criteri di scelta**: in assenza di controindicazioni, preferire sempre una combinazione ICI-based; atezo-bev controindicato se rischio emorragico/varici non trattate; STRIDE se controindicazione a bevacizumab o Vp4 escluso; lenvatinib preferito a sorafenib se IO controindicata.
+
+> ++Verifica in letteratura ESMO 2025:++ HIMALAYA ha dimostrato una sopravvivenza globale a 5 anni del 19,6% vs 9,4% con sorafenib (HR 0,78), rappresentando un significativo beneficio di sopravvivenza prolungata. ==CheckMate-9DW mostra un OS migliorato (HR 0,79) ma le curve di Kaplan-Meier si incrociano dopo ~12 mesi==, suggerendo un vantaggio iniziale ma con divergenza tardiva. ==CARES-310 (camrelizumab-rivoceranib) riporta il miglior OS assoluto (23,8 mesi) ma non è ancora approvato da EMA/FDA==. La tossicità immuno-relata aumenta con le doppie combinazioni di checkpoint inibitori; è critico discutere beneficio-rischio con ogni paziente.
 
 
 ## Terapia della malattia avanzata — seconda linea
@@ -76,11 +94,13 @@
 - Chemioterapia sistemica: **non raccomandata** (nessun beneficio dimostrato in RCT).
 
 
+> !!Verifica in letteratura — attenzione:!! La mortalità operatoria nel SLT (trapianto di salvataggio) è significativamente superiore al trapianto di primo intervallo, con un odds ratio di 2,00. Questo comporta un aumento della morbidità e della mortalità perioperatoria che deve essere pesato contro il beneficio teorico di preservare il fegato nei pazienti che potrebbero non sviluppare recidiva. La perdita di eleggibilità tra i pazienti che recidivano (circa 2/3 dei casi) riduce ulteriormente l'applicabilità pratica di questa strategia.
+
 ## Novità 2025
 - **Triplette immunoterapiche NEGATIVE** ("1+1+1 non fa 3 ma 2"): IMbrave152/SKYSCRAPER-14 (+tiragolumab) e TRIPLET-HCC (+ipilimumab) — nessun beneficio aggiuntivo, il doppietto resta standard.
 - **TACE + immunoterapia in BCLC-B** (EMERALD-1, LEAP-012): miglioramento PFS ma OS non ancora matura, tossicità aumentata — decisione condivisa.
 - **Concetto di "circolarità" del trattamento**: la terapia sistemica può indurre downstaging e rendere resecabile/trapiantabile un HCC inizialmente non resecabile — ESMO ammette OLT dopo downstaging con terapia sistemica inclusi ICI [IV,C], con attenzione al rischio di rigetto se trapianto a breve distanza dall'ultima dose di ICI.
-- **IMbrave050** (adiuvante atezolizumab-bevacizumab dopo resezione/ablazione in alto rischio): beneficio RFS non mantenuto alla seconda analisi ad interim → **trattamento adiuvante non raccomandato** [I,E].
+- **IMbrave050** (adiuvante atezolizumab-bevacizumab dopo resezione/ablazione in alto rischio): sebbene inizialmente promettente nel migliorare la recurrence-free survival, il beneficio non è stato mantenuto alla seconda analisi ad interim, portando all'interruzione prematura dello studio. ==Pertanto, il trattamento adiuvante con immunoterapia o TKI dopo resezione o ablazione non è raccomandato== [I,E], una conclusione allineata con le linee guida ESMO 2025.
 
 
 ## Farmaci e classi rilevanti
@@ -91,10 +111,18 @@
 
 
 ## Tossicità e criticità
-- Bevacizumab: rischio emorragico (screening varici obbligatorio pre-trattamento).
-- Doppia immunoterapia (tremelimumab, ipilimumab): raddoppio tossicità immuno-relata severa.
-- TKI (sorafenib/lenvatinib/regorafenib/cabozantinib): sindrome mano-piede, ipertensione, diarrea, fatigue — profilo differenziale da conoscere.
-- Trapianto/ICI: rischio di rigetto acuto se trapianto a breve distanza dall'ultima dose di immunoterapia.
+
+La gestione delle complicanze è critica per il successo terapeutico dell'HCC. Diverse classi di farmaci presentano profili tossicologici specifici che richiedono monitoraggio attento.
+
+Il **bevacizumab**, sebbene efficace nel combinare con atezolizumab, comporta un significativo ++rischio emorragico++ in pazienti con cirrosi, varici esofagee non controllate o malattia epatica avanzata. Lo ==screening endoscopico delle varici è obbligatorio prima di iniziare== questa terapia.
+
+Le **doppie combinazioni di checkpoint inibitori** (tremelimumab, ipilimumab) sono associate a un raddoppio della tossicità immuno-relata severa (irAE grade ≥3-4) rispetto alle monografie. I pazienti devono essere strettamente monitorati per manifestazioni gastrointestinali, endocrine, polmonari e epatiche.
+
+I **TKI** (sorafenib, lenvatinib, regorafenib, cabozantinib) condividono alcuni effetti avversi comuni (sindrome mano-piede, ipertensione, diarrea, affaticamento) ma presentano profili differenziali importanti che devono guidare la scelta in base alle comorbidità del paziente.
+
+Un'interazione critica riguarda la **combinazione di immunoterapia e trapianto di fegato**: il trapianto eseguito a breve distanza (settimane) dall'ultima dose di immunoterapia comporta un significativo rischio di ==rigetto acuto dell'organo==, richiedendo una pianificazione temporale attenta e discussione multidisciplinare prima di sottoporre a ICI i pazienti candidati al trapianto.
+
+> !!Attenzione critica:!! La tossicità immuno-relata severa con le doppie combinazioni ICI richiede gestione multidisciplinare aggressiva con corticosteroidi ad alte dosi (spesso >20,1 mg/giorno) in circa il 20% dei pazienti. Il timing tra l'ultima dose di ICI e il trapianto di fegato deve essere pianificato attentamente; trasplantare <6-8 settimane dall'ultima dose di ICI aumenta significativamente il rischio di acuta rigetto dell'organo.
 
 
 ## Follow-up

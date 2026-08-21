@@ -1153,7 +1153,7 @@ const AIFA_LABEL = {
 
 function flowJsonUrl(item, flowId) {
   const dir = item.relative_path.slice(0, item.relative_path.lastIndexOf("/") + 1);
-  return "" + dir + flowId + ".flow.json";
+  return "../" + dir + flowId + ".flow.json";
 }
 
 async function renderFlowDiagrams(item) {
@@ -1390,7 +1390,7 @@ function setReaderMode(isReader) {
 
 async function loadData() {
   try {
-    const res = await fetch("data/study-index.json?t=" + Date.now());
+    const res = await fetch("../data/study-index.json?t=" + Date.now());
     const json = await res.json();
     state.generated_at = json.generated_at || "";
     state.counts = json.counts || {};
@@ -1576,7 +1576,7 @@ async function openScheda(item) {
   try {
     let text = mdCache[item.relative_path];
     if (text === undefined) {
-      const res = await fetch("" + item.relative_path + "?t=" + Date.now());
+      const res = await fetch("../" + item.relative_path + "?t=" + Date.now());
       text = await res.text();
       mdCache[item.relative_path] = text;
     }
@@ -1614,7 +1614,7 @@ async function openScheda(item) {
                   <div class="related-card">
                     <div class="rc-cat">${escapeHtml(r.category)}</div>
                     <div class="rc-title">${escapeHtml(r.title)}</div>
-                    <a href="${encodeURI(r.relative_path)}" target="_blank">Apri PDF ${ICONS.externalLink}</a>
+                    <a href="../${encodeURI(r.relative_path)}" target="_blank">Apri PDF ${ICONS.externalLink}</a>
                   </div>
                 `).join("")}
               </div>
@@ -1689,7 +1689,7 @@ function renderThemeOverview(theme) {
             <div class="related-card">
               <div class="rc-cat">${escapeHtml(r.category)}</div>
               <div class="rc-title">${escapeHtml(r.title)}</div>
-              <a href="${encodeURI(r.relative_path)}" target="_blank">Apri PDF ${ICONS.externalLink}</a>
+              <a href="../${encodeURI(r.relative_path)}" target="_blank">Apri PDF ${ICONS.externalLink}</a>
             </div>
           `).join("")}
         </div>

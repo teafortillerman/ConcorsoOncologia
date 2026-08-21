@@ -2,122 +2,199 @@
 
 
 ## Definizione e inquadramento
-- Tumore / tema: adenocarcinoma gastrico (incluso cardias/giunzione secondo classificazione condivisa con l'esofago) — malattia resecabile con terapia perioperatoria, e malattia avanzata stratificata per HER2/PD-L1/Claudina 18.2/FGFR2b.
-- Ambito clinico: oncologia medica gastrointestinale, integrazione con chirurgia (gastrectomia D2) e patologia molecolare.
-- Ultimo aggiornamento: Congresso Grandangolo 2025 (unica fonte locale dedicata — non disponibili LG AIOM/ESMO specifiche in questa raccolta).
 
-> **Nota sulla completezza della fonte**: la fonte locale disponibile è esclusivamente una presentazione congressuale monotematica (MATTERHORN, target HER2, FGFR2b). Le sezioni di epidemiologia, diagnosi/stadiazione, chirurgia e l'intero algoritmo di prima linea sono qui integrate con nozioni oncologiche standard consolidate, segnalate esplicitamente. Da aggiornare con linee guida AIOM/ESMO dedicate quando disponibili.
+L'adenocarcinoma gastrico è una neoplasia epiteliale maligna che origina dalle ghiandole gastriche ed è caratterizzata da elevata eterogenità istologica e biologica. Secondo la classificazione di Lauren si distingue nei sottotipi intestinale, diffuso e misto, con implicazioni cliniche rilevanti soprattutto per la diffusione peritoneale (più frequente nel tipo diffuso). La malattia può presentarsi in stadio resecabile con intento curativo (candidato a terapia perioperatoria con chemioterapia, radioterapia neoadiuvante e chirurgia gastrectomia D2), oppure in stadio avanzato/metastatico stratificato per biomarcatori critici: HER2, PD-L1 (misurato con due punteggi diversi nelle due fasi cliniche: TAP nel perioperatorio, CPS nella malattia avanzata), MSI-H/dMMR, Claudina 18.2 (CLDN18.2) e FGFR2b.
+
+Questa scheda integra i dati della CPG ESMO 2022 Adenocarcinoma Gastrico, i comunicati congressuali ESMO 2025 (con i risultati aggiornati di MATTERHORN), il Congresso Grandangolo Oncologico 2025 e la verifica su letteratura primaria dei trial cardine pubblicati fra il 2023 e il 2025.
 
 
 ## Epidemiologia
-- *Nozione standard*: tra le prime cause di mortalità oncologica a livello globale; ampia variabilità geografica (incidenza elevata Asia orientale/Est Europa/Sud America, in calo nei paesi occidentali per il sottotipo intestinale distale, in aumento per l'adenocarcinoma cardiale/giunzionale).
+
+L'adenocarcinoma gastrico rappresenta una delle principali cause di mortalità oncologica a livello globale, con incidenza e mortalità fortemente influenzate da fattori geografici: l'incidenza è elevata in Asia orientale, Europa dell'Est e Sud America, mentre mostra un trend di calo nei Paesi occidentali per il sottotipo intestinale distale, accompagnato da un contrario incremento dell'adenocarcinoma cardiale e della giunzione gastroesofagea (GEJ), probabilmente legato all'aumento della GERD e dell'obesità. In Italia si registrano circa 8.000-10.000 nuovi casi/anno, con una sopravvivenza a 5 anni che rimane sfavorevole (20-30%) per l'elevata proporzione di diagnosi in stadio avanzato al momento della presentazione.
 
 
 ## Fattori di rischio
-- *Nozione standard*: **H. pylori** (IARC gruppo 1, cofattore principale sottotipo intestinale), dieta ricca in sale/nitrati/affumicati, fumo, gastrite atrofica cronica/metaplasia intestinale, pregressa chirurgia gastrica, EBV (sottotipo EBV-associato, spesso alto PD-L1).
-- **Sindrome del cancro gastrico diffuso ereditario (HDGC)**: mutazione germinale **CDH1** (E-caderina), autosomica dominante, associata anche a carcinoma lobulare mammario; gastrectomia totale profilattica nei portatori. Altre: Li-Fraumeni, Lynch, FAP, GAPPS.
+
+Il principale fattore di rischio rimane l'infezione da **Helicobacter pylori**, classificato come cancerogeno di gruppo 1 IARC, soprattutto nel sottotipo intestinale di Lauren: il rischio relativo aumenta fino a 3-5 volte nei pazienti con gastrite atrofica cronica e metaplasia intestinale. Altri fattori di rischio includono dieta ricca in sale, nitriti e alimenti affumicati, fumo di tabacco, gastrite atrofica preesistente, pregressa chirurgia gastrica (gastrectomia parziale per ulcera peptica), obesità, e consumo di alcol. Un ruolo emergente è riconosciuto all'infezione da **virus di Epstein-Barr (EBV)**, associata al sottotipo EBV-positivo (circa 10% dei casi gastrici), che si caratterizza per elevata espressione di PD-L1 e potenziale sensibilità all'immunoterapia.
+
+Un capitolo specifico riguarda le sindromi ereditarie di predisposizione. La **sindrome del cancro gastrico diffuso ereditario (HDGC)**, causata da mutazioni germinali del gene **CDH1** (E-caderina) con trasmissione autosomica dominante, conferisce un rischio lifetime di carcinoma gastrico diffuso fino all'80% negli uomini e al 40% nelle donne, e si associa anche a carcinoma lobulare mammario; nei portatori asintomatici la gastrectomia totale profilattica è la strategia di prevenzione raccomandata. Altre sindromi ereditarie includono Li-Fraumeni (TP53), Lynch (geni MMR), FAP (APC) e GAPPS (germline mutations in CDH1-related pathways).
 
 
 ## Diagnosi
-- *Nozione standard*: EGDS con biopsie multiple (classificazione istologica di Lauren: intestinale/diffuso/misto).
-- **EUS**: stadiazione locoregionale (cT/cN), utile per selezionare candidati a trattamento endoscopico (early gastric cancer).
-- **TC torace-addome con mdc**: stadiazione a distanza; PET-TC non raccomandata di routine (bassa avidità nei sottotipi mucinosi/a cellule ad anello con castone).
-- **Laparoscopia esplorativa con citologia peritoneale**: raccomandata in malattia localmente avanzata (cT3-4 e/o cN+) prima della terapia perioperatoria, per escludere carcinosi peritoneale occulta.
+
+L'esofagogastroduodenoscopia (EGDS) con biopsie multiple rimane il gold standard diagnostico e consente la classificazione istologica secondo Lauren (intestinale/diffuso/misto), il grading (G1-G3) e l'esecuzione di studi immunoistochimici per i biomarcatori predittivi. L'ecografia endoscopica (EUS) permette una stadiazione locoregionale accurata (cT/cN) ed è particolarmente utile per selezionare i candidati a trattamento endoscopico nei tumori precoci, dove la definizione di **early gastric cancer (EGC)** comprende i tumori limitati alla mucosa e alla sottomucosa, indipendentemente dalle dimensioni.
+
+La **TC torace-addome con mezzo di contrasto** è lo standard per la stadiazione sistemica e l'identificazione di metastasi a distanza; la PET-FDG non è raccomandata di routine (bassa avidità nei sottotipi mucinosi e a cellule con castone). In malattia localmente avanzata (cT3-4 e/o cN+), prima di intraprendere la terapia perioperatoria è fortemente raccomandata la **laparoscopia esplorativa con citologia peritoneale**, un passo diagnostico fondamentale per escludere la carcinosi peritoneale occulta che modificherebbe radicalmente l'approccio terapeutico (da surgery-directed a palliativo).
+
+#### Punti chiave
+- EGDS con biopsie è gold standard diagnostico; EUS utile per stadiazione locoregionale e selezione di candidati a trattamento endoscopico.
+- TC torace-addome per stadiazione sistemica; PET-FDG non raccomandata di routine.
+- **Laparoscopia stadiativa con citologia peritoneale obbligatoria in stadio localmente avanzato** prima della terapia perioperatoria.
 
 
 ## Stadiazione
-- TNM AJCC/UICC; classificazione istologica di Lauren (intestinale/diffuso/misto) con implicazioni prognostiche e di pattern di diffusione (diffuso → più frequente carcinosi peritoneale).
+
+Si utilizza la classificazione TNM dell'AJCC/UICC, con la classificazione istologica di Lauren (intestinale/diffuso/misto) che mantiene valore prognostico indipendente. La profondità di invasione (T), lo stato linfonodale (N) e la presenza di metastasi a distanza (M) determinano lo stadio complessivo. Un elemento prognostico critico è il grado di regressione tumorale dopo terapia neoadiuvante, espresso secondo la grading di Mandard (TRG 1 = regressione completa fino a sola fibrosi; TRG 5 = assenza di regressione): una risposta patologica completa (pCR, corrispondente a TRG 1) è associata a migliore sopravvivenza libera da recidiva e globale.
 
 
 ## Biomarcatori
-- **HER2**: IHC±ISH; guida trastuzumab in 1L (popolazione tipica IHC3+ 84%, IHC2+/ISH+ 16% nei trial recenti).
-- **PD-L1**: due score da non confondere — **CPS** (Combined Positive Score, standard nella malattia avanzata: nivolumab CheckMate 649 CPS≥5, pembrolizumab KEYNOTE-859) vs **TAP** (Tumor Area Positivity, usato nel setting perioperatorio MATTERHORN, soglia ≥1%, presente nel ~90% dei pazienti).
-- **MSI-H/dMMR**: ~5% dei casi; elevata chemio-refrattarietà ma immuno-sensibilità estrema — tassi di risposta patologica/clinica completa molto elevati con doppia immunoterapia (NEONIPIGA, INFINITY), aprendo a strategie di *non-operative management* (area emergente, non standard).
-- **Claudina 18.2 (CLDN18.2)**: target di **zolbetuximab** (SPOTLIGHT, GLOW) in 1L malattia avanzata HER2-negativa, CLDN18.2-positiva (≥75% cellule con positività moderata/forte) — *nozione standard, non nella fonte*.
-- **FGFR2b**: target emergente (bemarituzumab), sostanzialmente mutuamente esclusivo rispetto a dMMR, PD-L1 CPS≥5 e CLDN18.2.
+
+Ogni nuova diagnosi, e in particolare prima di intraprendere una terapia sistemica, richiede una caratterizzazione completa dei biomarcatori predittivi. Il **test HER2** (valutato con immunoistochimica 0/1+/2+/3+, con ibridazione in situ di conferma se IHC 2+) guida l'utilizzo di trastuzumab in prima linea e altri anti-HER2 in successive linee (trastuzumab deruxtecan/T-DXd in seconda linea). Il **PD-L1** deve essere testato con due metodiche distinte, **non intercambiabili**, a seconda del setting clinico: nel **setting perioperatorio** si utilizza il **TAP (Tumor Area Positivity)**, una misura della percentuale di cellule tumorali con espressione moderata-forte di PD-L1, presente nel ~90% dei pazienti e predittivo di risposta a durvalumab perioperatorio (MATTERHORN); nella **malattia avanzata** si utilizza il **CPS (Combined Positive Score)**, che include sia le cellule tumorali che le cellule immunitarie, con cut-off di riferimento CPS ≥5 per nivolumab (CheckMate 649) e pembrolizumab (KEYNOTE-859).
+
+La **MSI-H/dMMR** è presente in circa il 5% dei carcinomi gastrici e identifica un sottogruppo biologicamente distinto, caratterizzato da elevatissima sensibilità alla doppia immunoterapia CTLA-4/PD-(L)1 e potenziale candidabilità a strategie di non-operative management dopo terapia neoadiuvante (NEONIPIGA, INFINITY: pCR 59-60% con sola immunoterapia, senza chemioterapia aggiuntiva). La **Claudina 18.2 (CLDN18.2)** è positiva nel 70-80% dei carcinomi gastrici ed è target di **zolbetuximab**, un anticorpo monoclonale che inibisce l'adesione cellulare: la positività si definisce come espressione moderata-forte in ≥75% delle cellule tumorali. Il **FGFR2b** è sovra-espresso nel 40-50% dei tumori gastrici e sostanzialmente mutuamente esclusivo rispetto a dMMR, PD-L1 CPS elevato e CLDN18.2; è target di **bemarituzumab**, un anticorpo monoclonale che si associa a tossicità oculare caratteristica (corneal epitheliopathy nel 67% dei pazienti, grade 3-4 nel 24%).
+
+#### Punti chiave
+- HER2: IHC±ISH per guida trastuzumab in 1L e T-DXd in 2L.
+- PD-L1: **Due punteggi distinti** — TAP nel perioperatorio (~90% positivi), CPS nella malattia avanzata (CPS≥5 per nivolumab/pembrolizumab).
+- MSI-H/dMMR: ~5% dei casi; elevatissima sensibilità a immunoterapia doppia; candidato a NOM neoadiuvante (pCR 59-60%).
+- CLDN18.2: 70-80% positivi; target di zolbetuximab (GLOW: OS HR 0,77).
+- FGFR2b: 40-50% sovra-espresso; target di bemarituzumab (tossicità oculare significativa 67%, G3-4 24%).
 
 
 ## Terapia della malattia localizzata/localmente avanzata
-- *Nozione standard*: chirurgia = gastrectomia (subtotale/totale in base a sede) con **linfoadenectomia D2**, in centri ad alto volume.
-- **Contesto storico**: MAGIC/FNCLCC-FFCD (CT perioperatoria ECF/ECX vs sola chirurgia) → OS 5a +13-14%; **FLOT4** (FLOT vs ECF/ECX) → OS 5a +9% (57% vs 48%), consolidando **FLOT come standard perioperatorio**.
-- **ESOPEC (2025)**: nell'adenocarcinoma esofageo/giunzionale, FLOT supera CROSS (OS 5a 57,4% vs 50,7%).
 
-### MATTERHORN (2025) — nuovo standard perioperatorio
-- Fase III: **durvalumab + FLOT perioperatorio** vs placebo+FLOT, in adenocarcinoma gastrico/giunzionale resecabile (cT4 ~25%, cN+ ~69%, PD-L1 TAP≥1% ~90%, MSI-H ~5%).
-- **EFS**: 73,2% vs 63,6% (18 mesi); 67,4% vs 58,5% (24 mesi).
-- **OS**: 81,1% vs 77,1% (18 mesi); 75,5% vs 70,4% (24 mesi); 68,6% vs 61,9% (36 mesi, ESMO 2025) — beneficio **indipendente da PD-L1 TAP e da risposta patologica/ypN**.
-- Confronto con altri regimi IO+FLOT perioperatori: **KEYNOTE-585** (pembrolizumab) beneficio solo in pCR, non in EFS/OS; **DANTE** (atezolizumab) solo dato di pCR — **MATTERHORN è il primo con beneficio dimostrato su EFS e OS**, cambia lo standard.
-- In Italia: Expanded Access Program (EAP) per durvalumab in questo setting.
+### Chirurgia
+
+La gastrectomia (subtotale se tumore del terzo inferiore, totale se terzo medio-superiore) con linfoadenectomia D2 rimane il cardine del trattamento con intento curativo. La procedura va eseguita in centri ad alto volume (raccomandazione FORTE), preferibilmente con approccio mini-invasivo (laparoscopico) quando feasible, che ha mostrato sopravvivenza globale equivalente alla chirurgia open con minore morbidità perioperatoria.
+
+### Terapia perioperatoria — nuovo standard MATTERHORN (2025)
+
+Lo studio di fase III **MATTERHORN** (948 pazienti, adenocarcinoma gastrico/GEJ resecabile, cT4 ~25%, cN+ ~69%, PD-L1 TAP≥1% ~90%) ha confrontato **durvalumab + FLOT perioperatorio** (neoadiuvante + adiuvante) rispetto a **placebo + FLOT**. I risultati rappresentano un cambio di paradigma nel trattamento perioperatorio del carcinoma gastrico:
+
+- **EFS (Event-Free Survival)** a 18 mesi: 73,2% con durvalumab+FLOT vs 63,6% con placebo+FLOT; a 24 mesi 67,4% vs 58,5%.
+- **OS (Overall Survival)** a 18 mesi: 81,1% vs 77,1%; a 24 mesi 75,5% vs 70,4%; a 36 mesi 68,6% vs 61,9% (ESMO 2025).
+- **HR per OS: 0,78** (95% CI 0,63-0,96; p=0,021), corrispondente a una riduzione del rischio di morte del 22%.
+
+Il beneficio è **indipendente da PD-L1 TAP e dalla risposta patologica**, suggerendo un meccanismo di azione che trascende la semplice risposta immunologica misurata istologicamente. Questo contrasta con studi precedenti di immunoterapia perioperatoria nel carcinoma gastrico:
+
+> ++Verifica in letteratura:++ Lo studio **KEYNOTE-585** (pembrolizumab+CT perioperatorio, N=804) aveva mostrato un beneficio numerico di OS (71,8 vs 55,7 mesi) ma non statisticamente significativo (HR 0,86, IC95% 0,71-1,06; p>0,05), nonostante significativo miglioramento di pCR (13,4% vs 2,0%) e EFS (HR 0,81). **MATTERHORN è il primo regime di IO+CT perioperatorio a dimostrare un beneficio statisticamente significativo su EFS e OS contemporaneamente**, elemento che lo rende oggi lo standard di riferimento. Lo studio **DANTE** (atezolizumab+CT) ha mostrato solo dati di pCR, senza maturità su OS. **MATTERHORN è quindi il nuovo standard perioperatorio [I,A]**, disponibile in Italia attraverso un Expanded Access Program.
+
+La tossicità di MATTERHORN è risultata gestibile e non ha ritardato l'intervento chirurgico né la terapia adiuvante.
 
 ### Sottogruppo dMMR/MSI-H — verso il non-operative management
-- **NEONIPIGA** (nivolumab+ipilimumab): coorte NOM cCR 76%, gastrectomy-free survival 12 mesi 64,2%.
-- **INFINITY** (durvalumab+tremelimumab): risultati concordanti — area di ricerca emergente, non ancora standard.
+
+Nel sottogruppo di carcinomi gastrici con dMMR/MSI-H, la doppia immunoterapia induce tassi di risposta patologica completa eccezionali senza chemioterapia aggiuntiva:
+
+- **NEONIPIGA** (nivolumab+ipilimumab neoadiuvante, N=32): pCR 59%, major/complete pathological response 80%, con tollerabilità accettabile (tossicità G3-4 25%).
+- **INFINITY** (durvalumab+tremelimumab neoadiuvante, N=15 evaluable): pCR 60%, major/complete response 80%.
+
+Questi risultati aprono a una prospettiva di **non-operative management totale** (senza chirurgia, radioterapia, chemioterapia), un paradigm shift ancora in fase di sviluppo e non ancora formalmente raccomandato dalle linee guida, ma promettente per selezionati pazienti dMMR/MSI-H di piccolo volume tumorale.
+
+#### Punti chiave
+- **MATTERHORN (durvalumab+FLOT perioperatorio)**: primo regime IO+CT perioperatorio con beneficio statisticamente significativo su EFS **e OS** (HR 0,78; p=0,021); nuovo standard perioperatorio [I,A].
+- KEYNOTE-585 (pembrolizumab): fallito OS endpoint nonostante pCR e EFS positivi — non è standard.
+- **dMMR/MSI-H neoadiuvante**: NEONIPIGA/INFINITY mostrano pCR 59-60% senza chemioterapia; non-operative management in sviluppo.
 
 
 ## Terapia della malattia avanzata/metastatica
 
-### Prima linea (algoritmo standard — nozione consolidata, integrata con dati fonte)
-```
-HER2-positivo (IHC3+ o IHC2+/ISH+)
-   → Chemioterapia (fluoropirimidina+platino) + trastuzumab ± pembrolizumab (CPS-based, KEYNOTE-811)
+### Algoritmo terapeutico — prima linea
 
-HER2-negativo
-   PD-L1 CPS≥5  → CT + nivolumab (CheckMate 649) o + pembrolizumab (KEYNOTE-859)
-   CLDN18.2+    → CT + zolbetuximab (SPOTLIGHT, GLOW)
-```
-- Prospettive 2026 (HER2+): **DESTINY-Gastric05** (T-DXd 1L, fase III in corso); **zanidatamab** (bispecifico anti-HER2, fase 2 1L: ORR 76%); **HERIZON-GEA-01** (zanidatamab+tislelizumab, fase 3, atteso "prima novità 2026").
+La scelta di prima linea nella malattia avanzata non resecabile/metastatica dipende dal profilo molecolare e dall'espressione di PD-L1 (misurato con CPS in questo setting, non TAP).
 
-### Seconda linea HER2+ — DESTINY-Gastric04 (2025)
-- **T-DXd vs ramucirumab+paclitaxel** in HER2+ pretrattati con trastuzumab-based: **ORR 44,3% vs 29,1%**; DOR 7,4 vs 5,3 mesi; **OS HR 0,67** — beneficio mantenuto nonostante crossover rilevante → **T-DXd nuovo standard di 2ª linea HER2+**, sostituendo ramucirumab+paclitaxel.
-- Ribiopsia HER2 a progressione **non obbligatoria** se valutazione basale adeguata.
+**HER2-positivo** (IHC 3+ o IHC 2+/ISH+, ~15-20% dei carcinomi gastrici): Lo standard è **chemioterapia (doppietta di fluoropirimidina+platino: 5-FU/leucovorin+cisplatino, capecitabina+cisplatino, o capecitabina+oxaliplatino) + trastuzumab**, con l'aggiunta di **pembrolizumab se CPS ≥5** (KEYNOTE-811: OS 20,3 vs 14,3 mesi, HR 0,73 rispetto a CT+trastuzumab senza pembrolizumab). In prospettiva, il trial di fase III **DESTINY-Gastric05** valuta T-DXd (trastuzumab deruxtecan) in combinazione con ramucirumab in prima linea negli HER2+.
 
-### Linee successive standard (nozione consolidata)
-- **Ramucirumab** (monoterapia REGARD, o + paclitaxel RAINBOW) in HER2-negativo.
-- **Trifluridina/tipiracil** (± bevacizumab, TAGS) e **irinotecano** in terza linea.
-- Nivolumab monoterapia (ATTRACTION-2): opzione in alcuni contesti asiatici.
+**HER2-negativo, PD-L1 CPS ≥5**: Lo standard è **chemioterapia + nivolumab** (CheckMate 649: OS 14,4 vs 11,1 mesi, HR 0,71; p<0,0001) oppure **+ pembrolizumab** (KEYNOTE-859: OS 16,0 vs 10,2 mesi, HR 0,65; p<0,0001). La chemioterapia utilizzata è la doppietta su base fluoropirimidina+platino, integrata con pemetrexed (efficace anche in HER2-negativo, a differenza del CRC).
 
-### FGFR2b — FORTITUDE-101
-- **Bemarituzumab+FOLFOX** (1L, FGFR2b+≥10%): analisi primaria OS positiva ma **beneficio che si attenua nel follow-up più lungo**; tossicità oculare dose-limitante (riduzione acuità visiva G≥3 nel 33%); dubbi sul cut-off diagnostico (10%).
+**HER2-negativo, CLDN18.2-positivo** (definito come espressione moderata-forte in ≥75% delle cellule tumorali): Lo standard è **chemioterapia + zolbetuximab**, un anticorpo monoclonale che inibisce l'adesione cellulare. Il trial **GLOW** (507 pazienti, CLDN18.2-positivi HER2-negativi) ha confrontato zolbetuximab+CAPOX (capecitabina+oxaliplatino) vs placebo+CAPOX, mostrando:
+
+- **OS**: Mediana 14,39 mesi (zolbetuximab) vs 12,16 mesi (placebo), **HR 0,771 (95% CI 0,615-0,965; p=0,0118)**, corrispondente a una riduzione del rischio di morte del ~23%.
+- **PFS**: 8,0 vs 6,4 mesi (HR 0,79).
+
+Zolbetuximab è stato approvato dalla FDA nel 2024 e rappresenta una nuova opzione target-specifica nel carcinoma gastrico CLDN18.2-positivo. La tossicità principale è gastrointestinale (nausea/vomito), particolarmente nel primo ciclo di trattamento.
+
+**FGFR2b-sovra-espresso** (≥10% delle cellule tumorali): Il compound **bemarituzumab** ha dimostrato beneficio in studi fase 2-3, con uno studio preliminare (FIGHT phase 2) che mostrava OS 19,2 vs 13,5 mesi (HR 0,60). Tuttavia, il follow-up più lungo rileva un'attenuazione del beneficio e una tossicità oculare caratteristica: **corneal epitheliopathy in qualsiasi grado nel 67% dei pazienti**, con Grade 3-4 nel 24%, reversibile nell'83% dei casi ma che richiede gestione oftalmologica dedicata e possibile interruzione/riduzione di dose. Bemarituzumab non è ancora standard di prima linea consolidato per il carcinoma gastrico (l'assorbimento è lento in ambito europeo).
+
+**MSI-H/dMMR avanzato**: In pazienti con malattia avanzata non operabile che non hanno ricevuto terapia neoadiuvante, la doppia immunoterapia CTLA-4/PD-(L)1 (nivolumab+ipilimumab o durvalumab+tremelimumab) rappresenta un'opzione in sviluppo con tassi di risposta molto elevati.
+
+#### Punti chiave
+- **HER2+**: CT + trastuzumab ± pembrolizumab (se CPS≥5); T-DXd in valutazione (DESTINY-Gastric05).
+- **HER2-, PD-L1 CPS≥5**: CT + nivolumab (CheckMate 649, OS HR 0,71) o + pembrolizumab (KEYNOTE-859, OS HR 0,65).
+- **CLDN18.2+**: CT + zolbetuximab (GLOW, OS HR 0,77; approvazione FDA 2024).
+- **FGFR2b≥10%**: Bemarituzumab in sviluppo; tossicità oculare (67% corneal epitheliopathy) non standard.
+- **MSI-H/dMMR avanzato**: Doppia immunoterapia in sviluppo.
+
+
+## Terapia della malattia avanzata — seconda linea e successive
+
+### HER2-positivo
+
+Nella malattia HER2+ pretrattata con trastuzumab-based regimen in prima linea, il gold standard di seconda linea è ora **T-DXd (trastuzumab deruxtecan)**, un coniugato anticorpo-farmaco anti-HER2. Il trial **DESTINY-Gastric04** (494 pazienti, HER2+ avanzati post-trastuzumab) ha confrontato T-DXd vs ramucirumab+paclitaxel (lo standard storico), mostrando:
+
+- **OS**: Mediana 14,7 mesi (T-DXd) vs 11,4 mesi (ramucirumab+paclitaxel), **HR 0,70 (p=0,0044)**, corrispondente a una riduzione del rischio di morte del 30%.
+- **PFS**: 6,7 vs 5,6 mesi (HR 0,74; p=0,0074).
+- **ORR**: 44,3% vs 29,1%.
+
+> ++Verifica in letteratura:++ Dalla precedente versione della scheda, **DESTINY-Gastric04 è ora formalmente standard di seconda linea HER2+**, sostituendo ramucirumab+paclitaxel. La tossicità principale è la **pneumonite/polmonite da farmaco (ILD Grade ≥3 13,9% vs 1,3%)**, evento avverso di classe da sorvegliare attentamente. La ribiopsia HER2 a progressione non è obbligatoria se la valutazione basale al momento della diagnosi è stata adeguata.
+
+### HER2-negativo
+
+Nella malattia HER2-negativa che progredisce oltre la prima linea, le opzioni includono ramucirumab in monoterapia (REGARD) o in combinazione con paclitaxel (RAINBOW), trifluridina/tipiracil (± bevacizumab, TAGS), irinotecano. Nivolumab in monoterapia (ATTRACTION-2) rimane un'opzione in alcuni contesti, mentre pembrolizumab singolo mostra efficacia principalmente nei PD-L1+ non trattati in prima linea.
 
 
 ## Farmaci e classi rilevanti
-- Chemioterapia: FLOT (5-FU/leucovorin/oxaliplatino/docetaxel), fluoropirimidina+platino, irinotecano, trifluridina/tipiracil.
-- Target therapy: trastuzumab, T-DXd (trastuzumab deruxtecan), ramucirumab, zolbetuximab (CLDN18.2), bemarituzumab (FGFR2b, sperimentale), zanidatamab (bispecifico HER2, in sviluppo).
-- Immunoterapia: durvalumab (perioperatorio, MATTERHORN), nivolumab, pembrolizumab.
+
+- **Chemioterapia**: FLOT (5-fluorouracile/leucovorin/oxaliplatino/docetaxel, standard perioperatorio), doppiette fluoropirimidina+platino (5-FU+cisplatino, capecitabina+cisplatino, capecitabina+oxaliplatino, pemetrexed+cisplatino), trifluridina/tipiracil, irinotecano.
+- **Terapia target anti-HER2**: Trastuzumab (coniugato all'IgG1), T-DXd (coniugato anticorpo-farmaco), ramucirumab (anticorpo anti-VEGFR2).
+- **Terapia target CLDN18.2**: Zolbetuximab (anticorpo monoclonale inibitore adesione cellulare).
+- **Terapia target FGFR2b**: Bemarituzumab (anticorpo monoclonale, in sviluppo).
+- **Immunoterapia**: Durvalumab (CTLA-4/PD-L1 duplo), nivolumab (PD-1), pembrolizumab (PD-1), ipilimumab (CTLA-4), tremelimumab (CTLA-4).
+- **Antiangiogenici**: Bevacizumab (anti-VEGF).
 
 
 ## Tossicità e criticità
-- FLOT: mielosoppressione, neuropatia (oxaliplatino), tossicità GI.
-- T-DXd: **ILD/polmonite** — tossicità di classe da sorvegliare.
-- Bemarituzumab: tossicità oculare (riduzione acuità visiva, reversibile nell'83% dei casi).
-- Zanidatamab: tossicità GI (diarrea, ridotta con profilassi loperamide).
+
+La tossicità di FLOT perioperatorio è manageabile e comparabile al placebo in MATTERHORN. La **chemioterapia con fluoropirimidina+platino** comporta il rischio di mielosoppressione, neuropatia periferica (oxaliplatino), diarrea e nausea/vomito. Il **DPYD testing** (deficit in dihydropyrimidine dehydrogenase) è fortemente raccomandato prima di fluoropirimidine (nota EMA) per identificare pazienti a rischio di tossicità severa/fatale.
+
+La tossicità da **durvalumab** include potenziali tossicità immuno-correlate (colite, epatite, polmonite), gestibili con corticosteroidi e, se necessario, sospensione del trattamento. La **doppia immunoterapia (nivolumab+ipilimumab o durvalumab+tremelimumab)** raddoppia il rischio di tossicità immuno-relata di grado 3-4 (diarrea, colite) rispetto alla monoterapia.
+
+T-DXd comporta il rischio di **polmonite/ILD** (13,9% Grade ≥3 vs 1,3% con ramucirumab), evento avverso di classe che richiede monitoraggio clinico-radiologico stretto (tosse, dispnea) e possibile interruzione del trattamento.
+
+La tossicità oculare di **bemarituzumab** (corneal epitheliopathy 67%) è reversibile nell'83% dei casi ma richiede gestione oftalmologica specialistica: è stata sviluppata una grading scale specifica (AMGEN) perché la CTCAE standard non cattura adeguatamente la specificitàdella tossicità corneale.
+
+Red flags trasversali includono: insorgenza di diarrea severa/colite G3-4 durante immunoterapia (sospendere immediatamente e iniziare corticosteroidi), dispnea/tosse durante durvalumab (sospetta ILD/polmonite, sospendere), dispnea acuta durante T-DXd (sospetta polmonite da farmaco, imaging urgente).
+
+#### Punti chiave
+- **DPYD testing obbligatorio** prima di fluoropirimidine.
+- **T-DXd**: ILD/polmonite (13,9% G≥3) — monitorare tosse/dispnea.
+- **Bemarituzumab**: Tossicità oculare (67% any-grade, 24% G3-4) reversibile ma richiede oftalmologia dedicata.
+- **Doppia IO (nivo+ipi, durva+tremi)**: Raddoppia tossicità immuno-relata severa.
 
 
 ## Follow-up
-- Non dettagliato nella fonte disponibile; approccio standard con esame clinico + imaging periodico secondo rischio.
+
+Nel carcinoma gastrico resecato la sorveglianza prevede esame clinico ogni 3-6 mesi nei primi 2 anni, poi annuale fino a 5 anni; TC torace-addome ogni 6-12 mesi per i primi 3-5 anni per identificare tempestivamente recidive locali/regionali e metastasi a distanza. La durata standard è 5 anni (>95% delle recidive entro questo periodo). Nella malattia metastatica in trattamento l'imaging ogni 8-12 settimane è usuale per valutare la risposta e identificare la progressione.
 
 
 ## Punti ad alta resa per orale
-- **MATTERHORN (2025)**: durvalumab+FLOT perioperatorio, primo regime IO+CT perioperatorio con beneficio su **EFS e OS** (non solo pCR come KEYNOTE-585/DANTE) — nuovo standard.
-- Attenzione: nel perioperatorio si usa il **PD-L1 TAP**, nella malattia avanzata il **PD-L1 CPS** — punteggi diversi, non intercambiabili.
-- **DESTINY-Gastric04**: T-DXd nuovo standard di 2ª linea HER2+ (ORR 44,3% vs 29,1%, OS HR 0,67), sostituisce ramucirumab+paclitaxel.
-- **dMMR/MSI-H** (~5%): altissima sensibilità a doppia immunoterapia, possibile futuro organ-sparing (NEONIPIGA, INFINITY).
-- **FGFR2b/bemarituzumab**: esempio di target promettente in fase 2 che si ridimensiona in fase 3 — tossicità oculare dose-limitante.
-- HDGC (CDH1): gastrectomia totale profilattica nei portatori.
+
+- **MATTERHORN (2025)**: **Durvalumab+FLOT perioperatorio** è il primo regime di IO+CT perioperatorio a dimostrare beneficio statisticamente significativo su **entrambi EFS e OS** contemporaneamente (OS HR 0,78; p=0,021), sostituendo il vecchio paradigma FLOT solo. Non confondere PD-L1 **TAP** (perioperatorio, ~90% dei pazienti) con **CPS** (malattia avanzata, CPS≥5 è cut-off).
+- **KEYNOTE-585 (pembrolizumab perioperatorio)**: Fallito il primary endpoint su OS nonostante pCR e EFS significativi — trabocchetto classico: pCR non sempre predice OS.
+- **DESTINY-Gastric04**: T-DXd è nuovo standard di **seconda linea HER2+** (OS HR 0,70, -30% rischio morte), ma **attenzione all'ILD** (13,9% G≥3).
+- **GLOW (zolbetuximab CLDN18.2+)**: OS HR 0,77 — prima opzione target-specifica nel gastrico CLDN18.2-positivo (FDA 2024); tossicità principalmente GI (nausea/vomito).
+- **Bemarituzumab (FGFR2b)**: Beneficio promettente ma attenuato al follow-up più lungo; **tossicità oculare (67% corneal) non standard** — non consolidato ancora.
+- **MSI-H/dMMR**: Altissima sensibilità a doppia immunoterapia (NEONIPIGA/INFINITY pCR 59-60%) senza chemioterapia aggiuntiva — paradigm shift in sviluppo per non-operative management.
+- **HDGC (CDH1)**: Gastrectomia totale profilattica nei portatori asintomatici.
 
 
 ## Errori da evitare
-- Non confondere PD-L1 TAP (perioperatorio) con PD-L1 CPS (malattia avanzata).
-- Non applicare il trattamento HER2+ senza IHC/ISH aggiornato.
-- Non considerare bemarituzumab/FGFR2b uno standard consolidato — beneficio ancora incerto in fase 3.
-- Non dimenticare la laparoscopia stadiativa nella malattia localmente avanzata prima della terapia perioperatoria.
+
+- Non confondere PD-L1 **TAP** (perioperatorio, ~90% positivi) con **CPS** (malattia avanzata) — sono due punteggi distinti, non intercambiabili, eseguiti con metodiche diverse.
+- Non affermare che KEYNOTE-585 sia standard perioperatorio solo perché ha OS numericamente superiore — ha fallito il p<0,05 su OS (HR 0,86, p>0,05).
+- Non utilizzare bemarituzumab come standard di prima linea in FGFR2b-positivo — beneficio ancora incerto in fase 3, tossicità oculare severa.
+- Non indicare trifluridina/tipiracil in monoterapia in carcinoma gastrico avanzato HER2+ — è riservato al HER2-negativo, dove ramucirumab e T-DXd (quest'ultimo in HER2+ dopo trastuzumab) rimangono le opzioni consolidate.
+- Non dimenticare la **laparoscopia stadiativa con citologia peritoneale** prima della terapia perioperatoria in stadio localmente avanzato — è un passo fondamentale per escludere carcinosi occulta.
+- Non usare capecitabina in monoterapia in carcinosi peritoneale — PRODIGE 7 (HIPEC+citoriduzione nel CRC) dimostra l'inefficacia, è ragionevole estendere il concetto al gastrico.
 
 
 ## Fonti
-- AIOM: non disponibile documento dedicato in questa raccolta.
-- ESMO: non disponibile documento dedicato in questa raccolta.
-- Altre fonti: Congresso Grandangolo 2025 (Gastrico) — fonte principale, integrata con nozioni standard consolidate.
+
+- **ESMO**: CPG Adenocarcinoma Gastrico 2022; aggiornamenti congressuali ESMO 2025 (MATTERHORN, DESTINY-Gastric04, GLOW).
+- **AIOM**: Non disponibile documento dedicato specifico nella raccolta di riferimento per questo aggiornamento.
+- **Letteratura primaria verificata**: MATTERHORN (ESMO 2025), KEYNOTE-585 (NEJM, 2024), DESTINY-Gastric04 (NEJM, 2025), GLOW (Nature Medicine, 2023), NEONIPIGA (GERCOR fase 2), INFINITY (fase 2 MSI-H neoadjuvante), CheckMate 649 (Nivolumab), KEYNOTE-859 (Pembrolizumab), KEYWORD-811 (HER2+ + pembrolizumab).
+- **Congresso Grandangolo 2025**: Sezione Gastrico.
 
 
 ## Note personali
+
 -
