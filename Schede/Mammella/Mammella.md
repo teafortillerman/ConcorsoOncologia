@@ -389,6 +389,48 @@ Le cure palliative precoci sono fortemente raccomandate fin dall'inizio del perc
 
 Per orientarsi rapidamente tra le classi di farmaci usate nel carcinoma mammario: la chemioterapia comprende antracicline (doxorubicina, epirubicina), taxani (paclitaxel, docetaxel, nab-paclitaxel), platino (carboplatino), oltre a capecitabina, eribulina, vinorelbina, gemcitabina e ciclofosfamide. L'ormonoterapia include tamoxifene, inibitori dell'aromatasi (letrozolo, anastrozolo, exemestane), fulvestrant, la soppressione ovarica con analoghi LHRH, e i SERD orali di nuova generazione (elacestrant, imlunestrant). Tra le target therapy si trovano gli anti-HER2 (trastuzumab, pertuzumab, T-DM1, trastuzumab deruxtecan, tucatinib, lapatinib), gli inibitori di CDK4/6 (palbociclib, ribociclib, abemaciclib), i PARP-inibitori (olaparib, talazoparib), gli inibitori PI3K/AKT (alpelisib, inavolisib, capivasertib), l'inibitore mTOR everolimus, e gli anti-riassorbitivi ossei (acido zoledronico, denosumab). L'immunoterapia si limita, in questa neoplasia, ad atezolizumab e pembrolizumab, entrambi nel triplo negativo PD-L1 positivo. Vanno infine ricordati gli antibody-drug conjugate (sacituzumab govitecan, trastuzumab deruxtecan, datopotamab deruxtecan), oltre a radioterapia (adiuvante e stereotassica) e chirurgia (conservativa, mastectomia, ricostruttiva).
 
+### Stato di approvazione AIFA e indicazioni per farmaco
+
+La tabella riprende gli stessi farmaci per uso pratico in reparto/ambulatorio: stato di rimborsabilità AIFA aggiornato ad agosto 2026, setting d'uso, sottotipo di malattia coperto ed eventuali limitazioni rispetto al label EMA. Per i farmaci sottoposti a registro di monitoraggio, l'eleggibilità puntuale va comunque sempre riverificata su registri.aifa.gov.it, perché le determine vengono aggiornate più spesso di questa scheda.
+
+| Farmaco | Stato AIFA | Indicazione (setting, sottotipo, limitazioni) |
+|---|---|---|
+| Chemioterapia classica (antracicline, taxani, platino, capecitabina, eribulina, vinorelbina, gemcitabina, ciclofosfamide) | Rimborsata SSN da lungo tempo (classe A/H) | Tutti i sottotipi, adiuvante/neoadiuvante/metastatico secondo scheda tecnica — nessuna restrizione di registro |
+| Tamoxifene | Rimborsato (classe A) | HR+, tutte le linee (adiuvante, chemioprevenzione, metastatico); unico standard nel maschile e in gravidanza (post-parto) |
+| Inibitori dell'aromatasi (letrozolo, anastrozolo, exemestane) | Rimborsati (classe A) | HR+ in post-menopausa, adiuvante e metastatico; **controindicati in monoterapia nell'uomo** (serve LHRH-analogo associato) |
+| Fulvestrant | Rimborsato (classe H) | HR+/HER2- metastatico, in monoterapia o in combinazione con CDK4/6i, capivasertib, alpelisib o inavolisib |
+| Analoghi LHRH (goserelin, leuprorelina) | Rimborsati (classe A/H) | Soppressione ovarica pre-menopausa: adiuvante ad alto rischio (SOFT/TEXT) o associati ad AI nell'uomo |
+| Elacestrant (Orserdu) | **Rimborsato AIFA** (2025) | ER+/HER2- metastatico con **mutazione ESR1**, dopo progressione ad almeno 1 linea di terapia endocrina comprendente un CDK4/6i |
+| Imlunestrant | **Non rimborsato/autorizzato in Italia** (solo FDA; EMA in valutazione) | ER+/HER2- metastatico con mutazione ESR1 (stessa nicchia di elacestrant) — non ancora prescrivibile in Italia |
+| Trastuzumab | Rimborsato (classe H) | HER2+, tutte le linee: adiuvante (1 anno), neoadiuvante, I linea metastatica (+pertuzumab+taxano) |
+| Pertuzumab | Rimborsato (classe H) | HER2+ linfonodo-positivo (adiuvante/neoadiuvante) o I linea metastatica, sempre in combinazione con trastuzumab+taxano |
+| T-DM1 (trastuzumab emtansine) | Rimborsato (classe H) | HER2+: malattia residua dopo neoadiuvante (KATHERINE) o II linea metastatica dopo I linea con doppio blocco |
+| Trastuzumab deruxtecan (Enhertu) | **Rimborsato AIFA**: HER2+ dal 2020 (II linea metastatica); **HER2-low dal 9.01.2024** (dopo ≥1 linea CT metastatica o recidiva <6 mesi da CT adiuvante), tramite registro dedicato | HER2+ (DESTINY-Breast03) e HER2-low (DESTINY-Breast04); **estensione EMA 2025 a HER2-ultralow e uso post solo terapia endocrina (DESTINY-Breast06) non ancora coperta da registro italiano dedicato** |
+| Tucatinib | Rimborsato (classe H, dal 2021) | HER2+ metastatico, combo con trastuzumab+capecitabina dopo ≥1 linea; unico regime con dati dedicati su metastasi encefaliche attive (HER2CLIMB) |
+| Lapatinib | Rimborsato (classe H, da tempo) | HER2+ metastatico, linee successive, in combinazione con capecitabina |
+| Palbociclib | Rimborsato (classe H) | HR+/HER2- metastatico, I linea +AI o linee successive +fulvestrant |
+| Ribociclib | Rimborsato (classe H): metastatico da anni; **adiuvante ad alto rischio (NATALEE) solo dal 6.03.2026** | HR+/HER2- metastatico (I linea +AI, MONALEESA-2) **e** stadio iniziale ad alto rischio, incluse pazienti N0 (NATALEE) — indicazione adiuvante molto recente |
+| Abemaciclib | Rimborsato (classe H) | HR+/HER2- metastatico e adiuvante ad alto rischio (monarchE: ≥4 N+, o 1-3 N+ con T≥5cm/G3), 2 anni |
+| Olaparib (Lynparza) | Rimborsato (classe H) | Carcinoma mammario **HER2-negativo con mutazione germinale BRCA1/2, indipendentemente dallo stato HR**: metastatico (OlympiAD) e adiuvante ad alto rischio dopo NAT/chirurgia (OlympiA); nelle HR+ richiesta pregressa terapia endocrina o non eleggibilità |
+| Talazoparib (Talzenna) | Rimborsato (classe H) | Carcinoma mammario HER2-negativo gBRCA-mutato metastatico (EMBRACA), indipendentemente dallo stato HR, con gli stessi prerequisiti di olaparib |
+| Alpelisib (Piqray) | **Rimborsato AIFA** (dal 2020/2021, rinnovato 2025) | HR+/HER2- metastatico con **mutazione PIK3CA**, dopo progressione a un inibitore dell'aromatasi, in combinazione con fulvestrant |
+| Capivasertib (Truqap) | **Rimborsato AIFA dall'ottobre 2025** (classe C-nn da ottobre 2024 a ottobre 2025) | ER+/HER2- metastatico con alterazioni **PIK3CA/AKT1/PTEN**, dopo progressione a un regime endocrino, in combinazione con fulvestrant |
+| Inavolisib (Itovebi) | **Rimborsato AIFA dall'ottobre 2025** | ER+/HER2- metastatico con mutazione PIK3CA, I linea con recidiva endocrina precoce, in combinazione con palbociclib+fulvestrant (INAVO120) |
+| Everolimus | Rimborsato (classe H, da tempo) | HR+/HER2- metastatico dopo progressione a un inibitore dell'aromatasi, in combinazione con exemestane |
+| Acido zoledronico / denosumab (adiuvante) | Rimborsati (Nota AIFA 79) | Donne in post-menopausa in terapia endocrina adiuvante HR+, indipendentemente dal T-score |
+| Denosumab (metastasi ossee, 120mg) | Rimborsato (classe H) | Prevenzione degli eventi scheletrici correlati in malattia metastatica ossea, tutti i sottotipi |
+| Atezolizumab | **Rimborsato AIFA/EMA** (classe H, registro attivo) — **ritirata solo l'indicazione FDA (USA, 2021)**, non quella europea | TNBC metastatico **PD-L1+ (SP142 ≥1%)**, I linea, in combinazione con **nab-paclitaxel** (IMpassion130); esclusi taxani nei 12 mesi precedenti o pregressa terapia anti-PD-1/PD-L1 |
+| Pembrolizumab | Rimborsato AIFA (dal luglio 2023, registro dedicato) | TNBC: neoadiuvante/adiuvante stadio II-III (KEYNOTE-522) **e** metastatico I linea con **CPS≥10 (clone 22C3)** (KEYNOTE-355) |
+| Sacituzumab govitecan (Trodelvy) | Rimborsato AIFA: TNBC da tempo (ASCENT); **HR+/HER2- dal 20.02.2025** | TNBC metastatico dopo ≥2 terapie sistemiche (almeno 1 in fase avanzata); HR+/HER2- metastatico con metastasi viscerali dopo terapia endocrina e ≥2 altre terapie sistemiche |
+| Datopotamab deruxtecan (Datroway) | **Non ancora rimborsato in Italia** (solo autorizzato EMA, aprile 2025 per HR+/HER2-; estensione I linea TNBC in valutazione 2026) | HR+/HER2- metastatico pretrattato — non ancora accessibile via SSN alla data di questa scheda |
+
+#### Punti chiave
+- Farmaci **oggi rimborsati da AIFA** ma spesso dati per "non disponibili" per errore/dato datato: alpelisib, trastuzumab deruxtecan HER2-low, sacituzumab govitecan HR+/HER2-.
+- Farmaci **autorizzati da EMA/FDA ma non ancora rimborsati in Italia**: datopotamab deruxtecan, imlunestrant — da non presentare come opzioni concretamente prescrivibili sul territorio nazionale.
+- **NATALEE (ribociclib adiuvante)**: rimborsabilità AIFA arrivata solo il 6 marzo 2026, quindi il farmaco è disponibile in Italia da pochissimi mesi rispetto alla data di questa scheda.
+- Atezolizumab+nab-paclitaxel nel TNBC: il ritiro dell'indicazione FDA (2021) riguarda solo gli USA — in UE/Italia resta autorizzato e rimborsato.
+- Olaparib e talazoparib coprono il carcinoma mammario HER2-negativo BRCA-mutato **indipendentemente dallo stato HR**, non solo il triplo negativo.
+
 
 ## Tossicità e criticità
 
