@@ -126,7 +126,11 @@ Il panorama della prima linea nella malattia avanzata/metastatica di HCC si è a
 
 Il trial **IMbrave150** (atezolizumab+bevacizumab) è stato il primo regime a superare sorafenib in sopravvivenza globale: OS 19,2 vs 13,4 mesi (HR 0,66) — un risultato che ha aperto l'era dell'immunoterapia in prima linea per l'HCC, sebbene richieda uno screening endoscopico obbligatorio delle varici data la componente antiangiogenica.
 
+> ++Verifica in letteratura — rimborsabilità AIFA:++ atezolizumab+bevacizumab ha ottenuto l'autorizzazione EMA/Commissione UE a novembre 2020 (parere CHMP settembre 2020; FDA maggio 2020), ma in Italia AIFA ne ha concesso la rimborsabilità in classe H solo con la determina pubblicata in Gazzetta Ufficiale il 31 maggio 2022 — un ritardo di oltre 18 mesi rispetto all'autorizzazione europea, tipico esempio di "treatment lag" per i farmaci oncologici innovativi. Il farmaco è oggi pienamente rimborsato e disponibile in Italia. [Quotidiano Sanità](https://www.quotidianosanita.it/scienza-e-farmaci/articolo.php?articolo_id=105229), [AboutPharma](https://www.aboutpharma.com/legal-regulatory/carcinoma-epatocellulare-ok-di-aifa-alluso-di-atezolizumab-in-combinazione-con-bevacizumab/)
+
 Il trial **HIMALAYA (STRIDE)** (durvalumab+tremelimumab) ha riportato OS 16,4 vs 13,8 mesi (HR 0,78), con un dato particolarmente rilevante nel follow-up a lungo termine: ==**OS a 5 anni 19,6% vs 9,4% con sorafenib**== — un beneficio di sopravvivenza a lungo termine sostanziale che non richiede lo screening endoscopico e che è applicabile anche ai pazienti con Vp4 (trombosi del tronco portale principale), a differenza di altri regimi.
+
+> ++Verifica in letteratura — rimborsabilità AIFA:++ il regime STRIDE (tremelimumab+durvalumab) ha ricevuto autorizzazione EMA nel 2022; AIFA ne ha concesso la rimborsabilità in classe H con la determina n. 96/2024 del 12 febbraio 2024 (comunicata l'8 maggio 2024), circa 16 mesi dopo l'autorizzazione europea — un gap più contenuto rispetto a quello di atezolizumab+bevacizumab. Il regime è oggi rimborsato e disponibile in Italia. [Determina AIFA 96/2024](https://www.medicoeleggi.com/argomenti000/italia2024/416140-1.htm), [Dottnet](https://www.dottnet.it/articolo/32535975/via-libera-dall-aifa-all-immunoterapia-per-tumore-vie-biliari-ed-epatocarcinoma)
 
 Il **sorafenib** (trial SHARP) rappresenta lo standard storico, con un beneficio più modesto (+3 mesi vs placebo) che mantiene oggi un ruolo residuale, principalmente nei pazienti con controindicazioni all'immunoterapia. Il **lenvatinib** (trial REFLECT) è risultato non-inferiore a sorafenib in OS (HR 0,92), con vantaggi in PFS e ORR, rendendolo l'opzione preferita rispetto a sorafenib quando l'immunoterapia è controindicata.
 
@@ -134,14 +138,16 @@ Il trial **CARES-310** (camrelizumab+rivoceranib) ha riportato il miglior dato d
 
 Il trial **CheckMate-9DW** (nivolumab+ipilimumab) ha mostrato OS 23,7 vs 20,6 mesi (HR 0,79); tuttavia, un aspetto interpretativo importante è che ==**non emerge un vantaggio in PFS e le curve di Kaplan-Meier si incrociano dopo circa 12 mesi**==, suggerendo un beneficio che si manifesta principalmente nel lungo termine piuttosto che un vantaggio immediato e costante.
 
+> !!Verifica in letteratura — attenzione:!! nivolumab+ipilimumab ha ottenuto approvazione FDA a marzo 2025 e autorizzazione della Commissione Europea il 7 marzo 2025 (valida in tutti gli Stati UE più Islanda, Liechtenstein e Norvegia) per la prima linea dell'HCC non resecabile/avanzato. **In Italia, tuttavia, il regime non è al momento rimborsato dal SSN**: la determina AIFA Pres. n. 530/2026 (20 aprile 2026) ribadisce esplicitamente che "resta valida la non rimborsabilità" di ipilimumab in associazione a nivolumab per questa indicazione. Il regime risulta quindi autorizzato a livello europeo ma non accessibile in pratica clinica italiana tramite SSN, a differenza di IMbrave150 e HIMALAYA/STRIDE, entrambi rimborsati. Non va quindi presentato come opzione di prima linea attualmente disponibile in Italia. [Determina Pres. 530/2026 AIFA (Yervoy)](https://www.aifa.gov.it/documents/20142/847786/Determina_Pres-530-2026_YERVOY.pdf), [OnclLive — EC approval](https://www.onclive.com/view/nivolumab-plus-ipilimumab-receives-ec-approval-for-first-line-unresectable-hcc)
+
 | Trial | Regime | OS | Note |
 |---|---|---|---|
-| **IMbrave150** | Atezolizumab+Bevacizumab | 19,2 vs 13,4 mesi (HR 0,66) | Primo a superare sorafenib; endoscopia varici obbligatoria |
-| **HIMALAYA (STRIDE)** | Durvalumab+Tremelimumab | 16,4 vs 13,8 mesi (HR 0,78); OS 5a 19,6% vs 9,4% | No endoscopia; include Vp4 |
+| **IMbrave150** | Atezolizumab+Bevacizumab | 19,2 vs 13,4 mesi (HR 0,66) | Primo a superare sorafenib; endoscopia varici obbligatoria; rimborsato AIFA da giugno 2022 (EMA nov 2020) |
+| **HIMALAYA (STRIDE)** | Durvalumab+Tremelimumab | 16,4 vs 13,8 mesi (HR 0,78); OS 5a 19,6% vs 9,4% | No endoscopia; include Vp4; rimborsato AIFA da febbraio 2024 |
 | **SHARP** | Sorafenib | Storico, +3 mesi vs placebo | Ruolo residuale/controindicazioni IO |
 | **REFLECT** | Lenvatinib | Non-inferiore a sorafenib (HR 0,92); PFS/ORR superiori | Preferito a sorafenib se IO controindicata |
 | **CARES-310** | Camrelizumab+Rivoceranib | 23,8 vs 15,2 mesi (HR 0,64) | Non approvato — 3ª CRL FDA (problemi produttivi, non efficacia); solo orphan drug EMA |
-| **CheckMate-9DW** | Nivolumab+Ipilimumab | 23,7 vs 20,6 mesi (HR 0,79) | Nessun vantaggio PFS, curve KM si incrociano dopo ~12 mesi |
+| **CheckMate-9DW** | Nivolumab+Ipilimumab | 23,7 vs 20,6 mesi (HR 0,79) | Nessun vantaggio PFS, curve KM si incrociano dopo ~12 mesi; autorizzato EMA/EC 03/2025 ma **non rimborsato da AIFA** (determina 530/2026, 04/2026) |
 
 I criteri di scelta pratici prevedono, in assenza di controindicazioni, la preferenza per una combinazione ICI-based; atezolizumab-bevacizumab è controindicato in caso di rischio emorragico o varici non trattate; STRIDE rappresenta l'opzione preferita in caso di controindicazione a bevacizumab o presenza di Vp4; lenvatinib rimane preferito a sorafenib quando l'immunoterapia è controindicata.
 
@@ -150,24 +156,33 @@ Un dato negativo importante riguarda i tentativi di intensificazione della doppi
 > ++Verifica in letteratura ESMO 2025-2026:++ HIMALAYA ha dimostrato OS 5 anni 19,6% vs 9,4% con sorafenib (HR 0,78). CheckMate-9DW mostra OS migliorato (HR 0,79) ma le curve KM si incrociano dopo ~12 mesi. **CARES-310** riporta il miglior OS assoluto (23,8 mesi) ma resta non approvato: la FDA ha emesso una terza CRL a luglio 2026 per problemi di conformità produttiva (non di efficacia) — un aggiornamento rispetto alla versione precedente della scheda, che indicava solo "non ancora approvato" senza specificare la ragione regolatoria. La tossicità immuno-relata aumenta con le doppie combinazioni di checkpoint inibitori; è critico discutere beneficio-rischio con ogni paziente.
 
 #### Punti chiave — prima linea malattia avanzata
-- IMbrave150 (atezo+bev): primo a superare sorafenib (OS HR 0,66) — endoscopia varici obbligatoria.
-- HIMALAYA/STRIDE: OS 5a 19,6% vs 9,4% — no endoscopia, include Vp4.
+- IMbrave150 (atezo+bev): primo a superare sorafenib (OS HR 0,66) — endoscopia varici obbligatoria. Rimborsato AIFA da giugno 2022 (gap di ~18 mesi rispetto a EMA nov 2020).
+- HIMALAYA/STRIDE: OS 5a 19,6% vs 9,4% — no endoscopia, include Vp4. Rimborsato AIFA da febbraio 2024 (determina 96/2024).
 - CARES-310 (camrelizumab+rivoceranib): miglior OS assoluto (23,8 mesi, HR 0,64) ma NON approvato — 3ª CRL FDA per problemi produttivi (non efficacia), solo orphan drug EMA.
-- CheckMate-9DW (nivo+ipi): OS HR 0,79 ma curve KM si incrociano a ~12 mesi, nessun vantaggio PFS.
+- CheckMate-9DW (nivo+ipi): OS HR 0,79 ma curve KM si incrociano a ~12 mesi, nessun vantaggio PFS. Autorizzato EMA/EC a marzo 2025, ma **non rimborsato da AIFA** (determina 530/2026, aprile 2026) — non disponibile tramite SSN in Italia nonostante l'autorizzazione europea.
 - Triplette IO (IMbrave152/SKYSCRAPER-14, TRIPLET-HCC): entrambe negative — il doppietto resta standard.
-- Scelta pratica: ICI-based sempre preferita se non controindicazioni; atezo-bev controindicato se rischio emorragico; STRIDE se Vp4 o controindicazione bevacizumab; lenvatinib se IO controindicata.
+- Scelta pratica: ICI-based sempre preferita se non controindicazioni; atezo-bev controindicato se rischio emorragico; STRIDE se Vp4 o controindicazione bevacizumab; lenvatinib se IO controindicata. In Italia, tra i regimi ICI-based di prima linea disponibili e rimborsati oggi vi sono solo IMbrave150 e HIMALAYA/STRIDE (non CheckMate-9DW).
 
 
 ## Terapia della malattia avanzata — seconda linea
 
 Il panorama della seconda linea in HCC avanzato si è consolidato attorno a tre agenti principali, tutti valutati dopo progressione a sorafenib (o, più recentemente, dopo prima linea immunoterapica, sebbene la maggior parte dei dati registrativi provenga dal contesto post-sorafenib). Il **regorafenib** (trial RESORCE) è indicato specificamente dopo sorafenib tollerato (non dopo interruzione per tossicità), con OS 10,6 vs 7,8 mesi (HR 0,63) rispetto a placebo. Il **cabozantinib** (trial CELESTIAL) ha un'indicazione più ampia, utilizzabile dopo 1-2 linee precedenti di terapia sistemica, con OS 10,2 vs 8,0 mesi (HR 0,63). Il **ramucirumab** (trial REACH-2) rappresenta un caso particolare in oncologia epatica: è l'unico agente di seconda linea selezionato da biomarcatore, con indicazione riservata ai pazienti con **AFP ≥400 ng/mL**, in cui ha dimostrato OS 8,5 vs 7,3 mesi (HR 0,71).
 
+> ++Verifica in letteratura — rimborsabilità AIFA:++ regorafenib (rimborsabile AIFA dal 2018, determina 03.09.2018, registro STIVARGA-HCC attivo) e cabozantinib (rimborsabile AIFA dal 1° luglio 2020, determina rinnovata nel 2022 e nel 2024) sono entrambi disponibili in Italia in classe H con registro di monitoraggio dedicato.
+
+> !!Verifica in letteratura — attenzione:!! **ramucirumab risulta invece non rimborsabile in Italia per l'indicazione HCC/AFP≥400**: la determina AIFA dell'11 maggio 2021 ha esplicitamente escluso questa nuova indicazione dal finanziamento SSN (assieme a una diversa indicazione NSCLC), nonostante l'autorizzazione EMA del 2019. Il farmaco resta descritto in letteratura come opzione di seconda linea con beneficio di OS statisticamente significativo, ma non è oggi accessibile ai pazienti italiani tramite SSN — un'eccezione importante da conoscere rispetto a regorafenib e cabozantinib. [Determina AIFA 11.05.2021 (Cyramza)](https://www.medicoeleggi.com/argomenti000/italia2021/413330-1.htm)
+
+Il **pembrolizumab** in monoterapia (studi KEYNOTE-224/240/394) ha ottenuto negli Stati Uniti un'approvazione accelerata FDA nel 2018 per la seconda linea post-sorafenib, confermata dall'ODAC (comitato consultivo FDA) all'unanimità nell'aprile 2021 nonostante il mancato raggiungimento formale della significatività statistica nello studio registrativo di conferma KEYNOTE-240, sulla base dei dati aggiuntivi di KEYNOTE-394 nella popolazione asiatica (OS positiva).
+
+> !!Verifica in letteratura — attenzione:!! pembrolizumab in monoterapia per l'HCC **non ha mai ottenuto un'autorizzazione EMA**: resta un'opzione esclusivamente statunitense (FDA accelerated approval 2018, riconfermata dall'ODAC nell'aprile 2021) e non va quindi presentata come opzione disponibile nella pratica clinica italiana o europea. In Europa/Italia, pembrolizumab in HCC compare solo nel contesto adiuvante (KEYNOTE-937), risultato negativo (vedi sezione Novità 2025-2026).
+
 La chemioterapia sistemica citotossica **non è raccomandata** in nessuna linea di trattamento dell'HCC avanzato, non avendo mai dimostrato un beneficio significativo in studi randomizzati controllati — una peculiarità che distingue l'HCC dalla maggior parte degli altri tumori solidi gastrointestinali, dove la chemioterapia mantiene un ruolo anche nelle linee successive.
 
 #### Punti chiave — seconda linea
-- RESORCE/regorafenib: dopo sorafenib TOLLERATO (non dopo tossicità) — OS HR 0,63 (10,6 vs 7,8 mesi).
-- CELESTIAL/cabozantinib: dopo 1-2 linee precedenti — OS HR 0,63 (10,2 vs 8,0 mesi).
-- REACH-2/ramucirumab: unico farmaco selezionato da biomarcatore, solo se AFP ≥400 ng/mL — OS HR 0,71 (8,5 vs 7,3 mesi).
+- RESORCE/regorafenib: dopo sorafenib TOLLERATO (non dopo tossicità) — OS HR 0,63 (10,6 vs 7,8 mesi). Rimborsato AIFA dal 2018, registro attivo.
+- CELESTIAL/cabozantinib: dopo 1-2 linee precedenti — OS HR 0,63 (10,2 vs 8,0 mesi). Rimborsato AIFA dal luglio 2020, rinnovi 2022/2024.
+- REACH-2/ramucirumab: unico farmaco selezionato da biomarcatore, solo se AFP ≥400 ng/mL — OS HR 0,71 (8,5 vs 7,3 mesi). **NON rimborsato da AIFA** in Italia (determina 11.05.2021), pur autorizzato EMA dal 2019.
+- Pembrolizumab monoterapia: FDA-only (accelerated approval 2018, riconfermata ODAC 2021) — mai autorizzato EMA, non disponibile in Europa/Italia.
 - Chemioterapia citotossica sistemica: mai raccomandata in nessuna linea, nessun RCT positivo.
 
 
@@ -193,8 +208,8 @@ Sul fronte adiuvante, il quadro rimane negativo per l'immunoterapia dopo trattam
 
 
 ## Farmaci e classi rilevanti
-- Target therapy/TKI: sorafenib, lenvatinib, regorafenib, cabozantinib, ramucirumab (solo AFP≥400).
-- Immunoterapia: atezolizumab, bevacizumab, durvalumab, tremelimumab, camrelizumab, rivoceranib, nivolumab, ipilimumab, pembrolizumab (adiuvante, negativo).
+- Target therapy/TKI: sorafenib, lenvatinib, regorafenib, cabozantinib (tutti rimborsati AIFA), ramucirumab (solo AFP≥400 — **non rimborsato da AIFA** in Italia nonostante l'autorizzazione EMA).
+- Immunoterapia: atezolizumab, bevacizumab (rimborsati AIFA da giugno 2022), durvalumab, tremelimumab (STRIDE, rimborsati AIFA da febbraio 2024), camrelizumab, rivoceranib (non approvati, CRL FDA ricorrenti), nivolumab, ipilimumab (CheckMate-9DW: autorizzati EMA/EC marzo 2025 ma **non rimborsati da AIFA**), pembrolizumab (seconda linea monoterapia: FDA-only, mai autorizzato EMA; adiuvante KEYNOTE-937: negativo).
 - Locoregionale: RFA/MWA, TACE, TARE/SIRT, SBRT.
 - Chirurgia: resezione epatica, trapianto di fegato.
 
@@ -234,8 +249,10 @@ Un'interazione critica riguarda la **combinazione di immunoterapia e trapianto d
 - **Downstaging + trapianto (trial XXL)**: "test del tempo" (stabilità risposta ≥3 mesi) come selettore biologico superiore alla sola classificazione morfologica.
 - **Triplette IO negative** (IMbrave152/SKYSCRAPER-14, TRIPLET-HCC): il doppietto resta standard di prima linea, l'intensificazione con terzo agente non funziona.
 - **EMERALD-1/LEAP-012** (TACE+IO in BCLC-B): OS matura NEGATIVA in entrambi — non uno standard di cura sulla base dei dati attuali.
-- **REACH-2/ramucirumab**: unico farmaco di seconda linea selezionato da biomarcatore (AFP≥400).
+- **REACH-2/ramucirumab**: unico farmaco di seconda linea selezionato da biomarcatore (AFP≥400) — ma **non rimborsato da AIFA** in Italia (determina 11.05.2021), pur autorizzato EMA.
 - **Adiuvante dopo resezione/ablazione**: DUE trial negativi (IMbrave050, KEYNOTE-937) — nessuna immunoterapia adiuvante raccomandata.
+- **Rimborsabilità AIFA in prima linea HCC**: IMbrave150 rimborsato da giugno 2022, HIMALAYA/STRIDE da febbraio 2024, ma CheckMate-9DW (nivolumab+ipilimumab) — pur autorizzato EMA/EC dal marzo 2025 — resta NON rimborsato da AIFA (determina 530/2026, aprile 2026): un classico esempio di gap tra autorizzazione europea e accesso SSN.
+- **Pembrolizumab monoterapia (seconda linea)**: accelerated approval FDA 2018, riconfermata da ODAC nel 2021 — mai autorizzato da EMA, non disponibile in Europa/Italia.
 
 
 ## Errori da evitare
@@ -246,6 +263,9 @@ Un'interazione critica riguarda la **combinazione di immunoterapia e trapianto d
 - Non considerare CARES-310 come opzione disponibile in pratica clinica: dati di efficacia eccellenti ma farmaco non approvato per motivi regolatori/produttivi.
 - Non presentare i dati di EMERALD-1/LEAP-012 come "OS non ancora matura": i dati maturi sono ora disponibili e sono negativi.
 - Non trapiantare a breve distanza dall'ultima dose di ICI (rischio di rigetto acuto).
+- Non assumere che un farmaco autorizzato da EMA/Commissione Europea sia automaticamente disponibile in Italia: nivolumab+ipilimumab (CheckMate-9DW) è autorizzato in UE dal marzo 2025 ma **non è rimborsato da AIFA** (determina 530/2026, aprile 2026).
+- Non presentare ramucirumab (AFP≥400) come opzione disponibile nella pratica clinica italiana: AIFA lo ha dichiarato non rimborsabile per l'HCC (determina 11.05.2021).
+- Non confondere l'approvazione FDA di pembrolizumab in monoterapia per l'HCC (accelerated approval US-only) con una disponibilità europea o italiana: l'EMA non ha mai autorizzato questa indicazione.
 
 
 ## Fonti
@@ -255,6 +275,7 @@ Un'interazione critica riguarda la **combinazione di immunoterapia e trapianto d
 - KEYNOTE-937: dati di fase III, adiuvante pembrolizumab post-resezione/ablazione (negativo).
 - EMERALD-1, LEAP-012: analisi di OS matura, TACE + immunoterapia in BCLC-B (negativi).
 - Altre fonti: Congresso Grandangolo 2025 (Epatocarcinoma).
+- Verifica rimborsabilità AIFA (2026-08-24): [Determina AIFA 96/2024 — Imfinzi/durvalumab+tremelimumab, 12.02.2024](https://www.medicoeleggi.com/argomenti000/italia2024/416140-1.htm); [Dottnet — via libera AIFA durvalumab+tremelimumab HCC, 13.03.2024](https://www.dottnet.it/articolo/32535975/via-libera-dall-aifa-all-immunoterapia-per-tumore-vie-biliari-ed-epatocarcinoma); [Determina Pres. 530/2026 AIFA — Yervoy/ipilimumab, 20.04.2026 (conferma non rimborsabilità nivolumab+ipilimumab in HCC)](https://www.aifa.gov.it/documents/20142/847786/Determina_Pres-530-2026_YERVOY.pdf); [OncoInfo — nuove indicazioni rimborsate nivolumab, determina 27.12.2021 (HCC esclusa)](https://oncoinfo.it/temi/regime-di-rimborsabilita-di-nivolumab-nuova-determina-aifa/); [OnclLive — EC approval nivolumab+ipilimumab HCC, 07.03.2025](https://www.onclive.com/view/nivolumab-plus-ipilimumab-receives-ec-approval-for-first-line-unresectable-hcc); [Quotidiano Sanità — AIFA atezolizumab+bevacizumab HCC](https://www.quotidianosanita.it/scienza-e-farmaci/articolo.php?articolo_id=105229); [AboutPharma — atezolizumab+bevacizumab, GU 31.05.2022](https://www.aboutpharma.com/legal-regulatory/carcinoma-epatocellulare-ok-di-aifa-alluso-di-atezolizumab-in-combinazione-con-bevacizumab/); [Determina AIFA 01.07.2020 — Cabometyx/cabozantinib HCC](https://www.medicoeleggi.com/argomenti000/italia2020/412403-1.htm); [Determina AIFA 11.05.2021 — Cyramza/ramucirumab, non rimborsabilità HCC/AFP≥400](https://www.medicoeleggi.com/argomenti000/italia2021/413330-1.htm); [Targeted Oncology — cronologia 3 CRL FDA camrelizumab+rivoceranib, luglio 2026](https://www.targetedonc.com/view/fda-passes-again-on-approving-rivoceranib-plus-camrelizumab-in-hcc); [Targeted Oncology — ODAC conferma pembrolizumab HCC, aprile 2021](https://www.targetedonc.com/view/odac-unanimously-supports-continued-approval-of-pembrolizumab-for-hcc-in-sorafenib-pretreated-patients).
 
 
 ## Note personali

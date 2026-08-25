@@ -57,6 +57,10 @@ I VEGF-TKI (sunitinib, sorafenib, pazopanib) in adiuvante **non sono raccomandat
 
 > ++Verifica in letteratura:++ la scheda precedente riportava il dato di KEYNOTE-564 a 48 mesi (OS HR 0,62; 91,2% vs 86%). Il follow-up più maturo, a 5 anni (ASCO 2025), conferma il beneficio ma con numeri leggermente diversi, più solidi perché basati su più eventi maturati: DFS HR 0,71 (mediana non raggiunta vs 68,3 mesi; DFS a 5 anni 60,9% vs 52,2%) e **OS HR 0,66** (OS a 5 anni 87,7% vs 82,3%). Il messaggio resta lo stesso — pembrolizumab adiuvante è l'unico immunoterapico con beneficio di OS solido in questo setting — ma con numeri aggiornati. [ASCO Post](https://ascopost.com/news/april-2024/adjuvant-pembrolizumab-in-renal-cell-carcinoma-overall-survival-in-keynote-564/), [NEJM](https://www.nejm.org/doi/full/10.1056/NEJMoa2312695).
 
+> ++Verifica in letteratura — stato regolatorio AIFA:++ ==pembrolizumab adiuvante è rimborsato dal SSN in classe H== fin dalla determina AIFA del 10 luglio 2023, con riconoscimento di innovatività terapeutica piena e registro di monitoraggio dedicato (Registro KEYTRUDA ADIUVANTE - CARCINOMA RENALE). L'indicazione rimborsata coincide con il label registrativo (M1 NED dopo nefrectomia e resezione di lesioni metastatiche) — nessuna restrizione ulteriore rispetto a KEYNOTE-564. [Determina AIFA 10.07.2023](https://www.medicoeleggi.com/argomenti000/italia2023/415503-1.htm), [AIFA — Registro KEYTRUDA ADIUVANTE](https://www.aifa.gov.it/en/-/attivazione-web-e-pubblicazione-schede-di-monitoraggio-registro-keytruda-adiuvante-carcinoma-renale).
+
+> ++Verifica in letteratura — stato regolatorio:++ va precisato che RAMPART, pur pratica-modificante sui dati di DFS, **non ha ancora portato a un'approvazione regolatoria**: i primi risultati sono stati presentati solo a ESMO 2025 e, alla data di questa revisione, non risultano né una domanda EMA né una determina AIFA per l'immunoterapia adiuvante nel carcinoma renale. KEYNOTE-564/pembrolizumab resta quindi l'**unico regime di immunoterapia adiuvante effettivamente rimborsato e prescrivibile** in Italia in questo setting. [UroToday — ESMO 2025 RAMPART](https://www.urotoday.com/conference-highlights/esmo-2025/esmo-2025-kidney-cancer/164070-esmo-2025-lba93-first-results-from-rampart-an-international-phase-3-randomized-controlled-trial-of-adjuvant-durvalumab-monotherapy-or-combined-with-tremelimumab-for-resected-primary-renal-cell-carcinoma-rcc.html).
+
 > !!Verifica in letteratura — attenzione:!! la scheda precedente presentava RAMPART come un trial unico "durvalumab+tremelimumab", con un dato isolato di DFS (81% vs 73%, HR 0,65) e un generico "4% morti trattamento-correlate". In realtà RAMPART ha **due bracci sperimentali distinti** confrontati entrambi con la sola sorveglianza attiva, ed è importante non confonderli: la **durvalumab in monoterapia non ha raggiunto la significatività statistica** (HR 0,74; IC95% 0,53-1,04; p=0,041; DFS a 3 anni 78% vs 72%), mentre la **combinazione durvalumab+tremelimumab è risultata positiva** (HR 0,65; IC95% 0,45-0,93; p=0,0094; DFS a 3 anni 80% vs 72%, con beneficio più marcato nel sottogruppo ad alto rischio: HR 0,52, 76% vs 61%). Sul fronte sicurezza, i dati verificati riportano non un generico "4%", ma **2 decessi correlati al trattamento nel braccio combinazione** (miastenia gravis immuno-mediata) e **1 nel braccio monoterapia** (miocardite) — un dettaglio importante perché la tossicità immuno-mediata fatale, seppure rara, va conosciuta per tipo, non solo per percentuale. [Urology Times](https://www.urologytimes.com/view/in-resected-rcc-durvalumab-tremelimumab-combo-bests-monotherapy-on-dfs).
 
 ### Follow-up dopo chirurgia radicale
@@ -82,6 +86,8 @@ I dati dei trial registrativi delle combinazioni sono i seguenti. Nel KEYNOTE-42
 
 > ++Verifica in letteratura:++ per il CheckMate 9ER, la scheda precedente riportava i dati dell'analisi con follow-up più breve (OS 49,5 vs 35,5 mesi, HR 0,70). L'**analisi finale**, con un follow-up mediano di 67,6 mesi (oltre 5 anni e mezzo), presentata all'ASCO GU 2025, conferma il beneficio ma con numeri leggermente attenuati, come atteso con un follow-up più lungo e maturo: OS 46,5 contro 35,5 mesi (HR 0,79). La classifica relativa tra le combinazioni resta la stessa, ma è la versione più aggiornata del dato da citare. [ASCO Post](https://ascopost.com/issues/march-25-2025/nivolumab-plus-cabozantinib-continues-to-show-superior-long-term-outcomes-in-advanced-renal-cell-carcinoma/).
 
+> ++Verifica in letteratura — stato regolatorio AIFA:++ le quattro combinazioni sono oggi **tutte rimborsate in classe H** dal SSN, con registro di monitoraggio web-based dedicato, ma con un gap temporale EMA→AIFA molto variabile da non dare per scontato uguale per tutte. Pembrolizumab+axitinib (EMA 2019) è stata la prima a ottenere la rimborsabilità, con determina AIFA del 3 dicembre 2020. Nivolumab+ipilimumab (EMA 2019, riservato al rischio intermedio/sfavorevole) ha invece atteso fino alla determina del 27 dicembre 2021 — oltre due anni di ritardo rispetto all'approvazione EMA. Nivolumab+cabozantinib (EMA 2021) è stato rimborsato con determina pubblicata in Gazzetta Ufficiale il 2 novembre 2022. Pembrolizumab+lenvatinib (EMA 2021) è stata l'ultima ad arrivare, con rimborsabilità attiva solo dal 19 luglio 2023 (Registro AIFA KEYTRUDA-KISPLYX) — quasi due anni dopo l'approvazione EMA. Anche il cabozantinib in monoterapia (riservato al rischio intermedio/sfavorevole) è rimborsato in classe H, ed è la molecola con lo storico più lungo in questo contesto (determina 5 settembre 2019, quindi precedente alla finestra 2020+ di questa verifica). [Determina AIFA 3.12.2020](https://www.aifa.gov.it/documents/20142/961234/Determina_DG-1248-2020_Keytruda.pdf), [Determina AIFA 27.12.2021](https://www.aifa.gov.it/documents/20142/961234/Determina_1642-2021_Opdivo.pdf), [Medinews — nivolumab+cabozantinib](https://www.medinews.it/comunicati/cabozantinib-in-associazione-con-nivolumab-ottiene-la-rimborsabilita-per-il-trattamento-di-prima-linea-del-carcinoma-a-cellule-renali-avanzato-in-pazienti-adulti/), [AIFA — Registro KEYTRUDA-KISPLYX](https://www.aifa.gov.it/en/-/attivazione-web-e-pubblicazione-schede-di-monitoraggio-registro-keytruda-kisplyx-carcinoma-renale), [PharmaStar — cabozantinib 2019](https://www.pharmastar.it/news/italia/carcinoma-renale-avanzato-cabozantinib-rimborsato-ssn-per-il-trattamento-di-prima-linea-di-pazienti-adulti-a-rischio-intermediate-o-poor-30243).
+
 Un punto chiave sulla selezione: nel **rischio favorevole IMDC**, le combinazioni IO-TKI migliorano tasso di risposta e PFS ma **non l'OS** (metanalisi Bolek 2024, HR 0,99) — motivo per cui la monoterapia con TKI resta un'opzione valida in questo sottogruppo. Una network meta-analisi indica che nivolumab+cabozantinib ha la probabilità più alta di offrire la miglior OS (83%) nel rischio intermedio-alto, mentre pembrolizumab+lenvatinib ha la probabilità più alta di offrire la miglior PFS (99%) — ma le linee guida ESMO sono chiare: **nessuna combinazione IO-TKI è preferita rispetto alle altre**, e non vanno fatti confronti indiretti cross-trial basati solo su questi numeri. Infine, la tripletta nivolumab+ipilimumab+cabozantinib, testata nel COSMIC-313, **non è raccomandata**: la PFS è migliore ma a fronte di più tossicità e senza un dato di OS a supporto.
 
 #### Punti chiave
@@ -91,6 +97,7 @@ Un punto chiave sulla selezione: nel **rischio favorevole IMDC**, le combinazion
 - Rischio favorevole IMDC: combo non ha beneficio OS (metanalisi Bolek, HR 0,99) — TKI monoterapia resta valida.
 - Nessuna combinazione IO-TKI preferita rispetto alle altre (ESMO) — non fare confronti indiretti cross-trial.
 - COSMIC-313 (tripletta): non raccomandata, PFS migliore ma OS mancante e più tossicità.
+- ++Stato AIFA: tutte e 4 le combinazioni sono rimborsate in classe H, ma con gap EMA→AIFA molto diverso++ — da ~1 anno (pembrolizumab+axitinib, dic 2020) a quasi 2 anni (pembrolizumab+lenvatinib, lug 2023; nivolumab+ipilimumab, dic 2021).
 
 ## Linee successive
 
@@ -102,18 +109,22 @@ Un punto pratico importante: !!il rechallenge con immunoterapia dopo una prima l
 
 > ++Verifica in letteratura:++ la scheda precedente riportava solo il dato di PFS di LITESPARK-005 (HR 0,75). L'**analisi finale**, presentata a ESMO 2024, aggiunge il dato di sopravvivenza globale, che consolida ulteriormente il ruolo di belzutifan in questa linea di trattamento rispetto a everolimus — un aggiornamento utile perché completa il quadro di efficacia oltre alla sola PFS. [ASCO Post](https://ascopost.com/news/september-2024/belzutifan-vs-everolimus-in-previously-treated-advanced-renal-cell-carcinoma/), [Annals of Oncology](https://www.annalsofoncology.org/article/S0923-7534(24)03897-3/fulltext).
 
+> !!Verifica in letteratura — attenzione:!! presentare belzutifan come "opzione preferita" può far pensare che sia già liberamente prescrivibile in Italia, ma **non è così**: l'approvazione europea (CHMP positivo dicembre 2024, EC per il ccRCC avanzato pretrattato con anti-PD-(L)1 e anti-VEGF) è arrivata solo nel 2025, e ad oggi AIFA lo classifica in **fascia C(nn)** — cioè autorizzato ma **non ancora negoziato/rimborsato** dal SSN (determina AIFA Pres. 622/2025 del 6 maggio 2025, che copre sia la sindrome di von Hippel-Lindau sia il RCC avanzato in terza linea). In pratica il farmaco è oggi acquistabile solo a carico del paziente o tramite canali straordinari (centri di riferimento regionali, RNRL per la componente VHL), non con piano terapeutico SSN ordinario — un dettaglio importante da non dare per scontato in sede di orale. [Determina AIFA Pres. 622/2025](https://www.aifa.gov.it/documents/20142/2959517/Determina-PRES-622-2025_WELIREG.pdf), [OncLive — approvazione EC](https://www.onclive.com/view/european-commission-approves-belzutifan-for-vhl-disease-associated-tumors-advanced-ccrcc).
+
 #### Punti chiave
 - CheckMate 025 (nivolumab vs everolimus): beneficio OS indipendente da PD-L1.
 - METEOR (cabozantinib vs everolimus): miglior farmaco post-TKI (PFS HR 0,51).
 - Dopo IO+TKI: rimborsati solo cabozantinib/sunitinib/sorafenib. Dopo IO+IO: solo sunitinib/sorafenib.
 - !!Rechallenge con IO dopo 1L IO-based: non raccomandato (CONTACT-03 negativo, più tossico)!!.
-- Belzutifan (LITESPARK-005): opzione preferita in 3ª linea vs everolimus, ora con dato di OS a supporto.
+- Belzutifan (LITESPARK-005): opzione preferita in 3ª linea vs everolimus, ora con dato di OS a supporto — ma !!ad oggi in fascia C(nn) AIFA, non ancora rimborsato dal SSN!! (autorizzazione EC 2025, determina AIFA maggio 2025 solo di classificazione, non di rimborso).
 
 ## Carcinoma renale non a cellule chiare
 
 Nel papillare, l'alterazione di MET è presente nell'80% del tipo I e nel 45% del tipo II — una distinzione, quella tra tipo I e II, che la WHO 2022 ha comunque abolito. Lo studio SWOG 1500 (S1500) ha confrontato cabozantinib e sunitinib nel papillare, con una PFS di 9 contro 5,6 mesi (HR 0,60); i bracci con crizotinib e savolitinib sono stati interrotti per inefficacia. Il cabozantinib è quindi l'**opzione preferita nel papillare metastatico**. Nel KEYNOTE-B61, pembrolizumab+lenvatinib in malattia non a cellule chiare ha mostrato un ORR del 51% e una PFS mediana di 17,9 mesi. Il SUNNIFORECAST (nivolumab+ipilimumab contro standard of care in nccRCC) ha mostrato un beneficio di OS solo moderato, non statisticamente significativo (HR 0,83).
 
 Il carcinoma dei dotti collettori e il midollare hanno una prognosi severissima, con solo il 5-10% dei pazienti che sopravvive oltre 24 mesi; lo schema storico è platino+gemcitabina, con il BONSAI trial (cabozantinib in prima linea, ORR 35%) come alternativa più recente. Per la sindrome HLRCC/FH-deficient, una novità del 2025: la combinazione **bevacizumab+erlotinib** ha mostrato un ORR del 72% nella forma ereditaria HLRCC contro il 35% del papillare sporadico, diventando il nuovo standard per questa forma ereditaria.
+
+> !!Verifica in letteratura — attenzione:!! "nuovo standard" va inteso come standard **di letteratura/NCCN**, non come indicazione regolatoria: bevacizumab+erlotinib in questo contesto **non ha un'approvazione EMA/FDA dedicata** per l'HLRCC. Il dato deriva da uno studio di fase II a singolo braccio (Srinivasan et al., NEJM 2023/aggiornamenti successivi), e i due farmaci sono utilizzati **off-label** combinando due molecole già autorizzate per altre indicazioni (bevacizumab in vari tumori solidi, erlotinib nel NSCLC EGFR-mutato) — non esiste quindi una voce AIFA specifica per l'HLRCC né un registro di rimborsabilità dedicato: la prescrizione in Italia richiede canali straordinari (uso compassionevole, comitato etico, o eventuale futura legge 648/96), non un piano terapeutico ordinario. [NEJM](https://www.nejm.org/doi/full/10.1056/NEJMoa2200900).
 
 #### Punti chiave
 - Papillare: cabozantinib opzione preferita in metastatico (SWOG 1500); distinzione tipo I/II abolita in WHO 2022.
@@ -130,7 +141,9 @@ I TKI non richiedono aggiustamenti di dose se la clearance è superiore a 30 ml/
 
 ## Farmaci e classi rilevanti
 
-TKI: sunitinib, pazopanib, cabozantinib, axitinib, sorafenib, lenvatinib, tivozanib. Immunoterapia: pembrolizumab, nivolumab, ipilimumab. Inibitori mTOR: everolimus, temsirolimus. Tra i target emergenti, il belzutifan (inibitore di HIF-2α). Per l'HLRCC/pRCC ereditario: bevacizumab+erlotinib.
+TKI: sunitinib, pazopanib, cabozantinib, axitinib, sorafenib, lenvatinib, tivozanib. Immunoterapia: pembrolizumab, nivolumab, ipilimumab. Inibitori mTOR: everolimus, temsirolimus. Tra i target emergenti, il belzutifan (inibitore di HIF-2α). Per l'HLRCC/pRCC ereditario: bevacizumab+erlotinib. Per lo stato di rimborsabilità AIFA aggiornato di ciascun farmaco, vedi la scheda trasversale `Rimborsabilita.md`.
+
+> ++Verifica in letteratura:++ il tivozanib, pur elencato tra i TKI disponibili, ha un'approvazione EMA datata (2017, terza linea dopo due precedenti TKI anti-VEGFR) e un utilizzo di fatto marginale in Italia: non è stata reperita alcuna determina AIFA di rimborsabilità dedicata, e le fonti storiche ne descrivono la disponibilità solo tramite un programma di expanded access. Va quindi considerato un'opzione teorica più che concretamente prescrivibile con onere SSN nella pratica italiana corrente. [PharmaStar — expanded access tivozanib](https://www.pharmastar.it/news//oncoemato/tumore-del-rene-per-le-forme-avanzate-disponibile-in-italia-il-tivozanib-con-un-programma-di-expanded-access-27377).
 
 ## Tossicità e criticità
 
@@ -145,13 +158,14 @@ Vedi la sezione "Follow-up dopo chirurgia radicale" più sopra: approccio risk-a
 - Distribuzione istologica: cellule chiare 70-80%, papillare 10-15%, cromofobo 5%.
 - IMDC (6 fattori) da memorizzare: performance status, emoglobina, calcio, tempo diagnosi-trattamento, neutrofili, piastrine.
 - CARMENA/SURTIME ridimensionano la nefrectomia citoriduttiva upfront nell'era TKI/IO.
-- KEYNOTE-564 resta l'unico adiuvante con OS positiva (ora HR 0,66 a 5 anni) — non i VEGF-TKI, non gli altri ICI.
-- RAMPART: solo la combinazione durvalumab+tremelimumab è positiva; la monoterapia con durvalumab no — non confonderli.
+- KEYNOTE-564 resta l'unico adiuvante con OS positiva (ora HR 0,66 a 5 anni) — non i VEGF-TKI, non gli altri ICI. ++Rimborsato AIFA in classe H dal 10 luglio 2023++.
+- RAMPART: solo la combinazione durvalumab+tremelimumab è positiva; la monoterapia con durvalumab no — non confonderli. ++Nessuna approvazione regolatoria EMA/AIFA ad oggi++ (solo dati ESMO 2025): non è un'opzione prescrivibile.
 - CheckMate 9ER, analisi finale: miglior OS assoluta tra le combinazioni (46,5 mesi); CLEAR: miglior PFS (HR 0,42) ma più tossico.
 - Nel rischio favorevole IMDC la combo non dimostra beneficio OS — la monoterapia TKI resta un'opzione valida.
 - SWOG 1500: cabozantinib è il farmaco di scelta nel papillare metastatico (unico RCT dedicato).
 - Rechallenge con IO dopo una prima linea IO-based: non raccomandato (CONTACT-03).
-- HLRCC: bevacizumab+erlotinib, ORR 72% — sospettare in presenza di leiomiomi cutanei/uterini.
+- HLRCC: bevacizumab+erlotinib, ORR 72% — sospettare in presenza di leiomiomi cutanei/uterini. !!Uso off-label, nessuna approvazione EMA/FDA dedicata per questa indicazione!!.
+- !!Belzutifan in 3ª linea: autorizzato EC ma ancora in fascia C(nn) AIFA (non rimborsato)!! al momento di questa revisione.
 - PD-L1 nel rene: solo prognostico, mai predittivo.
 
 ## Errori da evitare
@@ -163,6 +177,8 @@ Vedi la sezione "Follow-up dopo chirurgia radicale" più sopra: approccio risk-a
 - Non fare rechallenge con immunoterapia dopo progressione a una prima linea IO-based.
 - Non usare cabozantinib dopo IO+TKI+IO+IO se non rimborsato nel contesto specifico — verificare sempre la nota AIFA.
 - Non evitare le combinazioni IO-TKI nel paziente anziano fit solo per l'età.
+- Non presentare belzutifan come opzione già rimborsata in Italia: è autorizzato EC ma resta in fascia C(nn) AIFA (non rimborsato dal SSN) alla data di questa revisione.
+- Non presentare bevacizumab+erlotinib nell'HLRCC come un'indicazione regolatoria: è un uso off-label supportato da un trial di fase II, non da un'approvazione EMA/FDA dedicata.
 
 ## Fonti
 
@@ -170,6 +186,7 @@ Vedi la sezione "Follow-up dopo chirurgia radicale" più sopra: approccio risk-a
 - ESMO: CPG Rene 2024.
 - Altre fonti: Congresso Grandangolo 2025 (Rene); Trials 2025 Urologiche.
 - Aggiornamenti verificati in questa revisione: ASCO Post, NEJM, Annals of Oncology, Urology Times (vedi link nei blockquote di verifica).
+- Verifica stato regolatorio AIFA (2026-08-25): determine AIFA (Gazzetta Ufficiale/aifa.gov.it), registri di monitoraggio AIFA, EMA/CHMP, OncLive, Urology Times, PharmaStar (vedi link nei blockquote di verifica in letteratura).
 
 ## Note personali
 -

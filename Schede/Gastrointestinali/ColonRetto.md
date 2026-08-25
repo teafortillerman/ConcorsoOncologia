@@ -183,6 +183,8 @@ Il trial **OPERA** ha valutato il boost radioterapico con brachiterapia endorett
 
 Un capitolo particolarmente innovativo riguarda la gestione del retto dMMR/MSI-H, dove i dati di Cercek (MSKCC, NEJM 2025) su **dostarlimab in monoterapia per 6 mesi** hanno riportato risultati straordinari: ==**49/49 pazienti con risposta clinica completa (cCR)**==, con solo 2 recidive (entrambe salvate con successivo trattamento) — un approccio di non-operative management "totale", senza chirurgia, radioterapia o chemioterapia. Questo rappresenta il salto concettuale più radicale nella gestione del CRC ereditato dalla rivoluzione dell'immunoterapia nel dMMR, sebbene non sia ancora uno standard regolatorio formale; in Italia l'accesso avviene attraverso la legge 648.
 
+> ++Verifica in letteratura — dettaglio accesso in Italia:++ confermato quanto riportato nel testo: dostarlimab in monoterapia neoadiuvante per il retto localmente avanzato dMMR/MSI-H (stadi II-III, candidabile a trattamento radicale, 6 mesi/9 cicli) è prescrivibile in Italia tramite **legge 648/96** dalla determina AIFA del 16 giugno 2023, con l'obiettivo — in caso di risposta clinica completa — di evitare chirurgia, radioterapia e chemioterapia (non-operative management). Fonte: [Young2Young — episodio 23, prescrivibilità L.648 dostarlimab neoadiuvante](https://www.youngtoyoung.org/podcast-01/episodio-n-23).
+
 ### Watch and Wait / Non-Operative Management (pMMR/MSS)
 
 Nei pazienti con malattia pMMR/MSS (la maggioranza), la pCR dopo CRT/TNT si osserva nel 10-25% dei casi, aprendo alla possibilità di una strategia di sorveglianza attiva (watch and wait) come alternativa alla chirurgia radicale. Il registro internazionale **IWWD** (880 pazienti) riporta un tasso di local regrowth a 2 anni del 25,2% (di cui l'88% si manifesta entro 2 anni, e il 97% rimane intraparietale, quindi ancora suscettibile di salvataggio chirurgico); l'OS a 5 anni in questa strategia è dell'85%, con DFS del 94%.
@@ -225,25 +227,35 @@ Il trial **BREAKWATER (2025)** ha stabilito un nuovo standard di prima linea per
 
 > ++Verifica in letteratura (BREAKWATER):++ i dati OS (HR 0,49, 30,3 vs 15,1 mesi) sono confermati come attuali e corretti, senza analisi più mature che li abbiano superati — l'approvazione FDA piena (non più solo accelerata, febbraio 2026) si basa su questo stesso dataset.
 
+> ++Verifica in letteratura — aggiornamento regolatorio Italia/UE (2026):++ il regime BREAKWATER di prima linea ha ricevuto una tripla convalida regolatoria ravvicinata: **AIFA** ha attivato l'accesso anticipato tramite **legge 648/96** dal 25-26 febbraio 2026 — l'Italia prima agenzia regolatoria europea a garantire questo accesso, ancora prima del via libera EMA formale — la **FDA** ha convertito l'approvazione accelerata in piena a febbraio 2026, e la **Commissione Europea** ha concesso l'approvazione formale (encorafenib+cetuximab+FOLFOX) il 22 giugno 2026. Resta inoltre attivo, dal 19 aprile 2022, il regime di rimborsabilità AIFA ordinaria di encorafenib+cetuximab per la seconda linea e oltre (indicazione BEACON originaria, Registro BRAFTOVI-CRC). Fonti: [SaluteLab — accesso anticipato AIFA](https://www.salutelab.it/colon-retto-metastatico-braf-aifa-accesso-anticipato-encorafenib-cetuximab/), [GastroInfo](https://gastroinfo.it/news/tumore-colon-retto-aifa-approva-in-prima-linea-combinazione-che-raddoppia-la-sopravvivenza/), [CancerNetwork — approvazione EC](https://www.cancernetwork.com/view/ec-approves-encorafenib-cetuximab-folfox-in-1l-braf-v600e-mutant-mcrc), [Pharmastar — determina AIFA 2022](https://www.pharmastar.it/news/oncoemato/tumore-del-colon-retto-metastatico-ok-aifa-alla-combo-encorafenib-cetuximab-per-i-pazienti-con-mutazione-brafv600e-38093).
+
 ### MSI-H/dMMR (~5% mCRC)
 
 Il trial **KEYNOTE-177** ha stabilito pembrolizumab come opzione di prima linea nella malattia MSI-H/dMMR: PFS HR 0,60 (16,5 vs 8,2 mesi), sebbene l'OS non abbia raggiunto significatività statistica (HR 0,74) per l'elevato tasso di crossover — comunque una raccomandazione forte a favore data la robustezza del beneficio in PFS.
 
 Il trial **CheckMate 8HW (2025)** ha successivamente dimostrato la superiorità di nivolumab+ipilimumab rispetto a nivolumab in monoterapia in prima linea (PFS HR 0,69), stabilendo questa combinazione come ==**nuovo standard per la maggior parte dei pazienti MSI-H**== metastatici.
 
+> ++Verifica in letteratura — conferma regolatoria italiana:++ nivolumab+ipilimumab era già rimborsato da AIFA nel mCRC MSI-H/dMMR in seconda linea e oltre dal 3 novembre 2022 (GU n. 256/2022, Registro OPDIVO mCRC). In seguito a CheckMate 8HW e alla successiva approvazione EMA/EC per la prima linea, AIFA ha attivato dal 29 aprile 2026 (Determine PRES_521/2026 e PRES_530/2026) il registro dedicato "OPDIVO/YERVOY Prima Linea" per il mCRC dMMR/MSI-H, confermando quanto riportato nel testo. Fonte: [GuidaUsoFarmaci — attivazione registro prima linea](https://www.guidausofarmaci.it/news/attivazione-online-e-pubblicazione-delle-schede-di-monitoraggio-registro-opdivo-yervoy-prima-linea.php).
+
 ### HER2-amplificato
 
 Nella malattia HER2-amplificata, il trial **MOUNTAINEER** (tucatinib+trastuzumab) ha riportato ORR 38% e OS mediana di 24,1 mesi; i trial **DESTINY-CRC01/02** (trastuzumab deruxtecan/T-DXd) hanno mostrato ORR rispettivamente del 45% e 38% — entrambe opzioni valide in questo sottogruppo, sebbene questo biomarcatore non sia ancora entrato nella pratica clinica di routine italiana.
 
+> ++Verifica in letteratura — stato regolatorio HER2 (2026):++ tucatinib+trastuzumab (MOUNTAINEER) resta a oggi un'approvazione solo FDA (gennaio 2023): l'EPAR europeo di Tukysa non include un'indicazione per il CRC, per cui la mancata disponibilità di routine in Italia riportata nel testo è corretta. Trastuzumab deruxtecan, sulla base del basket trial pan-tumorale DESTINY-PanTumor02 (che include una coorte CRC oltre a DESTINY-CRC01/02), ha ricevuto un'approvazione USA tumor-agnostic nell'aprile 2024 e un'approvazione EMA/EC pan-tumorale analoga il 26 giugno 2026 per tumori solidi HER2+ pretrattati; alla data di questa verifica (agosto 2026) non risulta ancora una rimborsabilità AIFA specifica attivata per l'indicazione CRC. Fonti: [EMA — Tukysa EPAR](https://www.ema.europa.eu/en/medicines/human/EPAR/tukysa), [AstraZeneca — approvazione UE Enhertu tumor-agnostic](https://www.astrazeneca.com/media-centre/press-releases/2026/enhertu-approved-in-eu-for-her-solid-tumours.html).
+
 ### KRAS G12C
 
 Il trial **CodeBreaK 300** (sotorasib+panitumumab) ha rappresentato il primo studio positivo di terapia target-specifica nel CRC metastatico oltre al BRAF; adagrasib+cetuximab ha riportato un ORR del 46% in questo stesso contesto molecolare.
+
+> ++Verifica in letteratura — stato regolatorio KRAS G12C (2026):++ entrambe le combinazioni restano ad oggi approvazioni solo FDA, non ancora recepite da EMA/AIFA per l'indicazione CRC: sotorasib+panitumumab (CodeBreaK 300) ha ricevuto approvazione FDA a gennaio 2025 per il mCRC KRAS G12C-mutato dopo fluoropirimidina, oxaliplatino e irinotecan (l'EPAR europeo di Lumykras resta limitato al NSCLC); adagrasib+cetuximab (KRYSTAL-1) ha ricevuto approvazione accelerata FDA a gennaio 2024 (l'EPAR europeo di Krazati, aggiornato anche in Italia nell'ottobre 2025, resta anch'esso limitato al NSCLC KRAS G12C). Nessuna delle due combinazioni è quindi oggi disponibile/rimborsata in Italia per il CRC. Fonti: [FDA — sotorasib+panitumumab](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-sotorasib-panitumumab-kras-g12c-mutated-colorectal-cancer), [BMS — adagrasib+cetuximab](https://news.bms.com/news/details/2024/Bristol-Myers-Squibb-Announces-U.S.-FDA-Accelerated-Approval-of-KRAZATI-adagrasib-in-Combination-with-Cetuximab-for-Adult-Patients-with-Previously-Treated-KRAS-G12C-Mutated-Locally-Advanced-or-Metastatic-Colorectal-Cancer-CRC/default.aspx), [EMA — Krazati EPAR](https://www.ema.europa.eu/en/medicines/human/EPAR/krazati).
 
 ### Linee successive
 
 La strategia di **rechallenge anti-EGFR guidato da ctDNA** (trial PARERE) ha dimostrato che la selezione molecolare (identificazione di cloni resistenti tramite biopsia liquida) migliora ORR e PFS rispetto al trattamento con regorafenib non selezionato — un esempio di come la biopsia liquida stia trasformando la sequenza terapeutica nel CRC metastatico.
 
 Tra le opzioni di linee successive validate, il trial **CORRECT** (regorafenib) ha riportato OS HR 0,77; **RECOURSE** (TAS-102/trifluridina-tipiracil) OS HR 0,68; **SUNLIGHT** (TAS-102+bevacizumab) OS HR 0,61 (10,8 vs 7,5 mesi), stabilendo questa combinazione come ==**nuovo standard trasversale [I,A]**== indipendentemente dal profilo molecolare; e **FRESCO-2** (fruquintinib) OS HR 0,66.
+
+> ++Verifica in letteratura — rimborsabilità italiana (2025):++ entrambe le opzioni più recenti sono ora disponibili in Italia. La combinazione trifluridina/tipiracil+bevacizumab (SUNLIGHT) è stata resa rimborsabile da AIFA a inizio marzo 2025, confermando lo standard trasversale citato nel testo. Fruquintinib (FRESCO-2) è rimborsato da AIFA dal giugno 2025 (Determina 767/2025, GU 17.06.2025) come monoterapia dalla quarta linea in poi, dopo fluoropirimidina, oxaliplatino, irinotecan, anti-VEGF e anti-EGFR (se RAS-wt), in progressione o intolleranza a TAS-102 o regorafenib. Fonti: [DottNet — rimborsabilità SUNLIGHT](https://www.dottnet.it/articolo/32538778/tumore-colorettale-metastatico-refrattario-approvata-in-italia-la-combinazione-trifluridina-tipiracil-piu-bevacizumab), [Farmacia Ospedaliera — rimborsabilità fruquintinib](https://www.farmaciaospedaliera.it/fruquintinib-rimborsato-dal-ssn-contro-il-tumore-metastatico-del-colon-retto/).
 
 ### Malattia oligometastatica epatica/polmonare
 
@@ -255,11 +267,11 @@ Un dato negativo importante da ricordare è quello del trial **PRODIGE 7**, che 
 
 #### Punti chiave — malattia avanzata/metastatica
 - I linea RAS/BRAF-wt: sede guida la scelta (destro→bevacizumab, sinistro→anti-EGFR); TRIBE (FOLFOXIRI+bev) per destro/RAS mutato.
-- BRAF V600E: BREAKWATER nuovo standard 1L (OS HR 0,49, 30,3 vs 15,1 mesi) — approvazione FDA piena febbraio 2026.
-- MSI-H/dMMR: KEYNOTE-177 (pembrolizumab) storico; CheckMate 8HW (nivo+ipi) nuovo standard, superiore a nivo monoterapia.
-- HER2+: MOUNTAINEER (tucatinib-trastuzumab, ORR 38%) o T-DXd (DESTINY-CRC01/02, ORR 45%/38%) — non ancora routine in Italia.
-- KRAS G12C: CodeBreaK 300 (sotorasib+panitumumab), primo target-specifico positivo oltre BRAF.
-- Linee successive: SUNLIGHT (TAS-102+bev) nuovo standard trasversale [I,A]; CORRECT/RECOURSE/FRESCO-2 alternative validate; rechallenge anti-EGFR ctDNA-guidato (PARERE).
+- BRAF V600E: BREAKWATER nuovo standard 1L (OS HR 0,49, 30,3 vs 15,1 mesi) — tripla convalida 2026: AIFA legge 648/96 (feb 2026, Italia prima in Europa), FDA piena (feb 2026), EMA/EC (22 giu 2026).
+- MSI-H/dMMR: KEYNOTE-177 (pembrolizumab) storico; CheckMate 8HW (nivo+ipi) nuovo standard, superiore a nivo monoterapia — AIFA conferma la rimborsabilità anche in 1L dal 29 aprile 2026 (già rimborsato in 2L+ dal 2022).
+- HER2+: MOUNTAINEER (tucatinib-trastuzumab, ORR 38%) resta solo FDA (no EMA/AIFA per CRC); T-DXd (DESTINY-CRC01/02, ORR 45%/38%) — approvazione EU tumor-agnostic pan-tumorale il 26 giu 2026, ma non ancora rimborsabilità AIFA specifica per CRC — non ancora routine in Italia.
+- KRAS G12C: CodeBreaK 300 (sotorasib+panitumumab, FDA gen 2025) e adagrasib+cetuximab (FDA gen 2024), primi target-specifici positivi oltre BRAF — entrambi solo FDA, non ancora EMA/AIFA per il CRC.
+- Linee successive: SUNLIGHT (TAS-102+bev) nuovo standard trasversale [I,A], rimborsato AIFA da marzo 2025; FRESCO-2 (fruquintinib) rimborsato AIFA da giugno 2025 (4L+); CORRECT/RECOURSE alternative validate; rechallenge anti-EGFR ctDNA-guidato (PARERE).
 - Oligometastatico epatico: resezione R0 (FOLFOX4 perioperatorio, EORTC 40983); TransMet (nuovo, 2024) — trapianto epatico in liver-limited non resecabile, OS 5a 50% vs 10%, formalizzato ESMO 2026 [II,A].
 - PRODIGE 7: HIPEC+citoriduzione NON funziona in carcinosi peritoneale (nessun beneficio OS).
 
@@ -301,14 +313,14 @@ La durata standard del follow-up è di 5 anni, poiché oltre il 95% delle recidi
 - Nel CRC, il retto MSI ha probabilità di Lynch molto più alta del colon MSI (fino 84% vs prevalenza generale 1-3%).
 - **Studio IDEA**: 3 mesi (CAPOX) vs 6 mesi (FOLFOX necessario in alto rischio) — la scelta dipende da rischio E regime, non solo da uno dei due.
 - **CRM ≤1mm = R1**, fattore prognostico più potente nel retto (superiore al TNM, studio MERCURY).
-- **BREAKWATER (2025)** ha reso encorafenib+cetuximab+mFOLFOX6 lo standard 1L BRAF V600E (OS HR 0,49) — approvazione FDA piena febbraio 2026.
+- **BREAKWATER (2025)** ha reso encorafenib+cetuximab+mFOLFOX6 lo standard 1L BRAF V600E (OS HR 0,49) — tripla convalida 2026: AIFA legge 648/96 (feb 2026, prima in Europa), FDA piena (feb 2026), EMA/EC (22 giu 2026).
 - **RAPIDO — attenzione al trabocchetto**: inizialmente positivo, ma l'aggiornamento 2023 mostra recidive locali peggiori → raccomandazione finale condizionata A SFAVORE.
 - **ATOMIC (nuovo, 2026)**: atezolizumab+mFOLFOX6 adiuvante nel colon dMMR stadio III — DFS HR 0,50, nuovo potenziale standard.
 - **Dostarlimab monoterapia nel retto dMMR** (49/49 cCR, NEJM 2025): salto concettuale più radicale, evita chirurgia/RT/chemio in toto.
 - **ctDNA**: solido per prognosi/de-escalazione nel colon (GALAXY/BESPOKE), ma DYNAMIC-III (2025) negativo per l'escalation guidata da ctDNA — nel retto non ancora raccomandato per decisioni adiuvanti [II,D].
 - **PRODIGE 7**: HIPEC+citoriduzione NON funziona nella carcinosi peritoneale da CRC (nessun beneficio OS, più tossicità) — trabocchetto classico.
 - **TransMet (nuovo, 2024)**: trapianto epatico nel mCRC liver-limited non resecabile, formalizzato ESMO 2026 [II,A].
-- **KEYNOTE-177 → CheckMate 8HW**: nivolumab+ipilimumab ora preferito a pembrolizumab monoterapia in 1L MSI-H.
+- **KEYNOTE-177 → CheckMate 8HW**: nivolumab+ipilimumab ora preferito a pembrolizumab monoterapia in 1L MSI-H — AIFA conferma rimborsabilità 1L in Italia dal 29 aprile 2026.
 - Sede del tumore (destro/sinistro) guida la scelta biologico in 1L RAS-wt: destro→bevacizumab, sinistro→anti-EGFR.
 
 
@@ -325,6 +337,7 @@ La durata standard del follow-up è di 5 anni, poiché oltre il 95% delle recidi
 - AIOM: Neoplasie del Colon 2024; Neoplasie del Retto e dell'Ano 2025.
 - ESMO: CPG ColonRetto 2026; CPG Retto 2025; CPG Tumori Ereditari GI 2019.
 - Altre fonti: Congresso Grandangolo 2025 (Colon Localizzato, ColonRetto Avanzato, Retto Localizzato, Trials 2025 ColonRetto); ATOMIC (NEJM marzo 2026); DYNAMIC-III (Nature Medicine 2025); TNT intensificato (Wang, JCO 2026); TransMet (2024).
+- Verifica rimborsabilità AIFA (2026-08-24): [Pharmastar — encorafenib+cetuximab AIFA 2022](https://www.pharmastar.it/news/oncoemato/tumore-del-colon-retto-metastatico-ok-aifa-alla-combo-encorafenib-cetuximab-per-i-pazienti-con-mutazione-brafv600e-38093); [SaluteLab — accesso anticipato AIFA BREAKWATER 1L](https://www.salutelab.it/colon-retto-metastatico-braf-aifa-accesso-anticipato-encorafenib-cetuximab/); [GastroInfo — AIFA 1L BRAF](https://gastroinfo.it/news/tumore-colon-retto-aifa-approva-in-prima-linea-combinazione-che-raddoppia-la-sopravvivenza/); [CancerNetwork — EC approval encorafenib 1L](https://www.cancernetwork.com/view/ec-approves-encorafenib-cetuximab-folfox-in-1l-braf-v600e-mutant-mcrc); [GuidaUsoFarmaci — registro Opdivo/Yervoy 1L mCRC](https://www.guidausofarmaci.it/news/attivazione-online-e-pubblicazione-delle-schede-di-monitoraggio-registro-opdivo-yervoy-prima-linea.php); [AIFA — registro Opdivo mCRC 2L+](https://www.aifa.gov.it/en/-/attivazione-web-e-pubblicazione-schede-di-monitoraggio-registro-opdivo-mcrc-); [Young2Young ep. 23 — dostarlimab L.648 retto dMMR](https://www.youngtoyoung.org/podcast-01/episodio-n-23); [EMA — Tukysa EPAR](https://www.ema.europa.eu/en/medicines/human/EPAR/tukysa); [AstraZeneca — Enhertu approvazione UE tumor-agnostic](https://www.astrazeneca.com/media-centre/press-releases/2026/enhertu-approved-in-eu-for-her-solid-tumours.html); [EMA — Krazati EPAR](https://www.ema.europa.eu/en/medicines/human/EPAR/krazati); [AIFA — registro Krazati NSCLC](https://www.aifa.gov.it/en/-/attivazione-web-ed-aggiornamento-registri-di-monitoraggio-krazati); [FDA — sotorasib+panitumumab](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-sotorasib-panitumumab-kras-g12c-mutated-colorectal-cancer); [BMS — adagrasib+cetuximab FDA](https://news.bms.com/news/details/2024/Bristol-Myers-Squibb-Announces-U.S.-FDA-Accelerated-Approval-of-KRAZATI-adagrasib-in-Combination-with-Cetuximab-for-Adult-Patients-with-Previously-Treated-KRAS-G12C-Mutated-Locally-Advanced-or-Metastatic-Colorectal-Cancer-CRC/default.aspx); [DottNet — SUNLIGHT AIFA](https://www.dottnet.it/articolo/32538778/tumore-colorettale-metastatico-refrattario-approvata-in-italia-la-combinazione-trifluridina-tipiracil-piu-bevacizumab); [Farmacia Ospedaliera — fruquintinib AIFA](https://www.farmaciaospedaliera.it/fruquintinib-rimborsato-dal-ssn-contro-il-tumore-metastatico-del-colon-retto/).
 
 
 ## Note personali

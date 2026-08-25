@@ -120,6 +120,8 @@ Si definisce come PSA in aumento nonostante la castrazione, con malattia **M0 al
 
 Il criterio di selezione per tutti e tre gli ARSI approvati in questo setting è lo stesso: **PSA doubling time ≤10 mesi**. I tre trial registrativi mostrano risultati sovrapponibili: nello studio SPARTAN, apalutamide ha portato la sopravvivenza libera da metastasi da 16,2 a 40,5 mesi (HR 0,28), con un HR per OS di 0,78; nel PROSPER, enzalutamide ha portato la MFS da 14,7 a 36,6 mesi (HR 0,29), con HR OS di 0,73; nell'ARAMIS, darolutamide ha portato la MFS da 18,4 a 40,4 mesi (HR 0,41), con HR OS di 0,69. Con un PSA-DT superiore a 10 mesi, invece, la sola ADT può proseguire senza intensificazione.
 
+> ++Verifica in letteratura:++ tutti e tre gli ARSI di questo setting sono rimborsati da AIFA: **darolutamide** dal 6 luglio 2021, **apalutamide** già dal 2019, **enzalutamide** anch'essa da tempo confermata (a cui si aggiunge oggi l'indicazione più recente in EMBARK, vedi sezione sulla recidiva biochimica). [Determina AIFA 06.07.21 — Nubeqa](https://www.medicoeleggi.com/argomenti000/italia2021/413460-a.htm).
+
 #### Punti chiave
 - Criterio universale per i 3 ARSI in nmCRPC: PSA-DT ≤10 mesi.
 - SPARTAN (apalutamide): MFS 40,5 vs 16,2 mesi; PROSPER (enzalutamide): 36,6 vs 14,7; ARAMIS (darolutamide): 40,4 vs 18,4 — tutti con beneficio OS concordante.
@@ -134,6 +136,8 @@ Le due classificazioni di rischio/volume più usate non vanno confuse tra loro. 
 ### Doppietta ADT + ARSI
 
 I dati dei principali trial con doppietta ADT+ARSI sono concordanti: nel LATITUDE, l'abiraterone ha portato l'OS a 53,3 contro 36,5 mesi (HR passato da 0,62 a 0,66 nell'analisi aggiornata); nello STAMPEDE, il braccio abiraterone ha mostrato un'OS a 3 anni dell'83% contro il 76% (HR 0,63); nel TITAN, l'apalutamide ha mantenuto un HR per OS tra 0,67 e 0,65 nonostante un crossover del 39,5%; nell'ARCHES, l'enzalutamide ha mostrato un HR per rPFS di 0,39 e per OS di 0,66; nell'ENZAMET (enzalutamide contro antiandrogeno di prima generazione), l'HR per OS è passato da 0,67 a 0,70, con una sopravvivenza a 5 anni del 67% contro il 57%. Una metanalisi di questi 5 trial conferma un HR per OS di 0,62 con un NNT di 6,7 — la raccomandazione è **forte a favore**.
+
+> ++Verifica in letteratura:++ un quarto ARSI si è aggiunto alla doppietta orale nel mHSPC, completamente assente dalla versione precedente di questa scheda: lo studio **ARANOTE** ha valutato **darolutamide+ADT** (senza docetaxel), mostrando una riduzione del 46% del rischio di progressione radiografica o morte rispetto a placebo+ADT; AIFA ne ha approvato la rimborsabilità il 5 maggio 2026, ampliando le opzioni di doppietta orale accanto ad abiraterone (LATITUDE/STAMPEDE), apalutamide (TITAN, rimborsato da maggio 2022) ed enzalutamide (ARCHES/ENZAMET). [DottNet](https://www.dottnet.it/articolo/32542365/darolutamide-rimborsabile-anche-senza-chemioterapia-aifa-amplia-le-opzioni-nel-tumore-prostatico-metastatico).
 
 ### Doppietta ADT + docetaxel
 
@@ -156,11 +160,15 @@ Le linee guida ESMO 2026 considerano **doppietta ADT-ARSI e tripletta entrambe o
 
 ### Prima linea (naïve ad ARSI/docetaxel)
 
-Nel COU-AA-302, l'abiraterone ha mostrato un HR per rPFS di 0,53 e per OS di 0,81 (34,7 contro 30,3 mesi). Nel PREVAIL, l'enzalutamide ha mostrato un HR per rPFS di 0,32 e per OS di 0,77 (35,3 contro 31,3 mesi). Il docetaxel resta l'opzione preferita in presenza di malattia viscerale, sintomatica o biologicamente aggressiva (schedula trisettimanale secondo il TAX 327, HR 0,76). Le combinazioni ARSI+PARP in prima linea (PROpel, MAGNITUDE, TALAPRO-2) mostrano un beneficio maggiore nei pazienti HRR-positivi/BRCA-positivi, ma **nessuna di queste combinazioni è al momento rimborsata in Italia**.
+Nel COU-AA-302, l'abiraterone ha mostrato un HR per rPFS di 0,53 e per OS di 0,81 (34,7 contro 30,3 mesi). Nel PREVAIL, l'enzalutamide ha mostrato un HR per rPFS di 0,32 e per OS di 0,77 (35,3 contro 31,3 mesi). Il docetaxel resta l'opzione preferita in presenza di malattia viscerale, sintomatica o biologicamente aggressiva (schedula trisettimanale secondo il TAX 327, HR 0,76). Le combinazioni ARSI+PARP in prima linea (PROpel, MAGNITUDE, TALAPRO-2) mostrano un beneficio maggiore nei pazienti HRR-positivi/BRCA-positivi; !!attenzione, però: non è più vero che nessuna di queste combinazioni sia rimborsata in Italia!! — lo sono tutte e tre, sia pure con indicazione ristretta al solo BRCA1/2.
+
+> !!Verifica in letteratura — attenzione:!! la scheda precedente indicava che nessuna delle tre combinazioni ARSI+PARP di prima linea fosse rimborsata in Italia — non è più corretto. Tutte e tre hanno ottenuto la rimborsabilità AIFA (classe H), sempre con indicazione ristretta ai soli pazienti **BRCA1/2** (non l'intera popolazione HRR-positiva/unselected dei trial) e con il criterio "chemioterapia non clinicamente indicata": **olaparib+abiraterone** (PROpel) dalla Determina AIFA del 29 gennaio 2025 (GU n. 35 del 12/02/2025); **niraparib+abiraterone**, Akeega (MAGNITUDE), dal 3 luglio 2025; **talazoparib+enzalutamide**, Talzenna+Xtandi (TALAPRO-2), dal 25 aprile 2025. Da segnalare anche che Akeega ha ricevuto un'estensione di indicazione EMA al mHSPC BRCA1/2 (studio AMPLITUDE, approvazione CE marzo 2026), per la quale non risulta ancora una rimborsabilità AIFA specifica alla data di questa verifica. [Determina AIFA 29.01.2025 — Lynparza](https://www.aifa.gov.it/documents/20142/961234/Determina_178-2025_Lynparza.pdf), [AIFA — Registro Akeega mCRPC](https://www.aifa.gov.it/en/-/attivazione-web-e-pubblicazione-schede-di-monitoraggio-registro-akeega-mcrpc-), [AIFA — Registro Talzenna mCRPC](https://www.aifa.gov.it/en/-/attivazione-web-e-pubblicazione-schede-di-monitoraggio-registro-talzenna-mcrpc-).
 
 ### mCRPC — PARP-inibitori (BRCA/HRR-mutato)
 
-Nel PROfound (olaparib, post-ARSI), la coorte BRCA/ATM ha mostrato un HR per rPFS di 0,34, con un'analisi di OS positiva nonostante un crossover del 69% — un risultato che rafforza la solidità del dato. **L'EMA ha ristretto l'indicazione al solo BRCA1/2**. Nel TRITON3 (rucaparib), l'HR per rPFS è stato 0,61 (0,50 nella sola coorte BRCA2). In Italia, al momento, **l'unico PARP-inibitore rimborsato è olaparib**.
+Nel PROfound (olaparib, post-ARSI), la coorte BRCA/ATM ha mostrato un HR per rPFS di 0,34, con un'analisi di OS positiva nonostante un crossover del 69% — un risultato che rafforza la solidità del dato. **L'EMA ha ristretto l'indicazione al solo BRCA1/2**. Nel TRITON3 (rucaparib), l'HR per rPFS è stato 0,61 (0,50 nella sola coorte BRCA2); !!attenzione: rucaparib non ha mai ottenuto un'autorizzazione EMA per il tumore della prostata, solo FDA!!. In Italia, come monoterapia post-ARSI resta **solo olaparib** il PARP-inibitore rimborsato (dal 2022) — ma non è più corretto dire che sia l'unico PARP-inibitore rimborsato in assoluto per la prostata, perché da aprile/luglio 2025 sono rimborsate anche le due combinazioni ARSI+PARP di prima linea viste sopra (niraparib+abiraterone, talazoparib+enzalutamide).
+
+> !!Verifica in letteratura — attenzione:!! rucaparib (Rubraca), pur studiato nel TRITON3, **non è mai stato approvato da EMA per il tumore della prostata**: l'autorizzazione europea del farmaco copre solo le indicazioni ginecologiche (carcinoma ovarico, delle tube di Falloppio e peritoneale primario). L'approvazione per il mCRPC BRCA-mutato esiste solo da FDA (approvazione accelerata 2020, convertita in piena approvazione a fine 2025 su base TRITON3): un farmaco quindi **non disponibile in Europa/Italia** per questa indicazione, a differenza di quanto una lettura superficiale del trial potrebbe far pensare. Va tenuto distinto da olaparib, rimborsato AIFA come monoterapia post-ARSI dalla Determina AIFA 08.03.2022 (classe H, registro dedicato). [EMA — Rubraca EPAR](https://www.ema.europa.eu/en/medicines/human/EPAR/rubraca), [ONS — FDA regular approval rucaparib mCRPC](https://www.ons.org/publications-research/voice/news-views/12-2025/fda-grants-regular-approval-rucaparib-metastatic), [Determina AIFA 08.03.22 — Lynparza](https://www.medicoeleggi.com/argomenti000/italia2022/414179-1.htm).
 
 Secondo la stratificazione ESCAT (ESMO 2026), le alterazioni BRCA1/2 sono classificate I-A, CDK12 II-A, PALB2 II-B, dMMR III-A — mentre !!non c'è alcun beneficio dimostrato per CHEK2/ATM!!, un punto su cui è facile generalizzare erroneamente parlando genericamente di "PARPi per tutte le alterazioni HRR".
 
@@ -182,7 +190,7 @@ Va inoltre segnalata una discrepanza regolatoria italiana da conoscere: !!il ¹�
 
 #### Punti chiave
 - COU-AA-302 (abiraterone) e PREVAIL (enzalutamide) 1L: entrambi con beneficio rPFS/OS solido.
-- ARSI+PARP 1L (PROpel/MAGNITUDE/TALAPRO-2): beneficio maggiore in HRR+/BRCA+, ma nessuna combinazione rimborsata in Italia.
+- ARSI+PARP 1L (PROpel/MAGNITUDE/TALAPRO-2): beneficio maggiore in HRR+/BRCA+; tutte e tre oggi rimborsate AIFA (2025), ma solo per BRCA1/2.
 - PARPi: beneficio robusto BRCA1/2 (I-A), CDK12 (II-A), PALB2 (II-B); **assente** per CHEK2/ATM.
 - ++TALAPRO-2, OS finale coorte HRR-deficiente: 45,1 vs 31,1 mesi (HR 0,622, p=0,0005)++ — a differenza di MAGNITUDE, che non ha OS positiva.
 - CARD: cabazitaxel > secondo ARSI in 3ª linea dopo ARSI+taxano.
@@ -196,7 +204,9 @@ Acido zoledronico e denosumab restano le opzioni per la prevenzione degli eventi
 
 ## Farmaci e classi rilevanti
 
-Sul fronte ormonale: ADT con agonisti o antagonisti LHRH (per esempio relugolix, dallo studio HERO), abiraterone, enzalutamide, apalutamide, darolutamide, bicalutamide. In chemioterapia: docetaxel e cabazitaxel. Nelle target therapy: olaparib e rucaparib (PARP-inibitori), ¹⁷⁷Lu-PSMA-617, radio-223. Per le metastasi ossee: acido zoledronico e denosumab.
+Sul fronte ormonale: ADT con agonisti o antagonisti LHRH (per esempio relugolix, dallo studio HERO), abiraterone, enzalutamide, apalutamide, darolutamide, bicalutamide. In chemioterapia: docetaxel e cabazitaxel. Nelle target therapy: olaparib in monoterapia e le combinazioni niraparib+abiraterone e talazoparib+enzalutamide (PARP-inibitori), rucaparib (studiato ma !!mai approvato da EMA per la prostata, solo FDA!!), ¹⁷⁷Lu-PSMA-617, radio-223. Per le metastasi ossee: acido zoledronico e denosumab. Per lo stato aggiornato di rimborsabilità AIFA di questi farmaci, vedi la scheda trasversale `Rimborsabilita.md`.
+
+> ++Verifica in letteratura:++ relugolix (Orgovyx), l'antagonista LHRH orale dello studio HERO, è oggi rimborsato in Italia per il carcinoma prostatico avanzato ormono-sensibile (Determina AIFA del 4 dicembre 2023, classificazione iniziale C(nn), rimborsabilità SSN effettiva dai primi mesi del 2024). [Determina AIFA 04.12.23 — Orgovyx](https://www.medicoeleggi.com/argomenti000/italia2023/415918-a.htm), [AboutPharma](https://www.aboutpharma.com/legal-regulatory/disponibile-in-italia-relugolix-per-i-pazienti-con-carcinoma-della-prostata-sensibile-agli-ormoni-in-fase-avanzata/).
 
 ## Tossicità e criticità
 
@@ -215,6 +225,8 @@ Dopo prostatectomia il PSA dovrebbe azzerarsi, con un'emivita di circa 3 giorni;
 - Il ¹⁷⁷Lu-PSMA si sta spostando verso linee più precoci (PSMAfore, rPFS positivo), ma in Italia resta rimborsato solo dopo ARSI+2 taxani, e l'OS di PSMAfore non è risultata significativa in ITT.
 - I PARP-inibitori hanno un beneficio robusto per BRCA1/2, CDK12 e PALB2, ma assente per CHEK2/ATM.
 - MAGNITUDE (niraparib+abiraterone) non ha un'OS positiva, a differenza di TALAPRO-2 (che oggi ha un dato di OS finale solido nella coorte HRR-deficiente) — distinguere sempre gli endpoint raggiunti dai singoli trial.
+- Le tre combinazioni ARSI+PARP di prima linea (PROpel, MAGNITUDE, TALAPRO-2) sono oggi tutte rimborsate da AIFA (2025), ma solo per i pazienti BRCA1/2 — non per l'intera popolazione HRR-positiva dei trial.
+- Rucaparib (TRITON3) non ha mai ottenuto un'autorizzazione EMA per il tumore della prostata: solo FDA. In Europa/Italia non è quindi un'opzione disponibile in questa indicazione.
 - Radio-223 e abiraterone non vanno mai combinati (ERA 223).
 - Il criterio di selezione universale per gli ARSI nel nmCRPC è il PSA doubling time ≤10 mesi.
 - EMBARK ha ora anche un dato di OS finale (HR 0,597 per la combinazione), ma l'enzalutamide da sola non ha OS significativa vs leuprorelina — il beneficio è della combinazione.
@@ -228,13 +240,14 @@ Dopo prostatectomia il PSA dovrebbe azzerarsi, con un'emivita di circa 3 giorni;
 - Non confondere i criteri CHAARTED (volume di malattia) con LATITUDE (rischio) — sono due stratificazioni diverse costruite su parametri diversi.
 - Non dimenticare lo screening di varici/BPA quando pertinente ai farmaci in uso.
 - Non presentare il beneficio di rPFS di un trial (es. PSMAfore) come se implicasse automaticamente un beneficio di sopravvivenza globale dimostrato.
+- Non dare per scontato che rucaparib sia disponibile in Europa per il tumore della prostata: nessuna autorizzazione EMA in questa indicazione, solo FDA (Rubraca in UE resta autorizzato solo per le indicazioni ginecologiche).
 
 ## Fonti
 
 - AIOM: Neoplasie della Prostata 2024.
 - ESMO: CPG Prostata Localizzata 2026; CPG Prostata Metastatica 2026.
 - Altre fonti: Congresso Grandangolo 2025 (Prostata).
-- Aggiornamenti verificati in questa revisione: ASCO Post, The Lancet, NEJM, Annals of Oncology (vedi link nei blockquote di verifica).
+- Aggiornamenti verificati in questa revisione: ASCO Post, The Lancet, NEJM, Annals of Oncology (dati di letteratura); aifa.gov.it, Gazzetta Ufficiale, medicoeleggi.com, AboutPharma, DottNet, EMA (verifica dello stato regolatorio/di rimborsabilità AIFA, vedi link nei blockquote di verifica).
 
 ## Note personali
 -

@@ -68,6 +68,8 @@ La terapia radiorecettoriale con [177Lu]Lu-DOTA-TATE ha rappresentato una svolta
 Un aggiornamento cruciale, spesso mancante nelle trattazioni precedenti, riguarda il trial **NETTER-2** (Singh, Lancet 2024), che ha esteso l'uso della PRRT alla **prima linea** in pazienti con NET GEP di nuova diagnosi, avanzati, G2 con Ki-67≥10% o G3 ben differenziati, confrontando Lutathera+octreotide LAR verso octreotide LAR ad alto dosaggio da solo. I risultati sono notevoli: ==**PFS mediana 22,8 vs 8,5 mesi (HR 0,28; p<0,0001)**==, con ORR 43% vs 9,3% e durata di risposta mediana di 23,3 mesi. Questo rappresenta un potenziale cambio di paradigma per l'uso della PRRT più precocemente nella storia della malattia, in una popolazione ad alto Ki-67 dove tradizionalmente la PRRT era riservata a linee successive.
 
 > ++Verifica in letteratura (NETTER-2):++ pubblicato Lancet 2024 (non 2025) — PFS 22,8 vs 8,5 mesi, HR 0,28 (p<0,0001), ORR 43% vs 9,3%. Fornisce evidenza solida a supporto dell'uso in prima linea nei G2 alto/G3, recepita nelle linee guida NCCN come opzione di prima linea, ma non risulta ancora un'estensione formale dell'indicazione EMA/AIFA specifica per "prima linea G2-G3" — verificare il foglietto illustrativo aggiornato prima di presentarla come indicazione registrata.
+>
+> ++Verifica in letteratura (aggiornamento 24/08/2026):++ confermato — la scheda EPAR EMA di Lutathera, revisionata il 14/08/2026, riporta ancora la sola indicazione storica adulti (GEP-NET G1-G2 SSTR+, progressivi, non operabili/metastatici); non risulta alcuna estensione formale EMA né AIFA alla prima linea basata su NETTER-2. È in corso solo una valutazione EMA per l'uso in adolescenti (Q&A del 19/09/2025), non ancora conclusa. Va quindi mantenuta la cautela già presente nel testo. Fonte: [EMA — Lutathera EPAR](https://www.ema.europa.eu/en/medicines/human/EPAR/lutathera).
 
 Un ulteriore sviluppo recente, ancora sperimentale, è rappresentato dal trial **COMPETE** (177Lu-edotreotide/ITM-11 vs everolimus, NET GEP G1-G2 SSTR+, pubblicato Lancet 2026), con PFS di 23,9 vs 14,1 mesi (HR 0,67; p=0,022) e ORR 22% vs 4% — dati che aprono a un possibile secondo agente PRRT, ma ==**ITM-11 non è ancora approvato da alcuna autorità regolatoria**== e va presentato come dato emergente, non come opzione clinica disponibile.
 
@@ -79,16 +81,16 @@ Nei carcinomi neuroendocrini scarsamente differenziati (NEC), lo standard di pri
 
 ### Cabozantinib — nuova opzione in linee successive (CABINET)
 
-Un'aggiunta importante e completamente assente dalla trattazione classica riguarda **cabozantinib**, un inibitore multichinasico valutato nel trial **CABINET** (Chan, NEJM 2024, trial Alliance A021602) in pazienti con NET pancreatici ed extra-pancreatici progressivi dopo almeno una linea di trattamento precedente. I risultati sono robusti in entrambe le coorti: ==**coorte pNET — PFS 13,8 vs 4,4 mesi (HR 0,23; p<0,0001), ORR 19% vs 0%**==; ==**coorte NET extra-pancreatico — PFS 8,4 vs 3,9 mesi (HR 0,38; p<0,0001), ORR 5% vs 0%**==. Sulla base di questi dati, ==**la FDA ha approvato cabozantinib il 31 marzo 2025**== per NET pancreatici ed extra-pancreatici avanzati/progressivi già trattati, in pazienti adulti e pediatrici ≥12 anni.
+Un'aggiunta importante e completamente assente dalla trattazione classica riguarda **cabozantinib**, un inibitore multichinasico valutato nel trial **CABINET** (Chan, NEJM 2024, trial Alliance A021602) in pazienti con NET pancreatici ed extra-pancreatici progressivi dopo almeno una linea di trattamento precedente. I risultati sono robusti in entrambe le coorti: ==**coorte pNET — PFS 13,8 vs 4,4 mesi (HR 0,23; p<0,0001), ORR 19% vs 0%**==; ==**coorte NET extra-pancreatico — PFS 8,4 vs 3,9 mesi (HR 0,38; p<0,0001), ORR 5% vs 0%**==. Sulla base di questi dati, ==**la FDA ha approvato cabozantinib il 31 marzo 2025**== per NET pancreatici ed extra-pancreatici avanzati/progressivi già trattati, in pazienti adulti e pediatrici ≥12 anni. In Europa l'EMA ha concesso l'approvazione centralizzata il 25 luglio 2025, con indicazione per la seconda linea (dopo almeno una precedente terapia sistemica) nei NET pancreatici ed extra-pancreatici ben differenziati, localmente avanzati non resecabili o metastatici. In Italia, il Consiglio di Amministrazione di AIFA ha deliberato l'estensione della rimborsabilità di cabozantinib (Cabometyx) a questa indicazione l'8 luglio 2026, rendendo il farmaco disponibile a carico del SSN anche per i NET, accanto all'indicazione già rimborsata nel carcinoma renale ed epatocellulare.
 
-> ++Verifica in letteratura (CABINET):++ trial completamente assente dalla versione precedente della scheda — cabozantinib rappresenta una nuova opzione in linee successive con benefici PFS marcati in entrambe le coorti pNET (HR 0,23) ed extra-pancreatica (HR 0,38). Approvazione FDA marzo 2025; stato di approvazione EMA/AIFA non confermato con certezza — verificare prima di presentarla come disponibile in Italia.
+> ++Verifica in letteratura (CABINET):++ trial completamente assente dalla versione precedente della scheda — cabozantinib rappresenta una nuova opzione in linee successive con benefici PFS marcati in entrambe le coorti pNET (HR 0,23) ed extra-pancreatica (HR 0,38). Approvazione FDA 31/03/2025; approvazione EMA 25/07/2025 (seconda linea, pNET/NET extra-pancreatico ben differenziati, avanzati/metastatici); estensione della rimborsabilità AIFA deliberata dal CdA l'8/07/2026 — cabozantinib è quindi ora, ad agosto 2026, effettivamente disponibile e rimborsato in Italia per questa indicazione (a differenza di quanto poteva risultare da verifiche precedenti). Fonti: [Ipsen — approvazione EMA cabozantinib NET](https://www.ipsen.com/it/press-releases/oncologia-cabozantinib-approvato-in-europa-nei-tumori-neuroendocrini-avanzati-nets-precedentemente-trattati/), [AboutPharma — CdA AIFA luglio 2026](https://www.aboutpharma.com/legal-regulatory/aifa-dal-cda-di-luglio-via-libera-a-un-nuovo-farmaco-oncologico-toripalimab-e-dieci-estensioni-duso/), [ANSA — rimborso AIFA luglio 2026](https://www.ansa.it/canale_saluteebenessere/notizie/sanita/2026/07/09/aifa-via-libera-al-rimborso-di-un-nuovo-oncologico-e-10-estensioni-terapeutiche_04992a66-8e3c-4e01-9af2-d75fab146229.html).
 
 #### Punti chiave — terapia generale NET ben differenziati
 - SSA (CLARINET/lanreotide, PROMID/octreotide): I linea in NET non rapidamente progressivi, basso Ki-67, SST+.
 - Everolimus: RADIANT-3 (PanNET, HR 0,35), RADIANT-4 (GI/polmonare, HR 0,48) positivi; RADIANT-2 (midgut+carcinoide+octreotide) formalmente negativo — non confondere.
 - PRRT/Lutathera: NETTER-1 (linee successive, HR 0,21) storico; **NETTER-2 (2024, I linea G2 alto/G3): HR 0,28** — potenziale cambio di paradigma, non ancora indicazione EMA/AIFA formale per I linea.
 - COMPETE (ITM-11, emergente 2026): HR 0,67 vs everolimus — non ancora approvato, solo dato di ricerca.
-- **CABINET/cabozantinib (nuovo)**: linee successive, PFS HR 0,23 (pNET) e 0,38 (extra-pancreatico) — approvato FDA marzo 2025, stato EMA da verificare.
+- **CABINET/cabozantinib (nuovo)**: linee successive, PFS HR 0,23 (pNET) e 0,38 (extra-pancreatico) — approvato FDA marzo 2025, EMA luglio 2025 (II linea); rimborsabilità AIFA deliberata luglio 2026, ora disponibile in Italia.
 - NEC: cisplatino/carboplatino+etoposide I linea (OS 7,5-11 mesi); CAPTEM alternativa se Ki-67<55%.
 
 
@@ -112,7 +114,9 @@ Nei PAN-NET non funzionanti, il rischio di malignità è strettamente correlato 
 
 L'approccio chirurgico dipende da dimensione e funzionalità: l'**enucleazione** è possibile nei tumori <2 cm G1-2, con il vantaggio di preservare la funzione pancreatica endocrina ed esocrina (a fronte di un rischio aumentato di fistola pancreatica), mentre la resezione formale è indicata per tumori >2 cm o funzionanti — una raccomandazione **forte a favore** della chirurgia, sostenuta da un dato di sopravvivenza notevole: ==**OS a 5 anni 86,6% con chirurgia vs 40,1% senza chirurgia**==. Nei pazienti con sindrome **MEN1** e PanNET non funzionante <2 cm, dato il tasso di crescita molto lento (0,4 mm/anno), il follow-up attivo è preferito alla chirurgia immediata. Per l'**insulinoma**, la chirurgia offre risultati eccellenti: guarigione nel ~93% dei casi, recidiva nel 7,2%, con mortalità perioperatoria pari a zero.
 
-Per la terapia sistemica dei PanNET avanzati, oltre a everolimus (RADIANT-3), il trial **SUN-1111** con sunitinib 37,5 mg/die ha mostrato PFS di 11,4 vs 5,5 mesi (HR 0,42); il trial **ECOG-ACRIN E2211** ha confrontato CAPTEM vs sola temozolomide, con PFS di 22,7 vs 14,4 mesi (HR 0,58), a favore della combinazione. La combinazione streptozotocina+5-FU ha ottenuto rimborsabilità AIFA nel 2023.
+Per la terapia sistemica dei PanNET avanzati, oltre a everolimus (RADIANT-3), il trial **SUN-1111** con sunitinib 37,5 mg/die ha mostrato PFS di 11,4 vs 5,5 mesi (HR 0,42); il trial **ECOG-ACRIN E2211** ha confrontato CAPTEM vs sola temozolomide, con PFS di 22,7 vs 14,4 mesi (HR 0,58), a favore della combinazione. La combinazione streptozotocina+5-FU resta un'opzione storica nei PanNET avanzati, ma il suo impiego in Europa è stato negli ultimi anni limitato da difficoltà di approvvigionamento del principio attivo, un fattore che ha contribuito a spostare la pratica clinica verso schemi alternativi come il CAPTEM.
+
+> !!Verifica in letteratura — attenzione:!! non è stata reperita alcuna determina AIFA che attribuisca nel 2023 una nuova rimborsabilità specifica alla combinazione streptozotocina+5-FU nei NET pancreatici — l'affermazione presente nella versione precedente della scheda non è confermata da fonti primarie. Al contrario, il PDTA Rete Oncologica Campana 2023 segnala esplicitamente "la difficoltà di approvvigionamento della streptozotocina in Europa" come motivo dello spostamento verso schemi alternativi (CAPTEM). Il testo è stato corretto di conseguenza. Fonte: [PDTA NET — Rete Oncologica Campana, 2023](https://www.reteoncologicacampana.it/wp-content/uploads/2023/10/PDTA-NET_2023.pdf).
 
 
 ## NEN del piccolo intestino
@@ -176,9 +180,9 @@ Altre sindromi paraneoplastiche rilevanti includono la SIADH e la sindrome di La
 
 ## Farmaci e classi rilevanti
 - Analoghi somatostatina: octreotide LAR, lanreotide autogel.
-- Target therapy: everolimus, sunitinib.
+- Target therapy: everolimus, sunitinib, **cabozantinib** (CABINET — II linea, EMA 07/2025, rimborsabilità AIFA 07/2026).
 - Chemioterapia: cis/carboplatino+etoposide (NEC), TMZ±capecitabina (CAPTEM), streptozotocina+5-FU.
-- PRRT: [177Lu]Lu-DOTA-TATE.
+- PRRT: [177Lu]Lu-DOTA-TATE (Lutathera).
 - Altri: telotristat etile (diarrea da carcinoide), inibitori steroidogenesi surrenalica (Cushing ectopico).
 
 
@@ -209,7 +213,7 @@ Il follow-up nei NET non è univocamente standardizzato nelle fonti disponibili,
 - **68Ga-SST PET/TC standard of care** (sensibilità 97% vs TC 61%); FDG-PET per G3/NEC (FDG+ → HR morte 10,3).
 - **CLARINET/PROMID** (SSA), **RADIANT-3/4** (everolimus), **NETTER-1** (PRRT storico) — trial cardine da non confondere per sottosede (PanNET vs midgut vs GI/polmonare).
 - **NETTER-2 (2024, nuovo)**: PRRT in I linea G2 alto/G3 — PFS HR 0,28 (22,8 vs 8,5 mesi) — potenziale cambio di paradigma, non ancora indicazione formale EMA/AIFA per I linea.
-- **CABINET/cabozantinib (nuovo, 2024-2025)**: linee successive, PFS HR 0,23 (pNET)/0,38 (extra-pancreatico) — approvato FDA marzo 2025.
+- **CABINET/cabozantinib (nuovo, 2024-2026)**: linee successive, PFS HR 0,23 (pNET)/0,38 (extra-pancreatico) — approvato FDA marzo 2025, EMA luglio 2025; rimborsabilità AIFA da luglio 2026.
 - **NEN gastrico tipo III sporadico = aggressivo** (mortalità 25%) vs tipo I indolente (70-80% dei casi).
 - **Appendice 1-2cm: emicolectomia NON necessaria** se basso rischio (Nesti 2023, consolidato ENETS 2023) — ridimensiona il vecchio cut-off dei 2cm.
 - **MEN1**: paratiroidectomia **subtotale** preferita alla totale.
@@ -225,13 +229,14 @@ Il follow-up nei NET non è univocamente standardizzato nelle fonti disponibili,
 - Non eseguire paratiroidectomia totale di routine nella MEN1 (preferire subtotale).
 - Non confondere RADIANT-2 (negativo) con RADIANT-3/4 (positivi) — errore comune per la somiglianza dei nomi.
 - Non presentare NETTER-2 o COMPETE/ITM-11 come indicazioni già formalmente approvate in Italia per la prima linea — verificare lo stato regolatorio aggiornato.
-- Non dimenticare cabozantinib (CABINET) come opzione in linee successive dopo fallimento di everolimus/sunitinib/PRRT.
+- Non dimenticare cabozantinib (CABINET) come opzione in linee successive dopo fallimento di everolimus/sunitinib/PRRT — dal luglio 2026 è anche rimborsato dal SSN per questa indicazione, non solo approvato FDA/EMA.
 
 
 ## Fonti
 - AIOM: Neoplasie Neuroendocrine 2024 (GEP-NEN, Merkel, NET polmonari, sindrome da carcinoide, sindromi genetiche/paraneoplastiche).
 - ESMO: CPG NEN-GEP 2020; NEN Altri Siti 2024; Carcinoidi Polmonari/Timici 2021.
 - Altre fonti: NETTER-2 (Singh, Lancet 2024); CABINET (Chan, NEJM 2024); COMPETE/ITM-11 (Lancet 2026); ENETS Consensus appendicolare (Kaltsas, J Neuroendocrinol 2023).
+- **Verifica rimborsabilità AIFA (24/08/2026)**: controllo mirato dello stato regolatorio/AIFA dei farmaci con possibile evento dal 2020 in poi (cabozantinib, Lutathera/NETTER-2, surufatinib, streptozotocina+5-FU). Fonti consultate: [EMA — Lutathera EPAR](https://www.ema.europa.eu/en/medicines/human/EPAR/lutathera); [Ipsen — approvazione EMA cabozantinib nei NET](https://www.ipsen.com/it/press-releases/oncologia-cabozantinib-approvato-in-europa-nei-tumori-neuroendocrini-avanzati-nets-precedentemente-trattati/); [AboutPharma — CdA AIFA luglio 2026, estensioni di indicazione](https://www.aboutpharma.com/legal-regulatory/aifa-dal-cda-di-luglio-via-libera-a-un-nuovo-farmaco-oncologico-toripalimab-e-dieci-estensioni-duso/); [ANSA — AIFA, rimborso nuovo oncologico e 10 estensioni (09/07/2026)](https://www.ansa.it/canale_saluteebenessere/notizie/sanita/2026/07/09/aifa-via-libera-al-rimborso-di-un-nuovo-oncologico-e-10-estensioni-terapeutiche_04992a66-8e3c-4e01-9af2-d75fab146229.html); [PDTA NET — Rete Oncologica Campana 2023](https://www.reteoncologicacampana.it/wp-content/uploads/2023/10/PDTA-NET_2023.pdf); [OncLive — FDA Issues CRL to Surufatinib](https://www.onclive.com/view/fda-issues-complete-response-letter-to-surufatinib-for-advanced-neuroendocrine-tumors); [Novartis — Lutathera pediatric FDA approval](https://www.novartis.com/news/media-releases/novartis-radioligand-therapy-lutathera-fda-approved-first-medicine-specifically-pediatric-patients-gastroenteropancreatic-neuroendocrine-tumors).
 
 
 ## Note personali
