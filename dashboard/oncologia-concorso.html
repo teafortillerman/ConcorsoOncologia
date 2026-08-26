@@ -604,6 +604,24 @@ button { font-family: inherit; cursor: pointer; }
 .md-content .mermaid-card svg { max-width: 100%; height: auto; }
 .md-content .mermaid-card .edgeLabel { background: var(--color-surface-2) !important; }
 
+.md-content .scheda-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 4px 0 26px;
+  padding: 11px 20px;
+  border-radius: 12px;
+  background: var(--color-accent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.94rem;
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  transition: filter 0.15s ease, transform 0.15s ease;
+}
+.md-content .scheda-btn:hover { filter: brightness(1.08); transform: translateY(-1px); }
+.md-content .scheda-btn svg { width: 16px; height: 16px; flex-shrink: 0; }
+
 /* FLOW DIAGRAM (custom interactive flowchart component) */
 .flow-diagram {
   background: var(--color-surface-2);
@@ -1012,6 +1030,11 @@ function markdownToHtml(md) {
         } else if (codeLang === "flowchart") {
           const flowId = codeBuf.join("\n").trim();
           append(`<div class="flow-diagram" data-flow-id="${escapeHtml(flowId)}"><div class="empty-state" style="padding:20px 0;">Caricamento diagramma...</div></div>`);
+        } else if (codeLang === "button") {
+          const btnLines = codeBuf.join("\n").trim().split("\n").map(s => s.trim()).filter(Boolean);
+          const btnLabel = btnLines[0] || "Apri";
+          const btnUrl = btnLines[1] || "#";
+          append(`<a class="scheda-btn" href="${escapeHtml(btnUrl)}" target="_blank" rel="noopener">${inlineFormat(btnLabel)}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>`);
         } else {
           append(`<pre><code>${escapeHtml(codeBuf.join("\n"))}</code></pre>`);
         }

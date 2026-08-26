@@ -298,10 +298,9 @@ Nelle donne sane portatrici di mutazione BRCA, la sorveglianza prevede RM mammar
 
 L'obiettivo in questa fase cambia natura: la malattia non è guaribile, ma sempre più cronicizzabile, e questo richiede un approccio multidisciplinare con cure di supporto integrate fin dall'inizio, non riservate alla fase terminale. Un passaggio da non saltare mai: la ri-biopsia alla prima diagnosi di malattia metastatica è raccomandata, perché lo stato di HR e HER2 può cambiare rispetto al tumore primitivo — nel 20% dei casi per HR, nel 10% per HER2 — con conseguenze dirette sulla scelta terapeutica.
 
-### Algoritmo terapeutico – malattia avanzata/metastatica (M1)
-
-```flowchart
-mammella-avanzato
+```button
+Algoritmo terapeutico completo (M1) e stato di rimborsabilità AIFA
+../Algoritmi/Mammella-Metastatico-AIFA.html
 ```
 
 ### HR+/HER2-negativo
