@@ -215,6 +215,7 @@ Il metodo di verifica (determine AIFA, Gazzetta Ufficiale, registri.aifa.gov.it,
 | Farmaco | Classe | Anno di approvazione | Stato AIFA | Indicazione (setting · sottotipo · limitazioni) |
 |---|---|---|---|---|
 | Osimertinib — adiuvante | Inibitore EGFR (TKI 3ª gen.) | 2020 (FDA/EMA) → 2021 (AIFA) | ✅ ==Rimborsato== | Adiuvante, stadio IB-IIIA EGFR ex19del/L858R dopo resezione (ADAURA) |
+| Alectinib — adiuvante | TKI ALK (2ª gen.) | 2024 (EC 10/06/2024) → 2025 (AIFA) | ✅ ==Rimborsato== (Det. Pres. 625/2025, 06/05/2025, classe H, registro attivo dal 16/05/2025) | Adiuvante (2 anni), ALK riarrangiato ad alto rischio di recidiva dopo resezione completa (ALINA) |
 | Osimertinib + platino/pemetrexed | TKI EGFR 3ª gen. + CT | 2024 (FDA/EMA) → 2025 (AIFA) | ✅ ==Rimborsato== (giudicato non innovativo) | I linea, EGFR classico avanzato, alternativa alla monoterapia (FLAURA2) |
 | Amivantamab + lazertinib | Anticorpo bispecifico EGFR-MET + TKI | 2024 (FDA/EMA) → 2026 (AIFA) | ✅ ==Rimborsato== (classe H) | I linea, EGFR classico avanzato (MARIPOSA) |
 | Amivantamab + carboplatino/pemetrexed | Anticorpo bispecifico + CT | 2024 (FDA/EMA) → 2026 (AIFA) | ✅ ==Rimborsato== (classe H) | I linea, esone 20 insertion (PAPILLON) |
@@ -237,6 +238,7 @@ Il metodo di verifica (determine AIFA, Gazzetta Ufficiale, registri.aifa.gov.it,
 | Tislelizumab — perioperatorio | Immunoterapia, perioperatorio completo | 2024 (solo EMA, non FDA) | ⏳ ++Non risulta ancora rimborsato in Italia++ | Stadio II-III resecabile, perioperatorio completo (RATIONALE-315) |
 
 #### Punti chiave
+- **Alectinib adiuvante (ALINA)** era una lacuna della tabella nonostante fosse già citato nel testo narrativo della scheda: prima terapia a bersaglio molecolare adiuvante approvata in Europa (EC 10/06/2024), rimborsata AIFA da maggio 2025 (~11 mesi dopo) — va ricordato accanto a osimertinib adiuvante (ADAURA) come le due opzioni adiuvanti target-specifiche, alternative alla CT-ICI perioperatoria nei tumori EGFR/ALK+.
 - **FLAURA2** (osimertinib+CT) e **trastuzumab deruxtecan nell'HER2-mutato** erano lacune vere e proprie (assenti dalla scheda): FLAURA2 è rimborsato AIFA pur giudicato non innovativo; trastuzumab deruxtecan per NSCLC è approvato EMA (2023) ma senza ancora una determina AIFA dedicata.
 - Attenzione a non confondere **"approvato EMA" con "rimborsato AIFA"**: repotrectinib (ROS1) è in classe C(nn); CheckMate 77T e RATIONALE-315 (immunoterapia perioperatoria) hanno approvazione EMA ma rimborsabilità AIFA non confermata, a differenza di CheckMate 816, KEYNOTE-671, IMpower010 e AEGEAN (rimborsato da giugno 2026).
 - Due farmaci-trappola da ricordare come **non disponibili in Europa**: mobocertinib (mai approvato EMA, ritirato anche dal mercato USA nel 2023) e pralsetinib (autorizzazione UE revocata il 24/10/2024, motivi commerciali non di sicurezza) — per il RET oggi resta solo selpercatinib.
@@ -473,6 +475,58 @@ Il metodo di verifica (determine AIFA, Gazzetta Ufficiale, registri.aifa.gov.it,
 - Trabocchetto ATC: dabrafenib+trametinib è rimborsato in Italia per il carcinoma anaplastico solo tramite legge 648/1996 — l'EMA non ha mai concesso un'indicazione registrata per questa neoplasia.
 - Dabrafenib+trametinib nel DTC BRAF-mutato: approvazione EMA/EC arrivata (CHMP 26.03.2026), ma AIFA non ha ancora emesso una determina di rimborsabilità alla data della verifica.
 - Gap EMA→AIFA di cabozantinib nel DTC: quasi 2 anni, con un periodo-ponte di accesso legge 648/96 iniziato prima ancora dell'approvazione EMA.
+
+## Linfoma di Hodgkin
+
+*Verifica AIFA condotta il 2026-08-26.*
+
+| Farmaco | Classe | Anno di approvazione | Stato AIFA | Indicazione (setting · sottotipo · limitazioni) |
+|---|---|---|---|---|
+| Brentuximab vedotin + AVD | ADC anti-CD30 + chemio | EMA 2019 | ==Rimborsato, classe H (Det. DG/1039/2021, GU 223/2021)== | 1L, stadio IV CD30+, solo se non candidabile a bleomicina |
+| Nivolumab + AVD (S1826/N-AVD) | Immunoterapia (anti-PD-1) + chemio | FDA 20.03.2026 / EMA-EC 01.06.2026 | ++Autorizzato EMA/CE, rimborso AIFA non ancora attivo++ | 1L avanzata, stadio III-IV, età ≥12 anni — superiore a BV-AVD |
+| Nivolumab + brentuximab vedotin (CheckMate-744) | Immunoterapia + ADC anti-CD30 | EC 20.03.2026 | ++Autorizzato EMA/CE, stato AIFA non verificato (popolazione pediatrica/AYA)++ | R/R dopo 1 linea, pazienti 5-30 anni |
+| Brentuximab vedotin + ECADD (HD21/BrECADD) | ADC anti-CD30 + chemio | CHMP 25.04.2025 / CE 03.06.2025 | ++Autorizzato CE, rimborso AIFA non confermato++ | 1L avanzata, stadio IIB(alto rischio)/III/IV, età ≤60 anni — sostituisce eBEACOPP |
+| Pembrolizumab | Immunoterapia (anti-PD-1) | EMA 2020 | ==Rimborsato, classe H (Det. 631/2022, GU 221/2022)== | R/R dopo ASCT o ≥2 linee se ASCT non candidabile (KEYNOTE-204) |
+| CAR-T anti-CD30 | Terapia cellulare | Nessuna | !!Nessuna approvazione regolatoria EMA/AIFA/FDA!! | Multirefrattario dopo BV, checkpoint, ASCT/allo-SCT — solo trial/uso allargato |
+
+#### Punti chiave
+- Il gap più insidioso non è "EMA non ancora arrivata" ma "EMA arrivata, AIFA non ancora": sia N-AVD (CE giugno 2026) sia BrECADD (CE giugno 2025, da oltre un anno) sono già autorizzati a livello europeo ma senza rimborsabilità AIFA confermata.
+- BrECADD ha un percorso regolatorio più maturo del previsto: non un regime sperimentale, ma già approvato dalla Commissione Europea da oltre 12 mesi, pur non ancora recepito da AIOM né rimborsato AIFA.
+- Attenzione a non confondere due combinazioni distinte con nivolumab: N-AVD (S1826, adulti, 1L avanzata) e nivolumab+brentuximab vedotin (CheckMate-744, popolazione pediatrica/AYA, R/R) — approvate dalla CE lo stesso giorno (20.03.2026).
+- BV-AVD e pembrolizumab restano le opzioni con rimborsabilità AIFA solida e datata (2021 e 2022), entrambe classe H con registro attivo.
+- Nessuna terapia CAR-T anti-CD30 ha approvazione regolatoria in alcuna giurisdizione — resta sperimentale/trial-only.
+
+## Linfomi non-Hodgkin
+
+*Verifica AIFA condotta il 2026-08-26.*
+
+| Farmaco | Classe | Anno di approvazione | Stato AIFA | Indicazione (setting · sottotipo · limitazioni) |
+|---|---|---|---|---|
+| Polatuzumab vedotin (Pola-CHP) | ADC anti-CD79b + chemio | EMA 2022 | ==Rimborsato, classe H (Det. 11.12.2023)== | 1L DLBCL, IPI≥2 (POLARIX) |
+| Axicabtagene ciloleucel | CAR-T anti-CD19 | EMA 2022 (2L) | ==Rimborsato, classe H (Det. 675/2023, 06.11.2023)== | 2L DLBCL/HGBL early-relapse; FL ≥3L |
+| Lisocabtagene maraleucel | CAR-T anti-CD19 | EMA 2021-2022 | ==Rimborsato solo dal 28.01.2026== (gap 3-4 anni EMA→AIFA) | 2L DLBCL/HGBCL/PMBCL/FL3B |
+| Brexucabtagene autoleucel | CAR-T anti-CD19 | EMA 2020 | ==Rimborsato, classe H (Det. 20.11.2023)== | MCL R/R post-BTKi |
+| Glofitamab (monoterapia) | Bispecifico CD20xCD3 | EMA 11.07.2023 | ==Rimborsato, classe H (Det. 7/2024)== | DLBCL R/R ≥2L |
+| Glofitamab + GemOx (STARGLO) | Bispecifico + chemio | EMA 14.04.2025 | ++Nessuna determina AIFA specifica reperita — da riverificare++ | DLBCL R/R non candidabile a trapianto, 2L |
+| Epcoritamab (DLBCL) | Bispecifico CD20xCD3 | EMA 25.09.2023 | ==Rimborsato, classe H (Det. 29.12.2023)== | DLBCL R/R ≥2L |
+| Epcoritamab (FL) | Bispecifico CD20xCD3 | EMA 19.08.2024 | ==Rimborsato (registro attivo, 2025)== | FL R/R ≥2L |
+| Odronextamab | Bispecifico CD20xCD3 3ª gen. | EMA 26.08.2024 | !!Non rimborsato AIFA!! | FL/DLBCL R/R ≥2L |
+| Loncastuximab tesirine | ADC anti-CD19 | EMA 2022 | ==Rimborsato, classe H (Det. 45/2024, GU 16.03.2024)== | DLBCL R/R ≥2L |
+| Tafasitamab + lenalidomide | Anti-CD19 + IMiD | EMA 2021 | ==Rimborsato, classe H (Det. 788/2022)== | DLBCL R/R non trapiantabile, ≥1L |
+| Mosunetuzumab | Bispecifico CD20xCD3 | EMA 08.06.2022 | ==Rimborsato, classe H (Det. 576/2023, 06.09.2023)== | FL R/R ≥2L |
+| Pirtobrutinib | BTKi non covalente | EMA 30.10.2023 (condizionata) | ==Rimborsato (Det. 601/2024, 17.10.2024)== | MCL/LLC R/R post-cBTKi |
+| Zanubrutinib + obinutuzumab | BTKi + anti-CD20 | EMA 19.11.2023 | ==Rimborsato== (indicazione FL, ROSEWOOD — non MCL) | FL R/R ≥3L |
+| Ibrutinib (upfront, TRIANGLE) | BTKi covalente | EMA 23.07.2025 | ++Rimborsabilità AIFA 1L non ancora confermata++ | 1L MCL ASCT-eligible |
+| Acalabrutinib + BR | BTKi covalente + chemio | EMA (indicazione MCL 1L recente) | ==Rimborsato AIFA nel 2026 (ECHO)== | 1L MCL non-ASCT-eligible |
+| Brentuximab vedotin (BV-CHP) | ADC anti-CD30 | EMA 2018 | ==Rimborsato, classe H (Det. 17.09.2021)== | 1L ALCL sistemico CD30+ |
+| Tazemetostat | Inibitore EZH2 | FDA 2020 | !!Ritirato dal mercato mondiale il 09.03.2026 (sicurezza)!! | FL EZH2-mutato — non più disponibile |
+
+#### Punti chiave
+- Gap EMA-AIFA più marcato: lisocabtagene maraleucel rimborsato solo da gennaio 2026, cioè 3-4 anni dopo l'approvazione EMA — a lungo inaccessibile in Italia fuori da uso compassionevole.
+- Odronextamab resta l'unico bispecifico CD20xCD3 approvato EMA ma non rimborsato AIFA, a quasi due anni dall'approvazione (agosto 2024).
+- Errore di combinazione corretto: nel FL R/R, zanubrutinib va con obinutuzumab (ROSEWOOD), non rituximab; e zanubrutinib non ha mai avuto un'indicazione EMA/AIFA nel linfoma mantellare.
+- Ritiro di sicurezza rilevante: tazemetostat è stato ritirato dal mercato mondiale il 9 marzo 2026 per rischio di neoplasie ematologiche secondarie (SYMPHONY-1) — molti materiali di studio lo riportano ancora come opzione standard nel FL EZH2-mutato.
+- TRIANGLE (ibrutinib upfront MCL) e ECHO (acalabrutinib+BR 1L) sono entrambi regolatoriamente recentissimi (EMA luglio 2025, rimborso AIFA 2026) — punti spesso assenti dalla trattazione classica.
 
 ## Note personali
 -
