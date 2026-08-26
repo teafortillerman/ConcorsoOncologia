@@ -59,12 +59,15 @@ Nella sottoanalisi BRAF V600E vs V600K di COMBI-AD, il beneficio in OS è chiaro
 
 Nello **stadio II** (IIB-IIC) l'anti-PD-1 in monoterapia è lo standard, con due opzioni equivalenti: **pembrolizumab** (KEYNOTE-716, DMFS a 36 mesi 84,4% vs 74,7%, HR 0,59 95% CI 0,44-0,79, analisi finale di DMFS Luke et al. JCO 2024) o **nivolumab** (CheckMate 76K, RFS a 12 mesi 89% vs 79%, HR 0,42 95% CI 0,30-0,59). Un confronto indiretto pubblicato nel 2026 (Andreikos et al., Target Oncol) non ha mostrato differenze statisticamente significative tra i due farmaci in questo setting (RFS HR 0,97, DMFS HR 0,81) — la scelta resta quindi guidata da tollerabilità e schedula, non da superiorità di efficacia dimostrata.
 
+> ++Verifica in letteratura:++ entrambe le opzioni di stadio II sono **rimborsate da AIFA**, ma con un gap temporale molto diverso rispetto alla rispettiva approvazione EMA. **Pembrolizumab** (KEYNOTE-716) è stato approvato EMA per lo stadio IIB/IIC a dicembre 2021 e l'AIFA ha attivato il registro di monitoraggio dedicato il 19/07/2023 ([determina pubblicata in GU n. 166 del 18/07/2023](https://www.aifa.gov.it/en/-/attivazione-web-e-pubblicazione-schede-di-monitoraggio-registro-keytruda-melanoma-adiuvante)), con un'indicazione unica che copre stadio IIB, IIC **e** III — gap EMA→AIFA di circa 19 mesi. **Nivolumab** (CheckMate 76K) è stato approvato EMA il 27/02/2023 ma la rimborsabilità AIFA per lo stadio IIB/IIC è arrivata solo con la [Determina 267/2025 del 04/03/2025](https://www.aifa.gov.it/documents/20142/961234/Determina_267-2025_Opdivo.pdf) (comunicata a fine marzo 2025) — un gap EMA→AIFA di **circa 2 anni**, nettamente più lungo di quello di pembrolizumab per la stessa fascia di stadio.
+
 Nello **stadio III**, in **BRAF wild-type** l'anti-PD-1 resta lo standard — pembrolizumab (HR RFS 0,63 a 7 anni vs placebo, KEYNOTE-054) o nivolumab (HR RFS 0,76 a 9 anni vs ipilimumab 10 mg, CheckMate 238). In **BRAF V600-mutato** le opzioni sono equivalenti in linea di principio: **BRAF+MEK inibitori** (dabrafenib+trametinib, HR RFS 0,52 a 8 anni vs placebo, COMBI-AD) oppure lo stesso anti-PD-1 usato nel BRAF wild-type.
 
 Nello **stadio IV resecato** il nivolumab (HR RFS 0,71 vs ipilimumab 10 mg nell'analisi originale di CheckMate 238) o il dabrafenib+trametinib nei pazienti BRAF-mutati restano le opzioni di riferimento, con un HR di 0,79 per nivolumab vs ipilimumab nel sottogruppo BRAF V600 della stessa analisi.
 
 #### Punti chiave — Algoritmo adiuvante
 - Stadio II (IIB-IIC): pembrolizumab (KEYNOTE-716) o nivolumab (CheckMate 76K) — confronto indiretto 2026 non mostra superiorità dell'uno sull'altro.
+- **Rimborsabilità AIFA stadio II**: entrambi rimborsati, ma gap EMA→AIFA molto diverso — pembrolizumab ~19 mesi (EMA dic 2021 → AIFA 19/07/2023), nivolumab ~2 anni (EMA 27/02/2023 → AIFA Determina 267/2025 del 04/03/2025).
 - Stadio III BRAF wt: pembrolizumab o nivolumab; BRAF-mutato: BRAF+MEK inibitori o anti-PD-1, scelta equivalente in linea di principio.
 - Stadio IV resecato: nivolumab (preferito su ipilimumab) o BRAF+MEK se BRAF-mutato.
 
@@ -105,6 +108,8 @@ L'indicazione classica della terapia neoadiuvante è la malattia di stadio III c
 
 Il confronto tra i due trial resta a favore di NADINA per intensità del beneficio (EFS/HR più favorevoli, MPR più alta), ma va ricordato che le popolazioni non sono identiche: NADINA include solo malattia palpabile con doppio blocco checkpoint, mentre SWOG S1801 utilizza pembrolizumab in monoterapia in una popolazione IIIB-IV più ampia. In Italia entrambi gli schemi (pembrolizumab neoadiuvante e nivolumab+ipilimumab neoadiuvante schema NADINA) sono disponibili tramite **legge 648**.
 
+> ++Verifica in letteratura:++ nessuno dei due schemi neoadiuvanti ha ancora un'indicazione registrata EMA o FDA per il melanoma — l'accesso in Italia avviene **solo** tramite l'elenco legge 648/1996, con determine AIFA specifiche e recenti. Per **pembrolizumab** (schema SWOG S1801, perioperatorio), la [Determina AIFA n. 73/2025 del 13/01/2025 (GU Serie Generale n. 15 del 20/01/2025)](https://www.medicoeleggi.com/argomenti000/italia2025/417053-a.htm) autorizza l'erogazione SSN per il "trattamento neoadiuvante e adiuvante (un anno complessivo di terapia) di melanoma resecabile stadi IIIB, IIIC, IIID". Per **nivolumab+ipilimumab** (schema NADINA), la [Determina n. 1572/2025 del 17/11/2025 (GU Serie Generale n. 273 del 24/11/2025)](https://www.gazzettaufficiale.it/eli/id/2025/11/24/25A06337/SG) inserisce la combinazione nell'elenco legge 648/96 per il "trattamento neoadiuvante dei pazienti affetti da melanoma", con prosecuzione in adiuvante di solo nivolumab nei pazienti con risposta patologica parziale o assente. Va quindi evitato di presentare questi due schemi come "standard regolatorio" tout court: sono standard di **pratica clinica/linee guida** (ESMO 2025), ma restano fuori scheda tecnica EMA/FDA, accessibili in Italia solo con questo meccanismo dedicato — un dettaglio ad alto rischio di errore in sede di orale.
+
 ### Conclusioni pratiche sul neoadiuvante
 
 La terapia neoadiuvante rappresenta oggi il **nuovo standard nei linfonodi palpabili**, con due schemi validati (pembrolizumab secondo SWOG S1801, oppure nivolumab+ipilimumab secondo NADINA). Resta aperta la necessità di **biomarcatori predittivi** per guidare il NNT (number needed to treat) e per orientare strategie di escalation vs de-escalation terapeutica basate sulla risposta patologica.
@@ -114,7 +119,7 @@ La terapia neoadiuvante rappresenta oggi il **nuovo standard nei linfonodi palpa
 - **SWOG S1801 a 3 anni**: EFS 68% vs 56% (HR 0,67), **OS 84% vs 73%** — dato di comparatore e di OS assente nella versione precedente della scheda.
 - **NADINA**: EFS 12 mesi 85,2% vs 61,7%, EFS 24 mesi 77,3% vs 55,7% (HR 0,40) — beneficio più marcato di quanto risultasse dal solo dato a 1 anno senza comparatore.
 - NADINA (doppio blocco, malattia palpabile) mostra numeri più favorevoli di SWOG S1801 (pembrolizumab mono, popolazione più ampia) — popolazioni non identiche, cautela nel confronto diretto.
-- Entrambi gli schemi disponibili in Italia tramite legge 648.
+- Entrambi gli schemi disponibili in Italia tramite legge 648, senza indicazione registrata EMA/FDA: pembrolizumab (Determina 73/2025 del 13/01/2025) e nivolumab+ipilimumab/NADINA (Determina 1572/2025 del 17/11/2025).
 
 ## Terapia della Malattia Avanzata/Metastatica
 
@@ -150,7 +155,9 @@ Il trial registrativo di questa combinazione è **RELATIVITY-047** (nivolumab+re
 
 > ++Verifica in letteratura:++ l'aggiornamento a 3 anni (Tawbi et al., JCO 2025) mostra ora anche un vantaggio di **OS statisticamente significativo**, dato assente dalla versione precedente della scheda che si limitava a citare una generica superiorità: mOS 51,0 mesi (nivolumab+relatlimab) vs 34,1 mesi (nivolumab), HR 0,80 (95% CI 0,66-0,99, limite superiore <1); OS a 3 anni 54,6% vs 48,0%. La sopravvivenza melanoma-specifica mostra un beneficio ancora più marcato (HR 0,75, 95% CI 0,60-0,94).
 
-Le indicazioni preferenziali per questa combinazione restano la prima linea metastatica con PD-L1 <1%, e la recidiva a ≥6 mesi dalla sospensione di una terapia adiuvante. Il profilo di tossicità è più favorevole rispetto a nivolumab+ipilimumab, tanto da essere descritto come il "regime più sicuro" tra le combinazioni disponibili in prima linea (Lipson, ASCO 2021). Il farmaco (Opdualag) è approvato EMA e **rimborsato AIFA in Italia** con registro di monitoraggio dedicato per il melanoma avanzato non resecabile/metastatico PD-L1+.
+Le indicazioni preferenziali per questa combinazione restano la prima linea metastatica con PD-L1 <1%, e la recidiva a ≥6 mesi dalla sospensione di una terapia adiuvante. Il profilo di tossicità è più favorevole rispetto a nivolumab+ipilimumab, tanto da essere descritto come il "regime più sicuro" tra le combinazioni disponibili in prima linea (Lipson, ASCO 2021).
+
+> ++Verifica in letteratura:++ il farmaco (Opdualag) è stato approvato dalla Commissione Europea il 16/09/2022 e **rimborsato da AIFA** con la [Determina n. 15 del 24/01/2023](https://www.aifa.gov.it/documents/20142/1814866/DETERMINA_15-2023_OPDUALAG.pdf) (classe H, registro di monitoraggio web-based dedicato) per il melanoma avanzato non resecabile/metastatico con espressione tumorale di PD-L1 <1% — un gap EMA→AIFA di soli ~4 mesi, tra i più rapidi tra i farmaci recenti di questa scheda.
 
 Resta il fatto che **non esiste un trial randomizzato diretto** che confronti anti-PD1→target therapy contro altre sequenze terapeutiche: le evidenze real-world sono limitate da bias di confondimento per indicazione, e il metodo del propensity score resta il più robusto per queste analisi osservazionali.
 
@@ -231,7 +238,9 @@ Questo vaccino "off-the-shelf" condiviso ha come bersaglio IDO e PD-L1. Nell'ana
 
 Il **tebentafusp** (IMMTAC, target gp100) è stato il primo T-cell engager approvato in oncologia, sulla base dei dati pivotal nel **melanoma uveale** (Hassel et al., NEJM 2023), la prima terapia sistemica a mostrare un beneficio in OS in questa entità storicamente refrattaria.
 
-> ++Verifica in letteratura:++ è ora disponibile l'analisi a 5 anni (Annals of Oncology 2026), il follow-up più lungo mai riportato in un trial randomizzato nel melanoma uveale metastatico: mOS 21,6 mesi (tebentafusp) vs 16,9 mesi (controllo, 82% pembrolizumab), HR 0,67 (95% CI 0,54-0,85), con **OS a 5 anni del 16% contro l'8%** del braccio di controllo — di fatto un raddoppio della sopravvivenza a lungo termine in una malattia storicamente con sopravvivenza a 5 anni inferiore al 10%. Il tebentafusp (Kimmtrak) è approvato EMA e disponibile con rimborsabilità AIFA in Italia per il melanoma uveale metastatico HLA-A*02:01+.
+> ++Verifica in letteratura:++ è ora disponibile l'analisi a 5 anni (Annals of Oncology 2026), il follow-up più lungo mai riportato in un trial randomizzato nel melanoma uveale metastatico: mOS 21,6 mesi (tebentafusp) vs 16,9 mesi (controllo, 82% pembrolizumab), HR 0,67 (95% CI 0,54-0,85), con **OS a 5 anni del 16% contro l'8%** del braccio di controllo — di fatto un raddoppio della sopravvivenza a lungo termine in una malattia storicamente con sopravvivenza a 5 anni inferiore al 10%. Il tebentafusp (Kimmtrak) è approvato EMA (Commissione Europea, 04/04/2022) e disponibile con rimborsabilità AIFA in Italia per il melanoma uveale metastatico HLA-A*02:01+.
+
+> ++Verifica in letteratura:++ la rimborsabilità AIFA di tebentafusp è stata definita entro inizio 2023 (già operativa alla riunione della Commissione Regionale del Farmaco Emilia-Romagna del 20/04/2023) in **classe H a uso ospedaliero, senza obbligo di registro web-based AIFA** — una particolarità rispetto alla maggior parte dei farmaci oncologici recenti di questa scheda, che invece richiedono un registro di monitoraggio dedicato.
 
 Il **brenetafusp** (T-cell engager anti-PRAME, popolazione HLA-A*02+) mostra dati preliminari nel melanoma cutaneo post-progressione (ORR 11%, DCR 56%, vedi sezione precedente), mentre l'**anzu-cel** (terapia cellulare PRAME-diretta) ha dati preliminari ASCO 2025 nella stessa popolazione HLA-A*02+, incluse forme mucosali e a primitività ignota — entrambi restano opzioni sperimentali non approvate.
 
@@ -252,6 +261,7 @@ Il RP1 in combinazione con anti-PD-1 (studio IGNYTE, fase I/II) riporta un ORR d
 - **Metastasi ossee da melanoma BRAF wild-type PD-L1>1%**: scenario che integra la gestione sistemica con il supporto osseo (bifosfonati/denosumab) e la valutazione ortopedica/radioterapica.
 
 ## Farmaci e classi rilevanti
+Per lo stato aggiornato di rimborsabilità AIFA dei farmaci elencati di seguito (classe, anno di approvazione, limitazioni), vedi la tabella dedicata nella scheda trasversale `Schede/Trasversali/Rimborsabilita.md` (sezione `## Melanoma`).
 - **Immunoterapia**: nivolumab, pembrolizumab, ipilimumab, nivolumab-relatlimab/Opdualag (anti-LAG-3, EMA+AIFA), cemiplimab.
 - **Target therapy (BRAF+MEK)**: dabrafenib+trametinib (adiuvante e metastatico), altre combinazioni BRAFi+MEKi (encorafenib+binimetinib, vemurafenib+cobimetinib — nozione standard consolidata).
 - **T-cell engager**: tebentafusp/Kimmtrak (uveale, EMA+AIFA), brenetafusp (cutaneo, in sviluppo, anti-PRAME).

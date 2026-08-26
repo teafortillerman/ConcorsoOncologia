@@ -349,5 +349,130 @@ Il metodo di verifica (determine AIFA, Gazzetta Ufficiale, registri.aifa.gov.it,
 - CheckMate 901 e nivolumab adiuvante sono stati rimborsati dalla stessa, unica determina AIFA (Pres. 521/2026).
 - EV-303/KEYNOTE-905 copre solo la popolazione cisplatino-ineleggibile (non l'intera popolazione del trial).
 
+## Cervice
+
+*Verifica AIFA condotta il 2026-08-25.*
+
+| Farmaco | Classe | Anno di approvazione | Stato AIFA | Indicazione (setting · sottotipo · limitazioni) |
+|---|---|---|---|---|
+| Pembrolizumab | Immunoterapia (anti-PD-1) | 2021 (EMA) / 2023 (AIFA) | ==Rimborsato (classe H, dal 10.07.2023)== | 1L avanzato/recidivante/metastatico + platino ± bevacizumab · richiede PD-L1 CPS ≥1 · KEYNOTE-826 |
+| Pembrolizumab | Immunoterapia (anti-PD-1) | 2024 (EMA) / 2025 (AIFA) | ==Rimborsato (classe H, determina 13.01.2025; attivazione pubblica inizio 2026)== | Localmente avanzato FIGO III-IVA + chemioradioterapia + mantenimento · nessuna restrizione PD-L1 · KEYNOTE-A18 |
+| Cemiplimab | Immunoterapia (anti-PD-1) | 2022 (EMA) / 2024 (AIFA) | ++Rimborsato con restrizione più stretta del label EMA (classe H, Determina 309/2024)++ | 2L monoterapia post-platino · label EMA PD-L1-indipendente, ma AIFA rimborsa solo PD-L1 CPS ≥1% · EMPOWER-Cervical 1 |
+| Tisotumab vedotin | ADC (anti-tissue factor) | 2025 (EMA/CE) | !!Non rimborsato/autorizzato in Italia (nessuna determina AIFA reperibile)!! | Recidivante/metastatico pretrattato · innovaTV 301 |
+| Cadonilimab | Immunoterapia (bispecifico anti-PD-1/CTLA-4) | 2025 (solo NMPA, Cina) | !!Non autorizzato EMA — non applicabile in Europa!! | 1L + platino ± bevacizumab · COMPASSION-16 · solo Cina |
+
+#### Punti chiave
+- Il trabocchetto più rilevante è cemiplimab: il label EMA è PD-L1-indipendente, ma la Determina AIFA 309/2024 ne restringe la rimborsabilità ai soli tumori PD-L1 CPS ≥1% — una paziente PD-L1-negativa rientra nel label ma non ha accesso SSN.
+- KEYNOTE-A18 mostra un gap insolito tra firma della determina AIFA (13.01.2025) e sua attivazione/comunicazione pubblica effettiva (inizio 2026): oltre un anno di ritardo operativo nonostante la determina fosse già formalmente firmata.
+- Tisotumab vedotin è approvato EMA/CE da marzo 2025 ma non risulta ancora rimborsato da AIFA — non è un'opzione concretamente prescrivibile a carico SSN in Italia.
+- KEYNOTE-826 è un'indicazione AIFA ormai "matura" (rimborsata dal 2023), da distinguere da KEYNOTE-A18, la cui disponibilità italiana è invece recentissima (2025-2026).
+
+## Endometrio
+
+*Verifica AIFA condotta il 2026-08-25.*
+
+| Farmaco | Classe | Anno di approvazione | Stato AIFA | Indicazione (setting · sottotipo · limitazioni) |
+|---|---|---|---|---|
+| Pembrolizumab + carboplatino/paclitaxel | Immunoterapia + CT | EMA 2024 | ++Rimborsato solo dMMR++ | 1L avanzato/ricorrente; label EMA all-comers, AIFA limita a dMMR (determina 05.02.2026) |
+| Dostarlimab + carboplatino/paclitaxel | Immunoterapia + CT | EMA 2023; estensione 2026 | ==Rimborsato dMMR + pMMR (esteso)== | 1L avanzato/ricorrente; esteso a tutte le pazienti indipendentemente da MMR (Determina Pres. 17/2026, 16.01.2026) |
+| Durvalumab + carboplatino/paclitaxel (± olaparib mantenimento) | Immunoterapia + CT ± PARP-i | EMA 2024 | ++Rimborsato solo dMMR (braccio durvalumab+CT)++ | 1L; combinazione con olaparib per pMMR (DUO-E) non ancora rimborsata (registro AIFA copre solo dMMR) |
+| Lenvatinib + pembrolizumab | TKI + immunoterapia | EMA/AIFA 2022 | ==Rimborsato== | 2L dopo platino, all-comers |
+| Dostarlimab monoterapia (GARNET) | Immunoterapia | EMA 2021 / AIFA 2022 | ==Rimborsato== | dMMR/MSI-H, post-platino |
+| Pembrolizumab monoterapia (tumor-agnostic dMMR/MSI-H) | Immunoterapia | AIFA determina 09.02.2026 | ==Rimborsato== | dMMR/MSI-H post-platino, determina tumor-agnostic multi-organo |
+
+#### Punti chiave
+- Asimmetria regolatoria tra pembrolizumab e dostarlimab in 1L: pur con label EMA sovrapponibili, AIFA rimborsa pembrolizumab+CT solo in dMMR mentre dostarlimab+CT è stato esteso anche al pMMR (2026) — oggi l'unico regime CT+IO 1L rimborsato in Italia a prescindere dallo stato MMR.
+- DUO-E: il braccio dMMR (durvalumab+CT) è rimborsato, ma l'aggiunta di olaparib per il sottogruppo pMMR — la parte più innovativa del trial — non risulta ancora coperta da un registro AIFA dedicato.
+- Atezolizumab (AtTEnd) non ha mai ottenuto un'approvazione EMA per l'endometrio — a differenza degli altri tre regimi di CT+IO 1L discussi in scheda, non compare in tabella.
+- Pembrolizumab monoterapia dMMR/MSI-H è rimborsato tramite la stessa determina tumor-agnostic multi-organo che esclude il pancreas (vedi sezione Pancreas).
+
+## Ovaio
+
+*Verifica AIFA condotta il 2026-08-25.*
+
+| Farmaco | Classe | Anno di approvazione | Stato AIFA | Indicazione (setting · sottotipo · limitazioni) |
+|---|---|---|---|---|
+| Niraparib | PARP-i | 2020 (EMA PRIMA) / 2024 (AIFA) | ==Rimborsato (classe H, Determina 04.03.2024)== | Mantenimento 1L (FIGO III-IV) e recidiva platino-sensibile · all-comers, nessuna restrizione BRCA/HRD |
+| Olaparib + bevacizumab | PARP-i + antiangiogenico | 2021 (EMA PAOLA-1) | ==Rimborsato (classe H, Determina 08.03.2022)== | Mantenimento 1L · solo HRD BRCA-wild-type (le BRCA-mutate restano su olaparib monoterapia) |
+| Rucaparib | PARP-i | 2023 (EMA ATHENA-MONO) | ==Rimborsato (classe H, Determina 29.01.2025)== | Mantenimento 1L, all-comers · FDA lo ha invece ristretto alla sola 2L (nov. 2022) |
+| Mirvetuximab soravtansine | ADC (anti-FRα) | 2024 (EMA) | ==Rimborsato (rimborso pieno da giugno 2026; classe C(nn) gen.2025-mag.2026)== | Platino-resistente, sieroso alto grado, FRα+, pretrattata con 1-3 linee |
+| Relacorilant + nab-paclitaxel | Modulatore recettore glucocorticoidi | 2026 (solo FDA) | !!Non autorizzato EMA/AIFA — MAA europea in valutazione!! | Platino-resistente, senza selezione biomarcatore · approvato solo negli USA (Lifyorli) |
+
+#### Punti chiave
+- Trabocchetto PAOLA-1: il rimborso AIFA di olaparib+bevacizumab copre solo HRD BRCA-wild-type — le pazienti BRCA-mutate, pur HRD-positive per definizione, vanno a olaparib monoterapia (SOLO-1), non a questa combinazione.
+- Rucaparib è un'opzione italiana concreta: rimborsato AIFA (classe H) dal 29.01.2025 come mantenimento 1L all-comers — divergenza regolatoria con la FDA, che lo ha ristretto alla sola 2L per assenza di beneficio OS in ARIEL3.
+- Mirvetuximab: oltre un anno tra l'autorizzazione italiana in classe C(nn) (gennaio 2025) e il rimborso pieno SSN (giugno 2026).
+- Relacorilant è l'aggiornamento più significativo di questa verifica: approvato FDA il 25 marzo 2026, ma in Europa la domanda EMA è ancora in valutazione — non prescrivibile in Italia.
+
+## Melanoma
+
+*Verifica AIFA condotta il 2026-08-25.*
+
+| Farmaco | Classe | Anno di approvazione | Stato AIFA | Indicazione (setting · sottotipo · limitazioni) |
+|---|---|---|---|---|
+| Pembrolizumab | Immunoterapia (anti-PD-1) | EMA dic. 2021 | ==Rimborsato== (AIFA 19.07.2023) | Adiuvante, cutaneo stadio IIB/IIC/III, post-resezione completa |
+| Nivolumab | Immunoterapia (anti-PD-1) | EMA 27.02.2023 (CheckMate 76K) | ==Rimborsato== (Determina 267/2025, 04.03.2025) | Adiuvante, cutaneo stadio IIB/IIC · gap EMA→AIFA ~2 anni |
+| Nivolumab+relatlimab (Opdualag) | Immunoterapia (anti-PD-1 + anti-LAG-3) | EMA 16.09.2022 | ==Rimborsato== (Determina n.15, 24.01.2023, classe H) | 1L metastatico/avanzato non resecabile, PD-L1 <1% |
+| Tebentafusp (Kimmtrak) | T-cell engager (anti-gp100/CD3) | EMA 04.04.2022 | ==Rimborsato== (classe H, senza registro web-based) | Melanoma uveale metastatico, HLA-A*02:01+ |
+| Nivolumab+ipilimumab (schema NADINA) | Immunoterapia (doppio blocco checkpoint) | Nessuna EMA/FDA — legge 648/96 (Determina 1572/2025, 17.11.2025) | ++Solo legge 648/96, nessuna indicazione EMA/FDA registrata++ | Neoadiuvante+adiuvante, cutaneo stadio III linfonodi palpabili |
+| Pembrolizumab (schema SWOG S1801, perioperatorio) | Immunoterapia (anti-PD-1) | Nessuna EMA/FDA — legge 648/96 (Determina 73/2025, 13.01.2025) | ++Solo legge 648/96, nessuna indicazione EMA/FDA registrata++ | Neoadiuvante+adiuvante, cutaneo stadio IIIB/IIIC/IIID resecabile |
+| Lifileucel (Amtagvi, TIL) | Terapia cellulare (TIL autologhi) | FDA 16.02.2024 | !!Non autorizzato/non disponibile in Italia/Europa!! (domanda EMA ritirata 22.07.2025) | Melanoma cutaneo avanzato post anti-PD-(L)1, solo USA |
+
+#### Punti chiave
+- Gap EMA→AIFA molto disomogeneo anche fra farmaci quasi gemelli: nello stesso setting adiuvante (IIB/IIC), pembrolizumab ha impiegato ~19 mesi mentre nivolumab ~2 anni.
+- Trabocchetto sul neoadiuvante: sia NADINA sia SWOG S1801 sono presentati come "nuovo standard" ma nessuno dei due ha un'indicazione EMA o FDA registrata — l'accesso italiano passa solo da due determine legge 648/96 recenti (2025).
+- Tebentafusp è rimborsato in classe H senza l'obbligo del registro di monitoraggio web-based, a differenza della maggior parte degli altri farmaci recenti della scheda.
+- Lifileucel resta l'unico farmaco della scheda con esito regolatorio negativo netto in Europa (domanda EMA ritirata per efficacia insufficiente + segnale di sicurezza).
+
+## Merkel
+
+*Verifica AIFA condotta il 2026-08-25.*
+
+| Farmaco | Classe | Anno di approvazione | Stato AIFA | Indicazione (setting · sottotipo · limitazioni) |
+|---|---|---|---|---|
+| Retifanlimab (Zynyz) | Immunoterapia (anti-PD-1) | EMA 06.03.2026 | !!Non autorizzato/non rimborsabile in Italia per il Merkel!! | L'approvazione EMA copre solo il carcinoma squamocellulare anale (+ chemio 1L); per il MCC solo FDA 2023 |
+
+#### Punti chiave
+- Gap normativo più rilevante: retifanlimab ha ottenuto l'approvazione EMA (marzo 2026) solo per il carcinoma squamocellulare anale — a 3 anni dall'approvazione FDA per il Merkel, l'Europa non ha ancora esteso l'indicazione.
+- L'unico farmaco realmente rimborsato in Italia per il MCC resta avelumab (classe H dal 2018, approvazione pre-2020, non in tabella per criterio di inclusione) — pembrolizumab e nivolumab non hanno copertura AIFA specifica per questa neoplasia nonostante l'uso diffuso in altre indicazioni.
+- Trabocchetto d'esame: pembrolizumab ha dati solidi (KEYNOTE-913) ma nessuna approvazione EMA per il MCC.
+- STAMP/ADAM (immunoterapia adiuvante): nessuna determina AIFA né domanda di estensione EMA depositata, coerente col mancato endpoint primario di RFS in entrambi.
+
+## Testa-Collo
+
+*Verifica AIFA condotta il 2026-08-25.*
+
+| Farmaco | Classe | Anno di approvazione | Stato AIFA | Indicazione (setting · sottotipo · limitazioni) |
+|---|---|---|---|---|
+| Pembrolizumab (KEYNOTE-048) | Immunoterapia (anti-PD-1) | EMA/FDA 2019 | ==Rimborsato== (classe H, registro attivo dal 17.12.2020) | 1L metastatico/ricorrente non resecabile, mono se CPS≥1, o +platino/5-FU indipendentemente da PD-L1 |
+| Nivolumab (CheckMate 141) | Immunoterapia (anti-PD-1) | EMA/FDA 2016 | ==Rimborsato== (determina 2018) | 2L dopo progressione a platino, monoterapia |
+| Pembrolizumab perioperatorio (KEYNOTE-689) | Immunoterapia (anti-PD-1) | FDA 13.06.2025 / EC 29.10.2025 | !!Non ancora rimborsato AIFA!! (gap aperto alla data di verifica) | Neoadiuvante+adiuvante in malattia resecabile localmente avanzata, PD-L1 CPS≥1 |
+| Nivolumab adiuvante post-CRT (NIVOPOSTOP/GORTEC 2018-01) | Immunoterapia (anti-PD-1) | Nessuna (dati 2025, Lancet) | !!Non autorizzato — nessuna domanda regolatoria FDA/EMA depositata!! | Adiuvante post-CRT in resecati ad alto rischio, indipendente da PD-L1 |
+
+#### Punti chiave
+- Gap regolatorio più rilevante: KEYNOTE-689 è approvato sia FDA (giugno 2025) sia UE (ottobre 2025), ma alla data di verifica non risultava ancora rimborsato dal SSN italiano — standard di cura secondo le linee guida ma non ancora concretamente prescrivibile in Italia.
+- NIVOPOSTOP resta puramente sperimentale sul piano regolatorio: nessuna domanda di autorizzazione depositata presso FDA o EMA.
+- Le due indicazioni "storiche" (1L pembrolizumab, 2L nivolumab) sono invece solide e rimborsate da AIFA da anni (2020 e 2018).
+- Trabocchetto identificato nella determina AIFA 09.02.2026: riguarda la classificazione della nuova formulazione sottocutanea di pembrolizumab (classe C-nn), non una negoziazione di rimborsabilità dedicata al regime perioperatorio testa-collo.
+
+## Tiroide
+
+*Verifica AIFA condotta il 2026-08-25.*
+
+| Farmaco | Classe | Anno di approvazione | Stato AIFA | Indicazione (setting · sottotipo · limitazioni) |
+|---|---|---|---|---|
+| Selpercatinib (Retsevmo) | Inibitore RET selettivo | EMA 2021, estensione 1L 2023-24 | ==Rimborsato== (Det. 781/2024, 19.12.2024, classe H, registro RETSEVMO) | MTC RET-mutato avanzato, I linea (LIBRETTO-531) |
+| Cabozantinib compresse (Cabometyx) | MKI (RET/MET/VEGFR2) | EMA 2022 (COSMIC-311) | ==Rimborsato== (Det. 29.01.2024, classe H) — gap EMA→AIFA ~2 anni | DTC RAI-refrattario, II linea dopo lenvatinib/sorafenib |
+| Larotrectinib (Vitrakvi) | Inibitore TRK, tissue-agnostic | EMA 2019 / AIFA 2021 | ==Rimborsato== (Det. 30.04.2021, registro VITRAKVI) | Tumori NTRK-fusione positivi, indipendentemente dall'istotipo tiroideo |
+| Dabrafenib+trametinib — ATC | Target therapy BRAF/MEK | FDA 2018 (mai approvato EMA per questa indicazione) | ++Rimborsato SSN solo via legge 648/1996++ (Det. 01.03.2023) | ATC BRAF V600E-mutato, I linea se disponibile |
+| Dabrafenib+trametinib — DTC | Target therapy BRAF/MEK | EMA/EC 2026 (CHMP 26.03.2026) | ++EMA-autorizzato, non ancora rimborsato AIFA++ | DTC BRAF V600E-mutato, RAI-refrattario/non eleggibile |
+| Pralsetinib (Gavreto) | Inibitore RET selettivo | FDA 2020 (MTC, ritirata 2023); EMA 2021 solo NSCLC | !!Non disponibile in Europa/Italia per nessuna indicazione!! | Mai approvato UE per MTC; AIC UE interamente revocata 24.10.2024 |
+
+#### Punti chiave
+- Pralsetinib è un caso più grave di quanto ritenuto: non solo "ritirato dall'indicazione MTC", ma mai autorizzato in UE per il MTC, e dal 24.10.2024 l'intera autorizzazione europea (anche NSCLC) è stata revocata per motivi commerciali.
+- Trabocchetto ATC: dabrafenib+trametinib è rimborsato in Italia per il carcinoma anaplastico solo tramite legge 648/1996 — l'EMA non ha mai concesso un'indicazione registrata per questa neoplasia.
+- Dabrafenib+trametinib nel DTC BRAF-mutato: approvazione EMA/EC arrivata (CHMP 26.03.2026), ma AIFA non ha ancora emesso una determina di rimborsabilità alla data della verifica.
+- Gap EMA→AIFA di cabozantinib nel DTC: quasi 2 anni, con un periodo-ponte di accesso legge 648/96 iniziato prima ancora dell'approvazione EMA.
+
 ## Note personali
 -
