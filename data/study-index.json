@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T10:58:29",
+  "generated_at": "2026-09-01T22:30:24",
   "root": "/sessions/rcw-01lj8b6xloyyq79rnbyz5cfe/mnt/OncologiaConcorso",
   "theme_order": [
     "Torace",
@@ -551,11 +551,11 @@
       "title": "Rimborsabilita",
       "name": "Rimborsabilita.md",
       "relative_path": "Schede/Trasversali/Rimborsabilita.md",
-      "modified": "2026-08-26T10:58:29",
-      "size_bytes": 69312,
+      "modified": "2026-09-01T22:30:12",
+      "size_bytes": 69962,
       "extension": ".md",
       "preview": "Rimborsabilità · Definizione e inquadramento · Questa scheda è un indice trasversale, non una scheda di patologia: raccoglie, organo per organo, le tabelle di stato AIFA e criteri di prescrivibilità dei farmaci oncologici approvati/con indicazione estesa **dal 2020 in poi**. Nasce perché queste tabelle, inserite direttamente nelle singole schede di patologia (es. Mammella.md), ne appesantivano la sezione \"Farmaci e classi rilevanti\" — meglio centralizzarle qui e lasciare, in ciascuna scheda di patologia, solo un rimando a questa pagina. · Il metodo di verifica (determine AIFA, Gazzetta Ufficiale, registri.aifa.gov.it, rassegne specializzate) è descritto nel documento di convenzioni del progetto, sezione \"Nuova fase: verifica dello stato regolatorio AIFA e criteri di prescrivibilità\". Ogni tabella va aggiornata quando si applica quella verifica a una nuova scheda di patologia; l'eleggibilità puntuale dei registri di monitoraggio va comunque sempre riconfermata su registri.aifa.gov.it, perché le determine cambiano più spesso di quanto queste pagine possano inseguire. · **Criterio di inclusione**: solo farmaci/indicazioni con un evento regolatorio (EMA o AIFA) dal 2020 in avanti. I farmaci più datati (chemioterapia classica, ormonoterapia di base, i primi anti-HER2, i CDK4/6i in fase metastatica, ecc.) restano descritti nella prosa delle singole schede di patologia, ma non compaiono qui: non sono il tipo di informazione che cambia da un mese all'altro e non serve un registro a parte per tenerne traccia.",
-      "word_count": 9964,
+      "word_count": 10060,
       "reading_time_min": 50,
       "status": "completa"
     },

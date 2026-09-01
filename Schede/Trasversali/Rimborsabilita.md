@@ -16,7 +16,7 @@ Il metodo di verifica (determine AIFA, Gazzetta Ufficiale, registri.aifa.gov.it,
 
 | Farmaco | Classe | Anno di approvazione | Stato AIFA | Indicazione (setting · sottotipo · limitazioni) |
 |---|---|---|---|---|
-| Ribociclib (Kisqali) — indicazione adiuvante | CDK4/6 inibitore | 2024 (FDA) → 2026 (AIFA) | ✅ ==Rimborsato== dal 6.03.2026 | Adiuvante HR+/HER2- ad alto rischio, **incluse le pazienti linfonodo-negative** (NATALEE) — indicazione appena arrivata in Italia |
+| {{Ribociclib (Kisqali) — indicazione adiuvante::400 mg/die per os, 21 giorni di trattamento + 7 di pausa (ciclo di 28 giorni) — dose adiuvante più bassa dei 600 mg usati nel metastatico. Sempre in associazione a un inibitore dell'aromatasi (± soppressione ovarica nelle donne pre/perimenopausali). Durata totale: 3 anni, circa 39 cicli (NATALEE).}} | CDK4/6 inibitore | 2024 (FDA) → 2026 (AIFA) | ✅ ==Rimborsato== dal 6.03.2026 | Adiuvante HR+/HER2- ad alto rischio, **incluse le pazienti linfonodo-negative** (NATALEE) — indicazione appena arrivata in Italia |
 | Abemaciclib (Verzenios) — indicazione adiuvante | CDK4/6 inibitore | 2022 | ✅ ==Rimborsato== | Adiuvante HR+/HER2- ad alto rischio: ≥4 linfonodi positivi, o 1-3 con T≥5cm/G3 (monarchE), 2 anni |
 | Olaparib (Lynparza) — indicazione adiuvante | PARP-inibitore | 2022 | ✅ ==Rimborsato== | Adiuvante, carcinoma HER2-negativo gBRCA-mutato ad alto rischio dopo NAT/chirurgia (OlympiA), **indipendentemente dallo stato HR** |
 | Alpelisib (Piqray) | Inibitore PI3K | 2020 | ✅ ==Rimborsato== (rinnovato 2025) | HR+/HER2- metastatico con mutazione **PIK3CA**, dopo un inibitore dell'aromatasi, + fulvestrant |
@@ -28,7 +28,7 @@ Il metodo di verifica (determine AIFA, Gazzetta Ufficiale, registri.aifa.gov.it,
 | Tucatinib (Tukysa) | Anti-HER2 (TKI) | 2021 | ✅ ==Rimborsato== | HER2+ metastatico + trastuzumab+capecitabina dopo ≥1 linea; unico regime con dati dedicati su metastasi encefaliche attive (HER2CLIMB) |
 | Sacituzumab govitecan (Trodelvy) | ADC anti-Trop2 | 2021 (TNBC) → 2025 (HR+/HER2-) | ✅ ==Rimborsato== (HR+/HER2- dal 20.02.2025) | TNBC dopo ≥2 terapie sistemiche (ASCENT); HR+/HER2- con metastasi viscerali dopo ET e ≥2 altre terapie (TROPiCS-02) |
 | Datopotamab deruxtecan (Datroway) | ADC anti-Trop2 | 2025 (solo EMA) | ❌ !!Non rimborsato in Italia!! | HR+/HER2- metastatico pretrattato; estensione I linea TNBC in valutazione (2026) — non ancora accessibile via SSN |
-| Pembrolizumab (Keytruda) — indicazione neoadiuvante/adiuvante TNBC | Immunoterapia anti-PD-1 | 2021 (FDA) → 2022 (EMA) | ✅ ==Rimborsato== dal luglio 2023, registro dedicato | TNBC stadio II-III, perioperatorio (KEYNOTE-522) |
+| {{Pembrolizumab (Keytruda) — indicazione neoadiuvante/adiuvante TNBC::Fase neoadiuvante: 4 cicli di pembrolizumab 200 mg q3w + carboplatino/paclitaxel, poi altri 4 cicli q3w + antraciclina/ciclofosfamide (AC o EC) — 8 cicli totali prima della chirurgia. Dopo l'intervento, fase adiuvante con pembrolizumab in monoterapia per altri 9 cicli q3w. Totale: 17 cicli, circa 1 anno di trattamento (KEYNOTE-522).}} | Immunoterapia anti-PD-1 | 2021 (FDA) → 2022 (EMA) | ✅ ==Rimborsato== dal luglio 2023, registro dedicato | TNBC stadio II-III, perioperatorio (KEYNOTE-522) |
 
 #### Punti chiave
 - Farmaci **rimborsati AIFA ma spesso dati per errore come "non disponibili"** (attenzione in sede di orale): alpelisib, trastuzumab deruxtecan HER2-low, sacituzumab govitecan HR+/HER2-.

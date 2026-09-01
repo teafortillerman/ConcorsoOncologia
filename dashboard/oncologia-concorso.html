@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Oncologia Concorso</title>
+<title>Oncologia Medica</title>
 <link rel="preconnect" href="https://api.fontshare.com">
 <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&f[]=fraunces@500,600,600i&display=swap" rel="stylesheet">
 <style>
@@ -622,6 +622,47 @@ button { font-family: inherit; cursor: pointer; }
 .md-content .scheda-btn:hover { filter: brightness(1.08); transform: translateY(-1px); }
 .md-content .scheda-btn svg { width: 16px; height: 16px; flex-shrink: 0; }
 
+/* SCHEMA POPUP — tooltip a comparsa sul nome di un farmaco/regime, con dettaglio cicli/cadenza */
+.md-content .tt-trig {
+  cursor: help;
+  border-bottom: 1.5px dotted var(--color-key);
+  padding-bottom: 1px;
+}
+.md-content .tt-trig:hover, .md-content .tt-trig:focus-visible, .md-content .tt-trig.tt-open {
+  border-bottom-style: solid;
+  outline: none;
+}
+#tt-portal {
+  position: fixed;
+  z-index: 900;
+  width: max-content;
+  max-width: 320px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-key-border);
+  box-shadow: var(--shadow-lg);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--color-text);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(4px);
+  transition: opacity 0.14s ease, transform 0.14s ease;
+  pointer-events: none;
+}
+#tt-portal.tt-visible { opacity: 1; visibility: visible; transform: translateY(0); }
+#tt-portal .tt-portal-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-key);
+  margin-bottom: 4px;
+}
+@media (max-width: 640px) { #tt-portal { max-width: calc(100vw - 32px); } }
+
 /* FLOW DIAGRAM (custom interactive flowchart component) */
 .flow-diagram {
   background: var(--color-surface-2);
@@ -815,8 +856,8 @@ button { font-family: inherit; cursor: pointer; }
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v6M12 21v-6M4.2 7.8l4.2 3M15.6 13.2l4.2 3M19.8 7.8l-4.2 3M8.4 13.2l-4.2 3"/><circle cx="12" cy="12" r="2.4" fill="currentColor" stroke="none"/></svg>
       </div>
       <div class="brand-text">
-        <div class="brand-name">Oncologia Concorso</div>
-        <div class="brand-sub">Dashboard di studio</div>
+        <div class="brand-name">Oncologia Medica</div>
+        <div class="brand-sub">Manuale di studio</div>
       </div>
       <button class="theme-toggle" id="themeToggle" aria-label="Cambia tema"></button>
       <button class="sidebar-collapse-btn" id="sidebarCollapseBtn" aria-label="Comprimi/espandi barra laterale" title="Comprimi/espandi barra laterale">
@@ -954,6 +995,9 @@ function themeBadge(name, size) {
 /* ---------- inline markdown formatting ---------- */
 function inlineFormat(text) {
   let out = escapeHtml(text);
+  // Popup "schema di terapia": {{testo visibile::dettaglio (cicli, cadenza, durata)}} — funziona anche
+  // dentro le celle di tabella, dato che qui operiamo prima di link/grassetto/evidenziatori.
+  out = out.replace(/\{\{([^{}]+?)::([^{}]+)\}\}/g, (m, label, detail) => `<span class="tt-trig" tabindex="0" data-tip="${detail.trim()}">${label.trim()}</span>`);
   out = out.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img alt="$1" src="$2" loading="lazy">');
   out = out.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
   out = out.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
@@ -974,6 +1018,63 @@ function slugify(text) {
 
 const KP_ICON = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.8-6.2 3.8 1.6-7-5.4-4.7 7.1-.6z"/></svg>';
 const KP_CHEV = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>';
+
+/* ---------- popup "schema di terapia" (sintassi {{label::dettaglio}}, vedi inlineFormat) ---------- */
+let ttGlobalBound = false;
+function ensureTooltipPortal() {
+  let portal = document.getElementById("tt-portal");
+  if (!portal) {
+    portal = document.createElement("div");
+    portal.id = "tt-portal";
+    portal.setAttribute("role", "tooltip");
+    document.body.appendChild(portal);
+  }
+  return portal;
+}
+function initTooltips(container) {
+  const portal = ensureTooltipPortal();
+  const hide = () => { portal.classList.remove("tt-visible"); portal.dataset.owner = ""; };
+  const show = (el) => {
+    portal.innerHTML = `<span class="tt-portal-label">Schema di terapia</span>${el.dataset.tip}`;
+    portal.dataset.owner = el.dataset.ttId;
+    portal.classList.add("tt-visible");
+    const rect = el.getBoundingClientRect();
+    const pw = portal.offsetWidth, ph = portal.offsetHeight;
+    let left = rect.left + rect.width / 2 - pw / 2;
+    left = Math.max(12, Math.min(left, window.innerWidth - pw - 12));
+    let top = rect.top - ph - 10;
+    if (top < 8) top = rect.bottom + 10; // ribalta sotto se non c'è spazio sopra (es. prima riga di tabella)
+    portal.style.left = `${left}px`;
+    portal.style.top = `${top}px`;
+  };
+  // dispositivi con vero hover (mouse) usano solo mouseenter/mouseleave; sul touch, dove il tap genera
+  // comunque un mouseenter sintetico appena prima del click, un click-toggle in più farebbe aprire e
+  // richiudere il popup nello stesso gesto — quindi lì il tap è l'UNICO trigger, senza hover.
+  const hasHover = window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  container.querySelectorAll(".tt-trig").forEach((el, i) => {
+    el.dataset.ttId = `tt-${i}`;
+    if (hasHover) {
+      el.addEventListener("mouseenter", () => show(el));
+      el.addEventListener("mouseleave", hide);
+    } else {
+      el.addEventListener("click", (ev) => {
+        ev.preventDefault();
+        if (portal.classList.contains("tt-visible") && portal.dataset.owner === el.dataset.ttId) { hide(); return; }
+        show(el);
+      });
+    }
+    el.addEventListener("focus", () => show(el));
+    el.addEventListener("blur", hide);
+  });
+  // legati una volta sola a livello globale: chiude il popup toccando altrove (utile su touch) o scrollando
+  if (!ttGlobalBound) {
+    ttGlobalBound = true;
+    document.addEventListener("click", (ev) => {
+      if (!ev.target.closest(".tt-trig") && !ev.target.closest("#tt-portal")) hide();
+    }, true);
+    window.addEventListener("scroll", hide, true);
+  }
+}
 
 function markdownToHtml(md) {
   const lines = md.split(/\r?\n/);
@@ -1671,6 +1772,7 @@ async function openScheda(item) {
     initMermaid();
     renderMermaid();
     renderFlowDiagrams(item);
+    initTooltips(content);
     window.scrollTo(0,0);
   } catch (e) {
     content.innerHTML = emptyState(ICONS.inbox, "Non sono riuscito a leggere questa scheda", "Verifica che il file Markdown esista nel percorso indicato.");
