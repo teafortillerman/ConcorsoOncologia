@@ -1,104 +1,236 @@
-# Terapie Target
+# Terapie Target — Tossicità e Gestione
 
 
 ## Definizione e inquadramento
-- Tumore / tema:
-- Ambito clinico:
-- Ultimo aggiornamento:
+Questa scheda raccoglie le principali tossicità delle terapie a bersaglio molecolare (targeted therapy) non immunoterapiche — inibitori tirosin-chinasici orali, anticorpi monoclonali anti-bersaglio, inibitori mTOR/PI3K/AKT, PARP-inibitori e anticorpi coniugati a farmaco (ADC) — e la loro gestione clinica pratica. È una scheda trasversale di tossicità/gestione, non una scheda di patologia per organo: l'obiettivo è rispondere a domande del tipo "cosa fare se un paziente in terapia con il farmaco X sviluppa la tossicità Y". Gli inibitori di checkpoint immunitario (ICI) sono esclusi da questa scheda e trattati nella scheda dedicata "Tossicita_Immunoterapia.md"; la mielotossicità di PARP-inibitori e CDK4/6-inibitori è descritta con dati numerici anche nella scheda "Tossicita_Ematologica.md", qui viene ripresa in sintesi nel contesto delle altre tossicità di classe.
+
+Le fonti principali sono le schede tecniche EMA/FDA dei singoli farmaci, i dati di sicurezza dei trial registrativi e le review più recenti di riferimento (ASCO, ESMO, letteratura specialistica). Per diversi dati di incidenza puntuale, quando non è stato possibile risalire alla fonte primaria in questa passata di verifica, il dato riportato è quello più ampiamente citato in letteratura secondaria — va considerato indicativo e, se necessario per un uso clinico, riverificato sulla scheda tecnica aggiornata.
 
 
-## Epidemiologia
-- Incidenza:
-- Mortalità:
-- Trend rilevanti:
+## Principi generali di gestione
+Il grading delle tossicità segue il sistema CTCAE (attualmente versione 5.0/6.0), applicabile trasversalmente a tutte le classi di farmaci trattate in questa scheda: il grado 1 è lieve o asintomatico e richiede solo osservazione; il grado 2 è moderato, richiede un intervento minimo/locale e limita le attività strumentali della vita quotidiana; il grado 3 è severo o clinicamente significativo, spesso richiede ospedalizzazione e limita la cura di sé; il grado 4 comporta conseguenze pericolose per la vita e richiede un intervento urgente; il grado 5 è il decesso correlato all'evento avverso.
+
+Il principio generale di gestione, comune alla maggior parte delle classi qui trattate, è il seguente: nella tossicità di grado 1-2 si prosegue generalmente il farmaco con monitoraggio ravvicinato, oppure si sospende temporaneamente con ripresa alla stessa dose o a dose ridotta dopo risoluzione a grado ≤1; nella tossicità di grado 3 si sospende fino a miglioramento, riprendendo quasi sempre a dose ridotta secondo gli schemi di riduzione scalare predefiniti in scheda tecnica (tipicamente due livelli di riduzione disponibili prima dell'interruzione definitiva); nella tossicità di grado 4 si interrompe definitivamente il farmaco nella maggior parte dei casi. Esistono tuttavia eccezioni importanti a questo schema generale, da conoscere come possibili "trabocchetti" d'esame: la neutropenia da inibitori CDK4/6, pur frequentemente di grado 3-4, comporta un basso rischio infettivo ed è gestita con riduzione di dose piuttosto che con interruzione; al contrario, la polmonite interstiziale da trastuzumab deruxtecan richiede sospensione del farmaco già al grado 1, una deroga al principio generale.
+
+Un secondo principio trasversale riguarda il timing perioperatorio dei farmaci anti-angiogenici: per la lunga emivita di bevacizumab (~20 giorni), la scheda tecnica raccomanda la sospensione almeno 28 giorni prima di un intervento chirurgico elettivo maggiore, ma la pratica clinica e diverse revisioni suggeriscono un margine più ampio, fino a 6-8 settimane, per il rischio di deiscenza, fistole e ritardata cicatrizzazione; la ripresa non deve avvenire prima di 28 giorni dall'intervento e solo a ferita chirurgica completamente guarita. Lo stesso principio di cautela si applica per analogia ai VEGFR-TKI orali, sebbene con finestre di sospensione generalmente più brevi per la minore emivita, da verificare sulla singola scheda tecnica.
+
+#### Punti chiave
+
+- Grading CTCAE: G1-2 osservazione/sospensione breve, G3 sospensione con ripresa a dose ridotta, G4 interruzione definitiva nella maggior parte dei casi — ma con eccezioni di classe da conoscere (CDK4/6-i, T-DXd).
+- Bevacizumab: sospendere almeno 28 giorni (in pratica spesso 6-8 settimane) prima di chirurgia elettiva maggiore; riprendere non prima di 28 giorni dopo, solo a ferita guarita.
 
 
-## Fattori di rischio
-- 
-- 
-- 
+## Inibitori multi-target anti-angiogenici (VEGFR-TKI)
+Sunitinib, sorafenib, pazopanib, axitinib, cabozantinib, lenvatinib e regorafenib condividono, per l'inibizione di VEGFR-1/2/3 (spesso insieme ad altri bersagli come PDGFR, KIT, RET, MET, RAF a seconda della molecola), un profilo di tossicità di classe legato al blocco dell'angiogenesi fisiologica.
+
+L'**ipertensione arteriosa** è la tossicità cardiovascolare più frequente della classe, con un'incidenza che varia sensibilmente tra farmaci: lenvatinib è tra i più ipertensivanti (tutti i gradi fino al 73%, grado 3-4 fino al 44% nel trial SELECT), seguito da cabozantinib (tutti i gradi ~61%, grado 3 15-19%), regorafenib (~59%, grado 3 15-23%) e axitinib (40-50%, grado ≥3 ~16%); pazopanib e sorafenib hanno un'incidenza intermedia, sunitinib tendenzialmente più bassa (grado 3 8-12%). Il monitoraggio pressorio va effettuato settimanalmente nel primo ciclo e poi periodicamente; il target generale è <140/90 mmHg (più stringente, <130/80, in presenza di comorbidità cardiovascolari). I farmaci antipertensivi di prima scelta sono ACE-inibitori, ARB e calcio-antagonisti diidropiridinici (amlodipina); vanno evitati i calcio-antagonisti non diidropiridinici (diltiazem, verapamil), che inibiscono il CYP3A4 e alterano i livelli plasmatici del TKI. Per ipertensione di grado 3 nonostante monoterapia, o per crisi ipertensiva, il TKI va sospeso temporaneamente fino al controllo pressorio, con ripresa a dose ridotta e terapia antipertensiva ottimizzata; l'interruzione definitiva è indicata per ipertensione refrattaria a terapia massimale o per danno d'organo acuto/encefalopatia ipertensiva.
+
+La **sindrome mano-piede da TKI (hand-foot skin reaction, HFSR)** ha un'incidenza tutti i gradi di circa il 60% con sorafenib, 30% con sunitinib, e simile o superiore con regorafenib (fino al 45-67% in alcune casistiche, grado 3 ~15-20% nel trial CORRECT). Va distinta dalla sindrome mano-piede da chemioterapia classica (capecitabina, 5-fluorouracile): la forma da TKI colpisce elettivamente le aree sottoposte a pressione/frizione meccanica (punta delle dita, articolazioni interfalangee, talloni, teste metatarsali), con lesioni ipercheratosiche circoscritte spesso circondate da un alone eritematoso, talvolta bollose e dolorose, a differenza della forma chemio-indotta, più diffusa su tutta la superficie palmo-plantare ed eritemato-edematosa senza la componente ipercheratosica focale. L'insorgenza è tipicamente precoce, entro le prime 2-6 settimane. La profilassi prevede podologia pre-trattamento (rimozione di ipercheratosi/calli), calzature comode e creme idratanti/cheratolitiche a base di urea al 10-40%; nel grado 1-2 si usano emollienti, cheratolitici topici, corticosteroidi topici potenti e anestetici locali, senza modifica di dose; nel grado 3 (dolore che limita le attività quotidiane) si sospende temporaneamente fino a miglioramento a grado ≤1, riprendendo poi a dose ridotta.
+
+La **proteinuria** ha un'incidenza complessiva di classe di circa il 6-34% (tutti i gradi) e 1-10% (grado ≥3), con lenvatinib al livello più alto (29,5-34,1% tutti i gradi, grado ≥3 7,7-8,2%). Il monitoraggio prevede dipstick urinario a ogni ciclo/visita, con le prime due settimane come momento critico per il primo controllo; un dipstick ≥2+ va confermato con il rapporto proteine/creatinina urinarie (UPCR) o con la raccolta delle 24 ore, poiché il dipstick da solo sottostima il dato quantitativo. In caso di proteinuria di grado 2 (1-3,5 g/24h) si prosegue con monitoraggio ravvicinato se il rapporto rischio-beneficio lo giustifica; nel grado 3 (>3,5 g/24h, range nefrosico) si sospende fino a miglioramento, riprendendo a dose ridotta; nel grado 4 (sindrome nefrosica conclamata) è raccomandata l'interruzione definitiva.
+
+Altre tossicità di classe rilevanti: **eventi tromboembolici arteriosi**, incidenza di classe relativamente bassa ma clinicamente rilevante (circa 1,5-3% tutti i gradi, valore quasi sovrapponibile al grado ≥3 poiché questi eventi sono per natura quasi sempre clinicamente significativi), più frequenti negli anziani o con storia cardiovascolare; **eventi tromboembolici venosi**, più comuni (circa 3-9% tutti i gradi, con cabozantinib e pazopanib ai valori più alti della classe, sunitinib e sorafenib tendenzialmente più bassi); **eventi emorragici**, dal sanguinamento mucoso minore, il più frequente (tutti i gradi circa 20-40%, prevalentemente epistassi lieve), a eventi maggiori gastrointestinali o polmonari (grado ≥3 circa 2-4%); **ipotiroidismo**, particolarmente frequente con sunitinib (fino al 36-85% a seconda della definizione e della durata di follow-up, per atrofia tiroidea da inibizione dell'angiogenesi ghiandolare), da monitorare con TSH basale e poi ogni 2-3 mesi, trattando con L-tiroxina se TSH >10 mUI/L o sintomatico, senza necessità di sospendere il TKI; **perforazione gastrointestinale**, rara (incidenza di classe generalmente <1-2%) ma potenzialmente fatale, da sospettare in caso di dolore addominale acuto con febbre/peritonismo, che impone sospensione immediata e valutazione chirurgica urgente; **prolungamento del QT**, segnalato soprattutto con sunitinib (alterazioni del QTc rilevabili in studi dedicati fino al 10-15% dei pazienti, ma prolungamento clinicamente significativo di grado ≥3 nell'ordine dell'1-2%), che richiede ECG basale e cautela con farmaci concomitanti QT-prolungante o con ipokaliemia/ipomagnesemia da diarrea concomitante; **fatica**, sintomo molto frequente (fino al 50-60%) che può richiedere schemi di somministrazione intermittenti (es. "2 settimane on/1 off" per sunitinib) o riduzione di dose.
+
+*Le percentuali indicate per eventi tromboembolici, emorragici e QT sono range approssimativi ricavati da più fonti (RCP dei singoli farmaci, analisi pooled, review di classe) e vanno intese come ordine di grandezza indicativo, data l'ampia variabilità tra molecole, dosi e popolazioni studiate.*
+
+#### Punti chiave
+
+- Ipertensione: incidenza più alta con lenvatinib (fino al 73%, G3-4 44%) e cabozantinib; target <140/90 mmHg, prima scelta ACE-i/ARB/diidropiridinici, evitare calcio-antagonisti non diidropiridinici (interazione CYP3A4).
+- HFSR da TKI: distribuzione su aree di pressione/frizione con lesioni ipercheratosiche, diversa dalla hand-foot syndrome chemio-indotta (diffusa, eritemato-edematosa); grado 3 → sospensione e ripresa a dose ridotta.
+- Proteinuria: dipstick a ogni ciclo, conferma con UPCR se ≥2+; grado 3 (>3,5 g/24h) sospensione, grado 4 interruzione definitiva.
+- Ipotiroidismo particolarmente frequente con sunitinib; perforazione GI rara ma potenzialmente fatale, red flag da riconoscere.
+- Eventi tromboembolici venosi (~3-9%) più frequenti degli arteriosi (~1,5-3%) ma questi ultimi più temuti; sanguinamento minore comune (~20-40%), maggiore raro (~2-4%).
 
 
-## Diagnosi
-- Presentazione clinica:
-- Esami iniziali:
-- Conferma istologica/citologica:
+## Anticorpi monoclonali anti-VEGF (bevacizumab, ramucirumab, aflibercept)
+Bevacizumab, ramucirumab e aflibercept condividono il profilo di classe anti-angiogenico descritto sopra per i VEGFR-TKI — ipertensione (tutti i gradi fino al 30-36% per bevacizumab, dose-dipendente, grado 3-4 in un range 5-18% a seconda dell'indicazione) e proteinuria (fino al 20-40%, raramente sindrome nefrosica conclamata) — con lo stesso approccio di monitoraggio (dipstick, UPCR) e di gestione (ACE-i/ARB/diidropiridinici, sospensione per grado 3-4).
+
+Il rischio **tromboembolico** con bevacizumab riguarda sia gli eventi venosi (tutti i gradi circa 11-17%, fino al 19% nel colon-retto; grado ≥3 circa 6-11%) sia, soprattutto, gli eventi arteriosi (ictus, infarto: tutti i gradi circa 3-5%, fino all'8-11% negli ultra-65enni o con storia cardiovascolare pregressa; grado ≥3 circa 2-3%) — questi ultimi più temuti per la maggiore letalità e disabilità residua nonostante l'incidenza numericamente inferiore a quella degli eventi venosi. Il rischio di **sanguinamento** spazia da episodi minori (epistassi lieve, molto frequente, fino al 35% circa, quasi sempre di grado 1) a eventi maggiori come l'emorragia polmonare massiva — rischio storicamente più alto nell'istotipo squamocellulare polmonare, motivo per cui questo istotipo è stato escluso dagli studi registrativi di bevacizumab in NSCLC — l'emorragia gastrointestinale e, più raramente, intracranica (emorragie maggiori/grado ≥3 complessivamente circa 2-5%). La **perforazione gastrointestinale**, con un'incidenza intorno all'1,3-2,4% nelle meta-analisi storiche e una mortalità associata non trascurabile, è più frequente in presenza di tumore primitivo intatto (non resecato), storia di diverticolite o malattia infiammatoria intestinale, radioterapia addominale pregressa o chirurgia addominale recente.
+
+Un punto ad alta resa per l'orale riguarda il **timing perioperatorio**: per l'emivita lunga di bevacizumab (~20 giorni), la sospensione va programmata almeno 28 giorni prima di un intervento chirurgico elettivo maggiore secondo scheda tecnica FDA, ma la pratica clinica e diverse revisioni raccomandano un margine più ampio, fino a 6-8 settimane; la ripresa non va anticipata rispetto a 28 giorni dopo l'intervento e solo a ferita chirurgica completamente guarita, per il rischio di deiscenza, fistole e ritardata cicatrizzazione — un rischio descritto anche per procedure minori come il posizionamento di un accesso venoso centrale.
+
+#### Punti chiave
+
+- Stesso profilo di classe anti-VEGF dei TKI (ipertensione, proteinuria), stessa gestione (monitoraggio, ACE-i/ARB/diidropiridinici).
+- Bevacizumab: rischio tromboembolico sia venoso (~11-17%, più frequente) sia arterioso (~3-5%, quest'ultimo più temuto per letalità/disabilità); rischio emorragico da minore (epistassi fino al 35%) a maggiore (~2-5%, incluso il rischio di emorragia polmonare massiva nello squamocellulare polmonare, motivo dell'esclusione di questo istotipo dai trial registrativi).
+- Timing perioperatorio: sospendere almeno 4 settimane (in pratica spesso 6-8) prima di chirurgia elettiva maggiore, riprendere non prima di 28 giorni dopo e solo a ferita guarita.
 
 
-## Stadiazione
-- Imaging:
-- TNM / classificazione:
-- Elementi prognostici principali:
+## Inibitori mTOR (everolimus, temsirolimus)
+La **stomatite/mucosite** è la tossicità caratteristica di everolimus, con un'incidenza storica intorno al 33% tutti i gradi nel trial BOLERO-2 (everolimus + exemestane) e stomatite di grado 3 nel 7,3% del gruppo di controllo storico. Il trial **SWISH** (Rugo et al., Lancet Oncology 2017) ha dimostrato l'efficacia di un collutorio steroideo profilattico — desametasone 0,5 mg/5 mL, 10 mL per risciacquo per 2 minuti (risciacquare e sputare, non ingerire), 4 volte al giorno, dal giorno 1 di everolimus, per 8 settimane — nel ridurre la stomatite di grado ≥2 all'8ª settimana al 2,4% (contro il 27,4% del controllo storico alla stessa epoca, p<0,001), senza alcun caso di stomatite di grado 3-4 nel braccio con mouthwash (contro il 7,3% del controllo storico). Il collutorio steroideo va quindi proposto come standard preventivo fin dall'inizio della terapia con everolimus, non solo come trattamento reattivo alla comparsa dei sintomi.
+
+La **polmonite non infettiva (pneumonite)** è una tossicità di classe caratteristica degli inibitori mTOR, di natura immuno-mediata/infiammatoria — la diagnosi differenziale con la polmonite infettiva e con la progressione di malattia (linfangite carcinomatosa) è essenziale. L'incidenza riportata è eterogenea a seconda della definizione radiologica o clinica utilizzata (generalmente 10-20% se si includono le alterazioni radiologiche asintomatiche). La gestione segue un principio per grado analogo a quello già descritto per le polmoniti immuno-relate: nel grado 1 (asintomatica, solo reperto radiologico) si prosegue il farmaco con monitoraggio ravvicinato; nel grado 2 (sintomatica, senza necessità di ossigeno) si sospende fino a miglioramento a grado ≤1, considerando corticosteroidi se persistente, con ripresa a dose ridotta; nel grado 3-4 (sintomatica severa, con necessità di ossigeno o supporto ventilatorio) si sospende definitivamente il farmaco, si avviano corticosteroidi sistemici e si valuta broncoscopia con lavaggio broncoalveolare per escludere un'infezione concomitante.
+
+Iperglicemia (tutti i gradi circa 50-57%, grado 3 circa 9-14% nel trial BOLERO-2) e dislipidemia — ipercolesterolemia (tutti i gradi fino al 70%, grado 3 circa 4-5%) e ipertrigliceridemia (tutti i gradi circa 50-70%, grado 3 circa 3-4%) — sono effetti attesi per il ruolo di mTOR nel metabolismo lipidico e nella sensibilità insulinica, generalmente di grado lieve-moderato e gestibili con terapia medica standard (metformina, statine) senza necessità di sospendere il farmaco nella maggioranza dei casi. Anemia (tutti i gradi circa 45-50%, grado 3 circa 6-7%), trombocitopenia (tutti i gradi circa 23-28%, grado 3 circa 3-4%) e più raramente neutropenia (tutti i gradi circa 15-20%, grado 3 circa 2%, lievemente più frequente con temsirolimus) sono descritte con entità generalmente lieve-moderata, da monitorare con emocromo periodico, specie nei primi mesi di trattamento.
+
+*Le percentuali di iperglicemia, dislipidemia e citopenie riportate sono valori medi indicativi ricavati principalmente da BOLERO-2/RECORD-1; la variabilità individuale è ampia.*
+
+#### Punti chiave
+
+- Stomatite da everolimus: collutorio di desametasone 0,5 mg/5 mL, 4 volte/die, dal giorno 1 (trial SWISH) — riduce la stomatite G≥2 all'8ª settimana dal 27,4% al 2,4%, nessun caso G3-4 con la profilassi.
+- Pneumonite non infettiva: tossicità di classe, diagnosi differenziale con infezione e progressione di malattia; gestione per grado (osservazione → sospensione ± steroidi → interruzione definitiva).
+- Iperglicemia (~50-57%, G3 ~9-14%) e dislipidemia (~50-70%) gestibili con terapia medica standard senza sospendere il farmaco nella maggior parte dei casi; citopenie lievi-moderate (anemia ~45-50%, piastrinopenia ~23-28%, neutropenia ~15-20%).
 
 
-## Biomarcatori
-- Biomarcatori diagnostici:
-- Biomarcatori prognostici:
-- Biomarcatori predittivi:
-- Test molecolari rilevanti:
+## Inibitori PI3K/AKT e PARP-inibitori
+**Alpelisib** causa iperglicemia come tossicità caratteristica e dose-limitante della classe PI3K-inibitori, per il ruolo del pathway PI3K/AKT nella segnalazione insulinica: nel trial SOLAR-1 l'iperglicemia di qualsiasi grado ha interessato circa il 64% dei pazienti, con grado 3 nel 32-37% — il valore più alto tra le tossicità metaboliche trattate in questa scheda, a conferma della sua centralità nella gestione clinica del farmaco. L'algoritmo di gestione, coerente con la scheda tecnica, si basa sulla glicemia a digiuno (FBG): un valore >160 mg/dL corrisponde già al grado 2 CTCAE. Al primo episodio con FBG 160-250 mg/dL si adottano interventi conservativi (dieta, idratazione) ed eventualmente si avvia metformina, senza necessariamente sospendere alpelisib; con FBG >250 mg/dL il farmaco va sospeso, si aggiunge un secondo agente antiiperglicemico e si consulta l'endocrinologia; episodi successivi con FBG >500 mg/dL nonostante terapia massimale non insulinica impongono di considerare l'insulina o l'interruzione permanente. La metformina profilattica è raccomandata fin dall'inizio (fino a 2000-2500 mg/die) nei pazienti con HbA1c basale 5,7-6,4% (prediabete), come agente di prima linea preferito a insulina o sulfaniluree. Il monitoraggio della FBG va effettuato settimanalmente nei pazienti a rischio intermedio e giornalmente in quelli ad alto rischio, soprattutto nelle prime due settimane, periodo di massima incidenza. Alpelisib causa inoltre rash cutaneo nel 35,6% dei pazienti nel trial SOLAR-1: la premedicazione con un antistaminico H1 non sedativo (cetirizina o loratadina 10 mg) è raccomandata fin dall'inizio in tutti i pazienti; per le forme lievi si usano steroidi topici e antistaminici, per un rash esteso oltre il 10% della superficie corporea è indicato il consulto dermatologico/allergologico, con cautela nell'uso di steroidi sistemici per il loro effetto iperglicemizzante additivo.
+
+Tra i **PARP-inibitori**, oltre alla mielotossicità già trattata in dettaglio nella scheda "Tossicita_Ematologica.md" (talazoparib il più severo, niraparib intermedio e sensibile allo schema di dose individualizzata, olaparib generalmente più favorevole), va ricordato il rischio raro ma specifico di classe di **mielodisplasia o leucemia mieloide acuta secondaria**, per danno diretto al DNA delle cellule staminali ematopoietiche, con incidenza complessiva nelle meta-analisi generalmente inferiore all'1,5%, più alta con esposizione cumulativa a più linee di chemioterapia contenente platino prima del PARP-inibitore. La nausea è un effetto di classe molto comune (fino al 60-75% tutti i gradi), generalmente di basso grado e ben gestibile con antiemetici standard, tendente a migliorare dopo i primi cicli di trattamento.
+
+#### Punti chiave
+
+- Alpelisib: iperglicemia dose-limitante (SOLAR-1: tutti i gradi ~64%, G3 ~32-37%), algoritmo per soglie di FBG (160/250/500 mg/dL), metformina profilattica nei prediabetici; rash 35,6% (SOLAR-1), premedicazione con antistaminico H1 non sedativo raccomandata in tutti i pazienti.
+- PARP-inibitori: rischio raro ma specifico di classe di MDS/AML secondaria (<1,5% nelle meta-analisi), più alto con esposizione cumulativa a platino pregresso — vedi "Tossicita_Ematologica.md" per i dati completi di mielotossicità.
 
 
-## Terapia della malattia localizzata
-- Strategia generale:
-- Ruolo di chirurgia:
-- Ruolo di radioterapia:
-- Ruolo di terapia sistemica:
+## Inibitori EGFR (piccola molecola e anticorpi monoclonali)
+Il **rash acneiforme** è la tossicità cutanea caratteristica dell'intera classe, con un'incidenza maggiore per gli anticorpi monoclonali rispetto ai TKI orali: cetuximab 75-100% tutti i gradi (grado ≥3 12-20% in monoterapia, fino al 50% in combinazione con radioterapia), panitumumab 57% in monoterapia (grado ≥3 fino al 35%), mentre erlotinib e gefitinib hanno un'incidenza complessivamente inferiore (grado ≥3 1-9%). L'insorgenza con gli anticorpi monoclonali è tipicamente precoce, entro la prima settimana, con distribuzione nelle aree seborroiche (viso, cuoio capelluto, collo, spalle, torace superiore). Un punto ad alta resa per l'orale è la correlazione positiva, descritta soprattutto con cetuximab, tra comparsa/severità del rash e risposta/sopravvivenza — un rash di grado ≥3 resta comunque indicazione a riduzione o interruzione della dose, che può però ridurre paradossalmente l'efficacia se non gestito con una terapia di supporto aggressiva anziché con la sola riduzione di dose. La gestione prevede, come profilassi, emollienti, fotoprotezione e igiene cutanea delicata; nel grado 1-2, doxiciclina o minociclina per os (100 mg/die) e steroidi topici a bassa-media potenza; nel grado 3, sospensione temporanea, steroidi topici ad alta potenza e valutazione di una riduzione di dose alla ripresa.
+
+La **diarrea** è comune sia con i TKI sia con gli anticorpi monoclonali, ma con un'incidenza molto eterogenea tra farmaci: erlotinib e gefitinib tutti i gradi circa 20-55%/grado ≥3 2-6%, osimertinib tutti i gradi circa 40-58%/grado ≥3 1-3%, e soprattutto **afatinib**, il più alto della classe per la sua irreversibilità pan-HER (tutti i gradi circa 90-96%, grado ≥3 14-22% nei trial LUX-Lung); con gli anticorpi monoclonali (cetuximab, panitumumab) l'incidenza è generalmente più bassa (tutti i gradi circa 10-25%, grado ≥3 2-4%). La gestione è comune a tutta la classe: loperamide, idratazione ed eventuale riduzione di dose se persistente o severa. La **paronichia** è una complicanza tardiva (settimane-mesi), infiammazione periungueale dolorosa con possibile sovrainfezione batterica, con incidenza tutti i gradi nell'ordine del 10-30% per i TKI EGFR (fino al 50-58% con afatinib) e del 10-20% per gli anticorpi monoclonali (grado ≥3 raro, generalmente <1-2%), gestita con antisettici topici ed eventuali antibiotici, raramente richiede sospensione del farmaco. L'**ipomagnesiemia**, tossicità specifica degli anti-EGFR monoclonali (cetuximab, panitumumab, tutti i gradi circa 30-55%, grado 3-4 circa 2-7%), deriva dal blocco di EGFR a livello del tubulo renale distale, con perdita renale di magnesio che si accentua con la durata di esposizione: va monitorata periodicamente insieme a calcio e potassio, con supplementazione secondo necessità, e raramente richiede sospensione del farmaco.
+
+**Osimertinib** merita una menzione specifica per il rischio di tossicità cardiaca — riduzione della frazione di eiezione, generalmente asintomatica (tutti i gradi circa 3-4%, grado 3 <1%), e prolungamento del QTc (tutti i gradi circa 8-10%, grado ≥3 circa 1-2%), con raccomandazione di ECG ed ecocardiogramma/MUGA basali e monitoraggio periodico, specie nei pazienti con fattori di rischio cardiovascolare — e per il rischio di polmonite interstiziale, descritto anche con questo TKI di terza generazione e non solo con quelli di prima/seconda generazione, con incidenza intorno al 3-4% nel trial FLAURA (contro circa il 2% del comparatore di prima generazione), quindi bassa in termini assoluti ma potenzialmente severa, gestita secondo lo stesso schema per grado già descritto per gli inibitori mTOR.
+
+*I range di diarrea, paronichia e ipomagnesiemia sono medie indicative tra farmaci della stessa classe, che nella pratica clinica variano molto per molecola, dose e durata di esposizione.*
+
+#### Punti chiave
+
+- Rash acneiforme: più marcato con gli anticorpi monoclonali (cetuximab 75-100%) che con i TKI orali; correla con la risposta clinica ma il grado ≥3 impone comunque riduzione/sospensione.
+- Ipomagnesiemia specifica degli anti-EGFR monoclonali (~30-55%), effetto cumulativo con la durata di esposizione; diarrea più marcata con afatinib (~90-96%) rispetto agli altri TKI EGFR (~20-58%) e agli anticorpi monoclonali (~10-25%).
+- Osimertinib: attenzione a tossicità cardiaca (riduzione LVEF ~3-4%, QTc ~8-10%) e a ILD/pneumonite (~3-4%, FLAURA), non esclusiva dei TKI EGFR di prima generazione.
 
 
-## Terapia della malattia localmente avanzata
-- Strategia generale:
-- Sequenze terapeutiche:
-- Casi particolari:
+## Inibitori BRAF/MEK
+La **febbre (pirexia)** è la tossicità più caratteristica della combinazione dabrafenib+trametinib: in uno studio retrospettivo, pirexia tutti i gradi nel 38,6% dei pazienti, forma severa/complicata nel 15,9%, con il 70,6% degli episodi che insorge nel primo mese di trattamento e il 44,1% dei pazienti con episodi multipli/recidivanti. La gestione prevede sospensione o riduzione di dose nel 65% dei casi, paracetamolo/FANS nel 68%, corticosteroidi nel 9% (riservati ai casi refrattari o con sindrome sistemica associata — ipotensione, rigor, mialgie). L'algoritmo pratico: febbre ≥38°C → sospendere temporaneamente il farmaco e trattare con antipiretici (paracetamolo di prima scelta); se persistente/ricorrente o complicata da ipotensione, disidratazione o insufficienza renale acuta → escludere sepsi, considerare un breve ciclo di corticosteroidi, riprendere a dose ridotta dopo risoluzione. È importante non interpretare la pirexia come segnale di intolleranza da interrompere precocemente: nello studio citato era associata a una maggiore durata di permanenza in trattamento (16,9 contro 9,0 mesi), a conferma che va gestita attivamente piuttosto che portare a una sospensione definitiva precoce.
+
+Un fenomeno paradossale caratteristico dei **BRAF-inibitori in monoterapia** (non in combinazione con un MEK-inibitore) è la comparsa di **carcinomi cutanei squamocellulari e cheratoacantomi secondari**, dovuta all'attivazione paradossa della via MAPK nelle cellule BRAF-wild-type con mutazioni RAS preesistenti: incidenza in monoterapia circa 18-24% con vemurafenib (trial BRIM3) e circa 6-11% con dabrafenib (BREAK-3). L'aggiunta del MEK-inibitore (dabrafenib+trametinib, vemurafenib+cobimetinib, encorafenib+binimetinib) riduce drasticamente l'incidenza di questi eventi rispetto alla monoterapia, fino a circa il 2-7% in combinazione, perché il MEK-inibitore blocca a valle l'attivazione paradossa — un concetto chiave che spiega, sul piano biologico, la superiorità della combinazione anche sul fronte della sicurezza cutanea oltre che dell'efficacia. La sorveglianza dermatologica regolare va mantenuta per tutto il trattamento con BRAF-inibitori, specie in monoterapia; l'escissione chirurgica delle lesioni sospette generalmente non richiede la sospensione del farmaco.
+
+La **retinopatia associata ai MEK-inibitori (MEKAR)**, un distacco sieroso dell'epitelio pigmentato retinico, è stata descritta fino al 90% dei pazienti se si considerano anche le alterazioni subcliniche rilevate con OCT, mentre nello studio coBRIM (vemurafenib+cobimetinib) la retinopatia era presente nel 29% dei pazienti ma sintomatica solo nel 13%. L'insorgenza è precoce, da poche ore ad alcune settimane dall'inizio del trattamento. È raccomandata una valutazione oftalmologica basale (acuità visiva e fundoscopia) prima di iniziare il MEK-inibitore; le forme asintomatiche vanno monitorate con rivalutazione a 4 settimane proseguendo il farmaco, le forme sintomatiche lievi con rivalutazione ogni 2-4 settimane, le forme moderate-severe con riduzione di dose o sospensione temporanea fino a risoluzione. Altre tossicità di classe dei MEK-inibitori sono la riduzione della frazione di eiezione cardiaca (tutti i gradi circa 7-11%, grado 3 circa 1-2%, generalmente reversibile alla sospensione, da monitorare con ecocardiogramma basale e periodico ogni 2-3 mesi) e, più raramente, la rabdomiolisi vera e propria (incidenza <1%, da distinguere dal rialzo asintomatico della creatinchinasi, molto più comune, fino al 30% circa; monitoraggio della CK in presenza di mialgie o debolezza muscolare).
+
+*I range di cSCC/cheratoacantomi, riduzione della LVEF e rabdomiolisi sono valori medi indicativi tra le diverse molecole della classe, con variabilità significativa tra i trial registrativi.*
+
+#### Punti chiave
+
+- Pirexia da dabrafenib+trametinib: 38,6% tutti i gradi, 70,6% entro il primo mese; gestione attiva (sospensione breve, antipiretici, steroidi se refrattaria) senza interrompere definitivamente il farmaco.
+- BRAF-i in monoterapia: rischio di cSCC/cheratoacantomi secondari (~18-24% vemurafenib, ~6-11% dabrafenib) per attivazione paradossa della via MAPK — drasticamente ridotto (~2-7%) aggiungendo un MEK-inibitore (razionale anche di sicurezza, non solo di efficacia, per la combinazione).
+- MEK-inibitori: retinopatia sierosa (MEKAR, valutazione oftalmologica basale obbligatoria), riduzione della LVEF (~7-11%, G3 ~1-2%), rabdomiolisi vera rara (<1%, da distinguere dal rialzo asintomatico di CK, fino al 30%).
 
 
-## Terapia della malattia avanzata/metastatica
-- Prima linea:
-- Linee successive:
-- Criteri di scelta:
-- Ruolo delle terapie di supporto:
+## Inibitori CDK4/6
+Il profilo di **neutropenia** differisce nettamente tra le tre molecole: palbociclib ha l'incidenza più alta (PALOMA-2: grado 3 56,1%, grado 4 10,4%; PALOMA-3: grado 3 53,3%, grado 4 8,7%; neutropenia febbrile comunque rara, ≤1,8%), ribociclib un'incidenza simile (MONALEESA-2: tutti i gradi 63,8%), mentre abemaciclib ha un'incidenza circa dimezzata (MONARCH-3: 41,3% complessivo, grado 3 19,6%, grado 4 1,5%), per la maggiore selettività su CDK4 rispetto a CDK6 — è l'inibizione di CDK6 sui progenitori mieloidi a mediare la neutropenia di classe. Si tratta di una neutropenia citostatica e reversibile, non di una mielosoppressione citotossica classica: si risolve rapidamente alla sospensione e comporta un rischio di neutropenia febbrile sorprendentemente basso nonostante l'alta incidenza di forme di grado 3-4 — un concetto centrale per l'orale, poiché il grado di neutropenia non correla linearmente con il rischio infettivo in questa classe. La gestione prevede emocromo basale, poi ogni due settimane nei primi due cicli e a inizio di ogni ciclo successivo, con riduzioni di dose scalari per neutropenia di grado 3 persistente o di grado 4; il G-CSF non è raccomandato di routine.
+
+La **diarrea** è invece il pattern inverso, dominato da abemaciclib: nei trial MONARCH-2/3, diarrea tutti i gradi 82,3-86,4%, grado 3 9,5-13,4%, nessun evento di grado 4, con insorgenza precoce (mediana 6-8 giorni) e durata di 6-12 giorni per episodio, attenuazione nei cicli successivi. La gestione prevede loperamide fin dalla prima comparsa di feci non formate, senza attendere il grado 2 (usata nel 69-76% dei pazienti nei trial); sospensione temporanea nel 15-19% dei casi, riduzione di dose nel 14-19%, interruzione definitiva solo nell'1,8-2,9% — le riduzioni di dose per diarrea non compromettono il beneficio in PFS.
+
+**Ribociclib** è il farmaco della classe con il segnale più netto di **prolungamento del QTc** (range riportato ~5,4% contro 1,6% del comparatore con sola terapia endocrina) e di **epatotossicità**, con incremento di ALT/AST di grado 3-4 rispettivamente nel 9,3% e 5,7% dei pazienti nel trial MONALEESA-2 — la percentuale più alta della classe (palbociclib: ALT grado 3 3%; abemaciclib: ALT grado 3-4 5,8%/0,6%). Il monitoraggio raccomandato per ribociclib comprende ECG basale, a giorno 14 del primo ciclo e a inizio del secondo ciclo, e transaminasi allo stesso timing dell'emocromo (basale, ogni due settimane nei primi due cicli, poi mensile fino a 6 mesi, poi ogni 3 mesi); va evitata l'associazione con altri farmaci QT-prolungante e con inibitori potenti del CYP3A4, e nella scelta del partner endocrino è preferibile un inibitore dell'aromatasi al tamoxifene per il rischio QT additivo.
+
+Un warning di classe, comune a tutti e tre i CDK4/6-inibitori (non solo ad abemaciclib), riguarda il rischio di **polmonite interstiziale**: abemaciclib 3,2% contro 1,3% del comparatore, ribociclib (NATALEE) 1,6% contro 0,9%. Anche il **tromboembolismo venoso** è un effetto di classe, più marcato con abemaciclib (2,5% contro 0,6%, più alto con tamoxifene che con un inibitore dell'aromatasi come partner) e presente anche con ribociclib (NATALEE 1,1% contro 0,5%).
+
+#### Punti chiave
+
+- Neutropenia: palbociclib e ribociclib con incidenza G3-4 marcata (~60%), abemaciclib circa dimezzata (~41%); reversibile, basso rischio di neutropenia febbrile in tutti e tre — il grado non predice il rischio infettivo.
+- Diarrea: dominante con abemaciclib (82-86% tutti i gradi); loperamide fin dalla prima comparsa, non attendere il grado 2.
+- Ribociclib: attenzione a QTc (ECG basale, giorno 14, inizio ciclo 2) ed epatotossicità (ALT/AST G3-4 fino al 9,3%); preferire un inibitore dell'aromatasi al tamoxifene come partner.
+- ILD/pneumonite e tromboembolismo venoso: warning di classe per tutti e tre i CDK4/6-inibitori, non solo per abemaciclib.
 
 
-## Farmaci e classi rilevanti
-- Chemioterapia:
-- Ormonoterapia:
-- Target therapy:
-- Immunoterapia:
-- Altri trattamenti:
+## Anticorpi coniugati a farmaco (ADC)
+**Trastuzumab deruxtecan (T-DXd)** è associato al segnale di tossicità polmonare più rilevante e più gettonato d'esame di questa classe: in un'analisi pooled di 9 studi di monoterapia (1150 pazienti), l'ILD/pneumonite correlata al farmaco ha un'incidenza complessiva del 15,4% (grado 1 4,2%, grado 2 7,7%, grado 3 1,2%, grado 4 0,1%, grado 5/fatale **2,2%**, 25 pazienti), con la maggioranza degli eventi (77,4%) di basso grado. Il tempo mediano di insorgenza al primo evento è di 5,4 mesi, con l'87% degli eventi entro i primi 12 mesi. Nel trial più recente DESTINY-Breast03, l'incidenza è scesa al 10,5%, senza alcun evento di grado 4-5 dopo l'adozione di linee guida aggiornate di monitoraggio e gestione (dicembre 2019) — un dato importante: la riduzione della mortalità da ILD nel tempo riflette il miglioramento della diagnosi precoce e della gestione da parte di oncologi e pneumologi, non una modifica del farmaco. T-DXd porta un **boxed warning FDA** per ILD/pneumonite, incluso il rischio di esito fatale. L'algoritmo di gestione per grado è una delle eccezioni più rilevanti al principio generale descritto in apertura di scheda: nel grado 1 (asintomatico, solo reperto radiologico) il farmaco va comunque **sospeso** fino a completa risoluzione, con eventuale ripresa alla stessa dose o a dose ridotta se risolto entro 28 giorni; nel grado 2 (sintomatico), sospensione e avvio di corticosteroidi sistemici (es. prednisone ≥1 mg/kg/die o equivalente) fino a miglioramento, con eventuale ripresa a dose ridotta o interruzione definitiva secondo il rapporto rischio-beneficio; nel grado 3-4, interruzione definitiva, corticosteroidi sistemici ad alte dosi e gestione multidisciplinare con lo pneumologo. Un dato critico da conoscere: in un'analisi pooled, tra i pazienti con ILD di grado ≥2 solo il 58,3% ha ricevuto corticosteroidi sistemici, e circa la metà degli eventi fatali non è stata trattata con steroidi secondo le raccomandazioni — un sottotrattamento associato a prognosi peggiore, che sottolinea l'importanza dell'aderenza rigorosa all'algoritmo e di una soglia di sospetto bassa (tosse secca, dispnea da sforzo, febbre di nuova insorgenza vanno sempre indagati con imaging toracico).
+
+**Trastuzumab emtansine (T-DM1)** ha un profilo diverso, dominato da **trombocitopenia** (tossicità caratteristica e dose-limitante, per internalizzazione dell'ADC nei megacariociti: nel trial EMILIA tutti i gradi 28%, grado 3-4 circa 13%, con incidenza sensibilmente più alta nelle popolazioni asiatiche, fino al 39% tutti i gradi/20% grado ≥3) ed **epatotossicità** (elevazione delle transaminasi, tutti i gradi circa 20-30%, grado 3 circa 2-5%; raramente iperplasia rigenerativa nodulare/malattia porto-sinusoidale vascolare); non condivide il segnale prominente di ILD di T-DXd, sebbene casi isolati siano descritti nella pratica reale con entrambi gli ADC anti-HER2. La gestione prevede emocromo e transaminasi prima di ogni ciclo, con riduzioni di dose scalari secondo schema a due livelli per trombocitopenia di grado 3-4 o transaminasi elevate.
+
+**Sacituzumab govitecan**, nel trial ASCENT, ha mostrato neutropenia tutti i gradi nel 63% (grado ≥3 51%, neutropenia febbrile 6%) e diarrea tutti i gradi nel 59% (grado ≥3 10%), entrambe nettamente superiori al braccio di controllo chemioterapico. Contiene SN-38, il metabolita attivo dell'irinotecan, eliminato per glucuronidazione tramite UGT1A1: nei pazienti **omozigoti UGT1A1*28/*28** (13% della popolazione nel trial) la tossicità è marcatamente più severa — neutropenia grado ≥3 59% (contro 47-53% negli altri genotipi), neutropenia febbrile grado ≥3 18% (contro 3-5%), anemia grado ≥3 15% (contro 4-6%), diarrea grado ≥3 15% (contro 9-10%) — da cui un **boxed warning FDA** per tossicità severa/fatale in questa sottopopolazione, con raccomandazione di sorveglianza più stretta (il test genotipico non è obbligatorio pre-trattamento, ma va considerato in presenza di tossicità precoce inattesa). La gestione pratica prevede un ricorso ampio al G-CSF (49% dei pazienti nel trial, inclusa la profilassi secondaria nel 29%), loperamide per la diarrea, e atropina per la sindrome colinergica acuta (diarrea, crampi, scialorrea durante o subito dopo l'infusione, per inibizione dell'acetilcolinesterasi con meccanismo analogo all'irinotecan).
+
+**Enfortumab vedotin** ha come tossicità caratteristiche la **tossicità cutanea** (tutti i gradi 58% in monoterapia, grado 3-4 14%; con pembrolizumab 65-70%/13-17%), che comprende rash maculo-papulare, rash eritematoso, SDRIFE e dermatite bollosa, con un **boxed warning FDA per reazioni cutanee severe e fatali, inclusa sindrome di Stevens-Johnson e necrolisi epidermica tossica** — sospensione per rash di grado 3 con sospetto SJS/TEN, interruzione permanente per SJS/TEN confermato o rash di grado 4; l'**iperglicemia** (tutti i gradi 17%, grado 3-4 7%, con sospensione raccomandata sopra i 250 mg/dL e ricorso a insulina nel 5% dei pazienti); e la **neuropatia periferica** (tutti i gradi 50% in monoterapia, grado 3-4 5%), gestita con monitoraggio sintomatologico e interruzione permanente per neuropatia di grado ≥3.
+
+#### Punti chiave
+
+- Trastuzumab deruxtecan: ILD/pneumonite 15,4% (pooled analysis), mortalità 2,2% ma in calo con la diagnosi precoce (10,5% e nessun G4-5 in DESTINY-Breast03); boxed warning FDA; **anche il grado 1 richiede sospensione**, eccezione al principio generale.
+- T-DM1: trombocitopenia (EMILIA: tutti i gradi 28%, G3-4 ~13%) ed epatotossicità (~20-30%, G3 ~2-5%) come tossicità dose-limitanti, non condivide il segnale ILD di T-DXd.
+- Sacituzumab govitecan: neutropenia (51% G≥3) e diarrea (10% G≥3); boxed warning FDA per tossicità severa negli omozigoti UGT1A1*28/*28.
+- Enfortumab vedotin: boxed warning FDA per tossicità cutanea severa (SJS/TEN); anche iperglicemia e neuropatia periferica (50% tutti i gradi).
 
 
-## Tossicità e criticità
-- Tossicità frequenti:
-- Tossicità gravi:
-- Gestione pratica:
-- Red flags:
+## Inibitori BCR-ABL (cenni di tossicità cardiovascolare)
+Tra i TKI impiegati in ambito ematologico, **dasatinib** ha come tossicità caratteristica il **versamento pleurico**, non condiviso da imatinib e nilotinib, legato all'inibizione off-target di PDGFR e delle chinasi della famiglia Src con aumento della permeabilità vascolare polmonare; incidenza tutti i gradi circa 24-33% (in crescita con la durata di esposizione, dato osservato a 5 anni nel trial DASISION), grado 3-4 circa 4-7%, con la maggioranza degli eventi di grado 1-2; è più frequente con lo schema una volta al giorno rispetto a schemi frazionati e nelle linee di trattamento successive a dosi più alte. La gestione è graduata: versamento lieve/asintomatico → monitoraggio, eventuale sospensione temporanea; versamento sintomatico moderato → sospensione, diuretici, eventuale breve ciclo di corticosteroidi; versamento severo/ricorrente → toracentesi evacuativa e sospensione definitiva con switch ad altro TKI (bosutinib in particolare è descritto come efficace nel ridurre le recidive).
+
+**Nilotinib e ponatinib** condividono un segnale di **eventi occlusivi arteriosi**: nel trial registrativo PACE di ponatinib, eventi occlusivi arteriosi complessivi nel 26% dei pazienti (cardiovascolari 15%, cerebrovascolari 7%, vascolari periferici 11%), grado 3-4 nel 14%, con eventi fatali nel 2% — verificatisi anche precocemente, entro 2 settimane dall'inizio, e a dosi variabili. I fattori di rischio identificati nei pazienti con eventi occlusivi arteriosi comprendono ipertensione (67%), ipercolesterolemia (59%) e cardiopatia non ischemica preesistente (43%). Nilotinib condivide un profilo di rischio cardiovascolare aumentato (arteriopatia periferica obliterante, eventi coronarici, ictus), legato a un effetto pro-aterogeno/metabolico associato anche a iperglicemia e dislipidemia: nel trial ENESTnd, a 5 anni di follow-up, gli eventi cardiovascolari complessivi (cardiopatia ischemica + eventi cerebrovascolari ischemici + arteriopatia periferica) sono stati circa il 7,5% con nilotinib 300 mg x2/die e circa il 13,4% con nilotinib 400 mg x2/die, contro circa il 2,1% con imatinib — un rischio dose- e tempo-dipendente, in ulteriore aumento con follow-up più lungo. La gestione trasversale prevede una valutazione del rischio cardiovascolare basale prima di iniziare la terapia, l'ottimizzazione aggressiva dei fattori di rischio modificabili durante il trattamento, la sorveglianza clinica per segni di ischemia e la sospensione immediata con valutazione specialistica urgente in caso di evento arterioso acuto.
+
+#### Punti chiave
+
+- Dasatinib: versamento pleurico (~24-33% tutti i gradi, G3-4 ~4-7%), tossicità non condivisa da imatinib/nilotinib; gestione graduata fino allo switch di TKI nelle forme severe/ricorrenti.
+- Ponatinib (PACE): eventi occlusivi arteriosi nel 26% (G3-4 14%, fatali 2%); nilotinib condivide un profilo di rischio cardiovascolare aumentato (ENESTnd a 5 anni: ~7,5-13,4% a seconda della dose, contro ~2,1% con imatinib) — valutazione del rischio CV basale prima di iniziare entrambi i farmaci.
 
 
 ## Follow-up
-- Obiettivi:
-- Tempistiche:
-- Esami utili:
-- Sorveglianza tossicità / recidiva:
+Il monitoraggio va calibrato sulla classe di farmaco in uso. È **pressorio** per tutti i farmaci anti-VEGF, TKI e anticorpi monoclonali, specie nelle prime settimane. È **cardiologico** (ECG e/o ecocardiogramma) per i MEK-inibitori (LVEF), per ribociclib (QTc), per osimertinib (QTc e LVEF) e per sunitinib (QTc). È **oftalmologico**, obbligatorio al basale e poi su comparsa di sintomi, per i MEK-inibitori (retinopatia). È **dermatologico** per i BRAF-inibitori in monoterapia (sorveglianza per carcinomi squamocellulari secondari) e per la classe anti-EGFR (rash). È **respiratorio/polmonare**, con soglia di sospetto bassa e imaging toracico precoce, per gli inibitori mTOR, per trastuzumab deruxtecan (il più critico per rischio di mortalità) e come warning di classe per gli inibitori CDK4/6. È **renale/urinario** (dipstick, UPCR) per l'intera classe anti-VEGF. È **metabolico** (glicemia) per alpelisib, per gli inibitori mTOR (glicemia e lipidi) e per enfortumab vedotin. È **ematologico** (emocromo periodico) per i PARP-inibitori, gli inibitori CDK4/6, sacituzumab govitecan e T-DM1. È infine **cardiovascolare globale** (fattori di rischio, sorveglianza per ischemia) per nilotinib e ponatinib.
 
 
 ## Punti ad alta resa per orale
-- 
-- 
-- 
-- 
-- 
+- Sospendere bevacizumab almeno 4 settimane (in pratica 6-8) prima di chirurgia elettiva maggiore; riprendere non prima di 28 giorni dopo, solo a ferita guarita.
+- HFSR da TKI (aree di pressione/frizione, ipercheratosica) va distinta dalla hand-foot syndrome da chemioterapia classica (diffusa, eritemato-edematosa).
+- Everolimus: collutorio di desametasone dal giorno 1 riduce la stomatite grado ≥2 dal 27,4% al 2,4% (trial SWISH).
+- Alpelisib: algoritmo di gestione dell'iperglicemia per soglie di FBG (160/250/500 mg/dL); metformina profilattica nei prediabetici.
+- BRAF-i in monoterapia → rischio di carcinomi squamocellulari secondari per attivazione paradossa della via MAPK; il MEK-i aggiunto in combinazione riduce drasticamente questo rischio.
+- MEK-inibitori → valutazione oftalmologica basale obbligatoria per il rischio di retinopatia sierosa (MEKAR).
+- CDK4/6-inibitori: il grado di neutropenia non predice il rischio infettivo (reversibile, citostatica, basso rischio di neutropenia febbrile); abemaciclib ha meno neutropenia ma più diarrea degli altri due.
+- Ribociclib: unico della classe con warning esplicito su QTc ed epatotossicità (ALT/AST G3-4 fino al 9,3%) — preferire un inibitore dell'aromatasi al tamoxifene come partner.
+- Trastuzumab deruxtecan: anche l'ILD di grado 1 richiede sospensione del farmaco, non solo osservazione — eccezione al principio generale di gestione delle tossicità.
+- Sacituzumab govitecan: boxed warning per tossicità severa negli omozigoti UGT1A1*28/*28.
+- Enfortumab vedotin: boxed warning per SJS/TEN.
+- Ponatinib: eventi occlusivi arteriosi nel 26% dei pazienti (trial PACE), anche precoci — valutazione del rischio cardiovascolare prima di iniziare.
 
 
 ## Errori da evitare
-- 
-- 
-- 
+- Applicare lo stesso schema di gestione delle tossicità a tutte le classi senza conoscere le eccezioni di rilievo (neutropenia da CDK4/6-i gestita con riduzione di dose, non interruzione; ILD da T-DXd sospesa già al grado 1).
+- Sospendere bevacizumab troppo a ridosso di un intervento chirurgico elettivo, sottostimandone l'emivita lunga.
+- Confondere la hand-foot skin reaction da TKI con la hand-foot syndrome da chemioterapia classica, che ha distribuzione e gestione diverse.
+- Non considerare l'ipomagnesiemia negli anti-EGFR monoclonali come causa di sintomi aspecifici (astenia, crampi, aritmie).
+- Attribuire la retinopatia da MEK-inibitori a una patologia oculare indipendente, senza una valutazione oftalmologica basale di confronto.
+- Considerare la neutropenia da CDK4/6-inibitori equivalente, per rischio infettivo, alla neutropenia da chemioterapia citotossica.
+- Non riconoscere la sindrome colinergica acuta da sacituzumab govitecan (diarrea/crampi/scialorrea peri-infusionali) come un evento gestibile con atropina, distinto dalla diarrea tardiva da mucosite.
+- Sottovalutare sintomi respiratori lievi (tosse secca, dispnea da sforzo) in un paziente in trastuzumab deruxtecan, ritardando l'imaging toracico.
+- Iniziare un BRAF-inibitore in monoterapia senza programmare una sorveglianza dermatologica regolare per il rischio di carcinomi squamocellulari secondari.
+
+
+## Farmaci e classi rilevanti
+- VEGFR-TKI multi-target: sunitinib, sorafenib, pazopanib, axitinib, cabozantinib, lenvatinib, regorafenib.
+- Anticorpi monoclonali anti-VEGF: bevacizumab, ramucirumab, aflibercept.
+- Inibitori mTOR: everolimus, temsirolimus.
+- Inibitori PI3K/AKT: alpelisib. PARP-inibitori: olaparib, niraparib, rucaparib, talazoparib.
+- Inibitori EGFR: erlotinib, gefitinib, osimertinib, afatinib (piccola molecola); cetuximab, panitumumab (anticorpi monoclonali).
+- Inibitori BRAF/MEK: vemurafenib, dabrafenib, encorafenib (BRAF); trametinib, cobimetinib, binimetinib (MEK).
+- Inibitori CDK4/6: palbociclib, ribociclib, abemaciclib.
+- Anticorpi coniugati a farmaco (ADC): trastuzumab deruxtecan, trastuzumab emtansine, sacituzumab govitecan, enfortumab vedotin.
+- Inibitori BCR-ABL: imatinib, dasatinib, nilotinib, ponatinib.
+- Per la mielotossicità dettagliata di PARP-inibitori e CDK4/6-inibitori, e per la gestione generale della tossicità ematopoietica (G-CSF, ESA, piastrinopenia chemioindotta), vedi la scheda trasversale "Tossicita_Ematologica.md".
 
 
 ## Fonti
-- AIOM:
-- ESMO:
-- Altre fonti:
+- Schede tecniche EMA/FDA e riassunti delle caratteristiche del prodotto (RCP) dei singoli farmaci citati.
+- Rugo HS et al. Prevention of everolimus-related stomatitis (SWISH trial), Lancet Oncology 2017.
+- González-Martín A et al. Niraparib in newly diagnosed advanced ovarian cancer (PRIMA/ENGOT-OV26/GOG-3012), NEJM 2019.
+- Litton JK et al. Talazoparib safety analysis (EMBRACA), The Oncologist 2020.
+- Finn RS et al. Palbociclib safety analysis (PALOMA-2), The Oncologist 2019; PALOMA-3 safety data.
+- Kisqali (ribociclib) e Verzenios (abemaciclib) FDA/EMA prescribing information (MONALEESA-2, MONARCH-2/3, NATALEE safety data).
+- Pooled analysis, ILD/pneumonite da trastuzumab deruxtecan (9 studi), 2022; DESTINY-Breast03 safety update.
+- Bardia A et al. Sacituzumab govitecan in metastatic triple-negative breast cancer (ASCENT), safety analysis, npj Breast Cancer 2022.
+- Padcev (enfortumab vedotin) prescribing information (EV-301, EV-302 safety data), inclusi boxed warning FDA.
+- Cortes JE et al. Ponatinib safety analysis (PACE), scheda tecnica Iclusig.
+- Consensus Delphi su gestione di iperglicemia e rash da alpelisib, npj Breast Cancer 2024.
+- Review su meccanismi e gestione dell'ipertensione da VEGFR-TKI, Archives of Toxicology 2024.
+- Review su proteinuria da VEGFR-TKI, International Journal of Urology 2024.
+- Review su MEK inhibitor-associated retinopathy (MEKAR), The Oncologist 2024.
+- Studio retrospettivo su pirexia da dabrafenib+trametinib, Supportive Care in Cancer 2026.
+- Scappaticci FA et al. Analisi pooled degli eventi tromboembolici arteriosi/venosi con bevacizumab, J Natl Cancer Inst 2007; Hurwitz H et al. AVF2107, NEJM 2004.
+- Verma S et al. Trastuzumab emtansine (EMILIA), NEJM 2012, dati di sicurezza su trombocitopenia ed epatotossicità.
+- Hochhaus A et al. Nilotinib vs imatinib, follow-up a 5 anni (ENESTnd), Leukemia 2016, dati di sicurezza cardiovascolare.
+- Cortes JE et al. Dasatinib, follow-up a 5 anni (DASISION), J Clin Oncol 2016, incidenza di versamento pleurico.
+- Chapman PB et al. Vemurafenib (BRIM3), NEJM 2011; Hauschild A et al. Dabrafenib (BREAK-3), Lancet 2012 — incidenza di cSCC/cheratoacantomi in monoterapia.
+- Sequist LV et al. Afatinib (LUX-Lung 3/6), JCO 2013, dati di sicurezza su diarrea e paronichia.
+- Soria JC et al. Osimertinib (FLAURA), NEJM 2018, dati di sicurezza su ILD e tossicità cardiaca.
+- Baselga J et al. Everolimus + exemestane (BOLERO-2), NEJM 2012, dati di sicurezza metabolica ed ematologica.
+
+**Nota metodologica sui range percentuali**: per numerose tossicità di questa scheda non esiste un dato di incidenza unico e universalmente concordato — i valori riportati sono range medi indicativi, ricavati confrontando più fonti (trial registrativi, schede tecniche EMA/FDA, review di classe) e vanno intesi come ordine di grandezza utile ai fini dello studio, non come dato di precisione regolatoria; la variabilità reale tra molecole, dosi, linee di trattamento e popolazioni studiate può essere sostanziale.
 
 
 ## Note personali
-- 
+-
