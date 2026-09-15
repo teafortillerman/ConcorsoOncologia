@@ -298,12 +298,11 @@ Nelle donne sane portatrici di mutazione BRCA, la sorveglianza prevede RM mammar
 
 L'obiettivo in questa fase cambia natura: la malattia non è guaribile, ma sempre più cronicizzabile, e questo richiede un approccio multidisciplinare con cure di supporto integrate fin dall'inizio, non riservate alla fase terminale. Un passaggio da non saltare mai: la ri-biopsia alla prima diagnosi di malattia metastatica è raccomandata, perché lo stato di HR e HER2 può cambiare rispetto al tumore primitivo — nel 20% dei casi per HR, nel 10% per HER2 — con conseguenze dirette sulla scelta terapeutica.
 
-```button
-Algoritmo terapeutico completo (M1) e stato di rimborsabilità AIFA
-../Algoritmi/Mammella-Metastatico-AIFA.html
-```
-
 ### HR+/HER2-negativo
+
+```flowchart
+mammella-avanzato-hr
+```
 
 Nella malattia HR+/HER2- la prima linea si sceglie in base alla sensibilità endocrina. Nella malattia endocrino-sensibile, lo standard è un inibitore di CDK4/6 (palbociclib, ribociclib o abemaciclib) associato a un inibitore dell'aromatasi; nella malattia endocrino-resistente, l'inibitore di CDK4/6 si associa invece a fulvestrant. Un caso particolare è la paziente con mutazione PIK3CA e resistenza endocrina precoce: qui lo studio INAVO120 supporta la combinazione fulvestrant+palbociclib+inavolisib. In presenza di crisi viscerale, che richiede una risposta rapida, la scelta ricade sulla chemioterapia (tipicamente paclitaxel+bevacizumab).
 
@@ -326,6 +325,10 @@ Per orientarsi nella definizione di resistenza endocrina, i criteri ABC5 la dist
 
 ### HER2-positivo
 
+```flowchart
+mammella-avanzato-her2
+```
+
 Nella malattia HER2-positiva metastatica lo standard di prima linea resta, da oltre un decennio, il doppio blocco anti-HER2 associato a un taxano: docetaxel, trastuzumab e pertuzumab. Questa combinazione è quella testata nello studio registrativo **CLEOPATRA**, il cui follow-up più maturo (analisi *end-of-study*, pubblicata su *Lancet Oncology* nel 2020, con oltre 8 anni di osservazione) ha confermato un beneficio di sopravvivenza globale mediana di **57,1 mesi nel braccio con pertuzumab contro 40,8 mesi nel braccio placebo** (HR 0,69; IC95% 0,58–0,82) — un vantaggio assoluto di oltre 16 mesi che si è mantenuto stabile nel tempo, non eroso dal follow-up più lungo.
 
 > ++Verifica in letteratura:++ il dato "56,5 vs 40,8 mesi" della scheda precedente veniva da un'analisi ad interim; il numero definitivo è 57,1 mesi. [ASCO Post](https://ascopost.com/news/march-2020/end-of-study-results-from-cleopatra/), [PubMed](https://pubmed.ncbi.nlm.nih.gov/32171426/).
@@ -347,6 +350,10 @@ Per le pazienti con metastasi encefaliche attive, o che progrediscono anche a li
 
 
 ### Triplo negativo (TNBC)
+
+```flowchart
+mammella-avanzato-tn
+```
 
 Nella malattia triplo negativa metastatica, la prima linea dipende dallo stato di PD-L1 e dallo stato BRCA. Se PD-L1 è positivo (con i cut-off specifici per test: SP142 per atezolizumab, CPS≥10 con 22C3 per pembrolizumab), l'immunoterapia associata a chemioterapia è lo standard: atezolizumab con nab-paclitaxel (studio IMpassion130) oppure pembrolizumab con chemioterapia (studio KEYNOTE-355). Nelle pazienti con mutazione germinale BRCA1/2, l'opzione preferenziale sono i PARP-inibitori (olaparib o talazoparib) o la chemioterapia a base di platino. Quando PD-L1 è negativo e BRCA è wild-type, la scelta ricade sulla chemioterapia classica (taxano, con o senza carboplatino, con o senza bevacizumab).
 

@@ -1,0 +1,62 @@
+{
+  "id": "mammella-avanzato-hr",
+  "title": "HR+/HER2- — algoritmo terapeutico (M1)",
+  "subtitle": "Prima linea e linee successive, con stato di rimborsabilità AIFA",
+  "root": { "text": "Carcinoma mammario metastatico HR+/HER2-" },
+  "gate": { "text": "Ri-biopsia primitivo/metastasi", "detail": "Rivalutazione HR, HER2, PD-L1, gBRCA, mutazioni somatiche. Raccomandata alla prima diagnosi di malattia metastatica (variazione HR/HER2 nel 20%/10% dei casi)." },
+  "branches": [
+    {
+      "id": "HR",
+      "label": "HR+/HER2-",
+      "rankLabels": { "2": "Prima linea", "4": "Seconda linea — guidata da biopsia tissutale/liquida", "5": "Terza linea e oltre" },
+      "nodes": [
+        { "id": "HR_line1", "type": "criteria", "text": "Endocrino-sensibile? Crisi viscerale? PIK3CA-mut con resistenza precoce?" },
+        { "id": "HR_ET_CDK", "type": "outcome", "text": "AI + CDK4/6i",
+          "detail": "Endocrino-sensibile — ribociclib è finora l'unico CDK4/6i con OS significativa vs AI in monoterapia (MONALEESA-2: 63,9 vs 51,4 mesi, HR 0,76); palbociclib/abemaciclib non hanno raggiunto la significatività OS (PALOMA-2, MONARCH-3). In resistenza primaria: fulvestrant + CDK4/6i.",
+          "aifa": "reimbursed" },
+        { "id": "HR_inavo", "type": "outcome", "text": "Fulvestrant + Palbociclib + Inavolisib",
+          "detail": "PIK3CA-mut con resistenza endocrina precoce (INAVO120). Rimborsato AIFA dall'ottobre 2025.",
+          "aifa": "reimbursed" },
+        { "id": "HR_CT", "type": "outcome", "text": "Chemioterapia ± bevacizumab",
+          "detail": "Crisi viscerale / rapido bisogno di risposta (tipicamente paclitaxel+bevacizumab).",
+          "aifa": "na" },
+        { "id": "HR_line2", "type": "milestone", "text": "Progressione dopo CDK4/6i" },
+        { "id": "HR_elacestrant", "type": "outcome", "text": "Elacestrant",
+          "detail": "Mutazione ESR1, dopo progressione ad almeno una linea di ET con CDK4/6i. Rimborsato da AIFA.",
+          "aifa": "reimbursed" },
+        { "id": "HR_imlunestrant", "type": "outcome", "text": "Imlunestrant",
+          "detail": "Mutazione ESR1, alternativa a elacestrant. Approvato FDA ma non ancora autorizzato/rimborsato in Italia.",
+          "aifa": "not_reimbursed" },
+        { "id": "HR_PIK3CA_capi", "type": "outcome", "text": "Capivasertib + Fulvestrant",
+          "detail": "PIK3CA/AKT1/PTEN mutati, dopo progressione a un regime endocrino. Rimborsato da AIFA dall'ottobre 2025.",
+          "aifa": "reimbursed" },
+        { "id": "HR_PIK3CA_alpe", "type": "outcome", "text": "Alpelisib + Fulvestrant",
+          "detail": "PIK3CA mutati, alternativa a capivasertib. Rimborsato da AIFA fin dalla Determina 1195/2021 (rinnovata 2025) — NON off-label.",
+          "aifa": "reimbursed" },
+        { "id": "HR_BRCA", "type": "outcome", "text": "PARP-inibitori (Olaparib/Talazoparib)",
+          "detail": "gBRCA1/2+, HER2-negativo indipendentemente dallo stato HR (richiede pregressa ET o non eleggibilità).",
+          "aifa": "reimbursed" },
+        { "id": "HR_evero", "type": "outcome", "text": "Everolimus + Exemestane",
+          "detail": "Nessuna alterazione target (o ET di seconda linea) — BOLERO-2.",
+          "aifa": "reimbursed" },
+        { "id": "HR_HER2low", "type": "outcome", "text": "Trastuzumab deruxtecan (T-DXd)",
+          "detail": "HER2-low, dopo almeno una linea di CT per malattia metastatica. Rimborsato da AIFA anche nell'HR+ dal gennaio 2024. L'estensione EMA 2025 a HER2-ultralow e all'uso dopo la sola ET non è ancora recepita da un registro italiano dedicato.",
+          "aifa": "reimbursed" },
+        { "id": "HR_saci", "type": "outcome", "text": "Sacituzumab govitecan",
+          "detail": "Linee successive, dopo ET e almeno altre due terapie sistemiche (TROPiCS-02). Rimborsato da AIFA anche in questa popolazione dal 20.02.2025.",
+          "aifa": "reimbursed" },
+        { "id": "HR_dato", "type": "outcome", "text": "Datopotamab deruxtecan",
+          "detail": "Alternativa ad altri ADC in linee successive. Autorizzato EMA (aprile 2025), non ancora rimborsato in Italia.",
+          "aifa": "not_reimbursed" }
+      ],
+      "edges": [
+        ["HR", "HR_line1"], ["HR_line1", "HR_ET_CDK"], ["HR_line1", "HR_inavo"], ["HR_line1", "HR_CT"],
+        ["HR_ET_CDK", "HR_line2"],
+        ["HR_line2", "HR_elacestrant"], ["HR_line2", "HR_imlunestrant"],
+        ["HR_line2", "HR_PIK3CA_capi"], ["HR_line2", "HR_PIK3CA_alpe"],
+        ["HR_line2", "HR_BRCA"], ["HR_line2", "HR_evero"], ["HR_line2", "HR_HER2low"],
+        ["HR_HER2low", "HR_saci"], ["HR_HER2low", "HR_dato"]
+      ]
+    }
+  ]
+}

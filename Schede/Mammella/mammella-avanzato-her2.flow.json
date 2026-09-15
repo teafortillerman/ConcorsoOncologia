@@ -1,0 +1,39 @@
+{
+  "id": "mammella-avanzato-her2",
+  "title": "HER2+ — algoritmo terapeutico (M1)",
+  "subtitle": "Prima linea e linee successive, con stato di rimborsabilità AIFA",
+  "root": { "text": "Carcinoma mammario metastatico HER2-positivo" },
+  "gate": { "text": "Ri-biopsia primitivo/metastasi", "detail": "Rivalutazione HR, HER2, PD-L1, gBRCA, mutazioni somatiche. Raccomandata alla prima diagnosi di malattia metastatica (variazione HR/HER2 nel 20%/10% dei casi)." },
+  "branches": [
+    {
+      "id": "H2",
+      "label": "HER2+",
+      "rankLabels": { "1": "Prima linea", "3": "Seconda linea", "4": "Terza linea e oltre" },
+      "nodes": [
+        { "id": "H2_line1", "type": "outcome", "text": "Docetaxel + Trastuzumab + Pertuzumab",
+          "detail": "1ª linea standard (CLEOPATRA) da oltre un decennio. OS mediana end-of-study 57,1 vs 40,8 mesi (HR 0,69), beneficio stabile oltre 8 anni di follow-up.",
+          "aifa": "reimbursed" },
+        { "id": "H2_line2", "type": "milestone", "text": "Progressione" },
+        { "id": "H2_TDXd", "type": "outcome", "text": "Trastuzumab deruxtecan (T-DXd)",
+          "detail": "2ª linea standard, preferito a T-DM1 (DESTINY-Breast03: OS 52,6 vs 42,7 mesi, HR 0,73). Attenzione a ILD/polmonite: incidenza cumulativa 15-17% con follow-up lungo — dispnea/tosse di nuova insorgenza impongono sospensione e work-up immediati.",
+          "aifa": "reimbursed" },
+        { "id": "H2_BM", "type": "criteria", "text": "Metastasi encefaliche attive o progressione extracranica?" },
+        { "id": "H2_tuca", "type": "outcome", "text": "Tucatinib + Trastuzumab + Capecitabina",
+          "detail": "HER2CLIMB — unico regime con dati prospettici dedicati alle metastasi encefaliche attive. Approvato EMA 2021; verificare lo stato di rimborso AIFA aggiornato.",
+          "aifa": "unknown" },
+        { "id": "H2_TDM1", "type": "outcome", "text": "T-DM1",
+          "detail": "Se non utilizzato prima.",
+          "aifa": "reimbursed" },
+        { "id": "H2_later", "type": "outcome", "text": "T-DM1, lapatinib+capecitabina, CT sequenziale",
+          "detail": "Linee successive, secondo performance status e trattamenti precedenti.",
+          "aifa": "reimbursed" }
+      ],
+      "edges": [
+        ["H2", "H2_line1"], ["H2_line1", "H2_line2"],
+        ["H2_line2", "H2_TDXd"], ["H2_line2", "H2_BM"],
+        ["H2_BM", "H2_tuca"], ["H2_BM", "H2_TDM1"],
+        ["H2_TDXd", "H2_later"]
+      ]
+    }
+  ]
+}

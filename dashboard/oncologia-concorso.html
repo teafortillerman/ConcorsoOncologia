@@ -663,30 +663,47 @@ button { font-family: inherit; cursor: pointer; }
 }
 @media (max-width: 640px) { #tt-portal { max-width: calc(100vw - 32px); } }
 
-/* FLOW DIAGRAM (custom interactive flowchart component) */
+/* FLOW DIAGRAM (interactive drill-down navigator, non-Mermaid) */
 .flow-diagram {
   background: var(--color-surface-2);
   border: 1px solid var(--color-border);
-  border-radius: 14px;
-  padding: 22px 22px 26px;
+  border-radius: 16px;
+  padding: 22px 22px 28px;
   margin: 6px 0 26px;
-  overflow-x: auto;
   box-shadow: var(--shadow-sm);
 }
+.flow-diagram-title {
+  font-family: var(--font-display); font-weight: 600; font-size: 1rem;
+  margin: 0 0 4px; color: var(--color-text);
+}
+.flow-diagram-sub { font-size: 0.8rem; color: var(--color-text-muted); margin: 0 0 18px; }
+
 .fd-legend {
   display: flex; flex-wrap: wrap; gap: 8px 18px;
   font-size: 0.72rem; color: var(--color-text-muted);
-  margin-bottom: 20px; padding-bottom: 14px; border-bottom: 1px solid var(--color-divider);
+  margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid var(--color-divider);
 }
 .fd-legend-item { display: flex; align-items: center; gap: 6px; white-space: nowrap; }
 .fd-legend-swatch { width: 11px; height: 11px; border-radius: 3px; flex-shrink: 0; }
 .fd-legend-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; border: 1.5px solid rgba(0,0,0,0.15); }
 
-.fd-canvas { position: relative; min-width: fit-content; }
-.fd-canvas > svg.fd-edges { position: absolute; top: 0; left: 0; overflow: visible; pointer-events: none; }
-.fd-canvas > svg.fd-edges path { fill: none; stroke: var(--flow-line); stroke-width: 1.6; }
-.fd-canvas > svg.fd-edges polygon { fill: var(--flow-line); }
-.fd-trunk { display: flex; flex-direction: column; align-items: center; min-width: fit-content; position: relative; }
+/* breadcrumb trail — shows the path taken through the algorithm so far */
+.fw-crumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 2px; margin-bottom: 18px; }
+.fw-crumb-sep { color: var(--color-text-faint); font-size: 0.76rem; padding: 0 2px; }
+.fw-crumb-btn {
+  border: none; background: none; padding: 4px 9px; border-radius: 7px;
+  color: var(--color-text-muted); font-size: 0.76rem; font-family: inherit; cursor: pointer;
+  max-width: 220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  transition: background 0.12s, color 0.12s;
+}
+.fw-crumb-btn:hover:not(:disabled) { background: var(--color-surface-offset); color: var(--color-text); }
+.fw-crumb-btn.fw-crumb-current { color: var(--color-primary); font-weight: 700; cursor: default; }
+
+.fw-chain { display: flex; flex-direction: column; align-items: center; }
+.fw-chain > .fd-node { width: 100%; max-width: 560px; }
+.fw-options { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 22px; }
+.fw-options > .fd-node { flex: 1 1 250px; min-width: 220px; max-width: 320px; }
+
 .fd-arrow-down { width: 2px; height: 20px; background: var(--flow-line); position: relative; flex-shrink: 0; }
 .fd-arrow-down::after {
   content: ""; position: absolute; bottom: -1px; left: 50%; transform: translateX(-50%);
@@ -694,46 +711,43 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 .fd-node {
-  border-radius: 10px; padding: 10px 14px; font-size: 0.82rem; font-weight: 600;
-  text-align: center; line-height: 1.35; position: relative;
+  border-radius: 11px; padding: 11px 15px; font-size: 0.83rem; font-weight: 600;
+  text-align: center; line-height: 1.4; position: relative;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
 }
-.fd-node.fd-root { background: var(--flow-root-bg); color: var(--flow-root-text); max-width: 380px; }
-.fd-node.fd-gate { background: var(--flow-criteria-bg); border: 1px solid var(--flow-criteria-border); color: var(--flow-criteria-text); max-width: 380px; }
-
-.fd-branches { display: flex; gap: 22px; align-items: flex-start; justify-content: center; margin-top: 0; }
-.fd-branch { flex: 1 1 250px; min-width: 230px; max-width: 380px; display: flex; flex-direction: column; position: relative; }
-.fd-branch-header {
-  cursor: pointer; user-select: none; display: flex; align-items: center; gap: 8px;
-  background: var(--flow-criteria-bg); border: 1px solid var(--flow-criteria-border); color: var(--flow-criteria-text);
-  border-radius: 10px; padding: 10px 14px; font-weight: 700; font-size: 0.85rem;
-}
-.fd-branch-header .fd-chev { margin-left: auto; width: 13px; height: 13px; transition: transform 0.18s ease; flex-shrink: 0; }
-.fd-branch-header.collapsed .fd-chev { transform: rotate(-90deg); }
-.fd-branch-summary { display: none; font-size: 0.72rem; color: var(--color-text-faint); text-align: center; padding: 10px 2px 0; }
-.fd-branch-body { position: relative; padding-top: 20px; }
-.fd-branch.collapsed .fd-branch-body { display: none; }
-.fd-branch.collapsed .fd-branch-summary { display: block; }
-
-.fd-rank { display: flex; flex-direction: column; align-items: center; position: relative; z-index: 1; margin-bottom: 26px; }
-.fd-rank:last-child { margin-bottom: 4px; }
-.fd-rank-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; width: 100%; }
-
-.fd-node.fd-criteria { background: var(--flow-criteria-bg); border: 1px solid var(--flow-criteria-border); color: var(--flow-criteria-text); width: 100%; }
-.fd-node.fd-outcome { background: var(--flow-outcome-bg); color: var(--flow-outcome-text); text-align: left; width: 100%; padding-right: 30px; }
+.fd-node.fd-root { background: var(--flow-root-bg); color: var(--flow-root-text); font-size: 0.88rem; letter-spacing: 0.01em; }
+.fd-node.fd-gate { background: var(--flow-criteria-bg); border: 1.5px solid var(--flow-criteria-border); color: var(--flow-criteria-text); }
+.fd-node.fd-criteria { background: var(--flow-criteria-bg); border: 1.5px solid var(--flow-criteria-border); color: var(--flow-criteria-text); }
+.fd-node.fd-criteria .fd-node-text, .fd-node.fd-gate .fd-node-text { font-style: italic; font-weight: 600; }
+.fd-node.fd-outcome { background: var(--flow-outcome-bg); color: var(--flow-outcome-text); text-align: left; }
 .fd-node.fd-milestone {
-  background: transparent; border: 1.5px dashed var(--flow-milestone-border); color: var(--flow-milestone-text);
-  font-weight: 600; width: auto; padding: 6px 16px;
+  background: color-mix(in srgb, var(--flow-milestone-border) 9%, transparent);
+  border: 1.5px dashed var(--flow-milestone-border); color: var(--flow-milestone-text);
+  font-weight: 600; padding: 7px 16px; box-shadow: none;
 }
 .fd-milestone-sub { font-size: 0.68rem; font-weight: 400; color: var(--flow-milestone-text); margin-top: 3px; }
 .fd-node.fd-withdrawn { box-shadow: 0 0 0 2px var(--flow-badge-red); }
+.fd-node.fd-clickable { cursor: pointer; }
+.fd-node.fd-clickable:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
 
-.fd-badge {
-  position: absolute; top: 11px; right: 11px; width: 10px; height: 10px; border-radius: 50%;
-  border: 2px solid rgba(255,255,255,0.5);
+.fd-aifa-chip {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.01em;
+  padding: 3px 9px 3px 7px; border-radius: 999px; margin-top: 8px; color: #fff;
 }
-.fd-badge.reimbursed { background: var(--flow-badge-green); }
-.fd-badge.not_reimbursed { background: var(--flow-badge-red); }
-.fd-badge.unknown { background: var(--flow-badge-grey); }
+.fd-aifa-chip::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.85); flex-shrink: 0; }
+.fd-aifa-chip.fd-aifa-reimbursed { background: var(--flow-badge-green); }
+.fd-aifa-chip.fd-aifa-not_reimbursed { background: var(--flow-badge-red); }
+.fd-aifa-chip.fd-aifa-unknown { background: var(--flow-badge-grey); }
+
+.fd-nav-hint {
+  margin: 8px -14px -10px; padding: 6px 14px; font-size: 0.7rem; font-weight: 600;
+  display: flex; align-items: center; justify-content: flex-end; gap: 4px; border-radius: 0 0 9px 9px;
+}
+.fd-node.fd-criteria .fd-nav-hint, .fd-node.fd-gate .fd-nav-hint { background: var(--flow-criteria-strip); color: var(--flow-criteria-text); }
+.fd-node.fd-outcome .fd-nav-hint { background: rgba(255,255,255,0.14); color: var(--flow-outcome-text); }
+.fd-nav-hint svg { width: 13px; height: 13px; }
 
 .fd-info-strip {
   margin: 8px -14px -10px; padding: 5px 14px; font-size: 0.68rem; font-weight: 500;
@@ -749,7 +763,7 @@ button { font-family: inherit; cursor: pointer; }
   display: none; font-size: 0.74rem; font-weight: 400; line-height: 1.5; text-align: left;
   margin: 8px -14px -10px; padding: 10px 14px; border-radius: 0 0 9px 9px;
 }
-.fd-node.fd-criteria .fd-detail, .fd-node.fd-gate .fd-detail { background: var(--flow-criteria-strip); color: var(--flow-criteria-text); }
+.fd-node.fd-criteria .fd-detail, .fd-node.fd-gate .fd-detail, .fd-node.fd-root .fd-detail { background: var(--flow-criteria-strip); color: var(--flow-criteria-text); }
 .fd-node.fd-outcome .fd-detail { background: rgba(255,255,255,0.14); color: var(--flow-outcome-text); }
 .fd-node.fd-open .fd-detail { display: block; }
 .fd-node.fd-open .fd-info-strip { display: none; }
@@ -825,13 +839,38 @@ button { font-family: inherit; cursor: pointer; }
 .cp-item-sub { font-size: 0.74rem; color: var(--color-text-faint); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .cp-empty { padding: 30px 16px; text-align: center; color: var(--color-text-faint); font-size: 0.86rem; }
 
+.back-to-top {
+  position: fixed; right: 26px; bottom: 26px; z-index: 40;
+  width: 42px; height: 42px; border-radius: 50%;
+  background: var(--color-primary); color: var(--color-text-inverse); border: none;
+  box-shadow: var(--shadow-md);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; visibility: hidden; transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s, filter 0.15s;
+}
+.back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+.back-to-top:hover { filter: brightness(1.1); }
+.back-to-top svg { width: 18px; height: 18px; }
+@media (max-width: 900px) { .back-to-top { right: 16px; bottom: 16px; } }
+
 @media print {
-  .sidebar, .topbar, .toc, .reader-nav, .related-box, .reading-progress { display: none !important; }
+  .sidebar, .topbar, .toc, .reader-nav, .related-box, .reading-progress, .back-to-top { display: none !important; }
   .app { display: block; }
   .content { padding: 0; max-width: 100%; }
   .md-content details.key-points .kp-body { display: block !important; padding-top: 11px; }
   .md-content details.key-points summary .kp-chev { display: none; }
 }
+
+/* MOBILE NAV (hamburger + off-canvas drawer, <900px) */
+.topbar-left { display: flex; align-items: center; gap: 10px; min-width: 0; flex: 1; }
+.icon-btn.mobile-only { display: none; flex-shrink: 0; }
+.mobile-nav-backdrop {
+  display: none;
+  position: fixed; inset: 0;
+  background: rgba(20,17,12,0.5);
+  z-index: 54;
+}
+.mobile-nav-backdrop.open { display: block; animation: fadeIn 0.15s ease; }
 
 @media (max-width: 980px) {
   .reader-layout { grid-template-columns: 1fr; }
@@ -839,10 +878,29 @@ button { font-family: inherit; cursor: pointer; }
 }
 @media (max-width: 900px) {
   .app { grid-template-columns: 1fr; }
-  .sidebar { position: relative; height: auto; }
+  .app.sidebar-collapsed { grid-template-columns: 1fr; }
+  .icon-btn.mobile-only { display: flex; }
+  .sidebar-collapse-btn { display: none; }
+  .sidebar {
+    position: fixed;
+    top: 0; left: 0;
+    height: 100vh;
+    width: min(300px, 82vw);
+    z-index: 55;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+    box-shadow: var(--shadow-lg);
+  }
+  .sidebar.mobile-open { transform: translateX(0); }
   .content { padding: 22px; }
-  .topbar { padding: 14px 20px; }
+  .topbar { padding: 14px 16px; gap: 10px; }
+  .crumbs { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+  .stat-pills { display: none; }
   .overview-hero { flex-direction: column; }
+}
+@media (max-width: 640px) {
+  .cp-overlay { padding: 0 16px; align-items: center; }
+  .cp-modal { max-height: 80vh; }
 }
 </style>
 </head>
@@ -891,7 +949,12 @@ button { font-family: inherit; cursor: pointer; }
 
   <main class="main">
     <div class="topbar">
-      <div class="crumbs" id="crumbs">Panoramica generale</div>
+      <div class="topbar-left">
+        <button class="icon-btn mobile-only" id="mobileNavBtn" aria-label="Apri menu" title="Apri menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <div class="crumbs" id="crumbs">Panoramica generale</div>
+      </div>
       <div class="topbar-actions">
         <div class="stat-pills" id="statPills"></div>
         <button class="icon-btn" id="printBtn" title="Stampa / esporta PDF">
@@ -903,6 +966,12 @@ button { font-family: inherit; cursor: pointer; }
   </main>
 
 </div>
+
+<div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+
+<button class="back-to-top" id="backToTop" aria-label="Torna in cima">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
 
 <div class="cp-overlay" id="cpOverlay">
   <div class="cp-modal">
@@ -1082,6 +1151,8 @@ function markdownToHtml(md) {
   let tableBuf = [];
   const toc = [];
   const slugCount = {};
+  // la prima riga "# Titolo" duplica l'h1 già mostrato nell'intestazione della scheda: si salta.
+  let sawTitle = false;
   // "#### Punti chiave" apre un riquadro <details> a scomparsa invece di un titolo + lista semplice:
   // il contenuto successivo (di norma un elenco puntato) viene dirottato in kpBuf finché non
   // arriva la prossima intestazione (di qualunque livello), un separatore --- o la fine del file.
@@ -1174,7 +1245,12 @@ function markdownToHtml(md) {
       append(`<h2 id="${id}">${inlineFormat(text)}</h2>`);
       continue;
     }
-    if (line.startsWith("# "))   { closeKeyPoints(); closeList(); append(`<h1>${inlineFormat(line.slice(2))}</h1>`); continue; }
+    if (line.startsWith("# ")) {
+      closeKeyPoints(); closeList();
+      if (!sawTitle && !html) { sawTitle = true; continue; }
+      append(`<h1>${inlineFormat(line.slice(2))}</h1>`);
+      continue;
+    }
     if (line.startsWith("> ")) { closeList(); append(`<blockquote>${inlineFormat(line.slice(2))}</blockquote>`); continue; }
     if (/^-\s|^\*\s/.test(line)) {
       if (!inList) { append("<ul>"); inList = true; }
@@ -1265,14 +1341,18 @@ async function renderMermaid() {
   }
 }
 
-/* ---------- interactive flow diagrams (custom, non-Mermaid) ---------- */
+/* ---------- interactive flow diagrams: drill-down navigator (non-Mermaid) ----------
+   Ogni algoritmo si mostra un passaggio alla volta: nodo corrente + opzioni cliccabili.
+   Cliccando un'opzione con figli si passa allo schermo successivo (quello precedente
+   sparisce); una breadcrumb in alto permette di tornare a un passaggio precedente.
+   Nessun disegno dinamico di linee/SVG: solo layout CSS normale, quindi non ci sono
+   problemi di misura/zoom cross-browser. */
 const flowCache = {};
-const flowInstances = [];
 
 const AIFA_LABEL = {
-  reimbursed: "Rimborsata/approvata AIFA",
-  not_reimbursed: "Non rimborsata AIFA / off-label",
-  unknown: "Stato di rimborso AIFA da verificare",
+  reimbursed: "Rimborsata AIFA",
+  not_reimbursed: "Non rimborsata AIFA",
+  unknown: "Da verificare",
 };
 
 function flowJsonUrl(item, flowId) {
@@ -1299,118 +1379,97 @@ async function renderFlowDiagrams(item) {
   }
 }
 
-function flowNodeHtml(node) {
+/* Unisce root + gate + etichette di ramo + nodi reali in un unico grafo ad albero:
+   ogni nodo ha al più un genitore, il che permette di derivare la breadcrumb
+   semplicemente risalendo i puntatori al genitore. */
+function buildFlowGraph(data) {
+  const nodesById = {};
+  const childrenById = {};
+  const parentById = {};
+
+  const addNode = (node) => { nodesById[node.id] = node; };
+  const addEdge = (fromId, toId) => {
+    (childrenById[fromId] = childrenById[fromId] || []).push(toId);
+    parentById[toId] = fromId;
+  };
+
+  addNode({ id: "__root", type: "root", text: data.root.text });
+  let tail = "__root";
+  if (data.gate) {
+    addNode({ id: "__gate", type: "gate", text: data.gate.text, detail: data.gate.detail });
+    addEdge("__root", "__gate");
+    tail = "__gate";
+  }
+  data.branches.forEach(branch => {
+    addNode({ id: branch.id, type: "gate", text: branch.label });
+    addEdge(tail, branch.id);
+    branch.nodes.forEach(addNode);
+    branch.edges.forEach(([from, to]) => addEdge(from, to));
+  });
+
+  return { nodesById, childrenById, parentById };
+}
+
+/* Segue la catena di nodi "a scelta obbligata" (un solo figlio) finché non trova
+   un vero bivio (2+ figli) o un vicolo cieco (0 figli): quella catena si mostra
+   tutta assieme come contesto, e i suoi figli diventano le opzioni cliccabili. */
+function flowScreenChain(graph, startId) {
+  const chain = [startId];
+  let cur = startId;
+  while ((graph.childrenById[cur] || []).length === 1) {
+    cur = graph.childrenById[cur][0];
+    chain.push(cur);
+  }
+  return { chain, options: graph.childrenById[cur] || [] };
+}
+
+function flowAncestors(graph, id) {
+  const out = [];
+  let p = graph.parentById[id];
+  while (p) { out.unshift(p); p = graph.parentById[p]; }
+  return out;
+}
+
+/* mode: "chain" (contesto, sempre espanso) | "branch" (porta a un altro schermo) | "leaf" (vicolo cieco, mostra dettagli al tocco) */
+function flowNodeCardHtml(node, mode) {
   if (node.type === "milestone") {
     return `<div class="fd-node fd-milestone" data-id="${escapeHtml(node.id)}">
       <div class="fd-node-text">${escapeHtml(node.text)}</div>
       ${node.detail ? `<div class="fd-milestone-sub">${escapeHtml(node.detail)}</div>` : ""}
     </div>`;
   }
-  const typeClass = node.type === "criteria" ? "fd-criteria" : "fd-outcome";
+  const typeClass = node.type === "criteria" ? "fd-criteria" : node.type === "gate" ? "fd-gate" : node.type === "root" ? "fd-root" : "fd-outcome";
   const withdrawnClass = node.withdrawn ? "fd-withdrawn" : "";
-  const badge = (node.type === "outcome" && node.aifa && node.aifa !== "na")
-    ? `<span class="fd-badge ${escapeHtml(node.aifa)}" title="${escapeHtml(AIFA_LABEL[node.aifa] || "")}"></span>`
+  const chip = (node.type === "outcome" && node.aifa && node.aifa !== "na")
+    ? `<div class="fd-aifa-chip fd-aifa-${escapeHtml(node.aifa)}">${escapeHtml(AIFA_LABEL[node.aifa] || "")}</div>`
     : "";
   const withdrawnTag = node.withdrawn ? `<div class="fd-withdrawn-tag">⛔ Indicazione ritirata</div>` : "";
-  const info = node.detail
-    ? `<div class="fd-info-strip" data-role="info-toggle"><span class="fd-i-icon">i</span><span>dettagli</span></div><div class="fd-detail">${escapeHtml(node.detail)}</div>`
-    : "";
-  return `<div class="fd-node ${typeClass} ${withdrawnClass}" data-id="${escapeHtml(node.id)}">${badge}<div class="fd-node-text">${escapeHtml(node.text)}</div>${withdrawnTag}${info}</div>`;
-}
 
-function computeFlowRanks(headerId, nodes, edges) {
-  const rank = { [headerId]: 0 };
-  let changed = true, guard = 0;
-  while (changed && guard < nodes.length + 3) {
-    changed = false; guard++;
-    edges.forEach(([u, v]) => {
-      if (rank[u] === undefined) return;
-      const candidate = rank[u] + 1;
-      if (rank[v] === undefined || candidate > rank[v]) { rank[v] = candidate; changed = true; }
-    });
+  let extraClass = "", tail = "";
+  if (mode === "chain") {
+    extraClass = "fd-open";
+    tail = node.detail ? `<div class="fd-detail" style="display:block">${escapeHtml(node.detail)}</div>` : "";
+  } else if (mode === "branch") {
+    extraClass = "fd-clickable";
+    tail = `<div class="fd-nav-hint"><span>continua</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg></div>`;
+  } else {
+    extraClass = node.detail ? "fd-clickable" : "";
+    tail = node.detail
+      ? `<div class="fd-info-strip" data-role="info-toggle"><span class="fd-i-icon">i</span><span>dettagli</span></div><div class="fd-detail">${escapeHtml(node.detail)}</div>`
+      : "";
   }
-  return rank;
-}
-
-function renderFlowBranchHtml(branch) {
-  const rank = computeFlowRanks(branch.id, branch.nodes, branch.edges);
-  const byRank = {};
-  branch.nodes.forEach(n => {
-    const r = rank[n.id];
-    if (r === undefined) return;
-    (byRank[r] = byRank[r] || []).push(n);
-  });
-  const rankKeys = Object.keys(byRank).map(Number).sort((a, b) => a - b);
-  const ranksHtml = rankKeys.map(r => `
-    <div class="fd-rank" data-rank="${r}"><div class="fd-rank-row">${byRank[r].map(flowNodeHtml).join("")}</div></div>
-  `).join("");
-
-  return `
-    <div class="fd-branch" data-branch-id="${escapeHtml(branch.id)}">
-      <div class="fd-branch-header" data-toggle="${escapeHtml(branch.id)}">
-        <span>${escapeHtml(branch.label)}</span>
-        <svg class="fd-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
-      </div>
-      <div class="fd-branch-summary">${branch.nodes.length} passaggi nascosti — clicca per espandere</div>
-      <div class="fd-branch-body">${ranksHtml}</div>
-    </div>
-  `;
-}
-
-function flowElbowPath(x1, y1, x2, y2) {
-  if (Math.abs(x1 - x2) < 1) return `M ${x1} ${y1} L ${x2} ${y2}`;
-  const midY = y1 + (y2 - y1) / 2;
-  return `M ${x1} ${y1} L ${x1} ${midY} L ${x2} ${midY} L ${x2} ${y2}`;
-}
-function flowArrowHead(x, y) {
-  return `<polygon points="${x - 5},${y - 7} ${x + 5},${y - 7} ${x},${y}"></polygon>`;
-}
-
-function drawFlowEdges(canvas, data) {
-  const svg = canvas.querySelector("svg.fd-edges");
-  const canvasRect = canvas.getBoundingClientRect();
-  svg.setAttribute("width", Math.max(1, Math.ceil(canvasRect.width)));
-  svg.setAttribute("height", Math.max(1, Math.ceil(canvasRect.height)));
-
-  const relPoint = (el) => {
-    const r = el.getBoundingClientRect();
-    return {
-      x: r.left + r.width / 2 - canvasRect.left,
-      top: r.top - canvasRect.top,
-      bottom: r.bottom - canvasRect.top,
-    };
-  };
-
-  const segments = [];
-  const link = (fromEl, toEl) => {
-    if (!fromEl || !toEl) return;
-    const fp = relPoint(fromEl), tp = relPoint(toEl);
-    segments.push(`<path d="${flowElbowPath(fp.x, fp.bottom, tp.x, tp.top)}"></path>`);
-    segments.push(flowArrowHead(tp.x, tp.top));
-  };
-
-  const rootEl = canvas.querySelector('[data-id="__root"]');
-  const gateEl = canvas.querySelector('[data-id="__gate"]');
-  link(rootEl, gateEl);
-
-  data.branches.forEach(branch => {
-    const branchEl = canvas.querySelector(`.fd-branch[data-branch-id="${branch.id}"]`);
-    if (!branchEl) return;
-    const headerEl = branchEl.querySelector(".fd-branch-header");
-    const src = (branch.entry === "root" || !gateEl) ? rootEl : gateEl;
-    link(src, headerEl);
-    if (branchEl.classList.contains("collapsed")) return;
-    branch.edges.forEach(([fromId, toId]) => {
-      const fromEl = fromId === branch.id ? headerEl : branchEl.querySelector(`[data-id="${fromId}"]`);
-      const toEl = branchEl.querySelector(`[data-id="${toId}"]`);
-      link(fromEl, toEl);
-    });
-  });
-
-  svg.innerHTML = segments.join("");
+  return `<div class="fd-node ${typeClass} ${withdrawnClass} ${extraClass}" data-id="${escapeHtml(node.id)}"><div class="fd-node-text">${escapeHtml(node.text)}</div>${chip}${withdrawnTag}${tail}</div>`;
 }
 
 function buildFlowChart(container, data) {
+  const graph = buildFlowGraph(data);
+  let currentId = "__root";
+
+  const heading = (data.title || data.subtitle) ? `
+    ${data.title ? `<div class="flow-diagram-title">${escapeHtml(data.title)}</div>` : ""}
+    ${data.subtitle ? `<div class="flow-diagram-sub">${escapeHtml(data.subtitle)}</div>` : ""}
+  ` : "";
+
   const legend = `
     <div class="fd-legend">
       <span class="fd-legend-item"><span class="fd-legend-swatch" style="background:var(--flow-root-bg)"></span>Inquadramento</span>
@@ -1419,62 +1478,58 @@ function buildFlowChart(container, data) {
       <span class="fd-legend-item"><span class="fd-legend-dot" style="background:var(--flow-badge-green)"></span>Rimborsata AIFA</span>
       <span class="fd-legend-item"><span class="fd-legend-dot" style="background:var(--flow-badge-red)"></span>Non rimborsata / ritirata</span>
       <span class="fd-legend-item"><span class="fd-legend-dot" style="background:var(--flow-badge-grey)"></span>Da verificare</span>
-      <span class="fd-legend-item">Clicca un ramo per espanderlo/collassarlo · clicca "i" per i dettagli</span>
     </div>
   `;
-
-  const gateHtml = data.gate ? `
-    <div class="fd-node fd-gate" data-id="__gate">
-      <div class="fd-node-text">${escapeHtml(data.gate.text)}</div>
-      ${data.gate.detail ? `<div class="fd-info-strip" data-role="info-toggle"><span class="fd-i-icon">i</span><span>dettagli</span></div><div class="fd-detail">${escapeHtml(data.gate.detail)}</div>` : ""}
-    </div>
-    <div class="fd-arrow-down"></div>
-  ` : "";
 
   container.innerHTML = `
+    ${heading}
     ${legend}
-    <div class="fd-canvas">
-      <svg class="fd-edges"></svg>
-      <div class="fd-trunk">
-        <div class="fd-node fd-root" data-id="__root"><div class="fd-node-text">${escapeHtml(data.root.text)}</div></div>
-        <div class="fd-arrow-down"></div>
-        ${gateHtml}
-      </div>
-      <div class="fd-branches">${data.branches.map(renderFlowBranchHtml).join("")}</div>
-    </div>
+    <div class="fw-crumbs" data-role="crumbs"></div>
+    <div class="fw-screen" data-role="screen"></div>
   `;
+  const crumbsEl = container.querySelector('[data-role="crumbs"]');
+  const screenEl = container.querySelector('[data-role="screen"]');
 
-  const canvas = container.querySelector(".fd-canvas");
-  const relayout = () => drawFlowEdges(canvas, data);
+  function goTo(id) { currentId = id; render(); screenEl.scrollIntoView({ behavior: "smooth", block: "nearest" }); }
 
-  container.querySelectorAll("[data-toggle]").forEach(header => {
-    header.addEventListener("click", () => {
-      header.closest(".fd-branch").classList.toggle("collapsed");
-      header.classList.toggle("collapsed");
-      relayout();
+  function render() {
+    const trail = [...flowAncestors(graph, currentId), currentId];
+    crumbsEl.innerHTML = trail.map((id, i) => {
+      const isLast = i === trail.length - 1;
+      return `${i > 0 ? '<span class="fw-crumb-sep">›</span>' : ""}<button type="button" class="fw-crumb-btn ${isLast ? "fw-crumb-current" : ""}" data-goto="${escapeHtml(id)}" ${isLast ? "disabled" : ""}>${escapeHtml(graph.nodesById[id].text)}</button>`;
+    }).join("");
+
+    const { chain, options } = flowScreenChain(graph, currentId);
+    const chainHtml = chain.map((id, i) => {
+      const card = flowNodeCardHtml(graph.nodesById[id], "chain");
+      return i < chain.length - 1 ? card + '<div class="fd-arrow-down"></div>' : card;
+    }).join("");
+    const optionsHtml = options.length ? `
+      <div class="fw-options">
+        ${options.map(id => {
+          const hasKids = (graph.childrenById[id] || []).length > 0;
+          return flowNodeCardHtml(graph.nodesById[id], hasKids ? "branch" : "leaf");
+        }).join("")}
+      </div>
+    ` : "";
+
+    screenEl.innerHTML = `<div class="fw-chain">${chainHtml}</div>${optionsHtml}`;
+
+    screenEl.querySelectorAll(".fw-options > .fd-node").forEach(card => {
+      const id = card.dataset.id;
+      const hasKids = (graph.childrenById[id] || []).length > 0;
+      if (hasKids) card.addEventListener("click", () => goTo(id));
+      else if (card.querySelector(".fd-detail")) card.addEventListener("click", () => card.classList.toggle("fd-open"));
     });
-  });
-  container.querySelectorAll('[data-role="info-toggle"]').forEach(strip => {
-    strip.addEventListener("click", (ev) => {
-      ev.stopPropagation();
-      strip.closest(".fd-node").classList.toggle("fd-open");
-      relayout();
-    });
+  }
+
+  crumbsEl.addEventListener("click", (ev) => {
+    const btn = ev.target.closest("[data-goto]");
+    if (btn) goTo(btn.dataset.goto);
   });
 
-  relayout();
-  flowInstances.push({ container, relayout });
+  render();
 }
-
-let flowResizeTimer = null;
-window.addEventListener("resize", () => {
-  clearTimeout(flowResizeTimer);
-  flowResizeTimer = setTimeout(() => {
-    flowInstances.forEach(inst => {
-      if (document.body.contains(inst.container)) inst.relayout();
-    });
-  }, 150);
-});
 
 const sunIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
 const moonIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
@@ -1497,13 +1552,37 @@ function initTheme() {
 }
 
 function applySidebarCollapse() {
-  document.querySelector('.app').classList.toggle('sidebar-collapsed', state.sidebarCollapsed);
-  document.querySelector('.sidebar').classList.toggle('collapsed', state.sidebarCollapsed);
+  const isDesktop = window.innerWidth > 900;
+  document.querySelector('.app').classList.toggle('sidebar-collapsed', isDesktop && state.sidebarCollapsed);
+  document.querySelector('.sidebar').classList.toggle('collapsed', isDesktop && state.sidebarCollapsed);
 }
 
 function initSidebarCollapse() {
   document.getElementById('sidebarCollapseBtn').addEventListener('click', () => {
     state.sidebarCollapsed = !state.sidebarCollapsed;
+    applySidebarCollapse();
+  });
+}
+
+/* ---------- mobile off-canvas nav (<900px) ---------- */
+function openMobileNav() {
+  document.querySelector('.sidebar').classList.add('mobile-open');
+  document.getElementById('mobileNavBackdrop').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeMobileNav() {
+  document.querySelector('.sidebar').classList.remove('mobile-open');
+  document.getElementById('mobileNavBackdrop').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function initMobileNav() {
+  document.getElementById('mobileNavBtn').addEventListener('click', () => {
+    document.querySelector('.sidebar').classList.contains('mobile-open') ? closeMobileNav() : openMobileNav();
+  });
+  document.getElementById('mobileNavBackdrop').addEventListener('click', closeMobileNav);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMobileNav(); });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) closeMobileNav();
     applySidebarCollapse();
   });
 }
@@ -1633,6 +1712,7 @@ function goToTheme(theme) {
   state.activeItem = null;
   state.sidebarCollapsed = false;
   applySidebarCollapse();
+  closeMobileNav();
   setReaderMode(false);
   document.getElementById("navHome").classList.remove("active");
   renderThemeNav();
@@ -1645,6 +1725,7 @@ function goHome() {
   state.activeItem = null;
   state.sidebarCollapsed = false;
   applySidebarCollapse();
+  closeMobileNav();
   setReaderMode(false);
   renderThemeNav();
   renderView();
@@ -1690,6 +1771,7 @@ async function openScheda(item) {
     state.sidebarCollapsed = true;
     applySidebarCollapse();
   }
+  closeMobileNav();
   setReaderMode(true);
   renderThemeNav();
 
@@ -1846,7 +1928,7 @@ function renderHome() {
     <div class="overview-hero">
       <div class="hero-left">
         <div class="eyebrow">Dashboard locale di studio</div>
-        <h1>Buono studio, Lorenzo</h1>
+        <h1>Buono studio</h1>
         <p>Seleziona un tema dal menu a sinistra per leggere la scheda completa: è lì che confluiscono le informazioni prese da AIOM, ESMO e dai materiali congressuali.</p>
       </div>
       <div class="progress-ring-card">
@@ -2008,8 +2090,15 @@ document.getElementById("navHome").addEventListener("click", goHome);
 document.getElementById("printBtn").addEventListener("click", () => window.print());
 window.addEventListener("scroll", updateReadingProgress, { passive: true });
 
+const backToTopBtn = document.getElementById("backToTop");
+window.addEventListener("scroll", () => {
+  backToTopBtn.classList.toggle("visible", window.scrollY > 500);
+}, { passive: true });
+backToTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
 initTheme();
 initSidebarCollapse();
+initMobileNav();
 initMermaid();
 loadData();
 </script>
