@@ -187,6 +187,3 @@ Vedi la sezione "Follow-up dopo chirurgia radicale" più sopra: approccio risk-a
 - Altre fonti: Congresso Grandangolo 2025 (Rene); Trials 2025 Urologiche.
 - Aggiornamenti verificati in questa revisione: ASCO Post, NEJM, Annals of Oncology, Urology Times (vedi link nei blockquote di verifica).
 - Verifica stato regolatorio AIFA (2026-08-25): determine AIFA (Gazzetta Ufficiale/aifa.gov.it), registri di monitoraggio AIFA, EMA/CHMP, OncLive, Urology Times, PharmaStar (vedi link nei blockquote di verifica in letteratura).
-
-## Note personali
--

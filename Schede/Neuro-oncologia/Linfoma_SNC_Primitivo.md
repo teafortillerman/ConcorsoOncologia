@@ -193,7 +193,3 @@ Il follow-up prevede RM encefalo ogni 3 mesi per i primi 2 anni, ogni 6 mesi per
 - Soussain C et al. Ibrutinib monotherapy for relapse or refractory primary CNS lymphoma and primary vitreoretinal lymphoma: final analysis of the phase II iLOC study (LYSA/LOC). *European Journal of Cancer* 2019. [DOI](https://doi.org/10.1016/j.ejca.2019.05.024)
 - Grommes C et al. Ibrutinib Unmasks Critical Role of Bruton Tyrosine Kinase in Primary CNS Lymphoma. *Cancer Discovery* 2017. [DOI](https://doi.org/10.1158/2159-8290.CD-17-0613)
 - Frigault MJ et al. Safety and efficacy of tisagenlecleucel in primary CNS lymphoma: a phase 1/2 clinical trial. *Blood* 2022. [DOI](https://doi.org/10.1182/blood.2021014738)
-
-
-## Note personali
-- 

@@ -248,6 +248,3 @@ Dopo prostatectomia il PSA dovrebbe azzerarsi, con un'emivita di circa 3 giorni;
 - ESMO: CPG Prostata Localizzata 2026; CPG Prostata Metastatica 2026.
 - Altre fonti: Congresso Grandangolo 2025 (Prostata).
 - Aggiornamenti verificati in questa revisione: ASCO Post, The Lancet, NEJM, Annals of Oncology (dati di letteratura); aifa.gov.it, Gazzetta Ufficiale, medicoeleggi.com, AboutPharma, DottNet, EMA (verifica dello stato regolatorio/di rimborsabilità AIFA, vedi link nei blockquote di verifica).
-
-## Note personali
--

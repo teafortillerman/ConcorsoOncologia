@@ -196,12 +196,6 @@ Il LCIS va inquadrato più come marker di rischio (aumento del rischio relativo 
 
 ## Terapia della malattia localizzata (operabile)
 
-### Algoritmo terapeutico – malattia localizzata (M0)
-
-```flowchart
-mammella-localizzato
-```
-
 ### Chirurgia
 
 Nella malattia in stadio I-II la chirurgia conservativa seguita da radioterapia resta la prima scelta, perché non offre alcun vantaggio in sopravvivenza globale rispetto alla mastectomia. Le controindicazioni alla conservativa sono l'impossibilità di eseguire la radioterapia, microcalcificazioni diffuse sospette, o condizioni cliniche/psichiche che ne compromettano la fattibilità. Un punto spesso sopravvalutato in passato: dopo chirurgia conservativa e radioterapia, il margine "no ink on tumor" è sufficiente — margini più ampi non riducono ulteriormente il rischio di recidiva, ma peggiorano solo l'estetica e i costi. I centri di senologia ad alto volume (oltre 150 casi/anno) si associano a un outcome migliore, e la ricostruzione immediata è oggi indicata nella quasi totalità dei casi (lo standard minimo EUSOMA è il 40%), con le tecniche skin/nipple-sparing che mostrano tassi di recidiva comparabili alla mastectomia tradizionale.
@@ -300,10 +294,6 @@ L'obiettivo in questa fase cambia natura: la malattia non è guaribile, ma sempr
 
 ### HR+/HER2-negativo
 
-```flowchart
-mammella-avanzato-hr
-```
-
 Nella malattia HR+/HER2- la prima linea si sceglie in base alla sensibilità endocrina. Nella malattia endocrino-sensibile, lo standard è un inibitore di CDK4/6 (palbociclib, ribociclib o abemaciclib) associato a un inibitore dell'aromatasi; nella malattia endocrino-resistente, l'inibitore di CDK4/6 si associa invece a fulvestrant. Un caso particolare è la paziente con mutazione PIK3CA e resistenza endocrina precoce: qui lo studio INAVO120 supporta la combinazione fulvestrant+palbociclib+inavolisib. In presenza di crisi viscerale, che richiede una risposta rapida, la scelta ricade sulla chemioterapia (tipicamente paclitaxel+bevacizumab).
 
 Tra i CDK4/6 inibitori vale la pena una precisazione che ha impatto pratico sulla scelta: **ribociclib è finora l'unico ad aver dimostrato un beneficio di sopravvivenza globale statisticamente significativo in monoterapia con inibitore dell'aromatasi in prima linea** — nello studio MONALEESA-2 l'OS mediana è stata di 63,9 mesi contro 51,4 mesi (HR 0,76; p=0,008); palbociclib e abemaciclib, negli studi PALOMA-2 e MONARCH-3, non hanno raggiunto la significatività statistica per l'OS nello stesso confronto.
@@ -324,10 +314,6 @@ Per orientarsi nella definizione di resistenza endocrina, i criteri ABC5 la dist
 
 
 ### HER2-positivo
-
-```flowchart
-mammella-avanzato-her2
-```
 
 Nella malattia HER2-positiva metastatica lo standard di prima linea resta, da oltre un decennio, il doppio blocco anti-HER2 associato a un taxano: docetaxel, trastuzumab e pertuzumab. Questa combinazione è quella testata nello studio registrativo **CLEOPATRA**, il cui follow-up più maturo (analisi *end-of-study*, pubblicata su *Lancet Oncology* nel 2020, con oltre 8 anni di osservazione) ha confermato un beneficio di sopravvivenza globale mediana di **57,1 mesi nel braccio con pertuzumab contro 40,8 mesi nel braccio placebo** (HR 0,69; IC95% 0,58–0,82) — un vantaggio assoluto di oltre 16 mesi che si è mantenuto stabile nel tempo, non eroso dal follow-up più lungo.
 
@@ -350,10 +336,6 @@ Per le pazienti con metastasi encefaliche attive, o che progrediscono anche a li
 
 
 ### Triplo negativo (TNBC)
-
-```flowchart
-mammella-avanzato-tn
-```
 
 Nella malattia triplo negativa metastatica, la prima linea dipende dallo stato di PD-L1 e dallo stato BRCA. Se PD-L1 è positivo (con i cut-off specifici per test: SP142 per atezolizumab, CPS≥10 con 22C3 per pembrolizumab), l'immunoterapia associata a chemioterapia è lo standard: atezolizumab con nab-paclitaxel (studio IMpassion130) oppure pembrolizumab con chemioterapia (studio KEYNOTE-355). Nelle pazienti con mutazione germinale BRCA1/2, l'opzione preferenziale sono i PARP-inibitori (olaparib o talazoparib) o la chemioterapia a base di platino. Quando PD-L1 è negativo e BRCA è wild-type, la scelta ricade sulla chemioterapia classica (taxano, con o senza carboplatino, con o senza bevacizumab).
 
@@ -481,7 +463,3 @@ Di fronte a una recidiva locoregionale, il work-up richiede una ri-stadiazione c
 - Altre fonti: Congresso Grandangolo Oncologico 2025 (moduli: Adiuvante/Neoadiuvante Mammella, Mammella Avanzata, Casi Clinici Mammella, Trials 2025 Mammella); AIOM-AIRTUM, "I numeri del cancro in Italia" 2025.
 - Letteratura primaria verificata per questa revisione (trial registrativi e aggiornamenti più recenti): CLEOPATRA (end-of-study, Lancet Oncol 2020; PubMed 32171426), DESTINY-Breast03 (long-term follow-up, Nature Medicine 2024), pooled analysis ILD da T-DXd (PMC 9434416), monarchE (OS analysis, ESMO 2025, Annals of Oncology), APHINITY (final OS a 10 anni, ESMO Breast Cancer 2025), KEYNOTE-522 (OS analysis, NEJM 2024), MONALEESA-2 (final OS analysis, 2022), NATALEE (iDFS finale, Annals of Oncology 2024; aggiornamento a 5 anni, ESMO Open 2025).
 - **Verifica stato regolatorio AIFA (2026-08-24)**, condotta sistematicamente su tutte le terapie approvate negli ultimi anni citate in questa scheda, incrociando determine AIFA/Gazzetta Ufficiale e registri di monitoraggio (registri.aifa.gov.it): trastuzumab deruxtecan HER2-low (Determina 9.01.2024), sacituzumab govitecan HR+/HER2- e aggiornamento TNBC (Determina 20.02.2025), capivasertib (classe C-nn 11.10.2024 → rimborsabilità 28.10.2025), alpelisib (Determina 1195/2021, rinnovo DTS-86/2025), elacestrant (rimborsabilità 2025), inavolisib (Determina 13.10.2025), olaparib/talazoparib nel carcinoma mammario HER2-negativo HR+ e TNBC (Determine 2020/2022/2024), pembrolizumab neoadiuvante TNBC (Determina 10.07.2023), atezolizumab+nab-paclitaxel TNBC (stato USA vs UE/Italia), ribociclib adiuvante NATALEE (Determina, GU n.54 del 6.03.2026), datopotamab deruxtecan e imlunestrant (solo EMA/FDA, non ancora rimborsati in Italia).
-
-
-## Note personali
--

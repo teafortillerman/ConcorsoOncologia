@@ -130,7 +130,3 @@
 - AIOM. Linee guida Trattamento e prevenzione della cachessia neoplastica, edizione 2024, aggiornata a dicembre 2024.
 - Fearon K et al. Definition and classification of cancer cachexia.
 - ESPEN. Clinical Nutrition in Cancer guidelines.
-
-
-## Note personali
-- 

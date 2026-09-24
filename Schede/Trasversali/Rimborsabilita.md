@@ -527,6 +527,3 @@ Il metodo di verifica (determine AIFA, Gazzetta Ufficiale, registri.aifa.gov.it,
 - Errore di combinazione corretto: nel FL R/R, zanubrutinib va con obinutuzumab (ROSEWOOD), non rituximab; e zanubrutinib non ha mai avuto un'indicazione EMA/AIFA nel linfoma mantellare.
 - Ritiro di sicurezza rilevante: tazemetostat è stato ritirato dal mercato mondiale il 9 marzo 2026 per rischio di neoplasie ematologiche secondarie (SYMPHONY-1) — molti materiali di studio lo riportano ancora come opzione standard nel FL EZH2-mutato.
 - TRIANGLE (ibrutinib upfront MCL) e ECHO (acalabrutinib+BR 1L) sono entrambi regolatoriamente recentissimi (EMA luglio 2025, rimborso AIFA 2026) — punti spesso assenti dalla trattazione classica.
-
-## Note personali
--

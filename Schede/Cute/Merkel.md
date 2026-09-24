@@ -203,7 +203,3 @@ Nei pazienti MCPyV+, il test sierologico AMERK (vedi Biomarcatori) può integrar
 - ADAM trial: adjuvant avelumab in MCC stadio III con metastasi linfonodali, fase III — dati presentati ASCO 2026, non ancora pubblicazione per esteso.
 - Miller DM et al. The prognostic value of the Merkel cell polyomavirus serum antibody test (AMERK). Cancer 2024. [DOI](https://doi.org/10.1002/cncr.35314)
 - Altre fonti: —
-
-
-## Note personali
--

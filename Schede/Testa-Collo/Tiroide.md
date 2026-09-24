@@ -368,6 +368,3 @@ Sul fronte del supporto osseo, bifosfonati e denosumab comportano un rischio di 
 - ESMO: CPG Tiroide 2019 (Filetti S et al., Ann Oncol 2019;30:1856-1883).
 - Altre fonti: nessuna presentazione congressuale Grandangolo disponibile in questa raccolta per questo tema.
 - Verifica in letteratura primaria (PubMed, agosto 2026): Hu MI et al., *NEJM* 2023 (LIBRETTO-531, [DOI](https://doi.org/10.1056/NEJMoa2309719)); Subbiah V et al., *Ann Oncol* 2022 (ROAR ATC aggiornato, [DOI](https://doi.org/10.1016/j.annonc.2021.12.014)); Brose MS et al., *Cancer* 2022 (COSMIC-311 aggiornato, [DOI](https://doi.org/10.1002/cncr.34493)); Gao M et al., *Lancet Oncol* 2026 (dabrafenib+trametinib DTC BRAF-mutato, fase III, [DOI](https://doi.org/10.1016/S1470-2045(26)00133-6)); Busaidy NL et al., *Thyroid* 2022 (dabrafenib vs dabrafenib+trametinib DTC, fase II, [DOI](https://doi.org/10.1089/thy.2022.0115)); comunicati regolatori EMA/AIFA su Retsevmo (selpercatinib, Determina 781/2024) e Gavreto (pralsetinib, withdrawal report EMA).
-
-## Note personali
--

@@ -246,6 +246,3 @@ La sorveglianza a lungo termine deve includere screening oncologici appropriati 
 - Ansell SM, et al. Nivolumab for R/R cHL: 5-year survival from CheckMate 205. Blood Adv 2023;7:6266-6274.
 - Meng F, et al. Safety and efficacy of anti-CD30 CAR-T cell therapy in R/R cHL: systematic review and meta-analysis. BMC Cancer 2025;25:78.
 - FDA, approvazione nivolumab+AVD in prima linea per cHL avanzato, 20 marzo 2026.
-
-## Note personali
-- 

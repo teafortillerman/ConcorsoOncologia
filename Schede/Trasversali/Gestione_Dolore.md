@@ -128,7 +128,3 @@
 - AIOM. Linee guida Terapia del dolore in oncologia, edizione 2025, aggiornata a ottobre 2025.
 - WHO. Cancer Pain Relief and Analgesic Ladder.
 - EAPC. Evidence-based recommendations for opioid analgesics in cancer pain.
-
-
-## Note personali
-- 

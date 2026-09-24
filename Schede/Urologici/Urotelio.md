@@ -174,6 +174,3 @@ Nel NMIBC a rischio basso: cistoscopia a 3 mesi, poi a 12 mesi, poi annuale fino
 - Altre fonti: Congresso Grandangolo 2025 (Urotelio); Trials 2025 Urologiche.
 - Aggiornamenti verificati in questa revisione: NEJM, ASCO Post, Targeted Oncology, Urology Times (vedi link nei blockquote di verifica). Correzione rilevante: il p-value dell'OS di NIAGARA era trascritto in modo errato (0,106 invece di 0,0106).
 - **Verifica AIFA (2026-08-25)**: fonti regolatorie consultate — aifa.gov.it (Determina Pres. 521/2026, schede GRADE CTS), Gazzetta Ufficiale (tramite regione Lombardia/medicoeleggi.com), Dottnet, Sanità33, Daily Health Industry, QuotidianoSanità, SbircialaNotizia, Associazione Palinuro, PharmaStar, OncLive, newsroom Astellas (vedi link nei singoli blockquote di verifica per ciascun farmaco). Correzioni principali: nivolumab adiuvante e CheckMate 901 ora rimborsati AIFA (erano dati come "non rimborsato"/non specificati); sacituzumab govitecan ha perso l'approvazione FDA nel carcinoma uroteliale (ottobre 2024, non più solo "in attesa di EMA/AIFA"); durvalumab perioperatorio rimborsato AIFA da giugno 2026; EV-302 rimborsato da gennaio 2026; EV-303/KEYNOTE-905 perioperatorio approvato EMA ma non ancora rimborsato AIFA.
-
-## Note personali
--

@@ -146,7 +146,3 @@
 ## Fonti
 - ESMO. Clinical Practice Guideline: Classification and management of cancer of unknown primary, 2023.
 - ASCO. Diagnosis and management of squamous cell carcinoma of unknown primary in the head and neck.
-
-
-## Note personali
-- 

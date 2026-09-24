@@ -129,7 +129,3 @@
 - ESC. Guidelines on cardio-oncology, 2022.
 - ESMO. Management of cardiac disease in cancer patients throughout oncological treatment.
 - International Cardio-Oncology Society consensus on cardiovascular toxicities of cancer therapies.
-
-
-## Note personali
-- 
