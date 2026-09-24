@@ -680,6 +680,7 @@ button { font-family: inherit; cursor: pointer; }
   background: var(--color-surface-offset); border-radius: 999px; padding: 2px 7px;
 }
 .ag { min-width: 0; }
+.ag-list-theme { font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-muted); margin: 26px 0 10px; }
 .ag-top { display: flex; align-items: flex-end; justify-content: space-between; gap: 14px; flex-wrap: wrap; margin-bottom: 20px; }
 .ag-eyebrow { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-primary); margin-bottom: 4px; }
 .ag-top h1 { font-family: var(--font-display); font-size: clamp(1.7rem, 3vw, 2.3rem); margin: 0; font-weight: 600; line-height: 1.1; }
@@ -1829,14 +1830,17 @@ function renderAlgorithmsList() {
         <p>Rispondi a una domanda clinica alla volta: l'algoritmo ti porta alla raccomandazione, con lo stato di rimborsabilità AIFA di ogni trattamento.</p>
       </div>
     </div>
-    <div class="theme-cards">
-      ${state.algorithms.map(a => `
-        <div class="theme-card" data-algo="${escapeHtml(a.id)}" style="--card-accent:${themeColor(a.theme)};cursor:pointer">
-          <div class="tc-head">${themeBadge(a.theme)}<div class="tc-title">${escapeHtml(a.title)}</div></div>
-          <div class="tc-count">${a.settings.map(escapeHtml).join(" · ")}</div>
-        </div>
-      `).join("") || emptyState(ICONS.folder, "Nessun algoritmo disponibile.", "")}
-    </div>
+    ${[...new Set(state.algorithms.map(a => a.theme))].sort((a, b) => a.localeCompare(b)).map(theme => `
+      <h2 class="ag-list-theme">${escapeHtml(theme)}</h2>
+      <div class="theme-cards">
+        ${state.algorithms.filter(a => a.theme === theme).sort((a, b) => a.title.localeCompare(b.title)).map(a => `
+          <div class="theme-card" data-algo="${escapeHtml(a.id)}" style="--card-accent:${themeColor(a.theme)};cursor:pointer">
+            <div class="tc-head">${themeBadge(a.theme)}<div class="tc-title">${escapeHtml(a.title)}</div></div>
+            <div class="tc-count">${a.settings.map(escapeHtml).join(" · ")}</div>
+          </div>
+        `).join("")}
+      </div>
+    `).join("") || emptyState(ICONS.folder, "Nessun algoritmo disponibile.", "")}
   `;
   content.querySelectorAll("[data-algo]").forEach(el => {
     el.addEventListener("click", () => openAlgorithm(el.dataset.algo));

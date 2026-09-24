@@ -1,0 +1,769 @@
+{
+  "id": "colonretto",
+  "title": "Colon-Retto",
+  "theme": "Gastrointestinali",
+  "scheda": "Schede/Gastrointestinali/ColonRetto.md",
+  "start": "setting",
+  "nodes": {
+    "setting": {
+      "type": "question",
+      "text": "Qual è il setting della malattia?",
+      "short": "Setting",
+      "info": "MMR/MSI va determinato in tutti i pazienti: cambia l'adiuvante nel colon, la strategia nel retto e la 1ª linea metastatica.",
+      "answers": [
+        { "label": "Colon localizzato", "next": "colon_stadio" },
+        { "label": "Retto localizzato / localmente avanzato", "next": "retto_stadio" },
+        { "label": "Metastatico", "next": "m_resecabilita" }
+      ]
+    },
+    "colon_stadio": {
+      "type": "question",
+      "text": "Qual è lo stadio patologico?",
+      "short": "Stadio",
+      "info": "Chirurgia: margine ≥5 cm e almeno 12 linfonodi; laparoscopia oncologicamente equivalente all'open.",
+      "answers": [
+        { "label": "Stadio I", "next": "colon_i" },
+        { "label": "Stadio II", "next": "colon_ii" },
+        { "label": "Stadio III", "next": "colon_iii_mmr" }
+      ]
+    },
+    "colon_i": {
+      "type": "recommendation",
+      "title": "Terapia adiuvante",
+      "options": [
+        {
+          "name": "Nessuna terapia adiuvante",
+          "aifa": "standard",
+          "key": "Prognosi eccellente con la sola chirurgia."
+        }
+      ]
+    },
+    "colon_ii": {
+      "type": "question",
+      "text": "Ci sono fattori di rischio? Qual è lo stato MMR?",
+      "short": "Rischio / MMR",
+      "info": "Fattori di rischio: T4, G3, <12 linfonodi esaminati, occlusione o perforazione, invasione vascolare. Beneficio assoluto della CT nello stadio II: 3-4%.",
+      "answers": [
+        { "label": "pMMR con fattori di rischio", "next": "colon_ii_rischio" },
+        { "label": "pMMR senza fattori di rischio", "next": "colon_ii_basso" },
+        { "label": "dMMR / MSI-H", "next": "colon_ii_msi" }
+      ]
+    },
+    "colon_ii_rischio": {
+      "type": "recommendation",
+      "title": "Terapia adiuvante",
+      "options": [
+        {
+          "name": "CAPOX 3 mesi o fluoropirimidina 6 mesi",
+          "aifa": "standard",
+          "key": "Beneficio assoluto marginale: da discutere con il paziente.",
+          "regimen": {
+            "rows": [
+              ["Oxaliplatino", "130 mg/m² EV giorno 1"],
+              ["Capecitabina", "1000 mg/m² per os ×2/die, giorni 1-14"],
+              ["oppure Capecitabina", "1250 mg/m² per os ×2/die, giorni 1-14 ogni 21 giorni ×8 cicli"]
+            ],
+            "note": "CAPOX ogni 21 giorni ×4 cicli. Test DPYD prima delle fluoropirimidine.",
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ]
+    },
+    "colon_ii_basso": {
+      "type": "recommendation",
+      "title": "Terapia adiuvante",
+      "options": [
+        {
+          "name": "Sorveglianza",
+          "aifa": "standard",
+          "key": "Nessun beneficio dimostrato dalla chemioterapia."
+        }
+      ]
+    },
+    "colon_ii_msi": {
+      "type": "recommendation",
+      "title": "Terapia adiuvante",
+      "options": [
+        {
+          "name": "Sorveglianza",
+          "aifa": "standard",
+          "key": "Mai fluoropirimidina in monoterapia nel dMMR stadio II: inefficace e potenzialmente dannosa (QUASAR)."
+        }
+      ]
+    },
+    "colon_iii_mmr": {
+      "type": "question",
+      "text": "Qual è lo stato MMR?",
+      "short": "MMR",
+      "info": "L'irinotecano non ha mai un ruolo nell'adiuvante (tre RCT negativi).",
+      "answers": [
+        { "label": "pMMR / MSS", "next": "colon_iii_rischio" },
+        { "label": "dMMR / MSI-H", "next": "colon_iii_msi" }
+      ]
+    },
+    "colon_iii_rischio": {
+      "type": "question",
+      "text": "Qual è il rischio secondo IDEA?",
+      "short": "Rischio",
+      "answers": [
+        { "label": "Basso rischio (pT1-3 N1)", "next": "colon_iii_basso" },
+        { "label": "Alto rischio (pT4 e/o N2)", "next": "colon_iii_alto" }
+      ]
+    },
+    "colon_iii_basso": {
+      "type": "recommendation",
+      "title": "Terapia adiuvante",
+      "options": [
+        {
+          "name": "CAPOX per 3 mesi",
+          "aifa": "standard",
+          "key": "3 mesi non inferiori a 6 nel basso rischio; CAPOX preferito.",
+          "regimen": {
+            "trial": "IDEA",
+            "rows": [
+              ["Oxaliplatino", "130 mg/m² EV giorno 1"],
+              ["Capecitabina", "1000 mg/m² per os ×2/die, giorni 1-14"]
+            ],
+            "note": "Ogni 21 giorni ×4 cicli. Test DPYD prima delle fluoropirimidine.",
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ]
+    },
+    "colon_iii_alto": {
+      "type": "recommendation",
+      "title": "Terapia adiuvante",
+      "options": [
+        {
+          "name": "FOLFOX per 6 mesi",
+          "aifa": "standard",
+          "key": "Nell'alto rischio FOLFOX richiede 6 mesi: ridurlo a 3 costa il 2,8% di OS a 5 anni.",
+          "regimen": {
+            "trial": "IDEA",
+            "rows": [
+              ["Oxaliplatino", "85 mg/m² EV giorno 1"],
+              ["Leucovorin", "400 mg/m² EV giorno 1"],
+              ["5-fluorouracile", "400 mg/m² in bolo, poi 2400 mg/m² in infusione continua di 46 ore"]
+            ],
+            "note": "Ogni 14 giorni ×12 cicli. Test DPYD prima delle fluoropirimidine.",
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "CAPOX per 3 mesi",
+          "aifa": "standard",
+          "key": "Opzione accettabile anche nell'alto rischio.",
+          "regimen": {
+            "trial": "IDEA",
+            "rows": [
+              ["Oxaliplatino", "130 mg/m² EV giorno 1"],
+              ["Capecitabina", "1000 mg/m² per os ×2/die, giorni 1-14"]
+            ],
+            "note": "Ogni 21 giorni ×4 cicli.",
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ]
+    },
+    "colon_iii_msi": {
+      "type": "recommendation",
+      "title": "Terapia adiuvante",
+      "options": [
+        {
+          "name": "mFOLFOX6 + atezolizumab",
+          "aifa": "not_reimbursed",
+          "key": "DFS a 3 anni 86,3% vs 76,2% (HR 0,50); non ancora recepito dalle linee guida né approvato in UE.",
+          "regimen": {
+            "trial": "ATOMIC",
+            "rows": [
+              ["Oxaliplatino", "85 mg/m² EV giorno 1"],
+              ["Leucovorin", "400 mg/m² EV giorno 1"],
+              ["5-fluorouracile", "400 mg/m² in bolo, poi 2400 mg/m² in infusione continua di 46 ore"],
+              ["+ Atezolizumab", "840 mg EV ogni 2 settimane con la chemioterapia, poi in monoterapia"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "FOLFOX o CAPOX come nel pMMR",
+          "aifa": "standard",
+          "key": "Standard attuale fuori studio; nel dMMR alto rischio la prognosi è peggiore (DFS a 3 anni 35,5%).",
+          "regimen": {
+            "rows": [
+              ["Oxaliplatino", "85 mg/m² EV giorno 1"],
+              ["Leucovorin", "400 mg/m² EV giorno 1"],
+              ["5-fluorouracile", "400 mg/m² in bolo, poi 2400 mg/m² in infusione continua di 46 ore"]
+            ],
+            "note": "Ogni 14 giorni ×12 cicli (oppure CAPOX ×4-8 cicli).",
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ],
+      "note": "Neoadiuvante nel colon dMMR: NICHE-2 (nivolumab + ipilimumab) pCR 68% — promettente, non ancora standard. Nel colon MSS il neoadiuvante non è standard (FOXTROT)."
+    },
+    "retto_stadio": {
+      "type": "question",
+      "text": "Qual è lo stadio clinico (RM pelvica)?",
+      "short": "Stadio",
+      "info": "CRM ≤1 mm = R1, il fattore prognostico dominante nel retto. L'oxaliplatino non va mai somministrato in concomitanza con la RT.",
+      "answers": [
+        { "label": "cT1-2 N0", "next": "retto_precoce" },
+        { "label": "cT3-4 e/o N+", "next": "retto_mmr" }
+      ]
+    },
+    "retto_precoce": {
+      "type": "recommendation",
+      "title": "Trattamento locale",
+      "options": [
+        {
+          "name": "TME (escissione totale del mesoretto)",
+          "aifa": "standard",
+          "key": "Standard chirurgico."
+        },
+        {
+          "name": "Escissione locale in casi selezionati",
+          "aifa": "standard",
+          "key": "Solo cT1 Sm1, G1-2, senza invasione linfovascolare, R0 raggiungibile (rischio N+: Sm1 3%, Sm2 8%, Sm3 23%)."
+        }
+      ]
+    },
+    "retto_mmr": {
+      "type": "question",
+      "text": "Qual è lo stato MMR?",
+      "short": "MMR",
+      "answers": [
+        { "label": "pMMR / MSS", "next": "retto_tnt" },
+        { "label": "dMMR / MSI-H", "next": "retto_msi" }
+      ]
+    },
+    "retto_msi": {
+      "type": "recommendation",
+      "title": "Terapia neoadiuvante",
+      "options": [
+        {
+          "name": "Dostarlimab in monoterapia per 6 mesi",
+          "aifa": "reimbursed",
+          "key": "Legge 648/96 dal 16/06/2023. 49/49 risposte cliniche complete: gestione non operativa senza chirurgia, RT o chemioterapia.",
+          "regimen": {
+            "trial": "Cercek (MSKCC)",
+            "rows": [
+              ["Dostarlimab", "500 mg EV ogni 3 settimane ×9 cicli"]
+            ],
+            "note": "Poi rivalutazione clinica; chirurgia solo se risposta incompleta.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        }
+      ]
+    },
+    "retto_tnt": {
+      "type": "recommendation",
+      "title": "Terapia neoadiuvante",
+      "options": [
+        {
+          "name": "TNT di induzione: mFOLFIRINOX → CRT",
+          "aifa": "standard",
+          "key": "DFS a 3 anni 75,7% vs 68,5% (HR 0,69), pCR 27,8% vs 12%.",
+          "regimen": {
+            "trial": "PRODIGE 23",
+            "rows": [
+              ["mFOLFIRINOX", "oxaliplatino 85 + irinotecano 180 + leucovorin 400 mg/m² + 5-FU 2400 mg/m² in 46 ore, ogni 14 giorni ×6"],
+              ["poi CRT", "50 Gy + capecitabina"],
+              ["dopo TME", "mFOLFOX6 ×6 o capecitabina ×4"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "TNT di consolidamento: CRT → CAPOX o FOLFOX",
+          "aifa": "standard",
+          "key": "Migliore preservazione d'organo (TME-free survival a 3 anni 53% vs 41%), DFS invariata.",
+          "regimen": {
+            "trial": "OPRA",
+            "rows": [
+              ["CRT long-course", "50-54 Gy + capecitabina 825 mg/m² ×2/die nei giorni di RT"],
+              ["poi consolidamento", "CAPOX ×5 cicli o FOLFOX ×8 cicli"]
+            ],
+            "sources": [{"type": "scheda"}, {"type": "standard"}]
+          }
+        },
+        {
+          "name": "CRT long-course o RT short-course",
+          "aifa": "standard",
+          "key": "Standard storico (Sauer: recidive locali 6% vs 13%). Long-course preferita se serve downstaging (T4, retto basso).",
+          "regimen": {
+            "rows": [
+              ["CRT long-course", "50,4 Gy in 28 frazioni + capecitabina 825 mg/m² ×2/die nei giorni di RT"],
+              ["oppure RT short-course", "25 Gy in 5 frazioni"]
+            ],
+            "sources": [{"type": "scheda"}, {"type": "standard"}]
+          }
+        }
+      ],
+      "note": "TNT soprattutto se cT4, cN2, EMVI+, CRM+, linfonodi laterali o retto basso. RAPIDO (short-course → CT): più recidive locali (10% vs 6%) → condizionata a sfavore. PROSPECT: omissione selettiva della CRT solo nel basso rischio.",
+      "next": { "label": "Dopo il neoadiuvante → rivalutazione della risposta", "node": "retto_risposta" }
+    },
+    "retto_risposta": {
+      "type": "question",
+      "text": "Qual è la risposta clinica al neoadiuvante?",
+      "short": "Risposta",
+      "answers": [
+        { "label": "Risposta clinica completa (cCR)", "next": "retto_ww" },
+        { "label": "Risposta incompleta", "next": "retto_tme" }
+      ]
+    },
+    "retto_ww": {
+      "type": "recommendation",
+      "title": "Watch and wait",
+      "options": [
+        {
+          "name": "Sorveglianza attiva",
+          "aifa": "standard",
+          "key": "Regrowth a 2 anni 25,2% (97% intraparietale, di solito salvabile); OS a 5 anni 85%, cancro-specifica 94% (IWWD)."
+        }
+      ],
+      "note": "Nei pazienti con regrowth l'OS è inferiore (73% vs 94%) per più metastasi a distanza: va discusso con il paziente.",
+      "next": { "label": "Se regrowth → chirurgia", "node": "retto_tme" }
+    },
+    "retto_tme": {
+      "type": "recommendation",
+      "title": "Chirurgia e terapia adiuvante",
+      "options": [
+        {
+          "name": "TME",
+          "aifa": "standard",
+          "key": "Linfoadenectomia laterale solo se linfonodi laterali sospetti; stomia di protezione dopo anastomosi bassa."
+        },
+        {
+          "name": "FOLFOX adiuvante se poor responder (ypT3-4/ypN+)",
+          "aifa": "standard",
+          "key": "DFS a 3 anni 71,6% vs 62,9% (HR 0,657). Evidenza debole per l'adiuvante negli altri casi.",
+          "regimen": {
+            "trial": "ADORE",
+            "rows": [
+              ["Oxaliplatino", "85 mg/m² EV giorno 1"],
+              ["Leucovorin", "400 mg/m² EV giorno 1"],
+              ["5-fluorouracile", "400 mg/m² in bolo, poi 2400 mg/m² in infusione continua di 46 ore"]
+            ],
+            "note": "Ogni 14 giorni, fino a circa 6 mesi di trattamento perioperatorio complessivo.",
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ],
+      "note": "GRECCAR-2: escissione locale dopo risposta maggiore non completa sconsigliata fuori da trial."
+    },
+    "m_resecabilita": {
+      "type": "question",
+      "text": "La malattia è resecabile / oligometastatica?",
+      "short": "Resecabilità",
+      "info": "Carcinosi peritoneale: HIPEC senza beneficio in OS (PRODIGE 7), non va proposta fuori da studi.",
+      "answers": [
+        { "label": "Metastasi epatiche resecabili", "next": "m_oligo" },
+        { "label": "Malattia non resecabile", "next": "m_profilo" }
+      ]
+    },
+    "m_oligo": {
+      "type": "recommendation",
+      "title": "Trattamento locale + sistemico",
+      "options": [
+        {
+          "name": "Resezione R0 + FOLFOX4 perioperatorio",
+          "aifa": "standard",
+          "key": "Unico schema perioperatorio validato; cetuximab non aggiunge beneficio (New EPOC).",
+          "regimen": {
+            "trial": "EORTC 40983",
+            "endpoint": "PFS migliorata (endpoint primario); OS a 5 anni 51,2% vs 47,8%, non significativa",
+            "rows": [
+              ["Oxaliplatino", "85 mg/m² EV giorno 1"],
+              ["Leucovorin", "200 mg/m² EV giorni 1-2"],
+              ["5-fluorouracile", "400 mg/m² in bolo + 600 mg/m² in 22 ore, giorni 1-2"]
+            ],
+            "note": "Ogni 14 giorni: 6 cicli prima e 6 dopo la chirurgia.",
+            "sources": [{"type": "pubmed", "label": "EORTC 40983", "doi": "10.1016/S1470-2045(13)70447-9"}]
+          }
+        },
+        {
+          "name": "Trapianto di fegato (liver-limited non resecabile)",
+          "aifa": "standard",
+          "key": "Criteri stringenti: BRAF wild-type, CEA <80, PS 0-1. ESMO 2026 [II, A].",
+          "regimen": {
+            "trial": "TransMet",
+            "endpoint": "OS a 5 anni 56,6% vs 12,6%, HR 0,37",
+            "rows": [
+              ["Trapianto epatico", "dopo chemioterapia, con immunosoppressione dedicata"]
+            ],
+            "sources": [{"type": "pubmed", "label": "TransMet", "doi": "10.1016/S0140-6736(24)01595-2"}]
+          }
+        },
+        {
+          "name": "SABR delle oligometastasi polmonari",
+          "aifa": "standard",
+          "key": "SABR-COMET: OS a 5 anni 42,3% vs 17,7%."
+        }
+      ],
+      "next": { "label": "Alla recidiva → malattia non resecabile", "node": "m_profilo" }
+    },
+    "m_profilo": {
+      "type": "question",
+      "text": "Qual è il profilo molecolare?",
+      "short": "Profilo",
+      "info": "Profilo minimo: RAS (KRAS/NRAS), BRAF, MMR/MSI, HER2. Test DPYD prima delle fluoropirimidine.",
+      "answers": [
+        { "label": "MSI-H / dMMR", "next": "m_msi" },
+        { "label": "BRAF V600E", "next": "m_braf" },
+        { "label": "RAS e BRAF wild-type", "next": "m_sede" },
+        { "label": "RAS mutato", "next": "m_ras" }
+      ]
+    },
+    "m_msi": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "Nivolumab + ipilimumab",
+          "aifa": "reimbursed",
+          "key": "Nuovo standard per la maggior parte dei MSI-H; rimborsato in 1ª linea dal 29/04/2026.",
+          "regimen": {
+            "trial": "CheckMate 8HW",
+            "endpoint": "PFS vs nivolumab in monoterapia: HR 0,62",
+            "rows": [
+              ["Induzione", "nivolumab 240 mg + ipilimumab 1 mg/kg EV ogni 3 settimane ×4"],
+              ["Mantenimento", "nivolumab 480 mg EV ogni 4 settimane"]
+            ],
+            "note": "Fino a progressione o massimo 2 anni.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Pembrolizumab",
+          "aifa": "unknown",
+          "key": "Alternativa in monoterapia.",
+          "regimen": {
+            "trial": "KEYNOTE-177",
+            "endpoint": "PFS 16,5 vs 8,2 mesi (HR 0,60); OS HR 0,74, non significativa per il crossover",
+            "rows": [
+              ["Pembrolizumab", "200 mg EV ogni 3 settimane, fino a 35 cicli"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ],
+      "next": { "label": "Alla progressione → 2ª linea", "node": "m_2l" }
+    },
+    "m_braf": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "Encorafenib + cetuximab + mFOLFOX6",
+          "aifa": "reimbursed",
+          "key": "Legge 648/96 dal febbraio 2026 (Italia prima dell'EMA, approvazione UE 22/06/2026).",
+          "regimen": {
+            "trial": "BREAKWATER",
+            "endpoint": "PFS 12,8 vs 7,1 mesi (HR 0,53); OS 30,3 vs 15,1 mesi (HR 0,49)",
+            "rows": [
+              ["Encorafenib", "300 mg/die per os, in continuo"],
+              ["Cetuximab", "400 mg/m² carico, poi 250 mg/m² settimanale"],
+              ["+ mFOLFOX6", "ogni 2 settimane (in alternativa FOLFIRI)"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        }
+      ],
+      "next": { "label": "Alla progressione → 2ª linea", "node": "m_braf_2l" }
+    },
+    "m_braf_2l": {
+      "type": "recommendation",
+      "title": "2ª linea",
+      "options": [
+        {
+          "name": "Encorafenib + cetuximab (se non usati in 1ª linea)",
+          "aifa": "reimbursed",
+          "key": "Rimborsato dal 19/04/2022 (Registro BRAFTOVI-CRC), dopo almeno 1 linea.",
+          "regimen": {
+            "trial": "BEACON",
+            "endpoint": "OS con la doppietta 8,4 vs 5,4 mesi, HR 0,60",
+            "rows": [
+              ["Encorafenib", "300 mg/die per os, in continuo"],
+              ["Cetuximab", "400 → 250 mg/m² settimanale, oppure 500 mg/m² ogni 2 settimane"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Chemioterapia + bevacizumab",
+          "aifa": "standard",
+          "key": "Dopo BREAKWATER in 1ª linea.",
+          "regimen": {
+            "rows": [
+              ["Irinotecano", "180 mg/m² EV giorno 1"],
+              ["Leucovorin", "400 mg/m² EV giorno 1"],
+              ["5-fluorouracile", "400 mg/m² in bolo, poi 2400 mg/m² in infusione continua di 46 ore"],
+              ["Bevacizumab", "5 mg/kg EV ogni 2 settimane (o 7,5 mg/kg ogni 3 settimane con CAPOX)"]
+            ],
+            "note": "Ogni 14 giorni.",
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ],
+      "next": { "label": "Alla progressione → linee successive", "node": "m_later" }
+    },
+    "m_sede": {
+      "type": "question",
+      "text": "Qual è la sede del primitivo?",
+      "short": "Sede",
+      "info": "Sinistro: anti-EGFR preferito (OS HR 0,77); destro: bevacizumab preferito (PFS HR 0,73).",
+      "answers": [
+        { "label": "Colon sinistro / retto", "next": "m_sinistro" },
+        { "label": "Colon destro", "next": "m_destro" }
+      ]
+    },
+    "m_sinistro": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "Doppietta + anti-EGFR",
+          "aifa": "reimbursed",
+          "key": "FOLFOX o FOLFIRI + cetuximab o panitumumab.",
+          "regimen": {
+            "rows": [
+              ["Oxaliplatino", "85 mg/m² EV giorno 1"],
+              ["Leucovorin", "400 mg/m² EV giorno 1"],
+              ["5-fluorouracile", "400 mg/m² in bolo, poi 2400 mg/m² in infusione continua di 46 ore"],
+              ["Cetuximab o panitumumab", "cetuximab 500 mg/m² ogni 2 settimane (o 400 → 250 mg/m² settimanale); panitumumab 6 mg/kg ogni 2 settimane"]
+            ],
+            "note": "Ogni 14 giorni; in alternativa FOLFIRI.",
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ],
+      "next": { "label": "Alla progressione → 2ª linea", "node": "m_2l" }
+    },
+    "m_destro": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "FOLFOXIRI + bevacizumab",
+          "aifa": "reimbursed",
+          "key": "Preferita nel colon destro con buon PS.",
+          "regimen": {
+            "trial": "TRIBE",
+            "endpoint": "PFS 12,1 vs 9,7 mesi, HR 0,75 (OS 29,8 vs 25,8 mesi)",
+            "rows": [
+              ["FOLFOXIRI", "irinotecano 165 + oxaliplatino 85 + leucovorin 200 mg/m² + 5-FU 3200 mg/m² in 48 ore"],
+              ["Bevacizumab", "5 mg/kg EV ogni 2 settimane (o 7,5 mg/kg ogni 3 settimane con CAPOX)"]
+            ],
+            "note": "Ogni 14 giorni, fino a 12 cicli, poi mantenimento con 5-FU + bevacizumab.",
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "Doppietta + bevacizumab",
+          "aifa": "reimbursed",
+          "key": "Se la tripletta non è tollerabile.",
+          "regimen": {
+            "rows": [
+              ["Oxaliplatino", "85 mg/m² EV giorno 1"],
+              ["Leucovorin", "400 mg/m² EV giorno 1"],
+              ["5-fluorouracile", "400 mg/m² in bolo, poi 2400 mg/m² in infusione continua di 46 ore"],
+              ["Bevacizumab", "5 mg/kg EV ogni 2 settimane (o 7,5 mg/kg ogni 3 settimane con CAPOX)"]
+            ],
+            "note": "Ogni 14 giorni.",
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ],
+      "next": { "label": "Alla progressione → 2ª linea", "node": "m_2l" }
+    },
+    "m_ras": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "FOLFOXIRI + bevacizumab",
+          "aifa": "reimbursed",
+          "key": "Indicata nel RAS mutato con buon PS.",
+          "regimen": {
+            "trial": "TRIBE",
+            "endpoint": "PFS 12,1 vs 9,7 mesi, HR 0,75 (OS 29,8 vs 25,8 mesi)",
+            "rows": [
+              ["FOLFOXIRI", "irinotecano 165 + oxaliplatino 85 + leucovorin 200 mg/m² + 5-FU 3200 mg/m² in 48 ore"],
+              ["Bevacizumab", "5 mg/kg EV ogni 2 settimane (o 7,5 mg/kg ogni 3 settimane con CAPOX)"]
+            ],
+            "note": "Ogni 14 giorni, fino a 12 cicli, poi mantenimento.",
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "Doppietta + bevacizumab",
+          "aifa": "reimbursed",
+          "key": "Anti-EGFR inefficace nel RAS mutato.",
+          "regimen": {
+            "rows": [
+              ["Oxaliplatino", "85 mg/m² EV giorno 1"],
+              ["Leucovorin", "400 mg/m² EV giorno 1"],
+              ["5-fluorouracile", "400 mg/m² in bolo, poi 2400 mg/m² in infusione continua di 46 ore"],
+              ["Bevacizumab", "5 mg/kg EV ogni 2 settimane (o 7,5 mg/kg ogni 3 settimane con CAPOX)"]
+            ],
+            "note": "Ogni 14 giorni.",
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ],
+      "note": "KRAS G12C: sotorasib + panitumumab e adagrasib + cetuximab sono approvati solo dalla FDA.",
+      "next": { "label": "Alla progressione → 2ª linea", "node": "m_2l" }
+    },
+    "m_2l": {
+      "type": "recommendation",
+      "title": "2ª linea",
+      "options": [
+        {
+          "name": "Cambio di doppietta + antiangiogenico",
+          "aifa": "reimbursed",
+          "key": "FOLFIRI dopo FOLFOX (o viceversa) + bevacizumab.",
+          "regimen": {
+            "rows": [
+              ["Irinotecano", "180 mg/m² EV giorno 1"],
+              ["Leucovorin", "400 mg/m² EV giorno 1"],
+              ["5-fluorouracile", "400 mg/m² in bolo, poi 2400 mg/m² in infusione continua di 46 ore"],
+              ["Bevacizumab", "5 mg/kg EV ogni 2 settimane (o 7,5 mg/kg ogni 3 settimane con CAPOX)"]
+            ],
+            "note": "Ogni 14 giorni.",
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "Doppietta + anti-EGFR se RAS wild-type e non ancora usato",
+          "aifa": "reimbursed",
+          "key": "Nel sinistro RAS/BRAF wild-type pretrattato con bevacizumab.",
+          "regimen": {
+            "rows": [
+              ["Irinotecano", "180 mg/m² EV giorno 1"],
+              ["Leucovorin", "400 mg/m² EV giorno 1"],
+              ["5-fluorouracile", "400 mg/m² in bolo, poi 2400 mg/m² in infusione continua di 46 ore"],
+              ["Cetuximab o panitumumab", "cetuximab 500 mg/m² ogni 2 settimane (o 400 → 250 mg/m² settimanale); panitumumab 6 mg/kg ogni 2 settimane"]
+            ],
+            "note": "Ogni 14 giorni.",
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "Chemioterapia dopo immunoterapia (MSI-H)",
+          "aifa": "standard",
+          "key": "Doppietta ± biologico secondo sede e RAS.",
+          "regimen": {
+            "rows": [
+              ["Oxaliplatino", "85 mg/m² EV giorno 1"],
+              ["Leucovorin", "400 mg/m² EV giorno 1"],
+              ["5-fluorouracile", "400 mg/m² in bolo, poi 2400 mg/m² in infusione continua di 46 ore"],
+              ["Bevacizumab", "5 mg/kg EV ogni 2 settimane (o 7,5 mg/kg ogni 3 settimane con CAPOX)"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ],
+      "next": { "label": "Alla progressione → linee successive", "node": "m_later" }
+    },
+    "m_later": {
+      "type": "recommendation",
+      "title": "Linee successive",
+      "options": [
+        {
+          "name": "Trifluridina/tipiracil + bevacizumab",
+          "aifa": "reimbursed",
+          "key": "Nuovo standard trasversale [I, A]; rimborsato da marzo 2025.",
+          "regimen": {
+            "trial": "SUNLIGHT",
+            "endpoint": "OS 10,8 vs 7,5 mesi, HR 0,61",
+            "rows": [
+              ["Trifluridina/tipiracil", "35 mg/m² per os ×2/die, giorni 1-5 e 8-12"],
+              ["Bevacizumab", "5 mg/kg EV giorni 1 e 15"]
+            ],
+            "note": "Ciclo di 28 giorni.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Regorafenib",
+          "aifa": "reimbursed",
+          "key": "Tossicità cutanea mano-piede ed epatica.",
+          "regimen": {
+            "trial": "CORRECT",
+            "endpoint": "OS HR 0,77",
+            "rows": [
+              ["Regorafenib", "160 mg/die per os, giorni 1-21 ogni 28 giorni (spesso con dose escalation da 80 mg)"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "Trifluridina/tipiracil in monoterapia",
+          "aifa": "reimbursed",
+          "key": "Se il bevacizumab non è indicato.",
+          "regimen": {
+            "trial": "RECOURSE",
+            "endpoint": "OS HR 0,68",
+            "rows": [
+              ["Trifluridina/tipiracil", "35 mg/m² per os ×2/die, giorni 1-5 e 8-12"]
+            ],
+            "note": "Ciclo di 28 giorni.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Fruquintinib",
+          "aifa": "reimbursed",
+          "key": "Dalla 4ª linea, dopo TAS-102 o regorafenib; rimborsato da giugno 2025.",
+          "regimen": {
+            "trial": "FRESCO-2",
+            "endpoint": "OS HR 0,66",
+            "rows": [
+              ["Fruquintinib", "5 mg/die per os, giorni 1-21 ogni 28 giorni"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Rechallenge anti-EGFR guidato da ctDNA",
+          "aifa": "reimbursed",
+          "key": "RAS/BRAF wild-type alla biopsia liquida: migliora ORR e PFS rispetto a regorafenib non selezionato.",
+          "regimen": {
+            "rows": [
+              ["Cetuximab o panitumumab", "cetuximab 500 mg/m² ogni 2 settimane (o 400 → 250 mg/m² settimanale); panitumumab 6 mg/kg ogni 2 settimane"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "Tucatinib + trastuzumab (HER2 amplificato)",
+          "aifa": "not_reimbursed",
+          "key": "ORR 38%; approvato solo FDA, non disponibile nel SSN.",
+          "regimen": {
+            "trial": "MOUNTAINEER",
+            "rows": [
+              ["Tucatinib", "300 mg per os ×2/die, in continuo"],
+              ["Trastuzumab", "8 mg/kg carico, poi 6 mg/kg ogni 3 settimane"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Sotorasib + panitumumab (KRAS G12C)",
+          "aifa": "not_reimbursed",
+          "key": "Approvato solo FDA; nessuna indicazione EMA/AIFA nel CRC.",
+          "regimen": {
+            "trial": "CodeBreaK 300",
+            "endpoint": "PFS 5,6 vs 2,2 mesi, HR 0,49",
+            "rows": [
+              ["Sotorasib", "960 mg/die per os"],
+              ["Panitumumab", "6 mg/kg EV ogni 2 settimane"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        }
+      ],
+      "note": "Trastuzumab deruxtecan: approvazione UE tumor-agnostic (06/2026) ma nessuna rimborsabilità AIFA specifica per il CRC."
+    }
+  }
+}

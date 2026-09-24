@@ -1,0 +1,412 @@
+{
+  "id": "stomaco",
+  "title": "Stomaco",
+  "theme": "Gastrointestinali",
+  "scheda": "Schede/Gastrointestinali/Stomaco.md",
+  "start": "setting",
+  "nodes": {
+    "setting": {
+      "type": "question",
+      "text": "Qual è il setting della malattia?",
+      "short": "Setting",
+      "info": "Gastrectomia subtotale (terzo inferiore) o totale (terzo medio-superiore) con linfoadenectomia D2, in centri ad alto volume.",
+      "answers": [
+        { "label": "Localizzato resecabile", "next": "loc_mmr" },
+        { "label": "Avanzato / metastatico", "next": "adv_her2" }
+      ]
+    },
+    "loc_mmr": {
+      "type": "question",
+      "text": "Qual è lo stato MMR/MSI?",
+      "short": "MMR",
+      "answers": [
+        { "label": "pMMR / MSS", "next": "loc_perio" },
+        { "label": "dMMR / MSI-H", "next": "loc_msi" }
+      ]
+    },
+    "loc_perio": {
+      "type": "recommendation",
+      "title": "Terapia perioperatoria",
+      "options": [
+        {
+          "name": "Durvalumab + FLOT perioperatorio",
+          "aifa": "not_reimbursed",
+          "key": "Primo regime IO + CT perioperatorio con beneficio su EFS e OS (OS HR 0,78), indipendente dal PD-L1. Approvato UE 16/03/2026, non ancora rimborsato.",
+          "regimen": {
+            "trial": "MATTERHORN",
+            "rows": [
+              ["Durvalumab", "1500 mg EV ogni 4 settimane con FLOT (4 cicli complessivi), poi durvalumab ×10 cicli"],
+              ["Docetaxel", "50 mg/m² EV giorno 1"],
+              ["Oxaliplatino", "85 mg/m² EV giorno 1"],
+              ["Leucovorin", "200 mg/m² EV giorno 1"],
+              ["5-fluorouracile", "2600 mg/m² in infusione continua di 24 ore, giorno 1"]
+            ],
+            "note": "FLOT ogni 14 giorni, 4 cicli prima e 4 dopo la chirurgia.",
+            "sources": [{"type": "rimborsabilita"}, {"type": "standard"}]
+          }
+        },
+        {
+          "name": "FLOT perioperatorio",
+          "aifa": "standard",
+          "key": "Standard a carico del SSN in Italia.",
+          "regimen": {
+            "rows": [
+              ["Docetaxel", "50 mg/m² EV giorno 1"],
+              ["Oxaliplatino", "85 mg/m² EV giorno 1"],
+              ["Leucovorin", "200 mg/m² EV giorno 1"],
+              ["5-fluorouracile", "2600 mg/m² in infusione continua di 24 ore, giorno 1"]
+            ],
+            "note": "Ogni 14 giorni: 4 cicli prima e 4 dopo la chirurgia. Test DPYD prima delle fluoropirimidine.",
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ],
+      "note": "KEYNOTE-585 (pembrolizumab): pCR ed EFS migliori ma OS non significativa — non è standard.",
+      "next": { "label": "Alla recidiva → malattia avanzata", "node": "adv_her2" }
+    },
+    "loc_msi": {
+      "type": "recommendation",
+      "title": "Terapia perioperatoria",
+      "options": [
+        {
+          "name": "Doppia immunoterapia neoadiuvante, in studio clinico",
+          "aifa": "not_reimbursed",
+          "key": "NEONIPIGA (nivolumab + ipilimumab) e INFINITY (durvalumab + tremelimumab): pCR 59-60% senza chemioterapia. Non ancora raccomandata dalle linee guida."
+        },
+        {
+          "name": "Chirurgia ± chemioterapia perioperatoria",
+          "aifa": "standard",
+          "key": "Percorso standard fuori studio.",
+          "regimen": {
+            "rows": [
+              ["Docetaxel", "50 mg/m² EV giorno 1"],
+              ["Oxaliplatino", "85 mg/m² EV giorno 1"],
+              ["Leucovorin", "200 mg/m² EV giorno 1"],
+              ["5-fluorouracile", "2600 mg/m² in infusione continua di 24 ore, giorno 1"]
+            ],
+            "note": "Ogni 14 giorni: 4 cicli prima e 4 dopo la chirurgia. Test DPYD prima delle fluoropirimidine.",
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ],
+      "note": "Prospettiva di non-operative management nei dMMR/MSI-H di piccolo volume, ancora sperimentale.",
+      "next": { "label": "Alla recidiva → malattia avanzata", "node": "adv_her2" }
+    },
+    "adv_her2": {
+      "type": "question",
+      "text": "Qual è lo stato di HER2?",
+      "short": "HER2",
+      "info": "In 1ª linea il PD-L1 si misura con il CPS (non con il TAP). Test DPYD prima delle fluoropirimidine.",
+      "answers": [
+        { "label": "HER2 positivo (IHC 3+ o 2+/ISH+)", "next": "adv_pos" },
+        { "label": "HER2 negativo", "next": "adv_neg_bio" }
+      ]
+    },
+    "adv_pos": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "Chemioterapia + trastuzumab",
+          "aifa": "reimbursed",
+          "key": "Doppietta fluoropirimidina + platino.",
+          "regimen": {
+            "rows": [
+              ["Trastuzumab", "8 mg/kg EV carico, poi 6 mg/kg ogni 3 settimane"],
+              ["Cisplatino", "80 mg/m² EV giorno 1"],
+              ["Capecitabina", "1000 mg/m² per os ×2/die, giorni 1-14"]
+            ],
+            "note": "Ogni 21 giorni; in alternativa CAPOX o 5-FU/leucovorin + cisplatino.",
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "+ Pembrolizumab se CPS ≥1",
+          "aifa": "not_reimbursed",
+          "key": "Nella scheda Stomaco l'indicazione risulta in classe C(nn) (Determina 09/02/2026).",
+          "regimen": {
+            "trial": "KEYNOTE-811",
+            "endpoint": "OS 20,3 vs 14,3 mesi, HR 0,73",
+            "rows": [
+              ["Pembrolizumab", "200 mg EV ogni 3 settimane (fino a 35 cicli)"],
+              ["Trastuzumab", "8 mg/kg EV carico, poi 6 mg/kg ogni 3 settimane"],
+              ["+ fluoropirimidina e platino", "CAPOX o cisplatino-5-FU ×6 cicli"]
+            ],
+            "note": "Poi mantenimento con pembrolizumab + trastuzumab.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        }
+      ],
+      "note": "DESTINY-Gastric05 valuta T-DXd + ramucirumab in 1ª linea.",
+      "next": { "label": "Alla progressione → 2ª linea", "node": "st_2l_pos" }
+    },
+    "st_2l_pos": {
+      "type": "recommendation",
+      "title": "2ª linea",
+      "options": [
+        {
+          "name": "Trastuzumab deruxtecan",
+          "aifa": "reimbursed",
+          "key": "Nuovo standard; ri-biopsia HER2 non obbligatoria se la valutazione basale era adeguata. Rimborsato in classe H dal 2023.",
+          "regimen": {
+            "trial": "DESTINY-Gastric04",
+            "endpoint": "OS 14,7 vs 11,4 mesi, HR 0,70",
+            "rows": [
+              ["Trastuzumab deruxtecan", "6,4 mg/kg EV ogni 3 settimane"]
+            ],
+            "note": "ILD/polmonite nel 13,9% (per lo più G1-2).",
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Ramucirumab + paclitaxel",
+          "aifa": "reimbursed",
+          "key": "Standard storico.",
+          "regimen": {
+            "trial": "RAINBOW",
+            "endpoint": "OS 9,6 vs 7,4 mesi, HR 0,81",
+            "rows": [
+              ["Ramucirumab", "8 mg/kg EV giorni 1 e 15"],
+              ["Paclitaxel", "80 mg/m² EV giorni 1, 8 e 15"]
+            ],
+            "note": "Ogni 28 giorni.",
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ],
+      "next": { "label": "Alla progressione → linee successive", "node": "st_3l" }
+    },
+    "adv_neg_bio": {
+      "type": "question",
+      "text": "Quale biomarcatore guida la scelta?",
+      "short": "Biomarcatori",
+      "info": "Nivolumab e pembrolizumab non condividono il cut-off: CPS ≥5 per nivolumab, CPS ≥1 per pembrolizumab. MSI-H/dMMR: di solito CPS alto; doppia IO in sviluppo.",
+      "answers": [
+        { "label": "CLDN18.2 positivo (≥75%)", "next": "adv_cldn" },
+        { "label": "PD-L1 CPS ≥5", "next": "adv_cps5" },
+        { "label": "PD-L1 CPS 1-4", "next": "adv_cps1" },
+        { "label": "CPS <1 e CLDN18.2 negativo", "next": "adv_ct" }
+      ]
+    },
+    "adv_cldn": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "Zolbetuximab + CAPOX",
+          "aifa": "not_reimbursed",
+          "key": "Classe C(nn) (Determina 11/03/2026), test CLDN18.2 CE-IVD obbligatorio.",
+          "regimen": {
+            "trial": "GLOW",
+            "endpoint": "PFS 8,21 vs 6,80 mesi, HR 0,687 (OS 14,4 vs 12,2 mesi)",
+            "rows": [
+              ["Zolbetuximab", "800 mg/m² EV carico, poi 600 mg/m² ogni 3 settimane"],
+              ["Oxaliplatino", "130 mg/m² EV giorno 1"],
+              ["Capecitabina", "1000 mg/m² per os ×2/die, giorni 1-14"]
+            ],
+            "note": "Nausea e vomito soprattutto al 1° ciclo.",
+            "sources": [{"type": "rimborsabilita"}, {"type": "standard"}]
+          }
+        },
+        {
+          "name": "Nivolumab + chemioterapia se anche CPS ≥5",
+          "aifa": "reimbursed",
+          "key": "Alternativa rimborsata.",
+          "regimen": {
+            "trial": "CheckMate 649",
+            "endpoint": "OS 14,4 vs 11,1 mesi, HR 0,71",
+            "rows": [
+              ["Nivolumab", "360 mg EV ogni 3 settimane + CAPOX, oppure 240 mg ogni 2 settimane + FOLFOX"]
+            ],
+            "note": "Fino a progressione o massimo 2 anni.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        }
+      ],
+      "next": { "label": "Alla progressione → 2ª linea", "node": "st_2l_neg" }
+    },
+    "adv_cps5": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "Nivolumab + chemioterapia",
+          "aifa": "reimbursed",
+          "key": "Rimborsato in classe H da novembre 2022.",
+          "regimen": {
+            "trial": "CheckMate 649",
+            "endpoint": "OS 14,4 vs 11,1 mesi, HR 0,71",
+            "rows": [
+              ["Nivolumab", "360 mg EV ogni 3 settimane + CAPOX, oppure 240 mg ogni 2 settimane + FOLFOX"]
+            ],
+            "note": "Fino a progressione o massimo 2 anni.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Pembrolizumab + chemioterapia",
+          "aifa": "not_reimbursed",
+          "key": "Nei CPS ≥10: 15,7 vs 11,8 mesi (HR 0,65). Classe C(nn).",
+          "regimen": {
+            "trial": "KEYNOTE-859",
+            "endpoint": "OS nei CPS ≥1: 13,0 vs 11,4 mesi, HR 0,74",
+            "rows": [
+              ["Pembrolizumab", "200 mg EV ogni 3 settimane (fino a 35 cicli)"],
+              ["+ fluoropirimidina e platino", "FP o CAPOX ×6 cicli"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Tislelizumab + chemioterapia",
+          "aifa": "not_reimbursed",
+          "key": "Classe C(nn) (Determina 24/11/2025).",
+          "regimen": {
+            "trial": "RATIONALE-305",
+            "endpoint": "OS nei PD-L1 TAP ≥5%: 17,2 vs 12,6 mesi, HR 0,74",
+            "rows": [
+              ["Tislelizumab", "200 mg EV ogni 3 settimane"],
+              ["+ platino e fluoropirimidina", "induzione, poi mantenimento con tislelizumab"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        }
+      ],
+      "next": { "label": "Alla progressione → 2ª linea", "node": "st_2l_neg" }
+    },
+    "adv_cps1": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "Pembrolizumab + chemioterapia",
+          "aifa": "not_reimbursed",
+          "key": "Unico ICI con cut-off CPS ≥1; classe C(nn) in Italia.",
+          "regimen": {
+            "trial": "KEYNOTE-859",
+            "endpoint": "OS nei CPS ≥1: 13,0 vs 11,4 mesi, HR 0,74",
+            "rows": [
+              ["Pembrolizumab", "200 mg EV ogni 3 settimane (fino a 35 cicli)"],
+              ["+ fluoropirimidina e platino", "FP o CAPOX ×6 cicli"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Chemioterapia (CAPOX o FOLFOX)",
+          "aifa": "standard",
+          "key": "Opzione rimborsata in Italia per i CPS <5.",
+          "regimen": {
+            "rows": [
+              ["Oxaliplatino", "130 mg/m² EV giorno 1"],
+              ["Capecitabina", "1000 mg/m² per os ×2/die, giorni 1-14"]
+            ],
+            "note": "Ogni 21 giorni; in alternativa FOLFOX ogni 14 giorni.",
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ],
+      "next": { "label": "Alla progressione → 2ª linea", "node": "st_2l_neg" }
+    },
+    "adv_ct": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "Chemioterapia (CAPOX o FOLFOX)",
+          "aifa": "standard",
+          "key": "Doppietta fluoropirimidina + platino.",
+          "regimen": {
+            "rows": [
+              ["Oxaliplatino", "130 mg/m² EV giorno 1"],
+              ["Capecitabina", "1000 mg/m² per os ×2/die, giorni 1-14"]
+            ],
+            "note": "Ogni 21 giorni; in alternativa FOLFOX ogni 14 giorni.",
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ],
+      "note": "Bemarituzumab (FGFR2b): beneficio non confermato, non approvato.",
+      "next": { "label": "Alla progressione → 2ª linea", "node": "st_2l_neg" }
+    },
+    "st_2l_neg": {
+      "type": "recommendation",
+      "title": "2ª linea",
+      "options": [
+        {
+          "name": "Ramucirumab + paclitaxel",
+          "aifa": "reimbursed",
+          "key": "Standard di 2ª linea.",
+          "regimen": {
+            "trial": "RAINBOW",
+            "endpoint": "OS 9,6 vs 7,4 mesi, HR 0,81",
+            "rows": [
+              ["Ramucirumab", "8 mg/kg EV giorni 1 e 15"],
+              ["Paclitaxel", "80 mg/m² EV giorni 1, 8 e 15"]
+            ],
+            "note": "Ogni 28 giorni.",
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "Ramucirumab in monoterapia",
+          "aifa": "reimbursed",
+          "key": "Se il paclitaxel non è indicato.",
+          "regimen": {
+            "trial": "REGARD",
+            "endpoint": "OS 5,2 vs 3,8 mesi, HR 0,78",
+            "rows": [
+              ["Ramucirumab", "8 mg/kg EV ogni 2 settimane"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ],
+      "next": { "label": "Alla progressione → linee successive", "node": "st_3l" }
+    },
+    "st_3l": {
+      "type": "recommendation",
+      "title": "Linee successive",
+      "options": [
+        {
+          "name": "Trifluridina/tipiracil",
+          "aifa": "unknown",
+          "key": "Pazienti pesantemente pretrattati.",
+          "regimen": {
+            "trial": "TAGS",
+            "endpoint": "OS 5,7 vs 3,6 mesi, HR 0,69",
+            "rows": [
+              ["Trifluridina/tipiracil", "35 mg/m² per os ×2/die, giorni 1-5 e 8-12"]
+            ],
+            "note": "Ogni 28 giorni.",
+            "sources": [{"type": "pubmed", "label": "TAGS", "doi": "10.1016/S1470-2045(18)30739-3"}]
+          }
+        },
+        {
+          "name": "Irinotecano",
+          "aifa": "standard",
+          "key": "Opzione chemioterapica.",
+          "regimen": {
+            "rows": [
+              ["Irinotecano", "150-180 mg/m² EV ogni 2 settimane"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "Nivolumab in monoterapia",
+          "aifa": "not_reimbursed",
+          "key": "Studio asiatico; non approvato EMA in questa indicazione.",
+          "regimen": {
+            "trial": "ATTRACTION-2",
+            "endpoint": "OS 5,26 vs 4,14 mesi, HR 0,63",
+            "rows": [
+              ["Nivolumab", "3 mg/kg EV ogni 2 settimane"]
+            ],
+            "sources": [{"type": "pubmed", "label": "ATTRACTION-2", "doi": "10.1016/S0140-6736(17)31827-5"}]
+          }
+        }
+      ]
+    }
+  }
+}

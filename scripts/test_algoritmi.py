@@ -360,8 +360,11 @@ def rimborsabilita_section(title):
     return text.split(f"\n## {title}", 1)[1].split("\n## ", 1)[0]
 
 
-class ToraceAlgorithmsTest(unittest.TestCase):
-    CASES = {"polmone_sclc.algo.json": "SCLC (Polmone)", "mesotelioma.algo.json": "Mesotelioma"}
+class OrganAlgorithmsTest(unittest.TestCase):
+    CASES = {"polmone_sclc.algo.json": "SCLC (Polmone)", "mesotelioma.algo.json": "Mesotelioma",
+             "esofago.algo.json": "Esofago", "stomaco.algo.json": "Stomaco", "colonretto.algo.json": "Colon-Retto",
+             "ano.algo.json": "Ano", "pancreas.algo.json": "Pancreas", "viebiliari.algo.json": "Vie Biliari",
+             "epatocarcinoma.algo.json": "Epatocarcinoma (HCC)", "gist.algo.json": "GIST", "net.algo.json": "NET (Tumori Neuroendocrini)"}
 
     def load(self, name):
         return json.loads((ROOT / "Algoritmi" / name).read_text(encoding="utf-8"))
@@ -375,8 +378,9 @@ class ToraceAlgorithmsTest(unittest.TestCase):
                 self.assertEqual(validate_algorithm(self.load(name), ROOT), [])
 
     def test_rimborsabilita_doses_match_the_scheda(self):
+        missing = []
         for name, section in self.CASES.items():
-            text = rimborsabilita_section(section)
+            text = rimborsabilita_section(section).replace("/m²", "/m").replace("m2", "m")
             for node_id, node in self.load(name)["nodes"].items():
                 for option in node.get("options", []):
                     regimen = option.get("regimen")
@@ -384,8 +388,9 @@ class ToraceAlgorithmsTest(unittest.TestCase):
                         continue
                     for drug, dose in regimen["rows"]:
                         for amount in re.findall(r"\d+(?:,\d+)? mg(?:/kg|/m²)?", dose):
-                            self.assertIn(amount.replace("/m²", "/m"), text.replace("/m²", "/m").replace("m2", "m"),
-                                          f"{name} {node_id} / {drug}: {amount}")
+                            if amount.replace("/m²", "/m") not in text:
+                                missing.append(f"{name} {node_id} / {drug}: {amount}")
+        self.assertEqual(missing, [])
 
     def test_sclc_statuses_match_the_scheda(self):
         status = self.statuses(self.load("polmone_sclc.algo.json"))
@@ -406,3 +411,36 @@ class ToraceAlgorithmsTest(unittest.TestCase):
         names = [o["name"] for o in self.load("mesotelioma.algo.json")["nodes"]["adv_2l_post_io"]["options"]]
         self.assertNotIn("Nivolumab in monoterapia", names)
 
+
+
+class GastrointestinaliStatusTest(unittest.TestCase):
+    def status(self, name, node, option):
+        data = json.loads((ROOT / "Algoritmi" / name).read_text(encoding="utf-8"))
+        return {o["name"]: o["aifa"] for o in data["nodes"][node]["options"]}[option]
+
+    def test_trap_statuses_match_the_schede(self):
+        cases = [
+            ("esofago.algo.json", "loc_adj", "Nivolumab adiuvante 1 anno se malattia residua", "not_reimbursed"),
+            ("esofago.algo.json", "adv_scc", "Nivolumab + ipilimumab", "not_reimbursed"),
+            ("stomaco.algo.json", "adv_cldn", "Zolbetuximab + CAPOX", "not_reimbursed"),
+            ("stomaco.algo.json", "loc_perio", "Durvalumab + FLOT perioperatorio", "not_reimbursed"),
+            ("stomaco.algo.json", "st_2l_pos", "Trastuzumab deruxtecan", "reimbursed"),
+            ("colonretto.algo.json", "m_later", "Sotorasib + panitumumab (KRAS G12C)", "not_reimbursed"),
+            ("colonretto.algo.json", "m_msi", "Nivolumab + ipilimumab", "reimbursed"),
+            ("pancreas.algo.json", "m1_fit", "NALIRIFOX", "not_reimbursed"),
+            ("pancreas.algo.json", "m1_brca_mant", "Olaparib", "reimbursed"),
+            ("viebiliari.algo.json", "adv_her2", "Zanidatamab", "not_reimbursed"),
+            ("epatocarcinoma.algo.json", "hcc_1l_atezobev", "Nivolumab + ipilimumab", "not_reimbursed"),
+            ("epatocarcinoma.algo.json", "hcc_2l", "Ramucirumab se AFP ≥400 ng/mL", "not_reimbursed"),
+            ("gist.algo.json", "m1_ntrk", "Entrectinib", "not_reimbursed"),
+            ("ano.algo.json", "adv_1l", "Retifanlimab + carboplatino-paclitaxel", "not_reimbursed"),
+            ("net.algo.json", "adv_2l_pan", "Cabozantinib", "reimbursed"),
+        ]
+        for name, node, option, expected in cases:
+            with self.subTest(algo=name, option=option):
+                self.assertEqual(self.status(name, node, option), expected)
+
+    def test_gist_d842v_never_gets_adjuvant_imatinib(self):
+        data = json.loads((ROOT / "Algoritmi" / "gist.algo.json").read_text(encoding="utf-8"))
+        names = [o["name"] for o in data["nodes"]["adj_nessuna_mut"]["options"]]
+        self.assertEqual(names, ["Nessuna terapia adiuvante"])
