@@ -1,5 +1,6 @@
 import copy
 import json
+import re
 import tempfile
 import unittest
 from pathlib import Path
@@ -81,6 +82,32 @@ class ValidateAlgorithmTest(unittest.TestCase):
         del algo["nodes"]["r2"]["options"][0]["key"]
         errors = validate_algorithm(algo, self.root)
         self.assertIn("nodo 'r2': l'opzione 1 non ha 'key'", errors)
+
+    def test_valid_regimen_is_accepted(self):
+        algo = make_algo()
+        algo["nodes"]["r1"]["options"][0]["regimen"] = {
+            "rows": [["Farmaco X", "10 mg/die per os"]], "note": "Fino a progressione.",
+            "sources": [{"type": "rimborsabilita"}, {"type": "pubmed", "label": "Trial X", "doi": "10.1/x"}]}
+        self.assertEqual(validate_algorithm(algo, self.root), [])
+
+    def test_regimen_rows_must_be_pairs(self):
+        algo = make_algo()
+        algo["nodes"]["r1"]["options"][0]["regimen"] = {"rows": [["solo farmaco"]], "sources": [{"type": "standard"}]}
+        errors = validate_algorithm(algo, self.root)
+        self.assertTrue(any("[farmaco, dose]" in e for e in errors), errors)
+
+    def test_regimen_pubmed_source_needs_doi(self):
+        algo = make_algo()
+        algo["nodes"]["r1"]["options"][0]["regimen"] = {
+            "rows": [["X", "1 mg"]], "sources": [{"type": "pubmed", "label": "Trial X"}]}
+        errors = validate_algorithm(algo, self.root)
+        self.assertTrue(any("'label' e 'doi'" in e for e in errors), errors)
+
+    def test_regimen_source_type_is_checked(self):
+        algo = make_algo()
+        algo["nodes"]["r1"]["options"][0]["regimen"] = {"rows": [["X", "1 mg"]], "sources": [{"type": "web"}]}
+        errors = validate_algorithm(algo, self.root)
+        self.assertTrue(any("tipo non valido" in e for e in errors), errors)
 
     def test_invalid_node_type(self):
         algo = make_algo()
@@ -215,3 +242,31 @@ class MammellaAlgorithmTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class MammellaRegimenTest(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.data = json.loads(MAMMELLA.read_text(encoding="utf-8"))
+        text = (ROOT / "Schede" / "Trasversali" / "Rimborsabilita.md").read_text(encoding="utf-8")
+        cls.rimborsabilita = text.split("\n## Mammella", 1)[1].split("\n## ", 1)[0]
+
+    def options(self):
+        for node_id, node in self.data["nodes"].items():
+            if node["type"] == "recommendation":
+                for option in node["options"]:
+                    yield node_id, option
+
+    def test_every_drug_option_has_a_regimen(self):
+        # solo i trattamenti locali della recidiva non hanno uno schema farmacologico
+        missing = [(n, o["name"]) for n, o in self.options() if "regimen" not in o and not n.startswith("rec_")]
+        self.assertEqual(missing, [])
+
+    def test_rimborsabilita_doses_match_the_scheda(self):
+        for node_id, option in self.options():
+            regimen = option.get("regimen")
+            if not regimen or {s["type"] for s in regimen["sources"]} != {"rimborsabilita"}:
+                continue
+            for drug, dose in regimen["rows"]:
+                for amount in re.findall(r"\d+(?:,\d+)? mg(?:/kg)?", dose):
+                    self.assertIn(amount, self.rimborsabilita, f"{node_id} / {drug}: {amount}")

@@ -4,6 +4,32 @@ from pathlib import Path
 
 AIFA_VALUES = {"reimbursed", "not_reimbursed", "unknown", "standard"}
 REQUIRED_TOP = ("id", "title", "theme", "scheda", "start", "nodes")
+SOURCE_TYPES = {"rimborsabilita", "scheda", "pubmed", "standard"}
+
+
+def validate_regimen(regimen, where):
+    """Controlla lo schema posologico di un'opzione: righe [farmaco, dose] e fonti."""
+    if not isinstance(regimen, dict):
+        return [f"{where}: 'regimen' deve essere un oggetto"]
+    errors = []
+    rows = regimen.get("rows")
+    if not isinstance(rows, list) or not rows:
+        errors.append(f"{where}: 'regimen.rows' deve essere una lista non vuota")
+    else:
+        for i, row in enumerate(rows, start=1):
+            if not (isinstance(row, list) and len(row) == 2 and all(isinstance(c, str) and c for c in row)):
+                errors.append(f"{where}: la riga {i} dello schema deve essere [farmaco, dose]")
+    sources = regimen.get("sources")
+    if not isinstance(sources, list) or not sources:
+        errors.append(f"{where}: 'regimen.sources' deve essere una lista non vuota")
+    else:
+        for i, src in enumerate(sources, start=1):
+            kind = src.get("type") if isinstance(src, dict) else None
+            if kind not in SOURCE_TYPES:
+                errors.append(f"{where}: la fonte {i} ha un tipo non valido: {kind!r}")
+            elif kind == "pubmed" and not (src.get("label") and src.get("doi")):
+                errors.append(f"{where}: la fonte PubMed {i} deve avere 'label' e 'doi'")
+    return errors
 
 
 def validate_algorithm(data, root):
@@ -49,6 +75,8 @@ def validate_algorithm(data, root):
                         errors.append(f"{where}: l'opzione {i} non ha '{field}'")
                 if option.get("aifa") not in AIFA_VALUES:
                     errors.append(f"{where}: l'opzione {i} ha uno stato AIFA non valido: {option.get('aifa')!r}")
+                if "regimen" in option:
+                    errors.extend(validate_regimen(option["regimen"], f"{where}, opzione {i}"))
             if "next" in node:
                 nxt = node["next"] or {}
                 if not nxt.get("label"):

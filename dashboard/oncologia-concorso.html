@@ -679,69 +679,157 @@ button { font-family: inherit; cursor: pointer; }
   margin-left: auto; font-size: 0.68rem; color: var(--color-text-faint);
   background: var(--color-surface-offset); border-radius: 999px; padding: 2px 7px;
 }
-.ag-wrap { max-width: 760px; }
-.ag-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; }
-.ag-head h1 { font-family: var(--font-display); font-size: clamp(1.7rem, 3vw, 2.2rem); margin: 0; font-weight: 600; }
-.ag-link, .ag-open-btn {
+.ag { min-width: 0; }
+.ag-top { display: flex; align-items: flex-end; justify-content: space-between; gap: 14px; flex-wrap: wrap; margin-bottom: 20px; }
+.ag-eyebrow { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-primary); margin-bottom: 4px; }
+.ag-top h1 { font-family: var(--font-display); font-size: clamp(1.7rem, 3vw, 2.3rem); margin: 0; font-weight: 600; line-height: 1.1; }
+.ag-top-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.ag-link, .ag-open-btn, .ag-restart {
   display: inline-flex; align-items: center; gap: 6px;
   border: 1px solid var(--color-border); background: var(--color-surface-2); color: var(--color-primary);
   font-weight: 600; font-size: 0.84rem; border-radius: 10px; padding: 7px 12px;
 }
-.ag-link svg, .ag-open-btn svg { width: 14px; height: 14px; }
-.ag-link:hover, .ag-open-btn:hover { border-color: var(--color-primary); }
+.ag-restart { color: var(--color-text-muted); }
+.ag-link svg, .ag-open-btn svg, .ag-restart svg { width: 14px; height: 14px; }
+.ag-link:hover, .ag-open-btn:hover, .ag-restart:hover { border-color: var(--color-primary); color: var(--color-primary); }
 .ag-open-btn { margin-top: 14px; }
-.ag-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
-.ag-pill {
-  border: 1px solid var(--color-border); background: var(--color-surface-offset); color: var(--color-text);
-  border-radius: 999px; padding: 5px 12px; font-size: 0.8rem; font-weight: 500; text-align: left;
+
+/* banda della sequenza terapeutica */
+.ag-seq {
+  align-items: center;
+  display: flex; align-items: stretch; gap: 0; overflow-x: auto; margin-bottom: 22px;
+  background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 14px; padding: 12px 14px;
 }
-.ag-pill:hover { border-color: var(--color-primary); color: var(--color-primary); }
-.ag-question { background: var(--flow-criteria-bg); border: 1.5px solid var(--flow-criteria-border); border-radius: 14px; padding: 18px 20px; }
-.ag-q-text { font-size: 1.08rem; font-weight: 700; color: var(--flow-criteria-text); margin-bottom: 12px; }
-.ag-info { margin: 0 0 14px; font-size: 0.86rem; color: var(--flow-criteria-text); }
-.ag-info summary { cursor: pointer; display: inline-flex; align-items: center; gap: 6px; font-weight: 600; list-style: none; }
-.ag-info summary::-webkit-details-marker { display: none; }
-.ag-info > div { margin-top: 8px; padding: 10px 12px; border-radius: 10px; background: var(--flow-criteria-strip); line-height: 1.5; }
-.ag-i {
-  width: 16px; height: 16px; border-radius: 50%; border: 1.5px solid currentColor;
-  display: inline-flex; align-items: center; justify-content: center; font-size: 0.7rem; font-style: italic;
+.ag-seq-title { flex: none; align-self: center; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--color-text-muted); margin-right: 14px; writing-mode: horizontal-tb; }
+.ag-seq-step {
+  flex: none; display: flex; flex-direction: column; gap: 2px; min-width: 130px;
+  border: 1.5px solid var(--color-border); border-radius: 10px; padding: 8px 12px; background: var(--color-surface-2); text-align: left; color: var(--color-text);
 }
-.ag-answers { display: flex; flex-wrap: wrap; gap: 10px; }
+.ag-seq-step small { font-size: 0.66rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-faint); }
+.ag-seq-step strong { font-size: 0.9rem; }
+button.ag-seq-step:hover { border-color: var(--color-primary); }
+.ag-seq-step.is-done small { color: var(--flow-badge-green); }
+.ag-seq-step.is-current { border-color: var(--color-primary); background: var(--color-primary-soft); box-shadow: 0 0 0 3px var(--color-primary-highlight); }
+.ag-seq-step.is-current small { color: var(--color-primary); }
+.ag-seq-step.is-next { border-style: dashed; background: transparent; color: var(--color-text-muted); }
+.ag-seq-arrow { flex: none; align-self: center; display: flex; flex-direction: column; align-items: center; padding: 0 8px; color: var(--color-text-faint); font-size: 0.62rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+.ag-seq-arrow svg { width: 18px; height: 18px; }
+.ag-seq-or { font-size: 0.66rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-faint); margin: 1px 0; }
+
+/* griglia a tre colonne */
+.ag-grid { display: grid; grid-template-columns: 250px minmax(0, 1fr) 300px; gap: 24px; align-items: start; }
+.ag-panel { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 14px; padding: 16px; }
+.ag-panel + .ag-panel { margin-top: 14px; }
+.ag-panel h2 { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--color-text-muted); margin: 0 0 12px; }
+.ag-side { position: sticky; top: 20px; }
+
+/* timeline delle scelte */
+.ag-trail { list-style: none; margin: 0; padding: 0; }
+.ag-trail li { position: relative; padding-left: 30px; padding-bottom: 12px; }
+.ag-trail li::before { content: ""; position: absolute; left: 10px; top: 22px; bottom: 0; width: 2px; background: var(--color-divider); }
+.ag-trail li:last-child { padding-bottom: 0; }
+.ag-trail li:last-child::before { display: none; }
+.ag-dot {
+  position: absolute; left: 0; top: 2px; width: 22px; height: 22px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; font-size: 0.68rem; font-weight: 700;
+  background: var(--color-surface-offset); color: var(--color-text-muted); border: 1.5px solid var(--color-border);
+}
+.ag-trail .is-line .ag-dot { background: var(--flow-criteria-bg); color: var(--flow-criteria-text); border-color: var(--flow-criteria-border); }
+.ag-trail .is-now .ag-dot { background: var(--color-primary); color: var(--color-text-inverse); border-color: var(--color-primary); }
+.ag-trail button { display: block; width: 100%; text-align: left; border: 1px solid transparent; background: none; border-radius: 8px; padding: 2px 6px; margin-left: -6px; color: var(--color-text); }
+.ag-trail button:hover { border-color: var(--color-border); background: var(--color-surface-2); }
+.ag-trail button:hover .ag-t-edit { opacity: 1; }
+.ag-t-label { display: block; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-faint); }
+.ag-t-value { display: block; font-size: 0.88rem; font-weight: 600; line-height: 1.35; }
+.ag-t-sub { display: block; font-size: 0.76rem; color: var(--color-text-muted); line-height: 1.35; margin-top: 2px; }
+.ag-t-edit { float: right; opacity: 0; font-size: 0.7rem; color: var(--color-primary); font-weight: 600; transition: opacity 0.12s; }
+.ag-trail .is-now .ag-t-label { color: var(--color-primary); }
+.ag-trail-empty { font-size: 0.84rem; color: var(--color-text-muted); line-height: 1.5; margin: 0; }
+.ag-trail-hint { margin: 12px 0 0; font-size: 0.74rem; color: var(--color-text-faint); }
+
+/* colonna centrale */
+.ag-card { background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: 16px; padding: 24px 26px; box-shadow: var(--shadow-sm); }
+.ag-kicker { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--color-primary); }
+.ag-q-text { font-family: var(--font-display); font-size: clamp(1.3rem, 2.2vw, 1.7rem); font-weight: 600; line-height: 1.25; margin: 6px 0 20px; }
+.ag-answers { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; }
 .ag-answer {
-  background: var(--color-surface-2); border: 1.5px solid var(--flow-criteria-border); color: var(--flow-criteria-text);
-  font-weight: 700; font-size: 0.92rem; border-radius: 10px; padding: 10px 16px; text-align: left;
-  transition: background 0.12s, color 0.12s, transform 0.12s;
+  display: flex; flex-direction: column; gap: 6px; text-align: left;
+  background: var(--color-surface); border: 1.5px solid var(--color-border); color: var(--color-text);
+  border-radius: 12px; padding: 14px 16px; transition: border-color 0.12s, transform 0.12s, box-shadow 0.12s;
 }
-.ag-answer:hover { background: var(--flow-criteria-border); color: #fff; transform: translateY(-1px); }
-.ag-rec { background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: 14px; padding: 18px 20px; box-shadow: var(--shadow-sm); }
-.ag-rec-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-primary); }
-.ag-rec-title { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; margin: 2px 0 14px; }
-.ag-options { display: grid; gap: 12px; }
-.ag-option { border: 1px solid var(--color-border); border-left: 5px solid var(--flow-badge-grey); border-radius: 10px; padding: 12px 14px; background: var(--color-surface); }
-.ag-option.ag-aifa-reimbursed { border-left-color: var(--flow-badge-green); }
-.ag-option.ag-aifa-not_reimbursed { border-left-color: var(--flow-badge-red); }
-.ag-opt-name { font-weight: 700; font-size: 1rem; margin-bottom: 6px; }
-.ag-chip { display: inline-block; font-size: 0.72rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; color: #fff; background: var(--flow-badge-grey); }
-.ag-chip.ag-aifa-reimbursed { background: var(--flow-badge-green); }
-.ag-chip.ag-aifa-not_reimbursed { background: var(--flow-badge-red); }
-.ag-chip.ag-aifa-standard { background: var(--color-surface-offset); color: var(--color-text-muted); }
-.ag-opt-key { margin-top: 8px; font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.5; }
-.ag-detail { margin-top: 8px; font-size: 0.86rem; }
-.ag-detail summary { cursor: pointer; color: var(--color-primary); font-weight: 600; }
-.ag-detail > div { margin-top: 6px; line-height: 1.55; }
-.ag-note { margin-top: 14px; font-size: 0.86rem; color: var(--color-text-muted); border-left: 3px solid var(--color-primary); padding-left: 10px; }
+.ag-answer:hover { border-color: var(--color-primary); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+.ag-a-label { font-weight: 700; font-size: 1rem; }
+.ag-a-dest { font-size: 0.78rem; color: var(--color-text-muted); display: flex; gap: 5px; align-items: baseline; }
+.ag-a-dest b { color: var(--color-primary); font-weight: 600; }
+.ag-a-dest.is-therapy b { color: var(--flow-criteria-border); }
+.ag-rec-title { font-family: var(--font-display); font-size: clamp(1.4rem, 2.4vw, 1.8rem); font-weight: 600; margin: 4px 0 18px; }
+.ag-options { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 14px; }
+.ag-option { border: 1px solid var(--color-border); border-top: 4px solid var(--flow-badge-grey); border-radius: 12px; padding: 14px 16px; background: var(--color-surface); display: flex; flex-direction: column; gap: 8px; }
+.ag-option.ag-aifa-reimbursed { border-top-color: var(--flow-badge-green); }
+.ag-option.ag-aifa-not_reimbursed { border-top-color: var(--flow-badge-red); }
+.ag-option.ag-aifa-standard { border-top-color: var(--color-primary); }
+.ag-opt-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+.ag-opt-name { font-weight: 700; font-size: 1.02rem; line-height: 1.3; }
+.ag-chip { flex: none; display: inline-block; font-size: 0.7rem; font-weight: 700; padding: 3px 9px; border-radius: 999px; border: 1px solid var(--flow-badge-grey); color: var(--color-text-muted); background: var(--color-surface-offset); white-space: nowrap; }
+.ag-chip.ag-aifa-reimbursed { border-color: var(--flow-badge-green); color: var(--flow-criteria-text); background: var(--flow-criteria-bg); }
+.ag-chip.ag-aifa-not_reimbursed { border-color: var(--flow-badge-red); color: var(--flow-badge-red); background: transparent; }
+.ag-chip.ag-aifa-standard { border-color: var(--color-primary); color: var(--color-primary); background: var(--color-primary-soft); }
+.ag-opt-key { font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.5; }
+.ag-opt-detail { font-size: 0.84rem; line-height: 1.5; padding: 8px 10px; border-radius: 8px; background: var(--color-warn-highlight); }
+.ag-regimen { margin-top: 4px; border: 1px solid var(--color-key-border); background: var(--color-key-soft); border-radius: 10px; padding: 10px 12px; }
+.ag-reg-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--color-key); margin-bottom: 6px; }
+.ag-regimen table { width: 100%; border-collapse: collapse; font-size: 0.84rem; }
+.ag-regimen td { padding: 5px 0; vertical-align: top; border-top: 1px solid var(--color-key-border); line-height: 1.4; }
+.ag-regimen tr:first-child td { border-top: none; }
+.ag-regimen td:first-child { font-weight: 700; padding-right: 12px; width: 38%; }
+.ag-reg-note { font-size: 0.8rem; color: var(--color-text-muted); margin-top: 6px; }
+.ag-reg-src { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; align-items: center; font-size: 0.72rem; color: var(--color-text-faint); }
+.ag-src { font-size: 0.72rem; font-weight: 600; border: 1px solid var(--color-border); border-radius: 6px; padding: 1px 7px; background: var(--color-surface-2); color: var(--color-text-muted); text-decoration: none; }
+a.ag-src, button.ag-src { color: var(--color-key); cursor: pointer; }
+a.ag-src:hover, button.ag-src:hover { border-color: var(--color-key); }
+.ag-no-regimen { font-size: 0.8rem; color: var(--color-text-faint); font-style: italic; }
+.ag-note { margin-top: 18px; font-size: 0.88rem; color: var(--color-text-muted); border-left: 3px solid var(--color-primary); padding-left: 12px; line-height: 1.5; }
+.ag-next-wrap { margin-top: 22px; padding-top: 18px; border-top: 1px dashed var(--color-border); display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.ag-next-hint { font-size: 0.82rem; color: var(--color-text-muted); }
 .ag-next {
-  margin-top: 16px; display: inline-flex; align-items: center; gap: 8px;
+  display: inline-flex; align-items: center; gap: 8px;
   background: var(--color-primary); color: var(--color-text-inverse); border: none;
-  font-weight: 700; font-size: 0.9rem; border-radius: 10px; padding: 10px 16px;
+  font-weight: 700; font-size: 0.92rem; border-radius: 10px; padding: 11px 18px;
 }
 .ag-next svg { width: 15px; height: 15px; }
 .ag-next:hover { background: var(--color-primary-hover); }
-.ag-actions { margin-top: 18px; }
-.ag-restart { border: none; background: none; color: var(--color-text-muted); font-size: 0.84rem; text-decoration: underline; padding: 0; }
-@media (max-width: 640px) {
-  .ag-answers { flex-direction: column; }
-  .ag-answer { width: 100%; }
+.ag-end { font-size: 0.82rem; font-weight: 600; color: var(--color-text-muted); }
+
+/* colonna di contesto */
+.ag-info-text { font-size: 0.88rem; line-height: 1.55; margin: 0; }
+.ag-reach { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.ag-reach li { font-size: 0.82rem; line-height: 1.4; }
+.ag-reach b { display: block; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-faint); }
+.ag-more { font-size: 0.76rem; color: var(--color-text-faint); margin-top: 8px; }
+.ag-legend { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 0.8rem; color: var(--color-text-muted); }
+.ag-legend li { display: flex; gap: 8px; align-items: baseline; }
+.ag-legend .ag-chip, .ag-legend .ag-src { flex: none; }
+.ag-links { display: grid; gap: 8px; }
+.ag-links .ag-link { justify-content: space-between; }
+
+@media (max-width: 1280px) {
+  .ag-grid { grid-template-columns: 230px minmax(0, 1fr); }
+  .ag-context { grid-column: 1 / -1; position: static; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+  .ag-context .ag-panel + .ag-panel { margin-top: 0; }
+}
+@media (max-width: 860px) {
+  .ag-grid { grid-template-columns: minmax(0, 1fr); }
+  .ag-side { position: static; }
+  .ag-trail-wrap { order: -1; }
+  .ag-card { padding: 18px; }
+  .ag-options { grid-template-columns: minmax(0, 1fr); }
+  .ag-answers { grid-template-columns: minmax(0, 1fr); }
+  .ag-t-edit { opacity: 1; }
+}
+@media print {
+  .ag-top-actions, .ag-next-wrap, .ag-restart, .ag-open-btn { display: none !important; }
+  .ag-grid { grid-template-columns: 1fr; }
+  .ag-side { position: static; }
 }
 .back-to-top {
   position: fixed; right: 26px; bottom: 26px; z-index: 40;
@@ -1763,54 +1851,171 @@ function stepAlgorithm(newHistory) {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
+const RIMBORSABILITA_PATH = "Schede/Trasversali/Rimborsabilita.md";
+
+function agSourceHtml(src) {
+  if (src.type === "pubmed") {
+    return `<a class="ag-src" href="https://doi.org/${encodeURI(src.doi)}" target="_blank" rel="noopener" title="PubMed · DOI ${escapeHtml(src.doi)}">${escapeHtml(src.label)} · DOI</a>`;
+  }
+  if (src.type === "rimborsabilita") return `<button type="button" class="ag-src" data-open-path="${RIMBORSABILITA_PATH}" title="Apri la scheda Rimborsabilità">Scheda Rimborsabilità</button>`;
+  if (src.type === "scheda") return `<button type="button" class="ag-src" data-open-path="__scheda__" title="Apri la scheda di patologia">Scheda di patologia</button>`;
+  return `<span class="ag-src" title="Dose di pratica clinica/scheda tecnica, non verificata su PubMed">Dose standard</span>`;
+}
+
+function agRegimenHtml(reg) {
+  if (!reg) return `<div class="ag-no-regimen">Trattamento locale: nessuno schema farmacologico.</div>`;
+  return `
+    <div class="ag-regimen">
+      <div class="ag-reg-label">Schema di terapia</div>
+      <table><tbody>
+        ${reg.rows.map(([drug, dose]) => `<tr><td>${escapeHtml(drug)}</td><td>${escapeHtml(dose)}</td></tr>`).join("")}
+      </tbody></table>
+      ${reg.note ? `<div class="ag-reg-note">${escapeHtml(reg.note)}</div>` : ""}
+      <div class="ag-reg-src">Fonte: ${reg.sources.map(agSourceHtml).join("")}</div>
+    </div>`;
+}
+
+function agSequenceHtml(seq) {
+  if (!seq.done.length && !seq.current) return "";
+  const arrow = `<div class="ag-seq-arrow" aria-hidden="true">${ICONS.arrowRight}</div>`;
+  const steps = [
+    ...seq.done.map(d => `<button type="button" class="ag-seq-step is-done" data-rewind="${d.index}" title="Torna a questa linea"><small>✓ Superata</small><strong>${escapeHtml(d.title)}</strong></button>`),
+    ...(seq.current ? [`<div class="ag-seq-step is-current" aria-current="step"><small>Sei qui</small><strong>${escapeHtml(seq.current.title)}</strong></div>`] : []),
+    ...seq.upcoming.map(level => `<div class="ag-seq-step is-next"><small>${level.length > 1 ? "Possibile · a seconda del caso" : "Possibile"}</small>${level.map(t => `<strong>${escapeHtml(t)}</strong>`).join('<span class="ag-seq-or">oppure</span>')}</div>`),
+  ];
+  return `<nav class="ag-seq" aria-label="Sequenza terapeutica"><div class="ag-seq-title">Sequenza<br>terapeutica</div>${steps.join(arrow)}</nav>`;
+}
+
+function agTrailHtml(data, history, node) {
+  const steps = AlgoCore.trail(data, history);
+  const now = node.type === "question" ? (node.short || node.text) : node.title;
+  const items = steps.map((s, n) => s.kind === "line" ? `
+      <li class="is-line"><span class="ag-dot" aria-hidden="true">℞</span>
+        <button type="button" data-rewind="${s.index}" title="Torna a questa linea di terapia">
+          <span class="ag-t-edit">modifica</span>
+          <span class="ag-t-label">Linea superata</span>
+          <span class="ag-t-value">${escapeHtml(s.label)}</span>
+          <span class="ag-t-sub">${s.options.map(escapeHtml).join(" · ")}</span>
+        </button></li>` : `
+      <li><span class="ag-dot" aria-hidden="true">${n + 1}</span>
+        <button type="button" data-rewind="${s.index}" title="Torna a questa domanda">
+          <span class="ag-t-edit">modifica</span>
+          <span class="ag-t-label">${escapeHtml(s.label)}</span>
+          <span class="ag-t-value">${escapeHtml(s.value)}</span>
+        </button></li>`).join("");
+  return `
+    <div class="ag-panel">
+      <h2>Il tuo percorso</h2>
+      ${steps.length ? "" : `<p class="ag-trail-empty">Le scelte che fai compariranno qui, in ordine.</p>`}
+      <ol class="ag-trail">
+        ${items}
+        <li class="is-now"><span class="ag-dot" aria-hidden="true">●</span>
+          <button type="button" disabled><span class="ag-t-label">Adesso</span><span class="ag-t-value">${escapeHtml(now)}</span></button></li>
+      </ol>
+      ${steps.length ? `<p class="ag-trail-hint">Clicca un passaggio per tornarci e cambiare risposta.</p>` : ""}
+    </div>`;
+}
+
+function agContextHtml(data, history, node, nodeId, scheda) {
+  const panels = [];
+  if (node.type === "question" && node.info) {
+    panels.push(`<div class="ag-panel"><h2>Chiarimento</h2><p class="ag-info-text">${escapeHtml(node.info)}</p></div>`);
+  }
+  if (node.type === "question") {
+    const recs = AlgoCore.reachable(data, nodeId);
+    const shown = recs.slice(0, 6);
+    panels.push(`
+      <div class="ag-panel"><h2>Terapie raggiungibili da qui</h2>
+        <ul class="ag-reach">
+          ${shown.map(id => { const r = data.nodes[id]; return `<li><b>${escapeHtml(r.title)}</b>${r.options.map(o => escapeHtml(o.name)).join(" · ")}</li>`; }).join("")}
+        </ul>
+        ${recs.length > shown.length ? `<div class="ag-more">e altre ${recs.length - shown.length} raccomandazioni lungo i rami successivi.</div>` : ""}
+      </div>`);
+  }
+  panels.push(`
+    <div class="ag-panel"><h2>Legenda</h2>
+      <ul class="ag-legend">
+        <li><span class="ag-chip ag-aifa-reimbursed">${AlgoCore.aifaLabel("reimbursed")}</span> farmaco con rimborso SSN per questa indicazione</li>
+        <li><span class="ag-chip ag-aifa-not_reimbursed">${AlgoCore.aifaLabel("not_reimbursed")}</span> approvato altrove, non prescrivibile SSN</li>
+        <li><span class="ag-chip ag-aifa-standard">${AlgoCore.aifaLabel("standard")}</span> trattamento consolidato</li>
+        <li><span class="ag-chip ag-aifa-unknown">${AlgoCore.aifaLabel("unknown")}</span> stato regolatorio incerto</li>
+        <li><span class="ag-src">Dose standard</span> dose di pratica clinica, non verificata su PubMed</li>
+      </ul>
+    </div>`);
+  const rimb = state.items.find(i => i.relative_path === RIMBORSABILITA_PATH);
+  panels.push(`
+    <div class="ag-panel"><h2>Approfondisci</h2>
+      <div class="ag-links">
+        ${scheda ? `<button type="button" class="ag-link" data-open-path="__scheda__">Scheda ${escapeHtml(data.title)} ${ICONS.arrowRight}</button>` : ""}
+        ${rimb ? `<button type="button" class="ag-link" data-open-path="${RIMBORSABILITA_PATH}">Rimborsabilità e schemi ${ICONS.arrowRight}</button>` : ""}
+      </div>
+    </div>`);
+  return panels.join("");
+}
+
 function renderAlgorithm() {
   const { summary, data } = state.activeAlgorithm;
   const history = state.algoHistory;
-  const node = data.nodes[AlgoCore.currentNodeId(data, history)];
+  const nodeId = AlgoCore.currentNodeId(data, history);
+  const node = data.nodes[nodeId];
   const scheda = state.items.find(i => i.relative_path === summary.scheda);
   const content = document.getElementById("content");
-
-  const pillsHtml = history.length ? `
-    <div class="ag-pills">
-      ${AlgoCore.pills(data, history).map(p => `
-        <button type="button" class="ag-pill" data-rewind="${p.index}" title="Torna a questo passaggio">${escapeHtml(p.label)} <span aria-hidden="true">✎</span></button>
-      `).join("")}
-    </div>` : "";
+  setReaderMode(true);
+  const questionNumber = history.filter(s => s.choice !== "next").length + 1;
 
   const stepHtml = node.type === "question" ? `
-    <div class="ag-question">
-      <div class="ag-q-text">${escapeHtml(node.text)}</div>
-      ${node.info ? `<details class="ag-info"><summary><span class="ag-i">i</span> Chiarimento</summary><div>${escapeHtml(node.info)}</div></details>` : ""}
+    <div class="ag-card ag-q">
+      <div class="ag-kicker">Domanda ${questionNumber}</div>
+      <h2 class="ag-q-text">${escapeHtml(node.text)}</h2>
       <div class="ag-answers">
-        ${node.answers.map((a, i) => `<button type="button" class="ag-answer" data-answer="${i}">${escapeHtml(a.label)}</button>`).join("")}
+        ${node.answers.map((a, i) => {
+          const dest = AlgoCore.preview(data, a.next);
+          const destHtml = dest.kind === "recommendation"
+            ? `<span class="ag-a-dest is-therapy">→ <b>Terapia · ${escapeHtml(dest.label)}</b></span>`
+            : `<span class="ag-a-dest">→ poi: <b>${escapeHtml(dest.label)}</b></span>`;
+          return `<button type="button" class="ag-answer" data-answer="${i}"><span class="ag-a-label">${escapeHtml(a.label)}</span>${destHtml}</button>`;
+        }).join("")}
       </div>
     </div>` : `
-    <div class="ag-rec">
-      <div class="ag-rec-label">Raccomandazione</div>
-      <div class="ag-rec-title">${escapeHtml(node.title)}</div>
+    <div class="ag-card ag-rec">
+      <div class="ag-kicker">Raccomandazione</div>
+      <h2 class="ag-rec-title">${escapeHtml(node.title)}</h2>
       <div class="ag-options">
         ${node.options.map(o => `
-          <div class="ag-option ag-aifa-${escapeHtml(o.aifa)}">
-            <div class="ag-opt-name">${escapeHtml(o.name)}</div>
-            <span class="ag-chip ag-aifa-${escapeHtml(o.aifa)}">${escapeHtml(AlgoCore.aifaLabel(o.aifa))}</span>
+          <article class="ag-option ag-aifa-${escapeHtml(o.aifa)}">
+            <div class="ag-opt-head">
+              <div class="ag-opt-name">${escapeHtml(o.name)}</div>
+              <span class="ag-chip ag-aifa-${escapeHtml(o.aifa)}">${escapeHtml(AlgoCore.aifaLabel(o.aifa))}</span>
+            </div>
             <div class="ag-opt-key">${escapeHtml(o.key)}</div>
-            ${o.detail ? `<details class="ag-detail"><summary>Dettagli</summary><div>${escapeHtml(o.detail)}</div></details>` : ""}
-          </div>
+            ${o.detail ? `<div class="ag-opt-detail">${escapeHtml(o.detail)}</div>` : ""}
+            ${agRegimenHtml(o.regimen)}
+          </article>
         `).join("")}
       </div>
       ${node.note ? `<div class="ag-note">${escapeHtml(node.note)}</div>` : ""}
-      ${node.next ? `<button type="button" class="ag-next" data-proceed>${escapeHtml(node.next.label)} ${ICONS.arrowRight}</button>` : ""}
+      <div class="ag-next-wrap">
+        ${node.next
+          ? `<span class="ag-next-hint">Passo successivo della sequenza:</span><button type="button" class="ag-next" data-proceed>${escapeHtml(node.next.label)} ${ICONS.arrowRight}</button>`
+          : `<span class="ag-end">Fine del percorso per questo ramo.</span>`}
+      </div>
     </div>`;
 
   content.innerHTML = `
-    <div class="ag-wrap">
-      <div class="ag-head">
-        <h1>${escapeHtml(data.title)}</h1>
-        ${scheda ? `<button type="button" class="ag-link" data-open-scheda>Vai alla scheda ${ICONS.arrowRight}</button>` : ""}
+    <div class="ag">
+      <header class="ag-top">
+        <div><div class="ag-eyebrow">Algoritmo guidato</div><h1>${escapeHtml(data.title)}</h1></div>
+        <div class="ag-top-actions">
+          ${history.length ? `<button type="button" class="ag-restart" data-restart>↺ Ricomincia</button>` : ""}
+          ${scheda ? `<button type="button" class="ag-link" data-open-path="__scheda__">Vai alla scheda ${ICONS.arrowRight}</button>` : ""}
+        </div>
+      </header>
+      ${agSequenceHtml(AlgoCore.sequence(data, history))}
+      <div class="ag-grid">
+        <aside class="ag-side ag-trail-wrap">${agTrailHtml(data, history, node)}</aside>
+        <section class="ag-main">${stepHtml}</section>
+        <aside class="ag-side ag-context">${agContextHtml(data, history, node, nodeId, scheda)}</aside>
       </div>
-      ${pillsHtml}
-      ${stepHtml}
-      ${history.length ? `<div class="ag-actions"><button type="button" class="ag-restart" data-restart>Ricomincia</button></div>` : ""}
     </div>
   `;
 
@@ -1822,7 +2027,13 @@ function renderAlgorithm() {
   });
   content.querySelector("[data-proceed]")?.addEventListener("click", () => stepAlgorithm(AlgoCore.proceed(data, state.algoHistory)));
   content.querySelector("[data-restart]")?.addEventListener("click", () => stepAlgorithm([]));
-  content.querySelector("[data-open-scheda]")?.addEventListener("click", () => openScheda(scheda));
+  content.querySelectorAll("[data-open-path]").forEach(b => {
+    b.addEventListener("click", () => {
+      const path = b.dataset.openPath === "__scheda__" ? summary.scheda : b.dataset.openPath;
+      const item = state.items.find(i => i.relative_path === path);
+      if (item) openScheda(item);
+    });
+  });
 }
 
 
