@@ -19,6 +19,15 @@ def validate_regimen(regimen, where):
         for i, row in enumerate(rows, start=1):
             if not (isinstance(row, list) and len(row) == 2 and all(isinstance(c, str) and c for c in row)):
                 errors.append(f"{where}: la riga {i} dello schema deve essere [farmaco, dose]")
+    for field in ("trial", "endpoint"):
+        if field in regimen and not (isinstance(regimen[field], str) and regimen[field]):
+            errors.append(f"{where}: 'regimen.{field}' deve essere un testo non vuoto")
+    endpoint = regimen.get("endpoint")
+    if isinstance(endpoint, str) and endpoint:
+        if "trial" not in regimen:
+            errors.append(f"{where}: 'regimen.endpoint' richiede 'regimen.trial'")
+        if not endpoint.startswith(("PFS", "OS")):
+            errors.append(f"{where}: l'endpoint primario si riporta solo se è PFS o OS")
     sources = regimen.get("sources")
     if not isinstance(sources, list) or not sources:
         errors.append(f"{where}: 'regimen.sources' deve essere una lista non vuota")

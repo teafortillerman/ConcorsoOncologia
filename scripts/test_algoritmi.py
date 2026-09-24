@@ -86,6 +86,7 @@ class ValidateAlgorithmTest(unittest.TestCase):
     def test_valid_regimen_is_accepted(self):
         algo = make_algo()
         algo["nodes"]["r1"]["options"][0]["regimen"] = {
+            "trial": "Trial X", "endpoint": "PFS 10,0 vs 5,0 mesi, HR 0,50",
             "rows": [["Farmaco X", "10 mg/die per os"]], "note": "Fino a progressione.",
             "sources": [{"type": "rimborsabilita"}, {"type": "pubmed", "label": "Trial X", "doi": "10.1/x"}]}
         self.assertEqual(validate_algorithm(algo, self.root), [])
@@ -102,6 +103,21 @@ class ValidateAlgorithmTest(unittest.TestCase):
             "rows": [["X", "1 mg"]], "sources": [{"type": "pubmed", "label": "Trial X"}]}
         errors = validate_algorithm(algo, self.root)
         self.assertTrue(any("'label' e 'doi'" in e for e in errors), errors)
+
+    def test_regimen_endpoint_must_be_pfs_or_os(self):
+        algo = make_algo()
+        algo["nodes"]["r1"]["options"][0]["regimen"] = {
+            "trial": "Trial X", "endpoint": "pCR 64,8% vs 51,2%",
+            "rows": [["X", "1 mg"]], "sources": [{"type": "standard"}]}
+        errors = validate_algorithm(algo, self.root)
+        self.assertTrue(any("PFS o OS" in e for e in errors), errors)
+
+    def test_regimen_endpoint_needs_trial(self):
+        algo = make_algo()
+        algo["nodes"]["r1"]["options"][0]["regimen"] = {
+            "endpoint": "PFS 10 vs 5 mesi", "rows": [["X", "1 mg"]], "sources": [{"type": "standard"}]}
+        errors = validate_algorithm(algo, self.root)
+        self.assertTrue(any("richiede 'regimen.trial'" in e for e in errors), errors)
 
     def test_regimen_source_type_is_checked(self):
         algo = make_algo()
@@ -270,3 +286,10 @@ class MammellaRegimenTest(unittest.TestCase):
             for drug, dose in regimen["rows"]:
                 for amount in re.findall(r"\d+(?:,\d+)? mg(?:/kg)?", dose):
                     self.assertIn(amount, self.rimborsabilita, f"{node_id} / {drug}: {amount}")
+
+    def test_new_targeted_drugs_name_their_registration_trial(self):
+        expected = {"Elacestrant": "EMERALD", "Capivasertib + fulvestrant": "CAPItello-291",
+                    "Tucatinib + trastuzumab + capecitabina": "HER2CLIMB", "Datopotamab deruxtecan": "TROPION-Breast01"}
+        found = {o["name"]: o["regimen"].get("trial") for _, o in self.options() if o["name"] in expected}
+        self.assertEqual(found, expected)
+

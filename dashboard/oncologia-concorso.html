@@ -782,11 +782,10 @@ button.ag-seq-step:hover { border-color: var(--color-primary); }
 .ag-regimen td { padding: 5px 0; vertical-align: top; border-top: 1px solid var(--color-key-border); line-height: 1.4; }
 .ag-regimen tr:first-child td { border-top: none; }
 .ag-regimen td:first-child { font-weight: 700; padding-right: 12px; width: 38%; }
+.ag-trial { display: flex; flex-direction: column; gap: 2px; padding-bottom: 8px; margin-bottom: 8px; border-bottom: 1px solid var(--color-key-border); }
+.ag-trial strong { font-size: 0.92rem; }
+.ag-endpoint { font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.4; }
 .ag-reg-note { font-size: 0.8rem; color: var(--color-text-muted); margin-top: 6px; }
-.ag-reg-src { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; align-items: center; font-size: 0.72rem; color: var(--color-text-faint); }
-.ag-src { font-size: 0.72rem; font-weight: 600; border: 1px solid var(--color-border); border-radius: 6px; padding: 1px 7px; background: var(--color-surface-2); color: var(--color-text-muted); text-decoration: none; }
-a.ag-src, button.ag-src { color: var(--color-key); cursor: pointer; }
-a.ag-src:hover, button.ag-src:hover { border-color: var(--color-key); }
 .ag-no-regimen { font-size: 0.8rem; color: var(--color-text-faint); font-style: italic; }
 .ag-note { margin-top: 18px; font-size: 0.88rem; color: var(--color-text-muted); border-left: 3px solid var(--color-primary); padding-left: 12px; line-height: 1.5; }
 .ag-next-wrap { margin-top: 22px; padding-top: 18px; border-top: 1px dashed var(--color-border); display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
@@ -808,7 +807,7 @@ a.ag-src:hover, button.ag-src:hover { border-color: var(--color-key); }
 .ag-more { font-size: 0.76rem; color: var(--color-text-faint); margin-top: 8px; }
 .ag-legend { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 0.8rem; color: var(--color-text-muted); }
 .ag-legend li { display: flex; gap: 8px; align-items: baseline; }
-.ag-legend .ag-chip, .ag-legend .ag-src { flex: none; }
+.ag-legend .ag-chip { flex: none; }
 .ag-links { display: grid; gap: 8px; }
 .ag-links .ag-link { justify-content: space-between; }
 
@@ -1853,25 +1852,16 @@ function stepAlgorithm(newHistory) {
 
 const RIMBORSABILITA_PATH = "Schede/Trasversali/Rimborsabilita.md";
 
-function agSourceHtml(src) {
-  if (src.type === "pubmed") {
-    return `<a class="ag-src" href="https://doi.org/${encodeURI(src.doi)}" target="_blank" rel="noopener" title="PubMed · DOI ${escapeHtml(src.doi)}">${escapeHtml(src.label)} · DOI</a>`;
-  }
-  if (src.type === "rimborsabilita") return `<button type="button" class="ag-src" data-open-path="${RIMBORSABILITA_PATH}" title="Apri la scheda Rimborsabilità">Scheda Rimborsabilità</button>`;
-  if (src.type === "scheda") return `<button type="button" class="ag-src" data-open-path="__scheda__" title="Apri la scheda di patologia">Scheda di patologia</button>`;
-  return `<span class="ag-src" title="Dose di pratica clinica/scheda tecnica, non verificata su PubMed">Dose standard</span>`;
-}
-
 function agRegimenHtml(reg) {
   if (!reg) return `<div class="ag-no-regimen">Trattamento locale: nessuno schema farmacologico.</div>`;
   return `
     <div class="ag-regimen">
+      ${reg.trial ? `<div class="ag-trial"><span class="ag-reg-label">Studio registrativo</span><strong>${escapeHtml(reg.trial)}</strong>${reg.endpoint ? `<span class="ag-endpoint">Endpoint primario · ${escapeHtml(reg.endpoint)}</span>` : ""}</div>` : ""}
       <div class="ag-reg-label">Schema di terapia</div>
       <table><tbody>
         ${reg.rows.map(([drug, dose]) => `<tr><td>${escapeHtml(drug)}</td><td>${escapeHtml(dose)}</td></tr>`).join("")}
       </tbody></table>
       ${reg.note ? `<div class="ag-reg-note">${escapeHtml(reg.note)}</div>` : ""}
-      <div class="ag-reg-src">Fonte: ${reg.sources.map(agSourceHtml).join("")}</div>
     </div>`;
 }
 
@@ -1939,7 +1929,6 @@ function agContextHtml(data, history, node, nodeId, scheda) {
         <li><span class="ag-chip ag-aifa-not_reimbursed">${AlgoCore.aifaLabel("not_reimbursed")}</span> approvato altrove, non prescrivibile SSN</li>
         <li><span class="ag-chip ag-aifa-standard">${AlgoCore.aifaLabel("standard")}</span> trattamento consolidato</li>
         <li><span class="ag-chip ag-aifa-unknown">${AlgoCore.aifaLabel("unknown")}</span> stato regolatorio incerto</li>
-        <li><span class="ag-src">Dose standard</span> dose di pratica clinica, non verificata su PubMed</li>
       </ul>
     </div>`);
   const rimb = state.items.find(i => i.relative_path === RIMBORSABILITA_PATH);
