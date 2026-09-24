@@ -107,11 +107,11 @@
       "title": "Ano",
       "name": "Ano.md",
       "relative_path": "Schede/Gastrointestinali/Ano.md",
-      "modified": "2026-09-24T08:05:46",
-      "size_bytes": 26168,
+      "modified": "2026-09-24T16:45:26",
+      "size_bytes": 25059,
       "extension": ".md",
       "preview": "Ano · Definizione e inquadramento · Il carcinoma squamocellulare (SCC) del canale anale rappresenta un modello paradigmatico di conservazione d'organo in oncologia: la chemioradioterapia esclusiva, evoluzione del protocollo di Nigro, ha completamente sostituito la chirurgia primaria demolitiva che un tempo rappresentava l'unica opzione terapeutica. Questo cambiamento di paradigma, avvenuto negli anni '70-'80, resta uno degli esempi più significativi di come un trattamento non chirurgico possa sostituire un intervento mutilante mantenendo (e migliorando) gli esiti oncologici. · L'ambito clinico è quello dell'oncologia medica in stretta integrazione con la radioterapia, con particolare attenzione alla gestione delle popolazioni a rischio (persone HIV-positive, pazienti immunosoppressi). · Questa scheda si basa su AIOM Neoplasie del Retto e dell'Ano 2025 (capitoli dedicati al canale anale), integrata con verifiche di letteratura successive, in particolare sulla malattia avanzata/metastatica (vedi sezione dedicata).",
-      "word_count": 3456,
+      "word_count": 3363,
       "reading_time_min": 17
     },
     {
@@ -120,12 +120,12 @@
       "title": "Colon Retto",
       "name": "ColonRetto.md",
       "relative_path": "Schede/Gastrointestinali/ColonRetto.md",
-      "modified": "2026-09-24T08:05:46",
-      "size_bytes": 52015,
+      "modified": "2026-09-24T16:45:26",
+      "size_bytes": 47345,
       "extension": ".md",
       "preview": "ColonRetto · Definizione e inquadramento · L'adenocarcinoma del colon e del retto (CRC) rappresenta una malattia eterogenea per definizione, che comprende lo stadio precoce/operabile, la malattia localmente avanzata (soprattutto nel retto, dove il ruolo della terapia neoadiuvante/TNT è centrale), e la malattia avanzata/metastatica, dove le decisioni terapeutiche sono sempre più guidate dal profilo molecolare (RAS, BRAF, MSI, HER2, KRAS G12C). Sebbene colon e retto condividano l'istologia di base, le differenze biologiche e anatomiche tra le due sedi — in particolare per quanto riguarda l'approccio chirurgico, il ruolo della radioterapia e il comportamento delle sindromi ereditarie — richiedono una trattazione spesso separata. · L'ambito clinico è quello dell'oncologia medica gastrointestinale, in stretta integrazione con la chirurgia colorettale, la radioterapia (per il retto) e la genetica oncologica, data la rilevanza delle sindromi ereditarie di predisposizione. · Questa scheda si basa su AIOM Colon 2024, AIOM Retto e Ano 2025, ESMO CPG ColonRetto 2026, ESMO CPG Retto 2025, ESMO CPG Tumori Ereditari GI 2019 e il Congresso Grandangolo 2025, integrata con verifiche di letteratura successive (ATOMIC, BREAKWATER aggiornamento regolatorio, DYNAMIC-III — vedi sezioni dedicate).",
-      "word_count": 6792,
-      "reading_time_min": 34
+      "word_count": 6409,
+      "reading_time_min": 32
     },
     {
       "category": "Schede",
@@ -133,12 +133,12 @@
       "title": "Epatocarcinoma",
       "name": "Epatocarcinoma.md",
       "relative_path": "Schede/Gastrointestinali/Epatocarcinoma.md",
-      "modified": "2026-09-24T08:05:46",
-      "size_bytes": 44234,
+      "modified": "2026-09-24T16:45:26",
+      "size_bytes": 39490,
       "extension": ".md",
       "preview": "Epatocarcinoma · Definizione e inquadramento · Il carcinoma epatocellulare (HCC) occupa una posizione unica nel panorama oncologico: è l'unico tumore solido per cui il **trapianto d'organo** rappresenta un'opzione curativa consolidata, poiché il trapianto tratta contemporaneamente il tumore e la malattia epatica cronica sottostante. Questa peculiarità riflette la biologia stessa dell'HCC, che si sviluppa in oltre il **90%** dei casi su un fegato già cirrotico — una condizione che condiziona profondamente sia la prognosi sia la scelta terapeutica, poiché ogni decisione deve bilanciare il controllo oncologico con la riserva funzionale epatica residua. · L'ambito clinico richiede una gestione obbligatoriamente multidisciplinare, che coinvolge epatologo, chirurgo epatico, chirurgo trapiantologo, radiologo interventista, oncologo e radioterapista — una complessità organizzativa che riflette la doppia natura della malattia (oncologica ed epatologica) e che ha implicazioni dirette sugli esiti clinici, come discusso nella sezione seguente. · Questa scheda si basa sulle Linee Guida inter-societarie italiane (AISF/AIOM/IT-IHPBA/SIC/SIRM/SITO) 2023, ESMO CPG Epatocarcinoma 2025 e il Congresso Grandangolo 2025, integrata con verifiche di letteratura successive (CARES-310, EMERALD-1/LEAP-012, KEYNOTE-937 — vedi sezioni dedicate).",
-      "word_count": 5834,
-      "reading_time_min": 29
+      "word_count": 5293,
+      "reading_time_min": 26
     },
     {
       "category": "Schede",
@@ -146,12 +146,12 @@
       "title": "Esofago",
       "name": "Esofago.md",
       "relative_path": "Schede/Gastrointestinali/Esofago.md",
-      "modified": "2026-09-24T08:05:46",
-      "size_bytes": 32204,
+      "modified": "2026-09-24T16:45:26",
+      "size_bytes": 28468,
       "extension": ".md",
       "preview": "Esofago · Definizione e inquadramento · Il carcinoma esofageo comprende due istotipi con epidemiologia e biologia sostanzialmente divergenti — lo **squamocellulare (SCC)** e l'**adenocarcinoma (AC)**, quest'ultimo comprensivo dei tumori della giunzione esofago-gastrica (GEJ) classificati secondo Siewert — una distinzione che condiziona profondamente sia l'eziologia sia le scelte terapeutiche lungo tutto il percorso di cura, come emerge nelle sezioni dedicate a fattori di rischio e terapia. · L'ambito clinico richiede una stretta integrazione tra oncologia medica gastrointestinale, chirurgia toracica e radioterapia, riflettendo la natura multimodale del trattamento nella malattia localizzata-localmente avanzata. · Questa scheda si basa sulle Linee Guida ESMO CPG Esofago 2022 con Interim Update 2025, integrata con il Congresso Grandangolo 2025 e verifiche di letteratura successive (ESOPEC, EMERALD/CheckMate 577 update, tislelizumab AIFA).",
-      "word_count": 4067,
-      "reading_time_min": 20
+      "word_count": 3686,
+      "reading_time_min": 18
     },
     {
       "category": "Schede",
@@ -159,12 +159,12 @@
       "title": "GIST",
       "name": "GIST.md",
       "relative_path": "Schede/Gastrointestinali/GIST.md",
-      "modified": "2026-09-24T08:05:46",
-      "size_bytes": 32162,
+      "modified": "2026-09-24T16:45:26",
+      "size_bytes": 28963,
       "extension": ".md",
       "preview": "GIST · Definizione e inquadramento · Il tumore stromale gastrointestinale (GIST) è il sarcoma del tratto gastrointestinale più comune e viene gestito separatamente dagli altri sarcomi dei tessuti molli per la sua istogenesi peculiare e per la disponibilità di una terapia a bersaglio molecolare estremamente efficace. Secondo la classificazione WHO 2020, tutti i GIST sono considerati ==**potenzialmente maligni**==, indipendentemente da dimensione, sede o indice mitotico — un concetto fondamentale che distingue il GIST da molte altre neoplasie mesenchimali, dove esistono varianti francamente benigne. · Questa scheda si basa su ESMO CPG GIST 2022, integrata con aggiornamenti di letteratura successivi (SSGXVIII a 10 anni, INTRIGUE, IMADGIST — vedi sezioni dedicate). · Punti chiave",
-      "word_count": 4212,
-      "reading_time_min": 21
+      "word_count": 3865,
+      "reading_time_min": 19
     },
     {
       "category": "Schede",
@@ -172,12 +172,12 @@
       "title": "NET",
       "name": "NET.md",
       "relative_path": "Schede/Gastrointestinali/NET.md",
-      "modified": "2026-09-24T08:05:46",
-      "size_bytes": 32839,
+      "modified": "2026-09-24T16:45:26",
+      "size_bytes": 29616,
       "extension": ".md",
       "preview": "NET (Neoplasie Neuroendocrine) · Definizione e inquadramento · Le neoplasie neuroendocrine (NEN) comprendono un gruppo eterogeneo di tumori che originano dal sistema neuroendocrino diffuso, con sedi primarie gastro-entero-pancreatiche (GEP), polmonari/timiche, e associazioni sindromiche cliniche e genetiche ben caratterizzate (sindrome da carcinoide, MEN1/2, VHL, NF1). Questa eterogeneità di sede e biologia rende la gestione clinica particolarmente complessa e fortemente dipendente da un inquadramento multidisciplinare accurato. · L'ambito clinico è quello dell'oncologia medica, con una componente distintiva rispetto ad altre neoplasie solide: il ruolo centrale dell'**imaging funzionale** (PET/TC con analoghi della somatostatina marcati, 68Ga-SST), della terapia medica specifica (analoghi della somatostatina, everolimus, sunitinib) e della terapia radiorecettoriale (PRRT). · Questa scheda si basa su AIOM Neuroendocrini 2024 (GEP-NEN, Merkel, NET polmonari, sindrome da carcinoide, sindromi genetiche/paraneoplastiche) ed ESMO CPG NEN-GEP 2020, NEN Altri Siti 2024, Carcinoidi Polmonari/Timici 2021, integrata con verifiche di letteratura successive (NETTER-2, CABINET, COMPETE — vedi sezioni dedicate).",
-      "word_count": 4332,
-      "reading_time_min": 22
+      "word_count": 3992,
+      "reading_time_min": 20
     },
     {
       "category": "Schede",
@@ -185,12 +185,12 @@
       "title": "Pancreas",
       "name": "Pancreas.md",
       "relative_path": "Schede/Gastrointestinali/Pancreas.md",
-      "modified": "2026-09-24T08:05:46",
-      "size_bytes": 44816,
+      "modified": "2026-09-24T16:45:26",
+      "size_bytes": 40343,
       "extension": ".md",
       "preview": "Pancreas · Definizione e inquadramento · Tumore / tema: adenocarcinoma duttale pancreatico (PDAC) — malattia resecabile, borderline resectable, localmente avanzata e metastatica; tra le prognosi peggiori in oncologia. · Ambito clinico: oncologia medica gastrointestinale, integrazione con chirurgia epato-bilio-pancreatica, radioterapia, genetica oncologica (BRCA). · Ultimo aggiornamento: AIOM Pancreas 2024; ESMO CPG Pancreas 2023 + Express Update 2025; Congresso Grandangolo 2025.",
-      "word_count": 5809,
-      "reading_time_min": 29
+      "word_count": 5321,
+      "reading_time_min": 27
     },
     {
       "category": "Schede",
@@ -198,12 +198,12 @@
       "title": "Stomaco",
       "name": "Stomaco.md",
       "relative_path": "Schede/Gastrointestinali/Stomaco.md",
-      "modified": "2026-09-24T08:05:46",
-      "size_bytes": 37832,
+      "modified": "2026-09-24T16:45:26",
+      "size_bytes": 32114,
       "extension": ".md",
       "preview": "Stomaco · Definizione e inquadramento · L'adenocarcinoma gastrico è una neoplasia epiteliale maligna che origina dalle ghiandole gastriche ed è caratterizzata da elevata eterogenità istologica e biologica. Secondo la classificazione di Lauren si distingue nei sottotipi intestinale, diffuso e misto, con implicazioni cliniche rilevanti soprattutto per la diffusione peritoneale (più frequente nel tipo diffuso). La malattia può presentarsi in stadio resecabile con intento curativo (candidato a terapia perioperatoria con chemioterapia, radioterapia neoadiuvante e chirurgia gastrectomia D2), oppure in stadio avanzato/metastatico stratificato per biomarcatori critici: HER2, PD-L1 (misurato con due punteggi diversi nelle due fasi cliniche: TAP nel perioperatorio, CPS nella malattia avanzata), MSI-H/dMMR, Claudina 18.2 (CLDN18.2) e FGFR2b. · Questa scheda integra i dati della CPG ESMO 2022 Adenocarcinoma Gastrico, i comunicati congressuali ESMO 2025 (con i risultati aggiornati di MATTERHORN), il Congresso Grandangolo Oncologico 2025 e la verifica su letteratura primaria dei trial cardine pubblicati fra il 2023 e il 2025. · Epidemiologia",
-      "word_count": 4393,
-      "reading_time_min": 22
+      "word_count": 3841,
+      "reading_time_min": 19
     },
     {
       "category": "Schede",
@@ -211,12 +211,12 @@
       "title": "Vie Biliari",
       "name": "VieBiliari.md",
       "relative_path": "Schede/Gastrointestinali/VieBiliari.md",
-      "modified": "2026-09-24T08:05:46",
-      "size_bytes": 24235,
+      "modified": "2026-09-24T16:45:26",
+      "size_bytes": 21199,
       "extension": ".md",
       "preview": "VieBiliari · Definizione e inquadramento · Le neoplasie delle vie biliari (Biliary Tract Cancers, BTC) costituiscono un gruppo eterogeneo di adenocarcinomi che condividono l'origine dall'epitelio biliare ma presentano biologia, comportamento clinico e opzioni terapeutiche sostanzialmente diverse in base alla sede anatomica di insorgenza: il **colangiocarcinoma intraepatico (iCCA)**, il **perilare/Klatskin**, l'**extraepatico distale**, e il **carcinoma della colecisti**. Questa eterogeneità anatomica si traduce in differenze molecolari rilevanti — in particolare, l'iCCA è la sede con la maggiore prevalenza di alterazioni molecolari actionable, rendendo la profilazione genomica un elemento centrale della gestione clinica moderna. · L'ambito clinico è quello dell'oncologia medica gastrointestinale, con crescente rilevanza della profilazione molecolare, soprattutto nell'iCCA, dove il panorama terapeutico è cambiato radicalmente negli ultimi anni grazie all'introduzione di terapie mirate per specifiche alterazioni genomiche. · Questa scheda si basa sul Congresso Grandangolo 2025 — non essendo disponibile una linea guida AIOM/ESMO dedicata in questa raccolta — integrata con nozioni oncologiche standard consolidate (segnalate esplicitamente) e con verifiche di letteratura primaria successive (TOPAZ-1, HERIZON-BTC, DESTINY-PanTumor02 — vedi sezioni dedicate).",
-      "word_count": 2992,
-      "reading_time_min": 15
+      "word_count": 2686,
+      "reading_time_min": 13
     },
     {
       "category": "Schede",
@@ -276,12 +276,12 @@
       "title": "Gliomi",
       "name": "Gliomi.md",
       "relative_path": "Schede/Neuro-oncologia/Gliomi.md",
-      "modified": "2026-09-24T08:05:46",
-      "size_bytes": 30247,
+      "modified": "2026-09-24T16:45:26",
+      "size_bytes": 28359,
       "extension": ".md",
       "preview": "Gliomi · Definizione e inquadramento · Il tema riguarda i gliomi diffusi dell'adulto, con focus su glioblastoma IDH-wild-type, astrocitoma IDH-mutato e oligodendroglioma IDH-mutato con codelezione 1p/19q; l'ambito clinico coinvolge neuro-oncologia, neurochirurgia, neuroradiologia, radioterapia, patologia molecolare e terapia di supporto. Fonti di riferimento: Linee guida AIOM Neoplasie cerebrali, aggiornamento 2 febbraio 2024; classificazione WHO SNC 2021; verifica su letteratura primaria aggiornata ad agosto 2026. La classificazione integrata istologico-molecolare è ormai indispensabile per prognosi e scelta terapeutica: ==IDH-mutato e IDH-wild-type non sono gradi diversi della stessa malattia ma entità biologiche, prognostiche e terapeutiche distinte==, un concetto centrale della WHO 2021 che ha trasformato l'intero inquadramento diagnostico-terapeutico dei gliomi. · Epidemiologia · I tumori primitivi del sistema nervoso centrale hanno un'incidenza di circa 5 casi per 100.000 abitanti l'anno in Europa. I gliomi di basso grado sono più frequenti tra i 20 e i 40 anni, mentre quelli di alto grado prevalgono tra i 40 e i 70 anni; oltre i 70 anni il glioblastoma diventa nettamente la forma più frequente. Il glioblastoma resta il glioma più frequente e aggressivo in assoluto, con un'incidenza di 5-8 casi per 100.000 abitanti l'anno e una quota pari a circa il 54% di tutti i gliomi diffusi.",
-      "word_count": 4531,
-      "reading_time_min": 23
+      "word_count": 4254,
+      "reading_time_min": 21
     },
     {
       "category": "Schede",
@@ -289,12 +289,12 @@
       "title": "Linfoma SNC Primitivo",
       "name": "Linfoma_SNC_Primitivo.md",
       "relative_path": "Schede/Neuro-oncologia/Linfoma_SNC_Primitivo.md",
-      "modified": "2026-09-24T08:05:46",
-      "size_bytes": 25788,
+      "modified": "2026-09-24T16:45:26",
+      "size_bytes": 23825,
       "extension": ".md",
       "preview": "Linfoma_SNC_Primitivo · Definizione e inquadramento · Il linfoma primitivo del sistema nervoso centrale (PCNSL) è un linfoma diffuso a grandi cellule B aggressivo, limitato a encefalo, midollo spinale, leptomeningi, liquor e/o strutture oculari, senza evidenza di malattia sistemica alla diagnosi. È un tema di confine tra emato-oncologia, neuro-oncologia, neuroradiologia, neurochirurgia, radioterapia, oftalmologia e trapianto di cellule staminali. Nella classificazione WHO 2022 è incluso tra i linfomi B a grandi cellule delle sedi immunologicamente privilegiate. La scheda fa riferimento alle linee guida EHA-ESMO Clinical Practice Guideline 2024 e AIOM Neoplasie cerebrali (aggiornamento 2 febbraio 2024), integrate con verifica sulla letteratura primaria più recente. · Punti chiave · PCNSL: linfoma B aggressivo confinato a SNC/occhio, senza malattia sistemica alla diagnosi.",
-      "word_count": 3639,
-      "reading_time_min": 18
+      "word_count": 3386,
+      "reading_time_min": 17
     },
     {
       "category": "Schede",
@@ -341,12 +341,12 @@
       "title": "Mesotelioma",
       "name": "Mesotelioma.md",
       "relative_path": "Schede/Torace/Mesotelioma.md",
-      "modified": "2026-09-24T08:05:46",
-      "size_bytes": 20513,
+      "modified": "2026-09-24T16:45:26",
+      "size_bytes": 18436,
       "extension": ".md",
       "preview": "Mesotelioma · Definizione e inquadramento · Il mesotelioma pleurico maligno è una neoplasia rara e aggressiva, fortemente associata all'esposizione ad amianto, che rientra nell'ambito dell'oncologia toracica ma richiede tipicamente il concorso di pneumologia interventistica, chirurgia toracica, radioterapia, anatomia patologica e cure palliative. La sua gestione deve avvenire in un centro esperto con gruppo multidisciplinare dedicato. Ultimo aggiornamento di riferimento: Linee guida AIOM Mesotelioma pleurico, edizione 2025, aggiornata ad aprile 2025. · Epidemiologia e fattori di rischio · In Italia il VII Rapporto ReNaM ha rilevato mediamente 1.574 casi annui di mesotelioma in tutte le sedi nel periodo 2015-2017, di cui circa 1.488 pleurici; le stime AIRTUM-AIOM indicavano circa 2.400 nuove diagnosi nel 2022, includendo casi certi, probabili e possibili. Circa due terzi dei casi riguardano uomini, con incidenza maggiore nelle regioni settentrionali e nelle aree di maggiore uso storico dell'amianto. Tutti i tipi di asbesto possono causare mesotelioma; il rischio aumenta con l'esposizione cumulativa e la latenza mediana è di circa 48 anni. Vanno sempre ricostruite e segnalate al Registro Nazionale dei Mesoteliomi anche le possibili esposizioni non occupazionali, familiari e ambientali. Non esiste, ad oggi, uno screening validato per la diagnosi precoce del mesotelioma pleurico.",
-      "word_count": 2665,
-      "reading_time_min": 13
+      "word_count": 2461,
+      "reading_time_min": 12
     },
     {
       "category": "Schede",
@@ -354,12 +354,12 @@
       "title": "Polmone NSCLC",
       "name": "Polmone_NSCLC.md",
       "relative_path": "Schede/Torace/Polmone_NSCLC.md",
-      "modified": "2026-09-24T08:05:46",
-      "size_bytes": 58821,
+      "modified": "2026-09-24T16:45:26",
+      "size_bytes": 52132,
       "extension": ".md",
       "preview": "Polmone NSCLC · Definizione e inquadramento · Il carcinoma polmonare non a piccole cellule (NSCLC) — che comprende adenocarcinoma, squamoso e a grandi cellule — rappresenta circa l'85% dei tumori polmonari e ricade nell'ambito dell'oncologia medica toracica, con presentazioni che vanno dalla malattia in stadio precoce/operabile alla localmente avanzata (resecabile o non resecabile) fino all'avanzata/metastatica, oncogene-addicted o non oncogene-addicted. Ultimo aggiornamento di riferimento: AIOM Neoplasie del Polmone 2024; ESMO CPG NSCLC 2025 (metastatico non oncogene-addicted, oncogene-addicted, early/locally advanced); Congresso Grandangolo 2025 (NSCLC Localizzato, NSCLC Avanzato). · Epidemiologia · In Italia si registrano circa 44.000 nuovi casi/anno (30.000 uomini, 14.000 donne): negli uomini è la **2ª neoplasia** più frequente (15%), nelle donne la **3ª** (6%), con un incremento assoluto atteso di **+1,3%/anno** legato all'invecchiamento demografico. La mortalità è di circa 35.700 decessi/anno (2022): il NSCLC resta la **prima causa di morte oncologica negli uomini** e la seconda nelle donne, con un trend dicotomico 2007-2019 di **-18,7%** negli uomini (calo del tabagismo) e **+16%** nelle donne (tabagismo femminile più tardivo). La sopravvivenza a 5 anni resta tra le più basse fra le neoplasie solide (**16% negli uomini, 23% nelle donne**), per l'elevata proporzione di diagnosi in stadio avanzato; vivono con pregressa diagnosi oltre 117.000 persone, con una frazione di guarigione (coorte 2000) dell'8% negli uomini e del 13% nelle donne. Sul piano istologico il NSCLC costituisce circa l'85% dei tumori polmonari (con l'adenocarcinoma in costante aumento, oggi istotipo prevalente, seguito da squamoso e a grandi cellule in calo) contro il 15% dello SCLC.",
-      "word_count": 8026,
-      "reading_time_min": 40
+      "word_count": 7245,
+      "reading_time_min": 36
     },
     {
       "category": "Schede",
@@ -367,12 +367,12 @@
       "title": "Polmone SCLC",
       "name": "Polmone_SCLC.md",
       "relative_path": "Schede/Torace/Polmone_SCLC.md",
-      "modified": "2026-09-24T08:05:46",
-      "size_bytes": 33366,
+      "modified": "2026-09-24T16:45:26",
+      "size_bytes": 28179,
       "extension": ".md",
       "preview": "Polmone SCLC · Definizione e inquadramento · Il carcinoma polmonare a piccole cellule (SCLC) è una neoplasia neuroendocrina ad altissima aggressività biologica, che rappresenta circa il 13-15% dei tumori polmonari. Rientra nell'ambito dell'oncologia medica toracica e si articola in stadio limitato (Limited Disease, LD) e stadio esteso (Extensive Disease, ED) secondo il sistema storico VALG/IASLC, ancora oggi guida delle decisioni terapeutiche. Ultimo aggiornamento di riferimento: AIOM Neoplasie del Polmone 2024 (cap. 8, SCLC); ESMO CPG SCLC 2021 (Dingemans AM et al.). · Epidemiologia · Il SCLC costituisce circa il 13-15% di tutti i tumori polmonari ed è considerato malattia orfana in Europa (prevalenza 1-5/10.000). La prevalenza è pressoché uguale tra i due sessi, con una quota crescente di pazienti anziani (>70 anni): dal 23% al 44% tra il 1975 e il 2010. La biologia è estremamente aggressiva, con elevata chemio/radio-sensibilità iniziale ma rapida chemioresistenza; la sopravvivenza a 5 anni resta **<10%** nonostante le risposte iniziali favorevoli, tra le prognosi peggiori dell'oncologia toracica. L'incidenza è in calo parallelamente alla riduzione del tabagismo, ma **oltre il 60%** dei pazienti si presenta già in stadio esteso (ED) alla diagnosi.",
-      "word_count": 4348,
-      "reading_time_min": 22
+      "word_count": 3838,
+      "reading_time_min": 19
     },
     {
       "category": "Schede",
@@ -536,12 +536,12 @@
       "title": "Prostata",
       "name": "Prostata.md",
       "relative_path": "Schede/Urologici/Prostata.md",
-      "modified": "2026-09-24T08:05:46",
-      "size_bytes": 38484,
+      "modified": "2026-09-24T16:45:26",
+      "size_bytes": 35843,
       "extension": ".md",
       "preview": "Prostata · Definizione e inquadramento · Parliamo dell'adenocarcinoma prostatico, il tumore più frequente nel maschio in Italia. Lo spettro clinico è ampio: va dalla sorveglianza attiva nelle forme a basso rischio fino alla malattia metastatica, prima ormono-sensibile (mHSPC) e poi, quasi inevitabilmente con il tempo, resistente alla castrazione (mCRPC). La gestione richiede una stretta integrazione tra oncologia medica, urologia, radioterapia e medicina nucleare — quest'ultima sempre più centrale, viste le applicazioni della PSMA-PET e dei radioligandi terapeutici. Fonti di riferimento: AIOM Prostata 2024, ESMO CPG Prostata Localizzata 2026 e Metastatica 2026, Congresso Grandangolo 2025. · Epidemiologia · Il carcinoma prostatico è il tumore più frequente nel maschio in Italia: 40.500 nuove diagnosi nel 2022 (19,8% di tutti i tumori maschili), in aumento dell'1,5% rispetto al 2020. La mortalità resta relativamente contenuta rispetto all'incidenza — 7.200 decessi nel 2021 — e la sopravvivenza a 5 anni è **91%**, con una prevalenza che ha raggiunto i 564.000 uomini (+85% in 10 anni), riflesso sia della buona prognosi sia della cronicizzazione della malattia avanzata.",
-      "word_count": 5425,
-      "reading_time_min": 27
+      "word_count": 5046,
+      "reading_time_min": 25
     },
     {
       "category": "Schede",
@@ -549,12 +549,12 @@
       "title": "Rene",
       "name": "Rene.md",
       "relative_path": "Schede/Urologici/Rene.md",
-      "modified": "2026-09-24T08:05:46",
-      "size_bytes": 31282,
+      "modified": "2026-09-24T16:45:26",
+      "size_bytes": 28122,
       "extension": ".md",
       "preview": "Rene · Definizione e inquadramento · Il carcinoma renale (RCC) è, nella maggioranza dei casi, a cellule chiare (ccRCC). Lo spettro clinico va dalla malattia localizzata, dove la chirurgia conservativa è protagonista, fino alla malattia avanzata, dove oggi disponiamo di un ampio armamentario di combinazioni immunoterapia-TKI e immunoterapia-immunoterapia. La gestione richiede integrazione stretta tra oncologia medica, urologia, radiologia interventistica e radioterapia. Fonti di riferimento: AIOM Rene 2025, ESMO CPG Rene 2024, Congresso Grandangolo 2025. · Epidemiologia · In Italia si registrano circa 12.700 nuovi casi l'anno (7.900 uomini, 4.800 donne), con l'85% originato dal parenchima renale. Il rischio lifetime è di 1 uomo su 38 e 1 donna su 90. La sopravvivenza a 5 anni è **71%**, ma varia molto con l'età: 87% tra i 15 e i 44 anni, contro il 56% oltre i 75. Un dato interessante sul piano diagnostico: il **60%** delle diagnosi è incidentale, cioè scoperta durante accertamenti per altri motivi. Alla diagnosi, il 55% dei casi è confinato all'organo, il 19% localmente avanzato, e il 25-30% già metastatico in modo sincrono.",
-      "word_count": 4215,
-      "reading_time_min": 21
+      "word_count": 3752,
+      "reading_time_min": 19
     },
     {
       "category": "Schede",
@@ -562,11 +562,11 @@
       "title": "Testicolo",
       "name": "Testicolo.md",
       "relative_path": "Schede/Urologici/Testicolo.md",
-      "modified": "2026-09-24T08:05:46",
-      "size_bytes": 20060,
+      "modified": "2026-09-24T16:45:26",
+      "size_bytes": 19047,
       "extension": ".md",
       "preview": "Testicolo · Definizione e inquadramento · I tumori a cellule germinali del testicolo (GCT) — seminoma e non-seminoma — sono tra le neoplasie a **prognosi migliore** in tutta l'oncologia, grazie a un'eccezionale chemio-sensibilità. Si tratta per definizione di oncologia del giovane adulto, il che sposta l'attenzione clinica in modo significativo: non solo guarire la malattia, ma farlo minimizzando la tossicità a lungo termine — fertilità, rischio cardiovascolare, secondi tumori — su pazienti che vivranno con le conseguenze del trattamento per decenni. Fonti di riferimento: AIOM Testicolo 2024, ESMO CPG Testicolo 2022, Congresso Grandangolo 2025. · Epidemiologia · È la neoplasia maligna più frequente nei maschi tra 15 e 40 anni: in Italia si registrano circa 2.470 nuove diagnosi l'anno (dato 2022), pari all'11% di tutte le neoplasie maschili sotto i 50 anni. L'incidenza, tra 3 e 6 casi per 100.000 maschi l'anno, è in aumento negli ultimi 30 anni. Il 95% dei casi ha origine testicolare, il restante 5% è extragonadico (mediastino o retroperitoneo). Sull'istotipo, il seminoma puro rappresenta il 40-50% dei casi, il non-seminoma/misto il 50-60%.",
-      "word_count": 2882,
+      "word_count": 2749,
       "reading_time_min": 14
     },
     {
@@ -575,12 +575,12 @@
       "title": "Urotelio",
       "name": "Urotelio.md",
       "relative_path": "Schede/Urologici/Urotelio.md",
-      "modified": "2026-09-24T08:05:46",
-      "size_bytes": 28380,
+      "modified": "2026-09-24T16:45:26",
+      "size_bytes": 24280,
       "extension": ".md",
       "preview": "Urotelio · Definizione e inquadramento · Il carcinoma uroteliale comprende la malattia della vescica (non muscolo-invasiva, NMIBC, e muscolo-invasiva, MIBC) e quella dell'alta via escretrice (UTUC). È un campo che negli ultimi anni è stato letteralmente rivoluzionato dall'arrivo della combinazione enfortumab vedotin-pembrolizumab nella malattia avanzata, e più di recente dall'immunoterapia perioperatoria. La gestione richiede stretta integrazione tra oncologia medica, urologia e radioterapia. Fonti di riferimento: AIOM Urotelio 2024, ESMO CPG Urotelio Interim Update 2024, Congresso Grandangolo 2025. · Epidemiologia · Per la vescica si registrano in Italia circa 29.000 nuovi casi l'anno (23.000 uomini): è la quarta neoplasia più frequente nell'uomo sopra i 50 anni. La sopravvivenza a 5 anni è **79%**, ma varia molto con l'età: 96% sotto i 45 anni, contro il 66% oltre i 75. Per l'alta via escretrice (UTUC), i nuovi casi sono circa 2.000 l'anno (meno dell'1% di tutti i tumori), con una sopravvivenza a 5 anni più contenuta, **60%**.",
-      "word_count": 3717,
-      "reading_time_min": 19
+      "word_count": 3137,
+      "reading_time_min": 16
     },
     {
       "category": "AIOM",

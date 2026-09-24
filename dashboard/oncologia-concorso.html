@@ -984,9 +984,9 @@ function inlineFormat(text) {
   out = out.replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g, '$1<em>$2</em>');
   out = out.replace(/`([^`]+)`/g, '<code>$1</code>');
   // Highlight marks: ==testo== (evidenza standard), ++testo++ (novità/aggiornamento), !!testo!! (attenzione)
-  out = out.replace(/==([^=\n]+)==/g, '<mark class="hl hl-primary">$1</mark>');
-  out = out.replace(/\+\+([^+\n]+)\+\+/g, '<mark class="hl hl-accent">$1</mark>');
-  out = out.replace(/!!([^!\n]+)!!/g, '<mark class="hl hl-warn">$1</mark>');
+  out = out.replace(/==((?:[^=\n]|=(?!=))+?)==/g, '<mark class="hl hl-primary">$1</mark>');
+  out = out.replace(/\+\+((?:[^+\n]|\+(?!\+))+?)\+\+/g, '<mark class="hl hl-accent">$1</mark>');
+  out = out.replace(/!!((?:[^!\n]|!(?!!))+?)!!/g, '<mark class="hl hl-warn">$1</mark>');
   return out;
 }
 

@@ -6,12 +6,12 @@ Il tema riguarda i gliomi diffusi dell'adulto, con focus su glioblastoma IDH-wil
 
 
 ## Epidemiologia
-I tumori primitivi del sistema nervoso centrale hanno un'incidenza di circa 5 casi per 100.000 abitanti l'anno in Europa. I gliomi di basso grado sono più frequenti tra i 20 e i 40 anni, mentre quelli di alto grado prevalgono tra i 40 e i 70 anni; oltre i 70 anni il glioblastoma diventa nettamente la forma più frequente. Il glioblastoma resta il glioma più frequente e aggressivo in assoluto, con un'incidenza di 5-8 casi per 100.000 abitanti l'anno e una quota pari a circa il 54% di tutti i gliomi diffusi.
+I tumori primitivi del sistema nervoso centrale hanno un'incidenza di circa 5 casi per 100.000 abitanti l'anno in Europa. I gliomi di basso grado sono più frequenti tra i 20 e i 40 anni, mentre quelli di alto grado prevalgono tra i 40 e i 70 anni; oltre i 70 anni il glioblastoma diventa nettamente la forma più frequente. Il glioblastoma resta il glioma più frequente e aggressivo in assoluto, con un'incidenza di circa 3-4 casi per 100.000 abitanti l'anno e una quota pari a circa il 54% di tutti i gliomi diffusi.
 
 #### Punti chiave
 - Incidenza dei tumori primitivi del SNC: circa 5/100.000/anno in Europa.
 - Gliomi di basso grado: picco 20-40 anni; gliomi di alto grado: picco 40-70 anni; oltre i 70 anni prevale il glioblastoma.
-- Glioblastoma: circa il 54% di tutti i gliomi, incidenza 5-8/100.000/anno.
+- Glioblastoma: circa il 54% di tutti i gliomi, incidenza circa 3-4/100.000/anno.
 
 
 ## Classificazione WHO 2021
@@ -84,13 +84,9 @@ L'aggiunta di bevacizumab a RT-TMZ, valutata negli studi AVAglio e RTOG 0825, mi
 
 La combinazione lomustina-temozolomide nel MGMT metilato, valutata nello studio randomizzato di fase 3 CeTeG/NOA-09, ha mostrato un segnale di beneficio in OS (mediana 48,1 mesi con la combinazione contro 31,4 mesi con la sola TMZ, HR 0,60) ma con un trial piccolo (129 pazienti nella popolazione modificata intention-to-treat) e una significatività statistica borderline (p=0,0492), oltre a maggiore mielotossicità. L'AIOM mantiene una raccomandazione condizionata a sfavore per la limitata robustezza del dato.
 
-> ++Verifica in letteratura:++ i dati di CeTeG/NOA-09 (Herrlinger et al., Lancet 2019) confermano l'OS mediana di 48,1 vs 31,4 mesi (HR 0,60; IC 95% 0,35-1,03; p=0,0492), un dato numericamente rilevante ma da interpretare con cautela per l'esiguità del campione — non presente nel dettaglio nella versione precedente della scheda.
-
 La cilengitide è risultata negativa e non va utilizzata. I wafer di carmustina (Gliadel) non sono raccomandati, in assenza di un chiaro vantaggio nel glioblastoma e con un aumento di ipertensione endocranica e perdita di liquor.
 
 I campi elettrici alternati (TTFields, NovoTTF) hanno mostrato un vantaggio sia in PFS sia in OS nello studio di fase 3 EF-14: OS mediana 20,9 mesi con TTFields più TMZ di mantenimento contro 16,0 mesi con la sola TMZ (HR 0,63), PFS 6,7 contro 4,0 mesi (HR 0,63). Nonostante l'evidenza di beneficio clinico sia solida, l'AIOM mantiene una raccomandazione condizionata a sfavore, motivata non dall'efficacia ma dall'assenza di rimborsabilità uniforme da parte del SSN, che genererebbe disparità di accesso a livello nazionale; gli stessi estensori della linea guida hanno dichiarato esplicitamente che, sulla base dell'evidenza clinica, il NovoTTF "avrebbe meritato una raccomandazione favorevole".
-
-> ++Verifica in letteratura:++ i dati quantitativi di EF-14 (Stupp et al., JAMA 2017: OS 20,9 vs 16,0 mesi, HR 0,63; PFS 6,7 vs 4,0 mesi, HR 0,63) non erano esplicitati nella versione precedente della scheda, che citava solo genericamente un "vantaggio PFS/OS". Confermata anche la posizione AIOM aggiornata a febbraio 2024: la raccomandazione resta condizionata a sfavore per motivi di rimborsabilità/equità, non di efficacia.
 
 #### Punti chiave — Terapia di prima linea nel paziente fit
 - Stupp: OS 14,6 vs 12,1 mesi (HR 0,63), PFS 6,9 vs 5,0 mesi (HR 0,54); standard indipendente dallo stato MGMT nel giovane fit.
@@ -125,9 +121,7 @@ Il reintervento è possibile in casi selezionati, con età inferiore a 70 anni, 
 
 
 ## Astrocitoma IDH-mutato grado 3
-Il trattamento si basa su resezione massimale sicura seguita da radioterapia conformazionale, 59,4 Gy. Lo studio CATNON, condotto in gliomi anaplastici 1p/19q non-codeleti, ha dimostrato che l'aggiunta di TMZ adiuvante dopo RT migliora l'OS, mentre la TMZ concomitante alla RT non aggiunge beneficio significativo: il vantaggio è quindi guidato principalmente dalla fase adiuvante, non dalla concomitante.
-
-> ++Verifica in letteratura:++ l'analisi finale e a lunghissimo termine di CATNON (van den Bent et al., Lancet Oncology 2025/2026, follow-up mediano di 10,9 anni) ha ridefinito il quadro rispetto ai dati interim originari citati nella versione precedente della scheda (OS a 5 anni 55,9% vs 44,1%, HR 0,65 sull'intera popolazione ITT). Nella popolazione con astrocitoma **IDH-mutato** — quella rilevante per la classificazione WHO 2021 — la TMZ adiuvante porta l'OS mediana da 6,0 a 12,5 anni (HR 0,54; IC 95% 0,42-0,69), mentre la TMZ concomitante resta priva di beneficio significativo (HR 0,81, IC 95% 0,63-1,04). Un dato clinicamente importante e assente dalla scheda precedente: ==nei tumori IDH-wild-type (oggi riclassificabili come glioblastoma su base molecolare) non è stato osservato alcun beneficio dalla temozolomide, né concomitante né adiuvante==, a conferma che il beneficio del CATNON è specifico della popolazione IDH-mutata.
+Il trattamento si basa su resezione massimale sicura seguita da radioterapia conformazionale, 59,4 Gy. Lo studio CATNON, condotto in gliomi anaplastici 1p/19q non-codeleti, ha dimostrato che l'aggiunta di TMZ adiuvante dopo RT migliora l'OS, mentre la TMZ concomitante alla RT non aggiunge beneficio significativo: il vantaggio è quindi guidato principalmente dalla fase adiuvante, non dalla concomitante. L'analisi finale a lunghissimo termine (van den Bent et al., Lancet Oncology 2025/2026, follow-up mediano 10,9 anni) ha precisato il quadro rispetto ai dati interim sull'intera popolazione (OS a 5 anni 55,9% vs 44,1%, HR 0,65): nell'astrocitoma **IDH-mutato**, la popolazione rilevante secondo la WHO 2021, la TMZ adiuvante porta l'OS mediana da 6,0 a 12,5 anni (HR 0,54; IC 95% 0,42-0,69), mentre la concomitante resta priva di beneficio significativo (HR 0,81; IC 95% 0,63-1,04). ==Nei tumori IDH-wild-type (oggi riclassificabili come glioblastoma su base molecolare) la temozolomide non ha dato alcun beneficio, né concomitante né adiuvante==: il beneficio di CATNON è specifico dell'IDH-mutato.
 
 #### Punti chiave
 - Resezione massimale sicura + RT conformazionale 59,4 Gy.
@@ -136,9 +130,7 @@ Il trattamento si basa su resezione massimale sicura seguita da radioterapia con
 
 
 ## Oligodendroglioma IDH-mutato e 1p/19q-codeleto
-Nel grado 3 il riferimento storico è la resezione seguita da RT 54-60 Gy più PCV adiuvante. Lo studio EORTC 26951 ha mostrato, nella popolazione complessiva, una OS di 42,3 mesi con RT-PCV contro 30,6 mesi con la sola RT, e una PFS di 24,3 contro 13,2 mesi. Nel sottogruppo 1p/19q-codeleto dello studio RTOG 9402 l'aggiunta del PCV ha mostrato un vantaggio ancora più marcato in OS. Il PCV è molto efficace ma gravato da tossicità ematologica significativa e da una scarsa completabilità del regime nella pratica clinica; la TMZ da sola non sostituisce la RT nel trattamento iniziale dell'oligodendroglioma codeleto.
-
-> ++Verifica in letteratura:++ il report congiunto a lunghissimo termine di EORTC 26951 e RTOG 9402 (Lassman et al., JCO 2022, follow-up mediano 18-19 anni) aggiorna il dato del sottogruppo codeleto di RTOG 9402: OS mediana 13,2 anni con RT-PCV contro 7,3 anni con la sola RT (HR 0,61), lievemente inferiore ai 14,7 anni riportati nell'aggiornamento intermedio del 2013 citato nella versione precedente della scheda (il valore di RT sola, 7,3 anni, resta invariato). Nel sottogruppo codeleto di EORTC 26951 l'OS mediana molto a lungo termine è di 14,2 anni con RT-PCV contro 9,3 anni con la sola RT (HR 0,60). Il report evidenzia inoltre che una quota rilevante di pazienti codeleti sopravvive a 20 anni (37% con RT-PCV vs 13-17% con sola RT) senza recidiva, un dato di sopravvivenza a lunghissimo termine assente dalla scheda precedente.
+Nel grado 3 il riferimento storico è la resezione seguita da RT 54-60 Gy più PCV adiuvante. Lo studio EORTC 26951 ha mostrato, nella popolazione complessiva, una OS di 42,3 mesi con RT-PCV contro 30,6 mesi con la sola RT, e una PFS di 24,3 contro 13,2 mesi. Nel sottogruppo 1p/19q-codeleto dello studio RTOG 9402 l'aggiunta del PCV ha mostrato un vantaggio ancora più marcato in OS. Il PCV è molto efficace ma gravato da tossicità ematologica significativa e da una scarsa completabilità del regime nella pratica clinica; la TMZ da sola non sostituisce la RT nel trattamento iniziale dell'oligodendroglioma codeleto. Il report congiunto a lunghissimo termine dei due studi (Lassman et al., JCO 2022, follow-up mediano 18-19 anni) quantifica il beneficio nei codeleti: OS mediana 13,2 anni con RT-PCV contro 7,3 anni con la sola RT in RTOG 9402 (HR 0,61) e 14,2 contro 9,3 anni in EORTC 26951 (HR 0,60), con una quota rilevante di pazienti vivi e liberi da recidiva a 20 anni (37% con RT-PCV contro 13-17% con la sola RT).
 
 #### Punti chiave
 - Grado 3 codeleto: resezione + RT 54-60 Gy + PCV adiuvante è lo standard storico.
@@ -152,8 +144,6 @@ Nel grado 3 il riferimento storico è la resezione seguita da RT 54-60 Gy più P
 I fattori EORTC favorevoli sono età minore di 40 anni, assenza di deficit neurologico, diametro minore di 6 cm, mancato attraversamento della linea mediana e istologia oligodendrogliale; l'alto rischio secondo i criteri RTOG è definito da età maggiore o uguale a 40 anni e/o resezione incompleta o sola biopsia. La RT precoce, 50,4-54 Gy, aumenta la PFS ma non la OS rispetto alla RT posticipata alla progressione. Nei pazienti ad alto rischio, lo studio RTOG 9802 ha mostrato che l'aggiunta del PCV alla RT migliora la PFS da 4,0 a 10,4 anni e la OS da 7,8 a 13,3 anni (HR 0,59), un beneficio in sopravvivenza tra i più ampi in oncologia dei tumori solidi. Alla recidiva va sempre rivalutata la possibilità di un nuovo intervento chirurgico; la scelta tra TMZ o nitrosouree/PCV dipende dai trattamenti già ricevuti.
 
 Il vorasidenib, inibitore orale di IDH1/IDH2 mutati, ha cambiato la gestione di questo sottogruppo: nello studio di fase 3 INDIGO, condotto in pazienti con glioma IDH1/2-mutato di grado 2 residuo o recidivato dopo la sola chirurgia e candidabili a osservazione, il farmaco ha determinato una PFS mediana di 27,7 mesi contro 11,1 mesi con placebo (HR 0,39; IC 95% 0,27-0,56; p<0,001), con un ritardo significativo anche del tempo al successivo intervento antitumorale (HR 0,26). Il vorasidenib ha ottenuto approvazione EMA a settembre 2025 come prima terapia mirata per il glioma IDH-mutato di grado 2; alla data di verifica di questa scheda (agosto 2026) non risulta ancora pubblicata una determina di rimborsabilità AIFA, per cui la disponibilità pratica in Italia va verificata caso per caso.
-
-> ++Verifica in letteratura:++ i dati INDIGO (Mellinghoff et al., NEJM 2023) già presenti nella versione precedente della scheda sono confermati esatti (PFS 27,7 vs 11,1 mesi); aggiunto il valore di HR (0,39, IC 95% 0,27-0,56, p<0,001), non riportato in precedenza, e l'aggiornamento regolatorio: approvazione EMA settembre 2025 (dopo la stesura originaria della scheda), con !!rimborsabilità AIFA non ancora determinata!! alla data di verifica.
 
 #### Punti chiave
 - Fattori favorevoli EORTC: età <40 anni, no deficit, diametro <6 cm, no attraversamento linea mediana, istologia oligodendrogliale.
