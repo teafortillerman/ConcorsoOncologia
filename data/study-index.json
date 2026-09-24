@@ -55,11 +55,11 @@
       "title": "Melanoma",
       "name": "Melanoma.md",
       "relative_path": "Schede/Cute/Melanoma.md",
-      "modified": "2026-09-24T08:05:46",
-      "size_bytes": 46846,
+      "modified": "2026-09-24T19:44:52",
+      "size_bytes": 47082,
       "extension": ".md",
       "preview": "Melanoma · Definizione e inquadramento · **Tumore / tema**: melanoma cutaneo — stadio precoce/II (sorveglianza vs adiuvante), stadio III resecabile (adiuvante vs neoadiuvante), stadio IV resecato (adiuvante), malattia avanzata/metastatica (prima linea e oltre, gestione delle resistenze, metastasi encefaliche). · **Ambito clinico**: oncologia medica, integrazione con chirurgia oncologica/dermatologica, radioterapia (SRS/SRT), anatomia patologica molecolare (BRAF, PD-L1). · **Ultimo aggiornamento**: ESMO CPG Melanoma Cutaneo 2025 (Amaral T, Ottaviano M, Arance A et al., Ann Oncol 2025;36:10-30); Congresso Grandangolo 2025 (Mandalà M — adiuvante/neoadiuvante; Piccin L — malattia metastatica; Ascierto PA — casi clinici; Ottaviano M — trials 2025); verifica in letteratura primaria integrata nell'agosto 2026 (follow-up aggiornati di CheckMate 067, CheckMate 238, CheckMate 76K, KEYNOTE-054, COMBI-AD, RELATIVITY-047, NADINA, SWOG S1801, tebentafusp; stato regolatorio lifileucel/Amtagvi).",
-      "word_count": 6740,
+      "word_count": 6774,
       "reading_time_min": 34
     },
     {
@@ -315,11 +315,11 @@
       "title": "Testa Collo",
       "name": "TestaCollo.md",
       "relative_path": "Schede/Testa-Collo/TestaCollo.md",
-      "modified": "2026-09-24T08:05:46",
-      "size_bytes": 49663,
+      "modified": "2026-09-24T19:44:38",
+      "size_bytes": 50349,
       "extension": ".md",
       "preview": "Testa e Collo · Definizione e inquadramento · Il carcinoma squamocellulare della testa e del collo (SCCHN, *squamous cell carcinoma of the head and neck*) comprende le neoplasie di cavo orale, laringe, orofaringe e ipofaringe; il carcinoma nasofaringeo (NPC) viene trattato separatamente in questa scheda, essendo un'entità clinica e biologica distinta (fortemente EBV-correlata, con algoritmi terapeutici propri). L'ambito è quello dell'oncologia medica, in stretta integrazione con chirurgia otorinolaringoiatrica/maxillo-facciale, radioterapia, patologia molecolare (HPV, EBV), nutrizione clinica e riabilitazione funzionale (linguaggio, deglutizione). · Le fonti di riferimento restano le ESMO Clinical Practice Guidelines SCCHN 2020 (Machiels et al., EHNS-ESMO-ESTRO) e l'ESMO CPG Nasofaringeo Update 2023 (Bossi et al.); il documento AIOM disponibile in questa raccolta contiene solo il frontespizio (aggiornamento 27 gennaio 2026), senza il testo completo delle raccomandazioni. La scheda è quindi costruita sulle linee guida ESMO, integrate qui con una verifica sistematica della letteratura primaria sui trial più recenti — molti dei quali pubblicati dopo la stesura delle linee guida ESMO 2020 stesse (KEYNOTE-048 a 5 anni, KEYNOTE-689, NIVOPOSTOP/GORTEC 2018-01, ORATOR2, MC1675, KEYNOTE-412, JAVELIN Head and Neck 100). · Epidemiologia",
-      "word_count": 6754,
+      "word_count": 6841,
       "reading_time_min": 34
     },
     {
@@ -458,12 +458,12 @@
       "title": "Rimborsabilita",
       "name": "Rimborsabilita.md",
       "relative_path": "Schede/Trasversali/Rimborsabilita.md",
-      "modified": "2026-09-24T19:05:07",
-      "size_bytes": 106069,
+      "modified": "2026-09-24T19:44:52",
+      "size_bytes": 107015,
       "extension": ".md",
       "preview": "Rimborsabilità · Definizione e inquadramento · Questa scheda è un indice trasversale, non una scheda di patologia: raccoglie, organo per organo, le tabelle di stato AIFA e criteri di prescrivibilità dei farmaci oncologici approvati/con indicazione estesa **dal 2020 in poi**. Nasce perché queste tabelle, inserite direttamente nelle singole schede di patologia (es. Mammella.md), ne appesantivano la sezione \"Farmaci e classi rilevanti\" — meglio centralizzarle qui e lasciare, in ciascuna scheda di patologia, solo un rimando a questa pagina. · Il metodo di verifica (determine AIFA, Gazzetta Ufficiale, registri.aifa.gov.it, rassegne specializzate) è descritto nel documento di convenzioni del progetto, sezione \"Nuova fase: verifica dello stato regolatorio AIFA e criteri di prescrivibilità\". Ogni tabella va aggiornata quando si applica quella verifica a una nuova scheda di patologia; l'eleggibilità puntuale dei registri di monitoraggio va comunque sempre riconfermata su registri.aifa.gov.it, perché le determine cambiano più spesso di quanto queste pagine possano inseguire. · **Criterio di inclusione**: solo farmaci/indicazioni con un evento regolatorio (EMA o AIFA) dal 2020 in avanti. I farmaci più datati (chemioterapia classica, ormonoterapia di base, i primi anti-HER2, i CDK4/6i in fase metastatica, ecc.) restano descritti nella prosa delle singole schede di patologia, ma non compaiono qui: non sono il tipo di informazione che cambia da un mese all'altro e non serve un registro a parte per tenerne traccia.",
-      "word_count": 15470,
-      "reading_time_min": 77
+      "word_count": 15612,
+      "reading_time_min": 78
     },
     {
       "category": "Schede",
@@ -1915,6 +1915,20 @@
       ]
     },
     {
+      "id": "gliomi",
+      "title": "Gliomi",
+      "theme": "Neuro-oncologia",
+      "scheda": "Schede/Neuro-oncologia/Gliomi.md",
+      "path": "Algoritmi/gliomi.algo.json",
+      "settings": [
+        "Glioblastoma IDH-wild-type",
+        "Astrocitoma IDH-mutato grado 4",
+        "Astrocitoma IDH-mutato grado 3",
+        "Oligodendroglioma IDH-mutato 1p/19q-codeleto grado 3",
+        "Glioma IDH-mutato grado 2"
+      ]
+    },
+    {
       "id": "mammella",
       "title": "Mammella",
       "theme": "Mammella",
@@ -1925,6 +1939,21 @@
         "Localmente avanzato (neoadiuvante)",
         "Metastatico",
         "Recidiva locoregionale"
+      ]
+    },
+    {
+      "id": "melanoma",
+      "title": "Melanoma",
+      "theme": "Cute",
+      "scheda": "Schede/Cute/Melanoma.md",
+      "path": "Algoritmi/melanoma.algo.json",
+      "settings": [
+        "Stadio IIB-IIC resecato",
+        "Stadio III resecato (malattia linfonodale microscopica)",
+        "Stadio III con linfonodi palpabili, resecabile",
+        "Stadio IV resecato",
+        "Avanzato non resecabile o metastatico",
+        "Melanoma uveale metastatico"
       ]
     },
     {
@@ -2024,6 +2053,20 @@
       ]
     },
     {
+      "id": "sarcomi",
+      "title": "Sarcomi",
+      "theme": "Sarcomi",
+      "scheda": "Schede/Sarcomi/Sarcomi.md",
+      "path": "Algoritmi/sarcomi.algo.json",
+      "settings": [
+        "Sarcoma dei tessuti molli localizzato (arti, tronco)",
+        "Sarcoma retroperitoneale localizzato",
+        "Sarcoma uterino",
+        "Fibromatosi desmoide",
+        "Malattia avanzata o metastatica"
+      ]
+    },
+    {
       "id": "stomaco",
       "title": "Stomaco",
       "theme": "Gastrointestinali",
@@ -2032,6 +2075,18 @@
       "settings": [
         "Localizzato resecabile",
         "Avanzato / metastatico"
+      ]
+    },
+    {
+      "id": "testacollo",
+      "title": "Testa-Collo",
+      "theme": "Testa-Collo",
+      "scheda": "Schede/Testa-Collo/TestaCollo.md",
+      "path": "Algoritmi/testacollo.algo.json",
+      "settings": [
+        "Carcinoma squamoso (cavo orale, orofaringe, laringe, ipofaringe) non metastatico",
+        "Carcinoma squamoso recidivante o metastatico",
+        "Carcinoma nasofaringeo"
       ]
     },
     {

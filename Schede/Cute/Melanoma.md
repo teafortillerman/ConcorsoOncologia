@@ -139,6 +139,7 @@ La sequenza IO→target therapy nei pazienti BRAF-mutati (Atkins, ASCO 2025 — 
 - Dati a 5 anni: BRAF mutato OS 52%/44%/26% (nivo+ipi/nivo/ipi); BRAF wt OS 60%/46%/30%.
 - **CheckMate 067 a 10 anni (NEJM 2024)**: OS 43% (combo) vs 37% (nivo) vs 19% (ipi) — dato numerico preciso, non solo "~30%" come in versioni precedenti della scheda.
 - Circa metà dei pazienti trattati con la combinazione non raggiunge sopravvivenza a lungo termine — necessità di nuove strategie.
+- ==Rimborsabilità AIFA di nivolumab+ipilimumab ristretta a PD-L1 <1% o metastasi encefaliche asintomatiche==, più stretta del label EMA: con PD-L1 ≥1% e senza metastasi encefaliche in Italia la 1L IO è l'anti-PD-1 in monoterapia.
 - Sequenza IO→target favorita in BRAF-mutato per beneficio sostenuto in OS/PFS a 5 anni; approccio "sandwich" utile in LDH alto/alto carico tumorale.
 
 ### Ruolo della target therapy (BRAF+MEK) in prima linea

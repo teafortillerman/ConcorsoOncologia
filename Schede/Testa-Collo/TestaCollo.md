@@ -218,11 +218,13 @@ Lo standard è la CRT concomitante ± chemioterapia di induzione/adiuvante secon
 - Capecitabina adiuvante: da considerare nell'alto rischio [II, B].
 
 ### Malattia recidivante/metastatica — aggiornamento 2023
-Due trial randomizzati di fase III, condotti in popolazioni est-asiatiche, hanno mostrato un aumento della PFS con l'aggiunta di immunoterapia (camrelizumab o toripalimab) a cisplatino+gemcitabina seguita da mantenimento con immunoterapia: **CAPTAIN-1st** (camrelizumab) ha riportato una PFS di 6,9 mesi vs controllo, con un guadagno di 3,9 mesi (HR 0,51; 95% CI 0,37-0,69; MCBS score 3); il trial con **toripalimab + gemcitabina + cisplatino** ha riportato una PFS di 8,0 mesi, con un guadagno di 3,7 mesi (HR 0,52; 95% CI 0,36-0,74; MCBS score 3). L'aggiunta di immunoterapia a cisplatino+gemcitabina e come mantenimento dovrebbe essere considerata come trattamento di prima linea [II, A], in attesa dei risultati a lungo termine su OS. È importante ricordare che **camrelizumab e toripalimab non sono approvati né da EMA né da FDA** per il NPC (approvati solo in Cina da NMPA), e la loro applicabilità a popolazioni non-endemiche resta in corso di valutazione. Nella malattia oligometastatica va considerata la RT [III, B] o la chirurgia [IV, C] sulle sedi metastatiche.
+Due trial randomizzati di fase III, condotti in popolazioni est-asiatiche, hanno mostrato un aumento della PFS con l'aggiunta di immunoterapia (camrelizumab o toripalimab) a cisplatino+gemcitabina seguita da mantenimento con immunoterapia: **CAPTAIN-1st** (camrelizumab) ha riportato una PFS di 6,9 mesi vs controllo, con un guadagno di 3,9 mesi (HR 0,51; 95% CI 0,37-0,69; MCBS score 3); il trial **JUPITER-02** (toripalimab + gemcitabina + cisplatino) ha riportato all'analisi finale una PFS di 21,4 contro 8,2 mesi (HR 0,52; 95% CI 0,37-0,73) e un vantaggio di **OS** statisticamente significativo (HR 0,63; 95% CI 0,45-0,89; OS mediana non raggiunta vs 33,7 mesi), coerente nei sottogruppi PD-L1 alto e basso. L'aggiunta di immunoterapia a cisplatino+gemcitabina e come mantenimento dovrebbe essere considerata come trattamento di prima linea [II, A].
+
+> !!Verifica regolatoria — correzione:!! una versione precedente di questa scheda riportava che camrelizumab e toripalimab non erano approvati né da EMA né da FDA. Il dato è **errato per il toripalimab**: approvato FDA (ottobre 2023) e dalla **Commissione Europea a settembre 2024** (Loqtorzi, in associazione a cisplatino+gemcitabina in 1L nel NPC recidivante non candidabile a chirurgia/RT o metastatico), con **rimborsabilità SSN approvata dal CdA AIFA dell'8 luglio 2026**. Il **camrelizumab** resta invece approvato solo in Cina (NMPA). [JUPITER-02, JAMA 2023](https://doi.org/10.1001/jama.2023.20181) Nella malattia oligometastatica va considerata la RT [III, B] o la chirurgia [IV, C] sulle sedi metastatiche.
 
 #### Punti chiave — Malattia recidivante/metastatica NPC
-- CAPTAIN-1st (camrelizumab) e toripalimab+CT: entrambi aumentano la PFS (HR ~0,51-0,52) in 1L, OS ancora immatura.
-- !!Camrelizumab e toripalimab NON approvati EMA/FDA — solo NMPA Cina!! Attenzione se il quesito chiede farmaci disponibili in Europa/Italia.
+- CAPTAIN-1st (camrelizumab) e JUPITER-02 (toripalimab+CT): entrambi aumentano la PFS (HR ~0,51-0,52) in 1L; JUPITER-02 anche l'OS (HR 0,63).
+- !!Toripalimab approvato EMA (09/2024) e rimborsato SSN (CdA AIFA 08/07/2026); camrelizumab solo NMPA Cina!! Attenzione se il quesito chiede farmaci disponibili in Europa/Italia.
 - Oligometastatico: considerare RT o chirurgia sulle sedi metastatiche.
 
 ## Farmaci e classi rilevanti
@@ -231,7 +233,7 @@ Due trial randomizzati di fase III, condotti in popolazioni est-asiatiche, hanno
 - **Immunoterapia SCCHN — malattia recidivante/metastatica**: pembrolizumab, nivolumab.
 - **Immunoterapia SCCHN — perioperatoria/adiuvante (nuovo)**: pembrolizumab (KEYNOTE-689, approvato FDA 13/06/2025 e Commissione Europea 29/10/2025 per CPS≥1; ++non ancora rimborsato da AIFA++ alla data di questa verifica), nivolumab (NIVOPOSTOP, non ancora in indicazione regolatoria formale FDA/EMA). Vedi anche `Schede/Trasversali/Rimborsabilita.md` (sezione Testa-Collo) per il dettaglio dello stato AIFA.
 - **Doppio blocco checkpoint (non standard in Europa)**: durvalumab+tremelimumab (KESTREL, negativo), nivolumab+ipilimumab (CheckMate 651, negativo).
-- **Immunoterapia NPC**: camrelizumab, toripalimab (non approvati EMA/FDA).
+- **Immunoterapia NPC**: toripalimab (approvato EMA 2024, rimborsato SSN 2026); camrelizumab (solo Cina).
 - **Schema TPEx**: cisplatino/docetaxel/cetuximab.
 - **Schema TPF**: taxano/platino/5-FU (induzione).
 
@@ -266,7 +268,7 @@ La FDG-PET/TC è raccomandata a 10-12 settimane dal termine di RT/CRT per valuta
 - **Immunoterapia perioperatoria (nuovo)**: KEYNOTE-689 (pembrolizumab, approvato FDA 13/06/2025 e UE 29/10/2025 per CPS≥1, ma ancora non rimborsato da AIFA) e NIVOPOSTOP (nivolumab, non ancora in indicazione regolatoria formale) sono positivi in malattia resecabile ad alto rischio — da non confondere con l'immunoterapia aggiunta alla CRT primaria in non operati (JAVELIN H&N 100 e KEYNOTE-412), entrambe negative/non significative.
 - **KEYNOTE-412**: l'EFS (HR 0,83) NON ha raggiunto la soglia di significatività pre-specificata (p=0,043 vs soglia 0,024) — endpoint primario non raggiunto, non aggiungere pembrolizumab alla CRT primaria fuori da trial.
 - **NPC è entità distinta**: fortemente EBV-correlato, gestito con linee guida separate da SCCHN.
-- **Camrelizumab/toripalimab in NPC**: non approvati EMA/FDA — attenzione se il quesito chiede farmaci disponibili in Europa/Italia.
+- **Toripalimab in NPC**: approvato EMA (2024) e rimborsato SSN (2026), OS HR 0,63 (JUPITER-02); il camrelizumab invece è approvato solo in Cina — attenzione se il quesito chiede farmaci disponibili in Europa/Italia.
 - **Algoritmo 1L SCCHN metastatico**: guidato da PD-L1 CPS — pembrolizumab mono se CPS alto, pembrolizumab+CT se PD-L1 non noto o combinato, platino/5-FU/cetuximab se PD-L1 negativo.
 - **KEYNOTE-048 a 5 anni**: OS a 5 anni 14,4-16,0% (pembrolizumab ± CT) vs 5,2-6,5% (EXTREME) — quantifica il beneficio a lungo termine dell'IO in 1L.
 - **Doppio blocco checkpoint (KESTREL, CheckMate 651)**: entrambi negativi su OS — non uno standard di 1L, a differenza di altri tumori solidi.
@@ -279,7 +281,7 @@ La FDG-PET/TC è raccomandata a 10-12 settimane dal termine di RT/CRT per valuta
 - Non usare cisplatino settimanale a 30 mg/m² come standard (dimostrato inferiore in trial randomizzato).
 - Non eseguire dissezione sistematica del collo se FDG-PET negativo a 12 settimane post-CRT (sorveglianza è non-inferiore).
 - Non confondere NPC con gli altri SCCHN: NPC ha epidemiologia, eziologia (EBV) e algoritmi terapeutici distinti.
-- Non considerare camrelizumab/toripalimab come opzioni disponibili in Europa (non approvati EMA/FDA).
+- Non confondere toripalimab (approvato EMA e rimborsato in Italia) con camrelizumab (non approvato EMA/FDA).
 - Non ritardare RT postoperatoria oltre 6-7 settimane dalla chirurgia.
 - Non offrire strategia di preservazione laringea a pazienti con T4a e invasione massiva cartilaginea o funzione laringea severamente compromessa.
 - Non aggiungere immunoterapia alla CRT primaria in pazienti non operati fuori da trial clinico (JAVELIN H&N 100 negativo, KEYNOTE-412 non significativo) — non confondere con il beneficio dimostrato nel perioperatorio/postoperatorio (KEYNOTE-689, NIVOPOSTOP).

@@ -366,7 +366,10 @@ class OrganAlgorithmsTest(unittest.TestCase):
              "ano.algo.json": "Ano", "pancreas.algo.json": "Pancreas", "viebiliari.algo.json": "Vie Biliari",
              "epatocarcinoma.algo.json": "Epatocarcinoma (HCC)", "gist.algo.json": "GIST", "net.algo.json": "NET (Tumori Neuroendocrini)",
              "prostata.algo.json": "Prostata", "rene.algo.json": "Rene", "urotelio.algo.json": "Urotelio",
-             "cervice.algo.json": "Cervice", "endometrio.algo.json": "Endometrio", "ovaio.algo.json": "Ovaio"}
+             "cervice.algo.json": "Cervice", "endometrio.algo.json": "Endometrio", "ovaio.algo.json": "Ovaio",
+             "melanoma.algo.json": "Melanoma", "testacollo.algo.json": "Testa-Collo"}
+    # Senza sezione nella scheda Rimborsabilità: solo validazione.
+    VALID_ONLY = ("gliomi.algo.json", "sarcomi.algo.json")
 
     def load(self, name):
         return json.loads((ROOT / "Algoritmi" / name).read_text(encoding="utf-8"))
@@ -375,7 +378,7 @@ class OrganAlgorithmsTest(unittest.TestCase):
         return {o["name"]: o["aifa"] for n in data["nodes"].values() if n["type"] == "recommendation" for o in n["options"]}
 
     def test_are_valid(self):
-        for name in self.CASES:
+        for name in (*self.CASES, *self.VALID_ONLY):
             with self.subTest(name=name):
                 self.assertEqual(validate_algorithm(self.load(name), ROOT), [])
 
@@ -414,6 +417,29 @@ class OrganAlgorithmsTest(unittest.TestCase):
             for option, aifa in expected.items():
                 with self.subTest(name=name, option=option):
                     self.assertEqual(status[option], aifa)
+
+    def test_neuro_cute_testacollo_sarcomi_traps(self):
+        cases = {"gliomi.algo.json": {"Vorasidenib": "not_reimbursed", "Regorafenib (buon PS)": "reimbursed",
+                                      "+ TTFields durante la TMZ di mantenimento": "unknown"},
+                 "melanoma.algo.json": {"Lifileucel (TIL)": "not_reimbursed", "Tebentafusp": "reimbursed",
+                                        "Nivolumab + ipilimumab (schema NADINA)": "reimbursed"},
+                 "testacollo.algo.json": {"+ Pembrolizumab perioperatorio (CPS ≥1)": "not_reimbursed", "+ Nivolumab": "not_reimbursed",
+                                          "Toripalimab + gemcitabina-cisplatino": "reimbursed"},
+                 "sarcomi.algo.json": {"Nirogacestat (in progressione)": "not_reimbursed", "Atezolizumab (ASPS)": "not_reimbursed",
+                                       "Tazemetostat (epitelioide INI1/SMARCB1-deficiente)": "not_reimbursed", "Regorafenib": "not_reimbursed"}}
+        for name, expected in cases.items():
+            status = self.statuses(self.load(name))
+            for option, aifa in expected.items():
+                with self.subTest(name=name, option=option):
+                    self.assertEqual(status[option], aifa)
+
+    def test_melanoma_nivo_ipi_is_reimbursed_only_with_pd_l1_below_1(self):
+        nodes = self.load("melanoma.algo.json")["nodes"]
+        status = lambda node: {o["name"]: o["aifa"] for o in nodes[node]["options"]}
+        self.assertEqual(status("adv_io_neg")["Nivolumab + ipilimumab"], "reimbursed")
+        self.assertEqual(status("adv_io_pos")["Nivolumab + ipilimumab"], "not_reimbursed")
+        self.assertEqual(status("adv_io_pos")["Nivolumab + relatlimab"], "not_reimbursed")
+        self.assertEqual(status("brain_asx")["Nivolumab + ipilimumab"], "reimbursed")
 
     def test_endometrio_pmmr_only_dostarlimab_is_reimbursed(self):
         nodes = self.load("endometrio.algo.json")["nodes"]

@@ -1,0 +1,422 @@
+{
+  "id": "testacollo",
+  "title": "Testa-Collo",
+  "theme": "Testa-Collo",
+  "scheda": "Schede/Testa-Collo/TestaCollo.md",
+  "start": "setting",
+  "nodes": {
+    "setting": {
+      "type": "question",
+      "text": "Qual è il quadro?",
+      "short": "Setting",
+      "info": "p16 in immunoistochimica ha valore prognostico solo nell'orofaringe.",
+      "answers": [
+        { "label": "Carcinoma squamoso (cavo orale, orofaringe, laringe, ipofaringe) non metastatico", "next": "loc_stadio" },
+        { "label": "Carcinoma squamoso recidivante o metastatico", "next": "rm_plat" },
+        { "label": "Carcinoma nasofaringeo", "next": "npc_setting" }
+      ]
+    },
+    "loc_stadio": {
+      "type": "question",
+      "text": "Qual è lo stadio?",
+      "short": "Stadio",
+      "answers": [
+        { "label": "Precoce (I-II)", "next": "early" },
+        { "label": "Localmente avanzato (III-IV)", "next": "la_approccio" }
+      ]
+    },
+    "early": {
+      "type": "recommendation",
+      "title": "Malattia precoce",
+      "options": [
+        {
+          "name": "Chirurgia conservativa (TLM/TORS) + dissezione selettiva o linfonodo sentinella",
+          "aifa": "standard",
+          "key": "TLM standard nel glottico precoce (senza dissezione nel glottico T1-2N0)."
+        },
+        {
+          "name": "Radioterapia esclusiva",
+          "aifa": "standard",
+          "key": "Controllo locoregionale simile alla chirurgia.",
+          "regimen": {
+            "rows": [
+              ["Stadio I", "66-70 Gy, frazionamento standard"],
+              ["Stadio II", "iperfrazionamento o RT accelerata moderata"]
+            ],
+            "sources": [{"type": "scheda"}]
+          }
+        }
+      ],
+      "note": "ORATOR2 (TORS vs RT nell'orofaringe HPV+) chiuso per 2 decessi nel braccio chirurgico: de-escalation chirurgica con cautela. Nessuna de-escalation della dose di RT nel p16+.",
+      "next": { "label": "Alla recidiva → malattia recidivante/metastatica", "node": "rm_plat" }
+    },
+    "la_approccio": {
+      "type": "question",
+      "text": "Qual è la strategia locale?",
+      "short": "Strategia",
+      "answers": [
+        { "label": "Chirurgia (cavo orale T3-T4, laringe T4)", "next": "la_chir" },
+        { "label": "Preservazione laringea (laringe o ipofaringe)", "next": "la_laringe" },
+        { "label": "Non chirurgica (orofaringe o malattia non resecabile)", "next": "la_crt" }
+      ]
+    },
+    "la_chir": {
+      "type": "recommendation",
+      "title": "Chirurgia",
+      "options": [
+        {
+          "name": "Chirurgia radicale → RT/CRT adiuvante",
+          "aifa": "standard",
+          "key": "RT postoperatoria entro 6-7 settimane; l'intero regime entro 11 settimane."
+        },
+        {
+          "name": "+ Pembrolizumab perioperatorio (CPS ≥1)",
+          "aifa": "not_reimbursed",
+          "key": "Approvato FDA (13/06/2025) e UE (29/10/2025), ma non ancora rimborsato AIFA. EFS HR 0,73; CPS ≥1 HR 0,70.",
+          "regimen": {
+            "trial": "KEYNOTE-689",
+            "rows": [
+              ["Pembrolizumab", "200 mg EV ogni 3 settimane: 2 cicli neoadiuvanti, 3 con la RT postoperatoria (± cisplatino), poi 12 adiuvanti"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        }
+      ],
+      "next": { "label": "Dopo la chirurgia → fattori di rischio", "node": "la_postop" }
+    },
+    "la_postop": {
+      "type": "question",
+      "text": "Quali fattori di rischio ha il pezzo operatorio?",
+      "short": "Rischio",
+      "answers": [
+        { "label": "R1 e/o estensione extracapsulare", "next": "postop_crt" },
+        { "label": "Altri fattori (pT3-4, margine ravvicinato, PNI, LVI, >1 linfonodo)", "next": "postop_rt" }
+      ]
+    },
+    "postop_crt": {
+      "type": "recommendation",
+      "title": "Terapia adiuvante",
+      "options": [
+        {
+          "name": "Chemioradioterapia con cisplatino",
+          "aifa": "standard",
+          "key": "Unica indicazione con evidenza di livello I (dati pooled EORTC 22931/RTOG 9501). Cisplatino 40 mg/m² settimanale non inferiore nel postoperatorio.",
+          "regimen": {
+            "rows": [
+              ["Cisplatino", "100 mg/m² EV ogni 3 settimane (o 40 mg/m² settimanale)"],
+              ["Radioterapia", "66 Gy"]
+            ],
+            "sources": [{"type": "scheda"}]
+          }
+        },
+        {
+          "name": "+ Nivolumab",
+          "aifa": "not_reimbursed",
+          "key": "DFS HR 0,76 indipendentemente da PD-L1; nessuna domanda regolatoria FDA/EMA depositata.",
+          "regimen": {
+            "trial": "NIVOPOSTOP / GORTEC 2018-01",
+            "rows": [
+              ["Nivolumab", "240 mg prima della CRT, 360 mg ogni 3 settimane con la CRT, poi 480 mg ogni 4 settimane ×6"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        }
+      ],
+      "next": { "label": "Alla recidiva → malattia recidivante/metastatica", "node": "rm_plat" }
+    },
+    "postop_rt": {
+      "type": "recommendation",
+      "title": "Terapia adiuvante",
+      "options": [
+        {
+          "name": "Radioterapia postoperatoria",
+          "aifa": "standard",
+          "key": "Opzionale con singolo linfonodo senza altri fattori se analizzati ≥15 linfonodi.",
+          "regimen": {
+            "rows": [
+              ["Radioterapia", "fino a 58 Gy con un fattore, 63-64 Gy con fattori multipli"]
+            ],
+            "sources": [{"type": "scheda"}]
+          }
+        }
+      ],
+      "next": { "label": "Alla recidiva → malattia recidivante/metastatica", "node": "rm_plat" }
+    },
+    "la_laringe": {
+      "type": "recommendation",
+      "title": "Preservazione laringea",
+      "options": [
+        {
+          "name": "Chemioradioterapia concomitante",
+          "aifa": "standard",
+          "key": "Tasso di preservazione più alto, sopravvivenza simile all'induzione.",
+          "regimen": {
+            "rows": [
+              ["Cisplatino", "100 mg/m² EV ogni 3 settimane durante la RT"],
+              ["Radioterapia", "70 Gy (IMRT/VMAT)"]
+            ],
+            "sources": [{"type": "scheda"}]
+          }
+        },
+        {
+          "name": "Induzione TPF ×3 → RT nei responder",
+          "aifa": "standard",
+          "key": "TPF superiore a platino/5-FU.",
+          "regimen": {
+            "rows": [
+              ["Docetaxel", "75 mg/m² EV giorno 1"],
+              ["Cisplatino", "75 mg/m² EV giorno 1"],
+              ["5-fluorouracile", "750 mg/m²/die giorni 1-5"]
+            ],
+            "note": "Ogni 21 giorni ×3.",
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ],
+      "note": "Esclusi: T4a con invasione cartilaginea massiva o estensione extralaringea, laringe non funzionale → chirurgia upfront.",
+      "next": { "label": "Alla recidiva → malattia recidivante/metastatica", "node": "rm_plat" }
+    },
+    "la_crt": {
+      "type": "recommendation",
+      "title": "Chemioradioterapia",
+      "options": [
+        {
+          "name": "Cisplatino ad alta dose + radioterapia",
+          "aifa": "standard",
+          "key": "Beneficio massimo con dose cumulativa ≥200 mg/m². Cisplatino settimanale 30 mg/m² inferiore.",
+          "regimen": {
+            "rows": [
+              ["Cisplatino", "100 mg/m² EV ogni 3 settimane durante la RT"],
+              ["Radioterapia", "70 Gy (IMRT/VMAT)"]
+            ],
+            "sources": [{"type": "scheda"}]
+          }
+        },
+        {
+          "name": "Cetuximab + radioterapia (solo unfit per platino)",
+          "aifa": "standard",
+          "key": "Nel p16+ OS inferiore a cisplatino + RT (De-ESCALaTE, RTOG 1016).",
+          "regimen": {
+            "rows": [
+              ["Cetuximab", "400 mg/m² carico, poi 250 mg/m² settimanale durante la RT"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ],
+      "note": "Da non fare: immunoterapia aggiunta alla CRT primaria (JAVELIN H&N 100 negativo, KEYNOTE-412 non significativo), cetuximab + cisplatino + RT, induzione fuori dalla preservazione laringea. Collo: PET a 12 settimane; sorveglianza se negativa.",
+      "next": { "label": "Alla recidiva → malattia recidivante/metastatica", "node": "rm_plat" }
+    },
+    "rm_plat": {
+      "type": "question",
+      "text": "C'è stata progressione entro 6 mesi da un platino?",
+      "short": "Platino",
+      "answers": [
+        { "label": "No", "next": "rm_cps" },
+        { "label": "Sì", "next": "rm_2l" }
+      ]
+    },
+    "rm_cps": {
+      "type": "question",
+      "text": "Qual è il PD-L1 (CPS)?",
+      "short": "CPS",
+      "answers": [
+        { "label": "CPS ≥1", "next": "rm_cps_pos" },
+        { "label": "CPS <1", "next": "rm_cps_neg" }
+      ]
+    },
+    "rm_cps_pos": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "Pembrolizumab in monoterapia",
+          "aifa": "reimbursed",
+          "key": "OS a 5 anni 14,4% vs 6,5% con EXTREME (popolazione totale); CPS ≥20 HR 0,61.",
+          "regimen": {
+            "trial": "KEYNOTE-048",
+            "endpoint": "OS nel CPS ≥1 HR 0,74 vs EXTREME",
+            "rows": [
+              ["Pembrolizumab", "200 mg EV ogni 3 settimane, fino a 2 anni"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Pembrolizumab + platino/5-FU",
+          "aifa": "reimbursed",
+          "key": "OS a 5 anni 16,0% vs 5,2%.",
+          "regimen": {
+            "trial": "KEYNOTE-048",
+            "endpoint": "OS nel CPS ≥1 HR 0,65 vs EXTREME",
+            "rows": [
+              ["Pembrolizumab", "200 mg EV ogni 3 settimane, fino a 2 anni"],
+              ["Cisplatino o carboplatino", "100 mg/m² o AUC 5 EV giorno 1 ×6"],
+              ["5-fluorouracile", "1000 mg/m²/die giorni 1-4 ×6"]
+            ],
+            "sources": [{"type": "rimborsabilita"}, {"type": "standard"}]
+          }
+        },
+        {
+          "name": "Platino/5-FU/cetuximab (EXTREME)",
+          "aifa": "standard",
+          "key": "Se l'immunoterapia è controindicata.",
+          "regimen": {
+            "trial": "EXTREME",
+            "endpoint": "OS 10,1 vs 7,4 mesi, HR 0,80",
+            "rows": [
+              ["Cisplatino o carboplatino", "100 mg/m² o AUC 5 EV giorno 1"],
+              ["5-fluorouracile", "1000 mg/m²/die in infusione continua giorni 1-4"],
+              ["Cetuximab", "400 mg/m² carico, poi 250 mg/m² settimanale"]
+            ],
+            "sources": [{"type": "standard"}, {"type": "pubmed", "label": "EXTREME", "doi": "10.1056/NEJMoa0802656"}]
+          }
+        }
+      ],
+      "note": "Doppio blocco checkpoint (KESTREL, CheckMate 651) negativo su OS: non è uno standard.",
+      "next": { "label": "Alla progressione → 2ª linea", "node": "rm_2l" }
+    },
+    "rm_cps_neg": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "Platino/5-FU/cetuximab (EXTREME)",
+          "aifa": "standard",
+          "key": "Standard ESMO nel PD-L1 negativo.",
+          "regimen": {
+            "trial": "EXTREME",
+            "endpoint": "OS 10,1 vs 7,4 mesi, HR 0,80",
+            "rows": [
+              ["Cisplatino o carboplatino", "100 mg/m² o AUC 5 EV giorno 1"],
+              ["5-fluorouracile", "1000 mg/m²/die in infusione continua giorni 1-4"],
+              ["Cetuximab", "400 mg/m² carico, poi 250 mg/m² settimanale"]
+            ],
+            "sources": [{"type": "standard"}, {"type": "pubmed", "label": "EXTREME", "doi": "10.1056/NEJMoa0802656"}]
+          }
+        },
+        {
+          "name": "Pembrolizumab + platino/5-FU",
+          "aifa": "reimbursed",
+          "key": "Rimborsato indipendentemente da PD-L1.",
+          "regimen": {
+            "trial": "KEYNOTE-048",
+            "endpoint": "OS nella popolazione totale HR 0,72 vs EXTREME",
+            "rows": [
+              ["Pembrolizumab", "200 mg EV ogni 3 settimane, fino a 2 anni"],
+              ["Cisplatino o carboplatino", "100 mg/m² o AUC 5 EV giorno 1 ×6"],
+              ["5-fluorouracile", "1000 mg/m²/die giorni 1-4 ×6"]
+            ],
+            "sources": [{"type": "rimborsabilita"}, {"type": "standard"}]
+          }
+        },
+        {
+          "name": "TPEx (cisplatino/docetaxel/cetuximab)",
+          "aifa": "standard",
+          "key": "Ulteriore opzione [II, B].",
+          "regimen": {
+            "rows": [
+              ["Cisplatino", "75 mg/m² EV giorno 1"],
+              ["Docetaxel", "75 mg/m² EV giorno 1"],
+              ["Cetuximab", "250 mg/m² settimanale, poi 500 mg/m² ogni 2 settimane in mantenimento"]
+            ],
+            "note": "Ogni 21 giorni ×4.",
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ],
+      "next": { "label": "Alla progressione → 2ª linea", "node": "rm_2l" }
+    },
+    "rm_2l": {
+      "type": "recommendation",
+      "title": "2ª linea",
+      "options": [
+        {
+          "name": "Nivolumab (IO-naive)",
+          "aifa": "reimbursed",
+          "key": "Rimborsato dal 2018.",
+          "regimen": {
+            "trial": "CheckMate 141",
+            "endpoint": "OS 7,5 vs 5,1 mesi, HR 0,70",
+            "rows": [
+              ["Nivolumab", "240 mg EV ogni 2 settimane o 480 mg ogni 4 settimane"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Pembrolizumab (IO-naive)",
+          "aifa": "unknown",
+          "key": "Opzione ESMO [I, A]; la scheda Rimborsabilità riporta solo nivolumab in questo setting.",
+          "regimen": {
+            "trial": "KEYNOTE-040",
+            "rows": [
+              ["Pembrolizumab", "200 mg EV ogni 3 settimane"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "Taxano, metotrexato o cetuximab",
+          "aifa": "standard",
+          "key": "Dopo platino e immunoterapia."
+        }
+      ]
+    },
+    "npc_setting": {
+      "type": "question",
+      "text": "Qual è lo stadio del nasofaringeo?",
+      "short": "Stadio",
+      "info": "Entità distinta dagli altri carcinomi squamosi: EBV-correlato, endemico in Asia orientale e Nord Africa.",
+      "answers": [
+        { "label": "Locoregionale (I-IVA)", "next": "npc_loc" },
+        { "label": "Recidivante o metastatico", "next": "npc_met" }
+      ]
+    },
+    "npc_loc": {
+      "type": "recommendation",
+      "title": "Malattia locoregionale",
+      "options": [
+        {
+          "name": "Chemioradioterapia concomitante ± induzione o adiuvante",
+          "aifa": "standard",
+          "key": "Secondo stadio e rischio."
+        },
+        {
+          "name": "+ Capecitabina adiuvante (alto rischio)",
+          "aifa": "standard",
+          "key": "Due trial di fase III con miglior failure-free survival [II, B]."
+        }
+      ],
+      "next": { "label": "Alla recidiva", "node": "npc_met" }
+    },
+    "npc_met": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "Toripalimab + gemcitabina-cisplatino",
+          "aifa": "reimbursed",
+          "key": "Approvato EMA (09/2024), rimborso approvato dal CdA AIFA l'08/07/2026. Beneficio anche con PD-L1 basso.",
+          "regimen": {
+            "trial": "JUPITER-02",
+            "endpoint": "PFS 21,4 vs 8,2 mesi (HR 0,52); OS HR 0,63",
+            "rows": [
+              ["Toripalimab", "240 mg EV ogni 3 settimane, fino a 2 anni"],
+              ["Gemcitabina", "1000 mg/m² EV giorni 1 e 8"],
+              ["Cisplatino", "80 mg/m² EV giorno 1"]
+            ],
+            "note": "Chemioterapia ogni 21 giorni ×6.",
+            "sources": [{"type": "rimborsabilita"}, {"type": "pubmed", "label": "JUPITER-02", "doi": "10.1001/jama.2023.20181"}]
+          }
+        },
+        {
+          "name": "Gemcitabina-cisplatino",
+          "aifa": "standard",
+          "key": "Standard chemioterapico."
+        }
+      ],
+      "note": "Camrelizumab (CAPTAIN-1st) approvato solo in Cina. Oligometastatico: considerare RT o chirurgia sulle metastasi."
+    }
+  }
+}
