@@ -34,7 +34,8 @@
   --color-danger: #b0402e;
   --color-danger-soft: #fbece8;
   --color-danger-border: #ebc4bb;
-  --read-measure: 760px;
+  --read-measure: 740px;
+  --note-gap: 34px;
   --shadow-sm: 0 1px 2px rgba(40,35,25,0.06);
   --shadow-md: 0 6px 20px rgba(40,35,25,0.08);
   --shadow-lg: 0 20px 50px rgba(40,35,25,0.14);
@@ -349,7 +350,7 @@ button { font-family: inherit; cursor: pointer; }
 .icon-btn svg { width: 15px; height: 15px; }
 
 .content { padding: 36px; max-width: 1180px; animation: fadeIn 0.25s ease; }
-.content.is-reader { max-width: 1560px; }
+.content.is-reader { max-width: none; padding: 36px 40px; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
 
 /* HOME / OVERVIEW */
@@ -423,7 +424,7 @@ button { font-family: inherit; cursor: pointer; }
 
 
 /* READER */
-.reader-layout { display: grid; grid-template-columns: minmax(0, 880px) 220px; gap: 56px; align-items: start; }
+.reader-layout { display: grid; grid-template-columns: minmax(0, 1fr) 230px; gap: 44px; align-items: start; }
 .reader-wrap { min-width: 0; }
 .reader-head { margin-bottom: 26px; padding-bottom: 20px; border-bottom: 1px solid var(--color-divider); }
 .reader-head .badge-theme {
@@ -448,8 +449,9 @@ button { font-family: inherit; cursor: pointer; }
 
 /* TEMA DI LETTURA "Carta Clinica": colonna di testo contenuta, sezioni numerate, riquadri per tipo,
    riepiloghi finali in evidenza. I colori derivano dai token di :root / [data-theme="dark"]. */
-.md-content { font-size: 17px; line-height: 1.75; counter-reset: sezione; }
-.md-content > :is(p, ul, ol, h2, h3, h4, blockquote, .callout, hr, .summary-card) { max-width: var(--read-measure); }
+.md-content { font-size: 17px; line-height: 1.75; container-type: inline-size; container-name: scheda; }
+/* colonna di testo; tabelle, diagrammi e riepiloghi usano invece tutta la larghezza */
+.md-content > :is(p, ul, ol, h3, h4, blockquote, .callout, .np) { max-width: var(--read-measure); }
 .md-content h2 {
   font-family: var(--font-display);
   font-size: 1.5em;
@@ -460,17 +462,6 @@ button { font-family: inherit; cursor: pointer; }
   border-top: 1px solid var(--color-divider);
   scroll-margin-top: 90px;
   letter-spacing: -0.015em;
-}
-.md-content > h2::before {
-  counter-increment: sezione;
-  content: counter(sezione, decimal-leading-zero);
-  display: block;
-  font-family: var(--font-body);
-  font-size: 0.5em;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  color: var(--color-primary);
-  margin-bottom: 6px;
 }
 .md-content h2:first-child { margin-top: 0; padding-top: 0; border-top: none; }
 .md-content h3 {
@@ -532,6 +523,7 @@ button { font-family: inherit; cursor: pointer; }
 /* Riepiloghi finali: "Punti chiave" ed "Errori da evitare" */
 .md-content .summary-card {
   margin: 58px 0 28px;
+  max-width: 1180px;
   padding: 24px 28px 12px;
   border-radius: 16px;
   border: 1px solid var(--sum-border);
@@ -548,7 +540,7 @@ button { font-family: inherit; cursor: pointer; }
   background: var(--sum-ink); transform: rotate(45deg); flex-shrink: 0;
 }
 .md-content .summary-card ul { padding-left: 26px; }
-.md-content .summary-card li { margin-bottom: 11px; }
+.md-content .summary-card li { margin-bottom: 11px; break-inside: avoid; }
 .md-content .summary-card li::marker { color: var(--sum-ink); font-weight: 700; }
 .md-content .sum-key { --sum-ink: var(--color-key); --sum-bg: var(--color-key-soft); --sum-border: var(--color-key-border); }
 .md-content .sum-key li::marker { content: "✓  "; }
@@ -559,6 +551,65 @@ button { font-family: inherit; cursor: pointer; }
   .md-content .summary-card { padding: 18px 16px 6px; }
   .md-content .summary-card ul { padding-left: 22px; }
 }
+
+
+/* Nomi di trial in grassetto → etichetta */
+.md-content strong.trial {
+  font-weight: 650; color: var(--color-key); background: var(--color-key-soft);
+  padding: 0 5px; border-radius: 4px; white-space: nowrap;
+  box-decoration-break: clone; -webkit-box-decoration-break: clone;
+}
+
+/* Note grafiche a margine: standard di cura, trial chiave, novità AIFA */
+.md-content .mnotes { display: flex; flex-wrap: wrap; gap: 6px; margin: -6px 0 18px; }
+.md-content .mnote {
+  display: inline-flex; align-items: baseline; gap: 6px;
+  font-size: 0.74rem; line-height: 1.35;
+  padding: 3px 9px; border-radius: 999px;
+  color: var(--mn-ink); background: var(--mn-bg); border: 1px solid var(--mn-border);
+}
+.md-content .mnote-label { font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.92em; white-space: nowrap; }
+.md-content .mnote-detail { color: var(--color-text); font-weight: 500; }
+.md-content .mn-standard { --mn-ink: var(--color-primary); --mn-bg: var(--color-primary-soft); --mn-border: var(--color-primary-highlight); }
+.md-content .mn-new { --mn-ink: var(--color-accent); --mn-bg: var(--color-accent-highlight); --mn-border: var(--color-accent-highlight); }
+.md-content .mn-trial { --mn-ink: var(--color-key); --mn-bg: var(--color-key-soft); --mn-border: var(--color-key-border); }
+.md-content .mn-aifa { --mn-ink: var(--flow-criteria-border); --mn-bg: var(--flow-criteria-bg); --mn-border: var(--flow-criteria-strip); }
+.md-content .mn-gap { --mn-ink: var(--color-warn); --mn-bg: var(--color-warn-highlight); --mn-border: var(--color-warn-highlight); }
+@container scheda (min-width: 990px) {
+  .md-content .np { position: relative; }
+  .md-content .mnotes {
+    position: absolute; top: 4px; left: calc(100% + var(--note-gap));
+    width: min(270px, calc(100cqw - var(--read-measure) - var(--note-gap)));
+    flex-direction: column; gap: 8px; margin: 0;
+  }
+  .md-content .mnote {
+    display: flex; flex-direction: column; gap: 2px; align-items: flex-start;
+    border-radius: 0 10px 10px 0; border: none; border-left: 3px solid var(--mn-ink);
+    padding: 7px 12px; font-size: 0.76rem;
+  }
+  .md-content .mnote-detail { font-size: 1.05em; }
+  .md-content .summary-card ul { columns: 2; column-gap: 44px; }
+}
+
+/* Tabelle: righe più compatte e pulsante per aprirle a schermo intero */
+.md-content table { line-height: 1.5; }
+.md-content .table-block { position: relative; margin: 0 0 22px; }
+.md-content .table-block .table-wrap { margin: 0; }
+.table-expand {
+  display: inline-flex; align-items: center; gap: 6px; margin: 0 0 8px;
+  border: 1px solid var(--color-border); background: var(--color-surface-2); color: var(--color-text-muted);
+  border-radius: 8px; padding: 4px 10px; font-size: 0.78rem; font-weight: 600;
+}
+.table-expand:hover { border-color: var(--color-primary); color: var(--color-primary); }
+.table-overlay {
+  position: fixed; inset: 0; z-index: 90; background: var(--color-bg);
+  display: flex; flex-direction: column; padding: 18px 24px 24px;
+}
+.table-overlay-bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 12px; }
+.table-overlay-title { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; }
+.table-overlay .table-wrap { flex: 1; overflow: auto; margin: 0; }
+.table-overlay table { font-size: 0.92rem; line-height: 1.5; }
+.table-overlay thead th { position: sticky; top: 0; z-index: 1; }
 
 /* Scorciatoia ai punti chiave nell'intestazione della scheda */
 .reader-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
@@ -1115,7 +1166,7 @@ function inlineFormat(text) {
   out = out.replace(/\{\{([^{}]+?)::([^{}]+)\}\}/g, (m, label, detail) => `<span class="tt-trig" tabindex="0" data-tip="${detail.trim()}">${label.trim()}</span>`);
   out = out.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img alt="$1" src="$2" loading="lazy">');
   out = out.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
-  out = out.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  out = out.replace(/\*\*([^*]+)\*\*/g, (m, t) => isTrialName(t) ? `<strong class="trial">${t}</strong>` : `<strong>${t}</strong>`);
   out = out.replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g, '$1<em>$2</em>');
   out = out.replace(/`([^`]+)`/g, '<code>$1</code>');
   // Highlight marks: ==testo== (evidenza standard), ++testo++ (novità/aggiornamento), !!testo!! (attenzione)
@@ -1134,6 +1185,119 @@ function slugify(text) {
 // Sezioni finali mostrate come schede di riepilogo (titolo "## ..." → classe della sezione).
 const SUMMARY_SECTIONS = { "Punti chiave": "sum-key", "Errori da evitare": "sum-err" };
 const CALLOUT_KIND = { "hl-accent": "co-update", "hl-warn": "co-warn", "hl-primary": "co-info" };
+
+/* ---------- riconoscimento dei trial e note grafiche a margine ---------- */
+// Un grassetto è un trial se ha la forma di un acronimo di studio (KEYNOTE-054, CheckMate 067, IMpower133,
+// NADINA…) e la prima parola non è un biomarcatore, una scala o un'istituzione.
+const TRIAL_STOP = new Set(("BRCA MEN FGFR TTF PIK STK WHO FIGO CTNNB NCI CDH DOG CCND ESR ISRT HER KRAS NRAS BRAF EGFR ALK ROS MET " +
+  "NTRK RET IDH HLA ECOG TNM AJCC UICC ISUP AUC TPS CPS IPI BCLC ORR RFS EFS DFS PFS MCBS ESMO AIOM ASCO NCCN FDA EMA " +
+  "AIFA SSN CTCAE MSI TMB ESCAT MMR POLE ARID CDKN PTEN ATM KIT FLT NPM JAK CYP UGT DPYD NGS LDH CEA PSA AFP HCG PET SUV " +
+  "SBRT IMRT VMAT TACE TARE HIPEC RFA POD Legge Deauville Maltoni NIFTP FOLFIRINOX NALIRIFOX FOLFOX FOLFIRI XELOX CAPOX " +
+  "DLBCL SIADH LCNEC AMERK NLPHL HSTCL ENKTCL GCNIS IGCCCG IPFSG KELIM RECIST PDGFRA SEMPRE NESSUN NESSUNA NESSUNO TUTTI " +
+  "TUTTE FAMMM ENTRAMBI OBBLIGATORIO OBBLIGATORIA CONTROINDICATI CONTROINDICATO REVOCATA NEGATIVO POSITIVO SOLO").split(" "));
+function isTrialName(t) {
+  t = t.trim();
+  if (t.length < 4 || t.length > 42) return false;
+  if (/^[A-Z]{5,}$/.test(t)) return !TRIAL_STOP.has(t);
+  if (!/^[A-Z][A-Za-z0-9]*(?:[- /][A-Z0-9][A-Za-z0-9]*){0,4}$/.test(t) || !/\d/.test(t)) return false;
+  const head = t.match(/^[A-Za-z]+/)[0];
+  return head.length >= 3 && /[A-Z].*[A-Z]|^[A-Z][a-z]+[A-Z]/.test(head) && !TRIAL_STOP.has(head);
+}
+const SETTING_LABELS = [
+  [/prima linea|\b1L\b|1ª linea/i, "1ª linea"], [/seconda linea|\b2L\b|2ª linea/i, "2ª linea"],
+  [/terza linea|\b3L\b|linee successive/i, "linee successive"], [/perioperatori/i, "perioperatorio"],
+  [/neoadiuvant/i, "neoadiuvante"], [/adiuvant/i, "adiuvante"], [/mantenimento/i, "mantenimento"],
+];
+// Classifica un paragrafo (testo markdown grezzo) e restituisce al massimo tre note.
+function marginNotes(raw) {
+  const text = raw.replace(/\{\{([^{}]+?)::[^{}]+\}\}/g, "$1");
+  const notes = [];
+  const years = (text.match(/\b202[4-9]\b/g) || []).map(Number);
+  const lastYear = years.length ? Math.max(...years) : null;
+  const trials = [...new Set([...text.matchAll(/\*\*([^*]+)\*\*/g)].map(m => m[1].trim()).filter(isTrialName))];
+  const negStd = /non (è|rappresenta|costituisce|sono|resta|diventa) (ancora )?(uno |lo |il |un )?(nuovo )?standard|non standard|non ancora (uno )?standard/i.test(text);
+  if (!negStd && /nuovo standard/i.test(text)) {
+    const set = SETTING_LABELS.find(([re]) => re.test(text));
+    notes.push({ kind: "mn-new", label: "Nuovo standard", detail: set ? set[1] : "" });
+  } else if (!negStd && /(è|resta|rimane|diventa|rappresenta|costituisce) (oggi |quindi |ancora )?(lo |il |uno )?standard|\b(lo|il) standard (è|resta|rimane)|standard (di cura|of care|terapeutico|attuale)|trattamento standard|opzione standard/i.test(text)) {
+    const set = SETTING_LABELS.find(([re]) => re.test(text));
+    // se il paragrafo si apre con un sottogruppo in grassetto (es. "**HER2-positivo**: ...") lo usa come dettaglio
+    const lead = text.match(/^\*\*([^*]{2,40})\*\*\s*[:(]/);
+    const detail = lead && !isTrialName(lead[1]) ? lead[1] : (set ? set[1] : "");
+    notes.push({ kind: "mn-standard", label: "Standard di cura", detail });
+  }
+  if (trials.length && (lastYear >= 2025 || /fase (III|3)|phase (III|3)|randomizzat|registrativ|pivotal|pratica-modificant|confermator/i.test(text))) {
+    notes.push({ kind: "mn-trial", label: lastYear >= 2025 ? "Trial recente" : "Trial chiave", detail: trials.slice(0, 2).join(" · ") });
+  }
+  if (lastYear >= 2025 && /\bAIFA\b|\bSSN\b|648/.test(text) && /rimbors|determina|648|C\s?\(nn\)|Gazzetta/i.test(text)) {
+    const neg = /non (è |risulta |sono |è stat[oa] )?(ancora )?(rimborsat|rimborsabil)|nessuna determina|non ancora (pubblicat|determinat|negoziat)|in attesa d(i|ella) (determina|rimbors|negoziaz)|gap|C\s?\(nn\)/i.test(text);
+    const pos = /(è|sono|viene|risulta) (ora |oggi |già )?rimborsat|rimborsabilità (piena|SSN|AIFA)|rimborsa |ha ribaltato|ottenuto (la )?rimborsabilità|legge 648|648\/96|==rimborsato/i.test(text);
+    const detail = /648/.test(text) ? `Legge 648/96 · ${lastYear}` : String(lastYear);
+    if (neg && !pos) notes.push({ kind: "mn-gap", label: "Gap AIFA", detail });
+    else notes.push({ kind: "mn-aifa", label: pos && !neg ? "Rimborso AIFA" : "Novità AIFA", detail });
+  }
+  return notes.slice(0, 3);
+}
+function notesHtml(raw) {
+  const notes = marginNotes(raw);
+  if (!notes.length) return "";
+  return `<div class="mnotes">${notes.map(n => `<span class="mnote ${n.kind}"><span class="mnote-label">${n.label}</span>${n.detail ? `<span class="mnote-detail">${escapeHtml(n.detail)}</span>` : ""}</span>`).join("")}</div>`;
+}
+const withNotes = (raw, html) => { const n = notesHtml(raw); return n ? `<div class="np">${html}${n}</div>` : html; };
+
+// Evita che note di paragrafi vicini si sovrappongano nella colonna a margine.
+function layoutMarginNotes(root) {
+  let lastBottom = -Infinity;
+  root.querySelectorAll(".mnotes").forEach(el => {
+    el.style.transform = "";
+    if (getComputedStyle(el).position !== "absolute") return;
+    const r = el.getBoundingClientRect();
+    const shift = Math.max(0, lastBottom + 10 - r.top);
+    if (shift) el.style.transform = `translateY(${shift}px)`;
+    lastBottom = r.bottom + shift;
+  });
+}
+function watchMarginNotes(root) {
+  let raf = 0;
+  const run = () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(() => layoutMarginNotes(root)); };
+  new ResizeObserver(run).observe(root);
+  document.fonts?.ready.then(run);
+  run();
+}
+
+// Tabelle più larghe della colonna: pulsante "Espandi" che le apre a schermo intero.
+function initTableExpand(root, title) {
+  root.querySelectorAll(".table-wrap").forEach(wrap => {
+    const block = document.createElement("div");
+    block.className = "table-block";
+    wrap.replaceWith(block);
+    block.appendChild(wrap);
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "table-expand";
+    btn.textContent = "⤢ Espandi tabella";
+    btn.addEventListener("click", () => openTableOverlay(wrap, title));
+    const cols = wrap.querySelectorAll("thead th").length;
+    const check = () => { btn.hidden = cols < 4 && wrap.scrollWidth <= wrap.clientWidth + 2; };
+    block.insertBefore(btn, wrap);
+    new ResizeObserver(check).observe(wrap);
+    check();
+  });
+}
+function openTableOverlay(wrap, title) {
+  const ov = document.createElement("div");
+  ov.className = "table-overlay";
+  ov.innerHTML = `<div class="table-overlay-bar"><div class="table-overlay-title"></div><button type="button" class="table-expand">✕ Chiudi</button></div>`;
+  ov.querySelector(".table-overlay-title").textContent = title;
+  const clone = wrap.cloneNode(true);
+  ov.appendChild(clone);
+  if (typeof initTooltips === "function") initTooltips(clone);
+  const close = () => { ov.remove(); document.removeEventListener("keydown", onKey); };
+  const onKey = (ev) => { if (ev.key === "Escape") close(); };
+  ov.querySelector("button").addEventListener("click", close);
+  document.addEventListener("keydown", onKey);
+  document.body.appendChild(ov);
+}
 
 /* ---------- popup "schema di terapia" (sintassi {{label::dettaglio}}, vedi inlineFormat) ---------- */
 let ttGlobalBound = false;
@@ -1208,13 +1372,15 @@ function markdownToHtml(md) {
   let quoteBuf = [];
   const flushQuote = () => {
     if (!quoteBuf.length) return;
-    const paras = quoteBuf.join("\n").split(/\n\s*\n/).map(t => t.trim()).filter(Boolean).map(t => inlineFormat(t.replace(/\n/g, " ")));
+    const rawAll = quoteBuf.join("\n");
+    const paras = rawAll.split(/\n\s*\n/).map(t => t.trim()).filter(Boolean).map(t => inlineFormat(t.replace(/\n/g, " ")));
     quoteBuf = [];
+    const rawQuote = rawAll;
     const m = paras[0] && paras[0].match(/^<mark class="hl (hl-\w+)">([^<]*?):\s*<\/mark>\s*/);
-    if (!m) { append(`<blockquote>${paras.map(t => `<p>${t}</p>`).join("")}</blockquote>`); return; }
+    if (!m) { append(withNotes(rawQuote, `<blockquote>${paras.map(t => `<p>${t}</p>`).join("")}</blockquote>`)); return; }
     paras[0] = paras[0].slice(m[0].length);
     const body = paras.filter(Boolean).map(t => `<p>${t}</p>`).join("");
-    append(`<aside class="callout ${CALLOUT_KIND[m[1]] || "co-info"}"><div class="callout-label">${m[2]}</div>${body}</aside>`);
+    append(withNotes(rawQuote, `<aside class="callout ${CALLOUT_KIND[m[1]] || "co-info"}"><div class="callout-label">${m[2]}</div>${body}</aside>`));
   };
   // "## Punti chiave" / "## Errori da evitare" aprono una scheda di riepilogo chiusa alla sezione successiva.
   let inSummary = false;
@@ -1315,7 +1481,7 @@ function markdownToHtml(md) {
     }
     if (line === "---" || line === "***") { closeList(); append("<hr>"); continue; }
     closeList();
-    append(`<p>${inlineFormat(line)}</p>`);
+    append(inSummary ? `<p>${inlineFormat(line)}</p>` : withNotes(line, `<p>${inlineFormat(line)}</p>`));
   }
   flushQuote();
   closeList();
@@ -1701,6 +1867,9 @@ async function openScheda(item) {
       document.getElementById(ev.currentTarget.dataset.jump)?.scrollIntoView({ behavior: "smooth", block: "start" });
     });
 
+    const article = content.querySelector(".md-content");
+    initTableExpand(article, item.title);
+    watchMarginNotes(article);
     setupTocObserver();
     initMermaid();
     renderMermaid();
