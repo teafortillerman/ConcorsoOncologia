@@ -230,7 +230,3 @@ Il monitoraggio va calibrato sulla classe di farmaco in uso. È **pressorio** pe
 - Baselga J et al. Everolimus + exemestane (BOLERO-2), NEJM 2012, dati di sicurezza metabolica ed ematologica.
 
 **Nota metodologica sui range percentuali**: per numerose tossicità di questa scheda non esiste un dato di incidenza unico e universalmente concordato — i valori riportati sono range medi indicativi, ricavati confrontando più fonti (trial registrativi, schede tecniche EMA/FDA, review di classe) e vanno intesi come ordine di grandezza utile ai fini dello studio, non come dato di precisione regolatoria; la variabilità reale tra molecole, dosi, linee di trattamento e popolazioni studiate può essere sostanziale.
-
-
-## Note personali
--

@@ -377,6 +377,3 @@ Nel DLBCL, il follow-up prevede anamnesi ed esame obiettivo ogni 3-6 mesi per i 
 - ZUMA-2: Wang et al., NEJM 2020 (coorte 1); van Meerten et al., Blood 2026 (coorte 3, BTKi-naïve, PMID 41160777, DOI 10.1182/blood.2025029734).
 - ECHELON-2: Horwitz et al., Lancet 2019 (analisi primaria); aggiornamento a 5 anni, Blood 2022.
 - Approvazioni regolatorie EMA/AIFA: Roche, Genmab/AbbVie, Regeneron, Eli Lilly (comunicati stampa e determine AIFA citati nel testo).
-
-## Note personali
--

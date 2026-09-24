@@ -230,7 +230,3 @@ Nel glioblastoma sono indicati RM e visita ogni 2-3 mesi durante e dopo il tratt
 - Mellinghoff IK, et al. Vorasidenib in IDH1- or IDH2-mutant low-grade glioma. N Engl J Med 2023 (INDIGO).
 - Lombardi G, et al. Regorafenib compared with lomustine in patients with relapsed glioblastoma (REGOMA). Lancet Oncol 2019.
 - Wick W, et al. Lomustine and bevacizumab in progressive glioblastoma. N Engl J Med 2017 (EORTC 26101).
-
-
-## Note personali
-- 

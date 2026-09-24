@@ -335,7 +335,3 @@ Il monitoraggio va mantenuto anche dopo la sospensione dell'ICI, per la possibil
 - Haanen J et al. ESMO Clinical Practice Guideline for diagnosis, treatment and follow-up of immunotherapy toxicities, 2022.
 - CTCAE v5.0, National Cancer Institute.
 - Letteratura recente su gestione della miocardite da ICI refrattaria (abatacept/ruxolitinib), 2023-2025, prevalentemente case report/piccole serie.
-
-## Note personali
-
--

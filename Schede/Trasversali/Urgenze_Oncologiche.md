@@ -266,7 +266,3 @@ Un consulto chirurgico o plastico è indicato in caso di necrosi, ulcerazione, s
 - Expert consensus guidelines for the prophylaxis and management of tumor lysis syndrome in the United States: Results of a modified Delphi panel, 2023.
 - Scheda tecnica FDA Totect/Savene (dexrazoxane), rev. più recente consultata.
 - CTCAE v5.0, National Cancer Institute.
-
-## Note personali
-
-- 

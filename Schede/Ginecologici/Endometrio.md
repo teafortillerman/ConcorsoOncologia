@@ -168,6 +168,3 @@ Il calendario di sorveglianza è sovrapponibile a quello della cervice: visita g
 - Altre fonti: Congresso Grandangolo 2025 (Endometrio, Lorusso D., Humanitas); ESGO-ESTRO-ESP EC Guideline Update 2025 (Concin N et al., Lancet Oncol 2025;26:e423-35).
 - Aggiornamenti verificati in questa revisione: Annals of Oncology, Nature Medicine, ASCO Post, OncLive, CancerNetwork, TargetedOnc, Merck (vedi link nei blockquote di verifica).
 - Verifica stato regolatorio AIFA (2026-08-25): aifa.gov.it (determine e registri di monitoraggio Keytruda, Jemperli, Imfinzi, Lenvima/Keytruda), Gazzetta Ufficiale, ema.europa.eu (EPAR Tecentriq), GSK Italia, Merck, Pharmastar, Young2Young (vedi link nei blockquote di verifica).
-
-## Note personali
-- 

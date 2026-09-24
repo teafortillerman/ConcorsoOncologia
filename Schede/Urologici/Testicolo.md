@@ -149,6 +149,3 @@ Un dato pratico importante per ridurre l'esposizione radiante cumulativa in ques
 - ESMO: CPG Testicolo 2022.
 - Altre fonti: Congresso Grandangolo 2025 (Testicolo) — contenuto non estraibile dalla fonte disponibile.
 - Verifica in questa revisione: la letteratura recente conferma sostanzialmente i dati già presenti nella scheda (campo relativamente stabile rispetto a prostata/rene); principali novità verificate: stato dello studio TIGER (arruolamento concluso, risultati attesi) e ruolo emergente di miR-371a-3p per MRD (ASCO GU 2026).
-
-## Note personali
--

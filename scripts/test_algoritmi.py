@@ -1,0 +1,217 @@
+import copy
+import json
+import tempfile
+import unittest
+from pathlib import Path
+
+from algoritmi import algorithm_summary, load_algorithms, validate_algorithm
+
+
+def make_algo():
+    return {
+        "id": "prova",
+        "title": "Prova",
+        "theme": "Mammella",
+        "scheda": "Schede/Mammella/Prova.md",
+        "start": "q1",
+        "nodes": {
+            "q1": {"type": "question", "text": "Setting?", "short": "Setting",
+                   "answers": [{"label": "A", "next": "r1"}, {"label": "B", "next": "r2"}]},
+            "r1": {"type": "recommendation", "title": "1ª linea",
+                   "options": [{"name": "Farmaco X", "aifa": "reimbursed", "key": "Trial X"}],
+                   "next": {"label": "Alla progressione → 2ª linea", "node": "r2"}},
+            "r2": {"type": "recommendation", "title": "2ª linea",
+                   "options": [{"name": "Farmaco Y", "aifa": "standard", "key": "Trial Y"}]},
+        },
+    }
+
+
+class ValidateAlgorithmTest(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.root = Path(self.tmp.name)
+        (self.root / "Schede" / "Mammella").mkdir(parents=True)
+        (self.root / "Schede" / "Mammella" / "Prova.md").write_text("# Prova\n", encoding="utf-8")
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def test_valid_algorithm_has_no_errors(self):
+        self.assertEqual(validate_algorithm(make_algo(), self.root), [])
+
+    def test_non_object_is_rejected(self):
+        self.assertEqual(validate_algorithm(["id"], self.root), ["il file deve contenere un oggetto JSON"])
+
+    def test_missing_top_level_field(self):
+        algo = make_algo()
+        del algo["start"]
+        self.assertIn("manca il campo 'start'", validate_algorithm(algo, self.root))
+
+    def test_missing_scheda_file(self):
+        algo = make_algo()
+        algo["scheda"] = "Schede/Mammella/Inesistente.md"
+        self.assertIn("la scheda 'Schede/Mammella/Inesistente.md' non esiste", validate_algorithm(algo, self.root))
+
+    def test_start_node_must_exist(self):
+        algo = make_algo()
+        algo["start"] = "nessuno"
+        errors = validate_algorithm(algo, self.root)
+        self.assertIn("il nodo iniziale 'nessuno' non esiste", errors)
+
+    def test_answer_pointing_to_missing_node(self):
+        algo = make_algo()
+        algo["nodes"]["q1"]["answers"][1]["next"] = "fantasma"
+        errors = validate_algorithm(algo, self.root)
+        self.assertIn("nodo 'q1': punta a un nodo inesistente 'fantasma'", errors)
+
+    def test_question_needs_two_answers(self):
+        algo = make_algo()
+        algo["nodes"]["q1"]["answers"] = [{"label": "A", "next": "r1"}]
+        errors = validate_algorithm(algo, self.root)
+        self.assertIn("nodo 'q1': una domanda deve avere almeno 2 risposte", errors)
+
+    def test_invalid_aifa_value(self):
+        algo = make_algo()
+        algo["nodes"]["r2"]["options"][0]["aifa"] = "si"
+        errors = validate_algorithm(algo, self.root)
+        self.assertIn("nodo 'r2': l'opzione 1 ha uno stato AIFA non valido: 'si'", errors)
+
+    def test_option_needs_name_and_key(self):
+        algo = make_algo()
+        del algo["nodes"]["r2"]["options"][0]["key"]
+        errors = validate_algorithm(algo, self.root)
+        self.assertIn("nodo 'r2': l'opzione 1 non ha 'key'", errors)
+
+    def test_invalid_node_type(self):
+        algo = make_algo()
+        algo["nodes"]["r2"]["type"] = "milestone"
+        errors = validate_algorithm(algo, self.root)
+        self.assertIn("nodo 'r2': tipo non valido 'milestone'", errors)
+
+    def test_unreachable_node(self):
+        algo = make_algo()
+        algo["nodes"]["orfano"] = copy.deepcopy(algo["nodes"]["r2"])
+        errors = validate_algorithm(algo, self.root)
+        self.assertIn("nodo 'orfano' non raggiungibile da 'q1'", errors)
+
+    def test_cycle_is_rejected(self):
+        algo = make_algo()
+        algo["nodes"]["r2"]["next"] = {"label": "Di nuovo", "node": "q1"}
+        errors = validate_algorithm(algo, self.root)
+        self.assertTrue(any(e.startswith("ciclo:") for e in errors), errors)
+
+
+class SummaryAndLoadTest(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.root = Path(self.tmp.name)
+        (self.root / "Schede" / "Mammella").mkdir(parents=True)
+        (self.root / "Schede" / "Mammella" / "Prova.md").write_text("# Prova\n", encoding="utf-8")
+        (self.root / "Algoritmi").mkdir()
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def write(self, name, content):
+        (self.root / "Algoritmi" / name).write_text(content, encoding="utf-8")
+
+    def test_summary_lists_start_answers_as_settings(self):
+        summary = algorithm_summary(make_algo(), "Algoritmi/prova.algo.json")
+        self.assertEqual(summary, {
+            "id": "prova", "title": "Prova", "theme": "Mammella",
+            "scheda": "Schede/Mammella/Prova.md", "path": "Algoritmi/prova.algo.json",
+            "settings": ["A", "B"],
+        })
+
+    def test_load_valid_file(self):
+        self.write("prova.algo.json", json.dumps(make_algo()))
+        summaries, errors = load_algorithms(self.root)
+        self.assertEqual(errors, [])
+        self.assertEqual([s["id"] for s in summaries], ["prova"])
+
+    def test_load_ignores_other_files(self):
+        self.write("vecchio.html", "<html></html>")
+        self.assertEqual(load_algorithms(self.root), ([], []))
+
+    def test_load_reports_invalid_json_with_file_name(self):
+        self.write("rotto.algo.json", "{ non json")
+        summaries, errors = load_algorithms(self.root)
+        self.assertEqual(summaries, [])
+        self.assertEqual(len(errors), 1)
+        self.assertTrue(errors[0].startswith("Algoritmi/rotto.algo.json: JSON non valido"), errors)
+
+    def test_load_prefixes_validation_errors_with_file_name(self):
+        algo = make_algo()
+        algo["start"] = "nessuno"
+        self.write("prova.algo.json", json.dumps(algo))
+        _, errors = load_algorithms(self.root)
+        self.assertIn("Algoritmi/prova.algo.json: il nodo iniziale 'nessuno' non esiste", errors)
+
+    def test_load_rejects_duplicate_ids(self):
+        self.write("a.algo.json", json.dumps(make_algo()))
+        self.write("b.algo.json", json.dumps(make_algo()))
+        summaries, errors = load_algorithms(self.root)
+        self.assertEqual(len(summaries), 1)
+        self.assertIn("Algoritmi/b.algo.json: id 'prova' già usato da Algoritmi/a.algo.json", errors)
+
+
+ROOT = Path(__file__).resolve().parent.parent
+MAMMELLA = ROOT / "Algoritmi" / "mammella.algo.json"
+
+
+class MammellaAlgorithmTest(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.data = json.loads(MAMMELLA.read_text(encoding="utf-8"))
+
+    def test_is_valid(self):
+        self.assertEqual(validate_algorithm(self.data, ROOT), [])
+
+    def test_four_settings(self):
+        start = self.data["nodes"][self.data["start"]]
+        self.assertEqual(
+            [a["label"] for a in start["answers"]],
+            ["Precoce operabile", "Localmente avanzato (neoadiuvante)", "Metastatico", "Recidiva locoregionale"],
+        )
+
+    def aifa_of(self, fragment):
+        found = {
+            option["aifa"]
+            for node in self.data["nodes"].values() if node["type"] == "recommendation"
+            for option in node["options"] if fragment.lower() in option["name"].lower()
+        }
+        self.assertTrue(found, f"nessuna opzione contiene {fragment!r}")
+        return found
+
+    def test_key_aifa_statuses_match_the_scheda(self):
+        self.assertEqual(self.aifa_of("Imlunestrant"), {"not_reimbursed"})
+        self.assertEqual(self.aifa_of("Datopotamab"), {"not_reimbursed"})
+        self.assertEqual(self.aifa_of("Neratinib"), {"not_reimbursed"})
+        self.assertEqual(self.aifa_of("Atezolizumab"), {"reimbursed"})
+        self.assertEqual(self.aifa_of("Alpelisib"), {"reimbursed"})
+        self.assertEqual(self.aifa_of("Tucatinib"), {"reimbursed"})
+        self.assertEqual(self.aifa_of("Ribociclib 3 anni"), {"reimbursed"})
+        self.assertEqual(self.aifa_of("Sacituzumab"), {"reimbursed"})
+
+
+    def test_keynote355_status_is_unknown(self):
+        option = next(o for o in self.data["nodes"]["m1_tn_pdl1"]["options"] if o["name"] == "Pembrolizumab + chemioterapia")
+        self.assertEqual(option["aifa"], "unknown")
+
+    def test_genomic_test_exceptions_are_shown(self):
+        info = self.data["nodes"]["precoce_hr_test"].get("info", "")
+        for fragment in ("TAILORx", "RS 16-25", "RxPONDER", "pre-menopausa"):
+            self.assertIn(fragment, info)
+
+    def test_genomic_test_reimbursement_matches_scheda(self):
+        info = self.data["nodes"]["precoce_hr_rischio"]["info"]
+        self.assertIn("DM 18/05/2021", info)
+        self.assertNotIn("regione", info)
+
+    def test_endocrine_extension_matches_scheda(self):
+        detail = self.data["nodes"]["precoce_hr_basso"]["options"][0]["detail"]
+        self.assertNotIn("solo con rischio residuo", detail)
+        self.assertIn("fino a 10 anni solo con alto rischio residuo", detail)
+
+if __name__ == "__main__":
+    unittest.main()

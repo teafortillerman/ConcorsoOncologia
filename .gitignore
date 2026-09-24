@@ -4,3 +4,14 @@ __pycache__/
 node_modules/
 .DS_Store
 _site/
+
+# Materiale di studio locale: non pubblicare (copyright / dati personali)
+AIOM/
+ESMO/
+Congressi/
+Testo_Estratto/
+Appunti/
+Inbox/
+Archivio/
+docs/
+.Rhistory

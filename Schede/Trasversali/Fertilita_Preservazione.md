@@ -133,7 +133,3 @@
 - AIOM. Linee guida Preservazione della fertilità nei pazienti oncologici, edizione 2021.
 - ASCO. Fertility Preservation in Patients With Cancer guideline update.
 - ESHRE. Female fertility preservation guideline.
-
-
-## Note personali
-- 

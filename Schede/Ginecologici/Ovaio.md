@@ -216,6 +216,3 @@ Il ruolo del follow-up resta oggetto di discussione, perché l'identificazione p
 - ESMO: CPG Ovaio 2023 (González-Martín A et al., Ann Oncol 2023;34:833-848); CPG Ovaio Express Update 2026 (González-Martín A & Ledermann JA, ESMO Open 2026;11:106032); ESGO-ESMO-ESP Consensus 2024 (Ledermann JA et al., Ann Oncol 2024;35:248-266).
 - Altre fonti: Congresso Grandangolo 2025 (Ovaio, Scandurra G., AO Cannizzaro).
 - Aggiornamenti verificati in questa revisione: ASCO Post, Annals of Oncology, OncLive, AJMC, AIFA, Corcept Therapeutics, CancerNetwork (vedi link nei blockquote di verifica).
-
-## Note personali
-- 

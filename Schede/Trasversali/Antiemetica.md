@@ -136,7 +136,3 @@
 - AIOM. Linee guida Terapia antiemetica, edizione 2024, aggiornata a gennaio 2024.
 - MASCC/ESMO. Antiemetic guideline updates.
 - ASCO. Antiemetics guideline update.
-
-
-## Note personali
-- 

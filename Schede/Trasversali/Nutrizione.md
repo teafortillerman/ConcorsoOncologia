@@ -118,7 +118,3 @@
 - AIOM. Linee guida Il supporto nutrizionale nel paziente in terapia attiva oncologica, edizione 2024.
 - Ministero della Salute. Linee di indirizzo sui percorsi nutrizionali nei pazienti oncologici, 2017.
 - ESPEN. Clinical Nutrition in Cancer guidelines.
-
-
-## Note personali
-- 

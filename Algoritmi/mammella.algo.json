@@ -1,0 +1,730 @@
+{
+  "id": "mammella",
+  "title": "Mammella",
+  "theme": "Mammella",
+  "scheda": "Schede/Mammella/Mammella.md",
+  "start": "setting",
+  "nodes": {
+    "setting": {
+      "type": "question",
+      "text": "Qual è il setting della malattia?",
+      "short": "Setting",
+      "answers": [
+        { "label": "Precoce operabile", "next": "precoce_sottotipo" },
+        { "label": "Localmente avanzato (neoadiuvante)", "next": "neo_sottotipo" },
+        { "label": "Metastatico", "next": "m1_sottotipo" },
+        { "label": "Recidiva locoregionale", "next": "rec_chirurgia" }
+      ]
+    },
+
+    "precoce_sottotipo": {
+      "type": "question",
+      "text": "Qual è il sottotipo biologico?",
+      "short": "Sottotipo",
+      "info": "Si definisce su HR, HER2 e gBRCA; nell'HR+/HER2- conta anche il rischio clinico/genomico.",
+      "answers": [
+        { "label": "HR+/HER2-", "next": "precoce_hr_rischio" },
+        { "label": "HER2+", "next": "precoce_her2_stadio" },
+        { "label": "Triplo negativo", "next": "precoce_tn_stadio" }
+      ]
+    },
+    "precoce_hr_rischio": {
+      "type": "question",
+      "text": "Qual è il rischio clinico/genomico?",
+      "short": "Rischio",
+      "info": "Alto rischio secondo monarchE: ≥4 linfonodi positivi, oppure 1-3 con T ≥5 cm o G3. Nella zona grigia si valuta un test genomico (Oncotype DX / MammaPrint): in Italia il rimborso SSN è regolato dal DM 18/05/2021, con un fondo dedicato. Non indicato se ≥4 linfonodi positivi.",
+      "answers": [
+        { "label": "Basso", "next": "precoce_hr_basso" },
+        { "label": "Zona grigia", "next": "precoce_hr_test" },
+        { "label": "Alto", "next": "precoce_hr_alto" }
+      ]
+    },
+    "precoce_hr_test": {
+      "type": "question",
+      "text": "Qual è il risultato del test genomico?",
+      "short": "Test genomico",
+      "info": "Eccezioni al basso rischio genomico: TAILORx (N0, RS 11-25) — le pazienti <50 anni con RS 16-25 mantengono un beneficio dalla chemioterapia; RxPONDER (N1, RS ≤25) — beneficio dalla chemioterapia nelle pazienti in pre-menopausa. MINDACT: alto rischio clinico ma basso rischio genomico → ET sufficiente.",
+      "answers": [
+        { "label": "Alto rischio genomico", "next": "precoce_hr_alto" },
+        { "label": "Basso rischio genomico", "next": "precoce_hr_basso" }
+      ]
+    },
+    "precoce_hr_basso": {
+      "type": "recommendation",
+      "title": "Terapia adiuvante",
+      "options": [
+        {
+          "name": "Terapia endocrina adiuvante",
+          "aifa": "standard",
+          "key": "Tamoxifene 20 mg/die per 5 anni in pre-menopausa; inibitore dell'aromatasi in post-menopausa (upfront o switch dopo tamoxifene).",
+          "detail": "Soppressione ovarica + tamoxifene o AI (SOFT/TEXT) solo nelle pre-menopausa ad alto rischio (<35 anni, T >2 cm, N+, G3, Ki67 alto, PgR <20%): nel basso rischio nessun beneficio in OS. Estensione oltre 5 anni: tamoxifene fino a 10 anni (ATLAS, aTToM); dopo 5 anni di AI fino a 7-8 anni (GIM4, DATA, NSABP B-42), e fino a 10 anni solo con alto rischio residuo (CTS5, Breast Cancer Index)."
+        },
+        {
+          "name": "Acido zoledronico o denosumab",
+          "aifa": "reimbursed",
+          "key": "Post-menopausa in ET adiuvante, indipendentemente dal T-score (Nota AIFA 79): riduzione delle fratture (ABCSG-18, HR 0,50).",
+          "detail": "Acido zoledronico 5 mg ev ogni 12 mesi, oppure denosumab 60 mg sc ogni 6 mesi."
+        }
+      ]
+    },
+    "precoce_hr_alto": {
+      "type": "recommendation",
+      "title": "Terapia adiuvante — alto rischio",
+      "options": [
+        {
+          "name": "Chemioterapia + terapia endocrina",
+          "aifa": "standard",
+          "key": "Antraciclina → taxano, dose-dense se N+; TC se le antracicline sono controindicate. Avvio entro 4-8 settimane dalla chirurgia."
+        },
+        {
+          "name": "Abemaciclib 2 anni + terapia endocrina",
+          "aifa": "reimbursed",
+          "key": "≥4 N+, oppure 1-3 N+ con T ≥5 cm o G3 (monarchE): beneficio anche in OS, HR 0,84 (ESMO 2025)."
+        },
+        {
+          "name": "Ribociclib 3 anni + inibitore dell'aromatasi",
+          "aifa": "reimbursed",
+          "key": "Stadio II-III, incluse N0 ad alto rischio (NATALEE): iDFS a 5 anni 85,5% vs 81,0%. Rimborsato dal 6 marzo 2026.",
+          "detail": "Dose adiuvante 400 mg/die (21 giorni su 28). Popolazione più ampia di monarchE: include anche le pazienti linfonodo-negative ad alto rischio."
+        },
+        {
+          "name": "Olaparib 1 anno",
+          "aifa": "reimbursed",
+          "key": "gBRCA1/2 ad alto rischio, dopo CT (OlympiA): iDFS HR 0,63, OS HR 0,68."
+        },
+        {
+          "name": "Acido zoledronico o denosumab",
+          "aifa": "reimbursed",
+          "key": "Post-menopausa in ET adiuvante, indipendentemente dal T-score (Nota AIFA 79): riduzione delle fratture (ABCSG-18, HR 0,50)."
+        }
+      ],
+      "note": "CDK4/6i e olaparib si aggiungono a CT + ET solo se la paziente rientra nei criteri di inclusione del rispettivo studio."
+    },
+    "precoce_her2_stadio": {
+      "type": "question",
+      "text": "Qual è lo stadio?",
+      "short": "Stadio",
+      "info": "Se la malattia è almeno cT2 o linfonodo-positiva, lo standard è il trattamento neoadiuvante: scegli il setting «Localmente avanzato».",
+      "answers": [
+        { "label": "T1a/b N0", "next": "precoce_her2_apt" },
+        { "label": "Stadio I–III, chirurgia upfront con indicazione a CT", "next": "precoce_her2_std" }
+      ]
+    },
+    "precoce_her2_apt": {
+      "type": "recommendation",
+      "title": "Terapia adiuvante",
+      "options": [
+        {
+          "name": "Paclitaxel + trastuzumab (schema APT)",
+          "aifa": "reimbursed",
+          "key": "T1a/b N0: DFS a 7 anni 93,3%. Trastuzumab per 1 anno."
+        }
+      ]
+    },
+    "precoce_her2_std": {
+      "type": "recommendation",
+      "title": "Terapia adiuvante",
+      "options": [
+        {
+          "name": "Chemioterapia + trastuzumab 1 anno",
+          "aifa": "reimbursed",
+          "key": "AC/EC → taxano + trastuzumab, oppure TCH (senza antracicline, meno cardiotossico). 12 mesi restano lo standard (PERSEPHONE)."
+        },
+        {
+          "name": "+ Pertuzumab se N+",
+          "aifa": "reimbursed",
+          "key": "APHINITY: OS a 10 anni HR 0,83 (−17% rischio di morte); nelle N+ HR 0,79."
+        },
+        {
+          "name": "+ Terapia endocrina se HR+",
+          "aifa": "standard",
+          "key": "Nel Luminal B HER2+ si associa la terapia endocrina."
+        },
+        {
+          "name": "Neratinib dopo 1 anno di trastuzumab",
+          "aifa": "not_reimbursed",
+          "key": "ExteNET: beneficio soprattutto nelle ER+, ma non rimborsato dal SSN."
+        }
+      ]
+    },
+    "precoce_tn_stadio": {
+      "type": "question",
+      "text": "Qual è lo stadio?",
+      "short": "Stadio",
+      "info": "Nel triplo negativo la chemioterapia è sempre indicata se T >1 cm e/o N+.",
+      "answers": [
+        { "label": "Stadio I (T >1 cm, N0)", "next": "precoce_tn_adiuvante" },
+        { "label": "Stadio II–III", "next": "neo_tn" }
+      ]
+    },
+    "precoce_tn_adiuvante": {
+      "type": "recommendation",
+      "title": "Terapia adiuvante",
+      "options": [
+        {
+          "name": "Chirurgia → chemioterapia adiuvante",
+          "aifa": "standard",
+          "key": "Antraciclina e taxano. Nello stadio II–III si preferisce invece il trattamento neoadiuvante (KEYNOTE-522)."
+        }
+      ]
+    },
+
+    "neo_sottotipo": {
+      "type": "question",
+      "text": "Qual è il sottotipo biologico?",
+      "short": "Sottotipo",
+      "info": "Clip di marcatura del letto tumorale obbligatoria prima della terapia neoadiuvante. Dopo la NAT: biopsia del linfonodo sentinella se cN0; se cN+ convertito a cN0, target axillary dissection (doppio tracciante + clip sul linfonodo bioptico).",
+      "answers": [
+        { "label": "HR+/HER2-", "next": "neo_hr" },
+        { "label": "HER2+", "next": "neo_her2" },
+        { "label": "Triplo negativo", "next": "neo_tn" }
+      ]
+    },
+    "neo_tn": {
+      "type": "recommendation",
+      "title": "Terapia neoadiuvante",
+      "options": [
+        {
+          "name": "Pembrolizumab + chemioterapia (KEYNOTE-522)",
+          "aifa": "reimbursed",
+          "key": "pCR 64,8% vs 51,2%; OS a 5 anni 86,6% vs 81,7% (HR 0,66). Rimborsato dal luglio 2023, registro dedicato.",
+          "detail": "Carboplatino + paclitaxel per 4 cicli, poi AC/EC per 4 cicli, sempre con pembrolizumab 200 mg ogni 3 settimane: 8 cicli prima della chirurgia."
+        }
+      ],
+      "next": { "label": "Dopo la chirurgia", "node": "neo_tn_risposta" }
+    },
+    "neo_tn_risposta": {
+      "type": "question",
+      "text": "Qual è la risposta patologica?",
+      "short": "Risposta",
+      "answers": [
+        { "label": "Risposta patologica completa (pCR)", "next": "neo_tn_pcr" },
+        { "label": "Malattia residua", "next": "neo_tn_residuo" }
+      ]
+    },
+    "neo_tn_pcr": {
+      "type": "recommendation",
+      "title": "Terapia adiuvante",
+      "options": [
+        {
+          "name": "Pembrolizumab adiuvante (9 cicli)",
+          "aifa": "reimbursed",
+          "key": "Completa circa 1 anno di immunoterapia (KEYNOTE-522)."
+        }
+      ]
+    },
+    "neo_tn_residuo": {
+      "type": "recommendation",
+      "title": "Terapia adiuvante — malattia residua",
+      "options": [
+        {
+          "name": "Pembrolizumab adiuvante (9 cicli)",
+          "aifa": "reimbursed",
+          "key": "Prosecuzione dello schema KEYNOTE-522."
+        },
+        {
+          "name": "Capecitabina in aggiunta al pembrolizumab",
+          "aifa": "standard",
+          "key": "Malattia residua dopo NAT (CREATE-X): si associa al pembrolizumab, non lo sostituisce."
+        },
+        {
+          "name": "Olaparib 1 anno se gBRCA1/2",
+          "aifa": "reimbursed",
+          "key": "OlympiA: iDFS HR 0,63, OS HR 0,68."
+        }
+      ],
+      "note": "Le strategie per la malattia residua (T-DM1, capecitabina, olaparib) non sono intercambiabili tra sottotipi."
+    },
+    "neo_her2": {
+      "type": "recommendation",
+      "title": "Terapia neoadiuvante",
+      "options": [
+        {
+          "name": "Trastuzumab + pertuzumab + chemioterapia",
+          "aifa": "reimbursed",
+          "key": "Standard se almeno cT2 o N+; preferire schemi senza antracicline (taxano + carboplatino) per la minore cardiotossicità."
+        }
+      ],
+      "next": { "label": "Dopo la chirurgia", "node": "neo_her2_risposta" }
+    },
+    "neo_her2_risposta": {
+      "type": "question",
+      "text": "Qual è la risposta patologica?",
+      "short": "Risposta",
+      "answers": [
+        { "label": "Risposta patologica completa (pCR)", "next": "neo_her2_pcr" },
+        { "label": "Malattia residua", "next": "neo_her2_residuo" }
+      ]
+    },
+    "neo_her2_pcr": {
+      "type": "recommendation",
+      "title": "Terapia adiuvante",
+      "options": [
+        {
+          "name": "Completare 1 anno di anti-HER2 (± terapia endocrina se HR+)",
+          "aifa": "reimbursed",
+          "key": "In caso di pCR si completa la terapia anti-HER2."
+        }
+      ]
+    },
+    "neo_her2_residuo": {
+      "type": "recommendation",
+      "title": "Terapia adiuvante — malattia residua",
+      "options": [
+        {
+          "name": "T-DM1 adiuvante",
+          "aifa": "reimbursed",
+          "key": "KATHERINE: iDFS HR 0,50."
+        }
+      ]
+    },
+    "neo_hr": {
+      "type": "recommendation",
+      "title": "Terapia neoadiuvante",
+      "options": [
+        {
+          "name": "Chemioterapia neoadiuvante",
+          "aifa": "standard",
+          "key": "Riservata ai casi ad alto rischio; la pCR è meno frequente che negli altri sottotipi."
+        },
+        {
+          "name": "Terapia endocrina neoadiuvante",
+          "aifa": "standard",
+          "key": "Casi selezionati: pazienti anziane, con comorbidità o malattia fortemente endocrino-sensibile."
+        }
+      ],
+      "next": { "label": "Dopo la chirurgia", "node": "neo_hr_adiuvante" }
+    },
+    "neo_hr_adiuvante": {
+      "type": "recommendation",
+      "title": "Terapia adiuvante",
+      "options": [
+        {
+          "name": "Terapia endocrina adiuvante",
+          "aifa": "standard",
+          "key": "Sia in caso di pCR sia di malattia residua."
+        },
+        {
+          "name": "Abemaciclib 2 anni + terapia endocrina",
+          "aifa": "reimbursed",
+          "key": "Se alto rischio (criteri monarchE)."
+        },
+        {
+          "name": "Ribociclib 3 anni + inibitore dell'aromatasi",
+          "aifa": "reimbursed",
+          "key": "Se alto rischio (criteri NATALEE, incluse N0 ad alto rischio). Rimborsato dal 6 marzo 2026.",
+          "detail": "Dose adiuvante 400 mg/die (21 giorni su 28). Popolazione più ampia di monarchE: include anche le pazienti linfonodo-negative ad alto rischio."
+        },
+        {
+          "name": "Olaparib 1 anno se gBRCA1/2",
+          "aifa": "reimbursed",
+          "key": "gBRCA1/2 con malattia residua (OlympiA: iDFS HR 0,63, OS HR 0,68)."
+        }
+      ],
+      "note": "Abemaciclib e ribociclib sono alternative: si sceglie in base ai criteri di inclusione del rispettivo studio."
+    },
+
+    "m1_sottotipo": {
+      "type": "question",
+      "text": "Qual è il sottotipo biologico alla ri-biopsia?",
+      "short": "Sottotipo",
+      "info": "La ri-biopsia è raccomandata alla prima diagnosi di malattia metastatica: lo stato di HR cambia nel 20% dei casi, quello di HER2 nel 10%.",
+      "answers": [
+        { "label": "HR+/HER2-", "next": "m1_hr_crisi" },
+        { "label": "HER2+", "next": "m1_her2_1l" },
+        { "label": "Triplo negativo", "next": "m1_tn_biomarcatori" }
+      ]
+    },
+    "m1_hr_crisi": {
+      "type": "question",
+      "text": "C'è una crisi viscerale?",
+      "short": "Crisi viscerale",
+      "answers": [
+        { "label": "Sì", "next": "m1_hr_ct" },
+        { "label": "No", "next": "m1_hr_sensibilita" }
+      ]
+    },
+    "m1_hr_ct": {
+      "type": "recommendation",
+      "title": "1ª linea — crisi viscerale",
+      "options": [
+        {
+          "name": "Chemioterapia (tipicamente paclitaxel + bevacizumab)",
+          "aifa": "standard",
+          "key": "Quando serve una risposta rapida."
+        }
+      ]
+    },
+    "m1_hr_sensibilita": {
+      "type": "question",
+      "text": "Qual è la sensibilità endocrina?",
+      "short": "Sensibilità endocrina",
+      "info": "Criteri ABC5. Resistenza primaria: recidiva nei primi 2 anni di ET adiuvante, oppure progressione entro 6 mesi dall'inizio dell'ET per malattia metastatica. Resistenza secondaria: recidiva dopo 2 anni di ET adiuvante o entro 12 mesi dalla fine, oppure progressione dopo 6 mesi di ET per malattia metastatica.",
+      "answers": [
+        { "label": "Endocrino-sensibile", "next": "m1_hr_1l_ai" },
+        { "label": "Endocrino-resistente", "next": "m1_hr_pik3ca" }
+      ]
+    },
+    "m1_hr_pik3ca": {
+      "type": "question",
+      "text": "PIK3CA mutato con resistenza endocrina precoce?",
+      "short": "PIK3CA",
+      "answers": [
+        { "label": "Sì", "next": "m1_hr_1l_inavo" },
+        { "label": "No", "next": "m1_hr_1l_fulv" }
+      ]
+    },
+    "m1_hr_1l_ai": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "Inibitore dell'aromatasi + CDK4/6i (palbociclib, ribociclib, abemaciclib)",
+          "aifa": "reimbursed",
+          "key": "Preferire ribociclib: unico con OS significativa vs AI in monoterapia (MONALEESA-2: 63,9 vs 51,4 mesi, HR 0,76).",
+          "detail": "Palbociclib (PALOMA-2) e abemaciclib (MONARCH-3) non hanno raggiunto la significatività statistica in OS nello stesso confronto."
+        }
+      ],
+      "next": { "label": "Alla progressione → 2ª linea", "node": "m1_hr_2l" }
+    },
+    "m1_hr_1l_fulv": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "Fulvestrant + CDK4/6i",
+          "aifa": "reimbursed",
+          "key": "Malattia endocrino-resistente senza indicazione allo schema INAVO120."
+        }
+      ],
+      "next": { "label": "Alla progressione → 2ª linea", "node": "m1_hr_2l" }
+    },
+    "m1_hr_1l_inavo": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "Fulvestrant + palbociclib + inavolisib",
+          "aifa": "reimbursed",
+          "key": "PIK3CA mutato con recidiva endocrina precoce (INAVO120). Rimborsato dall'ottobre 2025."
+        }
+      ],
+      "next": { "label": "Alla progressione → 2ª linea", "node": "m1_hr_2l" }
+    },
+    "m1_hr_2l": {
+      "type": "question",
+      "text": "Quale alterazione è emersa alla biopsia tissutale o liquida?",
+      "short": "Alterazione",
+      "info": "Più alterazioni possono coesistere (per esempio ESR1 e PIK3CA): non si escludono a vicenda, valutale in sequenza.",
+      "answers": [
+        { "label": "ESR1 mutato", "next": "m1_hr_2l_esr1" },
+        { "label": "PIK3CA / AKT1 / PTEN", "next": "m1_hr_2l_pi3k" },
+        { "label": "gBRCA1/2 mutato", "next": "m1_hr_2l_brca" },
+        { "label": "Nessuna alterazione target", "next": "m1_hr_2l_nessuna" }
+      ]
+    },
+    "m1_hr_2l_esr1": {
+      "type": "recommendation",
+      "title": "2ª linea",
+      "options": [
+        {
+          "name": "Elacestrant",
+          "aifa": "reimbursed",
+          "key": "Dopo progressione a CDK4/6i + ET (EMERALD)."
+        },
+        {
+          "name": "Imlunestrant",
+          "aifa": "not_reimbursed",
+          "key": "Approvato solo dalla FDA: non autorizzato né rimborsato in Italia."
+        }
+      ],
+      "next": { "label": "Alla progressione → linee successive", "node": "m1_hr_successive" }
+    },
+    "m1_hr_2l_pi3k": {
+      "type": "recommendation",
+      "title": "2ª linea",
+      "options": [
+        {
+          "name": "Capivasertib + fulvestrant",
+          "aifa": "reimbursed",
+          "key": "Alterazioni PIK3CA/AKT1/PTEN, dopo un regime endocrino (CAPItello-291). Rimborsato dall'ottobre 2025."
+        },
+        {
+          "name": "Alpelisib + fulvestrant",
+          "aifa": "reimbursed",
+          "key": "Solo PIK3CA mutato, dopo un inibitore dell'aromatasi (SOLAR-1). Rimborsato dalla Determina 1195/2021, rinnovata nel 2025: non è off-label.",
+          "detail": "Con capivasertib e alpelisib vanno monitorate iperglicemia e tossicità cutanea."
+        }
+      ],
+      "next": { "label": "Alla progressione → linee successive", "node": "m1_hr_successive" }
+    },
+    "m1_hr_2l_brca": {
+      "type": "recommendation",
+      "title": "2ª linea",
+      "options": [
+        {
+          "name": "Olaparib o talazoparib",
+          "aifa": "reimbursed",
+          "key": "HER2-negativo gBRCA1/2 mutato, indipendentemente dallo stato HR; nelle HR+ serve pregressa ET o non eleggibilità alla stessa."
+        }
+      ],
+      "next": { "label": "Alla progressione → linee successive", "node": "m1_hr_successive" }
+    },
+    "m1_hr_2l_nessuna": {
+      "type": "recommendation",
+      "title": "2ª linea",
+      "options": [
+        {
+          "name": "Everolimus + exemestane",
+          "aifa": "reimbursed",
+          "key": "BOLERO-2."
+        },
+        {
+          "name": "Cambio di fulvestrant o di CDK4/6i",
+          "aifa": "standard",
+          "key": "Alternativa in assenza di alterazioni target."
+        }
+      ],
+      "next": { "label": "Alla progressione → linee successive", "node": "m1_hr_successive" }
+    },
+    "m1_hr_successive": {
+      "type": "question",
+      "text": "Il tumore è HER2-low?",
+      "short": "HER2-low",
+      "info": "HER2-low = IHC 1+ oppure IHC 2+ con ISH negativa.",
+      "answers": [
+        { "label": "Sì, HER2-low", "next": "m1_hr_tdxd" },
+        { "label": "No (HER2-0)", "next": "m1_hr_adc" }
+      ]
+    },
+    "m1_hr_tdxd": {
+      "type": "recommendation",
+      "title": "Linee successive",
+      "options": [
+        {
+          "name": "Trastuzumab deruxtecan (T-DXd)",
+          "aifa": "reimbursed",
+          "key": "HER2-low dopo ≥1 linea di CT per malattia metastatica (DESTINY-Breast04). Rimborsato anche nell'HR+ dal 9 gennaio 2024.",
+          "detail": "L'estensione EMA 2025 a HER2-ultralow e all'uso dopo la sola ET (DESTINY-Breast06) non è ancora recepita da un registro italiano dedicato. Attenzione all'ILD/polmonite: incidenza cumulativa 15-17% con follow-up lungo."
+        }
+      ],
+      "next": { "label": "Alla progressione", "node": "m1_hr_adc" }
+    },
+    "m1_hr_adc": {
+      "type": "recommendation",
+      "title": "Linee successive",
+      "options": [
+        {
+          "name": "Sacituzumab govitecan",
+          "aifa": "reimbursed",
+          "key": "Metastasi viscerali, dopo ET e almeno altre 2 terapie sistemiche (TROPiCS-02). Rimborsato dal 20 febbraio 2025."
+        },
+        {
+          "name": "Datopotamab deruxtecan",
+          "aifa": "not_reimbursed",
+          "key": "Autorizzato EMA (aprile 2025), non rimborsato in Italia."
+        },
+        {
+          "name": "Chemioterapia sequenziale (capecitabina, eribulina, vinorelbina)",
+          "aifa": "standard",
+          "key": "Dopo l'esaurimento delle opzioni target."
+        }
+      ]
+    },
+
+    "m1_her2_1l": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "Docetaxel + trastuzumab + pertuzumab",
+          "aifa": "reimbursed",
+          "key": "CLEOPATRA: OS mediana 57,1 vs 40,8 mesi (HR 0,69), beneficio mantenuto oltre 8 anni."
+        }
+      ],
+      "next": { "label": "Alla progressione → 2ª linea", "node": "m1_her2_encefalo" }
+    },
+    "m1_her2_encefalo": {
+      "type": "question",
+      "text": "Ci sono metastasi encefaliche attive o progressione intracranica?",
+      "short": "Metastasi encefaliche",
+      "answers": [
+        { "label": "Sì", "next": "m1_her2_tucatinib" },
+        { "label": "No", "next": "m1_her2_tdxd" }
+      ]
+    },
+    "m1_her2_tdxd": {
+      "type": "recommendation",
+      "title": "2ª linea",
+      "options": [
+        {
+          "name": "Trastuzumab deruxtecan (T-DXd)",
+          "aifa": "reimbursed",
+          "key": "Preferito a T-DM1 (DESTINY-Breast03): OS 52,6 vs 42,7 mesi, HR 0,73.",
+          "detail": "ILD/polmonite: incidenza cumulativa 15-17% con follow-up lungo (grado 5 ~2%). Dispnea o tosse di nuova insorgenza impongono sospensione e work-up immediati."
+        }
+      ],
+      "next": { "label": "Alla progressione → linee successive", "node": "m1_her2_successive" }
+    },
+    "m1_her2_tucatinib": {
+      "type": "recommendation",
+      "title": "2ª linea — metastasi encefaliche",
+      "options": [
+        {
+          "name": "Tucatinib + trastuzumab + capecitabina",
+          "aifa": "reimbursed",
+          "key": "Da preferire con metastasi encefaliche attive o progressione intracranica, per la maggiore efficacia sulle metastasi cerebrali (HER2CLIMB, unico regime con dati prospettici dedicati)."
+        }
+      ],
+      "next": { "label": "Alla progressione → linee successive", "node": "m1_her2_successive" }
+    },
+    "m1_her2_successive": {
+      "type": "recommendation",
+      "title": "Linee successive",
+      "options": [
+        {
+          "name": "T-DM1 (se non usato prima)",
+          "aifa": "reimbursed",
+          "key": "Opzione dopo T-DXd."
+        },
+        {
+          "name": "Lapatinib + capecitabina",
+          "aifa": "reimbursed",
+          "key": "Secondo performance status e trattamenti precedenti."
+        }
+      ]
+    },
+
+    "m1_tn_biomarcatori": {
+      "type": "question",
+      "text": "Qual è lo stato di PD-L1 e di BRCA germinale?",
+      "short": "PD-L1 / BRCA",
+      "info": "Cut-off specifici per test: CPS ≥10 con 22C3 per pembrolizumab, SP142 ≥1% per atezolizumab. I due test non sono intercambiabili (concordanza circa 75%).",
+      "answers": [
+        { "label": "PD-L1 positivo", "next": "m1_tn_pdl1" },
+        { "label": "gBRCA1/2 mutato", "next": "m1_tn_brca" },
+        { "label": "PD-L1 negativo e BRCA wild-type", "next": "m1_tn_ct" }
+      ]
+    },
+    "m1_tn_pdl1": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "Pembrolizumab + chemioterapia",
+          "aifa": "unknown",
+          "key": "CPS ≥10 con 22C3 (KEYNOTE-355). La scheda non indica lo stato di rimborsabilità AIFA."
+        },
+        {
+          "name": "Atezolizumab + nab-paclitaxel",
+          "aifa": "reimbursed",
+          "key": "SP142 ≥1% (IMpassion130). In UE/Italia autorizzato e rimborsato (classe H, registro AIFA): il ritiro del 2021 riguarda solo gli USA (FDA).",
+          "detail": "Eleggibilità da registro: prima linea metastatica, ECOG 0-2; escluse le pazienti con taxani nei 12 mesi precedenti o precedente anti-PD-1/PD-L1."
+        }
+      ],
+      "next": { "label": "Alla progressione → 2ª linea", "node": "m1_tn_2l" }
+    },
+    "m1_tn_brca": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "Olaparib o talazoparib",
+          "aifa": "reimbursed",
+          "key": "gBRCA1/2 mutato."
+        },
+        {
+          "name": "Chemioterapia a base di platino",
+          "aifa": "standard",
+          "key": "Alternativa nelle pazienti gBRCA1/2 mutate."
+        }
+      ],
+      "next": { "label": "Alla progressione → 2ª linea", "node": "m1_tn_2l" }
+    },
+    "m1_tn_ct": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "Chemioterapia (taxano ± carboplatino ± bevacizumab)",
+          "aifa": "standard",
+          "key": "PD-L1 negativo e BRCA wild-type."
+        }
+      ],
+      "next": { "label": "Alla progressione → 2ª linea", "node": "m1_tn_2l" }
+    },
+    "m1_tn_2l": {
+      "type": "recommendation",
+      "title": "2ª linea e successive",
+      "options": [
+        {
+          "name": "Sacituzumab govitecan",
+          "aifa": "reimbursed",
+          "key": "ASCENT: OS 12,1 vs 6,7 mesi.",
+          "detail": "Rimborsato dopo ≥2 terapie sistemiche; dal 2025 anche in 2ª linea metastatica se la recidiva è avvenuta oltre 12 mesi dal (neo)adiuvante. Attenzione al genotipo UGT1A1*28 (tossicità ematologica)."
+        },
+        {
+          "name": "Trastuzumab deruxtecan (T-DXd) se HER2-low",
+          "aifa": "reimbursed",
+          "key": "DESTINY-Breast04."
+        },
+        {
+          "name": "Chemioterapia sequenziale (eribulina, capecitabina, vinorelbina)",
+          "aifa": "standard",
+          "key": "Linee successive."
+        }
+      ]
+    },
+
+    "rec_chirurgia": {
+      "type": "question",
+      "text": "Quale chirurgia era stata eseguita?",
+      "short": "Chirurgia precedente",
+      "info": "Sempre ri-stadiazione completa (per escludere malattia a distanza) e ri-biopsia (per riconfermare la biologia).",
+      "answers": [
+        { "label": "Mastectomia", "next": "rec_mastectomia" },
+        { "label": "Chirurgia conservativa", "next": "rec_conservativa" }
+      ]
+    },
+    "rec_mastectomia": {
+      "type": "recommendation",
+      "title": "Trattamento locale",
+      "options": [
+        {
+          "name": "Escissione + radioterapia sulla parete toracica",
+          "aifa": "standard",
+          "key": "La RT si esegue se la parete non è già stata irradiata."
+        }
+      ],
+      "next": { "label": "Terapia sistemica dopo l'asportazione", "node": "rec_sistemica" }
+    },
+    "rec_conservativa": {
+      "type": "recommendation",
+      "title": "Trattamento locale",
+      "options": [
+        {
+          "name": "Mastectomia",
+          "aifa": "standard",
+          "key": "Scelta tipica dopo chirurgia conservativa."
+        },
+        {
+          "name": "Seconda chirurgia conservativa + re-irradiazione",
+          "aifa": "standard",
+          "key": "Solo in casi selezionati: nessuna RT pregressa, recidiva piccola, intervallo libero lungo."
+        }
+      ],
+      "next": { "label": "Terapia sistemica dopo l'asportazione", "node": "rec_sistemica" }
+    },
+    "rec_sistemica": {
+      "type": "recommendation",
+      "title": "Terapia sistemica",
+      "options": [
+        {
+          "name": "Chemioterapia adiuvante",
+          "aifa": "standard",
+          "key": "CALOR: beneficio in DFS dopo l'asportazione della recidiva, più marcato se HR-negativo."
+        }
+      ]
+    }
+  }
+}

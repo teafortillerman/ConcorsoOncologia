@@ -272,7 +272,3 @@ Le tossicità principali riflettono le classi di farmaco impiegate. La **doxorub
 - Bonvalot S, et al. Preoperative radiotherapy plus surgery versus surgery alone for retroperitoneal sarcoma (STRASS). Lancet Oncol 2020;21:1366-1377.
 - Tap WD, et al. Effect of Doxorubicin Plus Olaratumab vs Doxorubicin Plus Placebo (ANNOUNCE). JAMA 2020;323:1266-1276.
 - Mir O, et al. Regorafenib versus placebo in non-adipocytic soft-tissue sarcomas (REGOSARC). Lancet Oncol 2016;17:1732-1742.
-
-
-## Note personali
-- 

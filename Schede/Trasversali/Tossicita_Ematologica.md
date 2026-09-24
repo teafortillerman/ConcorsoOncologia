@@ -167,7 +167,3 @@ Il follow-up ematologico va calibrato sul tipo di supporto in atto. Durante la c
 - Finn RS et al. Palbociclib safety analysis (PALOMA-2), The Oncologist 2019.
 - Kisqali (ribociclib) FDA prescribing information (MONALEESA-2 safety data).
 - Goetz MP et al. Abemaciclib safety analysis (MONARCH-3), JCO 2017.
-
-
-## Note personali
-- 

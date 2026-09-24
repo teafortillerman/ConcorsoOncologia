@@ -166,7 +166,3 @@
 - AIOM. Linee guida Sindromi di predisposizione ereditaria ai tumori associati ai geni della ricombinazione omologa, edizione 2025.
 - ESMO. Hereditary gastrointestinal cancers Clinical Practice Guidelines, 2019.
 - ESMO. Risk reduction and screening of cancer in hereditary breast-ovarian cancer syndromes.
-
-
-## Note personali
-- 

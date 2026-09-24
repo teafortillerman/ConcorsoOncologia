@@ -158,6 +158,3 @@ Nei primi due anni la visita ginecologica con esame obiettivo va ripetuta ogni 3
 - ESMO/ESGO: ESGO-ESTRO-ESP Guidelines for the management of cervical cancer – Update 2023 (Cibula D et al.).
 - Altre fonti: Congresso Grandangolo 2025 (Cervice, Bartoletti M., CRO Aviano).
 - Aggiornamenti verificati in questa revisione: Lancet, NEJM, ASCO Post, CancerNetwork, Genmab (vedi link nei blockquote di verifica).
-
-## Note personali
-- 

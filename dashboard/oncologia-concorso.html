@@ -36,17 +36,10 @@
   --font-display: 'Fraunces', Georgia, serif;
   --font-body: 'General Sans', -apple-system, sans-serif;
   --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
-  --flow-root-bg: #6d3fa8;
-  --flow-root-text: #ffffff;
   --flow-criteria-bg: #eaf5ec;
   --flow-criteria-border: #3f8a5c;
   --flow-criteria-text: #1e5334;
   --flow-criteria-strip: #dcefe0;
-  --flow-outcome-bg: #3f6690;
-  --flow-outcome-text: #ffffff;
-  --flow-milestone-border: #9a9284;
-  --flow-milestone-text: #6f6a60;
-  --flow-line: #b7ae9d;
   --flow-badge-green: #2e9e5b;
   --flow-badge-red: #c0392b;
   --flow-badge-grey: #9a9284;
@@ -77,17 +70,10 @@
   --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
   --shadow-md: 0 6px 24px rgba(0,0,0,0.4);
   --shadow-lg: 0 24px 60px rgba(0,0,0,0.55);
-  --flow-root-bg: #9d6fd6;
-  --flow-root-text: #1a1410;
   --flow-criteria-bg: #17281d;
   --flow-criteria-border: #4bab74;
   --flow-criteria-text: #bfe8cf;
   --flow-criteria-strip: #1f3527;
-  --flow-outcome-bg: #2d4a6b;
-  --flow-outcome-text: #eef3f8;
-  --flow-milestone-border: #6e6858;
-  --flow-milestone-text: #a39b8a;
-  --flow-line: #59543f;
   --flow-badge-green: #52c785;
   --flow-badge-red: #e0685a;
   --flow-badge-grey: #a39b8a;
@@ -159,10 +145,9 @@ button { font-family: inherit; cursor: pointer; }
 .sidebar.collapsed .brand-text,
 .sidebar.collapsed .st-label,
 .sidebar.collapsed .kbd-hint,
-.sidebar.collapsed .progress-widget,
 .sidebar.collapsed .nav-label,
 .sidebar.collapsed .theme-list,
-.sidebar.collapsed .nav-all span:not(.status-dot),
+.sidebar.collapsed .nav-all span,
 .sidebar.collapsed .sidebar-footer span { display: none; }
 .sidebar.collapsed .search-trigger { justify-content: center; padding: 9px; width: 32px; }
 .sidebar.collapsed .nav-all { justify-content: center; padding: 9px; }
@@ -226,20 +211,6 @@ button { font-family: inherit; cursor: pointer; }
   font-family: var(--font-mono);
 }
 
-.progress-widget {
-  background: var(--color-surface-2);
-  border: 1px solid var(--color-border);
-  border-radius: 13px;
-  padding: 13px 14px;
-}
-.progress-widget .pw-top {
-  display: flex; align-items: baseline; justify-content: space-between;
-  margin-bottom: 8px;
-}
-.progress-widget .pw-label { font-size: 0.76rem; color: var(--color-text-muted); font-weight: 500; }
-.progress-widget .pw-value { font-size: 0.86rem; font-weight: 700; color: var(--color-primary); font-family: var(--font-display); }
-.progress-track { height: 6px; border-radius: 999px; background: var(--color-surface-offset); overflow: hidden; }
-.progress-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--color-primary), var(--color-primary-active)); transition: width 0.5s ease; }
 
 .nav-all {
   display: flex; align-items: center; gap: 9px;
@@ -323,8 +294,6 @@ button { font-family: inherit; cursor: pointer; }
   font-weight: 600;
   border-left-color: var(--color-primary);
 }
-.status-dot { width: 6px; height: 6px; border-radius: 999px; flex-shrink: 0; background: var(--color-text-faint); }
-.status-dot.completa { background: var(--color-primary); }
 
 .sidebar-footer {
   font-size: 0.7rem;
@@ -399,25 +368,6 @@ button { font-family: inherit; cursor: pointer; }
 .overview-hero p { color: var(--color-text-muted); max-width: 60ch; margin: 0; }
 .hero-left { flex: 1; min-width: 260px; }
 
-.progress-ring-card {
-  background: var(--color-surface-2);
-  border: 1px solid var(--color-border);
-  border-radius: 18px;
-  padding: 20px 24px;
-  display: flex; align-items: center; gap: 18px;
-  box-shadow: var(--shadow-sm);
-  flex-shrink: 0;
-}
-.ring-wrap { position: relative; width: 84px; height: 84px; flex-shrink: 0; }
-.ring-wrap svg { transform: rotate(-90deg); }
-.ring-bg { fill: none; stroke: var(--color-surface-offset); stroke-width: 8; }
-.ring-fill { fill: none; stroke: var(--color-primary); stroke-width: 8; stroke-linecap: round; transition: stroke-dashoffset 0.6s ease; }
-.ring-text {
-  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-display); font-weight: 600; font-size: 1.05rem;
-}
-.ring-legend .rl-title { font-weight: 600; font-size: 0.92rem; margin-bottom: 3px; }
-.ring-legend .rl-sub { font-size: 0.78rem; color: var(--color-text-muted); }
 
 .theme-cards {
   display: grid;
@@ -444,9 +394,6 @@ button { font-family: inherit; cursor: pointer; }
 .theme-card .tc-head { display: flex; align-items: center; gap: 10px; }
 .theme-card .tc-title { font-weight: 600; font-size: 0.98rem; flex: 1; }
 .theme-card .tc-count { color: var(--color-text-muted); font-size: 0.8rem; }
-.theme-card .tc-progress { display: flex; align-items: center; gap: 8px; }
-.theme-card .tc-progress .progress-track { flex: 1; }
-.theme-card .tc-progress .tc-ratio { font-size: 0.72rem; color: var(--color-text-faint); flex-shrink: 0; }
 
 .section-title { font-size: 1rem; font-weight: 600; margin: 0 0 14px; font-family: var(--font-display); }
 .updated-strip { margin-top: 42px; }
@@ -465,14 +412,6 @@ button { font-family: inherit; cursor: pointer; }
 .updated-chip .name { font-size: 0.88rem; font-weight: 600; margin-bottom: 4px; }
 .updated-chip .date { font-size: 0.74rem; color: var(--color-text-faint); }
 
-.badge {
-  display: inline-flex; align-items: center; gap: 5px;
-  font-size: 0.72rem; font-weight: 600;
-  padding: 3px 9px; border-radius: 999px;
-}
-.badge.completa { background: var(--color-primary-highlight); color: var(--color-primary); }
-.badge.da_completare { background: var(--color-warn-highlight); color: var(--color-warn); }
-.badge svg { width: 10px; height: 10px; }
 
 /* READER */
 .reader-layout { display: grid; grid-template-columns: minmax(0, 1fr) 176px; gap: 32px; align-items: start; max-width: 1560px; }
@@ -663,111 +602,6 @@ button { font-family: inherit; cursor: pointer; }
 }
 @media (max-width: 640px) { #tt-portal { max-width: calc(100vw - 32px); } }
 
-/* FLOW DIAGRAM (interactive drill-down navigator, non-Mermaid) */
-.flow-diagram {
-  background: var(--color-surface-2);
-  border: 1px solid var(--color-border);
-  border-radius: 16px;
-  padding: 22px 22px 28px;
-  margin: 6px 0 26px;
-  box-shadow: var(--shadow-sm);
-}
-.flow-diagram-title {
-  font-family: var(--font-display); font-weight: 600; font-size: 1rem;
-  margin: 0 0 4px; color: var(--color-text);
-}
-.flow-diagram-sub { font-size: 0.8rem; color: var(--color-text-muted); margin: 0 0 18px; }
-
-.fd-legend {
-  display: flex; flex-wrap: wrap; gap: 8px 18px;
-  font-size: 0.72rem; color: var(--color-text-muted);
-  margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid var(--color-divider);
-}
-.fd-legend-item { display: flex; align-items: center; gap: 6px; white-space: nowrap; }
-.fd-legend-swatch { width: 11px; height: 11px; border-radius: 3px; flex-shrink: 0; }
-.fd-legend-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; border: 1.5px solid rgba(0,0,0,0.15); }
-
-/* breadcrumb trail — shows the path taken through the algorithm so far */
-.fw-crumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 2px; margin-bottom: 18px; }
-.fw-crumb-sep { color: var(--color-text-faint); font-size: 0.76rem; padding: 0 2px; }
-.fw-crumb-btn {
-  border: none; background: none; padding: 4px 9px; border-radius: 7px;
-  color: var(--color-text-muted); font-size: 0.76rem; font-family: inherit; cursor: pointer;
-  max-width: 220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
-  transition: background 0.12s, color 0.12s;
-}
-.fw-crumb-btn:hover:not(:disabled) { background: var(--color-surface-offset); color: var(--color-text); }
-.fw-crumb-btn.fw-crumb-current { color: var(--color-primary); font-weight: 700; cursor: default; }
-
-.fw-chain { display: flex; flex-direction: column; align-items: center; }
-.fw-chain > .fd-node { width: 100%; max-width: 560px; }
-.fw-options { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 22px; }
-.fw-options > .fd-node { flex: 1 1 250px; min-width: 220px; max-width: 320px; }
-
-.fd-arrow-down { width: 2px; height: 20px; background: var(--flow-line); position: relative; flex-shrink: 0; }
-.fd-arrow-down::after {
-  content: ""; position: absolute; bottom: -1px; left: 50%; transform: translateX(-50%);
-  border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 6px solid var(--flow-line);
-}
-
-.fd-node {
-  border-radius: 11px; padding: 11px 15px; font-size: 0.83rem; font-weight: 600;
-  text-align: center; line-height: 1.4; position: relative;
-  box-shadow: var(--shadow-sm);
-  transition: box-shadow 0.15s ease, transform 0.15s ease;
-}
-.fd-node.fd-root { background: var(--flow-root-bg); color: var(--flow-root-text); font-size: 0.88rem; letter-spacing: 0.01em; }
-.fd-node.fd-gate { background: var(--flow-criteria-bg); border: 1.5px solid var(--flow-criteria-border); color: var(--flow-criteria-text); }
-.fd-node.fd-criteria { background: var(--flow-criteria-bg); border: 1.5px solid var(--flow-criteria-border); color: var(--flow-criteria-text); }
-.fd-node.fd-criteria .fd-node-text, .fd-node.fd-gate .fd-node-text { font-style: italic; font-weight: 600; }
-.fd-node.fd-outcome { background: var(--flow-outcome-bg); color: var(--flow-outcome-text); text-align: left; }
-.fd-node.fd-milestone {
-  background: color-mix(in srgb, var(--flow-milestone-border) 9%, transparent);
-  border: 1.5px dashed var(--flow-milestone-border); color: var(--flow-milestone-text);
-  font-weight: 600; padding: 7px 16px; box-shadow: none;
-}
-.fd-milestone-sub { font-size: 0.68rem; font-weight: 400; color: var(--flow-milestone-text); margin-top: 3px; }
-.fd-node.fd-withdrawn { box-shadow: 0 0 0 2px var(--flow-badge-red); }
-.fd-node.fd-clickable { cursor: pointer; }
-.fd-node.fd-clickable:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
-
-.fd-aifa-chip {
-  display: inline-flex; align-items: center; gap: 5px;
-  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.01em;
-  padding: 3px 9px 3px 7px; border-radius: 999px; margin-top: 8px; color: #fff;
-}
-.fd-aifa-chip::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.85); flex-shrink: 0; }
-.fd-aifa-chip.fd-aifa-reimbursed { background: var(--flow-badge-green); }
-.fd-aifa-chip.fd-aifa-not_reimbursed { background: var(--flow-badge-red); }
-.fd-aifa-chip.fd-aifa-unknown { background: var(--flow-badge-grey); }
-
-.fd-nav-hint {
-  margin: 8px -14px -10px; padding: 6px 14px; font-size: 0.7rem; font-weight: 600;
-  display: flex; align-items: center; justify-content: flex-end; gap: 4px; border-radius: 0 0 9px 9px;
-}
-.fd-node.fd-criteria .fd-nav-hint, .fd-node.fd-gate .fd-nav-hint { background: var(--flow-criteria-strip); color: var(--flow-criteria-text); }
-.fd-node.fd-outcome .fd-nav-hint { background: rgba(255,255,255,0.14); color: var(--flow-outcome-text); }
-.fd-nav-hint svg { width: 13px; height: 13px; }
-
-.fd-info-strip {
-  margin: 8px -14px -10px; padding: 5px 14px; font-size: 0.68rem; font-weight: 500;
-  display: flex; align-items: center; gap: 5px; cursor: pointer; border-radius: 0 0 9px 9px;
-}
-.fd-node.fd-criteria .fd-info-strip, .fd-node.fd-gate .fd-info-strip { background: var(--flow-criteria-strip); border-top: 1px solid var(--flow-criteria-border); color: var(--flow-criteria-text); }
-.fd-node.fd-outcome .fd-info-strip { background: rgba(255,255,255,0.14); border-top: 1px solid rgba(255,255,255,0.2); color: var(--flow-outcome-text); }
-.fd-info-strip .fd-i-icon {
-  width: 13px; height: 13px; border-radius: 50%; border: 1.3px solid currentColor;
-  display: flex; align-items: center; justify-content: center; font-size: 0.62rem; font-style: italic; flex-shrink: 0;
-}
-.fd-detail {
-  display: none; font-size: 0.74rem; font-weight: 400; line-height: 1.5; text-align: left;
-  margin: 8px -14px -10px; padding: 10px 14px; border-radius: 0 0 9px 9px;
-}
-.fd-node.fd-criteria .fd-detail, .fd-node.fd-gate .fd-detail, .fd-node.fd-root .fd-detail { background: var(--flow-criteria-strip); color: var(--flow-criteria-text); }
-.fd-node.fd-outcome .fd-detail { background: rgba(255,255,255,0.14); color: var(--flow-outcome-text); }
-.fd-node.fd-open .fd-detail { display: block; }
-.fd-node.fd-open .fd-info-strip { display: none; }
-.fd-withdrawn-tag { display: inline-block; font-size: 0.66rem; font-weight: 700; color: var(--flow-badge-red); margin-top: 3px; }
 
 .md-content .table-wrap { overflow-x: auto; margin: 0 0 22px; border: 1px solid var(--color-border); border-radius: 12px; }
 .md-content table { border-collapse: collapse; width: 100%; font-size: 0.88em; }
@@ -839,6 +673,76 @@ button { font-family: inherit; cursor: pointer; }
 .cp-item-sub { font-size: 0.74rem; color: var(--color-text-faint); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .cp-empty { padding: 30px 16px; text-align: center; color: var(--color-text-faint); font-size: 0.86rem; }
 
+/* ALGORITMI GUIDATI */
+.nav-all[hidden] { display: none; }
+.nav-count {
+  margin-left: auto; font-size: 0.68rem; color: var(--color-text-faint);
+  background: var(--color-surface-offset); border-radius: 999px; padding: 2px 7px;
+}
+.ag-wrap { max-width: 760px; }
+.ag-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; }
+.ag-head h1 { font-family: var(--font-display); font-size: clamp(1.7rem, 3vw, 2.2rem); margin: 0; font-weight: 600; }
+.ag-link, .ag-open-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  border: 1px solid var(--color-border); background: var(--color-surface-2); color: var(--color-primary);
+  font-weight: 600; font-size: 0.84rem; border-radius: 10px; padding: 7px 12px;
+}
+.ag-link svg, .ag-open-btn svg { width: 14px; height: 14px; }
+.ag-link:hover, .ag-open-btn:hover { border-color: var(--color-primary); }
+.ag-open-btn { margin-top: 14px; }
+.ag-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.ag-pill {
+  border: 1px solid var(--color-border); background: var(--color-surface-offset); color: var(--color-text);
+  border-radius: 999px; padding: 5px 12px; font-size: 0.8rem; font-weight: 500; text-align: left;
+}
+.ag-pill:hover { border-color: var(--color-primary); color: var(--color-primary); }
+.ag-question { background: var(--flow-criteria-bg); border: 1.5px solid var(--flow-criteria-border); border-radius: 14px; padding: 18px 20px; }
+.ag-q-text { font-size: 1.08rem; font-weight: 700; color: var(--flow-criteria-text); margin-bottom: 12px; }
+.ag-info { margin: 0 0 14px; font-size: 0.86rem; color: var(--flow-criteria-text); }
+.ag-info summary { cursor: pointer; display: inline-flex; align-items: center; gap: 6px; font-weight: 600; list-style: none; }
+.ag-info summary::-webkit-details-marker { display: none; }
+.ag-info > div { margin-top: 8px; padding: 10px 12px; border-radius: 10px; background: var(--flow-criteria-strip); line-height: 1.5; }
+.ag-i {
+  width: 16px; height: 16px; border-radius: 50%; border: 1.5px solid currentColor;
+  display: inline-flex; align-items: center; justify-content: center; font-size: 0.7rem; font-style: italic;
+}
+.ag-answers { display: flex; flex-wrap: wrap; gap: 10px; }
+.ag-answer {
+  background: var(--color-surface-2); border: 1.5px solid var(--flow-criteria-border); color: var(--flow-criteria-text);
+  font-weight: 700; font-size: 0.92rem; border-radius: 10px; padding: 10px 16px; text-align: left;
+  transition: background 0.12s, color 0.12s, transform 0.12s;
+}
+.ag-answer:hover { background: var(--flow-criteria-border); color: #fff; transform: translateY(-1px); }
+.ag-rec { background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: 14px; padding: 18px 20px; box-shadow: var(--shadow-sm); }
+.ag-rec-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-primary); }
+.ag-rec-title { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; margin: 2px 0 14px; }
+.ag-options { display: grid; gap: 12px; }
+.ag-option { border: 1px solid var(--color-border); border-left: 5px solid var(--flow-badge-grey); border-radius: 10px; padding: 12px 14px; background: var(--color-surface); }
+.ag-option.ag-aifa-reimbursed { border-left-color: var(--flow-badge-green); }
+.ag-option.ag-aifa-not_reimbursed { border-left-color: var(--flow-badge-red); }
+.ag-opt-name { font-weight: 700; font-size: 1rem; margin-bottom: 6px; }
+.ag-chip { display: inline-block; font-size: 0.72rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; color: #fff; background: var(--flow-badge-grey); }
+.ag-chip.ag-aifa-reimbursed { background: var(--flow-badge-green); }
+.ag-chip.ag-aifa-not_reimbursed { background: var(--flow-badge-red); }
+.ag-chip.ag-aifa-standard { background: var(--color-surface-offset); color: var(--color-text-muted); }
+.ag-opt-key { margin-top: 8px; font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.5; }
+.ag-detail { margin-top: 8px; font-size: 0.86rem; }
+.ag-detail summary { cursor: pointer; color: var(--color-primary); font-weight: 600; }
+.ag-detail > div { margin-top: 6px; line-height: 1.55; }
+.ag-note { margin-top: 14px; font-size: 0.86rem; color: var(--color-text-muted); border-left: 3px solid var(--color-primary); padding-left: 10px; }
+.ag-next {
+  margin-top: 16px; display: inline-flex; align-items: center; gap: 8px;
+  background: var(--color-primary); color: var(--color-text-inverse); border: none;
+  font-weight: 700; font-size: 0.9rem; border-radius: 10px; padding: 10px 16px;
+}
+.ag-next svg { width: 15px; height: 15px; }
+.ag-next:hover { background: var(--color-primary-hover); }
+.ag-actions { margin-top: 18px; }
+.ag-restart { border: none; background: none; color: var(--color-text-muted); font-size: 0.84rem; text-decoration: underline; padding: 0; }
+@media (max-width: 640px) {
+  .ag-answers { flex-direction: column; }
+  .ag-answer { width: 100%; }
+}
 .back-to-top {
   position: fixed; right: 26px; bottom: 26px; z-index: 40;
   width: 42px; height: 42px; border-radius: 50%;
@@ -929,12 +833,16 @@ button { font-family: inherit; cursor: pointer; }
       <span class="kbd-hint">⌘K</span>
     </button>
 
-    <div class="progress-widget" id="progressWidget"></div>
 
     <div>
       <div class="nav-all" id="navHome">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9h14v-9"/></svg>
         <span>Panoramica generale</span>
+      </div>
+      <div class="nav-all" id="navAlgorithms" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="5" r="2"/><circle cx="18" cy="5" r="2"/><circle cx="12" cy="19" r="2"/><path d="M6 7v2a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V7M12 12v5"/></svg>
+        <span>Algoritmi</span>
+        <span class="nav-count" id="navAlgorithmsCount"></span>
       </div>
     </div>
 
@@ -985,15 +893,19 @@ button { font-family: inherit; cursor: pointer; }
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
+<script src="algoritmi-core.js"></script>
 <script>
 const state = {
   generated_at: "",
   counts: {},
   themes: {},
-  progress: { completa: 0, da_completare: 0, totale_schede: 0 },
   items: [],
   query: "",
-  view: "home",      // home | theme | scheda
+  view: "home",      // home | theme | scheda | algorithms | algorithm
+  algorithms: [],
+  activeAlgorithm: null,   // { summary, data }
+  requestedAlgorithm: null,
+  algoHistory: [],
   activeTheme: null,
   activeItem: null,
   openThemes: new Set(),
@@ -1007,13 +919,12 @@ const ICONS = {
   home: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9h14v-9"/></svg>',
   clock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>',
   calendar: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>',
-  check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>',
-  dot: '<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>',
   arrowLeft: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>',
   arrowRight: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>',
   externalLink: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6M10 14 21 3"/></svg>',
   folder: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>',
   inbox: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg>',
+  branch: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="5" r="2"/><circle cx="18" cy="5" r="2"/><circle cx="12" cy="19" r="2"/><path d="M6 7v2a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V7M12 12v5"/></svg>',
 };
 
 function escapeHtml(str) {
@@ -1199,9 +1110,6 @@ function markdownToHtml(md) {
         if (codeLang === "mermaid") {
           const src = codeBuf.join("\n");
           append(`<div class="mermaid-card"><div class="mermaid">${escapeHtml(src)}</div></div>`);
-        } else if (codeLang === "flowchart") {
-          const flowId = codeBuf.join("\n").trim();
-          append(`<div class="flow-diagram" data-flow-id="${escapeHtml(flowId)}"><div class="empty-state" style="padding:20px 0;">Caricamento diagramma...</div></div>`);
         } else if (codeLang === "button") {
           const btnLines = codeBuf.join("\n").trim().split("\n").map(s => s.trim()).filter(Boolean);
           const btnLabel = btnLines[0] || "Apri";
@@ -1341,196 +1249,6 @@ async function renderMermaid() {
   }
 }
 
-/* ---------- interactive flow diagrams: drill-down navigator (non-Mermaid) ----------
-   Ogni algoritmo si mostra un passaggio alla volta: nodo corrente + opzioni cliccabili.
-   Cliccando un'opzione con figli si passa allo schermo successivo (quello precedente
-   sparisce); una breadcrumb in alto permette di tornare a un passaggio precedente.
-   Nessun disegno dinamico di linee/SVG: solo layout CSS normale, quindi non ci sono
-   problemi di misura/zoom cross-browser. */
-const flowCache = {};
-
-const AIFA_LABEL = {
-  reimbursed: "Rimborsata AIFA",
-  not_reimbursed: "Non rimborsata AIFA",
-  unknown: "Da verificare",
-};
-
-function flowJsonUrl(item, flowId) {
-  const dir = item.relative_path.slice(0, item.relative_path.lastIndexOf("/") + 1);
-  return "../" + dir + flowId + ".flow.json";
-}
-
-async function renderFlowDiagrams(item) {
-  const els = document.querySelectorAll(".flow-diagram[data-flow-id]");
-  for (const el of els) {
-    const flowId = el.dataset.flowId;
-    try {
-      let data = flowCache[flowId];
-      if (!data) {
-        const res = await fetch(flowJsonUrl(item, flowId) + "?t=" + Date.now());
-        data = await res.json();
-        flowCache[flowId] = data;
-      }
-      buildFlowChart(el, data);
-    } catch (e) {
-      console.warn("Flow diagram error:", flowId, e);
-      el.innerHTML = emptyState(ICONS.inbox, "Impossibile caricare il diagramma", flowId + ".flow.json");
-    }
-  }
-}
-
-/* Unisce root + gate + etichette di ramo + nodi reali in un unico grafo ad albero:
-   ogni nodo ha al più un genitore, il che permette di derivare la breadcrumb
-   semplicemente risalendo i puntatori al genitore. */
-function buildFlowGraph(data) {
-  const nodesById = {};
-  const childrenById = {};
-  const parentById = {};
-
-  const addNode = (node) => { nodesById[node.id] = node; };
-  const addEdge = (fromId, toId) => {
-    (childrenById[fromId] = childrenById[fromId] || []).push(toId);
-    parentById[toId] = fromId;
-  };
-
-  addNode({ id: "__root", type: "root", text: data.root.text });
-  let tail = "__root";
-  if (data.gate) {
-    addNode({ id: "__gate", type: "gate", text: data.gate.text, detail: data.gate.detail });
-    addEdge("__root", "__gate");
-    tail = "__gate";
-  }
-  data.branches.forEach(branch => {
-    addNode({ id: branch.id, type: "gate", text: branch.label });
-    addEdge(tail, branch.id);
-    branch.nodes.forEach(addNode);
-    branch.edges.forEach(([from, to]) => addEdge(from, to));
-  });
-
-  return { nodesById, childrenById, parentById };
-}
-
-/* Segue la catena di nodi "a scelta obbligata" (un solo figlio) finché non trova
-   un vero bivio (2+ figli) o un vicolo cieco (0 figli): quella catena si mostra
-   tutta assieme come contesto, e i suoi figli diventano le opzioni cliccabili. */
-function flowScreenChain(graph, startId) {
-  const chain = [startId];
-  let cur = startId;
-  while ((graph.childrenById[cur] || []).length === 1) {
-    cur = graph.childrenById[cur][0];
-    chain.push(cur);
-  }
-  return { chain, options: graph.childrenById[cur] || [] };
-}
-
-function flowAncestors(graph, id) {
-  const out = [];
-  let p = graph.parentById[id];
-  while (p) { out.unshift(p); p = graph.parentById[p]; }
-  return out;
-}
-
-/* mode: "chain" (contesto, sempre espanso) | "branch" (porta a un altro schermo) | "leaf" (vicolo cieco, mostra dettagli al tocco) */
-function flowNodeCardHtml(node, mode) {
-  if (node.type === "milestone") {
-    return `<div class="fd-node fd-milestone" data-id="${escapeHtml(node.id)}">
-      <div class="fd-node-text">${escapeHtml(node.text)}</div>
-      ${node.detail ? `<div class="fd-milestone-sub">${escapeHtml(node.detail)}</div>` : ""}
-    </div>`;
-  }
-  const typeClass = node.type === "criteria" ? "fd-criteria" : node.type === "gate" ? "fd-gate" : node.type === "root" ? "fd-root" : "fd-outcome";
-  const withdrawnClass = node.withdrawn ? "fd-withdrawn" : "";
-  const chip = (node.type === "outcome" && node.aifa && node.aifa !== "na")
-    ? `<div class="fd-aifa-chip fd-aifa-${escapeHtml(node.aifa)}">${escapeHtml(AIFA_LABEL[node.aifa] || "")}</div>`
-    : "";
-  const withdrawnTag = node.withdrawn ? `<div class="fd-withdrawn-tag">⛔ Indicazione ritirata</div>` : "";
-
-  let extraClass = "", tail = "";
-  if (mode === "chain") {
-    extraClass = "fd-open";
-    tail = node.detail ? `<div class="fd-detail" style="display:block">${escapeHtml(node.detail)}</div>` : "";
-  } else if (mode === "branch") {
-    extraClass = "fd-clickable";
-    tail = `<div class="fd-nav-hint"><span>continua</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg></div>`;
-  } else {
-    extraClass = node.detail ? "fd-clickable" : "";
-    tail = node.detail
-      ? `<div class="fd-info-strip" data-role="info-toggle"><span class="fd-i-icon">i</span><span>dettagli</span></div><div class="fd-detail">${escapeHtml(node.detail)}</div>`
-      : "";
-  }
-  return `<div class="fd-node ${typeClass} ${withdrawnClass} ${extraClass}" data-id="${escapeHtml(node.id)}"><div class="fd-node-text">${escapeHtml(node.text)}</div>${chip}${withdrawnTag}${tail}</div>`;
-}
-
-function buildFlowChart(container, data) {
-  const graph = buildFlowGraph(data);
-  let currentId = "__root";
-
-  const heading = (data.title || data.subtitle) ? `
-    ${data.title ? `<div class="flow-diagram-title">${escapeHtml(data.title)}</div>` : ""}
-    ${data.subtitle ? `<div class="flow-diagram-sub">${escapeHtml(data.subtitle)}</div>` : ""}
-  ` : "";
-
-  const legend = `
-    <div class="fd-legend">
-      <span class="fd-legend-item"><span class="fd-legend-swatch" style="background:var(--flow-root-bg)"></span>Inquadramento</span>
-      <span class="fd-legend-item"><span class="fd-legend-swatch" style="background:var(--flow-criteria-bg);border:1px solid var(--flow-criteria-border)"></span>Criterio clinico</span>
-      <span class="fd-legend-item"><span class="fd-legend-swatch" style="background:var(--flow-outcome-bg)"></span>Opzione terapeutica</span>
-      <span class="fd-legend-item"><span class="fd-legend-dot" style="background:var(--flow-badge-green)"></span>Rimborsata AIFA</span>
-      <span class="fd-legend-item"><span class="fd-legend-dot" style="background:var(--flow-badge-red)"></span>Non rimborsata / ritirata</span>
-      <span class="fd-legend-item"><span class="fd-legend-dot" style="background:var(--flow-badge-grey)"></span>Da verificare</span>
-    </div>
-  `;
-
-  container.innerHTML = `
-    ${heading}
-    ${legend}
-    <div class="fw-crumbs" data-role="crumbs"></div>
-    <div class="fw-screen" data-role="screen"></div>
-  `;
-  const crumbsEl = container.querySelector('[data-role="crumbs"]');
-  const screenEl = container.querySelector('[data-role="screen"]');
-
-  function goTo(id) { currentId = id; render(); screenEl.scrollIntoView({ behavior: "smooth", block: "nearest" }); }
-
-  function render() {
-    const trail = [...flowAncestors(graph, currentId), currentId];
-    crumbsEl.innerHTML = trail.map((id, i) => {
-      const isLast = i === trail.length - 1;
-      return `${i > 0 ? '<span class="fw-crumb-sep">›</span>' : ""}<button type="button" class="fw-crumb-btn ${isLast ? "fw-crumb-current" : ""}" data-goto="${escapeHtml(id)}" ${isLast ? "disabled" : ""}>${escapeHtml(graph.nodesById[id].text)}</button>`;
-    }).join("");
-
-    const { chain, options } = flowScreenChain(graph, currentId);
-    const chainHtml = chain.map((id, i) => {
-      const card = flowNodeCardHtml(graph.nodesById[id], "chain");
-      return i < chain.length - 1 ? card + '<div class="fd-arrow-down"></div>' : card;
-    }).join("");
-    const optionsHtml = options.length ? `
-      <div class="fw-options">
-        ${options.map(id => {
-          const hasKids = (graph.childrenById[id] || []).length > 0;
-          return flowNodeCardHtml(graph.nodesById[id], hasKids ? "branch" : "leaf");
-        }).join("")}
-      </div>
-    ` : "";
-
-    screenEl.innerHTML = `<div class="fw-chain">${chainHtml}</div>${optionsHtml}`;
-
-    screenEl.querySelectorAll(".fw-options > .fd-node").forEach(card => {
-      const id = card.dataset.id;
-      const hasKids = (graph.childrenById[id] || []).length > 0;
-      if (hasKids) card.addEventListener("click", () => goTo(id));
-      else if (card.querySelector(".fd-detail")) card.addEventListener("click", () => card.classList.toggle("fd-open"));
-    });
-  }
-
-  crumbsEl.addEventListener("click", (ev) => {
-    const btn = ev.target.closest("[data-goto]");
-    if (btn) goTo(btn.dataset.goto);
-  });
-
-  render();
-}
-
 const sunIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
 const moonIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
 
@@ -1598,12 +1316,12 @@ async function loadData() {
     state.generated_at = json.generated_at || "";
     state.counts = json.counts || {};
     state.themes = json.themes || {};
-    state.progress = json.progress || { completa: 0, da_completare: 0, totale_schede: 0 };
     state.items = json.items || [];
+    state.algorithms = json.algorithms || [];
+    renderAlgorithmsNav();
     Object.keys(state.themes).forEach(t => state.openThemes.add(t));
     renderStatPills();
     renderThemeNav();
-    renderProgressWidget();
     renderView();
     renderFooter();
   } catch (e) {
@@ -1617,18 +1335,6 @@ async function loadData() {
 
 function emptyState(icon, title, sub) {
   return `<div class="empty-state">${icon}<div style="font-weight:600;color:var(--color-text);margin-bottom:6px;">${title}</div><div>${sub || ""}</div></div>`;
-}
-
-function renderProgressWidget() {
-  const p = state.progress;
-  const pct = p.totale_schede ? Math.round((p.completa / p.totale_schede) * 100) : 0;
-  document.getElementById("progressWidget").innerHTML = `
-    <div class="pw-top">
-      <span class="pw-label">Schede completate</span>
-      <span class="pw-value">${p.completa}/${p.totale_schede}</span>
-    </div>
-    <div class="progress-track"><div class="progress-fill" style="width:${pct}%"></div></div>
-  `;
 }
 
 function renderStatPills() {
@@ -1649,11 +1355,6 @@ function themedItems(theme) {
 function schedeOfTheme(theme) {
   return themedItems(theme).filter(i => i.extension === ".md");
 }
-function themeCompletionRatio(theme) {
-  const schede = schedeOfTheme(theme);
-  const done = schede.filter(s => s.status === "completa").length;
-  return { done, total: schede.length };
-}
 
 function renderThemeNav() {
   const box = document.getElementById("themeNav");
@@ -1663,11 +1364,8 @@ function renderThemeNav() {
     const schede = schedeOfTheme(theme);
     const isOpen = state.openThemes.has(theme);
     const isActiveTheme = state.activeTheme === theme;
-    const { done, total } = themeCompletionRatio(theme);
-
     const schedaLinks = schede.map(s => `
       <div class="scheda-link ${state.activeItem && state.activeItem.relative_path === s.relative_path ? 'active' : ''}" data-path="${escapeHtml(s.relative_path)}">
-        <span class="status-dot ${s.status === 'completa' ? 'completa' : ''}"></span>
         <span>${escapeHtml(s.title)}</span>
       </div>
     `).join("");
@@ -1677,7 +1375,7 @@ function renderThemeNav() {
         <div class="theme-header ${isOpen ? 'open' : ''} ${isActiveTheme ? 'active-theme' : ''}" data-theme-toggle="${escapeHtml(theme)}">
           ${themeBadge(theme)}
           <span class="th-name">${escapeHtml(theme)}</span>
-          <span class="count">${done}/${total}</span>
+          <span class="count">${schede.length}</span>
           <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
         </div>
         <div class="scheda-list ${isOpen ? 'open' : ''}">
@@ -1767,6 +1465,7 @@ async function openScheda(item) {
   state.view = "scheda";
   state.activeTheme = item.theme;
   state.activeItem = item;
+  updateNavActive();
   if (!wasScheda) {
     state.sidebarCollapsed = true;
     applySidebarCollapse();
@@ -1789,7 +1488,7 @@ async function openScheda(item) {
     const { html, toc } = markdownToHtml(text);
     const related = themedItems(item.theme).filter(i => i.extension !== ".md");
     const { prev, next } = readerNav(item);
-    const statusLabel = item.status === "completa" ? "Completa" : "Da completare";
+    const algo = algorithmForScheda(item.relative_path);
 
     content.innerHTML = `
       <div class="reader-layout">
@@ -1800,8 +1499,8 @@ async function openScheda(item) {
             <div class="reader-meta-row">
               <span>${ICONS.calendar} aggiornata ${escapeHtml((item.modified || "").slice(0,10))}</span>
               <span>${ICONS.clock} ${item.reading_time_min || 1} min di lettura</span>
-              <span class="badge ${item.status}">${item.status === 'completa' ? ICONS.check : ICONS.dot} ${statusLabel}</span>
             </div>
+            ${algo ? `<button type="button" class="ag-open-btn" data-open-algo="${escapeHtml(algo.id)}">${ICONS.branch} Apri algoritmo</button>` : ""}
           </div>
           <div class="md-content">${html}</div>
           ${
@@ -1849,11 +1548,11 @@ async function openScheda(item) {
         document.getElementById(el.dataset.target)?.scrollIntoView({ behavior: "smooth", block: "start" });
       });
     });
+    content.querySelector("[data-open-algo]")?.addEventListener("click", () => openAlgorithm(algo.id));
 
     setupTocObserver();
     initMermaid();
     renderMermaid();
-    renderFlowDiagrams(item);
     initTooltips(content);
     window.scrollTo(0,0);
   } catch (e) {
@@ -1865,7 +1564,6 @@ function renderThemeOverview(theme) {
   const content = document.getElementById("content");
   const schede = schedeOfTheme(theme);
   const others = themedItems(theme).filter(i => i.extension !== ".md");
-  const { done, total } = themeCompletionRatio(theme);
 
   document.getElementById("crumbs").innerHTML = `<strong>${escapeHtml(theme)}</strong>`;
 
@@ -1883,7 +1581,6 @@ function renderThemeOverview(theme) {
           <div class="tc-head">
             <div class="tc-title">${escapeHtml(s.title)}</div>
           </div>
-          <span class="badge ${s.status}">${s.status === 'completa' ? ICONS.check : ICONS.dot} ${s.status === 'completa' ? 'Completa' : 'Da completare'}</span>
           <div class="tc-count">${s.reading_time_min ? s.reading_time_min + ' min di lettura' : ''}</div>
         </div>
       `).join("") || emptyState(ICONS.folder, "Nessuna scheda ancora creata per questo tema.", "")}
@@ -1919,10 +1616,6 @@ function renderHome() {
   const latest = [...state.items].filter(i => i.extension === ".md" || i.category !== "Schede")
     .sort((a,b) => new Date(b.modified) - new Date(a.modified)).slice(0, 10);
 
-  const p = state.progress;
-  const pct = p.totale_schede ? Math.round((p.completa / p.totale_schede) * 100) : 0;
-  const circumference = 2 * Math.PI * 34;
-  const offset = circumference - (pct / 100) * circumference;
 
   content.innerHTML = `
     <div class="overview-hero">
@@ -1931,38 +1624,18 @@ function renderHome() {
         <h1>Buono studio</h1>
         <p>Seleziona un tema dal menu a sinistra per leggere la scheda completa: è lì che confluiscono le informazioni prese da AIOM, ESMO e dai materiali congressuali.</p>
       </div>
-      <div class="progress-ring-card">
-        <div class="ring-wrap">
-          <svg width="84" height="84" viewBox="0 0 84 84">
-            <circle class="ring-bg" cx="42" cy="42" r="34"/>
-            <circle class="ring-fill" cx="42" cy="42" r="34" stroke-dasharray="${circumference}" stroke-dashoffset="${offset}"/>
-          </svg>
-          <div class="ring-text">${pct}%</div>
-        </div>
-        <div class="ring-legend">
-          <div class="rl-title">${p.completa} di ${p.totale_schede} schede</div>
-          <div class="rl-sub">completate finora</div>
-        </div>
-      </div>
     </div>
     <div class="section-title">Temi</div>
     <div class="theme-cards">
-      ${themeNames.map(t => {
-        const { done, total } = themeCompletionRatio(t);
-        const tp = total ? Math.round((done/total)*100) : 0;
-        return `
+      ${themeNames.map(t => `
         <div class="theme-card" data-theme-open="${escapeHtml(t)}" style="--card-accent:${themeColor(t)}">
           <div class="tc-head">
             ${themeBadge(t)}
             <div class="tc-title">${escapeHtml(t)}</div>
           </div>
-          <div class="tc-count">${state.themes[t]} risorse totali</div>
-          <div class="tc-progress">
-            <div class="progress-track"><div class="progress-fill" style="width:${tp}%"></div></div>
-            <span class="tc-ratio">${done}/${total}</span>
-          </div>
+          <div class="tc-count">${schedeOfTheme(t).length} schede · ${state.themes[t]} risorse totali</div>
         </div>
-      `}).join("")}
+      `).join("")}
     </div>
     <div class="updated-strip">
       <div class="section-title">Ultimi aggiornati</div>
@@ -1992,10 +1665,174 @@ function renderHome() {
   });
 }
 
+/* ---------- algoritmi guidati ---------- */
+const algoCache = {};
+
+function renderAlgorithmsNav() {
+  document.getElementById("navAlgorithms").hidden = state.algorithms.length === 0;
+  document.getElementById("navAlgorithmsCount").textContent = state.algorithms.length;
+}
+
+function updateNavActive() {
+  const inAlgorithms = state.view === "algorithms" || state.view === "algorithm";
+  document.getElementById("navAlgorithms").classList.toggle("active", inAlgorithms);
+}
+
+function algorithmForScheda(relPath) {
+  return state.algorithms.find(a => a.scheda === relPath) || null;
+}
+
+function leaveForAlgorithms(view) {
+  state.view = view;
+  state.activeTheme = null;
+  state.activeItem = null;
+  state.sidebarCollapsed = false;
+  applySidebarCollapse();
+  closeMobileNav();
+  setReaderMode(false);
+  renderThemeNav();
+  updateNavActive();
+}
+
+function goToAlgorithms() {
+  leaveForAlgorithms("algorithms");
+  renderAlgorithmsList();
+  window.scrollTo(0, 0);
+}
+
+async function openAlgorithm(id) {
+  leaveForAlgorithms("algorithm");
+  const summary = state.algorithms.find(a => a.id === id);
+  state.activeAlgorithm = null;
+  state.requestedAlgorithm = id;
+  state.algoHistory = [];
+  const content = document.getElementById("content");
+  document.getElementById("crumbs").innerHTML = `<strong>Algoritmi</strong><span class="sep">/</span>${escapeHtml(summary ? summary.title : id)}`;
+  if (!summary) {
+    content.innerHTML = emptyState(ICONS.inbox, "Algoritmo non trovato", escapeHtml(id));
+    return;
+  }
+  content.innerHTML = emptyState(ICONS.clock, "Caricamento algoritmo...", "");
+  try {
+    let data = algoCache[summary.path];
+    if (!data) {
+      const res = await fetch("../" + encodeURI(summary.path) + "?t=" + Date.now());
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      data = await res.json();
+      algoCache[summary.path] = data;
+    }
+    // l'utente potrebbe aver cambiato vista mentre il file si caricava
+    if (state.view !== "algorithm" || state.requestedAlgorithm !== id) return;
+    state.activeAlgorithm = { summary, data };
+    renderAlgorithm();
+    window.scrollTo(0, 0);
+  } catch (e) {
+    if (state.view !== "algorithm" || state.requestedAlgorithm !== id) return;
+    content.innerHTML = emptyState(ICONS.inbox, `Impossibile caricare l'algoritmo «${escapeHtml(summary.title)}»`, escapeHtml(summary.path));
+  }
+}
+
+function renderAlgorithmsList() {
+  document.getElementById("crumbs").innerHTML = "<strong>Algoritmi</strong>";
+  const content = document.getElementById("content");
+  content.innerHTML = `
+    <div class="overview-hero">
+      <div class="hero-left">
+        <div class="eyebrow">Algoritmi terapeutici</div>
+        <h1>Algoritmi</h1>
+        <p>Rispondi a una domanda clinica alla volta: l'algoritmo ti porta alla raccomandazione, con lo stato di rimborsabilità AIFA di ogni trattamento.</p>
+      </div>
+    </div>
+    <div class="theme-cards">
+      ${state.algorithms.map(a => `
+        <div class="theme-card" data-algo="${escapeHtml(a.id)}" style="--card-accent:${themeColor(a.theme)};cursor:pointer">
+          <div class="tc-head">${themeBadge(a.theme)}<div class="tc-title">${escapeHtml(a.title)}</div></div>
+          <div class="tc-count">${a.settings.map(escapeHtml).join(" · ")}</div>
+        </div>
+      `).join("") || emptyState(ICONS.folder, "Nessun algoritmo disponibile.", "")}
+    </div>
+  `;
+  content.querySelectorAll("[data-algo]").forEach(el => {
+    el.addEventListener("click", () => openAlgorithm(el.dataset.algo));
+  });
+}
+
+function stepAlgorithm(newHistory) {
+  state.algoHistory = newHistory;
+  renderAlgorithm();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function renderAlgorithm() {
+  const { summary, data } = state.activeAlgorithm;
+  const history = state.algoHistory;
+  const node = data.nodes[AlgoCore.currentNodeId(data, history)];
+  const scheda = state.items.find(i => i.relative_path === summary.scheda);
+  const content = document.getElementById("content");
+
+  const pillsHtml = history.length ? `
+    <div class="ag-pills">
+      ${AlgoCore.pills(data, history).map(p => `
+        <button type="button" class="ag-pill" data-rewind="${p.index}" title="Torna a questo passaggio">${escapeHtml(p.label)} <span aria-hidden="true">✎</span></button>
+      `).join("")}
+    </div>` : "";
+
+  const stepHtml = node.type === "question" ? `
+    <div class="ag-question">
+      <div class="ag-q-text">${escapeHtml(node.text)}</div>
+      ${node.info ? `<details class="ag-info"><summary><span class="ag-i">i</span> Chiarimento</summary><div>${escapeHtml(node.info)}</div></details>` : ""}
+      <div class="ag-answers">
+        ${node.answers.map((a, i) => `<button type="button" class="ag-answer" data-answer="${i}">${escapeHtml(a.label)}</button>`).join("")}
+      </div>
+    </div>` : `
+    <div class="ag-rec">
+      <div class="ag-rec-label">Raccomandazione</div>
+      <div class="ag-rec-title">${escapeHtml(node.title)}</div>
+      <div class="ag-options">
+        ${node.options.map(o => `
+          <div class="ag-option ag-aifa-${escapeHtml(o.aifa)}">
+            <div class="ag-opt-name">${escapeHtml(o.name)}</div>
+            <span class="ag-chip ag-aifa-${escapeHtml(o.aifa)}">${escapeHtml(AlgoCore.aifaLabel(o.aifa))}</span>
+            <div class="ag-opt-key">${escapeHtml(o.key)}</div>
+            ${o.detail ? `<details class="ag-detail"><summary>Dettagli</summary><div>${escapeHtml(o.detail)}</div></details>` : ""}
+          </div>
+        `).join("")}
+      </div>
+      ${node.note ? `<div class="ag-note">${escapeHtml(node.note)}</div>` : ""}
+      ${node.next ? `<button type="button" class="ag-next" data-proceed>${escapeHtml(node.next.label)} ${ICONS.arrowRight}</button>` : ""}
+    </div>`;
+
+  content.innerHTML = `
+    <div class="ag-wrap">
+      <div class="ag-head">
+        <h1>${escapeHtml(data.title)}</h1>
+        ${scheda ? `<button type="button" class="ag-link" data-open-scheda>Vai alla scheda ${ICONS.arrowRight}</button>` : ""}
+      </div>
+      ${pillsHtml}
+      ${stepHtml}
+      ${history.length ? `<div class="ag-actions"><button type="button" class="ag-restart" data-restart>Ricomincia</button></div>` : ""}
+    </div>
+  `;
+
+  content.querySelectorAll("[data-answer]").forEach(b => {
+    b.addEventListener("click", () => stepAlgorithm(AlgoCore.choose(data, state.algoHistory, Number(b.dataset.answer))));
+  });
+  content.querySelectorAll("[data-rewind]").forEach(b => {
+    b.addEventListener("click", () => stepAlgorithm(AlgoCore.rewind(state.algoHistory, Number(b.dataset.rewind))));
+  });
+  content.querySelector("[data-proceed]")?.addEventListener("click", () => stepAlgorithm(AlgoCore.proceed(data, state.algoHistory)));
+  content.querySelector("[data-restart]")?.addEventListener("click", () => stepAlgorithm([]));
+  content.querySelector("[data-open-scheda]")?.addEventListener("click", () => openScheda(scheda));
+}
+
+
 function renderView() {
+  updateNavActive();
   if (state.view === "home") { renderHome(); return; }
   if (state.view === "theme") { renderThemeOverview(state.activeTheme); return; }
   if (state.view === "scheda" && state.activeItem) { openScheda(state.activeItem); return; }
+  if (state.view === "algorithms") { renderAlgorithmsList(); return; }
+  if (state.view === "algorithm" && state.activeAlgorithm) { renderAlgorithm(); return; }
   renderHome();
 }
 
@@ -2087,6 +1924,7 @@ document.addEventListener("keydown", (e) => {
 });
 
 document.getElementById("navHome").addEventListener("click", goHome);
+document.getElementById("navAlgorithms").addEventListener("click", goToAlgorithms);
 document.getElementById("printBtn").addEventListener("click", () => window.print());
 window.addEventListener("scroll", updateReadingProgress, { passive: true });
 
