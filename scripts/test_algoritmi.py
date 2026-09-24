@@ -110,7 +110,7 @@ class ValidateAlgorithmTest(unittest.TestCase):
             "trial": "Trial X", "endpoint": "pCR 64,8% vs 51,2%",
             "rows": [["X", "1 mg"]], "sources": [{"type": "standard"}]}
         errors = validate_algorithm(algo, self.root)
-        self.assertTrue(any("PFS o OS" in e for e in errors), errors)
+        self.assertTrue(any("o OS" in e for e in errors), errors)
 
     def test_regimen_endpoint_needs_trial(self):
         algo = make_algo()
@@ -364,7 +364,9 @@ class OrganAlgorithmsTest(unittest.TestCase):
     CASES = {"polmone_sclc.algo.json": "SCLC (Polmone)", "mesotelioma.algo.json": "Mesotelioma",
              "esofago.algo.json": "Esofago", "stomaco.algo.json": "Stomaco", "colonretto.algo.json": "Colon-Retto",
              "ano.algo.json": "Ano", "pancreas.algo.json": "Pancreas", "viebiliari.algo.json": "Vie Biliari",
-             "epatocarcinoma.algo.json": "Epatocarcinoma (HCC)", "gist.algo.json": "GIST", "net.algo.json": "NET (Tumori Neuroendocrini)"}
+             "epatocarcinoma.algo.json": "Epatocarcinoma (HCC)", "gist.algo.json": "GIST", "net.algo.json": "NET (Tumori Neuroendocrini)",
+             "prostata.algo.json": "Prostata", "rene.algo.json": "Rene", "urotelio.algo.json": "Urotelio",
+             "cervice.algo.json": "Cervice", "endometrio.algo.json": "Endometrio", "ovaio.algo.json": "Ovaio"}
 
     def load(self, name):
         return json.loads((ROOT / "Algoritmi" / name).read_text(encoding="utf-8"))
@@ -398,6 +400,31 @@ class OrganAlgorithmsTest(unittest.TestCase):
         self.assertEqual(status["Lurbinectedin + atezolizumab"], "not_reimbursed")
         self.assertEqual(status["Durvalumab fino a 24 mesi"], "reimbursed")
         self.assertEqual(status["Atezolizumab + carboplatino-etoposide"], "reimbursed")
+
+    def test_uro_gyn_traps_match_the_scheda(self):
+        cases = {"prostata.algo.json": {"+ Abiraterone 2 anni (very high-risk o cN+)": "not_reimbursed"},
+                 "rene.algo.json": {"Belzutifan": "not_reimbursed"},
+                 "urotelio.algo.json": {"Enfortumab vedotin + pembrolizumab perioperatorio": "not_reimbursed"},
+                 "cervice.algo.json": {"Tisotumab vedotin": "not_reimbursed",
+                                       "Pembrolizumab + CRT → pembrolizumab di mantenimento": "reimbursed"},
+                 "ovaio.algo.json": {"Relacorilant + nab-paclitaxel": "not_reimbursed", "+ Bevacizumab": "not_reimbursed",
+                                     "Mirvetuximab soravtansine (FRα ≥75%)": "reimbursed"}}
+        for name, expected in cases.items():
+            status = self.statuses(self.load(name))
+            for option, aifa in expected.items():
+                with self.subTest(name=name, option=option):
+                    self.assertEqual(status[option], aifa)
+
+    def test_endometrio_pmmr_only_dostarlimab_is_reimbursed(self):
+        nodes = self.load("endometrio.algo.json")["nodes"]
+        pmmr = {o["name"]: o["aifa"] for o in nodes["adv_pmmr"]["options"]}
+        dmmr = {o["name"]: o["aifa"] for o in nodes["adv_dmmr"]["options"]}
+        self.assertEqual(pmmr["Dostarlimab + carboplatino-paclitaxel"], "reimbursed")
+        self.assertEqual(pmmr["Pembrolizumab + carboplatino-paclitaxel"], "not_reimbursed")
+        self.assertEqual(pmmr["Durvalumab + olaparib + carboplatino-paclitaxel"], "not_reimbursed")
+        self.assertEqual(dmmr["Pembrolizumab + carboplatino-paclitaxel"], "reimbursed")
+        names = " ".join(o["name"] for n in nodes.values() for o in n.get("options", []))
+        self.assertNotIn("Atezolizumab", names)
 
     def test_mesotelioma_statuses_match_the_scheda(self):
         data = self.load("mesotelioma.algo.json")

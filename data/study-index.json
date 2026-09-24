@@ -237,11 +237,11 @@
       "title": "Endometrio",
       "name": "Endometrio.md",
       "relative_path": "Schede/Ginecologici/Endometrio.md",
-      "modified": "2026-09-24T08:05:46",
-      "size_bytes": 28622,
+      "modified": "2026-09-24T19:16:28",
+      "size_bytes": 28752,
       "extension": ".md",
       "preview": "Endometrio · Definizione e inquadramento · Il carcinoma dell'endometrio è, tra le neoplasie ginecologiche, quella che ha visto il cambiamento concettuale più profondo nell'ultimo decennio: la classificazione molecolare TCGA/ProMisE ha sostituito la vecchia dicotomia istologica \"tipo 1 vs tipo 2\" come principale strumento per stratificare prognosi e scelta terapeutica, al punto da essere integrata direttamente nella stadiazione FIGO 2023. Lo spettro clinico va dalla malattia precoce (chirurgia, spesso senza terapia adiuvante) alla malattia localmente avanzata (chirurgia + adiuvante calibrata sul rischio molecolare), fino alla malattia avanzata/metastatica, dove l'associazione chemioterapia-immunoterapia ha rappresentato negli ultimi anni il cambio di paradigma più importante. La gestione richiede integrazione tra chirurgia ginecologica, radioterapia, patologia molecolare e genetica oncologica, per la stretta associazione con la sindrome di Lynch. · Epidemiologia · Il carcinoma dell'endometrio è la settima neoplasia femminile nel mondo e la quarta in Europa, con un'incidenza tra 12,9 e 20,2 casi/100.000 e una mortalità di 2,0-2,7/100.000. È anche una delle poche neoplasie con **mortalità in aumento** (+1,9% l'anno), un trend legato soprattutto alla crescente prevalenza dell'obesità: i dati più recenti (Grandangolo 2025) stimano un incremento di incidenza del 132% in 30 anni. La buona notizia sul piano prognostico è che l'80% dei casi è confinato all'utero alla diagnosi, grazie al sanguinamento post-menopausale come segnale d'allarme precoce; l'età mediana alla diagnosi è tra i 65 e i 75 anni.",
-      "word_count": 3727,
+      "word_count": 3743,
       "reading_time_min": 19
     },
     {
@@ -250,11 +250,11 @@
       "title": "Ovaio",
       "name": "Ovaio.md",
       "relative_path": "Schede/Ginecologici/Ovaio.md",
-      "modified": "2026-09-24T08:05:46",
-      "size_bytes": 40170,
+      "modified": "2026-09-24T19:16:28",
+      "size_bytes": 40450,
       "extension": ".md",
       "preview": "Ovaio · Definizione e inquadramento · Il carcinoma epiteliale dell'ovaio (EOC) è la neoplasia ginecologica con la mortalità più alta nei paesi sviluppati, soprattutto perché la maggior parte delle pazienti giunge alla diagnosi già in stadio avanzato. Lo spettro clinico va dalla malattia precoce (chirurgia ± chemioterapia adiuvante) alla malattia avanzata (chirurgia citoriduttiva + chemioterapia + mantenimento), fino alla malattia recidivante, dove la distinzione tra piattino-sensibile e platino-resistente guida quasi ogni decisione terapeutica. Pochi altri tumori solidi hanno visto, come l'ovaio, l'ingresso di una classe di farmaci — i PARP inibitori — capace di ridisegnare in pochi anni l'intero algoritmo di prima linea. La gestione richiede integrazione stretta tra chirurgia ginecologica, patologia molecolare, genetica oncologica (BRCA/HRD) e centri di riferimento ad alto volume. · Epidemiologia · L'EOC è la seconda causa di morte per tumore ginecologico nel mondo, dopo la cervice, ma **la prima nei paesi sviluppati** — un'inversione che riflette il minor peso relativo dell'HPV in questi contesti. I dati GLOBOCAN 2020 stimano circa 314.000 nuovi casi e oltre 207.000 morti nel mondo; in Italia si registrano circa 5.200 nuovi casi l'anno, con un rischio lifetime di 1 donna su 82. La sopravvivenza a 5 anni cala drasticamente con lo stadio: dall'85-90% dello stadio I, al 57-70% dello stadio II, al 39-59% dello stadio III, fino al 17% dello stadio IV — il riflesso più diretto di quanto la diagnosi precoce sia, per questa neoplasia, un obiettivo mancato. Tra i fattori prognostici sfavorevoli negli stadi avanzati vanno ricordati l'istotipo (mucinoso, a cellule chiare e sieroso di basso grado hanno una chemiosensibilità minore), il residuo post-chirurgico e lo stato BRCA/HRD.",
-      "word_count": 5588,
+      "word_count": 5620,
       "reading_time_min": 28
     },
     {
@@ -1844,6 +1844,18 @@
       ]
     },
     {
+      "id": "cervice",
+      "title": "Cervice",
+      "theme": "Ginecologici",
+      "scheda": "Schede/Ginecologici/Cervice.md",
+      "path": "Algoritmi/cervice.algo.json",
+      "settings": [
+        "Precoce (IA1-IB2, IIA selezionati)",
+        "Localmente avanzato (IB3-IVA)",
+        "Avanzato, recidivante o metastatico"
+      ]
+    },
+    {
       "id": "colonretto",
       "title": "Colon-Retto",
       "theme": "Gastrointestinali",
@@ -1853,6 +1865,17 @@
         "Colon localizzato",
         "Retto localizzato / localmente avanzato",
         "Metastatico"
+      ]
+    },
+    {
+      "id": "endometrio",
+      "title": "Endometrio",
+      "theme": "Ginecologici",
+      "scheda": "Schede/Ginecologici/Endometrio.md",
+      "path": "Algoritmi/endometrio.algo.json",
+      "settings": [
+        "Localizzato (operabile)",
+        "Avanzato o recidivante"
       ]
     },
     {
@@ -1927,6 +1950,18 @@
       ]
     },
     {
+      "id": "ovaio",
+      "title": "Ovaio",
+      "theme": "Ginecologici",
+      "scheda": "Schede/Ginecologici/Ovaio.md",
+      "path": "Algoritmi/ovaio.algo.json",
+      "settings": [
+        "Stadio iniziale (I-II)",
+        "Stadio avanzato (III-IV)",
+        "Recidiva"
+      ]
+    },
+    {
       "id": "pancreas",
       "title": "Pancreas",
       "theme": "Gastrointestinali",
@@ -1964,6 +1999,31 @@
       ]
     },
     {
+      "id": "prostata",
+      "title": "Prostata",
+      "theme": "Urologici",
+      "scheda": "Schede/Urologici/Prostata.md",
+      "path": "Algoritmi/prostata.algo.json",
+      "settings": [
+        "Localizzato",
+        "Recidiva biochimica dopo trattamento locale",
+        "Non metastatico resistente alla castrazione (nmCRPC)",
+        "Metastatico ormono-sensibile (mHSPC)",
+        "Metastatico resistente alla castrazione (mCRPC)"
+      ]
+    },
+    {
+      "id": "rene",
+      "title": "Rene",
+      "theme": "Urologici",
+      "scheda": "Schede/Urologici/Rene.md",
+      "path": "Algoritmi/rene.algo.json",
+      "settings": [
+        "Localizzato",
+        "Avanzato / metastatico"
+      ]
+    },
+    {
       "id": "stomaco",
       "title": "Stomaco",
       "theme": "Gastrointestinali",
@@ -1971,6 +2031,33 @@
       "path": "Algoritmi/stomaco.algo.json",
       "settings": [
         "Localizzato resecabile",
+        "Avanzato / metastatico"
+      ]
+    },
+    {
+      "id": "testicolo",
+      "title": "Testicolo",
+      "theme": "Urologici",
+      "scheda": "Schede/Urologici/Testicolo.md",
+      "path": "Algoritmi/testicolo.algo.json",
+      "settings": [
+        "Seminoma stadio I",
+        "Non-seminoma stadio I",
+        "Seminoma stadio IIA/B",
+        "Non-seminoma stadio IIA/B",
+        "Malattia avanzata (IGCCCG)"
+      ]
+    },
+    {
+      "id": "urotelio",
+      "title": "Urotelio",
+      "theme": "Urologici",
+      "scheda": "Schede/Urologici/Urotelio.md",
+      "path": "Algoritmi/urotelio.algo.json",
+      "settings": [
+        "Non muscolo-invasivo (NMIBC)",
+        "Muscolo-invasivo (MIBC)",
+        "Alta via escretrice (UTUC)",
         "Avanzato / metastatico"
       ]
     },

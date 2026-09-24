@@ -26,8 +26,8 @@ def validate_regimen(regimen, where):
     if isinstance(endpoint, str) and endpoint:
         if "trial" not in regimen:
             errors.append(f"{where}: 'regimen.endpoint' richiede 'regimen.trial'")
-        if not endpoint.startswith(("PFS", "OS")):
-            errors.append(f"{where}: l'endpoint primario si riporta solo se è PFS o OS")
+        if not endpoint.startswith(("PFS", "rPFS", "OS")):
+            errors.append(f"{where}: l'endpoint primario si riporta solo se è PFS (anche rPFS) o OS")
     sources = regimen.get("sources")
     if not isinstance(sources, list) or not sources:
         errors.append(f"{where}: 'regimen.sources' deve essere una lista non vuota")

@@ -1,0 +1,237 @@
+{
+  "id": "cervice",
+  "title": "Cervice",
+  "theme": "Ginecologici",
+  "scheda": "Schede/Ginecologici/Cervice.md",
+  "start": "setting",
+  "nodes": {
+    "setting": {
+      "type": "question",
+      "text": "Qual è lo stadio FIGO?",
+      "short": "Stadio",
+      "answers": [
+        { "label": "Precoce (IA1-IB2, IIA selezionati)", "next": "early_chir" },
+        { "label": "Localmente avanzato (IB3-IVA)", "next": "la_rischio" },
+        { "label": "Avanzato, recidivante o metastatico", "next": "adv_pdl1" }
+      ]
+    },
+    "early_chir": {
+      "type": "recommendation",
+      "title": "Chirurgia",
+      "options": [
+        {
+          "name": "Isterectomia radicale laparotomica + linfadenectomia pelvica",
+          "aifa": "standard",
+          "key": "Tipo B-C (Querleu-Morrow). La via mininvasiva peggiora PFS e OS (LACC): open resta lo standard."
+        },
+        {
+          "name": "Fertility-sparing (conizzazione o trachelectomia)",
+          "aifa": "standard",
+          "key": "IA1 senza LVSI, oppure IA2-IB1 <2 cm con desiderio di gravidanza."
+        }
+      ],
+      "next": { "label": "Dopo la chirurgia → fattori di rischio", "node": "early_rischio" }
+    },
+    "early_rischio": {
+      "type": "question",
+      "text": "Ci sono fattori di rischio post-operatori?",
+      "short": "Rischio",
+      "answers": [
+        { "label": "Margini positivi, linfonodi positivi o invasione parametriale", "next": "early_crt" },
+        { "label": "Nessuno", "next": "early_follow" }
+      ]
+    },
+    "early_crt": {
+      "type": "recommendation",
+      "title": "Terapia adiuvante",
+      "options": [
+        {
+          "name": "Chemioradioterapia adiuvante con cisplatino",
+          "aifa": "standard",
+          "key": "Indicata con fattori di rischio maggiori.",
+          "regimen": {
+            "rows": [
+              ["Cisplatino", "40 mg/m² EV settimanale (massimo 70 mg) durante la RT"],
+              ["Radioterapia", "pelvica esterna + brachiterapia (≥90 Gy al volume target)"]
+            ],
+            "sources": [{"type": "scheda"}]
+          }
+        }
+      ],
+      "next": { "label": "Alla recidiva → malattia avanzata", "node": "adv_pdl1" }
+    },
+    "early_follow": {
+      "type": "recommendation",
+      "title": "Follow-up",
+      "options": [
+        {
+          "name": "Sorveglianza",
+          "aifa": "standard",
+          "key": "Nessuna terapia adiuvante."
+        }
+      ],
+      "next": { "label": "Alla recidiva → malattia avanzata", "node": "adv_pdl1" }
+    },
+    "la_rischio": {
+      "type": "question",
+      "text": "È ad alto rischio (FIGO 2014 IB2-IIB con N+, o III-IVA)?",
+      "short": "Rischio",
+      "info": "CALLA (durvalumab + CRT) negativo: l'effetto dell'IO con la RT non è generalizzabile.",
+      "answers": [
+        { "label": "Sì, alto rischio", "next": "la_pembro" },
+        { "label": "No (IB3-IIB N0)", "next": "la_crt" }
+      ]
+    },
+    "la_pembro": {
+      "type": "recommendation",
+      "title": "Chemioradioterapia",
+      "options": [
+        {
+          "name": "Pembrolizumab + CRT → pembrolizumab di mantenimento",
+          "aifa": "reimbursed",
+          "key": "Rimborsato senza restrizione di PD-L1 (determina 13/01/2025, operativa da inizio 2026). Da non confondere con KEYNOTE-826.",
+          "regimen": {
+            "trial": "KEYNOTE-A18",
+            "endpoint": "OS a 36 mesi 82,6% vs 74,8% (HR 0,67); PFS HR 0,68",
+            "rows": [
+              ["Pembrolizumab", "200 mg EV ogni 3 settimane ×5 con la CRT, poi 400 mg ogni 6 settimane ×15"],
+              ["Cisplatino", "40 mg/m² EV settimanale (massimo 70 mg) durante la RT"],
+              ["Radioterapia", "pelvica esterna + brachiterapia (≥90 Gy al volume target)"]
+            ],
+            "note": "Circa 2 anni complessivi.",
+            "sources": [{"type": "rimborsabilita"}, {"type": "scheda"}]
+          }
+        }
+      ],
+      "next": { "label": "Alla recidiva → malattia avanzata", "node": "adv_pdl1" }
+    },
+    "la_crt": {
+      "type": "recommendation",
+      "title": "Chemioradioterapia",
+      "options": [
+        {
+          "name": "CRT concomitante con cisplatino settimanale",
+          "aifa": "standard",
+          "key": "Standard storico.",
+          "regimen": {
+            "rows": [
+              ["Cisplatino", "40 mg/m² EV settimanale (massimo 70 mg) durante la RT"],
+              ["Radioterapia", "pelvica esterna + brachiterapia (≥90 Gy al volume target)"]
+            ],
+            "sources": [{"type": "scheda"}]
+          }
+        },
+        {
+          "name": "Induzione con carboplatino-paclitaxel settimanali → CRT",
+          "aifa": "standard",
+          "key": "Utile soprattutto dove la qualità della RT è subottimale; limiti: controllo senza IMRT sistematica.",
+          "regimen": {
+            "trial": "INTERLACE",
+            "endpoint": "PFS HR 0,65; OS HR 0,61",
+            "rows": [
+              ["Carboplatino", "AUC 2 EV settimanale ×6"],
+              ["Paclitaxel", "80 mg/m² EV settimanale ×6"],
+              ["poi CRT", "cisplatino settimanale + RT"]
+            ],
+            "sources": [{"type": "scheda"}, {"type": "standard"}]
+          }
+        }
+      ],
+      "next": { "label": "Alla recidiva → malattia avanzata", "node": "adv_pdl1" }
+    },
+    "adv_pdl1": {
+      "type": "question",
+      "text": "Qual è il PD-L1 (CPS)?",
+      "short": "PD-L1",
+      "answers": [
+        { "label": "CPS ≥1", "next": "adv_1l_pembro" },
+        { "label": "CPS <1", "next": "adv_1l_ct" }
+      ]
+    },
+    "adv_1l_pembro": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "Pembrolizumab + platino-paclitaxel ± bevacizumab",
+          "aifa": "reimbursed",
+          "key": "Rimborsato dal 10/07/2023 con CPS ≥1.",
+          "regimen": {
+            "trial": "KEYNOTE-826",
+            "endpoint": "PFS 10,4 vs 8,2 mesi (HR 0,62); OS 24,4 vs 16,5 mesi (HR 0,64)",
+            "rows": [
+              ["Pembrolizumab", "200 mg EV ogni 3 settimane (fino a 35 cicli)"],
+              ["Cisplatino o carboplatino", "50 mg/m² o AUC 5"],
+              ["Paclitaxel", "175 mg/m² ogni 3 settimane"],
+              ["± Bevacizumab", "15 mg/kg ogni 3 settimane"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        }
+      ],
+      "note": "Cadonilimab (COMPASSION-16) approvato solo in Cina.",
+      "next": { "label": "Alla progressione → 2ª linea", "node": "adv_2l" }
+    },
+    "adv_1l_ct": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "Cisplatino-paclitaxel + bevacizumab",
+          "aifa": "standard",
+          "key": "Standard senza immunoterapia.",
+          "regimen": {
+            "trial": "GOG-240",
+            "endpoint": "OS 16,8 vs 13,3 mesi",
+            "rows": [
+              ["Cisplatino", "50 mg/m² EV giorno 1"],
+              ["Paclitaxel", "135-175 mg/m² EV giorno 1"],
+              ["Bevacizumab", "15 mg/kg EV giorno 1"]
+            ],
+            "note": "Ogni 21 giorni.",
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ],
+      "next": { "label": "Alla progressione → 2ª linea", "node": "adv_2l" }
+    },
+    "adv_2l": {
+      "type": "recommendation",
+      "title": "2ª linea",
+      "options": [
+        {
+          "name": "Cemiplimab (se IO-naive)",
+          "aifa": "reimbursed",
+          "key": "Label EMA indipendente dal PD-L1, ma AIFA rimborsa solo con PD-L1 ≥1% (Determina 309/2024).",
+          "regimen": {
+            "trial": "EMPOWER-Cervical 1",
+            "endpoint": "OS 11,7 vs 8,5 mesi, HR 0,656",
+            "rows": [
+              ["Cemiplimab", "350 mg EV ogni 3 settimane, fino a ~2 anni"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Tisotumab vedotin",
+          "aifa": "not_reimbursed",
+          "key": "Approvato UE 03/2025, nessuna determina AIFA.",
+          "regimen": {
+            "trial": "innovaTV 301",
+            "endpoint": "OS 11,5 vs 9,5 mesi, HR 0,70",
+            "rows": [
+              ["Tisotumab vedotin", "2 mg/kg EV (massimo 200 mg) ogni 3 settimane"]
+            ],
+            "sources": [{"type": "rimborsabilita"}, {"type": "pubmed", "label": "innovaTV 301", "doi": "10.1056/NEJMoa2313811"}]
+          }
+        },
+        {
+          "name": "Chemioterapia in monoterapia",
+          "aifa": "standard",
+          "key": "Topotecan, vinorelbina, gemcitabina, irinotecan o pemetrexed."
+        }
+      ],
+      "note": "HER2: T-DXd (DESTINY-PanTumor02) ORR 50% nella coorte cervicale, non ancora indicazione registrata."
+    }
+  }
+}
