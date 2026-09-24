@@ -1844,6 +1844,18 @@
         "Metastatico",
         "Recidiva locoregionale"
       ]
+    },
+    {
+      "id": "polmone_nsclc",
+      "title": "Polmone NSCLC",
+      "theme": "Torace",
+      "scheda": "Schede/Torace/Polmone_NSCLC.md",
+      "path": "Algoritmi/polmone_nsclc.algo.json",
+      "settings": [
+        "Precoce resecabile (stadio I-III)",
+        "Stadio III non resecabile",
+        "Avanzato / metastatico"
+      ]
     }
   ]
 }

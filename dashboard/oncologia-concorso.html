@@ -786,7 +786,6 @@ button.ag-seq-step:hover { border-color: var(--color-primary); }
 .ag-trial strong { font-size: 0.92rem; }
 .ag-endpoint { font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.4; }
 .ag-reg-note { font-size: 0.8rem; color: var(--color-text-muted); margin-top: 6px; }
-.ag-no-regimen { font-size: 0.8rem; color: var(--color-text-faint); font-style: italic; }
 .ag-note { margin-top: 18px; font-size: 0.88rem; color: var(--color-text-muted); border-left: 3px solid var(--color-primary); padding-left: 12px; line-height: 1.5; }
 .ag-next-wrap { margin-top: 22px; padding-top: 18px; border-top: 1px dashed var(--color-border); display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
 .ag-next-hint { font-size: 0.82rem; color: var(--color-text-muted); }
@@ -1853,7 +1852,7 @@ function stepAlgorithm(newHistory) {
 const RIMBORSABILITA_PATH = "Schede/Trasversali/Rimborsabilita.md";
 
 function agRegimenHtml(reg) {
-  if (!reg) return `<div class="ag-no-regimen">Trattamento locale: nessuno schema farmacologico.</div>`;
+  if (!reg) return "";
   return `
     <div class="ag-regimen">
       ${reg.trial ? `<div class="ag-trial"><span class="ag-reg-label">Studio registrativo</span><strong>${escapeHtml(reg.trial)}</strong>${reg.endpoint ? `<span class="ag-endpoint">Endpoint primario · ${escapeHtml(reg.endpoint)}</span>` : ""}</div>` : ""}

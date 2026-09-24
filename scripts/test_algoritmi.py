@@ -293,3 +293,64 @@ class MammellaRegimenTest(unittest.TestCase):
         found = {o["name"]: o["regimen"].get("trial") for _, o in self.options() if o["name"] in expected}
         self.assertEqual(found, expected)
 
+
+NSCLC = ROOT / "Algoritmi" / "polmone_nsclc.algo.json"
+
+
+class NsclcAlgorithmTest(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.data = json.loads(NSCLC.read_text(encoding="utf-8"))
+        text = (ROOT / "Schede" / "Trasversali" / "Rimborsabilita.md").read_text(encoding="utf-8")
+        cls.rimborsabilita = text.split("\n## NSCLC", 1)[1].split("\n## ", 1)[0]
+
+    def options(self):
+        for node_id, node in self.data["nodes"].items():
+            if node["type"] == "recommendation":
+                for option in node["options"]:
+                    yield node_id, option
+
+    def test_is_valid(self):
+        self.assertEqual(validate_algorithm(self.data, ROOT), [])
+
+    def test_three_settings(self):
+        start = self.data["nodes"][self.data["start"]]
+        self.assertEqual([a["label"] for a in start["answers"]],
+                         ["Precoce resecabile (stadio I-III)", "Stadio III non resecabile", "Avanzato / metastatico"])
+
+    def test_driver_groups(self):
+        labels = [a["label"] for a in self.data["nodes"]["m1_driver"]["answers"]]
+        self.assertEqual(len(labels), 6)
+        self.assertIn("Nessun driver (non oncogene-addicted)", labels)
+
+    def test_aifa_statuses_match_the_scheda(self):
+        status = {o["name"]: o["aifa"] for _, o in self.options()}
+        self.assertEqual(status["Repotrectinib"], "not_reimbursed")
+        self.assertEqual(status["Trastuzumab deruxtecan"], "not_reimbursed")
+        self.assertEqual(status["Tislelizumab perioperatorio"], "not_reimbursed")
+        self.assertEqual(status["Nivolumab perioperatorio"], "unknown")
+        self.assertEqual(status["Pembrolizumab perioperatorio"], "reimbursed")
+        self.assertEqual(status["Amivantamab + lazertinib"], "reimbursed")
+
+    def test_rimborsabilita_doses_match_the_scheda(self):
+        for node_id, option in self.options():
+            regimen = option.get("regimen")
+            if not regimen or {s["type"] for s in regimen["sources"]} != {"rimborsabilita"}:
+                continue
+            for drug, dose in regimen["rows"]:
+                for amount in re.findall(r"\d+(?:,\d+)? mg(?:/kg|/m²)?", dose):
+                    self.assertIn(amount, self.rimborsabilita, f"{node_id} / {drug}: {amount}")
+
+    def test_egfr_alk_never_reach_perioperative_immunotherapy(self):
+        # dai rami EGFR/ALK del precoce non si deve arrivare alla CT-ICI perioperatoria
+        from collections import deque
+        for start in ("precoce_egfr", "precoce_alk"):
+            seen, queue = {start}, deque([start])
+            while queue:
+                node = self.data["nodes"][queue.popleft()]
+                nxt = [a["next"] for a in node.get("answers", [])] + ([node["next"]["node"]] if "next" in node else [])
+                for n in nxt:
+                    if n not in seen:
+                        seen.add(n); queue.append(n)
+            self.assertNotIn("precoce_perio", seen)
+
