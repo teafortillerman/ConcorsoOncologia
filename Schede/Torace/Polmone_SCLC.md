@@ -8,10 +8,6 @@ Il carcinoma polmonare a piccole cellule (SCLC) è una neoplasia neuroendocrina 
 ## Epidemiologia
 Il SCLC costituisce circa il 13-15% di tutti i tumori polmonari ed è considerato malattia orfana in Europa (prevalenza 1-5/10.000). La prevalenza è pressoché uguale tra i due sessi, con una quota crescente di pazienti anziani (>70 anni): dal 23% al 44% tra il 1975 e il 2010. La biologia è estremamente aggressiva, con elevata chemio/radio-sensibilità iniziale ma rapida chemioresistenza; la sopravvivenza a 5 anni resta **<10%** nonostante le risposte iniziali favorevoli, tra le prognosi peggiori dell'oncologia toracica. L'incidenza è in calo parallelamente alla riduzione del tabagismo, ma **oltre il 60%** dei pazienti si presenta già in stadio esteso (ED) alla diagnosi.
 
-#### Punti chiave
-- SCLC = malattia orfana, ~13-15% dei tumori polmonari, sopravvivenza a 5 anni <10%; >60% già ED alla diagnosi.
-- Biologia bifasica: elevata chemio/radio-sensibilità iniziale seguita da rapida chemioresistenza.
-
 
 ## Fattori di rischio
 Il SCLC ha un'associazione quasi esclusiva con il fumo di tabacco, la più stretta fra tutti gli istotipi polmonari; età avanzata e sesso maschile (storicamente prevalente, con gap in riduzione) sono ulteriori fattori. Lo screening con LDCT **non riduce la mortalità da SCLC** (3 trial, evidenza di livello I, raccomandazione ESMO E — sconsigliato), per la rapidità di crescita che genera frequenti interval cancer e per la diagnosi già avanzata anche quando la neoplasia viene rilevata allo screening.
@@ -19,10 +15,6 @@ Il SCLC ha un'associazione quasi esclusiva con il fumo di tabacco, la più stret
 
 ## Diagnosi
 La presentazione clinica è spesso già caratterizzata da malattia bulky mediastinica/adenopatica, sindromi paraneoplastiche (vedi sotto) e sintomi da rapida crescita. Gli esami iniziali comprendono anamnesi/EO/PS, emocromo, elettroliti (con attenzione all'**iponatriemia da SIADH**), LDH e funzione epatica/renale. Per l'imaging si utilizzano TC torace-addome con mdc (addome inferiore sempre indicato secondo NCCN) e RM encefalo, da preferire alla TC e sempre indicata; la PET-TC è opzionale nello stadio limitato, utile per la delineazione dei volumi di radioterapia, mentre scintigrafia ossea o biopsia osteomidollare si riservano al sospetto di interessamento midollare. La conferma istologica/citologica avviene con broncoscopia o agobiopsia, con morfologia a piccole cellule supportata da marcatori IHC neuroendocrini (cromogranina, sinaptofisina, CD56). È importante identificare eventuali sindromi neurologiche autoimmuni paraneoplastiche **prima** di iniziare l'immunoterapia, per il rischio di slatentizzazione/peggioramento.
-
-#### Punti chiave
-- RM encefalo sempre indicata (preferita alla TC); PET-TC opzionale solo in LD per la pianificazione RT.
-- Ricercare sindromi paraneoplastiche neurologiche autoimmuni **prima** di iniziare l'IO (rischio di slatentizzazione).
 
 
 ## Stadiazione
@@ -47,10 +39,6 @@ Il trial di fase III **ADRIATIC** (730 pazienti con LD-SCLC in risposta o stabil
 
 Dopo il parere positivo del CHMP (3 febbraio 2025) e l'autorizzazione europea dello stesso anno, AIFA ha approvato la rimborsabilità di durvalumab nel LD-SCLC con delibera del CdA del 22 aprile 2026 (comunicato del 29 giugno 2026): il farmaco è quindi rimborsato anche in Italia, verosimilmente in classe H con registro di monitoraggio.
 
-#### Punti chiave — stadio limitato
-- CT-RT concomitante = standard PS 0-1: **cisplatino-etoposide x4** + RT **45 Gy/30fr BID** (Turrisi, OS 5a 26% vs 16%) iniziata al 1°-2° ciclo; 66 Gy/33fr OD alternativa non-inferiore (CONVERT).
-- **ADRIATIC**: consolidamento con **durvalumab** dopo CT-RT senza progressione → OS HR 0,73 (55,9 vs 33,4 mesi) — nuovo standard, "PACIFIC del SCLC", approvato EMA 2025 e **rimborsato anche da AIFA in Italia dal giugno 2026**.
-- Chirurgia solo cT1-2N0 (~5% dei casi), sempre con dissezione linfonodale sistematica.
 
 ### Ruolo di terapia sistemica — PCI nello stadio limitato
 Il rischio di metastasi encefaliche è del 10% alla diagnosi, con sviluppo successivo nel **50-70%** dei casi. Una metanalisi ha mostrato che la PCI riduce le metastasi encefaliche (**HR 0,45**) e prolunga l'OS (**HR 0,81**; nel sottogruppo LD: HR 0,82), con **dose standard di 25 Gy/10 frazioni** (nessun beneficio da intensificazione a 36 Gy) [I, A]. Il risparmio ippocampale (HA-PCI) ha dati contrastanti (studio olandese negativo, PREMER spagnolo positivo), in attesa dei risultati di NRG CC003. Secondo ESMO, la PCI va offerta a PS 0-1 con risposta a CRT [I, A], può essere considerata a PS2 [III, B], mentre negli **>70 anni/fragili/stadio I-II** la decisione va condivisa, includendo l'alternativa della sorveglianza con RM encefalo [V, C].
@@ -62,7 +50,7 @@ Il rischio di metastasi encefaliche è del 10% alla diagnosi, con sviluppo succe
 Platino+etoposide è stato per decenni lo standard, con OS mediana di **9-10 mesi**, PFS 5-6 mesi e OS a 1 anno ~35% [I, A]. Cisplatino e carboplatino sono risultati equivalenti in OS (metanalisi Rossi/COCIS), per cui il carboplatino è sostituibile [I, B], mentre il cisplatino resta preferibile se età <70 anni/PS/tossicità attesa lo consentono [II, C]. Non vi è beneficio dal mantenimento/dalla continuazione della stessa chemioterapia oltre 4-6 cicli [I, A] — un concetto distinto, come si vedrà, dal mantenimento con un nuovo agente (lurbinectedin+atezolizumab, IMforte).
 
 ### Chemio-immunoterapia di prima linea — standard attuale
-Nello studio **IMpower133** (atezolizumab + carboplatino + etoposide, fase III, 403 pz PS 0-1 ED-SCLC, 4 cicli di induzione seguiti da mantenimento con atezolizumab), l'OS è stata **12,3 vs 10,3 mesi (HR 0,70; p=0,007)** e la PFS **5,2 vs 4,3 mesi (HR 0,77)**, con OS a 18 mesi 34% vs 21%; l'aggiornamento con follow-up più maturo (JCO 2021, follow-up mediano 22,9 mesi) ha confermato OS 12,3 vs 10,3 mesi (HR 0,76). Il farmaco è approvato da EMA (2019) e AIFA (2020). Nello studio **CASPIAN** (durvalumab ± tremelimumab + platino/etoposide, fase III, 805 pz, 3 bracci) l'OS è stata **12,9 vs 10,5 mesi (HR 0,75)**, con un follow-up a 3 anni che ha confermato il beneficio (HR 0,71; OS a 36 mesi **17,6% vs 5,8%**); l'aggiunta di tremelimumab a durvalumab non ha mostrato beneficio incrementale (HR 0,82, non significativo). AIOM raccomanda entrambi gli schemi con forza FORTE A FAVORE, qualità **bassa**; ESMO raccomanda l'anti-PD-L1 (atezolizumab o durvalumab) + 4 cicli di platino-etoposide per **tutti** i pazienti naïve PS 0-1 senza controindicazioni all'IO [I, A]. È utile ricordare, come lezione per l'esame, la storia di **KEYNOTE-604** (pembrolizumab): PFS positivo (HR 0,75) ma **OS non significativa** (HR 0,80), con conseguente **ritiro volontario dell'indicazione FDA** (2021), analogamente a CheckMate 331/451 (nivolumab) — i checkpoint "storici" in schemi non ottimizzati sono falliti nella conferma post-marketing in SCLC. In Italia **atezolizumab** è rimborsato in classe H con registro dalla determina del 14 luglio 2020, circa un anno dopo l'approvazione EMA; **durvalumab+platino-etoposide**, approvato da EMA nel settembre 2020, è arrivato solo con la determina n. 766/2022 del 24 ottobre 2022 (registro "IMFINZI ES-SCLC"), circa 2 anni dopo.
+Nello studio **IMpower133** (atezolizumab + carboplatino + etoposide, fase III, 403 pz PS 0-1 ED-SCLC, 4 cicli di induzione seguiti da mantenimento con atezolizumab), l'OS è stata **12,3 vs 10,3 mesi (HR 0,70; p=0,007)** e la PFS **5,2 vs 4,3 mesi (HR 0,77)**, con OS a 18 mesi 34% vs 21%; l'aggiornamento con follow-up più maturo (JCO 2021, follow-up mediano 22,9 mesi) ha confermato OS 12,3 vs 10,3 mesi (HR 0,76). Il farmaco è approvato da EMA (2019) e AIFA (2020). Nello studio **CASPIAN** (durvalumab ± tremelimumab + platino/etoposide, fase III, 805 pz, 3 bracci) l'OS è stata **12,9 vs 10,5 mesi (HR 0,75)**, con un follow-up a 3 anni che ha confermato il beneficio (HR 0,71; OS a 36 mesi **17,6% vs 5,8%**); l'aggiunta di tremelimumab a durvalumab non ha mostrato beneficio incrementale (HR 0,82, non significativo). AIOM raccomanda entrambi gli schemi con forza FORTE A FAVORE, qualità **bassa**; ESMO raccomanda l'anti-PD-L1 (atezolizumab o durvalumab) + 4 cicli di platino-etoposide per **tutti** i pazienti naïve PS 0-1 senza controindicazioni all'IO [I, A]. È utile ricordare la storia di **KEYNOTE-604** (pembrolizumab): PFS positivo (HR 0,75) ma **OS non significativa** (HR 0,80), con conseguente **ritiro volontario dell'indicazione FDA** (2021), analogamente a CheckMate 331/451 (nivolumab) — i checkpoint "storici" in schemi non ottimizzati sono falliti nella conferma post-marketing in SCLC. In Italia **atezolizumab** è rimborsato in classe H con registro dalla determina del 14 luglio 2020, circa un anno dopo l'approvazione EMA; **durvalumab+platino-etoposide**, approvato da EMA nel settembre 2020, è arrivato solo con la determina n. 766/2022 del 24 ottobre 2022 (registro "IMFINZI ES-SCLC"), circa 2 anni dopo.
 
 ### Mantenimento con lurbinectedin + atezolizumab (IMforte) — nuova opzione dopo l'induzione
 
@@ -76,11 +64,6 @@ Lo studio EORTC (Slotman 2007) ha mostrato un beneficio in OS (a 1 anno 27,1% vs
 ### Radioterapia toracica di consolidamento (ED con buona risposta a CT)
 Nello studio **CREST** (495 pz), il confronto tra PCI+RT toracica (30 Gy/10-15fr) e sola PCI non ha raggiunto l'endpoint primario di OS a 1 anno, ma ha mostrato un beneficio in analisi secondaria a 2 anni (**13% vs 3%, p=0,004**), maggiore nei pazienti con malattia intratoracica residua. ESMO la considera un'opzione in PS 0-2 con risposta a CT, con RT sul residuo (**30 Gy/10 frazioni**) [II, C]; i dati sull'integrazione con l'immunoterapia restano limitati.
 
-#### Punti chiave — stadio esteso
-- Standard I linea: **atezolizumab-carbo-etoposide (IMpower133)** o **durvalumab±tremelimumab-platino-etoposide (CASPIAN)**, OS HR ~0,70-0,75 — primo cambio di standard in ED-SCLC in >20 anni; **KEYNOTE-604 fallito su OS** → pembrolizumab/nivolumab ritirati, da non confondere con gli standard attuali.
-- **IMforte**: mantenimento **lurbinectedin+atezolizumab** dopo induzione → OS HR 0,73 (13,2 vs 10,6 mesi), approvato FDA (ott 2025) ed EMA/CE (giu 2026), **ma non ancora rimborsato da AIFA** al 24/08/2026 — distinto dal "mantenimento" classico con la stessa CT (privo di beneficio).
-- PCI in ED: dibattuta, alternativa validata = sorveglianza con RM encefalo periodica; RT toracica di consolidamento (CREST): beneficio OS a 2 anni (13% vs 3%) in responder con malattia residua.
-
 
 ## Linee successive di trattamento
 La sensibilità al platino si definisce in base al Time to Failure Interval (TFI): **platino-sensibile** se TFI ≥90 giorni (risposta al re-trattamento 20-30%), **platino-resistente** se TFI <90 giorni (risposta ~15%), **platino-refrattario** se la progressione avviene durante la CT (prognosi molto sfavorevole, BSC o trial clinico [II, C]).
@@ -93,15 +76,9 @@ In Italia, però, ad agosto 2026 **AIFA non ha ancora pubblicato una determina d
 
 Il **lurbinectedin in monoterapia** di seconda linea va invece ridimensionato: lo studio di conferma **LAGOON** ha fallito l'endpoint primario di OS (monoterapia: 8,7 mesi, HR 1,190; lurbinectedin+irinotecan: 10,9 mesi, HR 0,902, non significativo) e Jazz Pharmaceuticals prevede il ritiro dell'indicazione FDA (Q3 2026), mentre il mantenimento con atezolizumab (IMforte) non è toccato da questo esito. In Europa, del resto, lurbinectedin in monoterapia **non è mai stato sottoposto a domanda di autorizzazione EMA** (solo designazione orfana nel 2019) e non è mai stato rimborsato in Italia, dove è stato accessibile solo in studio clinico o per uso nominale; le approvazioni riportate dalla letteratura anglosassone riguardano USA (accelerata 2020, ora in ritiro) e Svizzera (autorizzazione temporanea Swissmedic, marzo 2023).
 
-L'immunoterapia in monoterapia nelle linee successive resta una storia di fallimenti importante per l'esame: CheckMate 032 (nivolumab in terza linea) ha mostrato ORR 11,9%, KEYNOTE-028/158 (pembrolizumab) ORR 18,4-33,3%, ma le approvazioni FDA accelerate per nivolumab e pembrolizumab sono state **entrambe ritirate volontariamente** (2020-2021) dopo il fallimento degli endpoint OS nei trial confermatori di fase III; anche il rovalpituzumab tesirine (ADC anti-DLL3) ha dato risultati deludenti, con sviluppo interrotto — un contrasto istruttivo con il successo del bispecifico anti-DLL3 tarlatamab.
+L'immunoterapia in monoterapia nelle linee successive resta una storia di fallimenti importante: CheckMate 032 (nivolumab in terza linea) ha mostrato ORR 11,9%, KEYNOTE-028/158 (pembrolizumab) ORR 18,4-33,3%, ma le approvazioni FDA accelerate per nivolumab e pembrolizumab sono state **entrambe ritirate volontariamente** (2020-2021) dopo il fallimento degli endpoint OS nei trial confermatori di fase III; anche il rovalpituzumab tesirine (ADC anti-DLL3) ha dato risultati deludenti, con sviluppo interrotto — un contrasto istruttivo con il successo del bispecifico anti-DLL3 tarlatamab.
 
 Il **SCLC trasformato** (da NSCLC EGFR-mutato in resistenza a TKI) ha un'incidenza del 3-5%, è associato a RB1/TP53, risponde a platino-etoposide nel 54% dei casi e ai taxani nel 50%, ma **non risponde all'immunoterapia** (0/17 pazienti in casistica).
-
-#### Punti chiave — linee successive
-- TFI ≥90 giorni = platino-sensibile (re-challenge o topotecan); <90 giorni = platino-resistente (topotecan/CAV, risposte più basse).
-- **Tarlatamab (DeLLphi-304)**: OS HR 0,60 vs chemio in II linea — nuova opzione di riferimento; tossicità caratteristica CRS 60% (per lo più G1-2), monitoraggio intensivo nei primi cicli. Approvato EMA maggio 2026, ma **non ancora rimborsato da AIFA** al 24/08/2026.
-- **Lurbinectedin monoterapia II linea**: LAGOON negativo, ritiro indicazione FDA in corso — non più opzione consolidata; e va ricordato che **non è mai stata autorizzata da EMA/AIFA** come monoterapia (mai disponibile/rimborsata in Italia). **Lurbinectedin+atezolizumab (IMforte)** resta invece valido come mantenimento I linea, approvato da EMA/CE (giugno 2026) ma **non ancora rimborsato da AIFA** al 24/08/2026.
-- Immunoterapia in monoterapia in linee successive: storia di fallimenti (nivolumab/pembrolizumab ritirati per fallimento OS in conferma) — non confondere con gli standard I linea.
 
 
 ## Farmaci e classi rilevanti
@@ -121,7 +98,7 @@ Le tossicità frequenti comprendono mielosoppressione severa da platino-etoposid
 L'obiettivo è una sorveglianza ravvicinata, dato l'elevato rischio di recidiva precoce legato alla biologia molto aggressiva della malattia, con valutazione clinica/imaging frequente nei primi 2 anni (intervalli più ravvicinati rispetto al NSCLC). Gli esami utili comprendono la TC torace-addome e, se la PCI è stata omessa, la **RM encefalo periodica** (ogni 3 mesi il 1° anno, poi ogni 6 mesi, in alternativa alla PCI). Va inoltre garantito il monitoraggio neurocognitivo nei pazienti sottoposti a PCI e una ricerca tempestiva di recidiva, per consentire un accesso rapido alle linee successive (tarlatamab, topotecan, re-challenge platino se sensibile).
 
 
-## Punti ad alta resa per orale
+## Punti chiave
 - SCLC = **malattia orfana**, quasi esclusivamente fumo-correlata; **screening LDCT non riduce la mortalità** (a differenza del NSCLC).
 - **VALG staging (LD/ED)** resta il riferimento clinico-decisionale nonostante il TNM 8 raccomandato.
 - **RT concomitante LD**: standard **45 Gy/30fr BID** (Turrisi, OS 5a 26% vs 16%); alternativa **66 Gy/33fr OD** (CONVERT, non-inferiore); iniziare RT al **1°-2° ciclo** di CT.

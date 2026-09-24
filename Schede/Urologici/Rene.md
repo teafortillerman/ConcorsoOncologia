@@ -18,10 +18,6 @@ Tra le sindromi paraneoplastiche vanno ricordate ipertensione, poliglobulia, e l
 
 La biopsia renale trova indicazione nelle masse sotto i 4 cm candidate a sorveglianza o ablazione, e nel sospetto di metastasi da altro primitivo; **non va eseguita sulle cisti**, salvo le Bosniak IV. Il suo uso riduce sensibilmente le resezioni inutili di lesioni benigne (dal 16% al 5%).
 
-#### Punti chiave
-- Sindrome di Stauffer: disfunzione epatica reversibile post-nefrectomia, da non confondere con metastasi epatiche.
-- TC con mdc prima scelta; RM per lesioni cistiche/papillari; PET non raccomandata.
-- Biopsia utile in masse <4cm candidate a sorveglianza/ablazione; mai sulle cisti (tranne Bosniak IV).
 
 ## Anatomia patologica
 
@@ -35,11 +31,6 @@ Nella malattia avanzata, il sistema più usato è l'**IMDC/Heng**, basato su 6 f
 
 Per istotipo, il Leibovich score mostra una PFS a 5 anni del 74% nel ccRCC, ma dell'91% nel papillare e dell'87% nel cromofobo — a parità di stadio, papillare e cromofobo hanno una prognosi migliore. Un punto spesso frainteso: il PD-L1 nel carcinoma renale è **solo prognostico**, non predittivo — un dato consolidato fin dal CheckMate 025 — e quindi **non guida la scelta terapeutica**.
 
-#### Punti chiave
-- IMDC (6 fattori): PS, Hb, calcio, tempo diagnosi-trattamento, neutrofili, piastrine — memorizzare tutti e 6.
-- Favorevole (0 fattori): OS 2a 75%; Intermedio (1-2): 53%; Sfavorevole (3-6): 7%.
-- Leibovich: pRCC e ChRCC hanno prognosi migliore del ccRCC a parità di stadio.
-- !!PD-L1 nel rene è solo prognostico, mai predittivo!! — non guida la scelta del trattamento.
 
 ## Terapia della malattia localizzata
 
@@ -63,12 +54,6 @@ Il trial **RAMPART** (ESMO 2025) ha due bracci sperimentali distinti, entrambi c
 
 Circa il 40% dei pazienti va incontro a recidiva, con due terzi degli eventi entro il primo anno. Il follow-up va calibrato sul rischio: TC torace-addome ogni 6 mesi fino al terzo anno nel rischio intermedio/alto. Marcatori tumorali e PET-FDG sono invece sconsigliati.
 
-#### Punti chiave
-- NSS netto beneficio in T1a (Kim 2012); linfoadenectomia e surrenectomia non di routine.
-- Ablazione percutanea non è un'alternativa alla chirurgia nell'operabile (OS peggiore, HR 1,64); SBRT raccomandazione condizionata a favore nel non operabile.
-- VEGF-TKI adiuvante mai raccomandato (solo tossicità, nessun OS).
-- ++KEYNOTE-564 a 5 anni: DFS HR 0,71, OS HR 0,66 (87,7% vs 82,3%)++ — unico immunoterapico adiuvante con OS positiva.
-- !!RAMPART: solo la combinazione durvalumab+tremelimumab è positiva (HR 0,65); la monoterapia con durvalumab NON ha raggiunto significatività (HR 0,74, p=0,041)!! — non trattarli come un unico risultato.
 
 ## Malattia localmente avanzata e ruolo della chirurgia
 
@@ -84,14 +69,6 @@ In Italia le quattro combinazioni sono tutte **rimborsate in classe H** con regi
 
 Un punto chiave sulla selezione: nel **rischio favorevole IMDC**, le combinazioni IO-TKI migliorano tasso di risposta e PFS ma **non l'OS** (metanalisi Bolek 2024, HR 0,99) — motivo per cui la monoterapia con TKI resta un'opzione valida in questo sottogruppo. Una network meta-analisi indica che nivolumab+cabozantinib ha la probabilità più alta di offrire la miglior OS (83%) nel rischio intermedio-alto, mentre pembrolizumab+lenvatinib ha la probabilità più alta di offrire la miglior PFS (99%) — ma le linee guida ESMO sono chiare: **nessuna combinazione IO-TKI è preferita rispetto alle altre**, e non vanno fatti confronti indiretti cross-trial basati solo su questi numeri. Infine, la tripletta nivolumab+ipilimumab+cabozantinib, testata nel COSMIC-313, **non è raccomandata**: la PFS è migliore ma a fronte di più tossicità e senza un dato di OS a supporto.
 
-#### Punti chiave
-- 7 opzioni 1L in Italia: sunitinib/pazopanib (monoterapia, tutte IMDC), cabozantinib (monoterapia, solo int-sfav), 4 combinazioni IO-TKI/IO-IO.
-- ++CheckMate 9ER, analisi finale a 67,6 mesi: OS 46,5 vs 35,5 mesi (HR 0,79)++ — ancora la miglior OS assoluta tra le combinazioni.
-- CLEAR: miglior PFS (HR 0,42) ma tossicità più alta (G≥3 82,4%).
-- Rischio favorevole IMDC: combo non ha beneficio OS (metanalisi Bolek, HR 0,99) — TKI monoterapia resta valida.
-- Nessuna combinazione IO-TKI preferita rispetto alle altre (ESMO) — non fare confronti indiretti cross-trial.
-- COSMIC-313 (tripletta): non raccomandata, PFS migliore ma OS mancante e più tossicità.
-- ++Stato AIFA: tutte e 4 le combinazioni sono rimborsate in classe H, ma con gap EMA→AIFA molto diverso++ — da ~1 anno (pembrolizumab+axitinib, dic 2020) a quasi 2 anni (pembrolizumab+lenvatinib, lug 2023) e oltre 2 anni (nivolumab+ipilimumab, dic 2021).
 
 ## Linee successive
 
@@ -103,12 +80,6 @@ Un punto pratico importante: !!il rechallenge con immunoterapia dopo una prima l
 
 "Opzione preferita" non significa però prescrivibile a carico del SSN: dopo l'approvazione europea del 2025 (CHMP dicembre 2024) per il ccRCC avanzato pretrattato con anti-PD-(L)1 e anti-VEGF, AIFA lo ha collocato in **fascia C(nn)** con la determina Pres. 622/2025 del 6 maggio 2025 (che riguarda anche la sindrome di von Hippel-Lindau): autorizzato ma non ancora rimborsato, e accessibile solo a carico del paziente o tramite canali straordinari.
 
-#### Punti chiave
-- CheckMate 025 (nivolumab vs everolimus): beneficio OS indipendente da PD-L1.
-- METEOR (cabozantinib vs everolimus): miglior farmaco post-TKI (PFS HR 0,51).
-- Dopo IO+TKI: rimborsati solo cabozantinib/sunitinib/sorafenib. Dopo IO+IO: solo sunitinib/sorafenib.
-- !!Rechallenge con IO dopo 1L IO-based: non raccomandato (CONTACT-03 negativo, più tossico)!!.
-- Belzutifan (LITESPARK-005): opzione preferita in 3ª linea vs everolimus per PFS (HR 0,75), senza beneficio OS significativo all'analisi finale — ma !!ad oggi in fascia C(nn) AIFA, non ancora rimborsato dal SSN!! (autorizzazione EC 2025, determina AIFA maggio 2025 solo di classificazione, non di rimborso).
 
 ## Carcinoma renale non a cellule chiare
 
@@ -116,10 +87,6 @@ Nel papillare, l'alterazione di MET è presente nell'80% del tipo I e nel 45% de
 
 Il carcinoma dei dotti collettori e il midollare hanno una prognosi severissima, con solo il 5-10% dei pazienti che sopravvive oltre 24 mesi; lo schema storico è platino+gemcitabina, con il BONSAI trial (cabozantinib in prima linea, ORR 35%) come alternativa più recente. Per la sindrome HLRCC/FH-deficient, una novità del 2025: la combinazione **bevacizumab+erlotinib** ha mostrato un ORR del 72% nella forma ereditaria HLRCC contro il 35% del papillare sporadico, diventando il nuovo standard per questa forma ereditaria. "Standard" va inteso in senso di letteratura/NCCN: la combinazione non ha un'approvazione EMA/FDA per l'HLRCC, deriva da uno studio di fase II a braccio singolo (Srinivasan et al.) e in Italia si usa off-label, tramite canali straordinari (uso compassionevole, comitato etico, eventuale Legge 648/96).
 
-#### Punti chiave
-- Papillare: cabozantinib opzione preferita in metastatico (SWOG 1500); distinzione tipo I/II abolita in WHO 2022.
-- Dotti collettori/midollare: prognosi severissima; BONSAI (cabozantinib) alternativa al platino+gemcitabina storico.
-- HLRCC/FH-deficient: bevacizumab+erlotinib, ORR 72% — sospettare in presenza di leiomiomi cutanei/uterini.
 
 ## Ruolo della radioterapia nella malattia metastatica
 
@@ -141,8 +108,7 @@ Un dato storico interessante: l'ipertensione indotta dai TKI è considerata un p
 
 Vedi la sezione "Follow-up dopo chirurgia radicale" più sopra: approccio risk-adapted, con marcatori tumorali e PET-FDG sconsigliati.
 
-## Punti ad alta resa per l'orale
-
+## Punti chiave
 - Distribuzione istologica: cellule chiare 70-80%, papillare 10-15%, cromofobo 5%.
 - IMDC (6 fattori) da memorizzare: performance status, emoglobina, calcio, tempo diagnosi-trattamento, neutrofili, piastrine.
 - CARMENA/SURTIME ridimensionano la nefrectomia citoriduttiva upfront nell'era TKI/IO.

@@ -30,6 +30,11 @@
   --color-key: #3a6ea5;
   --color-key-soft: #eaf0f7;
   --color-key-border: #c4d5e6;
+  --color-mark: #fbe7a1;
+  --color-danger: #b0402e;
+  --color-danger-soft: #fbece8;
+  --color-danger-border: #ebc4bb;
+  --read-measure: 760px;
   --shadow-sm: 0 1px 2px rgba(40,35,25,0.06);
   --shadow-md: 0 6px 20px rgba(40,35,25,0.08);
   --shadow-lg: 0 20px 50px rgba(40,35,25,0.14);
@@ -67,6 +72,10 @@
   --color-key: #7fb0e0;
   --color-key-soft: #182734;
   --color-key-border: #2c435a;
+  --color-mark: #5a4a17;
+  --color-danger: #ec8a76;
+  --color-danger-soft: #2c1b17;
+  --color-danger-border: #54302a;
   --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
   --shadow-md: 0 6px 24px rgba(0,0,0,0.4);
   --shadow-lg: 0 24px 60px rgba(0,0,0,0.55);
@@ -414,8 +423,8 @@ button { font-family: inherit; cursor: pointer; }
 
 
 /* READER */
-.reader-layout { display: grid; grid-template-columns: minmax(0, 1fr) 176px; gap: 32px; align-items: start; max-width: 1560px; }
-.reader-wrap { max-width: 1180px; min-width: 0; }
+.reader-layout { display: grid; grid-template-columns: minmax(0, 880px) 220px; gap: 56px; align-items: start; }
+.reader-wrap { min-width: 0; }
 .reader-head { margin-bottom: 26px; padding-bottom: 20px; border-bottom: 1px solid var(--color-divider); }
 .reader-head .badge-theme {
   display: inline-flex; align-items: center; gap: 6px;
@@ -437,36 +446,57 @@ button { font-family: inherit; cursor: pointer; }
 .reader-meta-row span { display: flex; align-items: center; gap: 5px; }
 .reader-meta-row svg { width: 13px; height: 13px; }
 
-.md-content { font-size: 17.5px; line-height: 1.68; }
+/* TEMA DI LETTURA "Carta Clinica": colonna di testo contenuta, sezioni numerate, riquadri per tipo,
+   riepiloghi finali in evidenza. I colori derivano dai token di :root / [data-theme="dark"]. */
+.md-content { font-size: 17px; line-height: 1.75; counter-reset: sezione; }
+.md-content > :is(p, ul, ol, h2, h3, h4, blockquote, .callout, hr, .summary-card) { max-width: var(--read-measure); }
 .md-content h2 {
   font-family: var(--font-display);
-  font-size: 1.32em;
+  font-size: 1.5em;
   font-weight: 600;
-  margin: 34px 0 14px;
-  padding-bottom: 9px;
-  border-bottom: 1px solid var(--color-divider);
+  line-height: 1.25;
+  margin: 58px 0 16px;
+  padding-top: 22px;
+  border-top: 1px solid var(--color-divider);
   scroll-margin-top: 90px;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
 }
-.md-content h2:first-child { margin-top: 0; }
-.md-content h3 {
-  font-size: 1.06em;
+.md-content > h2::before {
+  counter-increment: sezione;
+  content: counter(sezione, decimal-leading-zero);
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.5em;
   font-weight: 700;
-  margin: 22px 0 9px;
+  letter-spacing: 0.12em;
   color: var(--color-primary);
+  margin-bottom: 6px;
+}
+.md-content h2:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+.md-content h3 {
+  font-size: 1.12em;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 32px 0 10px;
+  padding-left: 12px;
+  border-left: 3px solid var(--color-primary);
+  color: var(--color-text);
   scroll-margin-top: 90px;
 }
-.md-content h4 { font-size: 0.97em; font-weight: 700; margin: 16px 0 7px; color: var(--color-text); }
-.md-content p { margin: 0 0 13px; }
-.md-content ul, .md-content ol { margin: 0 0 16px 4px; padding-left: 20px; }
-.md-content li { margin-bottom: 7px; }
+.md-content h4 { font-size: 0.8em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; margin: 24px 0 8px; color: var(--color-text-muted); }
+.md-content p { margin: 0 0 1.05em; }
+.md-content ul, .md-content ol { margin: 0 0 1.2em 2px; padding-left: 22px; }
+.md-content li { margin-bottom: 8px; padding-left: 3px; }
 .md-content li::marker { color: var(--color-primary); }
-.md-content hr { border: none; border-top: 1px solid var(--color-divider); margin: 26px 0; }
+.md-content hr { border: none; border-top: 1px solid var(--color-divider); margin: 32px 0; }
 .md-content strong { color: var(--color-text); font-weight: 700; }
-.md-content mark.hl { padding: 1px 6px; border-radius: 5px; font-weight: 600; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
-.md-content mark.hl-primary { background: var(--color-primary-highlight); color: var(--color-primary); }
-.md-content mark.hl-accent { background: var(--color-accent-highlight); color: var(--color-accent); }
-.md-content mark.hl-warn { background: var(--color-warn-highlight); color: var(--color-warn); }
+.md-content mark.hl { color: inherit; font-weight: 600; box-decoration-break: clone; -webkit-box-decoration-break: clone; border-radius: 3px; }
+/* ==testo== : evidenziatore, il concetto da ricordare */
+.md-content mark.hl-primary { background: linear-gradient(transparent 38%, var(--color-mark) 38%); padding: 0 2px; }
+/* ++testo++ : novità / aggiornamento */
+.md-content mark.hl-accent { background: var(--color-accent-highlight); color: var(--color-accent); padding: 1px 5px; }
+/* !!testo!! : attenzione, errore frequente */
+.md-content mark.hl-warn { background: var(--color-danger-soft); color: var(--color-danger); padding: 1px 5px; }
 .md-content code { background: var(--color-surface-offset); border-radius: 4px; padding: 1px 6px; font-size: 0.87em; font-family: var(--font-mono); }
 .md-content pre {
   background: var(--color-surface-offset); border: 1px solid var(--color-border);
@@ -474,53 +504,72 @@ button { font-family: inherit; cursor: pointer; }
 }
 .md-content pre code { background: none; padding: 0; font-size: 0.83em; line-height: 1.55; white-space: pre; }
 .md-content blockquote {
-  margin: 0 0 16px; padding: 11px 16px; border-left: 3px solid var(--color-primary);
-  background: var(--color-primary-soft); border-radius: 0 10px 10px 0;
+  margin: 0 0 18px; padding: 12px 18px; border-left: 3px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+.md-content blockquote p:last-child { margin-bottom: 0; }
+
+/* Riquadri "> ++Etichetta:++ ..." — l'etichetta diventa intestazione, il colore dice il tipo */
+.md-content .callout {
+  margin: 20px 0 24px;
+  padding: 14px 18px 4px;
+  border: 1px solid var(--co-border);
+  border-left: 4px solid var(--co-ink);
+  border-radius: 12px;
+  background: var(--co-bg);
+  font-size: 0.95em;
+}
+.md-content .callout-label {
+  font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--co-ink); margin-bottom: 6px;
+}
+.md-content .callout p { margin-bottom: 10px; }
+.md-content .callout-label + p::first-letter { text-transform: uppercase; }
+.md-content .co-update { --co-ink: var(--color-accent); --co-bg: var(--color-surface-2); --co-border: var(--color-accent-highlight); }
+.md-content .co-warn { --co-ink: var(--color-danger); --co-bg: var(--color-danger-soft); --co-border: var(--color-danger-border); }
+.md-content .co-info { --co-ink: var(--color-primary); --co-bg: var(--color-primary-soft); --co-border: var(--color-primary-highlight); }
+
+/* Riepiloghi finali: "Punti chiave" ed "Errori da evitare" */
+.md-content .summary-card {
+  margin: 58px 0 28px;
+  padding: 24px 28px 12px;
+  border-radius: 16px;
+  border: 1px solid var(--sum-border);
+  background: var(--sum-bg);
+}
+.md-content .summary-card + .summary-card { margin-top: 0; }
+.md-content .summary-card h2 {
+  margin: 0 0 16px; padding: 0; border: none;
+  font-size: 1.35em; color: var(--sum-ink);
+  display: flex; align-items: center; gap: 10px;
+}
+.md-content .summary-card h2::before {
+  content: ""; width: 10px; height: 10px; border-radius: 3px;
+  background: var(--sum-ink); transform: rotate(45deg); flex-shrink: 0;
+}
+.md-content .summary-card ul { padding-left: 26px; }
+.md-content .summary-card li { margin-bottom: 11px; }
+.md-content .summary-card li::marker { color: var(--sum-ink); font-weight: 700; }
+.md-content .sum-key { --sum-ink: var(--color-key); --sum-bg: var(--color-key-soft); --sum-border: var(--color-key-border); }
+.md-content .sum-key li::marker { content: "✓  "; }
+.md-content .sum-err { --sum-ink: var(--color-danger); --sum-bg: var(--color-danger-soft); --sum-border: var(--color-danger-border); }
+.md-content .sum-err li::marker { content: "✕  "; }
+@media (max-width: 640px) {
+  .md-content { font-size: 16.5px; }
+  .md-content .summary-card { padding: 18px 16px 6px; }
+  .md-content .summary-card ul { padding-left: 22px; }
 }
 
-/* KEY POINTS — riquadro a scomparsa per i "Punti chiave" di fine sezione */
-.md-content details.key-points {
-  margin: 6px 0 20px;
-  border: 1px solid var(--color-key-border);
-  background: var(--color-key-soft);
-  border-radius: 12px;
-  overflow: hidden;
+/* Scorciatoia ai punti chiave nell'intestazione della scheda */
+.reader-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.kp-jump {
+  display: inline-flex; align-items: center; gap: 7px;
+  border: 1px solid var(--color-key-border); background: var(--color-key-soft); color: var(--color-key);
+  border-radius: 999px; padding: 6px 14px; font-size: 0.82rem; font-weight: 600;
 }
-.md-content details.key-points summary {
-  list-style: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 11px 16px;
-  font-weight: 700;
-  font-size: 0.86rem;
-  color: var(--color-key);
-  -webkit-tap-highlight-color: transparent;
-}
-.md-content details.key-points summary::-webkit-details-marker { display: none; }
-.md-content details.key-points summary::marker { content: ""; }
-.md-content details.key-points summary:focus-visible { outline: 2px solid var(--color-key); outline-offset: 2px; }
-.md-content details.key-points .kp-icon { width: 15px; height: 15px; flex-shrink: 0; display: flex; }
-.md-content details.key-points .kp-icon svg { width: 15px; height: 15px; }
-.md-content details.key-points .kp-title { flex: 1; }
-.md-content details.key-points .kp-hint { font-size: 0.72rem; font-weight: 500; color: var(--color-text-faint); }
-.md-content details.key-points[open] .kp-hint { display: none; }
-@media (max-width: 640px) { .md-content details.key-points .kp-hint { display: none; } }
-.md-content details.key-points .kp-chev { width: 14px; height: 14px; color: var(--color-key); flex-shrink: 0; transition: transform 0.18s ease; }
-.md-content details.key-points[open] .kp-chev { transform: rotate(90deg); }
-.md-content details.key-points[open] summary { padding-bottom: 9px; }
-.md-content details.key-points .kp-body {
-  padding: 0 16px 14px 41px;
-  border-top: 1px solid var(--color-key-border);
-  padding-top: 11px;
-}
-.md-content details.key-points .kp-body ul, .md-content details.key-points .kp-body ol { margin: 0; padding-left: 18px; }
-.md-content details.key-points .kp-body li { margin-bottom: 6px; }
-.md-content details.key-points .kp-body li:last-child { margin-bottom: 0; }
-.md-content details.key-points .kp-body li::marker { color: var(--color-key); }
-.md-content details.key-points .kp-body p { margin: 0 0 8px; }
-.md-content details.key-points .kp-body p:last-child { margin-bottom: 0; }
+.kp-jump:hover { filter: brightness(0.97); }
+.kp-jump::before { content: ""; width: 8px; height: 8px; border-radius: 2px; background: currentColor; transform: rotate(45deg); }
+
 .md-content img { max-width: 100%; border-radius: 12px; border: 1px solid var(--color-border); margin: 10px 0 20px; display: block; }
 .md-content .mermaid-card {
   background: var(--color-surface-2);
@@ -694,6 +743,7 @@ button { font-family: inherit; cursor: pointer; }
 .ag-link svg, .ag-open-btn svg, .ag-restart svg { width: 14px; height: 14px; }
 .ag-link:hover, .ag-open-btn:hover, .ag-restart:hover { border-color: var(--color-primary); color: var(--color-primary); }
 .ag-open-btn { margin-top: 14px; }
+.reader-actions .ag-open-btn { margin-top: 0; }
 
 /* banda della sequenza terapeutica */
 .ag-seq {
@@ -848,8 +898,6 @@ button.ag-seq-step:hover { border-color: var(--color-primary); }
   .sidebar, .topbar, .toc, .reader-nav, .related-box, .reading-progress, .back-to-top { display: none !important; }
   .app { display: block; }
   .content { padding: 0; max-width: 100%; }
-  .md-content details.key-points .kp-body { display: block !important; padding-top: 11px; }
-  .md-content details.key-points summary .kp-chev { display: none; }
 }
 
 /* MOBILE NAV (hamburger + off-canvas drawer, <900px) */
@@ -1083,8 +1131,9 @@ function slugify(text) {
     .replace(/\s+/g, "-");
 }
 
-const KP_ICON = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.8-6.2 3.8 1.6-7-5.4-4.7 7.1-.6z"/></svg>';
-const KP_CHEV = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>';
+// Sezioni finali mostrate come schede di riepilogo (titolo "## ..." → classe della sezione).
+const SUMMARY_SECTIONS = { "Punti chiave": "sum-key", "Errori da evitare": "sum-err" };
+const CALLOUT_KIND = { "hl-accent": "co-update", "hl-warn": "co-warn", "hl-primary": "co-info" };
 
 /* ---------- popup "schema di terapia" (sintassi {{label::dettaglio}}, vedi inlineFormat) ---------- */
 let ttGlobalBound = false;
@@ -1151,24 +1200,25 @@ function markdownToHtml(md) {
   const slugCount = {};
   // la prima riga "# Titolo" duplica l'h1 già mostrato nell'intestazione della scheda: si salta.
   let sawTitle = false;
-  // "#### Punti chiave" apre un riquadro <details> a scomparsa invece di un titolo + lista semplice:
-  // il contenuto successivo (di norma un elenco puntato) viene dirottato in kpBuf finché non
-  // arriva la prossima intestazione (di qualunque livello), un separatore --- o la fine del file.
-  let inKeyPoints = false, kpBuf = "";
-  const append = (str) => { if (inKeyPoints) kpBuf += str; else html += str; };
+  const append = (str) => { html += str; };
   const closeList = () => { if (inList) { append("</ul>"); inList = false; } if (inOrderedList) { append("</ol>"); inOrderedList = false; } };
-  let kpTitle = "Punti chiave";
-  const openKeyPoints = (title) => { closeList(); flushTable(); inKeyPoints = true; kpBuf = ""; kpTitle = title; };
-  const closeKeyPoints = () => {
-    if (!inKeyPoints) return;
-    closeList();
-    inKeyPoints = false;
-    const summary = `<span class="kp-icon">${KP_ICON}</span><span class="kp-title">${inlineFormat(kpTitle)}</span><span class="kp-hint">tocca per espandere</span><span class="kp-chev">${KP_CHEV}</span>`;
-    html += `<details class="key-points"><summary>${summary}</summary><div class="kp-body">${kpBuf}</div></details>`;
-    kpBuf = "";
+  // Righe "> ..." consecutive formano un solo riquadro; una riga ">" vuota separa i paragrafi.
+  // Se il riquadro si apre con un'evidenziazione che termina con ":" (es. "++Verifica in letteratura:++"),
+  // quell'etichetta diventa l'intestazione del riquadro e il suo colore ne decide il tipo.
+  let quoteBuf = [];
+  const flushQuote = () => {
+    if (!quoteBuf.length) return;
+    const paras = quoteBuf.join("\n").split(/\n\s*\n/).map(t => t.trim()).filter(Boolean).map(t => inlineFormat(t.replace(/\n/g, " ")));
+    quoteBuf = [];
+    const m = paras[0] && paras[0].match(/^<mark class="hl (hl-\w+)">([^<]*?):\s*<\/mark>\s*/);
+    if (!m) { append(`<blockquote>${paras.map(t => `<p>${t}</p>`).join("")}</blockquote>`); return; }
+    paras[0] = paras[0].slice(m[0].length);
+    const body = paras.filter(Boolean).map(t => `<p>${t}</p>`).join("");
+    append(`<aside class="callout ${CALLOUT_KIND[m[1]] || "co-info"}"><div class="callout-label">${m[2]}</div>${body}</aside>`);
   };
-  // riconosce sia "Punti chiave" sia varianti con suffisso di sottosezione, es. "Punti chiave — stadio III"
-  const isKeyPointsHeading = (text) => text === "Punti chiave" || text.startsWith("Punti chiave —") || text.startsWith("Punti chiave -");
+  // "## Punti chiave" / "## Errori da evitare" aprono una scheda di riepilogo chiusa alla sezione successiva.
+  let inSummary = false;
+  const closeSummary = () => { if (inSummary) { closeList(); append("</section>"); inSummary = false; } };
   const isTableRow = (l) => l.startsWith("|") && l.endsWith("|");
   const isTableSep = (l) => /^\|?[\s:|-]+\|?$/.test(l) && l.includes("-");
   const flushTable = () => {
@@ -1209,13 +1259,16 @@ function markdownToHtml(md) {
         inCode = false;
         codeLang = "";
       } else {
-        closeList(); flushTable();
+        closeList(); flushTable(); flushQuote();
         inCode = true;
         codeLang = line.slice(3).trim().toLowerCase();
       }
       continue;
     }
     if (inCode) { codeBuf.push(raw); continue; }
+
+    if (line === ">" || line.startsWith("> ")) { closeList(); flushTable(); quoteBuf.push(line.slice(2)); continue; }
+    flushQuote();
 
     if (isTableRow(line)) {
       if (tableBuf.length === 1 && isTableSep(line)) { tableBuf.push(line); continue; }
@@ -1227,26 +1280,29 @@ function markdownToHtml(md) {
 
     if (!line) { closeList(); continue; }
     if (line.startsWith("#### ")){
-      const text = line.slice(5).trim();
-      if (isKeyPointsHeading(text)) { openKeyPoints(text); continue; }
-      closeKeyPoints(); closeList(); append(`<h4>${inlineFormat(text)}</h4>`); continue;
+      closeList(); append(`<h4>${inlineFormat(line.slice(5).trim())}</h4>`); continue;
     }
-    if (line.startsWith("### ")) { closeKeyPoints(); closeList(); append(`<h3>${inlineFormat(line.slice(4))}</h3>`); continue; }
+    if (line.startsWith("### ")) { closeList(); append(`<h3>${inlineFormat(line.slice(4))}</h3>`); continue; }
     if (line.startsWith("## "))  {
-      closeKeyPoints(); closeList();
-      const text = line.slice(3);
+      closeSummary(); closeList();
+      const text = line.slice(3).trim();
       const id = makeSlug(text);
       toc.push({ id, text, level: 2 });
-      append(`<h2 id="${id}">${inlineFormat(text)}</h2>`);
+      const kind = SUMMARY_SECTIONS[text];
+      if (kind) {
+        append(`<section class="summary-card ${kind}"><h2 id="${id}">${inlineFormat(text)}</h2>`);
+        inSummary = true;
+      } else {
+        append(`<h2 id="${id}">${inlineFormat(text)}</h2>`);
+      }
       continue;
     }
     if (line.startsWith("# ")) {
-      closeKeyPoints(); closeList();
+      closeSummary(); closeList();
       if (!sawTitle && !html) { sawTitle = true; continue; }
       append(`<h1>${inlineFormat(line.slice(2))}</h1>`);
       continue;
     }
-    if (line.startsWith("> ")) { closeList(); append(`<blockquote>${inlineFormat(line.slice(2))}</blockquote>`); continue; }
     if (/^-\s|^\*\s/.test(line)) {
       if (!inList) { append("<ul>"); inList = true; }
       append(`<li>${inlineFormat(line.replace(/^[-*]\s/, ""))}</li>`);
@@ -1257,13 +1313,14 @@ function markdownToHtml(md) {
       append(`<li>${inlineFormat(line.replace(/^\d+\.\s/, ""))}</li>`);
       continue;
     }
-    if (line === "---" || line === "***") { closeKeyPoints(); closeList(); append("<hr>"); continue; }
+    if (line === "---" || line === "***") { closeList(); append("<hr>"); continue; }
     closeList();
     append(`<p>${inlineFormat(line)}</p>`);
   }
-  closeKeyPoints();
+  flushQuote();
   closeList();
   flushTable();
+  closeSummary();
   if (inCode && codeBuf.length) {
     if (codeLang === "mermaid") {
       append(`<div class="mermaid-card"><div class="mermaid">${escapeHtml(codeBuf.join("\n"))}</div></div>`);
@@ -1576,6 +1633,7 @@ async function openScheda(item) {
     const related = themedItems(item.theme).filter(i => i.extension !== ".md");
     const { prev, next } = readerNav(item);
     const algo = algorithmForScheda(item.relative_path);
+    const kpEntry = toc.find(t => t.text === "Punti chiave");
 
     content.innerHTML = `
       <div class="reader-layout">
@@ -1587,7 +1645,10 @@ async function openScheda(item) {
               <span>${ICONS.calendar} aggiornata ${escapeHtml((item.modified || "").slice(0,10))}</span>
               <span>${ICONS.clock} ${item.reading_time_min || 1} min di lettura</span>
             </div>
-            ${algo ? `<button type="button" class="ag-open-btn" data-open-algo="${escapeHtml(algo.id)}">${ICONS.branch} Apri algoritmo</button>` : ""}
+            ${(algo || kpEntry) ? `<div class="reader-actions">
+              ${kpEntry ? `<button type="button" class="kp-jump" data-jump="${kpEntry.id}">Punti chiave</button>` : ""}
+              ${algo ? `<button type="button" class="ag-open-btn" data-open-algo="${escapeHtml(algo.id)}">${ICONS.branch} Apri algoritmo</button>` : ""}
+            </div>` : ""}
           </div>
           <div class="md-content">${html}</div>
           ${
@@ -1636,6 +1697,9 @@ async function openScheda(item) {
       });
     });
     content.querySelector("[data-open-algo]")?.addEventListener("click", () => openAlgorithm(algo.id));
+    content.querySelector("[data-jump]")?.addEventListener("click", (ev) => {
+      document.getElementById(ev.currentTarget.dataset.jump)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
 
     setupTocObserver();
     initMermaid();

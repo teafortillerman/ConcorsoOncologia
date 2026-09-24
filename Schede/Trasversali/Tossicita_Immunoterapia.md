@@ -10,11 +10,6 @@ Le fonti principali di questa scheda sono le linee guida AIOM sulla gestione del
 
 > ++Verifica in letteratura:++ l'ASCO ha aperto a marzo 2025 la consultazione pubblica per un aggiornamento della guideline sugli irAE ("Management of Immune-related Adverse Effects: ASCO Guideline Protocol"), ma alla data di questa revisione non risulta ancora pubblicata una nuova edizione definitiva in sostituzione della guideline del 2021 (Schneider BJ et al., JCO 2021, DOI 10.1200/JCO.21.01440): quest'ultima resta quindi il riferimento ASCO formalmente in vigore, mentre l'edizione aggiornata è attesa ma non ancora disponibile.
 
-#### Punti chiave
-
-- La scheda copre la gestione degli irAE da ICI anti-CTLA-4, anti-PD-1/PD-L1 e anti-LAG-3, in un ambito necessariamente multidisciplinare.
-- Un irAE può colpire qualunque organo; la maggioranza è lieve, ma miocardite, encefalite, colite e polmonite severe hanno un reale potenziale di mortalità.
-- Fonti di riferimento: AIOM 2025, ASCO 2021 (aggiornamento in consultazione dal 2025, non ancora pubblicato in forma definitiva), ESMO 2022, CTCAE v5.0.
 
 ## Epidemiologia
 
@@ -24,12 +19,6 @@ La maggior parte degli eventi si manifesta nei primi 3-4 mesi di trattamento, ma
 
 > ++Verifica in letteratura:++ le percentuali di incidenza citate (72%/24% per anti-CTLA-4, 66%/14% per anti-PD-1/PD-L1, 87,9%/39,6% per la combinazione in CheckMate 067) sono coerenti con le meta-analisi e i dati di follow-up a lungo termine più recenti reperiti in letteratura e non necessitano correzione; il dato di mortalità da polmonite del 10-17% citato più sotto è invece stato rivisto (vedi sezione Tossicità polmonare) perché le casistiche più recenti e le real-world cohort riportano tassi generalmente più bassi.
 
-#### Punti chiave
-
-- Anti-CTLA-4: irAE di qualsiasi grado circa 72%, grado maggiore o uguale a 3 circa 24%.
-- Anti-PD-1/PD-L1: irAE di qualsiasi grado circa 66%, grado maggiore o uguale a 3 circa 14%.
-- Combinazione nivolumab-ipilimumab (CheckMate 067): 87,9% di qualsiasi grado, 39,6% di grado maggiore o uguale a 3.
-- Il picco di incidenza è nei primi 3-4 mesi, ma sono possibili eventi tardivi anche dopo la sospensione dell'ICI.
 
 ## Valutazione basale
 
@@ -39,12 +28,6 @@ Sul versante cardiologico, un ECG basale è buona pratica clinica in tutti i paz
 
 Una malattia autoimmune preesistente non rappresenta una controindicazione assoluta all'ICI, ma richiede una decisione condivisa con il paziente e con lo specialista d'organo coinvolto, oltre a un monitoraggio più stretto durante il trattamento.
 
-#### Punti chiave
-
-- Anamnesi ed esame obiettivo completi, con documentazione dei reperti basali, sono il primo strumento per distinguere un irAE da una condizione preesistente.
-- Esami basali: emocromo, funzione renale, elettroliti, glicemia, transaminasi, bilirubina, esame urine, TSH/FT4 (cortisolo/ACTH con anti-CTLA-4 o combinazioni), sierologie virali se indicate.
-- ECG basale in tutti i candidati a ICI; troponina basale nei pazienti a rischio cardiovascolare più elevato o candidati a combinazioni.
-- Una malattia autoimmune preesistente non controindica l'ICI ma richiede decisione condivisa e monitoraggio stretto.
 
 ## Principi generali di gestione
 
@@ -56,13 +39,6 @@ Nei gradi 3-4, il trattamento generale iniziale è rappresentato da prednisone o
 
 Il rechallenge, ossia la ripresa dell'ICI dopo la risoluzione di un irAE, non è una scelta di prima intenzione dopo un evento severo: può essere considerato solo in tossicità selezionate, dopo risoluzione clinica e una discussione multidisciplinare che pesi il rischio di recidiva (spesso più severa) contro il beneficio oncologico atteso.
 
-#### Punti chiave
-
-- Il riconoscimento precoce, dopo aver escluso le diagnosi alternative (progressione, infezione, altri farmaci, comorbidità), è il determinante principale dell'esito.
-- Schema generale: grado 1 osservazione, grado 2 sospensione temporanea, grado 3-4 sospensione e trattamento attivo; alcune tossicità (cardiache, neurologiche) impongono sospensione già dal grado 1.
-- Steroide generale nei gradi 3-4: prednisone/equivalente 1-2 mg/kg/die, salvo endocrinopatie sostitutive ed eventi che richiedono boli ad alte dosi.
-- Tapering steroideo lento, almeno 4-6 settimane; con steroidi prolungati valutare profilassi infettiva, protezione gastrica e salute ossea.
-- Rechallenge non di prima intenzione dopo evento severo: solo in casi selezionati, dopo risoluzione e discussione multidisciplinare.
 
 ## Tabella di riferimento rapido: sospensione ICI e terapia steroidea
 
@@ -117,12 +93,6 @@ La tabella seguente riassume, per ciascun organo/sistema e per ciascun grado CTC
 
 > ++Verifica in letteratura:++ i dosaggi steroidei per organo riportati in tabella sono coerenti con quanto indicato da ASCO 2021, ESMO 2022 e NCCN Guidelines for Management of Immunotherapy-Related Toxicities nella loro versione più recente reperibile; le differenze più rilevanti rispetto alla scheda precedente riguardano la miocardite (dose di bolo esplicitata a 1.000 mg/die di metilprednisolone, non solo "boli") e la sezione neurologica (encefalite, mielite e GBS uniformate a 1 g/die per 5 giorni, in linea con le raccomandazioni per le sindromi neurologiche gravi da ICI).
 
-#### Punti chiave
-
-- La tabella riassume decisione ICI (prosegui / sospendi temporaneamente / interrompi definitivamente) e steroide (farmaco, via, dose) per ciascun organo e grado CTCAE.
-- Le sospensioni definitive obbligatorie, indipendenti dal grado, riguardano la miocardite; SJS/TEN, encefalite/mielite/GBS e colite/epatite di grado 4 sono le altre situazioni a soglia più bassa.
-- I boli di steroide ad alte dosi (circa 1 g/die per 5 giorni o 1.000 mg/die) si usano in miocardite, encefalite/mielite, GBS e miosite/MG di grado severo.
-- Le endocrinopatie (tiroide, surrene, ipofisite, diabete) si gestiscono con terapia ormonale sostitutiva, non con immunosoppressione sistemica ad alte dosi, salvo eccezioni selezionate.
 
 ## Tossicità cutanea
 
@@ -130,12 +100,6 @@ Le manifestazioni cutanee sono tra gli irAE più comuni e comprendono il rash ma
 
 Nel grado 1-2 il trattamento si basa su emollienti, antistaminici e corticosteroidi topici, mentre nel grado 2 persistente o nel grado 3-4 è necessario il coinvolgimento del dermatologo e l'avvio di un corticosteroide sistemico, generalmente prednisone 1-2 mg/kg/die. L'ICI va sospeso nei casi severi; nelle forme di grado 2-3 non SJS/TEN il rechallenge è possibile in casi selezionati, dopo miglioramento a un grado minore o uguale a 1, mentre dopo SJS/TEN o DRESS l'interruzione è definitiva.
 
-#### Punti chiave
-
-- Grado 1-2: terapia topica (emollienti, antistaminici, steroide topico), ICI prosegue.
-- Grado 2 persistente o 3-4: dermatologo, prednisone sistemico 1-2 mg/kg/die, sospensione dell'ICI.
-- SJS/TEN e DRESS: valutazione urgente, possibile centro ustioni, interruzione definitiva dell'ICI.
-- Rechallenge possibile solo in forme di grado 2-3 non SJS/TEN, dopo risoluzione a grado minore o uguale a 1.
 
 ## Tossicità endocrina
 
@@ -155,13 +119,6 @@ La glicemia va monitorata a ogni ciclo di ICI e fino a 6 mesi dopo la fine del t
 
 La valutazione comprende ACTH, cortisolo, TSH, FT4, elettroliti e, se indicato dal quadro clinico, le gonadotropine, insieme a una RM ipofisaria. La terapia endocrina sostitutiva prevede i glucocorticoidi prima della levotiroxina quando coesiste un'insufficienza surrenalica secondaria (per evitare di precipitare una crisi surrenalica), e testosterone o estrogeni quando indicati dal quadro gonadico. Gli steroidi ad alte dosi non sono un trattamento routinario dell'ipofisite e vanno considerati solo in presenza di un effetto massa con cefalea severa o deficit del campo visivo. L'ICI va sospeso fino alla stabilizzazione nei gradi 1-2, e a maggior ragione nei gradi 3-4.
 
-#### Punti chiave — Tossicità endocrina
-
-- Tiroide: monitoraggio TSH/FT4 periodico; grado 1-2 gestibile con proseguimento ICI e terapia sostitutiva/sintomatica; grado 3-4 richiede sospensione temporanea.
-- Surrene: sospettare con astenia/ipotensione/iponatriemia/iperkaliemia; crisi surrenalica è emergenza con idrocortisone parenterale urgente; ICI sospeso fino a stabilizzazione a ogni grado.
-- Diabete immunocorrelato: insulina permanente, no steroidi; ICI sospeso solo in caso di chetoacidosi, fino al controllo metabolico.
-- Ipofisite: terapia sostitutiva ormonale (glucocorticoide prima di levotiroxina se insufficienza surrenalica associata); steroidi alte dosi solo per effetto massa.
-- In tutte le endocrinopatie il principio guida è la sostituzione ormonale, non l'immunosoppressione sistemica indiscriminata.
 
 ## Tossicità gastrointestinale ed epatica
 
@@ -179,12 +136,6 @@ Le transaminasi e la bilirubina vanno monitorate a ogni ciclo, escludendo le cau
 
 Amilasi e lipasi non vanno dosate di routine in assenza di sintomi, per l'alta frequenza di elevazioni asintomatiche non clinicamente rilevanti. La diagnosi di pancreatite richiede almeno due tra: dolore tipico, lipasi/amilasi almeno 3 volte il limite superiore di norma e imaging compatibile. Un aumento asintomatico degli enzimi fino a 5 volte il limite, senza reperti radiologici, consente di proseguire l'ICI con controllo ogni 7-10 giorni; un aumento fino a 5 volte accompagnato da imaging compatibile giustifica invece una sospensione temporanea. Nella pancreatite sintomatica, o con enzimi oltre 5 volte il limite, l'ICI va sospeso, con fluidoterapia di supporto e steroide 1-2 mg/kg da considerare. Il rechallenge è possibile dopo recupero a grado 0-1 in casi selezionati.
 
-#### Punti chiave — Tossicità gastrointestinale ed epatica
-
-- Colite: grado 1 nessuna sospensione; grado 2-3 sospensione temporanea e prednisone circa 1 mg/kg/die (metilprednisolone nei casi più severi); grado 4 interruzione definitiva. Infliximab/vedolizumab per la refrattarietà, off-label in Italia.
-- Epatite: grado 1 prosegui; grado 2 sospensione temporanea e prednisone 0,5-1 mg/kg/die; grado 3-4 interruzione definitiva e metilprednisolone EV 1-2 mg/kg/die. Infliximab controindicato per rischio epatotossico.
-- Pancreas: enzimi asintomatici fino a 5x ULN senza imaging non richiedono sospensione; pancreatite sintomatica o enzimi >5x ULN richiedono sospensione, fluidi e steroide.
-- Amilasi/lipasi non vanno dosate di routine in assenza di sintomi.
 
 ## Tossicità polmonare
 
@@ -194,12 +145,6 @@ Nel grado 1 sono sufficienti il monitoraggio clinico, funzionale respiratorio e 
 
 > !!Verifica in letteratura — attenzione:!! il dato di mortalità della polmonite da ICI riportato nella versione precedente della scheda (circa 10-17%) risulta più alto delle stime più recenti reperibili in letteratura: le casistiche e le revisioni sistematiche più aggiornate riportano tassi di mortalità della polmonite da ICI generalmente nell'ordine del 10% o inferiore nella popolazione complessiva, con percentuali più elevate concentrate nei casi di grado severo (3-4) ospedalizzati e nei pazienti con NSCLC preesistente o pneumopatia interstiziale di base. Il dato va quindi presentato con cautela come range ampio e fortemente dipendente da severità e comorbidità, non come tasso di mortalità fisso e generalizzato a tutti i casi di polmonite da ICI.
 
-#### Punti chiave
-
-- Incidenza polmonite da ICI: 3-5%, più elevata con NSCLC, pneumopatia interstiziale, fumo e combinazioni.
-- Grado 1: monitoraggio, no steroide di routine. Grado 2: sospensione, prednisone 1 mg/kg/die. Grado 3-4: sospensione definitiva, ospedalizzazione, metilprednisolone EV 2-4 mg/kg/die.
-- La mortalità riportata in letteratura è variabile e dipende fortemente da grado e comorbidità; il dato "10-17%" va considerato un limite superiore riferito ai casi più severi, non un tasso medio generalizzato.
-- Rechallenge possibile dopo grado 1-2 risolto senza steroide residuo significativo; non raccomandato dopo grado 3-4.
 
 ## Tossicità renale
 
@@ -207,11 +152,6 @@ La creatinina va controllata prima di ogni infusione, con esame urine e valutazi
 
 Nel grado 1 l'ICI può proseguire con un monitoraggio più frequente. Dal grado 2 in su l'ICI va sospeso e si avvia prednisone 0,5-1 mg/kg/die; nei casi refrattari o nei gradi più elevati la dose sale a 1-2 mg/kg. Il rechallenge dopo un evento di grado 2 può essere considerato in casi selezionati; dopo un grado 3-4 non dovrebbe essere una scelta di prima intenzione.
 
-#### Punti chiave
-
-- Escludere sempre le cause non immunocorrelate (disidratazione, ostruzione, contrasto, farmaci nefrotossici, infezioni) prima di attribuire il danno renale all'ICI.
-- Grado 1: ICI prosegue con monitoraggio più frequente. Grado maggiore o uguale a 2: sospensione e prednisone 0,5-1 mg/kg/die, fino a 1-2 mg/kg nei refrattari/gradi elevati.
-- Rechallenge selettivo dopo grado 2; da evitare come prima scelta dopo grado 3-4.
 
 ## Tossicità neurologica
 
@@ -221,13 +161,6 @@ L'ICI va sospeso già al grado 1 in casi selezionati e, in generale, dal grado 2
 
 Il rechallenge dopo un irAE neurologico non è generalmente raccomandato, per il rischio di recidiva potenzialmente più severa.
 
-#### Punti chiave
-
-- Le tossicità neurologiche sono diagnosi di esclusione: RM, liquor, EEG ed esami mirati secondo la sindrome.
-- Encefalite/mielite e GBS: metilprednisolone EV 1 g/die per 5 giorni; nell'encefalite sospetta, antivirale empirico fino a PCR liquorale negativa; nella GBS, IVIG/plasmaferesi nei refrattari.
-- MG: screening dell'overlap con miosite/miocardite (CPK, troponina, ECG, ecocardiogramma) prima di impostare la terapia; steroide alte dosi, piridostigmina, IVIG/plasmaferesi nei refrattari.
-- Miosite: prednisone 0,5-1 mg/kg nei gradi 1-2, metilprednisolone 1 g/die nei gradi 3-4.
-- Rechallenge generalmente non raccomandato dopo un irAE neurologico.
 
 ## Tossicità cardiovascolare
 
@@ -235,33 +168,18 @@ La miocardite da ICI va sospettata in presenza di dolore toracico, dispnea, palp
 
 L'ICI va sospeso indipendentemente dal grado e il paziente va ricoverato; il trattamento è metilprednisolone endovena precoce ad alte dosi, 1.000 mg/die. Il rechallenge dopo miocardite non è raccomandato. Per la pericardite o il versamento pericardico lieve, è possibile in casi selezionati una prosecuzione dell'ICI con monitoraggio ecocardiografico ogni 2-4 settimane, FANS o aspirina e colchicina se appropriati; nella pericardite severa, nel versamento moderato-severo o nel tamponamento cardiaco, l'ICI va sospeso, va avviato steroide sistemico e va eseguita pericardiocentesi quando indicata. Gli eventi aterosclerotici acuti vanno trattati secondo le linee guida cardiologiche standard; l'ICI può essere ripreso dopo risoluzione e recupero clinico in casi selezionati, poiché non sono eventi immunomediati nello stesso senso della miocardite.
 
-> ++Verifica in letteratura:++ per la miocardite refrattaria allo steroide ad alte dosi, la letteratura più recente (2023-2025, prevalentemente case report e piccole serie) descrive l'impiego di terapie immunomodulanti aggiuntive di seconda linea, in particolare abatacept (inibitore di CTLA-4/CD28, con razionale meccanicistico diretto nel bloccare l'attivazione linfocitaria T alla base della miocardite) e ruxolitinib (inibitore JAK1/2), spesso in combinazione, con report di successo clinico in forme fulminanti steroido-refrattarie. Si tratta ancora di evidenza aneddotica/di basso livello, non di uno standard validato da trial randomizzati, ma è un'area in rapida evoluzione da conoscere per l'orale: infliximab, al contrario, va evitato nella miocardite per il rischio di scompenso cardiaco associato al blocco del TNF-alfa in pazienti con danno miocardico.
+> ++Verifica in letteratura:++ per la miocardite refrattaria allo steroide ad alte dosi, la letteratura più recente (2023-2025, prevalentemente case report e piccole serie) descrive l'impiego di terapie immunomodulanti aggiuntive di seconda linea, in particolare abatacept (inibitore di CTLA-4/CD28, con razionale meccanicistico diretto nel bloccare l'attivazione linfocitaria T alla base della miocardite) e ruxolitinib (inibitore JAK1/2), spesso in combinazione, con report di successo clinico in forme fulminanti steroido-refrattarie. Si tratta ancora di evidenza aneddotica/di basso livello, non di uno standard validato da trial randomizzati, ma è un'area in rapida evoluzione: infliximab, al contrario, va evitato nella miocardite per il rischio di scompenso cardiaco associato al blocco del TNF-alfa in pazienti con danno miocardico.
 
-#### Punti chiave
-
-- Miocardite: sospetto clinico anche solo per rialzo della troponina; work-up urgente (ECG, troponina, BNP/NT-proBNP, ecocardiogramma, RM cardiaca, ± coronarografia).
-- Sospensione dell'ICI indipendentemente dal grado, ricovero, metilprednisolone EV 1.000 mg/die precoce; rechallenge non raccomandato.
-- Refrattarietà allo steroide: abatacept e/o ruxolitinib descritti in letteratura recente come opzioni di seconda linea (evidenza aneddotica); infliximab da evitare per rischio di scompenso.
-- Pericardite lieve: prosecuzione selettiva possibile con monitoraggio eco; pericardite severa/tamponamento: sospensione, steroide, pericardiocentesi.
 
 ## Tossicità reumatologica
 
 Le manifestazioni comprendono l'artrite infiammatoria, una sindrome polymyalgia-like, mialgie, sindrome sicca, miosite e vasculiti. Il coinvolgimento del reumatologo va ricercato precocemente, anche già nel grado 1. Nel grado 1 l'ICI non va sospeso di routine. Dal grado maggiore o uguale a 2 va considerata la sospensione dell'ICI e va avviato un corticosteroide alla dose minima efficace. Nell'artrite persistente o steroidodipendente va considerato un DMARD tradizionale, come metotrexato, idrossiclorochina o sulfasalazina. Nella vasculite di grado maggiore o uguale a 2, l'ICI va sospeso e va avviato steroide, con DMARD tradizionale nei casi refrattari. Il rechallenge è possibile in casi selezionati dopo regressione a un grado minore o uguale a 1.
 
-#### Punti chiave
-
-- Coinvolgimento reumatologico precoce, già al grado 1.
-- Grado 1: nessuna sospensione di routine. Grado maggiore o uguale a 2: sospensione considerata, steroide a dose minima efficace, DMARD tradizionale nei casi persistenti/steroidodipendenti.
-- Vasculite di grado maggiore o uguale a 2: sospensione e steroide, DMARD nei refrattari.
 
 ## Tossicità oculare
 
 Uveite, episclerite, blefarite, secchezza oculare e retinopatie sono manifestazioni rare che richiedono comunque una valutazione oftalmologica. L'esame comprende acuità visiva, visione dei colori, riflesso rosso, esame pupillare, fundus oculi e camera anteriore. Nell'uveite o retinopatia di grado 1 è possibile una prosecuzione dell'ICI con terapia topica locale e monitoraggio. Dal grado maggiore o uguale a 2 l'ICI va sospeso e si utilizzano steroidi topici, intraoculari o sistemici a seconda della sede e della severità del coinvolgimento. Il rechallenge è riservato a casi selezionati di grado 1-2, dopo risoluzione.
 
-#### Punti chiave
-
-- Le tossicità oculari sono rare ma richiedono sempre una valutazione oftalmologica specialistica.
-- Grado 1: prosecuzione possibile con terapia topica. Grado maggiore o uguale a 2: sospensione e steroide topico/intraoculare/sistemico secondo severità.
 
 ## Tossicità ematologica immunomediata
 
@@ -269,11 +187,6 @@ Le manifestazioni principali comprendono l'anemia emolitica autoimmune, la tromb
 
 Dal grado maggiore o uguale a 2 l'ICI va sospeso e si considera prednisone 0,5-1 mg/kg nel grado 2, metilprednisolone 1-2 mg/kg endovena nei gradi 3-4. Il supporto trasfusionale e il supporto ematologico vanno modulati sulla severità e sui sintomi. Il rechallenge è possibile solo dopo un grado 2 risolto o migliorato a grado 1; non è raccomandato nei gradi 3-4.
 
-#### Punti chiave
-
-- Anemia emolitica, trombocitopenia immune, neutropenia, aplasia e HLH sono le manifestazioni ematologiche principali, tutte rare.
-- Grado maggiore o uguale a 2: sospensione dell'ICI e steroide (prednisone 0,5-1 mg/kg nel grado 2, metilprednisolone 1-2 mg/kg EV nei gradi 3-4).
-- Rechallenge solo dopo grado 2 risolto o migliorato a grado 1; da evitare nei gradi 3-4.
 
 ## Popolazioni speciali
 
@@ -283,24 +196,13 @@ Nei pazienti con HIV, l'ICI può essere considerato quando l'infezione è contro
 
 Nell'insufficienza renale severa o nei pazienti in dialisi, l'ICI può essere considerato senza necessità di un aggiustamento standard della dose (gli ICI non sono eliminati per via renale in modo clinicamente rilevante), con collaborazione nefrologica e cautela nei pazienti più fragili.
 
-#### Punti chiave
-
-- HBV/HCV: ICI utilizzabile nelle indicazioni approvate, con monitoraggio virologico e coinvolgimento specialistico; profilassi antivirale in HBV cronico.
-- HIV: ICI considerabile con infezione controllata, ART attiva, carica virale monitorata e CD4 adeguati.
-- Insufficienza renale severa/dialisi: nessun aggiustamento standard di dose per gli ICI; collaborazione nefrologica nei pazienti fragili.
 
 ## Follow-up e indicatori
 
 Il monitoraggio va mantenuto anche dopo la sospensione dell'ICI, per la possibilità di eventi tardivi o cronici che si manifestano mesi dopo l'ultima somministrazione. È utile registrare sistematicamente: il tempo al riconoscimento dell'evento, il tempo all'inizio del trattamento, il grado massimo raggiunto, il tempo alla risoluzione, la necessità di ricovero, l'eventuale rechallenge e la sua ricaduta. Gli eventi avversi vanno inoltre segnalati alla farmacovigilanza. Audit multidisciplinari periodici e protocolli condivisi tra i vari specialisti coinvolti migliorano la tempestività del riconoscimento e l'appropriatezza della gestione.
 
-#### Punti chiave
 
-- Monitoraggio anche dopo la sospensione dell'ICI, per il rischio di eventi tardivi/cronici.
-- Tracciare sistematicamente tempo al riconoscimento, tempo al trattamento, grado massimo, tempo alla risoluzione, ricovero, rechallenge ed esito.
-- Segnalazione obbligatoria alla farmacovigilanza; audit multidisciplinari per migliorare i processi.
-
-## Punti ad alta resa per orale
-
+## Punti chiave
 - Prima regola pratica: identificare precocemente l'irAE e distinguerlo da progressione di malattia, infezione e tossicità di altri farmaci prima di attribuire il quadro all'ICI.
 - Schema generale di grado: grado 2 spesso sospensione temporanea; grado 3-4 sospensione (temporanea o definitiva) e steroide, salvo le endocrinopatie che vanno gestite con terapia sostitutiva.
 - Steroide generale nei gradi 3-4: prednisone/metilprednisolone 1-2 mg/kg/die; tapering lento, almeno 4-6 settimane.

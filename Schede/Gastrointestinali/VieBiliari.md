@@ -14,10 +14,6 @@ Questa scheda si basa sul Congresso Grandangolo 2025 — non essendo disponibile
 
 L'**iCCA** origina dai dotti biliari intraepatici, situati all'interno del parenchima epatico. Il **perilare (Klatskin)** rappresenta circa il 50-60% dei colangiocarcinomi extraepatici e insorge alla confluenza dei dotti epatici destro e sinistro. Il **distale** origina dal dotto biliare comune e condivide caratteristiche biologiche con il carcinoma periampollare del pancreas, influenzando l'approccio terapeutico. Il **carcinoma della colecisti** rappresenta un'entità a sé, spesso diagnosticata incidentalmente dopo colecistectomia per patologia litiasica presunta benigna, oppure in stadio già avanzato data la presentazione clinica tardiva.
 
-#### Punti chiave
-- BTC = gruppo eterogeneo: iCCA (dotti intraepatici), perilare/Klatskin (confluenza dotti epatici, 50-60% extraepatici), distale (dotto biliare comune), colecisti (spesso diagnosi incidentale).
-- iCCA = sede con maggiore prevalenza di alterazioni molecolari actionable — profilazione NGS centrale nella gestione.
-
 
 ## Fattori di rischio
 
@@ -37,10 +33,6 @@ La **profilazione molecolare mediante NGS è ormai mandatoria** in tutti i pazie
 
 Le **fusioni di FGFR2**, presenti in circa il 10-15% degli iCCA, rappresentano il target terapeutico meglio caratterizzato, con pemigatinib e futibatinib come farmaci disponibili. La **mutazione IDH1 R132**, presente nel 13-20% degli iCCA, è bersaglio di ivosidenib. Il **BRAF V600E** trova risposta con dabrafenib-trametinib. L'**iperespressione o amplificazione di HER2** apre a trastuzumab deruxtecan e zanidatamab, con dati registrativi recenti discussi nella sezione dedicata alla malattia avanzata. Infine, MSI-H/dMMR è raro nel BTC (<5% dei casi) ma quando presente giustifica l'utilizzo di pembrolizumab con approvazione tumor-agnostic.
 
-#### Punti chiave
-- NGS mandatorio in tutti i BTC — alterazione actionable nel 44,5% dei pazienti (FIGHT-202), soprattutto nell'iCCA.
-- FGFR2 fuso (~10-15% iCCA) → pemigatinib/futibatinib; IDH1 R132 (~13-20% iCCA) → ivosidenib; BRAF V600E → dabrafenib-trametinib; HER2+ → trastuzumab deruxtecan/zanidatamab; MSI-H/dMMR (<5%) → pembrolizumab tumor-agnostic.
-
 
 ## Terapia della malattia localizzata
 
@@ -49,11 +41,6 @@ L'approccio chirurgico al BTC resecabile richiede una strategia sede-specifica, 
 Il **trapianto di fegato** rappresenta un'opzione terapeutica specifica per il colangiocarcinoma perilare non resecabile in stadio precoce, seguendo il protocollo consolidato della Mayo Clinic (chemioradioterapia neoadiuvante seguita da laparotomia di staging), riservato a centri con esperienza specifica in questo percorso complesso.
 
 Lo standard di **terapia adiuvante** dopo resezione è ==**capecitabina per 6 mesi**==, sulla base del trial **BILCAP**, che ha dimostrato un beneficio sostanziale: ==**OS mediana 53 vs 36 mesi**== nell'analisi per-protocol, con RFS di 24,4 vs 17,5 mesi. La chemioradioterapia può essere considerata nelle forme extraepatiche con resezione R1, sebbene l'evidenza in questo contesto sia meno solida.
-
-#### Punti chiave
-- Resezione R0 sede-specifica: iCCA → epatectomia; perilare → epatectomia estesa+resezione via biliare+linfoadenectomia; distale → DCP; colecisti → colecistectomia radicale+resezione letto+linfoadenectomia se ≥T1b/T2.
-- Trapianto di fegato: opzione per perilare non resecabile precoce, protocollo Mayo Clinic.
-- Adiuvante standard: capecitabina 6 mesi (BILCAP) — OS 53 vs 36 mesi, RFS 24,4 vs 17,5 mesi.
 
 
 ## Terapia della malattia avanzata/metastatica
@@ -86,13 +73,6 @@ Per i pazienti senza target actionable identificato, mFOLFOX rappresenta lo stan
 
 Un'area di sviluppo attivo riguarda la gestione della resistenza agli inibitori FGFR di prima generazione. Il trial **FIRST-308** valuta tinengotinib (inibitore FGFR di nuova generazione) dopo progressione a pemigatinib/futibatinib; i dati di fase 2 di supporto (pubblicati 2025) mostrano risposte variabili in base al meccanismo di resistenza, dal 6,3% nella resistenza primaria fino al 30,0% nella resistenza acquisita — il trial di fase III registrativo è tuttora in corso, senza risultati definitivi. Analogamente, **lirafugratinib** (inibitore FGFR2 altamente selettivo di nuova generazione) ha mostrato dati promettenti in pazienti pretrattati con alterazioni FGFR2 (ORR 47%, PFS mediana 11,3 mesi, OS mediana 22,8 mesi, dati ASCO GI 2026), con revisione prioritaria FDA in corso. Nessuno dei due farmaci è ancora approvato: vanno presentati come opzioni in sviluppo.
 
-#### Punti chiave — malattia avanzata/metastatica
-- I linea standard: chemio-immunoterapia. TOPAZ-1 (durvalumab): OS HR 0,80→0,74 a 3 anni (OS 3a 14,6% vs 6,9%). KEYNOTE-966 (pembrolizumab): OS 12,7 vs 10,9 mesi.
-- II linea biomarcatore-guidata: FGFR2→pemigatinib/futibatinib; IDH1→ivosidenib (beneficio reale mascherato da crossover in ClarIDHy); BRAF→dabrafenib-trametinib (Legge 648 Italia); HER2+→zanidatamab (HERIZON-BTC-01, approvato FDA/EMA 2024-2025) o T-DXd (coorte BTC di DESTINY-PanTumor02, approvato FDA tumor-agnostic 2024).
-- Nessun target actionable: mFOLFOX (ABC-06) standard di II linea.
-- FGFR2 emergente: tinengotinib (FIRST-308) e lirafugratinib — non ancora approvati, in sviluppo.
-- Rimborsabilità AIFA (classe H, registro di monitoraggio): durvalumab (02/2024), pemigatinib (05/2022), pembrolizumab e futibatinib (2024-2025), ivosidenib (01/2025, il più recente); dabrafenib-trametinib in BTC BRAF V600E via Legge 648 (nessuna indicazione EMA per questa neoplasia). Zanidatamab (EMA condizionata 07/2025) e trastuzumab deruxtecan tumor-agnostic (EMA 06/2026) sono approvati a livello regolatorio ma **non ancora rimborsati da AIFA** per il BTC.
-
 
 ## Farmaci e classi rilevanti
 - Chemioterapia: cisplatino-gemcitabina, mFOLFOX, FOLFIRI, capecitabina (adiuvante).
@@ -114,7 +94,7 @@ Gli inibitori **FGFR2** (pemigatinib/futibatinib) presentano un profilo di tossi
 Non è disponibile uno schema di follow-up strutturato nelle fonti consultate per questa scheda; l'approccio standard prevede imaging periodico calibrato secondo il rischio di recidiva individuale, in linea con la pratica generale in oncologia gastrointestinale.
 
 
-## Punti ad alta resa per orale
+## Punti chiave
 - **Adiuvante**: capecitabina 6 mesi = standard (BILCAP, OS 53 vs 36 mesi).
 - **Prima linea avanzata**: cisplatino-gemcitabina + durvalumab (TOPAZ-1, OS HR 0,80→0,74 a 3 anni) o + pembrolizumab (KEYNOTE-966) — superano lo storico ABC-02.
 - **NGS mandatorio** in tutti i BTC (specie iCCA) — ~44,5% ha un'alterazione actionable (FIGHT-202).

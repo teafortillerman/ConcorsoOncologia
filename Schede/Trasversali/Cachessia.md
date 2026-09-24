@@ -115,7 +115,7 @@
 - Rivalutare intensità del supporto in base a risposta, tossicità, progressione e obiettivi di cura.
 
 
-## Punti ad alta resa per orale
+## Punti chiave
 - Cachessia non equivale a malnutrizione: è perdita muscolare multifattoriale non completamente reversibile con sole calorie.
 - Diagnosi: perdita maggiore del 5% in 6 mesi oppure maggiore del 2% con BMI inferiore a 20 o sarcopenia.
 - Trattare presto: pre-cachessia è la fase con maggiore possibilità di prevenzione.

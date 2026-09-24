@@ -10,21 +10,11 @@ L'incidenza del MCC è in costante crescita: i dati SEER mostrano un aumento da 
 
 La prognosi è fortemente stadio-dipendente: la sopravvivenza a 5 anni è del **64%** nella malattia localizzata (stadio I-II), del **51%** in presenza di metastasi linfonodali (stadio III, N+), del **68%** nei casi con primitivo ignoto (paradossalmente più favorevole, verosimilmente per un effetto immunologico), e crolla al **17-29%** nella malattia metastatica a distanza (stadio IV).
 
-#### Punti chiave
-- Incidenza in crescita (SEER 0,22→0,79/100.000, 1986-2011); ~2.500 nuovi casi/anno in Europa.
-- Età mediana 76 anni, M:F ~2:1, caucasici colpiti 8x più frequentemente.
-- Sopravvivenza a 5 anni: 64% (I-II), 51% (III N+), 68% (primitivo ignoto), 17-29% (IV).
-
 
 ## Fattori di rischio
 Il principale fattore di rischio è l'**immunosoppressione**: circa il 10% dei pazienti con MCC ha una storia di trapianto d'organo solido, neoplasia ematologica (in particolare LLC e linfomi non-Hodgkin, con cui esiste una forte correlazione) o infezione da HIV. L'**esposizione ai raggi UV** rappresenta un secondo fattore di rischio rilevante, con un rischio relativo di circa 15 volte nei pazienti trapiantati d'organo solido esposti al sole.
 
 Il **poliomavirus di Merkel (MCPyV)** gioca un ruolo eziopatogenetico centrale ed è responsabile di due biologie molecolari distinte. In Europa e Nord America l'80% dei casi è MCPyV-positivo: il virus, integrato nel genoma, esprime gli antigeni oncogenici Small T (ST) e Large T (LT) che inattivano RB1 e p53, generando tumori a basso carico mutazionale (basso TMB). Il restante 20% è MCPyV-negativo e UV-indotto, con il **massimo carico mutazionale conosciuto** tra tutti i tumori solidi, firma mutazionale UV tipica e mutazioni disruptive di RB1. In Australia il rapporto si inverte, con l'80% dei casi UV-relato per la maggiore esposizione solare della popolazione.
-
-#### Punti chiave
-- Immunosoppressione (10% trapiantati/neoplasie ematologiche/HIV, forte link con LLC/NHL) ed esposizione UV (RR ~15x nei trapiantati) sono i due principali fattori di rischio.
-- MCPyV+ (80% Europa/USA): basso TMB, ST/LT inattivano RB1/p53.
-- MCPyV- (UV-indotto, 20% Europa/USA, 80% Australia): massimo carico mutazionale conosciuto, firma UV, RB1 disruptive.
 
 
 ## Diagnosi
@@ -34,12 +24,6 @@ La diagnosi istologica si avvale di un pannello immunoistochimico caratteristico
 
 Esiste una correlazione tra dimensione del tumore primitivo e rischio di metastasi linfonodali: le lesioni ≤5 mm hanno un rischio di N+ del 20%, che sale a oltre il 40% per le lesioni di maggiori dimensioni.
 
-#### Punti chiave
-- Acronimo AEIOU per il sospetto clinico (Asintomatico, Espansione rapida, Immunosoppressione, Older age, UV-exposed).
-- Sedi: testa-collo 45-48%, arti superiori 24%, arti inferiori 10-15%, tronco <11%; 11% primitivo ignoto.
-- IHC: CK20 dot-like, sinaptofisina 100%, cromogranina dot-like; TTF-1 SEMPRE NEGATIVO (dd con metastasi da SCLC, TTF-1+).
-- Rischio N+ correlato a dimensione: ≤5mm → 20%; lesioni maggiori → >40%.
-
 
 ## Stadiazione
 La stadiazione di riferimento è l'AJCC 8th edition/UICC TNM, basata sui dati del National Cancer Database pubblicati da Harms nel 2016. Alla diagnosi, il 65-74% dei pazienti presenta malattia localizzata, il 26% coinvolgimento linfonodale e l'8% metastasi a distanza.
@@ -47,12 +31,6 @@ La stadiazione di riferimento è l'AJCC 8th edition/UICC TNM, basata sui dati de
 Il **linfonodo sentinella (SLNB)** è raccomandato in tutti i pazienti con linfonodi clinicamente negativi: identifica micrometastasi in circa un terzo dei pazienti N0 clinici, con un tasso di positività che varia dal 20% (tumori T1) al 40-50% (tumori T2). Il tasso di falsi negativi è del 13-17,1%, più elevato nei pazienti immunodepressi e nei primitivi di testa-collo o del tronco mediano (sedi con drenaggio linfatico meno prevedibile).
 
 La **FDG-PET/TC** ha un ruolo importante nella stadiazione, con sensibilità del 90% e specificità del 98%; modifica lo stadio clinico in circa un terzo dei casi.
-
-#### Punti chiave
-- AJCC 8th edition/UICC TNM (Harms 2016).
-- Alla diagnosi: 65-74% localizzato, 26% linfonodale, 8% metastatico.
-- SLNB raccomandata se N0 clinico: positività 20% (T1)-40-50% (T2); falsi negativi 13-17,1% (più alti se immunodepressi o primitivo testa-collo/tronco mediano).
-- FDG-PET/TC: sensibilità 90%, specificità 98%; cambia lo stadio in ~1/3 dei casi.
 
 
 ## Biomarcatori
@@ -62,12 +40,6 @@ Un biomarcatore emergente, già disponibile clinicamente negli Stati Uniti ma no
 
 > ++Verifica in letteratura:++ il ruolo prognostico e di sorveglianza del test sierologico AMERK è un'aggiunta rispetto alla versione precedente della scheda, che non lo menzionava — confermato da uno studio osservazionale multicentrico (Miller et al., *Cancer* 2024) e da casistiche cliniche sulla sua utilità nel rilevare recidive occulte prima dell'imaging convenzionale.
 
-#### Punti chiave
-- MCPyV: correla con biologia ma non guida la scelta terapeutica.
-- PD-L1: iperespresso in entrambi i sottogruppi, base razionale IO ma non selettivo per farmaco.
-- CD8+ intratumorali: prognosi favorevole.
-- ++AMERK++ (test sierologico anti-oncoproteina MCPyV): biomarcatore emergente per prognosi e sorveglianza nei pazienti MCPyV+, non ancora standard in Italia.
-
 
 ## Terapia della malattia localizzata (stadio I-II)
 Il trattamento della malattia localizzata si basa sulla **chirurgia**: escissione ampia (WLE) con margini di 1-2 cm fino alla fascia o al pericranio. Se un margine ampio non è ottenibile per motivi anatomici o funzionali, un margine ridotto (0,5-1 cm) è accettabile a condizione che sia seguito da radioterapia adiuvante sul letto tumorale. Il **linfonodo sentinella (SLNB)** viene eseguito contestualmente alla chirurgia del primitivo.
@@ -76,27 +48,16 @@ La **radioterapia adiuvante sul letto tumorale** (50-60 Gy) è raccomandata nell
 
 Nello **stadio III (N+)**, il trattamento standard prevede ampia resezione, linfadenectomia e radioterapia adiuvante: questa strategia combinata porta a un'OS a 3 anni del **79,5%**, contro il 50% quando nessuno dei due trattamenti adiuvanti (CLND, RT) viene eseguito.
 
-#### Punti chiave — chirurgia, RT e stadio III
-- WLE margini 1-2cm (o 0,5-1cm + RT se margine ampio non ottenibile) + SLNB contestuale.
-- RT adiuvante sul letto tumorale quasi sempre indicata (metanalisi Petrelli 2019, OS HR 0,81).
-- RT sui linfonodi dopo LS+ riduce recidiva locoregionale (0% vs 16,7%) ma non OS/PFS.
-- Stadio III: resezione + linfadenectomia + RT adiuvante → OS 3a 79,5% vs 50% senza.
 
 La **chemioterapia adiuvante non è raccomandata**: non ha mai dimostrato un beneficio in OS e può anzi arrecare **danno**, per un verosimile effetto immunosoppressivo che compromette la sorveglianza immunologica anti-tumorale — dati MSKCC mostrano una sopravvivenza malattia-specifica nettamente inferiore nei pazienti N+ trattati con chemioterapia adiuvante rispetto ai non trattati (28% vs 73% a 5 anni).
 
 Diversamente dalla chemioterapia, il ruolo dell'**immunoterapia adiuvante** è oggetto di due studi randomizzati di fase III recenti, entrambi assenti dalla versione precedente della scheda perché presentati solo nel 2025-2026. Lo studio **STAMP (ECOG-ACRIN EA6174)** ha randomizzato 293 pazienti con MCC operato ad alto rischio (~85% stadio III) a pembrolizumab adiuvante per un anno vs osservazione: l'endpoint primario, la sopravvivenza libera da recidiva (RFS), non ha raggiunto la significatività statistica (HR 0,80, IC 95% 0,53-1,22, p=0,105; RFS a 2 anni 73% vs 66%), ma l'endpoint secondario di sopravvivenza libera da metastasi a distanza è risultato significativamente migliorato (HR 0,58, IC 90% 0,35-0,94, p=0,032, riduzione del rischio del 42%); tossicità di grado ≥3 nel 31% vs 4% (incluso un decesso da polmonite immuno-relata). Lo studio **ADAM**, condotto specificamente nei pazienti con metastasi linfonodali clinicamente rilevabili (stadio III), ha randomizzato 100 pazienti ad avelumab adiuvante vs placebo: anche qui l'endpoint primario di RFS non ha raggiunto la significatività formale (HR 0,54, p=0,069), con una netta separazione delle curve nel primo anno (recidiva a 1 anno 12,8% vs 40,4%) che si attenua nel tempo; gli endpoint di sopravvivenza globale e malattia-specifica sono risultati numericamente sfavorevoli al braccio avelumab (HR rispettivamente 2,37 e 1,81), verosimilmente per la ridotta numerosità campionaria, e vanno interpretati con cautela.
 
-> !!Verifica in letteratura — attenzione:!! entrambi gli studi (STAMP e ADAM) hanno mancato il rispettivo endpoint primario di RFS e **non sono ancora pubblicazioni per esteso** (dati presentati come abstract/late-breaking a congressi ASCO/ESMO 2025-2026). L'immunoterapia adiuvante nel MCC resta quindi **non uno standard di cura** al momento della stesura di questa scheda, a differenza di quanto già avviene ad esempio per melanoma o carcinoma renale: va citata come dato emergente/promettente sugli endpoint secondari, non come pratica consolidata, e il segnale di OS numericamente sfavorevole in ADAM (piccolo campione, ampi intervalli di confidenza) va menzionato con cautela in sede di esame.
+> !!Verifica in letteratura — attenzione:!! entrambi gli studi (STAMP e ADAM) hanno mancato il rispettivo endpoint primario di RFS e **non sono ancora pubblicazioni per esteso** (dati presentati come abstract/late-breaking a congressi ASCO/ESMO 2025-2026). L'immunoterapia adiuvante nel MCC resta quindi **non uno standard di cura** al momento della stesura di questa scheda, a differenza di quanto già avviene ad esempio per melanoma o carcinoma renale: va citata come dato emergente/promettente sugli endpoint secondari, non come pratica consolidata, e il segnale di OS numericamente sfavorevole in ADAM (piccolo campione, ampi intervalli di confidenza) va menzionato con cautela.
 >
 > ++Verifica in letteratura (stato regolatorio):++ coerentemente con l'esito negativo sull'endpoint primario, non risulta ad oggi (agosto 2026) alcuna domanda di estensione d'indicazione EMA né alcuna determina AIFA basata sui dati STAMP (pembrolizumab adiuvante) o ADAM (avelumab adiuvante): né pembrolizumab né avelumab hanno quindi un'indicazione autorizzata, né tantomeno una classificazione di rimborsabilità, per l'uso adiuvante nel MCC in Italia o in Europa. L'unica indicazione rimborsata di avelumab in Italia per il MCC resta quella per la malattia metastatica (vedi sopra).
 
 Nella malattia non resecabile, la radioterapia esclusiva rappresenta la prima scelta rispetto alla chemioterapia con platino/etoposide.
-
-#### Punti chiave — chemioterapia e immunoterapia adiuvante
-- Chemioterapia adiuvante NON raccomandata: nessun beneficio OS, possibile danno da immunosoppressione (MSKCC: DSS 28% vs 73% a 5 anni).
-- ++STAMP (pembrolizumab) e ADAM (avelumab)++: primi due RCT di fase III sull'immunoterapia adiuvante nel MCC, entrambi con endpoint primario di RFS NON raggiunto (STAMP p=0,105; ADAM p=0,069), ma con segnali positivi su endpoint secondari (DMFS in STAMP, HR 0,58, p=0,032).
-- Immunoterapia adiuvante NON ancora standard di cura — dati emergenti, non practice-changing al momento.
-- Malattia non resecabile: RT esclusiva > chemioterapia platino/etoposide.
 
 
 ## Terapia della malattia avanzata/metastatica
@@ -120,19 +81,11 @@ Il **nivolumab**, studiato nel programma CheckMate 358, ha dati aggiornati e mat
 
 Il **retifanlimab** (anti-PD-1) è stato valutato nello studio **POD1UM-201** in pazienti chemio-naïve: la pubblicazione definitiva (2025) riporta un ORR del 54,5% (CR 17,8%, PR 36,6%), PFS mediana di 16,0 mesi e OS mediana non raggiunta, con il 63% dei pazienti vivi a 3 anni. Il farmaco ha ottenuto **approvazione accelerata FDA nel marzo 2023** per il MCC metastatico o localmente avanzato ricorrente (approvazione tuttora accelerata/condizionata, non ancora confermata in piena a fine 2026). In Europa, tuttavia, retifanlimab (nome commerciale Zynyz) ha ricevuto l'approvazione EMA **solo per il carcinoma squamocellulare del canale anale** (in combinazione con chemioterapia, prima linea) e **non per il carcinoma di Merkel**: non risulta quindi disponibile né rimborsato in Italia (né in classe C, né in classe A/H) per questa indicazione.
 
-> !!Verifica in letteratura — attenzione:!! la versione precedente della scheda riportava l'approvazione di retifanlimab come "EMA/FDA", ma l'approvazione europea di Zynyz riguarda esclusivamente il carcinoma squamocellulare dell'ano, non il MCC — per il carcinoma di Merkel retifanlimab è disponibile **solo negli Stati Uniti** (approvazione FDA). Un errore di questo tipo, se ripetuto all'orale, farebbe presumere una disponibilità terapeutica inesistente in Italia/Europa.
+> !!Verifica in letteratura — attenzione:!! la versione precedente della scheda riportava l'approvazione di retifanlimab come "EMA/FDA", ma l'approvazione europea di Zynyz riguarda esclusivamente il carcinoma squamocellulare dell'ano, non il MCC — per il carcinoma di Merkel retifanlimab è disponibile **solo negli Stati Uniti** (approvazione FDA). Un errore di questo tipo farebbe presumere una disponibilità terapeutica inesistente in Italia/Europa.
 >
 > ++Verifica in letteratura (aggiornamento 2026):++ confermato e ulteriormente rafforzato il gap normativo. La Commissione Europea ha approvato Zynyz (retifanlimab) **il 6 marzo 2026**, ma **esclusivamente** per il carcinoma squamocellulare del canale anale metastatico/localmente recidivato inoperabile, in combinazione con carboplatino-paclitaxel di prima linea — a distanza di 3 anni dall'approvazione FDA per il MCC, l'EMA non ha ancora esteso (né sembra aver ricevuto domanda di estensione del) l'indicazione al carcinoma di Merkel. Per questa neoplasia retifanlimab resta quindi **non autorizzato in Europa e non disponibile/rimborsabile in Italia**. Fonte: [Incyte — comunicato approvazione EC Zynyz, 6 marzo 2026](https://investor.incyte.com/news-releases/news-release-details/incyte-announces-european-commission-approval-zynyzr).
 
 Le risposte a tutti questi farmaci sono indipendenti dallo stato MCPyV e dall'espressione di PD-L1. La **chemioterapia** mantiene un ruolo solo residuale: pur avendo un ORR iniziale elevato (53-61%), la durata di risposta è breve (2-9 mesi), la mortalità tossica è significativa (3-10%) in questa popolazione fragile e anziana, e vi è un possibile effetto detrimentale legato all'immunosoppressione indotta, che può compromettere l'efficacia di una successiva immunoterapia.
-
-#### Punti chiave
-- Immunoterapia anti-PD-1/PD-L1 = standard di I e II linea, ha sostituito la chemioterapia.
-- Avelumab (JAVELIN Merkel 200): ORR 33% (pretrattati)/62% (naïve); OS a lungo termine 26% a 5 anni (pretrattati)/38% a 4 anni (naïve). EMA/FDA dal 2017, rimborsato in Italia.
-- Pembrolizumab (KEYNOTE-017/913): ORR 49% (KEYNOTE-913, dato definitivo), OS mediana 24,3 mesi, DOR mediana 39,8 mesi. Solo FDA, non EMA.
-- Nivolumab (CheckMate 358): ORR 60% monoterapia (OS mediana 80,7 mesi) — combinazione con ipilimumab non superiore (ORR 58%, OS 29,8 mesi) e più tossica. pCR 47,2% in neoadiuvante. Non approvato EMA/FDA.
-- ++Retifanlimab++ (POD1UM-201): ORR 54,5%, OS non raggiunta (63% vivi a 3 anni). !!Solo FDA (2023) — l'approvazione EMA di Zynyz copre solo il carcinoma anale, NON il MCC!!.
-- Chemioterapia: ruolo residuale, ORR iniziale alto ma DoR breve, mortalità tossica 3-10%.
 
 
 ## Farmaci e classi rilevanti
@@ -149,26 +102,14 @@ La chemioterapia, dal canto suo, ha una mortalità tossica elevata (3-10%) in qu
 
 **Red flag**: non offrire chemioterapia adiuvante dopo chirurgia radicale, per il rischio di peggiorare la prognosi attraverso l'effetto immunosoppressivo.
 
-#### Punti chiave
-- Immunoterapia in malattia avanzata: G3 5-11% con avelumab, nessun decesso/G4 nello studio registrativo.
-- Immunoterapia adiuvante (STAMP/ADAM): tossicità G3+ non trascurabile (31% vs 4% in STAMP; 15% vs 0% in ADAM) — da bilanciare con un beneficio ancora non dimostrato in modo definitivo.
-- Chemioterapia: mortalità tossica 3-10% in popolazione fragile/anziana.
-- Red flag: mai chemioterapia adiuvante dopo chirurgia radicale.
-
 
 ## Follow-up
 Il MCC ha un rischio di recidiva molto elevato: locale nel 27-60% dei casi, linfonodale nel 45-91%, a distanza nel 18-52%, con il rischio massimo concentrato nei primi 2-3 anni dal trattamento. Lo schema di follow-up prevede controlli ogni 3-6 mesi per i primi 3 anni, poi ogni 6 mesi fino al quinto anno, quindi con cadenza annuale a vita, sempre comprensivi di un esame cutaneo completo. L'imaging (TC torace-addome-pelvi o PET-TC whole-body) è raccomandato ogni 6-12 mesi per i primi 3 anni.
 
 Nei pazienti MCPyV+, il test sierologico AMERK (vedi Biomarcatori) può integrare utilmente la sorveglianza clinico-radiologica, con un titolo anticorpale in ascesa che può precedere la comparsa di metastasi radiologicamente evidenti — pur restando un esame di secondo livello, non ancora sistematicamente disponibile in Italia.
 
-#### Punti chiave
-- Rischio di recidiva molto elevato (locale 27-60%, linfonodale 45-91%, a distanza 18-52%), massimo nei primi 2-3 anni.
-- Schema: ogni 3-6 mesi (0-3 anni) → ogni 6 mesi (3-5 anni) → annuale a vita.
-- Imaging ogni 6-12 mesi per 3 anni (TC o PET-TC whole-body).
-- AMERK (nei MCPyV+): utile complemento all'imaging nella sorveglianza, non ancora standard in Italia.
 
-
-## Punti ad alta resa per orale
+## Punti chiave
 - **MCPyV presente nell'80%** dei casi (Europa/USA), il restante 20% UV-indotto (in Australia rapporto invertito).
 - **Acronimo AEIOU** per il sospetto clinico.
 - **TTF-1 SEMPRE NEGATIVO** — distingue da metastasi SCLC (che è TTF-1+).

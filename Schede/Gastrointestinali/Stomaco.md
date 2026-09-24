@@ -26,11 +26,6 @@ L'esofagogastroduodenoscopia (EGDS) con biopsie multiple rimane il gold standard
 
 La **TC torace-addome con mezzo di contrasto** è lo standard per la stadiazione sistemica e l'identificazione di metastasi a distanza; la PET-FDG non è raccomandata di routine (bassa avidità nei sottotipi mucinosi e a cellule con castone). In malattia localmente avanzata (cT3-4 e/o cN+), prima di intraprendere la terapia perioperatoria è fortemente raccomandata la **laparoscopia esplorativa con citologia peritoneale**, un passo diagnostico fondamentale per escludere la carcinosi peritoneale occulta che modificherebbe radicalmente l'approccio terapeutico (da surgery-directed a palliativo).
 
-#### Punti chiave
-- EGDS con biopsie è gold standard diagnostico; EUS utile per stadiazione locoregionale e selezione di candidati a trattamento endoscopico.
-- TC torace-addome per stadiazione sistemica; PET-FDG non raccomandata di routine.
-- **Laparoscopia stadiativa con citologia peritoneale obbligatoria in stadio localmente avanzato** prima della terapia perioperatoria.
-
 
 ## Stadiazione
 
@@ -42,13 +37,6 @@ Si utilizza la classificazione TNM dell'AJCC/UICC, con la classificazione istolo
 Ogni nuova diagnosi, e in particolare prima di intraprendere una terapia sistemica, richiede una caratterizzazione completa dei biomarcatori predittivi. Il **test HER2** (valutato con immunoistochimica 0/1+/2+/3+, con ibridazione in situ di conferma se IHC 2+) guida l'utilizzo di trastuzumab in prima linea e altri anti-HER2 in successive linee (trastuzumab deruxtecan/T-DXd in seconda linea). Il **PD-L1** deve essere testato con due metodiche distinte, **non intercambiabili**, a seconda del setting clinico: nel **setting perioperatorio** si utilizza il **TAP (Tumor Area Positivity)**, una misura della percentuale di cellule tumorali con espressione moderata-forte di PD-L1, presente nel ~90% dei pazienti e predittivo di risposta a durvalumab perioperatorio (MATTERHORN); nella **malattia avanzata** si utilizza il **CPS (Combined Positive Score)**, che include sia le cellule tumorali che le cellule immunitarie, con cut-off di riferimento **specifici per singolo farmaco e non intercambiabili fra loro**: CPS ≥5 per nivolumab (CheckMate 649), ma **CPS ≥1** per pembrolizumab, sia in combinazione HER2-negativa (KEYNOTE-859) sia in combinazione HER2-positiva con trastuzumab (KEYNOTE-811). Le indicazioni europee di pembrolizumab (KEYNOTE-859 e KEYNOTE-811) sono state approvate dalla Commissione Europea proprio con "PD-L1 CPS ≥1", come confermato dalla determina AIFA su Keytruda del 9 febbraio 2026. Negli USA, invece, dal maggio 2025 la FDA ha ristretto entrambi i farmaci a CPS ≥1 dopo un parere negativo dell'ODAC sul valore del PD-L1 nei sottogruppi a basso CPS: una restrizione solo statunitense, che non cambia il cut-off EMA/AIFA di nivolumab (CPS ≥5).
 
 La **MSI-H/dMMR** è presente in circa il 5% dei carcinomi gastrici e identifica un sottogruppo biologicamente distinto, caratterizzato da elevatissima sensibilità alla doppia immunoterapia CTLA-4/PD-(L)1 e potenziale candidabilità a strategie di non-operative management dopo terapia neoadiuvante (NEONIPIGA, INFINITY: pCR 59-60% con sola immunoterapia, senza chemioterapia aggiuntiva). La **Claudina 18.2 (CLDN18.2)** è positiva nel 70-80% dei carcinomi gastrici ed è target di **zolbetuximab**, anticorpo monoclonale anti-CLDN18.2: la positività si definisce come espressione moderata-forte in ≥75% delle cellule tumorali. Il **FGFR2b** è sovra-espresso nel 40-50% dei tumori gastrici e sostanzialmente mutuamente esclusivo rispetto a dMMR, PD-L1 CPS elevato e CLDN18.2; è target di **bemarituzumab**, un anticorpo monoclonale che si associa a tossicità oculare caratteristica (corneal epitheliopathy nel 67% dei pazienti, grade 3-4 nel 24%).
-
-#### Punti chiave
-- HER2: IHC±ISH per guida trastuzumab in 1L e T-DXd in 2L.
-- PD-L1: **Due punteggi distinti** — TAP nel perioperatorio (~90% positivi), CPS nella malattia avanzata; **attenzione al cut-off**: CPS≥5 per nivolumab, ma **CPS≥1** per pembrolizumab (sia HER2-negativo che HER2-positivo).
-- MSI-H/dMMR: ~5% dei casi; elevatissima sensibilità a immunoterapia doppia; candidato a NOM neoadiuvante (pCR 59-60%).
-- CLDN18.2: 70-80% positivi; target di zolbetuximab (GLOW: OS HR 0,77).
-- FGFR2b: 40-50% sovra-espresso; target di bemarituzumab (tossicità oculare significativa 67%, G3-4 24%).
 
 
 ## Terapia della malattia localizzata/localmente avanzata
@@ -82,11 +70,6 @@ Nel sottogruppo di carcinomi gastrici con dMMR/MSI-H, la doppia immunoterapia in
 
 Questi risultati aprono a una prospettiva di **non-operative management totale** (senza chirurgia, radioterapia, chemioterapia), un paradigm shift ancora in fase di sviluppo e non ancora formalmente raccomandato dalle linee guida, ma promettente per selezionati pazienti dMMR/MSI-H di piccolo volume tumorale.
 
-#### Punti chiave
-- **MATTERHORN (durvalumab+FLOT perioperatorio)**: primo regime IO+CT perioperatorio con beneficio statisticamente significativo su EFS **e OS** (HR 0,78; p=0,021); nuovo standard perioperatorio [I,A].
-- KEYNOTE-585 (pembrolizumab): fallito OS endpoint nonostante pCR e EFS positivi — non è standard.
-- **dMMR/MSI-H neoadiuvante**: NEONIPIGA/INFINITY mostrano pCR 59-60% senza chemioterapia; non-operative management in sviluppo.
-
 
 ## Terapia della malattia avanzata/metastatica
 
@@ -112,14 +95,6 @@ I dati attenuati sono stati presentati a ESMO 2025; bemarituzumab non è approva
 **MSI-H/dMMR avanzato**: In pazienti con malattia avanzata non operabile che non hanno ricevuto terapia neoadiuvante, la doppia immunoterapia CTLA-4/PD-(L)1 (nivolumab+ipilimumab o durvalumab+tremelimumab) rappresenta un'opzione in sviluppo con tassi di risposta molto elevati.
 
 Un'ulteriore opzione immunoterapica emersa di recente è **tislelizumab** (anti-PD-1), studiato in combinazione con chemioterapia in prima linea nell'adenocarcinoma gastrico/GEJ HER2-negativo nel trial di fase III **RATIONALE-305**. Non rappresenta a oggi un'alternativa consolidata a nivolumab o pembrolizumab nella pratica clinica italiana. Tislelizumab+chemioterapia è approvato da FDA (27 dicembre 2024, CPS ≥1) e dalla Commissione Europea (27 novembre 2024, con un cut-off diverso: TC/IC ≥5% secondo lo scoring del test usato nello studio); in Italia la determina AIFA del 24 novembre 2025 lo colloca in **classe C(nn)** per questa indicazione.
-
-#### Punti chiave
-- **HER2+**: CT + trastuzumab ± pembrolizumab (se **CPS≥1**, non CPS≥5); T-DXd in valutazione (DESTINY-Gastric05). Indicazione pembrolizumab in classe C(nn) AIFA (non ancora rimborsata) alla determina più recente reperita (02/2026).
-- **HER2-**: CT + nivolumab se **CPS≥5** (CheckMate 649, OS HR 0,71; rimborsato AIFA dal 11/2022) oppure CT + pembrolizumab se **CPS≥1** (KEYNOTE-859, OS HR 0,74 nei CPS ≥1; classe C(nn) AIFA, non ancora rimborsato). Attenzione: i due farmaci **non condividono lo stesso cut-off**.
-- **CLDN18.2+**: CT + zolbetuximab (GLOW, OS HR 0,77; approvazione CE 09/2024, FDA 10/2024) — in Italia **non ancora rimborsato**, classe C(nn) AIFA anche alla determina più recente (03/2026).
-- **FGFR2b≥10%**: Bemarituzumab (FORTITUDE-101) — beneficio OS attenuato da HR 0,61 (interim) a HR 0,82 non significativo (follow-up più lungo, ESMO 2025); tossicità oculare (67% corneal epitheliopathy) non standard; non approvato FDA/EMA; il trial di combinazione FORTITUDE-102 (+nivolumab) è stato interrotto per futilità (11/2025).
-- **MSI-H/dMMR avanzato**: Doppia immunoterapia in sviluppo.
-- **Tislelizumab** (RATIONALE-305): opzione emergente HER2-negativo 1L, approvata FDA/CE fine 2024 ma non ancora rimborsata AIFA (classe C(nn), determina 11/2025) — non ancora standard in Italia.
 
 
 ## Terapia della malattia avanzata — seconda linea e successive
@@ -161,20 +136,13 @@ La tossicità oculare di **bemarituzumab** (corneal epitheliopathy 67%) è rever
 
 Red flags trasversali includono: insorgenza di diarrea severa/colite G3-4 durante immunoterapia (sospendere immediatamente e iniziare corticosteroidi), dispnea/tosse durante durvalumab (sospetta ILD/polmonite, sospendere), dispnea acuta durante T-DXd (sospetta polmonite da farmaco, imaging urgente).
 
-#### Punti chiave
-- **DPYD testing obbligatorio** prima di fluoropirimidine.
-- **T-DXd**: ILD/polmonite (13,9% di qualsiasi grado) — monitorare tosse/dispnea.
-- **Bemarituzumab**: Tossicità oculare (67% any-grade, 24% G3-4) reversibile ma richiede oftalmologia dedicata.
-- **Doppia IO (nivo+ipi, durva+tremi)**: Raddoppia tossicità immuno-relata severa.
-
 
 ## Follow-up
 
 Nel carcinoma gastrico resecato la sorveglianza prevede esame clinico ogni 3-6 mesi nei primi 2 anni, poi annuale fino a 5 anni; TC torace-addome ogni 6-12 mesi per i primi 3-5 anni per identificare tempestivamente recidive locali/regionali e metastasi a distanza. La durata standard è 5 anni (>95% delle recidive entro questo periodo). Nella malattia metastatica in trattamento l'imaging ogni 8-12 settimane è usuale per valutare la risposta e identificare la progressione.
 
 
-## Punti ad alta resa per orale
-
+## Punti chiave
 - **MATTERHORN**: **Durvalumab+FLOT perioperatorio** è il primo regime di IO+CT perioperatorio a dimostrare beneficio statisticamente significativo su **entrambi EFS e OS** contemporaneamente (OS HR 0,78; p=0,021), sostituendo il vecchio paradigma FLOT solo; approvato da FDA (11/2025) e Commissione Europea (03/2026), ma **non ancora rimborsato da AIFA** a questa data. Non confondere PD-L1 **TAP** (perioperatorio, ~90% dei pazienti — comunque non richiesto per l'eleggibilità a questo regime) con **CPS** (malattia avanzata).
 - **KEYNOTE-585 (pembrolizumab perioperatorio)**: Fallito il primary endpoint su OS nonostante pCR e EFS significativi — trabocchetto classico: pCR non sempre predice OS.
 - **DESTINY-Gastric04**: T-DXd è nuovo standard di **seconda linea HER2+** (OS HR 0,70, -30% rischio morte), già rimborsato AIFA (12/2023), ma **attenzione all'ILD** (13,9% di qualsiasi grado).

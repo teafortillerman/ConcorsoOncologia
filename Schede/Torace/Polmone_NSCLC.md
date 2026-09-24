@@ -15,10 +15,6 @@ Il fumo di tabacco resta responsabile dell'**85-90%** dei casi, con RR 14 nei fu
 ### Screening (LDCT)
 I due trial cardine sono l'**NLST** (LDCT annuale vs RX torace, 55-74 anni), che ha mostrato una riduzione del 20% della mortalità lung-cancer specifica (-37% nel sottogruppo BPCO), e il **NELSON**, che con l'approccio volumetrico ha raggiunto un valore predittivo positivo del 43,5% contro il 3,8% dell'approccio 2D di NLST. AIOM raccomanda lo screening con forza FORTE A FAVORE (qualità moderata) nella popolazione target: fumatori/ex-fumatori con **≥15 sigarette/die per >25 anni**, oppure **≥10 sigarette/die per >30 anni**, oppure con cessazione **<10 anni**. Una metanalisi ha mostrato un RR di mortalità cancro-specifica di 0,87 (0,78-0,98), ma **nessuna riduzione della mortalità totale** (RR 0,99) e una sovradiagnosi del 38% (14-63%); l'intervallo di screening non deve superare i **2 anni**, con l'approccio volumetrico (NELSON/MILD) preferito al diametro 2D (NLST). Lo **screening non è ancora rimborsato dal SSN in Italia**: sono in corso di definizione il progetto RISP (Rete Italiana Screening Polmonare) e il programma europeo 4-IN-THE-LUNG-RUN.
 
-#### Punti chiave
-- Fumo: RR 14 (20 nei forti fumatori), responsabile dell'85-90% dei casi; inquinamento (PM2,5) rilevante soprattutto nei non fumatori.
-- Screening LDCT (NLST/NELSON): riduce la mortalità lung-specifica del 20% ma non la mortalità totale (sovradiagnosi 38%); raccomandazione AIOM forte a favore nella popolazione ad alto rischio, ma non ancora rimborsato in Italia.
-
 
 ## Classificazione istologica
 Il riferimento è la **WHO 2021 (V edizione)**, con 4 istotipi principali che coprono oltre il 95% dei casi: **adenocarcinoma (ADC)**, **carcinoma squamoso (CS)**, **carcinoma a grandi cellule (CGC)** e **SCLC**. Nel NSCLC scarsamente differenziato/NAS, da usare con parsimonia per preservare tessuto per il molecolare, il pannello IHC minimo è **TTF-1** (clone 8G7G3/1, marcatore ADC) + **p40** (marcatore CS) + **Napsina A**, con cromogranina/sinaptofisina/CD56 se vi è sospetto neuroendocrino. Fra i sottotipi di ADC (pattern lepidico, acinare, papillare, micropapillare, solido, mucinoso, fetale, enterico, colloide) vanno ricordate le soglie per **AIS** (in situ, ≤3 cm senza invasione stromale) e **MIA** (minimamente invasivo, ≤3 cm con invasione ≤5 mm). Il **LCNEC** (carcinoma neuroendocrino a grandi cellule) merita attenzione particolare per il rischio di sovradiagnosi: oltre il **50%** dei casi diagnosticati come LCNEC sono in realtà ADC solidi scarsamente differenziati, per cui è necessaria la conferma con marcatori neuroendocrini specifici (non solo CD56 focale). Nella gestione dei campioni citologici il **cell-block** è fortemente raccomandato, perché consente le indagini IHC e ISH diagnostiche/predittive (TTF-1, p40, ALK, ROS1, PD-L1).
@@ -26,10 +22,6 @@ Il riferimento è la **WHO 2021 (V edizione)**, con 4 istotipi principali che co
 
 ## Diagnosi — iter diagnostico-stadiativo
 L'imaging iniziale prevede **TC torace + addome superiore + regione cervicale inferiore con mdc**, che identifica metastasi addominali nel ~10% dei casi; la **RM encefalo con mdc** è elettiva per lo studio del SNC (preferita alla TC), indicata negli stadi II-IV candidati a trattamento curativo e sempre nello SCLC. La **PET-TC 18F-FDG** va eseguita se la TC non mostra metastasi a distanza e il paziente è candidato a trattamento curativo, con falsi positivi N fino al 20% che richiedono conferma bioptica se non-bulky. Per la tipizzazione istologica, i tumori centrali endoscopicamente visibili si affidano alla **broncoscopia** (resa ~90%), mentre le lesioni periferiche richiedono broncoscopia con guida avanzata (navigazione elettromagnetica, cone-beam CT, robotica; resa 60-90%) o **agobiopsia TC-guidata (TTNA)** (resa ~90%, rischio di pneumotorace 10-30%); le adenopatie mediastiniche sospette (>1 cm alla TC o PET+) si valutano con **EBUS/EUS**, con successo diagnostico >90%. La **stadiazione mediastinica invasiva** con EBUS-TBNA+EUS combinati raggiunge una sensibilità del 93% e un VPN del 97%, al punto che la **mediastinoscopia di conferma può essere omessa** dopo un EBUS/EUS negativo nel NSCLC resecabile (RCT di non-inferiorità su 360 pazienti). La mappa linfonodale (VIII edizione) distingue **N1** (peribronchiali/ilari ipsilaterali), **N2** (mediastinici/sottocarenali ipsilaterali) e **N3** (controlaterali o scaleni/sovraclaveari).
-
-#### Punti chiave
-- RM encefalo sempre indicata negli stadi II-IV candidati a trattamento curativo; PET-TC pre-trattamento curativo con falsi positivi N fino al 20% (richiede conferma bioptica).
-- EBUS-TBNA+EUS combinati (sensibilità 93%, VPN 97%) permettono di omettere la mediastinoscopia di conferma se negativi.
 
 
 ## Stadiazione (TNM VIII edizione — IX edizione operativa da gennaio 2025)
@@ -93,10 +85,6 @@ Il reflex testing va effettuato alla diagnosi in tutti gli stadi IIIB-IIIC non l
 
 Per il **PD-L1** (IHC, TPS — Tumor Proportion Score) l'adeguatezza del campione richiede almeno **100 cellule neoplastiche vitali**; i cut-off di riferimento sono **TPS ≥50%** per l'immunoterapia in **I linea** in monoterapia, **TPS 1-49%** per pembrolizumab in II linea o chemio-immunoterapia in I linea, **TPS <1%** per un risultato negativo. I cloni **22C3, SP263 e 28-8** sono armonizzati e danno risultati comparabili, mentre **SP142** (validato per atezolizumab) e **73-10** differiscono significativamente e non sono intercambiabili con gli altri. La biopsia liquida (ctDNA) resta un'alternativa valida quando il tessuto non è disponibile o è insufficiente, da eseguire in centri ad alta specializzazione.
 
-#### Punti chiave
-- Reflex testing con NGS ampio in tutti gli stadi IIIB-IV e negli stadi precoci operati candidati ad adiuvante.
-- PD-L1 TPS ≥50% → mono-IO I linea; 1-49% → chemio-IO; cloni 22C3/SP263/28-8 armonizzati, SP142/73-10 non intercambiabili.
-
 
 ## Terapia della malattia in stadio precoce (I-II)
 
@@ -114,12 +102,6 @@ Nello studio di fase III IMpower010 (1.005 pazienti, stadio **IB(≥4cm)-IIIA**,
 
 ### Radioterapia adiuvante (PORT)
 La metanalisi Cochrane 2016 (2.343 pazienti, stadio I-III) ha mostrato un effetto detrimentale della PORT sull'OS (HR 1,18, ossia +18% di rischio di morte), verosimilmente legato alla tossicità cardiopolmonare delle tecniche più datate incluse nello studio. La raccomandazione è quindi **FORTE A SFAVORE nello stadio I-II**; i dati su N2/R1 restano insufficienti/controversi in questo capitolo (vedi LungART nella sezione sulla malattia localmente avanzata).
-
-#### Punti chiave — stadio precoce
-- Chirurgia = trattamento di elezione stadio I-II; segmentectomia anatomica possibile prima scelta in IA; VATS/robotica preferite alla toracotomia in stadio clinico I.
-- CT adiuvante (LACE): solo stadi II-III (danno in IA); schema cisplatino-vinorelbina.
-- **ADAURA** (osimertinib adiuvante 3 anni, EGFR IB-IIIA): OS HR 0,49 (85% vs 73% a 5 anni); **IMpower010** (atezolizumab adiuvante 1 anno, PD-L1≥50%): unico IO adiuvante rimborsato in Italia.
-- PORT: sfavorevole in stadio I-II (HR OS 1,18) — non usare di routine.
 
 
 ## Terapia della malattia localmente avanzata (stadio III)
@@ -141,13 +123,6 @@ Nella malattia **EGFR-mutata**, durvalumab dopo CT-RT è inefficace/dannoso (PFS
 
 Infine, quanto al **PORT/LungART**, non emerge un beneficio significativo nemmeno nel pN2, con un aumento della tossicità cardiopolmonare: la radioterapia post-operatoria resta considerabile solo in caso di **R1** [III, C].
 
-#### Punti chiave — stadio III
-- **CheckMate 816** = solo neoadiuvante (unico con OS matura, HR 0,72); **KEYNOTE-671** = perioperatorio completo con OS matura (HR 0,72); **AEGEAN/CheckMate 77T/RATIONALE-315** = EFS/pCR maturi e positivi, ma **OS ancora un trend non significativo**.
-- **EGFR/ALK+ escludono sempre la CT-ICI perioperatoria** → osimertinib adiuvante (ADAURA) o alectinib adiuvante (ALINA).
-- **PACIFIC**: durvalumab consolidamento dopo CT-RT solo se PD-L1≥1% (criterio EMA/AIFA); OS a 5 anni 42,9% vs 33,4%.
-- **LAURA** (osimertinib post CT-RT in EGFR+): PFS HR 0,16 (dato maturo, pratica-modificante) ma **OS ancora non significativa** (HR 0,67, p=0,140) per effetto diluente del crossover — attenzione a non sovra-affermare il beneficio di OS.
-- PORT: nessun beneficio in pN2 (LungART), considerabile solo se R1.
-
 
 ## Terapia della malattia avanzata/metastatica
 
@@ -167,11 +142,6 @@ Se l'immunoterapia non è stata utilizzata in prima linea, le opzioni preferite 
 ### Anziani e PS2
 Nei pazienti anziani la doppietta carboplatino-paclitaxel è superiore alla monoterapia (**IFCT-0501**: OS HR 0,64), a fronte di più morti tossiche (4,4% vs 1,3%); il **cisplatino non è raccomandato routinariamente negli anziani** (Cochrane, MILES-3/4: nessun vantaggio di OS, solo più tossicità). Nel **PS 3-4** è indicata la sola BSC, senza chemioterapia attiva.
 
-#### Punti chiave — I linea non oncogene-addicted
-- **PD-L1 ≥50% → mono-IO**; **<50% → chemio-IO**; PD-L1 1-49% in monoterapia non raccomandato (KEYNOTE-042 negativo).
-- KEYNOTE-189/407: OS mediana confermata a 5 anni (22,0 vs 10,6 e 17,2 vs 11,6 mesi), con **OS a 5 anni 19,4% vs 11,3%** e **18,4% vs 9,7%**.
-- Pemetrexed e bevacizumab controindicati in istologia squamosa; STK11/KEAP1-mutato può beneficiare del doppio blocco CTLA-4/PD-(L)1 (POSEIDON).
-- Non usare cisplatino routinariamente negli anziani; PS3-4 → solo BSC.
 
 ### Malattia oncogene-addicted
 
@@ -202,18 +172,6 @@ Metastasi encefaliche: fra i TKI EGFR, osimertinib mantiene la maggiore penetran
 
 **KRAS G12C-mutato** (10-12%, il più comune fra i driver, più frequente in fumatori/caucasici, associato ad alto PD-L1/TMB, per cui la prima linea resta IO±CT). In post-progressione, **sotorasib** (**CodeBreaK 200**, unico confronto di fase III vs docetaxel: PFS 5,6 vs 4,5 mesi, HR 0,66; **nessun beneficio di OS**, OS 10,6 vs 11,3 mesi, HR 1,01, per l'elevato crossover al braccio sperimentale) resta un'opzione consolidata, con tossicità caratteristica di diarrea ed epatotossicità (rispetto alla mielotossicità del docetaxel). Anche **adagrasib** è disponibile in Europa, con autorizzazione condizionata della Commissione Europea dal gennaio 2024 per il NSCLC KRAS G12C-mutato pretrattato: il fase III **KRYSTAL-12** contro docetaxel ha confermato il beneficio (**PFS 5,5 contro 3,8 mesi, HR 0,58; p<0,0001**; ORR 32% contro 9%; OS non ancora matura), con un profilo sovrapponibile a sotorasib. In Italia sono entrambi rimborsati in seconda linea dopo platino±IO, con registro di monitoraggio: sotorasib dalla Determina AIFA del 17/05/2024 (G.U. 25/05/2024), adagrasib dalla Determina AIFA Pres. n. 59/2024 (G.U. 03/06/2024).
 
-#### Punti chiave — oncogene-addicted
-- **FLAURA** (osimertinib I linea EGFR): PFS HR 0,46; **FLAURA2** (osimertinib+platino/pemetrexed I linea EGFR): PFS HR 0,62 e OS HR 0,77 vs osimertinib in monoterapia, oggi rimborsato AIFA nonostante giudizio di non innovatività; **MARIPOSA** (amivantamab+lazertinib I linea EGFR): OS HR 0,75, alternativa a osimertinib con più tossicità (rash/VTE/reazioni infusionali), **rimborsato AIFA da marzo 2026**.
-- **PAPILLON** (amivantamab+carbo/pemetrexed I linea esone 20): PFS HR 0,40, **rimborsato AIFA da marzo 2026** insieme a MARIPOSA (stessa determina); la monoterapia amivantamab post-platino (CHRYSALIS) era già rimborsata dal 2023.
-- **CROWN** (lorlatinib I linea ALK): PFS HR 0,28, unico con dato PFS a 5 anni (60% vs 8%).
-- **ROS1**: repotrectinib (TRIDENT-1, ORR 79%) **approvato EMA/UE**, ma in Italia ancora in **classe C(nn)** (non ancora negoziato/rimborsato) alla data di questa verifica — attenzione a non confondere approvazione EMA con rimborsabilità AIFA.
-- **RET**: selpercatinib **rimborsato anche in I linea in Italia** (AIFA, dic. 2024); **pralsetinib** (l'altro inibitore RET) ha invece subito il **ritiro volontario dell'autorizzazione UE il 24/10/2024** — non è più un'opzione in Europa.
-- **HER2 (ERBB2) mutato** (2-4%): trastuzumab deruxtecan (DESTINY-Lung02, ORR 49%) approvato EMA da ottobre 2023, ma non ancora con una determina di rimborsabilità AIFA dedicata per il NSCLC (accesso soprattutto tramite programmi allargati); attenzione all'ILD/polmonite (10-15%).
-- **KRAS G12C (10-12%, il più frequente)**: sotorasib e adagrasib **entrambi approvati EMA/UE e rimborsati AIFA** dal 2024 (Determine 17/05/2024 e Pres. 59/2024); KRYSTAL-12 conferma PFS HR 0,58 per adagrasib, in linea con CodeBreaK 200 (sotorasib).
-- **BRAF V600E**, **KRAS G12C** e **MET ex14 skipping** non sono driver tipici dei non fumatori (MET ex14: pazienti anziani/fumatori, edema periferico come AE trasversale).
-- **Mobocertinib** (EGFR esone 20) non è mai stato disponibile in Europa (nessuna approvazione EMA) ed è stato ritirato anche dal mercato USA nel 2023 — da non citare come opzione praticabile.
-- Attenzione alla differenza fra OS ITT "grezza" (spesso diluita dal crossover, es. PAPILLON, LAURA) e OS corretta per crossover — un tema ricorrente nei trial più recenti.
-
 
 ### Malattia oligometastatica
 Per definizione ESTRO/EORTC 2020 si tratta di **≤3-5 lesioni, ≤3 sedi** (esclusi pleura/peritoneo/leptomeningi e linfonodi locoregionali), presente nel 20-50% dei NSCLC metastatici alla diagnosi; il work-up richiede sempre **PET-FDG e RM encefalo**. Il trattamento locale ablativo (LAT: chirurgia/SBRT) associato alla terapia sistemica ha mostrato, in una metanalisi AIOM di 4 RCT, un OS HR di 0,51 e un PFS HR di 0,32 — **raccomandazione FORTE A FAVORE** nonostante la qualità bassa delle prove. Nello specifico dell'EGFR-mutato, lo studio **SINDAS** ha confrontato RT su tutte le sedi + TKI vs solo TKI, con PFS 20,2 vs 12,5 mesi (HR 0,68) e OS 25,5 vs 17,4 mesi.
@@ -228,8 +186,8 @@ Per definizione ESTRO/EORTC 2020 si tratta di **≤3-5 lesioni, ≤3 sedi** (esc
 - Immunoterapia: pembrolizumab, nivolumab, atezolizumab, cemiplimab, durvalumab, ipilimumab, tremelimumab.
 - Antiangiogenici: bevacizumab, nintedanib.
 - Altri: PORT/SBRT, chirurgia (lobectomia, segmentectomia).
-- Nota per l'esame: **datopotamab deruxtecan**, ADC anti-TROP2, ha ottenuto approvazione accelerata FDA per l'EGFR-mutato pretrattato, ma la domanda di autorizzazione europea è stata **ritirata volontariamente** — non è quindi un'opzione disponibile in Italia/UE, a differenza di quanto potrebbe suggerire la letteratura statunitense.
-- Nota per l'esame — farmaci non più/mai disponibili in Europa: **pralsetinib** (RET, Gavreto), pur autorizzato dall'EMA dal 2021, ha visto la **revoca volontaria dell'autorizzazione all'immissione in commercio nell'UE il 24/10/2024** (decisione commerciale dell'azienda, non per motivi di sicurezza/efficacia): oggi non è più disponibile in Europa/Italia, e l'unico inibitore di RET utilizzabile resta selpercatinib. Analogamente **mobocertinib** (EGFR esone 20) non è mai stato un'opzione disponibile in Europa: dopo l'approvazione FDA accelerata (2021), il fallimento della conferma di fase III EXCLAIM-2 ha portato Takeda al **ritiro volontario globale** (annunciato ottobre 2023) e la domanda di autorizzazione EMA non è mai stata portata a termine con esito positivo.
+- Nota: **datopotamab deruxtecan**, ADC anti-TROP2, ha ottenuto approvazione accelerata FDA per l'EGFR-mutato pretrattato, ma la domanda di autorizzazione europea è stata **ritirata volontariamente** — non è quindi un'opzione disponibile in Italia/UE, a differenza di quanto potrebbe suggerire la letteratura statunitense.
+- Farmaci non più/mai disponibili in Europa: **pralsetinib** (RET, Gavreto), pur autorizzato dall'EMA dal 2021, ha visto la **revoca volontaria dell'autorizzazione all'immissione in commercio nell'UE il 24/10/2024** (decisione commerciale dell'azienda, non per motivi di sicurezza/efficacia): oggi non è più disponibile in Europa/Italia, e l'unico inibitore di RET utilizzabile resta selpercatinib. Analogamente **mobocertinib** (EGFR esone 20) non è mai stato un'opzione disponibile in Europa: dopo l'approvazione FDA accelerata (2021), il fallimento della conferma di fase III EXCLAIM-2 ha portato Takeda al **ritiro volontario globale** (annunciato ottobre 2023) e la domanda di autorizzazione EMA non è mai stata portata a termine con esito positivo.
 
 
 ## Tossicità e criticità
@@ -244,7 +202,7 @@ L'obiettivo è l'identificazione tempestiva della recidiva (con picco al 9° mes
 Il trial di Temel (NEJM 2010) ha mostrato che le cure palliative precoci nel NSCLC avanzato migliorano la qualità di vita (FACT-L 98 vs 91,5; p=0,03) **e l'OS** (11,6 vs 8,9 mesi; p=0,02), nonostante un minor ricorso a cure aggressive di fine vita (33% vs 54%). Il paradigma standard resta l'integrazione precoce (non la sostituzione) delle cure palliative fin dalla diagnosi di malattia avanzata.
 
 
-## Punti ad alta resa per orale
+## Punti chiave
 - **RR fumo 14** (20 se forte fumatore); screening LDCT riduce la mortalità lung-specifica del 20% (NLST) ma non la mortalità totale (sovradiagnosi 38%).
 - **PD-L1 ≥50% → mono-IO**; **<50% → chemio-IO**; PD-L1 1-49% monoterapia non raccomandata (KEYNOTE-042 negativo in questo range). KEYNOTE-189/407: OS a 5 anni 19,4% e 18,4%.
 - **PACIFIC**: durvalumab consolidamento dopo CT-RT, solo se PD-L1≥1% (criterio EMA/AIFA); OS 5 anni 42,9% vs 33,4%.

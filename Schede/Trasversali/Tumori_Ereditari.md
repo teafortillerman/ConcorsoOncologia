@@ -151,7 +151,7 @@
 - Rivalutare periodicamente nuove evidenze, varianti riclassificate e indicazioni terapeutiche.
 
 
-## Punti ad alta resa per orale
+## Punti chiave
 - Test germinale: prevenzione familiare; test somatico: terapia, ma un risultato può richiedere conferma germinale.
 - BRCA: mammella, ovaio, prostata, pancreas; PARP-inibitori e platino come ricadute terapeutiche.
 - Lynch: test MMR/MSI universale nel CRC; se MLH1 perso, fare BRAF/metilazione.

@@ -9,10 +9,6 @@ L'ambito clinico richiede una stretta integrazione tra oncologia medica gastroin
 
 Questa scheda si basa sulle Linee Guida ESMO CPG Esofago 2022 con Interim Update 2025, integrata con il Congresso Grandangolo 2025 e verifiche di letteratura successive (ESOPEC, EMERALD/CheckMate 577 update, tislelizumab AIFA).
 
-#### Punti chiave
-- Due istotipi con biologia ed eziologia divergenti: SCC (associato a fumo/alcol) vs AC (associato a Barrett/MRGE/obesità), inclusi i tumori GEJ secondo Siewert.
-- Gestione multimodale obbligatoria: oncologia medica, chirurgia toracica, radioterapia.
-
 
 ## Epidemiologia
 
@@ -20,22 +16,12 @@ Il carcinoma esofageo rappresenta il 7° tumore più frequente al mondo, con cir
 
 I due istotipi hanno distribuzioni geografiche e di sede opposte. Lo **SCC** rappresenta circa il 90% dei casi a livello globale, con la massima incidenza in Asia orientale e Africa sub-sahariana, e colpisce prevalentemente il terzo prossimale-medio dell'esofago. L'**AC**, al contrario, costituisce circa i 2/3 dei casi nei paesi ad alto reddito, dove la sua incidenza è in crescita costante — inclusa una crescente incidenza in pazienti <50 anni — e colpisce tipicamente il terzo distale e la giunzione esofago-gastrica. ==Le curve di incidenza di AC e SCC si stanno progressivamente invertendo nei paesi occidentali==, con l'AC che ha ormai superato lo SCC come istotipo predominante in Nord America ed Europa occidentale.
 
-#### Punti chiave
-- 7° tumore più frequente al mondo (604.000 casi/anno), 6ª causa di mortalità oncologica (544.000 decessi/anno); M:F 2-3:1.
-- SCC (~90% globale, Asia orientale/Africa sub-sahariana, terzo prossimale-medio) vs AC (2/3 nei paesi ad alto reddito, in crescita anche <50 anni, terzo distale/GEJ).
-- Inversione delle curve di incidenza AC/SCC nei paesi occidentali: AC ormai predominante.
-
 
 ## Fattori di rischio
 
 I due istotipi hanno profili di rischio eziologico distinti che riflettono la loro diversa biologia. Lo **SCC** è associato principalmente al fumo di sigaretta e al consumo di alcol, i cui effetti sono sinergici quando combinati, oltre a deficit nutrizionali, esposizione a nitrosamine e consumo abituale di bevande molto calde. L'**AC** origina prevalentemente su un substrato di esofago di Barrett (metaplasia intestinale), favorito dalla malattia da reflusso gastroesofageo cronica (MRGE) e dall'obesità; interessante notare come l'infezione da H. pylori sia, paradossalmente, inversamente associata al rischio di AC.
 
 Un aspetto clinicamente rilevante è l'**associazione dello SCC con i secondi tumori del distretto testa-collo**, riscontrata nel 6,7% dei casi — un dato che giustifica la raccomandazione di un esame otorinolaringoiatrico sistematico in tutti i pazienti con nuova diagnosi di SCC esofageo.
-
-#### Punti chiave
-- SCC: fumo + alcol (sinergici), deficit nutrizionali, nitrosamine, bevande molto calde.
-- AC: esofago di Barrett (metaplasia intestinale), MRGE, obesità; H. pylori inversamente associato.
-- SCC + secondi tumori testa-collo: 6,7% — esame ORL sempre raccomandato.
 
 
 ## Diagnosi
@@ -48,23 +34,12 @@ Un passaggio diagnostico specifico e spesso sottovalutato è la **laparoscopia e
 
 La **classificazione di Siewert** per i tumori della giunzione guida la scelta tra chemioradioterapia (CRT) e chemioterapia perioperatoria, orientando l'approccio terapeutico in base alla localizzazione precisa del tumore rispetto alla linea Z.
 
-#### Punti chiave
-- Endoscopia con biopsia (≥6-8 campioni bite-on-bite) per disfagia/sanguinamento/calo ponderale.
-- EUS: accuratezza T/N, utile per T4b; bassa accuratezza in T1.
-- PET-TC: raccomandata in tutti i candidati a esofagectomia.
-- Laparoscopia esplorativa: obbligatoria in AC T3/T4 GEJ — carcinosi peritoneale occulta ~15%, evita chirurgia futile.
-- Classificazione di Siewert: guida la scelta CRT vs CT perioperatoria nei tumori della giunzione.
-
 
 ## Stadiazione
 
 La stadiazione di riferimento è il **sistema TNM AJCC/UICC 8ª edizione**, che integra profondità di invasione, coinvolgimento linfonodale e presenza di metastasi a distanza per definire lo stadio complessivo e guidare la scelta terapeutica.
 
 Un elemento trasversale imprescindibile in questa fase è la **valutazione nutrizionale**, sempre necessaria data l'elevatissima prevalenza di malnutrizione in questa popolazione: oltre il 50% dei pazienti perde più del 5% del peso corporeo prima dell'intervento, un dato che condiziona direttamente il rischio operatorio e la tollerabilità dei trattamenti successivi (vedi anche sezione Tossicità).
-
-#### Punti chiave
-- TNM AJCC/UICC 8ª edizione come riferimento stadiativo.
-- Valutazione nutrizionale sempre necessaria: >50% dei pazienti perde >5% del peso corporeo pre-intervento.
 
 
 ## Biomarcatori
@@ -79,11 +54,6 @@ L'**HER2** deve essere testato in tutti i pazienti con adenocarcinoma esofageo/G
 
 > !!Attenzione — PD-L1:!! TPS, CPS e TAP usano reagenti e algoritmi di lettura diversi e non sono intercambiabili (un TPS del 2% non equivale a un CPS ≥10): prima di prescrivere un ICI verificare nel referto quale piattaforma è stata usata.
 
-#### Punti chiave
-- PD-L1: tre piattaforme NON intercambiabili — TPS/28-8 (CheckMate 648, ≥1%), CPS/22C3 (KEYNOTE-590, ≥10), TAP/SP263 (RATIONALE-306, ≥5-10%).
-- PD-L1 in SCC avanzato: predittore più forte di beneficio da ICI; fattore prognostico negativo se solo chemioterapia.
-- HER2: testare in tutti gli AC esofageo/GEJ, protocolli mutuati dal gastrico — guida trastuzumab in malattia avanzata HER2+.
-- dMMR/MSI-H: nessuna raccomandazione ESMO 2022 specifica per l'esofago — gestione mutuata dai paradigmi gastrici.
 
 ## Terapia della malattia localizzata/localmente avanzata
 
@@ -109,14 +79,6 @@ Un'ultima area di interesse riguarda la **sorveglianza attiva dopo risposta clin
 
 In Italia, nonostante l'approvazione EMA/FDA e l'adozione nelle linee guida internazionali, la Determina AIFA del 31.07.2023 ha **escluso esplicitamente dalla rimborsabilità SSN nivolumab adiuvante** nel carcinoma esofageo/GEJ con malattia patologica residua dopo chemioradioterapia neoadiuvante (CheckMate 577). Non risultano registri di monitoraggio attivi né determine di rimborso successive: l'accesso avviene solo fuori dal SSN (uso compassionevole, fondi aziendali, sperimentazioni).
 
-#### Punti chiave — terapia della malattia localizzata
-- Resezione endoscopica (EMR/ESD): standard per cT1N0 con displasia alto grado/T1 superficiale.
-- Chirurgia: esofagectomia radicale (Ivor Lewis/McKeown) + linfoadenectomia a due campi; approccio mini-invasivo/robotico preferito nei centri esperti.
-- ESOPEC: FLOT ora standard preferito nell'AC (OS HR 0,70, 66 vs 37 mesi) — CROSS relegato a seconda scelta nell'AC, resta standard nello SCC.
-- Neo-AEGIS e TOPGEAR: non hanno modificato lo standard (limiti metodologici/nessun beneficio OS).
-- CheckMate 577 (nivolumab adiuvante): DFS HR 0,69 confermato, ma OS non significativa nella popolazione complessiva (HR 0,85) nell'aggiornamento 2025. Approvato EMA/FDA ma !!NON rimborsato da AIFA in Italia!! (Determina AIFA 31.07.2023, esclusione esplicita dal SSN).
-- Sorveglianza attiva post-cCR (SANO): non-inferiore in OS 2a ma DFS peggiore — solo trial/casi selezionati, non standard.
-
 
 ## Terapia della malattia avanzata/metastatica
 
@@ -140,11 +102,6 @@ Due filoni recenti di ricerca hanno tentato di intensificare ulteriormente quest
 
 ESMO 2022 raccomanda chemio+ICI come standard [I, A] nello SCC avanzato con ECOG PS 0-1; la scelta tra pembrolizumab, nivolumab e tislelizumab dipende da disponibilità, costo, profilo di tossicità ed espressione di PD-L1 misurata con l'assay specifico del farmaco. In Italia sono rimborsati tutti e tre, con tempi diversi: **pembrolizumab** (KEYNOTE-590, CPS ≥10) dal luglio 2023 (Determina AIFA n. 476/2023); **nivolumab+chemioterapia** (CheckMate 648, TPS ≥1%) dall'11 agosto 2023, con registro dedicato, mentre nivolumab-ipilimumab dello stesso trial **non è rimborsato** (Determina AIFA 31.07.2023); **tislelizumab** (RATIONALE-306, TAP ≥5%) solo tra febbraio e maggio 2026, sia in combinazione in prima linea sia in monoterapia dopo progressione, con un ritardo di circa 3 anni dovuto ai tempi più lunghi di autorizzazione EMA (settembre 2023) e di negoziazione AIFA.
 
-#### Punti chiave — prima linea SCC avanzato
-- Standard: chemio+ICI in tutti i pazienti SCC avanzato ECOG PS 0-1 [I,A].
-- KEYNOTE-590 (pembrolizumab, CPS≥10): OS HR 0,57. CheckMate 648 (nivolumab, TPS≥1%): OS HR 0,54. RATIONALE-306 (tislelizumab, indipendente da PD-L1): OS HR 0,66 (17,2 vs 10,6 mesi).
-- Rimborsabilità AIFA (Italia): pembrolizumab da luglio 2023; nivolumab+chemio da agosto 2023 (nivolumab-ipilimumab invece MAI rimborsato); tislelizumab solo da inizio/metà 2026 — tre farmaci disponibili ma con tempistiche molto diverse.
-- Intensificazione con terzo agente (LEAP-014, SKYSCRAPER-07): entrambi negativi, la doppietta chemio+ICI resta standard.
 
 ### Linee successive SCC
 
@@ -173,18 +130,12 @@ L'**immunoterapia** è associata alla classe standard di tossicità immuno-relat
 
 Un aspetto critico spesso sottovalutato è il **calo ponderale severo pre-trattamento**, osservato in >50% dei pazienti prima dell'intervento e associato a aumento del rischio operatorio, peggior qualità della vita e peggiore prognosi. Quindi, ==il supporto nutrizionale, inclusa la possibile gastrostomia endoscopica (PEG), è parte integrante della gestione multimodale==.
 
-#### Punti chiave — tossicità
-- Mortalità perioperatoria a 90 giorni: 3,1% con FLOT vs 5,6% con CRT neoadiuvante (CROSS).
-- RT mediastinica: esofagite acuta/tardiva, complicanze polmonari e cardiache — possono manifestarsi mesi/anni dopo.
-- Immunoterapia: irAE standard (GI, endocrine, polmonari, epatiche, cutanee) — gestione multidisciplinare.
-- Calo ponderale pre-trattamento (>50% dei pazienti, >5% peso corporeo): fattore prognostico indipendente — supporto nutrizionale (± PEG) parte integrante della gestione.
-
 
 ## Follow-up
 - Non dettagliato in modo specifico nelle fonti disponibili; approccio standard con esame clinico + imaging periodico secondo rischio di recidiva (prevalentemente nei primi 2-3 anni).
 
 
-## Punti ad alta resa per orale
+## Punti chiave
 - **ESOPEC (2025)**: FLOT supera CROSS nell'AC esofageo/GEJ (OS 66 vs 37 mesi, HR 0,70) — nuovo standard perioperatorio.
 - **CROSS** resta il riferimento per lo SCC (CRT neoadiuvante, OS 5a >60%).
 - **CheckMate 577**: nivolumab adiuvante — DFS confermato ma OS non significativa nella popolazione complessiva (aggiornamento 2025).

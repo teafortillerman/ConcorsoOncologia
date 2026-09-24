@@ -18,11 +18,6 @@ In termini di mortalità, il colon-retto è la ==**2ª causa di morte oncologica
 
 I principali fattori di rischio modificabili includono l'aumento ponderale (RR 1,10 per ogni incremento di 8 kg/m² di BMI), il fumo (RR 1,06 ogni 5 pacchetti-anno), il consumo di carne rossa (RR 1,13 ogni 5 porzioni/settimana), e le malattie infiammatorie intestinali (IBD, RR 2,93, che sale fino a 9 se l'esordio avviene prima dei 30 anni in presenza di familiarità). La familiarità di primo grado conferisce un RR di 1,80. Tra i fattori protettivi, l'attività fisica regolare e un consumo elevato di frutta e verdura mostrano un'associazione consistente con riduzione del rischio.
 
-#### Punti chiave
-- CRC = neoplasia più frequente in Italia (13% diagnosi); 2ª causa di morte oncologica (~19.000 decessi/anno), ma mortalità in calo (-2%/anno dal 2005).
-- Sopravvivenza a 5 anni migliorata dal 47% (primi anni '90) al 63% (2005-2007).
-- Fattori di rischio: obesità, fumo, carne rossa, IBD (RR fino a 9 se esordio <30 anni+familiarità), familiarità 1° grado. Protettivi: attività fisica, frutta/verdura.
-
 
 ## Fattori di rischio e sindromi ereditarie
 
@@ -38,22 +33,10 @@ La **poliposi adenomatosa familiare (FAP)** rappresenta meno dell'1% dei CRC, ca
 
 Altre condizioni rilevanti includono la **MAP** (poliposi associata a mutazione biallelica di MUTYH), con rischio di CRC del 19% a 50 anni e del 43% a 60 anni, e la **sindrome da poliposi serrata**, con rischio lifetime del 15-30%.
 
-#### Punti chiave
-- 1/20 pazienti CRC ha sindrome ereditaria (prevalenza mutazioni note 5-6%).
-- Lynch (1-3% CRC): rischio vita CRC 30-70%; il retto MSI è "diverso" dal colon — solo 4-10% è dMMR/MSI ma con probabilità di Lynch fino all'84% (arricchimento MSH2/MSH6) → invio sempre a consulenza genetica.
-- Sorveglianza Lynch: colonscopia da 25 (MLH1/MSH2) o 35 anni (MSH6/PMS2); CAPP2 (ASA 600mg/die ≥2 anni) riduce incidenza 50-60%.
-- FAP (<1% CRC, APC): rischio CCR ~100% senza colectomia — chirurgia profilattica prima dei 25 anni.
-- MAP: rischio CCR 19%→43% (50→60 anni). Serrated Polyposis: rischio vita 15-30%.
-
 
 ## Screening (popolazione generale)
 
 Le strategie di screening organizzato per il CRC nella popolazione generale si basano su evidenza di livello RCT per due modalità principali. La **RSOF** (ricerca del sangue occulto fecale, metodo immunochimico), eseguita ogni 2 anni nella fascia 50-69 anni, riduce la mortalità del 15-33%, con un beneficio che persiste fino a 30 anni dall'intervento (22% con screening biennale, 32% con screening annuale). La **rettosigmoidoscopia**, eseguita una tantum nella fascia 55-64 anni, riduce la mortalità del 22-31%, con persistenza del beneficio fino a 17 anni. La **colonscopia** come strumento di screening di popolazione dispone solo di evidenza indiretta/osservazionale, non essendo mai stata validata da un RCT dedicato — un aspetto spesso sorprendente dato il suo ruolo centrale nella pratica clinica come esame diagnostico.
-
-#### Punti chiave
-- RSOF ogni 2 anni (50-69 anni): riduzione mortalità 15-33%, persistente 30 anni.
-- Rettosigmoidoscopia una tantum (55-64 anni): riduzione mortalità 22-31%, persistente 17 anni.
-- Colonscopia: solo evidenza indiretta/osservazionale, nessun RCT dedicato come strumento di screening di popolazione.
 
 
 ## Diagnosi e workup
@@ -65,12 +48,6 @@ La **colonscopia totale** rimane l'esame cardine per la diagnosi, con sensibilit
 Nel **retto**, la RM pelvica rappresenta il gold standard per la stadiazione locale nei tumori cT3-T4 o N+, mentre l'ecografia transrettale mantiene un ruolo di prima scelta solo per i tumori cT1-T2, dove offre maggiore accuratezza nella valutazione della profondità di invasione parietale.
 
 Un elemento organizzativo di importanza clinica dimostrata è la ==**discussione obbligatoria in un gruppo multidisciplinare (MDT)**==: la mancata discussione in MDT rappresenta un predittore indipendente di positività del margine di resezione circonferenziale (CRM+, 13,3%), e i centri ad alto volume (≥33 casi/anno di TME) sono associati a un outcome chirurgico significativamente migliore.
-
-#### Punti chiave
-- Criteri di sospetto: sanguinamento/alterazioni alvo persistenti (6 mesi se 40-59 anni, 6 settimane se ≥60), massa rettale, anemia sideropenica — invio entro 4 settimane.
-- Colonscopia totale: sensibilità 96-97%, specificità 98% — esame cardine.
-- Retto: RM pelvica gold standard per cT3-T4/N+; ecografia transrettale solo per cT1-T2.
-- MDT obbligatorio: mancata discussione = predittore indipendente di CRM+ (13,3%); centri alto volume associati a miglior outcome.
 
 
 ## Stadiazione
@@ -85,13 +62,6 @@ Nel **retto**, la stadiazione con RM offre elementi prognostici specifici di gra
 
 Un ultimo elemento prognostico rilevante, specifico per la chirurgia rettale, è la **qualità del piano di escissione mesorettale (TME)** secondo la classificazione di Quirke: il tasso di recidiva locale varia drammaticamente in base alla qualità del piano chirurgico, dall'1,6% in caso di piano completo, al 5,7% se irregolare, fino al 41% se incompleto — un dato che sottolinea l'importanza cruciale della tecnica chirurgica.
 
-#### Punti chiave
-- TNM VIII ed.: N1c (depositi satelliti senza linfonodo), M1c (carcinosi peritoneale).
-- Colon: margine ≥5cm, ≥12 linfonodi per stadiazione adeguata.
-- Retto: CRM<1mm = fattore prognostico più potente (superiore al TNM, MERCURY: OS 5a 42,2% vs 62,2%); EMVI+ (26%) → OS 5a 39,5%.
-- PET-FDG NON raccomandata come standard (rischio overstaging).
-- Qualità TME (Quirke): recidiva locale 1,6%/5,7%/41% (completo/irregolare/incompleto).
-
 
 ## Biomarcatori
 
@@ -104,13 +74,6 @@ L'**amplificazione di HER2**, presente nel 3-5% dei tumori RAS-wild-type, è tar
 Due test farmacogenetici sono da considerare sistematicamente prima della chemioterapia: il **DPYD** (obbligatorio prima di fluoropirimidine, secondo nota EMA 2020) e l'**UGT1A1*28** (predittivo di tossicità da irinotecan).
 
 Il **ctDNA** ha acquisito un ruolo prognostico ormai consolidato nel colon, sulla base dei dati di GALAXY, BESPOKE e DYNAMIC, che supportano strategie di de-escalazione terapeutica quando il ctDNA risulta negativo in stadio II. È importante segnalare che ==**nel retto, ESMO non raccomanda ancora l'uso del ctDNA per decisioni adiuvanti**== [II,D] — una differenza di maturità dell'evidenza tra le due sedi da tenere presente. Il trial **DYNAMIC-III** (Nature Medicine 2025), che ha valutato l'escalation della chemioterapia adiuvante guidata da ctDNA nello stadio III, è invece risultato ==**negativo, senza beneficio in RFS**==: il ctDNA è solido per prognosi e de-escalazione (GALAXY, BESPOKE), ma non è ancora pronto per guidare un'escalation terapeutica.
-
-#### Punti chiave
-- RAS mutato (40-50%): controindicazione anti-EGFR. BRAF V600E (~10%): prognosi sfavorevole, target encorafenib+cetuximab.
-- MSI-H/dMMR: ~5% metastatico (15-20% colon precoce, 4-10% retto) → target immunoterapia.
-- HER2 amplificato (3-5% RAS-wt): target tucatinib-trastuzumab/T-DXd, non ancora routine in Italia. KRAS G12C (~3%): sotorasib/adagrasib+anti-EGFR.
-- DPYD e UGT1A1*28: test farmacogenetici obbligatori/raccomandati prima di fluoropirimidine/irinotecan.
-- ctDNA: solido per prognosi/de-escalazione nel colon (GALAXY/BESPOKE); DYNAMIC-III (2025) negativo per l'escalation terapeutica guidata da ctDNA; nel retto non ancora raccomandato per decisioni adiuvanti [II,D].
 
 
 ## Terapia della malattia localizzata — COLON
@@ -134,15 +97,6 @@ Un aggiornamento importante riguarda il trial **ATOMIC** (Alliance/NCI, presenta
 La **terapia neoadiuvante nel colon MSS** (microsatellite-stabile) rimane ==**non standard**==, sulla base dei trial FOXTROT, OPTICAL e NEOCOL, che non hanno dimostrato un beneficio sufficiente a giustificare il rischio di perforazione (2-5%) e l'overtreatment associato a questo approccio.
 
 Diversamente, nel **colon dMMR/MSI localizzato**, l'immunoterapia neoadiuvante rappresenta un'area di sviluppo particolarmente promettente. Il trial **NICHE-2** (nivolumab+ipilimumab neoadiuvante) ha riportato risultati notevoli: pCR 68%, DFS a 3 anni 100% — dati che aprono a un possibile cambio di paradigma, sebbene questo approccio non sia ancora standard e la selezione ottimale del paziente rimanga da definire.
-
-#### Punti chiave — terapia localizzata colon
-- Chirurgia: margine ≥5cm, ≥12 linfonodi; laparoscopia equivalente all'open.
-- Stadio I: nessuna adiuvante. Stadio II: beneficio marginale (3-4%), considerare se fattori di rischio; dMMR/MSI-H → MAI fluoropirimidina monoterapia (QUASAR).
-- Stadio III: FOLFOX/XELOX standard (riduzione rischio morte 33%); irinotecan MAI in adiuvante.
-- IDEA: basso rischio (pT1-3N1) 3 mesi non-inferiori (CAPOX preferito); alto rischio (pT4/N2) FOLFOX richiede 6 mesi, CAPOX 3 mesi ancora accettabile.
-- MSI = fattore prognostico SFAVOREVOLE nello stadio III alto rischio (DFS 3a 64,5%→35,5%).
-- **ATOMIC (nuovo, 2026)**: atezolizumab+mFOLFOX6 adiuvante nel dMMR stadio III — DFS HR 0,50, DFS 3a 86,3% vs 76,2% — potenziale nuovo standard.
-- Neoadiuvante colon MSS: non standard (FOXTROT/OPTICAL/NEOCOL). dMMR/MSI: NICHE-2 (pCR 68%, DFS 3a 100%) — promettente, non ancora standard.
 
 
 ## Terapia della malattia localizzata/localmente avanzata — RETTO
@@ -195,15 +149,6 @@ La linfoadenectomia laterale non è standard di routine, ma va considerata solo 
 
 Dopo CRT+TME, l'evidenza per la chemioterapia adiuvante è debole: quattro trial di qualità molto bassa non hanno dimostrato un beneficio consistente, sebbene la pratica clinica diffusa preveda comunque il completamento fino a 6 mesi complessivi di trattamento perioperatorio. Il trial **ADORE**, condotto specificamente nei pazienti "poor-responder" (ypT3-4/ypN+), ha mostrato un beneficio significativo dal FOLFOX adiuvante in questo sottogruppo selezionato: DFS a 3 anni 71,6% vs 62,9% (HR 0,657) — supportando un approccio di personalizzazione basato sulla risposta patologica piuttosto che un trattamento uniforme per tutti i pazienti.
 
-#### Punti chiave — terapia localizzata/localmente avanzata retto
-- Precoce (T1-T2N0): TME standard; EL solo se cT1 Sm1, G1-2, no invasione linfovascolare, R0 (rischio N+ Sm1/Sm2/Sm3: 3%/8%/23%).
-- CRT neoadiuvante (Sauer): dimezza recidive locali, migliore preservazione sfinterica, no vantaggio OS. Oxaliplatino MAI concomitante a RT.
-- TNT: PRODIGE 23 (induzione, DFS 3a 75,7% vs 68,5%), OPRA (consolidamento). RAPIDO — trabocchetto: pCR migliore ma recidive locali peggiori all'aggiornamento 2023 → condizionata A SFAVORE. PROSPECT: omissione selettiva CRT non-inferiore, solo basso rischio.
-- Beneficio pooled TNT: DFS +7%, mts distanza -7%, OS +5% — indicato cT4/cN2/EMVI+/CRM+/N laterali+/retto basso.
-- **dMMR/MSI-H retto**: dostarlimab monoterapia 6 mesi — 49/49 cCR (Cercek, NEJM 2025), non-operative management totale.
-- Watch and Wait (pMMR/MSS): IWWD — regrowth 2a 25,2%, OS 5a 85%; MSKCC — OS inferiore nei regrowth per maggior rischio mts distanza.
-- ADORE: FOLFOX adiuvante nei poor-responder (ypT3-4/ypN+) — DFS 3a 71,6% vs 62,9%.
-
 
 ## Terapia della malattia avanzata/metastatica
 
@@ -247,16 +192,6 @@ Un'opzione emergente rilevante è rappresentata dal trial **TransMet (2024)**, c
 
 Un dato negativo importante da ricordare è quello del trial **PRODIGE 7**, che ha valutato HIPEC associato a citoriduzione nella carcinosi peritoneale da CRC: ==**nessun beneficio in OS, a fronte di maggiore tossicità**== — questa strategia non va eseguita fuori da un contesto sperimentale specifico. Nella malattia oligometastatica polmonare, il trial SABR-COMET ha mostrato un beneficio marcato della radioterapia stereotassica (SABR): OS a 5 anni 42,3% vs 17,7%.
 
-#### Punti chiave — malattia avanzata/metastatica
-- I linea RAS/BRAF-wt: sede guida la scelta (destro→bevacizumab, sinistro→anti-EGFR); TRIBE (FOLFOXIRI+bev) per destro/RAS mutato.
-- BRAF V600E: BREAKWATER nuovo standard 1L (OS HR 0,49, 30,3 vs 15,1 mesi) — tripla convalida 2026: AIFA legge 648/96 (feb 2026, Italia prima in Europa), FDA piena (feb 2026), EMA/EC (22 giu 2026).
-- MSI-H/dMMR: KEYNOTE-177 (pembrolizumab) storico; CheckMate 8HW (nivo+ipi) nuovo standard, superiore a nivo monoterapia — AIFA conferma la rimborsabilità anche in 1L dal 29 aprile 2026 (già rimborsato in 2L+ dal 2022).
-- HER2+: MOUNTAINEER (tucatinib-trastuzumab, ORR 38%) resta solo FDA (no EMA/AIFA per CRC); T-DXd (DESTINY-CRC01/02, ORR 45%/38%) — approvazione EU tumor-agnostic pan-tumorale il 26 giu 2026, ma non ancora rimborsabilità AIFA specifica per CRC — non ancora routine in Italia.
-- KRAS G12C: CodeBreaK 300 (sotorasib+panitumumab, FDA gen 2025) e adagrasib+cetuximab (FDA gen 2024), primi target-specifici positivi oltre BRAF — entrambi solo FDA, non ancora EMA/AIFA per il CRC.
-- Linee successive: SUNLIGHT (TAS-102+bev) nuovo standard trasversale [I,A], rimborsato AIFA da marzo 2025; FRESCO-2 (fruquintinib) rimborsato AIFA da giugno 2025 (4L+); CORRECT/RECOURSE alternative validate; rechallenge anti-EGFR ctDNA-guidato (PARERE).
-- Oligometastatico epatico: resezione R0 (FOLFOX4 perioperatorio, EORTC 40983); TransMet (nuovo, 2024) — trapianto epatico in liver-limited non resecabile, OS 5a 56,6% vs 12,6%, formalizzato ESMO 2026 [II,A].
-- PRODIGE 7: HIPEC+citoriduzione NON funziona in carcinosi peritoneale (nessun beneficio OS).
-
 
 ## Farmaci e classi rilevanti
 - Chemioterapia: FOLFOX, XELOX/CAPOX, FOLFIRI, FOLFOXIRI, capecitabina, TAS-102 (trifluridina-tipiracil), irinotecan.
@@ -291,7 +226,7 @@ Nel **retto**, lo schema segue lo stesso impianto generale, con l'aggiunta della
 La durata standard del follow-up è di 5 anni, poiché oltre il 95% delle recidive si manifesta entro questo periodo, senza evidenza di beneficio da una sorveglianza prolungata oltre questo limite. È importante ricordare che la PET-FDG non è raccomandata di routine nel follow-up.
 
 
-## Punti ad alta resa per orale
+## Punti chiave
 - Nel CRC, il retto MSI ha probabilità di Lynch molto più alta del colon MSI (fino 84% vs prevalenza generale 1-3%).
 - **Studio IDEA**: 3 mesi (CAPOX) vs 6 mesi (FOLFOX necessario in alto rischio) — la scelta dipende da rischio E regime, non solo da uno dei due.
 - **CRM ≤1mm = R1**, fattore prognostico più potente nel retto (superiore al TNM, studio MERCURY).

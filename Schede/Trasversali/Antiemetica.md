@@ -122,7 +122,7 @@
 - Un episodio non controllato richiede modifica della profilassi nel ciclo successivo, non semplice ripetizione dello stesso regime.
 
 
-## Punti ad alta resa per orale
+## Punti chiave
 - CINV: acuta entro 24 ore, ritardata dopo 24 ore, anticipatoria prima del trattamento.
 - Cisplatino e AC: alto rischio, profilassi con NK1 più 5-HT3 più desametasone più olanzapina.
 - Carboplatino: aggiungere NK1 alla doppietta 5-HT3-desametasone.

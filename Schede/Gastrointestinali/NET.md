@@ -26,11 +26,6 @@ All'interno dei NEC, esiste un ulteriore livello di stratificazione basato su un
 
 La conferma immunoistochimica richiede sinaptofisina e cromogranina A (positive nel 100% dei NET), con il Ki-67 valutato sistematicamente sull'area di massima proliferazione (hot-spot).
 
-#### Punti chiave
-- WHO 2022: NET G1/G2/G3 (ben differenziati) vs NEC (scarsamente differenziato) — stesso Ki-67>20% in NET-G3 e NEC ma comportamento e risposta al platino diversi.
-- Cut-off Ki-67 55% nei NEC: <55% OS più lunga/minor risposta platino; ≥55% OS peggiore/maggior chemiosensibilità (NORDIC-NEC).
-- IHC obbligatoria: sinaptofisina + cromogranina A; Ki-67 su hot-spot.
-
 
 ## Diagnosi
 
@@ -41,14 +36,6 @@ Tra i **biomarcatori circolanti**, la **cromogranina A (CgA) plasmatica** rimane
 Per l'**imaging funzionale**, la **PET/TC con analoghi della somatostatina marcati con 68Ga** (DOTA-TOC/TATE/NOC) rappresenta ormai lo ==**standard of care**==, con una sensibilità del 97% contro il 61% della TC convenzionale e il 52% dell'Octreoscan tradizionale — una differenza sostanziale che si traduce in un cambiamento del management clinico in ben il 44% dei casi. La **FDG-PET** ha invece un ruolo complementare: bassa sensibilità nei tumori G1-G2 (58%), ma un valore prognostico indipendente rilevante (positività FDG associata a HR di morte di 10,3), che ne giustifica l'utilizzo mirato nei G3/NEC e nei casi di discordanza tra imaging morfologico e recettoriale.
 
 Le sedi metastatiche più frequenti sono il fegato (70-82% dei casi), seguito da polmone, osso e peritoneo — un pattern che guida la sorveglianza radiologica.
-
-#### Punti chiave
-- CgA plasmatica: sensibilità 70-90%, specificità limitata (falsi positivi PPI/gastrite/IBD).
-- 5-HIAA urinario: specificità fino al 100% nella sindrome da carcinoide.
-- NETest (51 geni): accuratezza 95%, superiore a CgA nel predire recidiva post-chirurgica.
-- 68Ga-SST PET/TC = standard of care (sensibilità 97% vs TC 61%); cambia management nel 44% dei casi.
-- FDG-PET: bassa sensibilità G1-G2 ma valore prognostico forte (FDG+ → HR morte 10,3); utile in G3/NEC.
-- Sedi metastatiche più frequenti: fegato (70-82%), polmone, osso, peritoneo.
 
 
 ## Terapia generale dei NET ben differenziati
@@ -78,14 +65,6 @@ Nei carcinomi neuroendocrini scarsamente differenziati (NEC), lo standard di pri
 ### Cabozantinib — nuova opzione in linee successive (CABINET)
 
 Un'aggiunta importante riguarda **cabozantinib**, un inibitore multichinasico valutato nel trial **CABINET** (Chan, NEJM 2024, trial Alliance A021602) in pazienti con NET pancreatici ed extra-pancreatici progressivi dopo almeno una linea di trattamento precedente. I risultati sono robusti in entrambe le coorti: ==**coorte pNET — PFS 13,8 vs 4,4 mesi (HR 0,23; p<0,0001), ORR 19% vs 0%**==; ==**coorte NET extra-pancreatico — PFS 8,4 vs 3,9 mesi (HR 0,38; p<0,0001), ORR 5% vs 0%**==. Sulla base di questi dati, ==**la FDA ha approvato cabozantinib il 31 marzo 2025**== per NET pancreatici ed extra-pancreatici avanzati/progressivi già trattati, in pazienti adulti e pediatrici ≥12 anni. In Europa l'EMA ha concesso l'approvazione centralizzata il 25 luglio 2025, con indicazione per la seconda linea (dopo almeno una precedente terapia sistemica) nei NET pancreatici ed extra-pancreatici ben differenziati, localmente avanzati non resecabili o metastatici. In Italia, il Consiglio di Amministrazione di AIFA ha deliberato l'estensione della rimborsabilità di cabozantinib (Cabometyx) a questa indicazione l'8 luglio 2026, rendendo il farmaco disponibile a carico del SSN anche per i NET, accanto all'indicazione già rimborsata nel carcinoma renale ed epatocellulare.
-
-#### Punti chiave — terapia generale NET ben differenziati
-- SSA (CLARINET/lanreotide, PROMID/octreotide): I linea in NET non rapidamente progressivi, basso Ki-67, SST+.
-- Everolimus: RADIANT-3 (PanNET, HR 0,35), RADIANT-4 (GI/polmonare, HR 0,48) positivi; RADIANT-2 (midgut+carcinoide+octreotide) formalmente negativo — non confondere.
-- PRRT/Lutathera: NETTER-1 (linee successive, HR 0,21) storico; **NETTER-2 (2024, I linea G2 alto/G3): HR 0,28** — potenziale cambio di paradigma, non ancora indicazione EMA/AIFA formale per I linea.
-- COMPETE (ITM-11, emergente 2026): HR 0,67 vs everolimus — non ancora approvato, solo dato di ricerca.
-- **CABINET/cabozantinib (nuovo)**: linee successive, PFS HR 0,23 (pNET) e 0,38 (extra-pancreatico) — approvato FDA marzo 2025, EMA luglio 2025 (II linea); rimborsabilità AIFA deliberata luglio 2026, ora disponibile in Italia.
-- NEC: cisplatino/carboplatino+etoposide I linea (OS 7,5-11 mesi); CAPTEM alternativa se Ki-67<55%.
 
 
 ## NEN gastrico
@@ -121,14 +100,6 @@ Il piccolo intestino rappresenta la sede più comune di NET gastrointestinale (f
 Nei **NET rettali <16 mm**, il fattore prognostico dominante è la dimensione, con un cut-off critico di 5 mm; le tecniche di resezione endoscopica avanzata (ESD o m-EMR) sono preferite alla semplice polipectomia per il miglior controllo dei margini.
 
 Per i **NET appendicolari**, il cut-off classico storico per l'emicolectomia destra è stato di 2 cm, con un tasso di metastasi linfonodali che può raggiungere il 61% nei tumori >20 mm. Tuttavia, lo studio **Nesti 2023 (Lancet Oncology)** ha dimostrato che nei tumori **1-2 cm** l'emicolectomia ==**non è necessaria**==, poiché la sopravvivenza è risultata simile a quella ottenuta con la sola appendicectomia semplice — un ridimensionamento importante del vecchio cut-off, che ha portato a un cambiamento pratico rilevante nella gestione di questa fascia dimensionale. Il consensus ENETS 2023 (Kaltsas et al., J Neuroendocrinol) consolida questi dati: emicolectomia destra per i tumori >2 cm, e nella fascia 1-2 cm solo in presenza di G2 alto (Ki-67 >10%), metastasi linfonodali o resezione R1/R2; l'appendicectomia semplice è sufficiente per i tumori <2 cm, a basso grado e con margini R0. L'invasione mesoappendicolare profonda (>3 mm), l'angioinvasione e l'invasione perineurale hanno significato incerto.
-
-#### Punti chiave — NEN duodenale/pancreatico/piccolo intestino/retto-appendice
-- Duodenale: <1cm endoscopica, >2cm DCP, 1-2cm decisione su grading (non solo dimensione).
-- PanNET NF: rischio malignità 19%→35%→85% (≤2cm→2-4cm→>4cm); enucleazione <2cm G1-2, resezione formale se >2cm/funzionante (OS 5a 86,6% vs 40,1%).
-- MEN1+PanNET NF<2cm: crescita lenta, follow-up preferito. Insulinoma: guarigione chirurgica ~93%.
-- Terapia sistemica PanNET: everolimus, sunitinib (SUN-1111 HR 0,42), CAPTEM (E2211 HR 0,58), streptozotocina+5-FU.
-- Piccolo intestino: sede più comune (30%), multifocalità 40%; resezione primitivo anche con mts non resecabili (OS 9,9 vs 4,7 anni).
-- Appendice 1-2cm: emicolectomia NON necessaria se basso rischio (Nesti 2023, consolidato da ENETS 2023) — ridimensiona il vecchio cut-off dei 2cm.
 
 
 ## NET polmonari (carcinoidi bronchiali)
@@ -196,7 +167,7 @@ Un red flag clinico da non sottovalutare è la **crisi carcinoide perioperatoria
 Il follow-up nei NET non è univocamente standardizzato nelle fonti disponibili, ma si basa generalmente su imaging funzionale e morfologico periodico, calibrato secondo grading e sede del tumore primitivo. La CgA rimane il marcatore di monitoraggio più utilizzato nella pratica clinica, nonostante la sua specificità limitata già discussa nella sezione diagnostica.
 
 
-## Punti ad alta resa per orale
+## Punti chiave
 - **NET-G3 (ben differenziato) ≠ NEC (scarsamente differenziato)** nonostante stesso Ki-67>20% — comportamento clinico e risposta al platino diversi.
 - **68Ga-SST PET/TC standard of care** (sensibilità 97% vs TC 61%); FDG-PET per G3/NEC (FDG+ → HR morte 10,3).
 - **CLARINET/PROMID** (SSA), **RADIANT-3/4** (everolimus), **NETTER-1** (PRRT storico) — trial cardine da non confondere per sottosede (PanNET vs midgut vs GI/polmonare).

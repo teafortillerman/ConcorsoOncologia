@@ -4,53 +4,25 @@
 ## Definizione e inquadramento
 Il linfoma primitivo del sistema nervoso centrale (PCNSL) è un linfoma diffuso a grandi cellule B aggressivo, limitato a encefalo, midollo spinale, leptomeningi, liquor e/o strutture oculari, senza evidenza di malattia sistemica alla diagnosi. È un tema di confine tra emato-oncologia, neuro-oncologia, neuroradiologia, neurochirurgia, radioterapia, oftalmologia e trapianto di cellule staminali. Nella classificazione WHO 2022 è incluso tra i linfomi B a grandi cellule delle sedi immunologicamente privilegiate. La scheda fa riferimento alle linee guida EHA-ESMO Clinical Practice Guideline 2024 e AIOM Neoplasie cerebrali (aggiornamento 2 febbraio 2024), integrate con verifica sulla letteratura primaria più recente.
 
-#### Punti chiave
-- PCNSL: linfoma B aggressivo confinato a SNC/occhio, senza malattia sistemica alla diagnosi.
-- WHO 2022: sede immunologicamente privilegiata.
-- Fonti di riferimento: EHA-ESMO 2024, AIOM 2024.
-
 
 ## Epidemiologia
 Il PCNSL rappresenta circa il 2% dei tumori primitivi del SNC e il 4-6% dei linfomi extranodali, con un'incidenza di circa 0,47 casi per 100.000 persone-anno. L'età mediana alla diagnosi è 68 anni, con lieve prevalenza maschile; l'aumento di incidenza osservato negli ultimi anni riguarda principalmente i pazienti oltre i 60 anni. Può insorgere sia nel paziente immunocompetente sia in quello immunodepresso: questa scheda si riferisce soprattutto al paziente immunocompetente.
-
-#### Punti chiave
-- ~2% dei tumori primitivi del SNC, 4-6% dei linfomi extranodali; incidenza ~0,47/100.000 persone-anno.
-- Età mediana 68 anni; incidenza in aumento soprattutto oltre i 60 anni.
 
 
 ## Presentazione clinica
 Il quadro clinico è dominato da deficit neurologici focali, alterazioni cognitive o della personalità, cefalea, confusione, letargia e segni di ipertensione endocranica; le crisi epilettiche sono relativamente rare rispetto ad altri tumori cerebrali. Le sedi tipiche sono gli emisferi cerebrali, il corpo calloso, i gangli della base, il talamo e le regioni periventricolari, con malattia multifocale alla RM nel 40-50% dei casi. Il coinvolgimento vitreoretinico/retinico si osserva nel 15-20% dei pazienti, spesso bilaterale: può dare visione offuscata o miodesopsie, ma circa metà dei pazienti è asintomatica. I sintomi B sono eccezionali.
 
-#### Punti chiave
-- Deficit focali, alterazioni cognitive/di personalità, ipertensione endocranica; crisi epilettiche rare.
-- Multifocalità RM 40-50%; coinvolgimento oculare 15-20% (spesso asintomatico).
-
 
 ## Diagnosi e workup
 La RM encefalo con gadolinio, comprensiva di diffusione, perfusione e protocollo IPCG, è la metodica di scelta. L'aspetto tipico è una lesione T1 ipointensa, T2 iso-ipointensa, con ADC ridotto, enhancement intenso e omogeneo ed edema variabile. È fondamentale **evitare i corticosteroidi prima della biopsia**, se clinicamente possibile, poiché il loro effetto linfocitolitico può impedire la diagnosi istologica; in caso di deterioramento clinico va comunque effettuata una biopsia urgente prima dell'inizio dei corticosteroidi, quando fattibile. Il gold standard diagnostico resta la biopsia stereotassica della lesione cerebrale: la resezione chirurgica non è uno standard diagnostico o terapeutico e va considerata solo in casi selezionati con rapido peggioramento da effetto massa o ipertensione endocranica. Il pannello immunoistochimico minimo comprende CD20, CD3, CD10, BCL6, BCL2, MUM1 e Ki-67. Quando la puntura lombare è sicura, il liquor va sottoposto a esame chimico-fisico, citologia convenzionale e citometria a flusso; la ricerca di MYD88 L265P, IL-10 e clonalità IgVH nel liquor è utile nei casi non bioptizzabili o dubbi, ma non sostituisce la biopsia quando questa è fattibile. La valutazione oculistica (lampada a fessura, fundoscopia, angiografia retinica o OCT quando indicato) è parte integrante del workup; nel sospetto di linfoma vitreoretinico primitivo si aggiungono citologia del vitreo e, se possibile, citometria a flusso, con MYD88 L265P e IL-10 nell'umor vitreo/acqueo come supporto diagnostico.
-
-#### Punti chiave
-- RM encefalo con gadolinio + protocollo IPCG; evitare steroidi pre-biopsia se possibile.
-- Biopsia stereotassica (non resezione) è il gold standard.
-- Pannello IHC: CD20, CD3, CD10, BCL6, BCL2, MUM1, Ki-67.
-- MYD88 L265P/IL-10/clonalità IgVH nel liquor: supporto, non sostituto della biopsia.
 
 
 ## Stadiazione
 La stadiazione prevede la RM encefalo dopo la biopsia, idealmente entro 14 giorni dall'inizio del trattamento, e la RM del midollo spinale solo in presenza di sintomi suggestivi o liquor positivo. L'esame liquorale è raccomandato in tutti i pazienti se non controindicato da massa/edema con rischio di erniazione, così come la valutazione oftalmologica completa. La FDG-PET/TC è indicata per escludere malattia sistemica: identifica localizzazioni extracraniche nel 4-12% dei sospetti PCNSL. Se la PET/TC non è disponibile, si ricorre a TC collo-torace-addome-pelvi con contrasto, aspirato/biopsia osteomidollare ed ecografia testicolare. Prima del trattamento vanno inoltre eseguiti emocromo, LDH, funzionalità renale, epatica e cardiaca, oltre a una valutazione cognitiva e della qualità di vita quando possibile.
 
-#### Punti chiave
-- RM encefalo/midollo, liquor, valutazione oftalmologica, FDG-PET/TC (o stadiazione sistemica alternativa se non disponibile).
-- Bilancio pre-trattamento: funzione renale/epatica/cardiaca, valutazione cognitiva/QoL.
-
 
 ## Fattori prognostici
 Il punteggio prognostico di riferimento è l'**IELSG score**, basato su cinque fattori: età superiore a 60 anni, ECOG 2-4, LDH elevato, proteinorrachia elevata e interessamento di strutture cerebrali profonde. Il numero di fattori sfavorevoli stratifica l'OS a 2 anni: circa 80% con 0-1 fattori, 48% con 2-3 fattori, 15% con 4-5 fattori. Nella pratica, l'età non deve essere l'unico criterio di fitness: vanno valutati performance status, comorbidità, fragilità, funzione renale (eGFR/clearance superiore a 50 mL/min), funzione epatica e LVEF superiore a 45%.
-
-#### Punti chiave
-- IELSG score: età >60 anni, ECOG 2-4, LDH elevato, proteinorrachia elevata, sede profonda.
-- OS a 2 anni ~80% (0-1 fattori), 48% (2-3), 15% (4-5).
-- Fitness (non l'età anagrafica) guida la scelta terapeutica.
 
 
 ## Terapia di prima linea
@@ -64,11 +36,6 @@ Il ruolo del rituximab in prima linea resta oggetto di discussione reale, non so
 
 La chemioterapia intratecale non è di routine se l'HD-MTX è somministrato a dosaggio adeguato; va considerata solo in caso di persistenza liquorale/meningea o impossibilità a ricevere MTX maggiore o uguale a 3 g/m2.
 
-#### Punti chiave — Induzione
-- HD-MTX ≥3 g/m2 è il cardine; MATRix (HD-MTX/HD-AraC/rituximab/thiotepa) è lo standard nei fit.
-- IELSG32: CR 49% (MATRix) vs 30% vs 23%; a 7 anni OS 56%/37%/21%, MATRix + consolidamento OS a 7 anni ~70%.
-- Rituximab: beneficio suggerito da IELSG32 ma **non confermato** dall'RCT dedicato HOVON 105/ALLG NHL 24 (EFS e OS non significative).
-- Intratecale non di routine se HD-MTX adeguato.
 
 ### Consolidamento
 Nei pazienti fit con risposta o malattia stabile dopo l'induzione, la **HDC-ASCT con condizionamento a base di thiotepa** è la strategia di consolidamento raccomandata; i condizionamenti preferiti sono carmustina-thiotepa oppure thiotepa-busulfano-ciclofosfamide, mentre il BEAM non è preferito per la penetrazione insufficiente nel SNC. Nel confronto diretto tra le due strategie di consolidamento, IELSG32 ha mostrato una PFS a 2 anni sovrapponibile tra ASCT (75%) e WBRT (76%), mentre il trial randomizzato francese **PRECIS** ha mostrato un vantaggio per ASCT (PFS a 2 anni 86% vs 67% con WBRT). Il follow-up a 7 anni di IELSG32 conferma l'efficacia comparabile di WBRT e ASCT come consolidamento, con un tasso di secondi tumori basso (4%) e senza eccesso di mortalità non da recidiva con MATRix o ASCT; la terapia di salvataggio alla recidiva è stata invece largamente inefficace, con beneficio solo nelle recidive tardive ritrattate con metotrexato (Ferreri et al., *Leukemia* 2022).
@@ -81,34 +48,17 @@ Un trial randomizzato di fase II del gruppo NRG Oncology (91 pazienti, follow-up
 
 Una serie retrospettiva multicentrica reale (registro ceco NiHiL, 88 pazienti trattati con MATRix) conferma la trasferibilità dei risultati di IELSG32 alla pratica clinica corrente, con ORR 82%, CR 58%, PFS a 4 anni 53% e OS a 4 anni 55%, senza differenza significativa tra consolidamento con WBRT o ASCT (Vodicka et al., *Hematological Oncology* 2025, [DOI](https://doi.org/10.1002/hon.70142)).
 
-#### Punti chiave — Consolidamento
-- ASCT (thiotepa-based) è il consolidamento preferito nei fit; WBRT resta alternativa con efficacia comparabile (IELSG32) o lievemente inferiore (PRECIS).
-- A lungo termine ASCT è associata a miglioramento cognitivo, WBRT a peggioramento di attenzione/funzioni esecutive; ASCT ha però maggiore tossicità ematologica/infettiva acuta.
-- ++RCT NRG (2026): aggiungere LD-WBRT (23,4 Gy) a R-MPV-A migliora la PFS senza peggiorare la cognizione — da conoscere per sfumare il dogma "WBRT = solo tossicità".++
-- Real-world (registro NiHiL, 2025): conferma gli outcome di IELSG32 con MATRix fuori trial.
 
 ### Paziente anziano/non candidabile ASCT
 Se la funzione renale è preservata, l'HD-MTX maggiore o uguale a 3 g/m2 è utilizzabile anche nell'anziano: la dose non va ridotta per la sola età. I regimi possibili comprendono MPV-A, ReMP, ReMBVP e R-MT. Nello studio di confronto MPV-A vs MT, l'ORR è stato 82% vs 71%, con PFS a 2 anni sovrapponibile (30% in entrambi i gruppi); ReMP è un'opzione valutata prospetticamente nel paziente oltre 65 anni. La sorveglianza attiva è possibile solo in caso di CR dopo induzione consolidata, mentre il mantenimento con agenti orali o lenalidomide resta individualizzato, senza uno standard definito.
 
-#### Punti chiave — Paziente anziano
-- HD-MTX non va ridotto per la sola età se la funzione renale è preservata.
-- Regimi: MPV-A, ReMP, ReMBVP, R-MT; ORR e PFS a 2 anni comparabili tra schemi.
-- Mantenimento non standardizzato.
 
 ### Paziente non idoneo a HD-MTX
 Nella fragilità severa, se non è atteso un beneficio clinico significativo, va privilegiata la best supportive care. Le opzioni palliative comprendono corticosteroidi, temozolomide/procarbazina/carmustina con o senza rituximab, BTK inibitori o immunomodulatori in contesti selezionati, e WBRT 30-36 Gy in 10-15 frazioni.
 
-#### Punti chiave — Non idoneo a HD-MTX
-- Best supportive care nella fragilità severa senza beneficio atteso.
-- Palliazione: steroidi, TMZ/procarbazina/carmustina ± rituximab, BTK inibitori, WBRT ipofrazionata.
-
 
 ## Linfoma vitreoretinico primitivo
 Il rischio di disseminazione al SNC nel linfoma vitreoretinico primitivo è elevato, tra il 56% e il 90% entro 30 mesi. Nel paziente fit il trattamento ricalca quello del PCNSL, con HD-MTX come cardine, a cui si può aggiungere MTX intravitreale se serve una risposta oculare rapida; in caso di risposta si può considerare RT oculare bilaterale a basse dosi, mentre l'ASCT resta discutibile nei casi selezionati. Nel paziente non fit, MTX intravitreale, RT oculare e temozolomide sono opzioni percorribili. Alla recidiva, i pazienti fit ricevono una seconda linea seguita da HDC-ASCT, mentre nei fragili si utilizzano ibrutinib, lenalidomide, temozolomide e trattamenti locali.
-
-#### Punti chiave
-- Rischio di disseminazione al SNC 56-90% entro 30 mesi.
-- Trattamento ricalca il PCNSL nel fit; opzioni locali/palliative nel non fit.
 
 
 ## Terapia della malattia recidivata/refrattaria
@@ -120,22 +70,12 @@ Lenalidomide e pomalidomide, con o senza rituximab, restano opzioni a beneficio 
 
 Le terapie **CAR-T anti-CD19** rappresentano l'area più recente di sviluppo. Il tisagenlecleucel è stato valutato in un trial prospettico di fase 1/2 dedicato al PCNSL recidivato (12 pazienti fortemente pretrattati, categoria esclusa dagli studi registrativi in DLBCL sistemico per il coinvolgimento del SNC), con risposta obiettiva nel 58,3% (7/12) e risposta completa nel 50% (6/12) dei pazienti, alcune durature; la tossicità è stata gestibile, con CRS di basso grado nel 58% e ICANS di grado 3 o superiore in un solo paziente, senza decessi correlati al trattamento (Frigault et al., *Blood* 2022, [DOI](https://doi.org/10.1182/blood.2021014738)). I dati restano preliminari e derivano soprattutto da questo trial dedicato o da piccole casistiche/case report con altri prodotti (axicabtagene ciloleucel, brexucabtagene autoleucel); nessun prodotto CAR-T ha attualmente un'approvazione specifica per il PCNSL.
 
-#### Punti chiave
-- Rechallenge HD-MTX nella recidiva tardiva; consolidamento ASCT/WBRT se risposta.
-- Ibrutinib: DC/ORR 70-77%, CR 19-38%, PFS mediana 4-5 mesi, OS mediana ~19 mesi (iLOC); attenzione all'aspergillosi invasiva, anche fatale — profilassi antifungina.
-- Lenalidomide/pomalidomide: beneficio limitato; pembrolizumab: attività preliminare (ORR ~26%).
-- CAR-T (tisagenlecleucel): trial di fase 1/2 dedicato al PCNSL, CR 50% (6/12), tossicità gestibile; nessuna approvazione specifica per il PCNSL.
-
 
 ## Follow-up
 Il follow-up prevede RM encefalo ogni 3 mesi per i primi 2 anni, ogni 6 mesi per i 3 anni successivi, poi annualmente, con un follow-up complessivo di almeno 10 anni. L'esame oftalmologico è annuale se non c'è interessamento iniziale, più frequente in caso di coinvolgimento oculare o deterioramento visivo. Il liquor va rivalutato solo in caso di sospetto clinico/radiologico di recidiva, mentre la valutazione neurocognitiva e della qualità di vita andrebbe eseguita annualmente, almeno nei trial clinici e nei lungosopravviventi.
 
-#### Punti chiave
-- RM ogni 3 mesi (primi 2 anni), poi ogni 6 mesi (3 anni successivi), poi annuale; follow-up complessivo ≥10 anni.
-- Valutazione neurocognitiva/QoL annuale nei lungosopravviventi.
 
-
-## Punti ad alta resa per orale
+## Punti chiave
 - PCNSL: evitare steroide prima di biopsia, salvo emergenza clinica.
 - Biopsia stereotassica, non resezione, è standard diagnostico.
 - HD-MTX maggiore o uguale a 3 g/m2 è il cardine; CHOP è inefficace perché non supera bene la barriera ematoencefalica.

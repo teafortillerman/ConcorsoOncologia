@@ -12,10 +12,6 @@ Questa scheda si basa sulla ESMO CPG Tiroide 2019 (Filetti et al., Ann Oncol 201
 
 L'incidenza del carcinoma tiroideo è in costante aumento a livello mondiale nelle ultime tre decadi, un trend quasi interamente dovuto alla crescita delle diagnosi di **carcinoma papillare (PTC)**; gli istotipi follicolare (FTC), anaplastico (ATC) e midollare (MTC) hanno invece un'incidenza sostanzialmente stabile nel tempo. L'incidenza è circa tripla nelle donne rispetto agli uomini (9,3 vs 3,1 casi/100.000 persone-anno, dati 2012), con ampia variabilità geografica: i tassi più alti sono riportati in Lituania (15,5), **Italia (13,5)**, Austria (12,4), Croazia (11,4) e Lussemburgo (11,1) per 100.000 persone-anno. A fronte di questo aumento di incidenza, la mortalità resta bassa e stabile (0,7 nelle donne e 0,5 negli uomini per 100.000 persone-anno), con minima variabilità regionale e temporale — un pattern che riflette la natura del fenomeno: l'uso crescente di tecniche di imaging, procedure bioptiche (FNA) e sorveglianza medica porta a **overdiagnosis** di PTC piccoli e subclinici, spesso accompagnata da **overtreatment**.
 
-#### Punti chiave
-- Incidenza in aumento (soprattutto PTC, overdiagnosis/overtreatment), mortalità bassa e stabile — dissociazione tipica di questo tumore.
-- Italia tra i paesi a più alta incidenza in Europa (13,5/100.000).
-- Istotipi a incidenza stabile: follicolare, anaplastico, midollare.
 
 ## Carcinoma Differenziato (DTC) e Scarsamente Differenziato
 
@@ -36,18 +32,11 @@ Gli altri istotipi hanno profili molecolari caratteristici, riassunti nella tabe
 
 La mutazione **BRAF V600E** è frequente nel PTC e si associa a un comportamento clinicopatologico più aggressivo, ma il suo test di routine su tutti i PTC non è stabilito come necessario.
 
-#### Punti chiave — Patologia
-- NIFTP: non più "carcinoma", rischio di recidiva <1%, mutazioni RAS non BRAF — fino al 20% dei casi in Europa.
-- Carcinoma a cellule di Hürthle: entità distinta dal FTC, generalmente più aggressivo.
-- BRAF V600E: frequente nel PTC classico, associato a fenotipo più aggressivo; test non obbligatorio di routine su tutti i PTC.
 
 ### Diagnosi
 
 La FNA (agoaspirato) non è richiesta per i noduli ≤1 cm; la decisione di eseguirla si basa su dimensioni e aspetto ecografico. Le categorie citologiche di riferimento comportano rischi di malignità differenti, e sia il FTC sia il NIFTP sono spesso classificati come **indeterminati** — una zona grigia in cui marcatori aggiuntivi (proteine come HBME1 e galectina-3, oppure pannelli genici che includono mutazioni BRAF e fusioni RET) possono orientare la decisione clinica.
 
-#### Punti chiave
-- FNA non necessaria per noduli ≤1 cm; decisione guidata da dimensioni ed ecografia.
-- FTC e NIFTP spesso citologicamente "indeterminati" — pannelli molecolari (BRAF, RET) utili in questi casi.
 
 ### Stadiazione (UICC TNM 8ª edizione)
 
@@ -65,10 +54,6 @@ La TNM 8 ha introdotto due cambiamenti chiave per il DTC. Il primo riguarda il d
 | N1a | Livello VI (pretracheali, paratracheali, prelaringei/Delphian) o mediastino superiore |
 | N1b | Altri compartimenti cervicali uni/bilaterali/controlaterali (I, II, III, IV, V) o retrofaringei |
 
-#### Punti chiave
-- pT3b: introdotta per l'estensione extratiroidea macroscopica nei muscoli pretiroidei; l'estensione solo microscopica non modifica più lo stadio T oltre le dimensioni.
-- Cut-off di età aumentato da 45 a 55 anni (solo PTC/FTC/Hürthle/scarsamente differenziato).
-- T3, N1a, N1b "declassati" a stadio II rispetto alla TNM 7 — punto spesso richiesto agli esami.
 
 ### Stratificazione del rischio di recidiva/persistenza (ATA 2015)
 
@@ -78,9 +63,6 @@ La TNM 8 ha introdotto due cambiamenti chiave per il DTC. Il primo riguarda il d
 | Intermedio (6-20%) | PTC con invasione microscopica dei tessuti peritiroidei, sintomi tumore-correlati, tumore <4 cm BRAF V600E-mutato, istologia aggressiva, invasione vascolare, micro-carcinoma papillare multifocale con estensione extratiroidea e BRAF V600E, N1 clinico/patologico (>5 linfonodi <3 cm) |
 | Alto (>20%) | PTC con estensione extratiroidea grossolana, N1 con metastasi >3 cm, estensione extranodale, mutazioni concomitanti BRAF V600E + TERT (>40% — sinergia), Tg postoperatorio suggestivo di metastasi a distanza, resezione incompleta, metastasi a distanza (rischio praticamente 100%) |
 
-#### Punti chiave
-- Coesistenza BRAF V600E + TERT: sinergia che porta il rischio di recidiva oltre il 40% — combinazione mutazionale ad alto impatto prognostico, tra i dati più richiesti agli esami.
-- Metastasi a distanza al momento della diagnosi: rischio di recidiva/persistenza praticamente del 100%.
 
 ### Trattamento chirurgico
 
@@ -90,11 +72,6 @@ Quando si opera, la **tiroidectomia totale** resta lo standard per la maggior pa
 
 La dissezione centrale del collo profilattica ha un uso variabile da centro a centro [IV, C]: l'evidenza sulla recurrence-free survival è contrastante, con una riduzione moderata di recidiva centrale (5-10%) ma nessun miglioramento di OS; nei tumori più invasivi (T3-T4) può però migliorare il controllo regionale [IV, C].
 
-#### Punti chiave
-- Sorveglianza attiva possibile per microcarcinomi papillari unifocali ≤10 mm; l'età è il principale predittore di progressione.
-- Lobectomia sola: non inferiore alla tiroidectomia totale in termini di OS nei tumori a basso rischio selezionati.
-- Tiroidectomia totale: ipoparatiroidismo 8,1% (quasi doppio vs lobectomia), nervo ricorrente 2,5%.
-- Dissezione centrale profilattica: riduce la recidiva centrale ma non l'OS; ruolo più solido nei T3-T4.
 
 ### Terapia con radioiodio (RAI, ¹³¹I)
 
@@ -104,10 +81,6 @@ L'indicazione al RAI segue la stratificazione del rischio: **non è raccomandato
 
 Un punto consolidato dall'evidenza (trial **ESTIMABL1** e **HiLo**): nei pazienti a basso rischio, la bassa attività (30 mCi) dopo rhTSH e l'alta attività (100 mCi) dopo sospensione della levotiroxina sono **ugualmente efficaci** per l'ablazione [I, A], con equivalenza confermata anche in termini di recurrence-free survival a lungo termine.
 
-#### Punti chiave
-- RAI non raccomandato in rischio molto basso (DTC ≤1 cm intratiroideo) — evitare overtreatment.
-- Rischio alto: RAI ad alte attività (≥100 mCi). Rischio intermedio: opzionale, dose individualizzata.
-- ESTIMABL1/HiLo: equivalenza tra bassa attività+rhTSH e alta attività+sospensione levotiroxina per l'ablazione in basso rischio.
 
 ### Follow-up
 
@@ -117,10 +90,6 @@ L'ecografia del collo resta lo strumento più efficace per rilevare malattia str
 
 Il target di TSH soppressivo va modulato sul rischio: 0,5-2 mIU/mL nel rischio basso, 0,1-0,5 mIU/mL nel rischio intermedio o in risposta incompleta biochimica/indeterminata, <0,1 mIU/mL in risposta strutturale incompleta o malattia ad alto rischio.
 
-#### Punti chiave
-- Tg soppressa <1 ng/mL dopo tiroidectomia+RAI: altamente predittiva di risposta eccellente. TgAb sempre da valutare in parallelo (falsi Tg).
-- FDG-PET/TC: prima scelta di imaging isotopico in malattia RAI-refrattaria — a differenza del MTC, dove non è raccomandata di routine.
-- Target TSH scala con il rischio: da 0,5-2 (basso) a <0,1 mIU/mL (alto rischio/risposta strutturale incompleta).
 
 ### Malattia avanzata/metastatica
 
@@ -130,10 +99,6 @@ La definizione di **malattia RAI-refrattaria** [IV, A] è centrale per decidere 
 
 Il trattamento con RAI per le metastasi a distanza prevede dosi di 100-200 mCi dopo stimolazione del TSH [IV, A]; se le lesioni sono RAI-avide, la somministrazione avviene ogni 6 mesi per 2 anni e poi meno frequentemente, mentre una dose cumulativa oltre 600 mCi rende la cura improbabile. Circa un paziente su tre con metastasi a distanza viene effettivamente curato con RAI, con aspettativa di vita quasi normale — tipicamente pazienti giovani con DTC ben differenziato e piccole lesioni non FDG-avide. Al contrario, la sopravvivenza a 5 anni in malattia RAI-refrattaria scende sotto il 50%, ed è in questa popolazione che si pone l'indicazione alla terapia sistemica.
 
-#### Punti chiave
-- Definizione di malattia RAI-refrattaria: 4 criteri (non captazione iniziale, non captazione dopo trattamento, captazione discordante tra lesioni, progressione RECIST nonostante captazione) — fondamentale per il passaggio a terapia sistemica.
-- Un terzo dei pazienti metastatici è RAI-refrattario fin dall'inizio; sopravvivenza a 5 anni <50% in questo gruppo.
-- Dose cumulativa RAI >600 mCi: cura improbabile.
 
 ### Terapia sistemica in malattia RAI-refrattaria avanzata/metastatica
 
@@ -155,12 +120,6 @@ Resta inoltre approvato **larotrectinib** per i tumori con fusione NTRK, indipen
 
 Il trattamento con MKI o target therapy va proseguito fino a progressione, tossicità inaccettabile o richiesta del paziente; in caso di progressione in singola sede è possibile un trattamento locoregionale senza interrompere la terapia sistemica in corso [V, C].
 
-#### Punti chiave — Terapia sistemica DTC
-- Prima linea: lenvatinib (SELECT, PFS 18,3 mesi) o sorafenib (DECISION, PFS 10,8 mesi) — mai confrontati testa a testa, non intercambiabili nel giudizio di superiorità.
-- **Cabozantinib (COSMIC-311)**: seconda linea nel DTC RAI-refrattario dopo lenvatinib/sorafenib, non solo nel midollare — PFS HR 0,22.
-- **Dabrafenib+trametinib** (Lancet Oncol 2026, fase III vs placebo): nuovo standard emergente in seconda linea nel DTC BRAF V600E-mutato RAI-refrattario, PFS HR 0,38, ORR 57%; OS ancora immatura. CHMP positivo maggio 2026.
-- Larotrectinib: tissue-agnostic per fusioni NTRK, indipendentemente dall'istotipo.
-- Redifferenziazione RAI (dabrafenib/vemurafenib/selumetinib): ancora sperimentale, nessuna approvazione per questa indicazione.
 
 ### Tossicità dei MKI e delle target therapy
 
@@ -170,12 +129,6 @@ I farmaci a bersaglio più selettivo hanno in generale un profilo di tossicità 
 
 In tutti i pazienti candidati a MKI va infine discussa la preservazione della fertilità prima del trattamento: questi farmaci possono causare danno fetale grave e ridotta fertilità in entrambi i sessi.
 
-#### Punti chiave
-- Sorafenib: rischio di carcinoma squamocellulare cutaneo secondario (attivazione paradossa MAPK) — gestibile senza sospendere il farmaco.
-- Lenvatinib: interruzioni/riduzioni di dose molto frequenti (82,4%/67,8%) — attenzione a non ridurre eccessivamente l'intensità di dose, che si associa a minor beneficio.
-- Dabrafenib+trametinib: retinopatia sierosa nel 7% dei pazienti (DTC, trial 2026) — sorvegliare i sintomi visivi.
-- Farmaci selettivi (NTRK/RET): tossicità generalmente più contenuta, per lo più grado 1-2.
-- MKI: discutere sempre preservazione della fertilità prima di iniziare.
 
 ### Gestione locoregionale delle metastasi
 
@@ -183,10 +136,6 @@ Le metastasi ossee comportano un rischio di eventi scheletrici correlati (SRE) f
 
 Le metastasi polmonari sono solitamente multiple, bilaterali e asintomatiche: la metastasectomia non è standard ma è considerabile in oligometastasi con buon performance status, mentre la radiofrequenza (RFA) è un'opzione per lesioni singole <2-3 cm. Le metastasi epatiche sono rare nel DTC (più comuni nel MTC); l'ablazione locale con RFA è indicata per lesioni singole <30 mm e a ≥3 mm di distanza dai vasi.
 
-#### Punti chiave
-- Metastasi ossee multiple: bifosfonati/denosumab raccomandati, previa valutazione dentale (osteonecrosi mandibolare).
-- Metastasi polmonari: RFA opzione per lesioni singole <2-3 cm; metastasectomia non standard.
-- Metastasi epatiche: più tipiche del MTC che del DTC.
 
 ## Carcinoma Anaplastico (ATC)
 
@@ -196,10 +145,6 @@ L'ATC è uno dei tumori solidi più aggressivi nell'uomo: la sopravvivenza media
 
 Il workup va condotto con urgenza: conferma istologica con almeno core biopsy (la sola citologia è insufficiente per escludere linfoma, midollare o carcinoma scarsamente differenziato) [V, A], stadiazione completa con imaging cross-sezionale, FDG-PET/TC (molto sensibile per malattia M1) [IV, A], valutazione fibroscopica delle vie aeree e della funzione delle corde vocali, con eventuale revisione endoscopica per invasione esofagea [IV, A], e discussione obbligatoria in team multidisciplinare che includa le cure palliative [V, A].
 
-#### Punti chiave
-- ATC: tumore solido più aggressivo, sopravvivenza mediana ~4 mesi, sopravvivenza a 1 anno 10-20%.
-- TNM 8: ATC non più automaticamente pT4 — stadiato come gli altri istotipi in base a dimensioni/estensione.
-- Workup urgente: core biopsy obbligatoria (mai solo citologia), team multidisciplinare con cure palliative fin dall'inizio.
 
 ### Trattamento della malattia locoregionale
 
@@ -209,11 +154,6 @@ Per i casi con resezione completa o quasi completa (R0/R1), la radioterapia post
 
 Un'area in rapida evoluzione è quella della **terapia neoadiuvante** nei tumori BRAF V600E-mutati inizialmente non resecabili: casistiche monocentriche con dabrafenib+trametinib somministrati prima della chirurgia hanno permesso la resezione completa (R0/R1) in pazienti altrimenti non operabili, e un'analisi retrospettiva dedicata ha mostrato che la chirurgia dopo terapia BRAF-diretta si associa a un significativo miglioramento della sopravvivenza rispetto alla sola terapia sistemica. Più recentemente, l'aggiunta di un anti-PD-1/PD-L1 alla combinazione neoadiuvante dabrafenib+trametinib è stata esplorata in trial di fase II dedicati, con l'obiettivo di aumentare ulteriormente il tasso di resezione completa — approccio ancora non standard ma sempre più utilizzato nei centri di riferimento per l'ATC. Il dettaglio farmacologico e i dati di risposta sono trattati nella sezione di terapia sistemica.
 
-#### Punti chiave
-- Debulking/R2: non raccomandato, non modifica la prognosi — trabocchetto classico.
-- Terapia multimodale (chirurgia radicale + RT ≥40 Gy + CT): outcome nettamente migliori, specie in stadio IVB.
-- IMRT raccomandata; beneficio dose-dipendente, massimo oltre 60 Gy.
-- Terapia neoadiuvante con dabrafenib+trametinib (± anti-PD-1) nei BRAF-mutati: può rendere resecabili tumori inizialmente non operabili, con beneficio di sopravvivenza documentato in analisi retrospettive.
 
 ### Terapia sistemica avanzata/metastatica
 
@@ -231,11 +171,6 @@ Per i rari casi di ATC con **fusione di RET** (alterazione presente in una minor
 
 In assenza di mutazioni targettabili, restano opzioni l'immunoterapia (dati preliminari) o la chemioterapia palliativa.
 
-#### Punti chiave — Terapia sistemica ATC
-- Dabrafenib+trametinib: prima linea raccomandata nel BRAF-mutato. ORR maturo 56% (non più 69%, dato dell'analisi interim iniziale), OS mediana 14,5 mesi (coorte ROAR aggiornata, 36 pazienti).
-- Profilazione molecolare estesa raccomandata in tutti i pazienti ATC: BRAF 25%, RAS 28%, rare fusioni RET (responsive a selpercatinib, dati aneddotici).
-- Spartalizumab: risposte nel 19,5% in pretrattati pesantemente — apre la strada all'immunoterapia in ATC; combinazioni anti-PD-(L)1 + BRAF/MEK in studio.
-- In assenza di target: chemioterapia palliativa o immunoterapia.
 
 ## Carcinoma Midollare (MTC)
 
@@ -245,11 +180,6 @@ Il MTC è morfologicamente eterogeneo e può mimare praticamente tutti gli altri
 
 Sul piano genetico, mutazioni di **RET** e **RAS** sono rilevate in circa il 90% degli MTC e ne rappresentano i driver predominanti. Le mutazioni RET possono essere sporadiche (somatiche) o germinali, queste ultime associate a MTC familiare o alle sindromi **MEN2A e MEN2B**: un quarto degli MTC si presenta come parte di una sindrome ereditaria, e mutazioni germinali RET sono presenti fino al 10% dei pazienti con MTC apparentemente sporadico — per questo **tutti i pazienti con MTC devono ricevere counseling genetico ed essere sottoposti a screening per mutazioni germinali RET** [IV, A]. Tra gli MTC sporadici con metastasi a distanza, il 91,4% porta mutazioni RET somatiche, nella maggior parte dei casi **RET M918T** (93,8%). Il test RET somatico è oggi necessario ogni volta che si pianifica un trattamento con inibitori RET selettivi, per personalizzare la terapia [III, C] — un passaggio ancora più rilevante da quando selpercatinib è diventato lo standard di prima linea nel MTC RET-mutato (vedi terapia sistemica).
 
-#### Punti chiave
-- Diagnosi: espressione di calcitonina obbligatoria; CEA utile nei rari Ctn-negativi.
-- Screening RET germinale obbligatorio in **tutti** i pazienti con MTC, anche apparentemente sporadico (10% ha mutazione germinale).
-- RET M918T: mutazione somatica più frequente negli MTC sporadici metastatici (93,8%).
-- Test RET somatico oggi imprescindibile per guidare la scelta tra selpercatinib e MKI multitarget in I linea.
 
 ### Stadiazione e marcatori
 
@@ -257,10 +187,6 @@ La stadiazione TNM (UICC 8ª edizione) segue la stessa struttura del DTC, ma sen
 
 Una Ctn postoperatoria non rilevabile (<10 pg/mL) identifica il paziente "biochemically cured", con sopravvivenza a 10 anni del 97,7% (anche se il 3% presenta comunque una recidiva biochimica entro 7,5 anni). Il predittore più solido di comportamento tumorale, recidiva e mortalità cancro-correlata non è però il valore assoluto di Ctn/CEA, ma il loro **tempo di raddoppiamento** [IV, B]: un tempo di raddoppiamento della Ctn >6 mesi si associa a una sopravvivenza a 5 e 10 anni rispettivamente del 92% e del 37%, mentre tempi di raddoppiamento più brevi si associano a sopravvivenze molto peggiori (25% e 8% a 5 e 10 anni). Il calcolo va basato su almeno 4 misurazioni consecutive, preferibilmente su un periodo di 2 anni [IV, C], eseguite sempre nello stesso laboratorio con lo stesso test.
 
-#### Punti chiave
-- TNM MTC: stessa struttura del DTC, ma senza cut-off di età.
-- Ctn preoperatoria guida l'estensione della chirurgia: <20 → tiroidectomia sola; soglie crescenti (50, 200, 500 pg/mL) → dissezioni linfonodali progressivamente più estese, fino al sospetto di malattia a distanza sopra 500 pg/mL.
-- Tempo di raddoppiamento di Ctn/CEA, non il valore assoluto isolato: miglior predittore prognostico disponibile nel MTC.
 
 ### Trattamento chirurgico
 
@@ -268,10 +194,6 @@ Prima di qualsiasi intervento è obbligatorio lo screening preoperatorio per feo
 
 Nei portatori di mutazione germinale, il timing della tiroidectomia profilattica dipende dal rischio genotipo-specifico: nella mutazione **RET M918T** (alto rischio, MEN2B) la tiroidectomia totale va eseguita **entro il primo anno di vita** — il rischio più alto e più precoce tra tutte le mutazioni RET; per **C634F o A883F** (alto rischio) la chirurgia è posticipabile fino a 5 anni, salvo aumento della Ctn; per le altre mutazioni è sufficiente un monitoraggio da 5 anni con Ctn ed ecografia del collo, riservando la chirurgia a un aumento della Ctn o su richiesta dei genitori.
 
-#### Punti chiave
-- Screening feocromocitoma/iperparatiroidismo obbligatorio prima della chirurgia (eccetto MEN2B nota).
-- Estensione della dissezione linfonodale guidata dalla Ctn preoperatoria (soglie a 20, 50, 200 pg/mL).
-- Timing tiroidectomia profilattica: RET M918T entro il primo anno di vita (rischio più alto e più precoce); C634F/A883F entro i 5 anni; altre mutazioni solo monitoraggio fino a evidenza di malattia.
 
 ### Follow-up
 
@@ -279,10 +201,6 @@ Ctn e CEA sono inclusi nel workup postoperatorio, sia precoce sia a lungo termin
 
 Per l'imaging, la TC whole-body con contrasto è utilizzata per la stima del carico sistemico, mentre la RM con contrasto è più sensibile per le lesioni epatiche ed è raccomandata per le metastasi cerebrali. La **FDG-PET/TC non è raccomandata per la stadiazione**, per la bassa avidità metabolica di un tumore tipicamente indolente — a differenza del DTC RAI-refrattario, dove è invece l'imaging isotopico di prima scelta — ma resta utile in malattia avanzata con dedifferenziazione. La **FDOPA-PET** ha alta sensibilità e specificità, ma il suo impiego è limitato da problemi di costo e disponibilità.
 
-#### Punti chiave
-- FDG-PET/TC: non raccomandata per la stadiazione di routine del MTC (tumore indolente, bassa avidità metabolica) — opposto del DTC RAI-refrattario.
-- RM con contrasto: preferita per lesioni epatiche e cerebrali.
-- FDOPA-PET: alta accuratezza ma limitata da costo/disponibilità.
 
 ### Terapia sistemica avanzata/metastatica
 
@@ -296,11 +214,6 @@ Il trial **LIBRETTO-531** (fase III, randomizzato, in aperto, n=291) ha confront
 
 Nei pazienti RET-mutato-negativi, o quando selpercatinib non è disponibile/indicato, cabozantinib e vandetanib restano opzioni valide di prima linea, con il profilo di tossicità più impegnativo (vandetanib: prolungamento del QT, necessario monitoraggio ECG) rispetto ai farmaci selettivi. In caso di progressione con lesione singola è possibile un trattamento locoregionale; con lesioni multiple in progressione si ricorre alla terapia sistemica come sopra descritta.
 
-#### Punti chiave
-- **LIBRETTO-531**: selpercatinib I linea vs cabozantinib/vandetanib nel MTC RET-mutato — PFS non raggiunta vs 16,8 mesi (HR 0,28), ORR 69,4% vs 38,8%, tollerabilità nettamente migliore. Oggi standard di I linea, approvato EMA/rimborsato AIFA (dic. 2024).
-- **Pralsetinib ritirato** dall'indicazione MTC (US giugno 2023, EU a seguire) per fallimento del trial di conferma — non più opzione disponibile in questa indicazione, solo NSCLC.
-- Cabozantinib/vandetanib: da opzioni di I linea "storiche" a opzioni per RET-negativi o dopo selpercatinib.
-- Vandetanib: prolungamento QT, monitoraggio ECG obbligatorio.
 
 ## Farmaci e classi rilevanti
 - **Terapia radiometabolica**: radioiodio (¹³¹I) — solo per DTC (non midollare, non anaplastico, che non captano iodio).
@@ -318,13 +231,8 @@ Le tossicità da radioiodio sono in genere lievi e prevedibili — xerostomia, a
 
 Sul fronte del supporto osseo, bifosfonati e denosumab comportano un rischio di osteonecrosi mandibolare che impone una valutazione dentale obbligatoria prima dell'inizio della terapia. Sul fronte chirurgico, la tiroidectomia totale comporta ipoparatiroidismo (8,1%) e lesione del nervo laringeo ricorrente (2,5%).
 
-#### Punti chiave
-- MKI multitarget: tossicità di classe (ipertensione, mano-piede, diarrea, proteinuria); sorafenib → rischio SCC cutaneo; vandetanib → QT lungo, ECG obbligatorio.
-- Dabrafenib+trametinib: piressia, tossicità cardiaca; nel DTC segnalata anche retinopatia sierosa (7%) — nuovo dato dal trial di fase III 2026.
-- Farmaci RET-selettivi: tossicità più contenuta rispetto ai MKI multitarget.
-- Bifosfonati/denosumab: valutazione dentale obbligatoria (osteonecrosi mandibolare).
 
-## Punti ad alta resa per orale
+## Punti chiave
 - **NIFTP**: non più "carcinoma" — rischio di recidiva <1%, mutazioni RAS non BRAF; riconoscerlo evita overtreatment.
 - **Cut-off di età nella stadiazione TNM 8**: aumentato da 45 a 55 anni per PTC/FTC/Hürthle — punto spesso richiesto agli esami.
 - **pT3b**: introdotto nella TNM 8 per l'estensione extratiroidea macroscopica nei muscoli pretiroidei; l'estensione solo microscopica non modifica più lo stadio T oltre le dimensioni.

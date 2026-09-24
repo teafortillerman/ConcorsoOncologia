@@ -133,7 +133,7 @@ Un **nuovo standard emergente** è rappresentato dal **NALIRIFOX** (nal-irinotec
 
 La scelta del regime dipende dal performance status e dall'età: FOLFIRINOX o NALIRIFOX sono riservati a pazienti PS 0-1 e età ≤75; gemcitabina più nab-paclitaxel è appropriata per PS compromesso o età avanzata; la gemcitabina monoterapia rimane un'opzione in pazienti molto compromessi (KPS 50-70).
 
-**Un capitolo critico riguarda i pazienti BRCA1/2 germinale-positivi.** Questi pazienti ricevono schemi a base di platino come prima scelta, con potenziale beneficio dal mantenimento con olaparib (studio POLO) in quelli che raggiungono una risposta (PFS 7,4 vs 3,8 mesi, HR 0,53), nonostante l'OS non sia risultata significativamente migliorata nell'analisi finale di POLO (19,0 vs 19,2 mesi, HR 0,83; p=0,35), pur con una sopravvivenza a 3 anni del 33,9% contro il 17,8%. Per anni questo ha rappresentato un gap regolatorio rilevante in Italia, poiché AIFA aveva negato la rimborsabilità di olaparib per questa indicazione dal 2023; ==**dal 2026 AIFA ha ribaltato la decisione e rimborsa il mantenimento con olaparib** in monoterapia nei pazienti gBRCA1/2-mutati senza progressione dopo ≥16 settimane di platino di prima linea==, allineando l'accesso italiano all'evidenza clinica del POLO — un cambiamento importante da conoscere per l'esame, insieme alla persistenza del beneficio in PFS senza vantaggio dimostrato in OS.
+**Un capitolo critico riguarda i pazienti BRCA1/2 germinale-positivi.** Questi pazienti ricevono schemi a base di platino come prima scelta, con potenziale beneficio dal mantenimento con olaparib (studio POLO) in quelli che raggiungono una risposta (PFS 7,4 vs 3,8 mesi, HR 0,53), nonostante l'OS non sia risultata significativamente migliorata nell'analisi finale di POLO (19,0 vs 19,2 mesi, HR 0,83; p=0,35), pur con una sopravvivenza a 3 anni del 33,9% contro il 17,8%. Per anni questo ha rappresentato un gap regolatorio rilevante in Italia, poiché AIFA aveva negato la rimborsabilità di olaparib per questa indicazione dal 2023; ==**dal 2026 AIFA ha ribaltato la decisione e rimborsa il mantenimento con olaparib** in monoterapia nei pazienti gBRCA1/2-mutati senza progressione dopo ≥16 settimane di platino di prima linea==, allineando l'accesso italiano all'evidenza clinica del POLO — un cambiamento importante da conoscere, insieme alla persistenza del beneficio in PFS senza vantaggio dimostrato in OS.
 
 ### Seconda linea
 
@@ -141,7 +141,7 @@ Nel panorama della terapia di seconda linea per il PDAC metastatico, diverse opz
 
 Il trial **NAPOLI-1** ha valutato nal-irinotecan (nanoliposomal irinotecan) combinato con 5-fluorouracile e acido folinico dopo chemioterapia a base di gemcitabina, riportando un ==**OS di 6,1 vs 4,2 mesi (HR 0,67)**==, confermando il beneficio di questo schema come opzione di seconda linea nei pazienti che tollerano il trattamento.
 
-Un'area di controversia significativa riguarda i schemi contenenti oxaliplatino. Il trial **CONKO-3** ha dimostrato un beneficio positivo con OFF (oxaliplatino, 5-fluorouracile, acido folinico) dopo gemcitabina di prima linea: ==**OS di 5,9 vs 3,3 mesi (HR 0,66)**==. Tuttavia, il trial **PANCREOX**, che ha valutato uno schema similare in una popolazione comparabile, ha riportato risultati opposti e detrimentali — ==**una discrepanza clinicamente rilevante da conoscere per la pratica e per l'esame**==, poiché sottolinea l'eterogeneità della popolazione con PDAC metastatico e l'importanza di selezione del paziente.
+Un'area di controversia significativa riguarda i schemi contenenti oxaliplatino. Il trial **CONKO-3** ha dimostrato un beneficio positivo con OFF (oxaliplatino, 5-fluorouracile, acido folinico) dopo gemcitabina di prima linea: ==**OS di 5,9 vs 3,3 mesi (HR 0,66)**==. Tuttavia, il trial **PANCREOX**, che ha valutato uno schema similare in una popolazione comparabile, ha riportato risultati opposti e detrimentali — ==**una discrepanza clinicamente rilevante da conoscere per la pratica**==, poiché sottolinea l'eterogeneità della popolazione con PDAC metastatico e l'importanza di selezione del paziente.
 
 Un approccio emergente riguarda la terapia di seconda linea dopo FOLFIRINOX di prima linea. Il trial **GEMPAX (2025)** ha valutato gemcitabina più paclitaxel dopo FOLFIRINOX, riportando un ==**vantaggio in PFS di 3,1 vs 2,0 mesi (HR 0,64), ma nessun vantaggio in OS**==. Nonostante la mancanza di beneficio OS, ==**GEMPAX rimane un'opzione raccomandata da ESMO [I,B]**== sulla base del miglioramento di controllo di malattia e qualità della vita durante questo breve intervallo di progressione.
 
@@ -154,7 +154,7 @@ Per l'**ittero ostruttivo**, lo ==**stent biliare metallico endoscopico rapprese
 
 La **gestione del dolore** spesso rappresenta il sintomo più debilitante nel PDAC avanzato. Il ==**blocco del plesso celiaco eco-endoscopico**== (EUS-guided) è una procedura riconosciuta [III,A ESMO] che riduce significativamente il fabbisogno di oppioidi, consentendo miglior qualità della vita e riduzione degli effetti collaterali correlati ai narcotici.
 
-L'**ostruzione duodenale maligna** è una complicanza frequente nel PDAC localmente avanzato. Esiste una possibile discrepanza tra raccomandazioni AIOM (che favorisce chirurgia di bypass se PS buono, es. gastrodigiunostomia) e ESMO (preferenza per stent endoscopico auto-espandibile metallico). Questo punto di divergenza è importante da conoscere per l'esame, poiché le linee guida italiane possono enfatizzare l'approccio chirurgico in pazienti selezionati, mentre le linee guida internazionali propendono per lo stent come prima linea.
+L'**ostruzione duodenale maligna** è una complicanza frequente nel PDAC localmente avanzato. Esiste una possibile discrepanza tra raccomandazioni AIOM (che favorisce chirurgia di bypass se PS buono, es. gastrodigiunostomia) e ESMO (preferenza per stent endoscopico auto-espandibile metallico). Questo punto di divergenza è importante, poiché le linee guida italiane possono enfatizzare l'approccio chirurgico in pazienti selezionati, mentre le linee guida internazionali propendono per lo stent come prima linea.
 
 La **resezione epatica nel PDAC oligometastatico** rimane un'opzione solo in ==**casi altamente selezionati di pazienti che rispondono molto bene alla chemioterapia iniziale**==. I dati mostrano una sopravvivenza mediana di 46 mesi nei pazienti resecati che hanno dimostrato buona risposta (vs 11 mesi nei non-resecati), suggerendo beneficio significativo solo nel sottogruppo di pazienti responder.
 
@@ -209,12 +209,11 @@ Le **complicanze tromboemboliche (VTE)** rappresentano una problematica unica ne
 - **CA19-9 può guidare trattamento anticipato di salvataggio** anche senza evidenza radiologica (Li 2019: OS 28,1 vs 20,7 mesi).
 
 
-## Punti ad alta resa per orale
-
+## Punti chiave
 - **NALIRIFOX (NAPOLI-3, 2025)**: nuovo standard 1L [I,A] equiparato a FOLFIRINOX con OS 11,1 vs 9,2 mesi (HR 0,83 vs Gem/nab-P).
 - **FOLFIRINOX (Conroy 2011)** e **MPACT (Von Hoff 2013)**: pietre miliari storiche della prima linea metastatica (OS 11,1 vs 6,8 e OS 8,5 vs 6,7 rispettivamente).
 - **Screening universale gBRCA**: raccomandato in TUTTI i pazienti con PDAC fino a 74 anni (prevalenza mutazioni ~4,6%) — qualificarsi per platino/olaparib mantenimento.
-- **POLO trial**: mantenimento olaparib nei gBRCA-mutati — AIFA lo aveva negato nel 2023, ma dal 2026 ==**AIFA rimborsa**== questa indicazione (ribaltamento regolatorio recente, importante per l'esame).
+- **POLO trial**: mantenimento olaparib nei gBRCA-mutati — AIFA lo aveva negato nel 2023, ma dal 2026 ==**AIFA rimborsa**== questa indicazione (ribaltamento regolatorio recente).
 - **NALIRIFOX (EMA 2024)**: prima linea, ancora ++non rimborsato AIFA++ in Italia al 2026 (negoziazione in corso); il nal-IRI resta rimborsato solo in seconda linea (NAPOLI-1, AIFA 2020).
 - **Pembrolizumab/nivolumab dMMR-MSI-H**: l'autorizzazione EMA/AIFA copre colon-retto, endometrio, stomaco, intestino tenue e vie biliari, **non il pancreas** — nel PDAC l'uso resta off-label e non rimborsato, a differenza della vera approvazione tumor-agnostic FDA.
 - **CASSANDRA (2025)**: PAXG perioperatorio superiore a mFOLFIRINOX nel borderline resectable (EFS HR 0,64, 16,0 vs 10,2 mesi) — ==**possibile nuovo standard emergente**==.

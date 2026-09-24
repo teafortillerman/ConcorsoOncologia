@@ -9,20 +9,12 @@ L'ambito clinico è quello dell'oncologia medica in stretta integrazione con la 
 
 Questa scheda si basa su AIOM Neoplasie del Retto e dell'Ano 2025 (capitoli dedicati al canale anale), integrata con verifiche di letteratura successive, in particolare sulla malattia avanzata/metastatica (vedi sezione dedicata).
 
-#### Punti chiave
-- SCC del canale anale: la CTRT esclusiva (evoluzione Nigro protocol) ha sostituito la chirurgia primaria demolitiva — modello di conservazione d'organo.
-- Gestione integrata oncologia medica-radioterapia, attenzione specifica alle popolazioni HIV+/immunosoppresse.
-
 
 ## Epidemiologia
 
 Il carcinoma anale è una neoplasia rara, rappresentando l'1-2% di tutti i tumori gastrointestinali, ma la sua incidenza è in ==**costante aumento**== a livello globale. In Italia, nel 2016 sono stati registrati circa 450 nuovi casi negli uomini e 650 nelle donne, con una lieve prevalenza femminile nella popolazione generale (circa 1,4 volte). Tuttavia, l'incidenza cambia drammaticamente in popolazioni specifiche: negli uomini che hanno rapporti sessuali con uomini (MSM) l'incidenza sale a 35/100.000, e negli MSM HIV-positivi raggiunge livelli straordinariamente elevati di 75-135/100.000 — un gradiente di rischio che riflette direttamente l'esposizione cumulativa a HPV e lo stato immunitario.
 
 L'età mediana alla diagnosi è di circa 60 anni. La sopravvivenza a 5 anni, secondo i dati SEER, è del 60% negli uomini e del 78% nelle donne, con dati italiani nel range 58-64%. È importante sottolineare che, se trattato precocemente, il carcinoma anale presenta una delle mortalità più basse tra tutte le neoplasie gastrointestinali, grazie all'elevato tasso di risposta completa (80-90%) con la chemioradioterapia standard.
-
-#### Punti chiave
-- Neoplasia rara (1-2% dei tumori GI), incidenza in costante aumento; lieve prevalenza femminile nella popolazione generale (~1,4x), ma MSM HIV+ 75-135/100.000.
-- Sopravvivenza a 5 anni: SEER 60% (uomini)/78% (donne); Italia 58-64%. Mortalità bassa se trattato precocemente (CR 80-90% con CRT).
 
 
 ## Fattori di rischio
@@ -33,21 +25,12 @@ L'**immunosoppressione** — sia da trapianto d'organo che da infezione HIV con 
 
 È importante segnalare che dieta, malattie infiammatorie intestinali (IBD) ed emorroidi ==**NON**== sono fattori di rischio associati, contrariamente a percezioni comuni nella pratica clinica.
 
-#### Punti chiave
-- HPV (80-85%, genotipi 16/18): condizione necessaria ma non sufficiente.
-- Rapporti anali ricettivi (OR 17,3 MSM), partner multipli, immunosoppressione (HIV CD4<200 → rischio AIN x3), fumo (cofattore persistenza HPV).
-- NON associati: dieta, IBD, emorroidi.
-
 
 ## Screening e prevenzione
 
 Le popolazioni target per lo screening sono gli MSM e le donne HIV-positive con rapporti anali ricettivi, mediante anal Pap test associato ad anoscopia ad alta risoluzione; tuttavia, questo screening rimane riservato a centri specializzati o contesti di ricerca, data l'evidenza ancora non conclusiva sul beneficio in termini di riduzione di mortalità.
 
 La **vaccinazione anti-HPV quadrivalente** rappresenta invece uno strumento di prevenzione primaria con solide basi di evidenza: si stima un potenziale di prevenzione dell'==**80% dei tumori anali**==, con una riduzione delle lesioni AIN2-3 fino al 77,5% nell'analisi per-protocol negli MSM. In Italia, la vaccinazione è ora gratuita ed estesa anche ai maschi dai 9 anni di età, un'estensione importante data la specifica vulnerabilità di questa popolazione.
-
-#### Punti chiave
-- Screening (anal Pap test + anoscopia HR) riservato a MSM/donne HIV+ in centri specializzati — evidenza non conclusiva.
-- Vaccinazione HPV quadrivalente: prevenzione fino all'80% dei tumori anali; Italia gratuita anche per maschi dai 9 anni.
 
 
 ## Diagnosi
@@ -60,12 +43,6 @@ Dal punto di vista istologico, il grading non è raccomandato sulla biopsia data
 
 Il test HIV va sempre raccomandato alla diagnosi, specialmente negli uomini <70 anni, data l'importante implicazione prognostica e gestionale di un'eventuale infezione non nota.
 
-#### Punti chiave
-- Spesso misdiagnosticato come patologia emorroidaria; sanguinamento/dolore 45%.
-- AIN/ASIN: basso vs alto grado (non più AIN1-2-3); progressione LG→HG ~15%, HG→invasivo 5-10%.
-- p16 = surrogato HPV utile in casi dubbi; SISCA trattabile con sola escissione locale.
-- Test HIV sempre raccomandato alla diagnosi (specie uomini <70 anni).
-
 
 ## Stadiazione
 
@@ -74,11 +51,6 @@ La stadiazione TNM specifica per il canale anale prevede: Tis (HSIL), T1 (<2cm),
 La **RM pelvica con mezzo di contrasto** è raccomandata per la stadiazione locale T/N. La **FDG-PET/TC** offre un contributo significativo, con sensibilità del 99% per il tumore primitivo (contro il 67% della TC convenzionale); questo imaging modifica lo stadio clinico nel 5,1-37,5% dei casi e il piano radioterapico nel 12,5-59,3% — un impatto clinico rilevante che giustifica una raccomandazione condizionata a favore, nonostante la qualità delle prove sia complessivamente molto bassa.
 
 Il drenaggio linfonodale segue pattern anatomici specifici in base alla sede del tumore primitivo: circa il 30-40% dei pazienti presenta metastasi regionali alla diagnosi, con i tumori prossimali che drenano verso i linfonodi mesenterici inferiori, quelli della zona dentata verso la pudenda interna/iliaci interni, e quelli del margine anale verso inguinali/femorali.
-
-#### Punti chiave
-- TNM specifico: T1<2cm, T2 2-5cm, T3>5cm, T4 invasione organi adiacenti.
-- RM pelvica per T/N; FDG-PET/TC sensibilità 99% (vs TC 67%), modifica stadio 5,1-37,5% e piano RT 12,5-59,3%.
-- Drenaggio linfonodale specifico per sede: 30-40% metastasi regionali alla diagnosi.
 
 
 ## Biomarcatori
@@ -106,13 +78,6 @@ Nello **stadio I** (T<2cm, N0), la CTRT rimane comunque preferita alla sola radi
 
 Un aspetto pratico cruciale riguarda la **tempistica di valutazione della risposta**, che va effettuata a ==**26 settimane, non prima**== — un dato importante perché a 11 settimane il 21% delle amputazioni addomino-perineali eseguite sarebbe risultato non necessario, sottolineando l'importanza di attendere il pattern di risposta lento tipico di questa neoplasia prima di considerare la chirurgia di salvataggio.
 
-#### Punti chiave
-- Schema standard: 5-FU (gg1-5, 29-33) + Mitomicina C (g1±29) + RT 45Gy+boost — CR 80-90%, colostomia <20%.
-- ACT I: CTRT supera RT sola (LFR HR 0,54, DSS HR 0,67).
-- RTOG 98-11: mitomicina superiore a cisplatino (DFS 67,8% vs 57,8%, OS 78,3% vs 70,7%) ma più tossicità ematologica; cisplatino solo se controindicazioni.
-- Nessun ruolo per CT di induzione/mantenimento (3 RCT negativi).
-- Valutazione risposta a 26 settimane, non prima (a 11 settimane 21% delle APR sarebbero state inutili).
-
 
 ## Trattamento della malattia residua o recidiva locale
 
@@ -134,11 +99,6 @@ Lo sviluppo più rilevante riguarda l'immunoterapia. Il trial di fase III **POD1
 In Italia, però, retifanlimab **non è ancora rimborsato per il carcinoma anale** (verifica del 24/08/2026): il farmaco (Zynyz) è in classe H, con registro di monitoraggio AIFA, solo per il carcinoma a cellule di Merkel (Determina AIFA n. 1280/2025, in vigore da ottobre 2025), un'indicazione diversa da non confondere. Gli elenchi AIFA dei farmaci innovativi di marzo e maggio 2026 non riportano l'indicazione anale, per la quale la negoziazione di prezzo e rimborso risulta ancora in corso (verosimilmente classe C(nn)). Nivolumab e pembrolizumab non hanno un'indicazione EMA/AIFA specifica per il carcinoma anale.
 
 Anche nivolumab e pembrolizumab dispongono di dati dedicati (non semplice estrapolazione), sebbene non comparativi/randomizzati e senza approvazione specifica per questa indicazione: il trial **NCI9673** (nivolumab, Lancet Oncology 2017) ha riportato un ORR del 24,3% con OS mediana di 11,5 mesi; la coorte anale del basket trial **KEYNOTE-158** (pembrolizumab, JCO 2020) ha riportato un ORR più modesto del 10,7%. Questi farmaci restano opzioni disponibili in linee successive ma non rappresentano lo standard di prima linea, ora occupato da retifanlimab+carboplatino-paclitaxel.
-
-#### Punti chiave — malattia avanzata/metastatica
-- InterAACT (RCT dedicato): carboplatino-paclitaxel preferito a cisplatino+5-FU per tossicità nettamente inferiore (G3+ 36% vs 62%), efficacia simile — standard di backbone chemioterapico.
-- **POD1UM-303/InterAACT-2 (nuovo, 2025)**: retifanlimab+carboplatino-paclitaxel vs solo chemio in I linea — PFS HR riduzione 37%, OS HR 0,70 (29,2 vs 23,0 mesi) — nuovo standard I linea. FDA maggio 2025, EMA marzo 2026; ==AIFA: non ancora rimborsato per questa indicazione== (aggiornamento 24/08/2026) — il farmaco è sì già in classe H in Italia, ma !!solo per il carcinoma a cellule di Merkel!!, indicazione diversa da non confondere.
-- Nivolumab (NCI9673, ORR 24,3%) e pembrolizumab (KEYNOTE-158, ORR 10,7%): dati dedicati ma non randomizzati, non approvati per questa indicazione — opzioni in linee successive.
 
 
 ## Farmaci e classi rilevanti
@@ -167,7 +127,7 @@ Un aspetto pratico importante riguarda la gestione della malattia persistente en
 Dopo APR di salvataggio, il follow-up prevede palpazione inguinale ogni 3-6 mesi per 5 anni; è importante che paziente e clinico siano consapevoli che il rischio di recidiva dopo APR rimane elevato, circa il 43%.
 
 
-## Punti ad alta resa per orale
+## Punti chiave
 - **Differenza fondamentale vs cancro del retto**: nell'ano la CTRT esclusiva è il trattamento primario **conservativo standard** (sostituisce l'APR upfront); nel retto la chirurgia resta il cardine (± CT/RT neoadiuvante).
 - Schema standard: **5-FU + Mitomicina C + RT 45Gy+boost**; CR 80-90%, colostomia <20%.
 - **HPV16/18 nell'80-85%** dei casi; **p16 fattore prognostico favorevole indipendente** (HR 0,07).

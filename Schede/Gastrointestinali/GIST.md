@@ -7,10 +7,6 @@ Il tumore stromale gastrointestinale (GIST) è il sarcoma del tratto gastrointes
 
 Questa scheda si basa su ESMO CPG GIST 2022, integrata con aggiornamenti di letteratura successivi (SSGXVIII a 10 anni, INTRIGUE, IMADGIST — vedi sezioni dedicate).
 
-#### Punti chiave
-- GIST = sarcoma GI più comune; secondo WHO 2020, tutti i GIST sono considerati potenzialmente maligni indipendentemente da dimensione/sede/indice mitotico.
-- Gestione basata prevalentemente su terapia a bersaglio molecolare (KIT/PDGFRA), non su chemioterapia.
-
 
 ## Epidemiologia
 
@@ -18,21 +14,12 @@ Il GIST è una neoplasia relativamente rara, con un'incidenza reale di circa 8 c
 
 Dal punto di vista istogenetico, il GIST origina dalla differenziazione verso le **cellule interstiziali di Cajal**, le cellule "pacemaker" responsabili della motilità gastrointestinale — questo spiega la localizzazione preferenziale lungo tutto il tratto GI. La sede più frequente è lo stomaco, seguito dal piccolo intestino; è importante notare che i GIST del retto e dell'esofago, sebbene meno comuni, presentano una prognosi peggiore a parità di dimensioni rispetto alle sedi più tipiche.
 
-#### Punti chiave
-- Incidenza ~8 casi/milione/anno; età mediana 60-65 anni, lieve prevalenza maschile.
-- Origine dalle cellule interstiziali di Cajal (pacemaker della motilità GI).
-- Sede più frequente: stomaco > piccolo intestino; retto/esofago hanno prognosi peggiore a parità di dimensioni.
-
 
 ## Fattori di rischio
 
 Sebbene la maggior parte dei GIST siano sporadici, esistono alcune entità distinte con implicazioni cliniche importanti. Il **GIST pediatrico** costituisce un'entità biologicamente separata: prevalenza femminile, assenza delle tipiche mutazioni driver KIT/PDGFRA, e frequente associazione con mutazioni o silenziamento epigenetico di SDH (succinato deidrogenasi) — questo comporta un comportamento clinico e una risposta terapeutica differenti rispetto al GIST dell'adulto.
 
 Esistono inoltre sindromi genetiche rare associate al GIST che è importante riconoscere: la **triade di Carney** (associata a mutazioni SDHC) presenta la combinazione di GIST gastrico multifocale, paraganglioma e condroma polmonare; la **sindrome di Carney-Stratakis** è caratterizzata da mutazioni SDH germinali; la **neurofibromatosi tipo 1 (NF1)** si associa tipicamente a GIST multicentrico del piccolo intestino. Sindromi familiari con mutazioni KIT/PDGFRA germinali esistono ma sono rarissime.
-
-#### Punti chiave
-- GIST pediatrico: entità distinta, prevalenza femminile, assenza mutazioni KIT/PDGFRA, associato a SDH-deficiency.
-- Sindromi rare: triade di Carney (SDHC), Carney-Stratakis (SDH germline), NF1 (GIST multicentrico piccolo intestino).
 
 
 ## Diagnosi
@@ -43,23 +30,12 @@ Un aspetto tecnico critico riguarda la modalità di fissazione del campione biop
 
 La conferma diagnostica si basa sull'immunoistochimica, con positività per **CD117 (KIT)** e/o **DOG1** nella maggior parte dei casi; tuttavia, circa il 5% dei GIST sono CD117-negativi, richiedendo attenzione diagnostica aggiuntiva (DOG1, analisi mutazionale) per non mancare la diagnosi. Per la stadiazione, la **TC torace-addome-pelvi trifasica con mezzo di contrasto** rappresenta l'imaging standard; la FDG-PET trova un ruolo specifico nella valutazione precoce della risposta alla terapia target, essendo più sensibile della TC nei primi giorni-settimane di trattamento.
 
-#### Punti chiave
-- Noduli <2cm esofagogastrici/duodenali: EUS standard; se biopsia non fattibile, sorveglianza attiva.
-- Noduli rettali: biopsia/escissione sempre, indipendentemente da dimensioni (prognosi peggiore).
-- Fissazione in formalina tamponata 4% — MAI Bouin (compromette analisi molecolare).
-- IHC: CD117 (KIT) e/o DOG1 positivi; ~5% CD117-negativi.
-- TC trifasica torace-addome-pelvi per stadiazione; FDG-PET utile per valutazione precoce di risposta al target.
-
 
 ## Stadiazione
 
 La classificazione AJCC/UICC standard è raramente utilizzata nella pratica clinica del GIST, data la storia naturale peculiare di questa neoplasia rispetto ad altri tumori solidi. Il sistema prognostico di riferimento è la **classificazione di rischio di Miettinen/Fletcher**, che si basa su tre fattori principali: l'**indice mitotico** (attualmente espresso su un'area standardizzata di 5 mm², non più sui tradizionali 50 campi ad alto ingrandimento), la **dimensione** del tumore, e la **sede** di insorgenza (con la sede gastrica associata a prognosi migliore rispetto alle altre localizzazioni).
 
 Un fattore prognostico aggiuntivo e indipendente, non incluso nei tre parametri classici ma di importanza clinica cruciale, è la ==**rottura tumorale**== (spontanea o iatrogena) — la sua presenza modifica sostanzialmente la stratificazione del rischio e le decisioni terapeutiche adiuvanti, come discusso più avanti.
-
-#### Punti chiave
-- Classificazione di rischio Miettinen/Fletcher: indice mitotico (per 5mm²), dimensione, sede (gastrico = prognosi migliore).
-- Rottura tumorale = fattore prognostico avverso indipendente aggiuntivo, cruciale per le decisioni adiuvanti.
 
 
 ## Biomarcatori
@@ -103,13 +79,6 @@ Un'area di sviluppo recente e potenzialmente pratica-modificante riguarda la **d
 
 Nei pazienti con mutazione **PDGFRA D842V**, il trattamento adiuvante ==**NON deve essere somministrato**== [IV,D ESMO], data la resistenza intrinseca dimostrata di questa mutazione a imatinib — un errore da evitare assolutamente in pratica clinica. Nei pazienti con mutazione **KIT esone 9**, può essere considerato l'utilizzo di 800 mg/die per 3 anni [II,B ESMO; ESCAT I-A], sebbene questo dosaggio maggiorato non sia supportato da evidenza prospettica specifica nel contesto adiuvante (l'evidenza deriva principalmente dal setting metastatico). Infine, il trattamento adiuvante va evitato nei sottogruppi NF1-correlati, SDH-negativi, BRAF-mutati e NTRK-riarrangiati [IV,D ESMO], data la scarsa responsività di questi sottotipi molecolari a imatinib.
 
-#### Punti chiave — terapia localizzata/neoadiuvante/adiuvante
-- Chirurgia: R0 senza linfoadenectomia di routine; R1 accettabile in casi selezionati basso rischio; rottura tumorale = altissimo rischio recidiva.
-- Neoadiuvante: imatinib 6-12 mesi (oltre 12 mesi shrinkage raro, rischio resistenza); PDGFRA D842V → avapritinib (solo case report, non trial strutturato).
-- Adiuvante standard: imatinib 400mg x 3 anni nell'alto rischio (SSGXVIII/AIO, RFS e OS a 10 anni confermati).
-- IMADGIST (2024, emergente): 6 vs 3 anni — DFS HR 0,40, ma OS immatura, non ancora standard ESMO.
-- MAI adiuvante in PDGFRA D842V (resistenza nota) o in NF1/SDH-negativi/BRAF-mutati/NTRK-riarrangiati.
-
 
 ## Terapia della malattia avanzata/metastatica
 
@@ -132,15 +101,6 @@ Un capitolo importante, spesso assente dalla trattazione classica ma clinicament
 Il meccanismo alla base della resistenza secondaria durante il trattamento con TKI è tipicamente rappresentato da mutazioni aggiuntive negli esoni **13, 14, 17 di KIT**, che possono essere identificate anche radiologicamente attraverso il caratteristico pattern "nodule within the mass" (nodulo all'interno della massa), che segnala la crescita clonale di un sottoclone resistente all'interno di una lesione altrimenti stabile o in risposta.
 
 Un farmaco emergente da monitorare, non ancora approvato, è **bezuclastinib**, valutato nel trial di fase III **PEAK** (bezuclastinib+sunitinib vs sunitinib in seconda linea post-imatinib), con risultati presentati ad ASCO 2026: PFS mediana 16,5 vs 9,2 mesi (HR 0,50; p<0,0001), ORR 46% vs 26%. La domanda FDA è stata accettata con revisione prioritaria (PDUFA prevista novembre 2026) ma ==**il farmaco non è ancora approvato**== alla data attuale; nessuna domanda EMA nota.
-
-#### Punti chiave — malattia avanzata/metastatica
-- Prima linea: imatinib 400mg (800mg se esone 9); PDGFRA D842V → avapritinib (ORR 91%, OS 36 mesi ~71%, ma tossicità neurocognitiva/emorragica da monitorare).
-- Continuazione indefinita fino a PD/intolleranza — mai interrompere in risposta/stabilità.
-- Sequenza classica: imatinib → sunitinib → regorafenib → ripretinib (tutti I,A).
-- **INTRIGUE (negativo)**: ripretinib NON supera sunitinib in II linea (PFS/OS non significativi) — resta indicato in IV linea nonostante miglior tossicità.
-- Resistenza secondaria: mutazioni KIT esoni 13/14/17; pattern "nodule within the mass".
-- Bezuclastinib/PEAK: promettente ma non ancora approvato (PDUFA nov 2026).
-- Rimborsabilità AIFA confermata (classe H) per avapritinib (dic. 2021) e ripretinib (lug. 2023); nei GIST NTRK-riarrangiati, solo **larotrectinib** è rimborsato da SSN (classe H) — **entrectinib** resta in classe C(nn), non ancora negoziato, anche nell'aggiornamento AIFA più recente (ott. 2024).
 
 
 ## Farmaci e classi rilevanti
@@ -169,7 +129,7 @@ Il follow-up del GIST è stratificato in base al rischio di recidiva stimato. Ne
 Le recidive del GIST si localizzano prevalentemente a livello epatico e/o peritoneale, guidando l'attenzione radiologica durante il follow-up verso queste sedi specifiche.
 
 
-## Punti ad alta resa per orale
+## Punti chiave
 - **CD117 (KIT) e DOG1**: marcatori IHC diagnostici; ~5% CD117-negativi.
 - **KIT esone 9 → imatinib 800mg**; **PDGFRA D842V → resistente a imatinib, sensibile ad avapritinib** (ORR 91%, OS 36 mesi ~71%).
 - **Rottura tumorale = fattore prognostico avverso indipendente** (oltre a dimensione/indice mitotico/sede).

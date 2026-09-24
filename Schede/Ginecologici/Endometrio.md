@@ -18,11 +18,6 @@ Il sistema di classificazione molecolare individua quattro gruppi con biologia e
 
 Il gruppo **POLEmut** (5-15% dei casi) è caratterizzato da mutazioni nel dominio esonucleasico di POLE (i hotspot più comuni sono P286R, V411L, S297F, A456P, S459F) ed è, paradossalmente, il gruppo a **prognosi migliore in assoluto** nonostante l'altissimo carico mutazionale: rappresenta oggi il candidato principale a strategie di de-escalation del trattamento adiuvante. Il gruppo **dMMR/MSI-H** (25-30%) origina dalla perdita di espressione di una delle proteine MMR (MLH1, PMS2, MSH2, MSH6), ha una prognosi intermedia ed è il gruppo con la maggiore sensibilità all'immunoterapia. Il gruppo **NSMP** ("no specific molecular profile", 30-40%) è il più eterogeneo: al suo interno, lo stato del recettore estrogenico (ER) discrimina due prognosi molto diverse, con il sottogruppo NSMP ER-negativo che si comporta clinicamente come un p53abn, mentre l'NSMP low-grade ER-positivo ha la prognosi migliore. Il gruppo **p53abn** (5-15%), infine, è quello a **prognosi peggiore**: comprende la maggior parte dei carcinomi sierosi e dei carcinosarcomi, ed è il gruppo con il maggior beneficio dimostrato da chemioterapia adiuvante.
 
-#### Punti chiave
-- **4 gruppi molecolari**: POLEmut (prognosi migliore, 5-15%), dMMR/MSI-H (intermedia, 25-30%, sensibile a IO), NSMP (eterogenea, 30-40%, dipende da ER), p53abn (peggiore, 5-15%, massimo beneficio da CT).
-- !!NSMP ER-negativo si comporta come p53abn!! — non trattare tutto l'NSMP come un gruppo a prognosi intermedia uniforme.
-- POLEmut: **non sovratrattare** (prognosi eccellente anche senza terapia adiuvante).
-- p53abn: **non sottotrattare** (massimo beneficio da chemioterapia).
 
 ## Diagnosi
 
@@ -47,10 +42,6 @@ Un secondo elemento centrale nella stadiazione è la valutazione della **LVSI (i
 
 La stratificazione del rischio, che guida direttamente la scelta della terapia adiuvante, integra stadio FIGO 2023, gruppo molecolare, grado e LVSI. Il **basso rischio** comprende gli stadi IA1m di tutti i sottogruppi molecolari e alcune combinazioni favorevoli di stadio/istologia più precoce; il **rischio intermedio** e l'**alto-intermedio** si differenziano soprattutto per la presenza di LVSI sostanziale o di invasione cervicale nel contesto di uno stato MMR-deficiente; l'**alto rischio** raggruppa gli stadi più avanzati per estensione locale (II-III-IVA) e tutte le combinazioni NSMP high-grade/ER-negativo o p53abn, indipendentemente dallo stadio locale.
 
-#### Punti chiave
-- FIGO 2023 integra la classificazione molecolare nello stadio (suffisso "m").
-- **LVSI sostanziale (≥5 vasi)**: fattore prognostico indipendente critico — non confondere con la LVSI focale (<5 vasi), che ha impatto prognostico molto minore.
-- Il gruppo di rischio ESGO-ESTRO-ESP integra stadio + molecolare + grado + LVSI, e guida direttamente la terapia adiuvante.
 
 ## Terapia della malattia localizzata/localmente avanzata
 
@@ -68,11 +59,6 @@ Il ruolo dell'immunoterapia in adiuvante è stato invece deludente nel complesso
 
 > ++Verifica in letteratura:++ la scheda precedente riportava solo genericamente "DFS ITT simile tra i gruppi" e "DFS in dMMR migliorata", senza i valori numerici. La pubblicazione finale (Annals of Oncology 2024) fornisce ora l'HR completo per tutti e tre i sottogruppi, incluso il dato — poco intuitivo e quindi importante da conoscere — che nel sottogruppo pMMR il punto stimato dell'HR è risultato numericamente sfavorevole a pembrolizumab (1,20), sebbene non significativo. [Annals of Oncology](https://www.annalsofoncology.org/article/S0923-7534(24)03822-5/fulltext), [OncLive](https://www.onclive.com/view/adjuvant-pembrolizumab-chemotherapy-misses-dfs-end-point-in-high-risk-endometrial-cancer-but-benefits-dmmr-subgroup).
 
-#### Punti chiave
-- Approccio mininvasivo: standard nell'endometrio (a differenza della cervice), non peggiora gli esiti oncologici.
-- Basso rischio: nessuna terapia adiuvante. Alto-intermedio: EBRT preferita. Alto rischio: CT adiuvante ± RT.
-- **PORTEC-3**: la classificazione molecolare è predittiva, non solo prognostica, del beneficio da CT adiuvante con platino.
-- ++KEYNOTE-B21: DFS ITT negativo (HR 1,02); beneficio solo in dMMR (HR 0,31); pMMR numericamente sfavorevole (HR 1,20)++ — non cambia lo standard adiuvante nella popolazione generale.
 
 ## Terapia della malattia avanzata/metastatica
 
@@ -82,7 +68,7 @@ Lo standard storico era carboplatino+paclitaxel da solo. Tra il 2023 e il 2024 q
 
 Il **NRG-GY018** (pembrolizumab + carboplatino/paclitaxel, Eskander NEJM 2023) ha raggiunto il suo endpoint primario di PFS in entrambe le popolazioni, con un beneficio marcato in dMMR (HR 0,30; PFS a 12 mesi 74% vs 38%) e comunque significativo in pMMR (PFS mediana 13,1 vs 8,7 mesi, HR 0,54), secondo l'analisi primaria (Eskander, NEJM 2023, [DOI](https://doi.org/10.1056/NEJMoa2302312)). L'analisi di sopravvivenza globale, maturata più tardi, ha confermato il quadro: nel sottogruppo **dMMR**, a un follow-up di 49 mesi, l'OS a 48 mesi è stata dell'78,6% contro il 60,4% (HR 0,56); nel sottogruppo **pMMR**, l'OS mediana è stata di 44,4 contro 35,1 mesi, con un HR di 0,86 **non statisticamente significativo**, pur con una tendenza favorevole mantenuta nonostante il largo utilizzo di immunoterapia successiva nel braccio di controllo.
 
-> !!Verifica in letteratura — attenzione:!! la scheda precedente attribuiva erroneamente **dostarlimab** al trial NRG-GY018 (citandolo, tra l'altro, con l'autore del trial RUBY, Mirza). Il farmaco registrativo di NRG-GY018 è in realtà **pembrolizumab** (pubblicazione di riferimento: Eskander et al., NEJM 2023); dostarlimab è invece il farmaco del RUBY (Mirza et al., NEJM 2023, vedi sotto). Sono due checkpoint inhibitor diversi in due trial paralleli ma distinti — un dettaglio da non confondere per l'orale, perché "NRG-GY018" e "pembrolizumab" vanno associati esattamente come "RUBY" e "dostarlimab". [NEJM](https://www.nejm.org/doi/full/10.1056/NEJMoa2302312).
+> !!Verifica in letteratura — attenzione:!! la scheda precedente attribuiva erroneamente **dostarlimab** al trial NRG-GY018 (citandolo, tra l'altro, con l'autore del trial RUBY, Mirza). Il farmaco registrativo di NRG-GY018 è in realtà **pembrolizumab** (pubblicazione di riferimento: Eskander et al., NEJM 2023); dostarlimab è invece il farmaco del RUBY (Mirza et al., NEJM 2023, vedi sotto). Sono due checkpoint inhibitor diversi in due trial paralleli ma distinti — un dettaglio da non confondere, perché "NRG-GY018" e "pembrolizumab" vanno associati esattamente come "RUBY" e "dostarlimab". [NEJM](https://www.nejm.org/doi/full/10.1056/NEJMoa2302312).
 
 Il **RUBY/ENGOT-EN6/GOG-3031** (dostarlimab + carboplatino/paclitaxel) ha pubblicato la sua analisi di OS finale con dati più maturi e completi: nella popolazione **ITT**, l'OS mediana è stata di 44,6 contro 28,2 mesi (HR 0,69), con un'OS a 3 anni del 54,9% contro il 42,9%. Nel sottogruppo **dMMR/MSI-H** il beneficio è stato marcato (OS mediana non raggiunta contro 31,4 mesi, HR 0,32), mentre nel sottogruppo **pMMR/MSS** l'OS è migliorata da 27 a 34 mesi, con un HR di 0,79 al limite della significatività statistica (p=0,0493) — il segnale di beneficio più solido, tra i quattro trial, per la popolazione pMMR presa isolatamente.
 
@@ -110,15 +96,8 @@ Il target HER2 ha oggi un primo segnale clinico concreto anche nell'endometrio: 
 
 Un capitolo diverso, e istruttivo sul piano metodologico, riguarda **selinexor** come mantenimento nel sottogruppo TP53 wild-type. Lo studio di fase III **SIENDO/ENGOT-EN5/GOG-3055** aveva mostrato, in un'analisi di sottogruppo predefinita, un segnale molto promettente (PFS 27,4 contro 5,2 mesi, HR 0,42). Il trial di conferma dedicato, **XPORT-EC-042**, condotto specificamente nella popolazione TP53 wild-type, **non ha raggiunto la significatività statistica** per l'endpoint primario di PFS (12,75 contro 7,43 mesi, HR 0,76, p=0,0791): selinexor **non ha oggi alcuna approvazione regolatoria** in questo setting.
 
-> !!Verifica in letteratura — attenzione:!! la scheda precedente non menzionava selinexor. È un caso istruttivo da conoscere per l'orale: un segnale forte in un'analisi di sottogruppo (SIENDO, HR 0,42) **non è stato confermato** dal trial di conferma dedicato alla stessa popolazione (XPORT-EC-042, HR 0,76, non significativo) — un promemoria del perché le analisi di sottogruppo, per quanto promettenti, richiedono sempre una validazione prospettica dedicata prima di cambiare la pratica clinica. [TargetedOnc](https://www.targetedonc.com/view/selinexor-maintenance-misses-mark-in-tp53-wild-type-endometrial-cancer).
+> !!Verifica in letteratura — attenzione:!! la scheda precedente non menzionava selinexor. È un caso istruttivo: un segnale forte in un'analisi di sottogruppo (SIENDO, HR 0,42) **non è stato confermato** dal trial di conferma dedicato alla stessa popolazione (XPORT-EC-042, HR 0,76, non significativo) — un promemoria del perché le analisi di sottogruppo, per quanto promettenti, richiedono sempre una validazione prospettica dedicata prima di cambiare la pratica clinica. [TargetedOnc](https://www.targetedonc.com/view/selinexor-maintenance-misses-mark-in-tp53-wild-type-endometrial-cancer).
 
-#### Punti chiave
-- dMMR/MSI-H in 1L: CT+IO nuovo standard indiscusso, beneficio ampio e consistente in tutti i trial.
-- pMMR in 1L: beneficio di PFS ma **non uniforme in OS** tra i trial — ++RUBY positivo (HR 0,79, borderline), AtTEnd negativo (HR 1,02)++ — non generalizzare come effetto di classe.
-- ++KEYNOTE-775 a 5 anni: OS 19,9% vs 7,7% a 5 anni (HR 0,66, all-comers)++ — standard consolidato in 2L.
-- ++T-DXd (DESTINY-PanTumor02): ORR 57,5% nella coorte endometriale (84,6% se IHC 3+)++ — segnale più forte tra le neoplasie ginecologiche, non ancora approvato in questa istologia.
-- !!Selinexor: il segnale di SIENDO (sottogruppo TP53wt) non è stato confermato dal trial dedicato XPORT-EC-042 (HR 0,76, non significativo)!! — nessuna approvazione.
-- ++Stato AIFA 1L++: pembrolizumab+CT rimborsato **solo dMMR** nonostante label EMA all-comers; dostarlimab+CT è invece rimborsato **anche in pMMR** (esteso 2026); durvalumab+CT rimborsato solo dMMR (olaparib aggiunto per pMMR non ancora rimborsato); !!atezolizumab+CT (AtTEnd) non ha mai ricevuto approvazione EMA!! per questa indicazione.
 
 ## Farmaci e classi rilevanti
 - **Chemioterapia**: carboplatino, paclitaxel, doxorubicina, cisplatino.
@@ -140,7 +119,7 @@ Per lo stato aggiornato di rimborsabilità AIFA di ciascun farmaco (classe, regi
 
 Il calendario di sorveglianza è sovrapponibile a quello della cervice: visita ginecologica ed esame obiettivo ogni 3-4 mesi nei primi 2 anni, ogni 6 mesi tra il terzo e il quinto anno, e annualmente oltre i 5 anni. L'imaging (TC/RM) è riservato ai casi con sintomi o sospetto clinico, senza indicazione di routine. Il CA-125 può essere utile se già elevato alla diagnosi, ma non è raccomandato come esame di follow-up sistematico.
 
-## Punti ad alta resa per orale
+## Punti chiave
 - **Classificazione molecolare TCGA/ProMisE**: 4 sottogruppi (POLEmut, dMMR, NSMP, p53abn) con prognosi e risposta a terapia diverse — fondamentale per la gestione moderna.
 - **POLEmut**: prognosi eccellente, candidato a de-escalation — non sovratrattare.
 - **p53abn**: prognosi peggiore, maggiore beneficio da CT adiuvante — non sottotrattare.

@@ -16,10 +16,6 @@ Circa il 10% dei casi ha una base ereditaria, ma la quota sale considerevolmente
 
 I criteri per l'invio a consulenza genetica sono: un parente di primo grado con carcinoma prostatico non-GG1 diagnosticato prima dei 60 anni, oppure due o più familiari con carcinoma non-GG1 prima dei 50 anni, oppure una storia personale di carcinoma mammario maschile, pancreas metastatico o prostata metastatico. Il test BRCA è raccomandato in tutti i pazienti metastatici in trattamento con ARSI, perché un risultato positivo indirizza verso i **PARP-inibitori**.
 
-#### Punti chiave
-- ~12% dei metastatici ha mutazione germinale DNA-repair, soprattutto BRCA2 (malattia più aggressiva).
-- Criteri per consulenza genetica: familiarità con esordio precoce, o storia personale di mammella maschile/pancreas o prostata metastatici.
-- Test BRCA raccomandato in tutti i metastatici in ARSI, per indirizzare a PARP-inibitori.
 
 ## Chemioprevenzione, diagnosi precoce e screening
 
@@ -33,10 +29,6 @@ Sul fronte del grading, il Grade Group ISUP 2014 stratifica così: GG1 (Gleason 
 
 Per quanto riguarda le lesioni precursori, un singolo focolaio di HG-PIN comporta un rischio di carcinoma del 20% e non richiede di per sé una ripetizione della biopsia; se i focolai sono multipli il rischio sale al 30%, mentre nell'ASAP (atypical small acinar proliferation) il rischio è di circa il 40%. Un'ultima precisazione anatomo-patologica utile: l'invasione dell'apice con muscolo non configura estensione extraprostatica (resta T2), mentre l'invasione del collo vescicale sì (diventa T3).
 
-#### Punti chiave
-- Gleason <6 mai refertato su biopsia; cribriforme/glomeruloide = sempre pattern 4.
-- T3a = extraprostatica/collo vescicale; T3b = vescicole seminali; apice con muscolo ≠ EPE.
-- HG-PIN singolo focolaio: rischio ca 20% (no ripetizione biopsia); multiplo: 30%; ASAP: ~40%.
 
 ## Diagnosi
 
@@ -44,10 +36,6 @@ L'esplorazione rettale rileva lesioni da 0,2 ml in su, ma ha sensibilità e spec
 
 Sull'imaging, la mpMRI con refertazione PI-RADS v2.1 ha sensibilità 91% e specificità 37% per le lesioni ISUP>2, ed è **raccomandata prima della biopsia** dalle linee guida EAU 2023. La micro-ecografia ad alta risoluzione si è mostrata non-inferiore alla RM con fusion in un RCT su 678 pazienti, ed è quindi un'alternativa emergente. Per quanto riguarda l'agobiopsia, l'approccio **transperineale è oggi preferito** per il minor rischio infettivo, con un minimo di 3 prelievi per ogni area sospetta.
 
-#### Punti chiave
-- PSA-D <0,15 ng/ml = soglia chiave bassa probabilità, utile anche con PI-RADS 3.
-- mpMRI (PI-RADS v2.1) raccomandata **prima** della biopsia (EAU 2023).
-- Approccio transperineale preferito per il minor rischio infettivo.
 
 ## Stadiazione
 
@@ -57,10 +45,6 @@ La novità più rilevante degli ultimi anni è che la **PSMA-PET-CT è ora la ra
 
 La scintigrafia ossea resta indicata in scenari specifici: T1 con PSA>20, T2 con PSA>10 o Gleason≥8, T3-T4, o in presenza di sintomi. Sulla linfadenectomia di staging, due RCT non hanno mostrato differenze significative tra la tecnica estesa e quella limitata; la scelta va guidata dal nomogramma di Briganti e riservata al rischio intermedio/alto.
 
-#### Punti chiave
-- PSMA-PET-CT ora raccomandazione di prima scelta [I,B] per staging rischio intermedio-sfavorevole/alto/molto alto.
-- Upstaging con PSMA-PET NON preclude trattamento locale radicale — sempre discussione multidisciplinare.
-- Linfadenectomia estesa vs limitata: nessuna differenza significativa; guidata da nomogramma di Briganti.
 
 ## Sorveglianza attiva (rischio molto basso/basso)
 
@@ -84,13 +68,6 @@ Sul confronto tra radioterapia adiuvante e radioterapia di salvataggio precoce, 
 
 Sul fronte della radioterapia radicale, lo studio **GETUG-AFU 18** (Lancet Oncology 2026) ha mostrato che la dose-escalation a 80 Gy associata ad ADT a lungo termine migliora la PFS nell'alto rischio (a 10 anni 83,6% contro 72,2%, HR 0,56), senza aumento della tossicità tardiva; secondo gli autori, però, il beneficio in sopravvivenza cancro-specifica e globale va ancora confermato. Nel setting adiuvante/di salvataggio, l'aggiornamento di **RADICALS-HD** conferma la superiorità di 24 mesi di ADT rispetto a 6 mesi (HR per MFS 0,773).
 
-#### Punti chiave
-- Ipofrazionamento moderato (60 Gy/20fr) = nuovo standard (CHHiP); SBRT (36,25 Gy/5fr) nel rischio basso-intermedio.
-- Durata ADT+RT: 4-6 mesi (rischio intermedio), 18-36 mesi (rischio alto).
-- Docetaxel nella malattia localizzata: mai indicato (RTOG 0521 negativo).
-- Intensificazione con ARSI (STAMPEDE) ora standard ESMO [I,A] very high-risk, ma non approvata EMA/FDA, non rimborsata in Italia.
-- RT di salvataggio precoce preferita all'adiuvante (tranne pN1); ESMO 2026: adiuvante "non generalmente raccomandata".
-- GETUG-AFU 18: dose-escalation 80 Gy+ADT long-term, PFS a 10 anni 83,6% vs 72,2% (HR 0,56); beneficio in OS ancora da confermare.
 
 ## Terapia della malattia localmente avanzata/alto rischio
 
@@ -106,11 +83,6 @@ Per la recidiva biochimica ad alto rischio (PSA-DT≤9 mesi) non candidabile a R
 
 Infine, lo studio **PEACE V-STORM** (2025), condotto su pazienti con recidiva linfonodale PET-positiva, ha confrontato la RT pelvica whole rispetto alla terapia diretta sulle metastasi (metastasis-directed therapy), mostrando un vantaggio della prima sia in sopravvivenza libera da recidiva biochimica (HR 0,62) sia in sopravvivenza libera da metastasi (HR 0,62).
 
-#### Punti chiave
-- Recidiva: PSA≥0,2 post-PR; criteri di Phoenix (nadir+2) post-RT. PET-PSMA raccomandata per ristadiazione pre-salvataggio.
-- RT di salvataggio precoce: iniziare con PSA<0,5 ng/ml.
-- RTOG 9601 (bicalutamide 24 mesi): beneficio OS, ma danno se PSA pre-RT <0,6 ng/ml.
-- EMBARK: MFS 5a 87,3% vs 71,4%; ++OS 8a 78,9% vs 69,5% (HR 0,597, p=0,0006)++ — ma !!enzalutamide da sola NON ha OS significativa vs leuprorelina!! (HR 0,83, ns). Rimborsato in Italia dal 2/7/2025.
 
 ## Progressione biochimica dopo ormonale: nmCRPC
 
@@ -118,10 +90,6 @@ Si definisce come PSA in aumento nonostante la castrazione, con malattia **M0 al
 
 Il criterio di selezione per tutti e tre gli ARSI approvati in questo setting è lo stesso: **PSA doubling time ≤10 mesi**. I tre trial registrativi mostrano risultati sovrapponibili: nello studio SPARTAN, apalutamide ha portato la sopravvivenza libera da metastasi da 16,2 a 40,5 mesi (HR 0,28), con un HR per OS di 0,78; nel PROSPER, enzalutamide ha portato la MFS da 14,7 a 36,6 mesi (HR 0,29), con HR OS di 0,73; nell'ARAMIS, darolutamide ha portato la MFS da 18,4 a 40,4 mesi (HR 0,41), con HR OS di 0,69. Con un PSA-DT superiore a 10 mesi, invece, la sola ADT può proseguire senza intensificazione. Tutti e tre sono rimborsati da AIFA in questa indicazione: apalutamide dal 2019, darolutamide dal 6 luglio 2021, enzalutamide da tempo (a cui si aggiunge l'indicazione EMBARK nella recidiva biochimica).
 
-#### Punti chiave
-- Criterio universale per i 3 ARSI in nmCRPC: PSA-DT ≤10 mesi.
-- SPARTAN (apalutamide): MFS 40,5 vs 16,2 mesi; PROSPER (enzalutamide): 36,6 vs 14,7; ARAMIS (darolutamide): 40,4 vs 18,4 — tutti con beneficio OS concordante.
-- PSMA-PET spesso riclassifica come M1, ma non va usata di routine per sostituire l'imaging convenzionale in questo scenario.
 
 ## Terapia della malattia metastatica ormono-sensibile (mHSPC)
 
@@ -145,12 +113,6 @@ Nel PEACE-1, l'aggiunta di abiraterone alla doppietta con docetaxel ha mostrato 
 
 Le linee guida ESMO 2026 considerano **doppietta ADT-ARSI e tripletta entrambe opzioni accettabili** nella malattia de novo ad alto volume in pazienti fit per chemioterapia, perché non esiste ancora un trial diretto che confronti tripletta contro doppietta con ARSI. Sulla radioterapia diretta alla prostata: il beneficio in OS resta dimostrato solo nel **basso volume** (STAMPEDE), ma il PEACE-1 ha mostrato un beneficio su CRPC-free survival ed eventi genito-urinari **anche nell'alto volume**, per cui oggi la RT sul primitivo è raccomandata anche in questo scenario, per la prevenzione dei sintomi locali. Resta invece investigazionale la terapia diretta sulle metastasi (metastasis-directed therapy, studiata in STOMP, ORIOLE, RADIOSA, EXTEND), raccomandabile nella malattia oligometastatica/oligorecidivante [II,B].
 
-#### Punti chiave
-- CHAARTED = volume di malattia; LATITUDE = rischio — non vanno confusi.
-- Doppietta ADT+ARSI: HR OS pooled 0,62 (NNT 6,7) — forte a favore.
-- Doppietta docetaxel: beneficio OS solo in high-volume; non più prima scelta se ARSI disponibile.
-- Tripletta (PEACE-1/ARASENS): HR OS 0,75/0,68; ESMO 2026 la considera equivalente alla doppietta ARSI nell'alto volume, nessun trial diretto di confronto.
-- RT sul primitivo: beneficio OS solo in basso volume, ma ora raccomandata anche in alto volume per prevenzione GU (PEACE-1).
 
 ## Terapia del mCRPC
 
@@ -178,15 +140,6 @@ Il **PSMAfore** ha confrontato ¹⁷⁷Lu-PSMA-617 con il semplice cambio di ARP
 
 Va inoltre segnalata una discrepanza regolatoria italiana da conoscere: !!il ¹⁷⁷Lu-PSMA è rimborsato in Italia (delibera AIFA del 4/3/2025) solo dopo ARSI e 2 taxani!! — una posizione più restrittiva rispetto all'evidenza più recente (VISION, PSMAfore) che lo colloca in linee più precoci. Infine, il PEACE-3 (enzalutamide+radio-223) ha mostrato un HR per rPFS di 0,69 e per OS di 0,69, ma richiede obbligatoriamente un agente bone-protecting in associazione.
 
-#### Punti chiave
-- COU-AA-302 (abiraterone) e PREVAIL (enzalutamide) 1L: entrambi con beneficio rPFS/OS solido.
-- ARSI+PARP 1L (PROpel/MAGNITUDE/TALAPRO-2): beneficio maggiore in HRR+/BRCA+; tutte e tre oggi rimborsate AIFA (2025), ma solo per BRCA1/2.
-- PARPi: beneficio robusto BRCA1/2 (I-A), CDK12 (II-A), PALB2 (II-B); **assente** per CHEK2/ATM.
-- ++TALAPRO-2, OS finale coorte HRR-deficiente: 45,1 vs 31,1 mesi (HR 0,622, p=0,0005)++ — a differenza di MAGNITUDE, che non ha OS positiva.
-- CARD: cabazitaxel > secondo ARSI in 3ª linea dopo ARSI+taxano.
-- VISION: OS HR 0,62. !!PSMAfore: rPFS positivo (HR 0,41) ma OS NON significativa in ITT (HR 0,91, p=0,20), confondimento da crossover 60%!!.
-- ¹⁷⁷Lu-PSMA rimborsato in Italia solo dopo ARSI+2 taxani — più restrittivo dell'evidenza recente.
-- PEACE-3: enzalutamide+radio-223 richiede bone-protecting agent obbligatorio.
 
 ## Trattamento delle metastasi ossee
 
@@ -204,8 +157,7 @@ L'ADT si associa a sindrome metabolica, aumento del rischio cardiovascolare (sop
 
 Dopo prostatectomia il PSA dovrebbe azzerarsi, con un'emivita di circa 3 giorni; dopo radioterapia il nadir si raggiunge tipicamente a 6-12 mesi. Un fenomeno da conoscere per non allarmarsi inutilmente è la PSA surge syndrome, che può comparire nelle prime 8 settimane di chemioterapia (fino al doppio del valore basale) senza essere di per sé un segno prognostico negativo. Il follow-up clinico prevede esplorazione rettale ogni 6 mesi per i primi 2 anni e poi annuale, con PSA ogni 6 mesi fino al quinto anno e poi annuale.
 
-## Punti ad alta resa per l'orale
-
+## Punti chiave
 - PSMA-PET ora raccomandazione di prima scelta [I,B] per lo staging nel rischio alto — ma l'upstaging non preclude il trattamento radicale.
 - Il braccio abiraterone dello STAMPEDE è ora standard ESMO [I,A] nel very high-risk, ma non è approvato da EMA/FDA né rimborsato in Italia.
 - Nel mHSPC alto volume, doppietta e tripletta sono entrambe opzioni accettabili; la doppietta chemioterapica da sola non è più la prima scelta se è disponibile un ARSI.

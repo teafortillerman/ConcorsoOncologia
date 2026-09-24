@@ -23,9 +23,6 @@ Il melanoma cutaneo si stadia secondo l'ottava edizione AJCC, e la sopravvivenza
 
 Un dato clinico spesso sottovalutato è che il numero di pazienti con melanoma in **stadio IIB e IIC è paragonabile a quello dello stadio III**: lo stadio IIB (pT3b o pT4a N0) e lo stadio IIC (pT4b N0) costituiscono insieme il **50% di tutta la malattia in stadio II**, e la loro sopravvivenza a 10 anni (75-82%) si sovrappone in buona parte a quella dello stadio III (60-88%). Questo dato epidemiologico è il razionale principale che ha portato a estendere la terapia adiuvante anche a questi stadi, storicamente trattati con la sola sorveglianza.
 
-#### Punti chiave
-- Sopravvivenza a 10 anni: IA 98%, IB 94%, IIA 88%, IIB 82%, **IIC 75%**, IIIA 88%, IIIB 77%, IIIC 60%, IIID 24% (Gershenwald 2017).
-- Stadio IIB/IIC = 50% di tutta la malattia in stadio II, con sopravvivenza sovrapponibile allo stadio III — razionale per estendere l'adiuvante a questi stadi.
 
 ## Terapia Adiuvante (malattia resecata)
 
@@ -39,7 +36,7 @@ Quattro trial randomizzati fondano l'adiuvante di stadio III. **EORTC 18071** (i
 
 **COMBI-AD a 8 anni** (follow-up mediano 125 mesi): la RFS conferma il beneficio più marcato tra i regimi adiuvanti (mediana 93,1 vs 16,6 mesi; HR 0,52, 95% CI 0,43-0,63; RFS a 8 anni 50% vs 35%) e la DMFS mostra un pattern analogo (HR 0,56; DMFS a 8 anni 64% vs 53%). Tuttavia, come per CheckMate 238, l'**OS a 8 anni non raggiunge la significatività statistica** (71% vs 65%; HR 0,80, 95% CI 0,62-1,01; p=0,063) — un risultato "borderline" che va tenuto a mente accanto all'ottimo dato di RFS.
 
-> !!Verifica in letteratura — attenzione:!! nonostante il follow-up ormai ultradecennale, **nessuno dei quattro pilastri dell'adiuvante di stadio III (CheckMate 238, COMBI-AD, KEYNOTE-054/EORTC 1325) ha ancora dimostrato un vantaggio di OS statisticamente significativo** rispetto al comparatore. Il beneficio clinico consolidato riguarda RFS/DMFS, non la sopravvivenza globale — un punto ad alto rendimento per l'orale, spesso frainteso come "l'adiuvante allunga la vita".
+> !!Verifica in letteratura — attenzione:!! nonostante il follow-up ormai ultradecennale, **nessuno dei quattro pilastri dell'adiuvante di stadio III (CheckMate 238, COMBI-AD, KEYNOTE-054/EORTC 1325) ha ancora dimostrato un vantaggio di OS statisticamente significativo** rispetto al comparatore. Il beneficio clinico consolidato riguarda RFS/DMFS, non la sopravvivenza globale — un punto chiave, spesso frainteso come "l'adiuvante allunga la vita".
 
 **KEYNOTE-054/EORTC 1325 a 7 anni**: la RFS resta a favore di pembrolizumab (RFS a 7 anni 50% vs 36%; HR 0,63, 95% CI 0,53-0,74) e la DMFS conferma il beneficio (DMFS a 7 anni 54% vs 42%; HR 0,64, 95% CI 0,54-0,76); come per gli altri trial, **non sono ancora disponibili dati di OS** per questo confronto verso placebo, nemmeno a questo follow-up esteso.
 
@@ -47,13 +44,6 @@ Sul piano della stratificazione prognostica di CheckMate 238, nei pazienti a **p
 
 Nella sottoanalisi BRAF V600E vs V600K di COMBI-AD, il beneficio in OS è chiaro nel sottogruppo **V600E** (HR 0,75; 95% CI 0,58-0,96), mentre nel sottogruppo **V600K**, molto più piccolo, il risultato è **non significativo** (HR 1,95; 95% CI 0,84-4,50) — un classico trabocchetto legato alla ridotta numerosità campionaria, non a una reale inefficacia nel sottotipo V600K.
 
-#### Punti chiave — Adiuvante stadio III
-- EORTC 18071 (ipilimumab): mRFS 26,1 vs 17,1 mesi, HR 0,75 — oggi superato da regimi più moderni.
-- **CheckMate 238 a 9 anni**: RFS HR 0,76 (44% vs 37% a 9 anni) significativa, ma **OS HR 0,88 (69% vs 65%) non significativa**.
-- **COMBI-AD a 8 anni**: RFS HR 0,52 (50% vs 35% a 8 anni), ma **OS HR 0,80 p=0,063 non significativa**.
-- **KEYNOTE-054 a 7 anni**: RFS HR 0,63 (50% vs 36%), DMFS HR 0,64 — **OS ancora non disponibile** dopo 7 anni.
-- Messaggio chiave per l'orale: in tutti i pilastri dell'adiuvante di stadio III il beneficio dimostrato riguarda RFS/DMFS, **non ancora l'OS**.
-- Sottoanalisi V600K di COMBI-AD non significativa (HR 1,95) per numerosità campionaria ridotta, non per vera inefficacia.
 
 ### Algoritmo terapeutico adiuvante
 
@@ -65,30 +55,18 @@ Nello **stadio III**, in **BRAF wild-type** l'anti-PD-1 resta lo standard — pe
 
 Nello **stadio IV resecato** il nivolumab (HR RFS 0,71 vs ipilimumab 10 mg nell'analisi originale di CheckMate 238) o il dabrafenib+trametinib nei pazienti BRAF-mutati restano le opzioni di riferimento, con un HR di 0,79 per nivolumab vs ipilimumab nel sottogruppo BRAF V600 della stessa analisi.
 
-#### Punti chiave — Algoritmo adiuvante
-- Stadio II (IIB-IIC): pembrolizumab (KEYNOTE-716) o nivolumab (CheckMate 76K) — confronto indiretto 2026 non mostra superiorità dell'uno sull'altro.
-- **Rimborsabilità AIFA stadio II**: entrambi rimborsati, ma gap EMA→AIFA molto diverso — pembrolizumab ~19 mesi (EMA dic 2021 → AIFA 19/07/2023), nivolumab ~2 anni (EMA 27/02/2023 → AIFA Determina 267/2025 del 04/03/2025).
-- Stadio III BRAF wt: pembrolizumab o nivolumab; BRAF-mutato: BRAF+MEK inibitori o anti-PD-1, scelta equivalente in linea di principio.
-- Stadio IV resecato: nivolumab (preferito su ipilimumab) o BRAF+MEK se BRAF-mutato.
 
 ### Tossicità immuno-relate (irAE) in adiuvante — dato importante
 
 Uno studio retrospettivo multicentrico (Patrinely et al., JAMA Oncol 2021) ha caratterizzato in dettaglio le irAE dopo anti-PD-1 adiuvante. Tra 267 pazienti con **irAE acute**, il grado ≥2 si osserva nel 64,0% dei casi, il grado 3-5 nel 19,5%, e il 40,8% necessita di steroidi. Tra i 167 pazienti con **irAE croniche**, il 32,9% richiede steroidi, il 49,1% resta sintomatico, solo il 14,4% ottiene risoluzione completa, e il grado ≥2 si osserva nel 53,9% dei casi. Il messaggio chiave, spesso sottovalutato nel counseling pre-trattamento, è che le **irAE croniche sono più frequenti e persistono più a lungo nel follow-up prolungato** rispetto alle acute.
 
-#### Punti chiave — Tossicità irAE adiuvante
-- irAE acute (n=267): grado ≥2 64,0%, grado 3-5 19,5%, steroidi 40,8% (Patrinely 2021).
-- irAE croniche (n=167): steroidi 32,9%, sintomatiche 49,1%, risolte solo 14,4%, grado ≥2 53,9%.
-- Le irAE croniche sono più comuni e persistenti delle acute — punto centrale del counseling pre-adiuvante.
 
 ### Popolazioni speciali
 
 Nei **pazienti pediatrici** (≤18 anni) trattati con anti-PD-1 adiuvante, i dati di RFS e OS disponibili (Mandalà et al., EJC 2024) indicano fattibilità del trattamento anche in questa fascia d'età, sebbene la casistica resti limitata.
 
-Un punto controverso e ad alta resa per l'orale, confermato dalla verifica di letteratura sui follow-up più recenti (vedi sopra): **nessuno dei grandi trial adiuvanti — CheckMate 238, COMBI-AD, KEYNOTE-054, e nemmeno i più recenti KEYNOTE-716/CheckMate 76K in stadio II — ha ancora dimostrato un vantaggio di OS statisticamente significativo**, nonostante follow-up ormai fino a 9 anni. La terapia adiuvante migliora costantemente RFS e DMFS, ma il beneficio in sopravvivenza globale rimane non dimostrato in modo conclusivo.
+Un punto controverso e centrale, confermato dalla verifica di letteratura sui follow-up più recenti (vedi sopra): **nessuno dei grandi trial adiuvanti — CheckMate 238, COMBI-AD, KEYNOTE-054, e nemmeno i più recenti KEYNOTE-716/CheckMate 76K in stadio II — ha ancora dimostrato un vantaggio di OS statisticamente significativo**, nonostante follow-up ormai fino a 9 anni. La terapia adiuvante migliora costantemente RFS e DMFS, ma il beneficio in sopravvivenza globale rimane non dimostrato in modo conclusivo.
 
-#### Punti chiave — Popolazioni speciali
-- Dati pediatrici (≤18 anni) su anti-PD-1 adiuvante disponibili (Mandalà, EJC 2024), fattibilità confermata su casistica limitata.
-- **Nessun vantaggio di OS dimostrato per l'adiuvante nel suo complesso**, anche ai follow-up più lunghi oggi disponibili — punto controverso ad alta resa per l'orale.
 
 ## Terapia Neoadiuvante
 
@@ -108,18 +86,12 @@ L'indicazione classica della terapia neoadiuvante è la malattia di stadio III c
 
 Il confronto tra i due trial resta a favore di NADINA per intensità del beneficio (EFS/HR più favorevoli, MPR più alta), ma va ricordato che le popolazioni non sono identiche: NADINA include solo malattia palpabile con doppio blocco checkpoint, mentre SWOG S1801 utilizza pembrolizumab in monoterapia in una popolazione IIIB-IV più ampia. In Italia entrambi gli schemi (pembrolizumab neoadiuvante e nivolumab+ipilimumab neoadiuvante schema NADINA) sono disponibili tramite **legge 648**.
 
-> ++Verifica in letteratura:++ nessuno dei due schemi neoadiuvanti ha ancora un'indicazione registrata EMA o FDA per il melanoma — l'accesso in Italia avviene **solo** tramite l'elenco legge 648/1996, con determine AIFA specifiche e recenti. Per **pembrolizumab** (schema SWOG S1801, perioperatorio), la [Determina AIFA n. 73/2025 del 13/01/2025 (GU Serie Generale n. 15 del 20/01/2025)](https://www.medicoeleggi.com/argomenti000/italia2025/417053-a.htm) autorizza l'erogazione SSN per il "trattamento neoadiuvante e adiuvante (un anno complessivo di terapia) di melanoma resecabile stadi IIIB, IIIC, IIID". Per **nivolumab+ipilimumab** (schema NADINA), la [Determina n. 1572/2025 del 17/11/2025 (GU Serie Generale n. 273 del 24/11/2025)](https://www.gazzettaufficiale.it/eli/id/2025/11/24/25A06337/SG) inserisce la combinazione nell'elenco legge 648/96 per il "trattamento neoadiuvante dei pazienti affetti da melanoma", con prosecuzione in adiuvante di solo nivolumab nei pazienti con risposta patologica parziale o assente. Va quindi evitato di presentare questi due schemi come "standard regolatorio" tout court: sono standard di **pratica clinica/linee guida** (ESMO 2025), ma restano fuori scheda tecnica EMA/FDA, accessibili in Italia solo con questo meccanismo dedicato — un dettaglio ad alto rischio di errore in sede di orale.
+> ++Verifica in letteratura:++ nessuno dei due schemi neoadiuvanti ha ancora un'indicazione registrata EMA o FDA per il melanoma — l'accesso in Italia avviene **solo** tramite l'elenco legge 648/1996, con determine AIFA specifiche e recenti. Per **pembrolizumab** (schema SWOG S1801, perioperatorio), la [Determina AIFA n. 73/2025 del 13/01/2025 (GU Serie Generale n. 15 del 20/01/2025)](https://www.medicoeleggi.com/argomenti000/italia2025/417053-a.htm) autorizza l'erogazione SSN per il "trattamento neoadiuvante e adiuvante (un anno complessivo di terapia) di melanoma resecabile stadi IIIB, IIIC, IIID". Per **nivolumab+ipilimumab** (schema NADINA), la [Determina n. 1572/2025 del 17/11/2025 (GU Serie Generale n. 273 del 24/11/2025)](https://www.gazzettaufficiale.it/eli/id/2025/11/24/25A06337/SG) inserisce la combinazione nell'elenco legge 648/96 per il "trattamento neoadiuvante dei pazienti affetti da melanoma", con prosecuzione in adiuvante di solo nivolumab nei pazienti con risposta patologica parziale o assente. Va quindi evitato di presentare questi due schemi come "standard regolatorio" tout court: sono standard di **pratica clinica/linee guida** (ESMO 2025), ma restano fuori scheda tecnica EMA/FDA, accessibili in Italia solo con questo meccanismo dedicato — un dettaglio ad alto rischio di errore.
 
 ### Conclusioni pratiche sul neoadiuvante
 
 La terapia neoadiuvante rappresenta oggi il **nuovo standard nei linfonodi palpabili**, con due schemi validati (pembrolizumab secondo SWOG S1801, oppure nivolumab+ipilimumab secondo NADINA). Resta aperta la necessità di **biomarcatori predittivi** per guidare il NNT (number needed to treat) e per orientare strategie di escalation vs de-escalation terapeutica basate sulla risposta patologica.
 
-#### Punti chiave — Neoadiuvante
-- Indicazione: stadio III con linfonodi palpabili (N1b, N2b, N3) — diversa dall'adiuvante classico (malattia microscopica/stadio IIB-IIC).
-- **SWOG S1801 a 3 anni**: EFS 68% vs 56% (HR 0,67), **OS 84% vs 73%** — dato di comparatore e di OS assente nella versione precedente della scheda.
-- **NADINA**: EFS 12 mesi 85,2% vs 61,7%, EFS 24 mesi 77,3% vs 55,7% (HR 0,40) — beneficio più marcato di quanto risultasse dal solo dato a 1 anno senza comparatore.
-- NADINA (doppio blocco, malattia palpabile) mostra numeri più favorevoli di SWOG S1801 (pembrolizumab mono, popolazione più ampia) — popolazioni non identiche, cautela nel confronto diretto.
-- Entrambi gli schemi disponibili in Italia tramite legge 648, senza indicazione registrata EMA/FDA: pembrolizumab (Determina 73/2025 del 13/01/2025) e nivolumab+ipilimumab/NADINA (Determina 1572/2025 del 17/11/2025).
 
 ## Terapia della Malattia Avanzata/Metastatica
 
@@ -135,20 +107,13 @@ I dati a 5 anni per sottogruppo mutazionale restano il riferimento principale pe
 
 La sequenza IO→target therapy nei pazienti BRAF-mutati (Atkins, ASCO 2025 — aggiornamento OS luglio 2024) conferma, in tutti i sottogruppi clinici, un beneficio sostenuto in OS e PFS a 5 anni per la sequenza **immunoterapia prima, target therapy dopo**, legato a una maggiore durata di risposta (DOR). Un approccio "sandwich" (Ascierto, ESMO 2021) può essere rilevante nei pazienti con LDH elevato e/o alto carico tumorale, nei quali la target therapy offre una maggiore probabilità di risposta rapida, come possibile strategia di combinazione sequenziale IO/target.
 
-#### Punti chiave — Prima linea IO combo (CheckMate 067)
-- Dati a 5 anni: BRAF mutato OS 52%/44%/26% (nivo+ipi/nivo/ipi); BRAF wt OS 60%/46%/30%.
-- **CheckMate 067 a 10 anni (NEJM 2024)**: OS 43% (combo) vs 37% (nivo) vs 19% (ipi) — dato numerico preciso, non solo "~30%" come in versioni precedenti della scheda.
-- Circa metà dei pazienti trattati con la combinazione non raggiunge sopravvivenza a lungo termine — necessità di nuove strategie.
-- ==Rimborsabilità AIFA di nivolumab+ipilimumab ristretta a PD-L1 <1% o metastasi encefaliche asintomatiche==, più stretta del label EMA: con PD-L1 ≥1% e senza metastasi encefaliche in Italia la 1L IO è l'anti-PD-1 in monoterapia.
-- Sequenza IO→target favorita in BRAF-mutato per beneficio sostenuto in OS/PFS a 5 anni; approccio "sandwich" utile in LDH alto/alto carico tumorale.
+> ++Verifica AIFA:++ la rimborsabilità di nivolumab+ipilimumab nel melanoma avanzato è ==ristretta ai pazienti con PD-L1 <1% o con metastasi encefaliche asintomatiche==, più stretta del label EMA: con PD-L1 ≥1% e senza metastasi encefaliche, in Italia l'immunoterapia di prima linea rimborsata è l'anti-PD-1 in monoterapia.
+
 
 ### Ruolo della target therapy (BRAF+MEK) in prima linea
 
 La target therapy va preferita alla combo-immunoterapia in scenari clinici specifici: malattia altamente sintomatica, soprattutto se la combo-IO non può essere somministrata in sicurezza; malattia rapidamente evolutiva a rischio di morte entro 6 mesi; alto carico tumorale, in particolare se la combo-immunoterapia è controindicata; e metastasi encefaliche sintomatiche e steroide-dipendenti. Al contrario, nei pazienti a basso carico tumorale e prognosi favorevole (meno di 3 sedi, non viscerali, LDH < ULN), l'analisi pooled di Long et al. (Lancet Oncol 2016) documenta un beneficio duraturo anche con la sola target therapy.
 
-#### Punti chiave — Target therapy prima linea
-- Preferire BRAF+MEK su combo-IO se: malattia molto sintomatica, rapidamente evolutiva (rischio morte <6 mesi), alto carico tumorale, metastasi encefaliche sintomatiche steroido-dipendenti.
-- Beneficio duraturo della sola target therapy nei pazienti a prognosi favorevole (<3 sedi, non viscerali, LDH nella norma).
 
 ### Nivolumab-relatlimab (anti-LAG-3) come alternativa
 
@@ -162,11 +127,6 @@ Le indicazioni preferenziali per questa combinazione restano la prima linea meta
 
 Resta il fatto che **non esiste un trial randomizzato diretto** che confronti anti-PD1→target therapy contro altre sequenze terapeutiche: le evidenze real-world sono limitate da bias di confondimento per indicazione, e il metodo del propensity score resta il più robusto per queste analisi osservazionali.
 
-#### Punti chiave — Nivolumab-relatlimab
-- **RELATIVITY-047 a 3 anni**: OS ora significativa, mOS 51,0 vs 34,1 mesi, HR 0,80 (0,66-0,99) — dato non presente nella versione precedente della scheda.
-- Indicazioni preferenziali: PD-L1 <1%, recidiva ≥6 mesi dopo adiuvante; profilo di tossicità più favorevole di ipi+nivo.
-- Approvato EMA e rimborsato AIFA in Italia (registro di monitoraggio dedicato).
-- Nessun RCT diretto per il confronto di sequenze terapeutiche — solo dati real-world con bias da indicazione.
 
 ### Gestione delle metastasi encefaliche — i 3 dogmi (ESMO 2025)
 
@@ -180,11 +140,6 @@ Nella malattia **sintomatica** il quadro si inverte: la target therapy (COMBI-MB
 
 Un approccio combinato di SRS (radiochirurgia stereotassica) più combo IO è supportato da evidenze retrospettive che suggeriscono sopravvivenza a lungo termine nei pazienti trattati con SRS + ipilimumab+nivolumab (Mandalà et al., Eur J Cancer 2024).
 
-#### Punti chiave — Metastasi encefaliche
-- I 3 dogmi ESMO 2025: asintomatiche → ipi+nivo; sintomatiche/leptomeningee → BRAFi+MEKi; valutazione multidisciplinare sempre, con SRT da considerare.
-- Asintomatica: ABC (ipi+nivo) mOS >60 mesi nettamente superiore a COMBI-MB (mOS 24,3 mesi) nonostante PFS simile.
-- Sintomatica: COMBI-MB superiore a nivolumab mono e a ipi+nivo per ORR intracranico/PFS/OS quando BRAF-mutato.
-- SRS + combo IO: possibile sopravvivenza a lungo termine in analisi retrospettive.
 
 ### Sottoanalisi PD-L1 (CheckMate 067 — "panacea?")
 
@@ -194,10 +149,6 @@ Un'analisi post-hoc per PD-L1 ≥1% vs <1% e ≥5% vs <5% (criterio di stratific
 
 Il profilo di tossicità della combinazione resta complesso, con tassi elevati di eventi avversi immuno-relati di grado 3-4 che richiedono una gestione multidisciplinare esperta (Larkin, ESMO 2024; Wolchok, NEJM 2017). Un dato esplorativo del 2025 (Ascierto et al., NEJM Evidence 2025) ha analizzato il timing di somministrazione (AM vs PM dosing): si osserva un trend verso una RFS migliore con la somministrazione al mattino nella popolazione pooled e nel braccio ipilimumab, senza differenze in OS tra AM e PM dosing. Sul piano della tossicità, il dosing mattutino mostra un trend verso una minor frequenza di eventi avversi correlati al trattamento (nivolumab: 82%/12% grado qualsiasi/3-4 con AM vs 91%/21% con PM; ipilimumab: 95%/42% vs 96%/55%). Il razionale biologico proposto è un'infiltrazione tempo-dipendente di cellule dendritiche e linfociti T CD8+ nel microambiente tumorale (Lichterman, SITC 2025) — un'area di ricerca emergente, non ancora tradotta in pratica clinica standard.
 
-#### Punti chiave — Terapia avanzata, sicurezza e sottoanalisi
-- Sottoanalisi PD-L1 di CheckMate 067: beneficio non uniforme in tutti i sottogruppi — nessuna "panacea" universale.
-- Combo ipi+nivo: tossicità di grado 3-4 elevata, gestione multidisciplinare necessaria.
-- Dosing AM vs PM (dato esplorativo, non pratica clinica): trend di minor TRAE e miglior RFS con somministrazione mattutina, nessuna differenza in OS.
 
 ## Resistenza e progressione dopo Anti-PD-1
 
@@ -221,11 +172,6 @@ I linfociti infiltranti il tumore (TIL) rappresentano oggi la terapia cellulare 
 
 Anche l'**anzu-cel** (terapia cellulare diretta contro PRAME, popolazione HLA-A*02+) mostra dati preliminari promettenti (ASCO 2025), in pazienti con melanoma incluse forme mucosali e a primitività ignota, ma resta un farmaco sperimentale non approvato.
 
-#### Punti chiave — Resistenza, progressione e nuove strategie
-- TBP (KEYNOTE-001, ORR 8,6%) e ri-trattamento (MSKCC, ORR 15%) sono concetti distinti, non intercambiabili.
-- ORR post-anti-PD-1 restano modesti (<35%) nella maggior parte degli approcci, eccetto terapie cellulari e BRAF/MEK in BRAF-mutati.
-- **Lifileucel/Amtagvi (TIL)**: approvato FDA con procedura accelerata dal 16/02/2024, ORR ~31,5% — **domanda EMA ritirata a luglio 2025** per efficacia insufficiente e decessi correlati al trattamento; **non disponibile in Italia/Europa**.
-- Anzu-cel (PRAME-diretta) e brenetafusp (T-cell engager anti-PRAME) restano dati preliminari/sperimentali.
 
 ### BNT111 + cemiplimab (vaccino mRNA, studio fase II BNT111-01)
 
@@ -249,11 +195,6 @@ Il **brenetafusp** (T-cell engager anti-PRAME, popolazione HLA-A*02+) mostra dat
 
 Il RP1 in combinazione con anti-PD-1 (studio IGNYTE, fase I/II) riporta un ORR del 33% nei responder (n=140, 46% aveva già ricevuto anche anti-CTLA-4). Il BO-112 in combinazione con anti-PD-1 (studio SPOTLIGHT 203, fase II) riporta un ORR del 25% (n=40, 46% con precedente anti-CTLA-4).
 
-#### Punti chiave — Vaccini, T-cell engager e virus oncolitici
-- BNT111+cemiplimab: studio positivo, ORR 18,1% con 2/3 dei responder in CR.
-- IO102-IO103+pembrolizumab: PFS HR 0,77, risultato al limite della significatività (p=0,0558).
-- **Tebentafusp a 5 anni**: OS 16% vs 8% (HR 0,67) nel melanoma uveale — dato aggiornato assente nella versione precedente; approvato EMA e rimborsato AIFA in Italia.
-- RP1 e BO-112 (virus oncolitici + anti-PD-1): ORR 33% e 25% rispettivamente, in popolazioni pretrattate con anti-CTLA-4.
 
 ## Discussione di Casi Clinici (Ascierto, Grandangolo 2025) — situazioni pratiche
 - **Gestione delle tossicità severe (Sindrome di Stevens-Johnson G4)** dopo ipi+nivo in prima linea con RT concomitante — pone il problema della strategia terapeutica dopo risoluzione di una tossicità grado 4, tipicamente controindicando la ripresa dell'agente responsabile.
@@ -280,9 +221,9 @@ Per lo stato aggiornato di rimborsabilità AIFA dei farmaci elencati di seguito 
 ## Follow-up
 - Non trattato in dettaglio nelle fonti disponibili (presentazioni congressuali focalizzate su terapia); approccio standard con esame clinico, ecografia linfonodale e imaging periodico secondo stadio e rischio di recidiva, coerente con le altre neoplasie cutanee.
 
-## Punti ad alta resa per orale
+## Punti chiave
 - **Stadio IIB/IIC = 50% di tutta la malattia in stadio II**, con sopravvivenza a 10 anni sovrapponibile allo stadio III (75-82% vs 60-88%) — giustifica l'estensione dell'adiuvante a questi stadi.
-- **Nessuno dei quattro pilastri dell'adiuvante di stadio III (CheckMate 238, COMBI-AD, KEYNOTE-054) ha dimostrato un vantaggio di OS statisticamente significativo**, anche a follow-up di 7-9 anni — solo RFS/DMFS sono validati; punto controverso spesso oggetto di domande.
+- **Nessuno dei quattro pilastri dell'adiuvante di stadio III (CheckMate 238, COMBI-AD, KEYNOTE-054) ha dimostrato un vantaggio di OS statisticamente significativo**, anche a follow-up di 7-9 anni — solo RFS/DMFS sono validati; punto controverso.
 - **COMBI-AD a 8 anni**: HR RFS 0,52 (RFS 50% vs 35%) — beneficio relativo più marcato tra gli studi di adiuvante, ma OS ancora non significativa (HR 0,80, p=0,063); sottoanalisi BRAF V600K non significativa per campione ridotto (trabocchetto).
 - **irAE croniche più frequenti e persistenti delle acute** dopo anti-PD-1 adiuvante (dato Patrinely 2021).
 - **NADINA e SWOG S1801**: la terapia **neoadiuvante è oggi standard nei linfonodi palpabili** (N1b, N2b, N3); ai follow-up più maturi (3 anni SWOG, 2 anni NADINA) il beneficio in EFS si accompagna a un vantaggio anche in OS (SWOG S1801: OS 84% vs 73% a 3 anni).

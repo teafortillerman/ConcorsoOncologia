@@ -28,10 +28,6 @@ La distinzione fondamentale è tra NMIBC (Ta, Tis, T1) e MIBC (T2-T4). Per il ri
 
 **FGFR3** ha una prevalenza del 16-21% (con alterazioni actionable nel 12-16,6%), più frequente nelle UTUC (23,8-35,6%) e nelle metastasi polmonari — è il target di **erdafitinib**. Sul PD-L1, il sistema di scoring cambia a seconda del farmaco (CPS, TPS o TAP): il KEYNOTE-045, per esempio, usa il CPS. Non esiste ancora alcun biomarcatore urinario validato per lo screening.
 
-#### Punti chiave
-- Diverticolo vescicale: mai pT2 (assenza tonaca muscolare) — trabocchetto classico.
-- CIS: sempre alto grado, indicatore prognostico negativo indipendente.
-- FGFR3 più frequente nelle UTUC e nelle metastasi polmonari — target di erdafitinib.
 
 ## Trattamento della malattia non muscolo-invasiva (NMIBC)
 
@@ -51,11 +47,6 @@ Una singola instillazione di chemioterapia immediata (entro 24 ore, idealmente e
 
 Si definisce BCG-unresponsive in tre situazioni: T1 alto grado refrattario a 3 mesi; Ta alto grado o CIS persistente dopo re-induzione a 6 mesi; oppure recidiva entro 6 mesi (Ta/T1 alto grado) o 12 mesi (CIS) dal termine del BCG (BCG-resistente). Un ciclo aggiuntivo di BCG a 3 mesi, in caso di Ta G3/CIS residuo, ottiene una risposta completa in oltre il 50% dei casi. La cistectomia radicale resta un'opzione con raccomandazione condizionata a favore, con una sopravvivenza cancro-specifica dell'80% se eseguita precocemente.
 
-#### Punti chiave
-- Re-TUR obbligatoria: resezione incompleta, tonaca muscolare assente, T1 e/o alto grado.
-- BCG = unico trattamento che riduce anche la progressione (non solo la recidiva).
-- Mantenimento BCG ≥12 mesi: nel rischio intermedio 1 anno = 3 anni; nell'alto rischio 3 anni riducono ulteriormente le recidive (EORTC 30962).
-- BCG-unresponsive: cistectomia radicale opzione condizionata a favore, CSS 80% se precoce.
 
 ## Neoplasie dell'alta via escretrice (UTUC)
 
@@ -89,13 +80,6 @@ L'**IMvigor011** ha testato l'atezolizumab adiuvante **guidato dal ctDNA** dopo 
 
 Consiste in TURBT massimale, radioterapia e chemioterapia concomitante (cisplatino/5-FU, oppure mitomicina/gemcitabina). Lo studio di Zlotta (2023, Lancet Oncology) mostra una sopravvivenza libera da metastasi sovrapponibile alla cistectomia (74% contro 74%); l'analisi pooled del RTOG mostra una preservazione vescicale dell'80% a 5 anni.
 
-#### Punti chiave
-- Chemioterapia neoadiuvante cisplatino-based: unica raccomandazione "forte a favore" in MIBC, beneficio dimostrato solo in cT3-T4.
-- ++CheckMate 274 a 5 anni: primo dato di OS, mediana 75 vs 50,1 mesi (HR 0,83; HR 0,63 se PD-L1≥1%)++; rimborsato da AIFA (Determina Pres. 521/2026).
-- NIAGARA: EFS HR 0,68 e !!OS significativa già nell'analisi primaria (HR 0,75, p=0,0106)!!; ++rimborsato AIFA dal 30 giugno 2026++.
-- ++KEYNOTE-905/EV-303 confermato a ESMO 2025: EFS HR 0,40, OS HR 0,50, pCR 57,1% (la più alta mai riportata in un fase III in questo setting)++ — approvato dalla Commissione Europea il 24/06/2026 ma **solo nei cisplatino-ineleggibili**; ++non ancora rimborsato da AIFA++ alla data di questa verifica.
-- IMvigor011: adiuvante guidato da ctDNA — ctDNA-negativi persistenti hanno prognosi eccellente senza trattamento.
-- Bladder-sparing trimodale: MFS sovrapponibile a cistectomia (Zlotta 2023).
 
 ## Terapia della malattia avanzata/metastatica
 
@@ -111,13 +95,6 @@ In Italia l'algoritmo di prima linea è interamente rimborsato: **EV-302/KEYNOTE
 
 Nel KEYNOTE-045, pembrolizumab in seconda linea ha mostrato un HR per OS di 0,70 (10,3 contro 7,3 mesi), con qualità dell'evidenza alta. L'IMvigor211 (atezolizumab in seconda linea) è invece risultato **negativo** (HR 0,87, non significativo) e non è registrato per questa indicazione — un punto su cui è facile fare confusione con il farmaco "gemello" pembrolizumab. L'EV-301 (enfortumab vedotin dopo platino e immunoterapia) mostra un HR per PFS di 0,63 e per OS di 0,70, ed è approvato da EMA/AIFA. L'erdafitinib, nei pazienti con alterazione di FGFR3 (studio THOR), mostra un HR per OS di 0,64 ed è **rimborsato da AIFA dall'ottobre 2025**. Il sacituzumab govitecan (TROPHY-U-01) mostra un ORR del 27-28% e resta solo a livello di evidenza III,B ESMO: !!l'indicazione uroteliale non è più disponibile nemmeno negli Stati Uniti!!, dopo che l'approvazione FDA accelerata è stata ritirata volontariamente nell'ottobre 2024 a seguito del fallimento del trial di conferma di fase III (TROPiCS-04, endpoint primario di OS non raggiunto) — un'indicazione mai stata oggetto di domanda EMA/AIFA. In Italia EV-301 (enfortumab vedotin in monoterapia dopo platino e immunoterapia) è rimborsato dal 18 settembre 2023; erdafitinib è rimborsato per il carcinoma uroteliale non resecabile/metastatico FGFR3-alterato dopo almeno una linea comprendente un anti-PD-1/PD-L1, con un programma diagnostico dedicato (DSP) per identificare le alterazioni di FGFR3.
 
-#### Punti chiave
-- EV-302 = nuovo standard 1L, indipendentemente dall'eleggibilità al platino — cambio di paradigma completo rispetto al vecchio algoritmo cisplatino-fit/unfit — ++rimborsato AIFA dal 21 gennaio 2026++.
-- CheckMate 901: solo nei cisplatino-eleggibili, MCBS inferiore a EV-pembrolizumab — ++approvato EMA 29/05/2024, rimborsato AIFA (stessa determina del nivolumab adiuvante, 521/2026)++.
-- JAVELIN Bladder 100 (mantenimento avelumab): resta opzione se EV-pembrolizumab non utilizzabile — rimborsato AIFA dal 2022, il più "datato" del gruppo.
-- IMvigor211 negativo, KEYNOTE-045 positivo: solo pembrolizumab ha registrazione in 2ª linea, non atezolizumab.
-- Erdafitinib rimborsato AIFA da ottobre 2025 per FGFR3-alterato dopo CT+IO.
-- !!Sacituzumab govitecan: l'indicazione uroteliale non è più disponibile in alcun paese — approvazione FDA accelerata ritirata nell'ottobre 2024 dopo il fallimento di TROPiCS-04 (OS non raggiunta), mai stata oggetto di domanda EMA/AIFA!!.
 
 ## Farmaci e classi rilevanti
 
@@ -131,8 +108,7 @@ L'enfortumab vedotin causa tipicamente neuropatia periferica, rash cutaneo e ipe
 
 Nel NMIBC a rischio basso: cistoscopia a 3 mesi, poi a 12 mesi, poi annuale fino a 5 anni. Nel rischio alto: ogni 3 mesi, poi ogni 6 mesi (fino al terzo anno), poi annuale. Dopo cistectomia per MIBC: citologia e imaging ogni 3-6 mesi per 2 anni. Nel bladder-sparing: cistoscopia con biopsie ogni 3-6 mesi nei primi 2 anni, poi ogni 6 mesi. Non c'è evidenza a supporto dell'uso dei marcatori tumorali nel follow-up.
 
-## Punti ad alta resa per l'orale
-
+## Punti chiave
 - Diverticolo vescicale: mai pT2 (assenza tonaca muscolare) — trabocchetto classico.
 - BCG = unico trattamento che riduce la progressione (non solo la recidiva) in NMIBC; mantenimento ≥12 mesi (1 anno sufficiente nel rischio intermedio, fino a 3 anni nell'alto rischio).
 - POUT trial: unico fase III per chemioterapia adiuvante nell'UTUC (DFS HR 0,45-0,51).

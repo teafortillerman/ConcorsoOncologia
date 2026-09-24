@@ -9,10 +9,6 @@ L'ambito clinico richiede una gestione obbligatoriamente multidisciplinare, che 
 
 Questa scheda si basa sulle Linee Guida inter-societarie italiane (AISF/AIOM/IT-IHPBA/SIC/SIRM/SITO) 2023, ESMO CPG Epatocarcinoma 2025 e il Congresso Grandangolo 2025, integrata con verifiche di letteratura successive (CARES-310, EMERALD-1/LEAP-012, KEYNOTE-937 — vedi sezioni dedicate).
 
-#### Punti chiave
-- HCC = unico tumore solido con indicazione al trapianto d'organo come opzione curativa; >90% dei casi insorge su cirrosi.
-- Gestione obbligatoriamente multidisciplinare — la complessità oncologica ed epatologica richiede un team integrato.
-
 
 ## Epidemiologia
 
@@ -25,20 +21,12 @@ L'evidenza a supporto della gestione multidisciplinare nell'HCC è solida e quan
 
 Il team "core" multidisciplinare comprende l'epatologo (spesso la figura di riferimento data la centralità della malattia epatica sottostante), il chirurgo epatico, il chirurgo trapiantologo, il radiologo interventista e diagnosta, l'oncologo, il radioterapista, e il patologo.
 
-#### Punti chiave
-- MDT vs singolo esperto: HR mortalità 0,55 (7 studi osservazionali, 12.063 pazienti) — raccomandazione forte a favore.
-- Team core: epatologo, chirurgo epatico/trapiantologo, radiologo interventista/diagnosta, oncologo, radioterapista, patologo.
-
 
 ## Diagnosi e stadiazione
 
 La diagnosi radiologica dell'HCC si basa su protocolli dedicati di **TC o RM multifasica con mezzo di contrasto**, specificamente calibrati per la caratterizzazione delle lesioni epatiche secondo il pattern vascolare tipico (ipervascolarizzazione in fase arteriosa con washout in fase portale/tardiva).
 
 La stadiazione di riferimento è la **classificazione BCLC (Barcelona Clinic Liver Cancer)**, che integra stadio tumorale, funzione epatica e performance status in un unico sistema che guida direttamente la scelta terapeutica: gli stadi 0/A (precoce) sono candidati a resezione, ablazione o trapianto; lo stadio B (intermedio) a TACE o TARE; lo stadio C (avanzato) a terapia sistemica; e lo stadio D (terminale) alle sole cure di supporto.
-
-#### Punti chiave
-- TC/RM multifasica con mdc: protocollo dedicato per caratterizzazione vascolare delle lesioni epatiche.
-- BCLC: 0/A (precoce) → resezione/ablazione/trapianto; B (intermedio) → TACE/TARE; C (avanzato) → terapia sistemica; D (terminale) → cure di supporto.
 
 
 ## Chirurgia — resezione epatica
@@ -50,11 +38,6 @@ Nei pazienti con **HCC singolo in stadio BCLC 0-A con funzione epatica preservat
 L'**HCC multinodulare (2-3 noduli)** con buona funzione epatica rappresenta un'indicazione importante per la resezione, sulla base dell'==OS a 5 anni del 51-56% versus 18-31% con TACE==. Questa rappresenta un'eccezione significativa alle linee guida occidentali (EASL/AASLD) che generalmente escludono la chirurgia nei tumori multinodulari; tuttavia, nei pazienti ben selezionati con oligonodularità, la resezione offre benefici oncologici robusti.
 
 L'**invasione macrovascolare intraepatica (MVI)** che non si estende al tronco della vena portale o inferiore rappresenta un'ulteriore indicazione potenziale per la resezione rispetto alla terapia sistemica con sorafenib. In questa popolazione, la resezione è **condizionata a favore**, con un OS a 5 anni del 56% versus 13% con sorafenib (RR 4,35); tuttavia, la mortalità perioperatoria rimane considerevole (3-6%), richiedendo un'attenta selezione dei pazienti e una discussione multidisciplinare. Le linee guida ESMO 2025 raccomandano la resezione [I, A] per l'HCC singolo >2 cm in BCLC 0-A e l'ablazione (RFA/MWA) per i tumori <2 cm.
-
-#### Punti chiave
-- HCC singolo BCLC 0-A, Child-Pugh A: resezione preferita a RFA/MWA (eccetto ≤2cm, equivalenti) — OS 5a 71% vs 60%.
-- HCC multinodulare (2-3 noduli) ben selezionato: resezione FORTE a favore (OS 5a 51-56% vs 18-31% con TACE) — eccezione a EASL/AASLD.
-- MVI intraepatica (non tronco portale): resezione condizionata a favore vs sorafenib (OS 5a 56% vs 13%) — mortalità perioperatoria 3-6%, richiede selezione MDT attenta.
 
 
 ## Trapianto di fegato
@@ -77,13 +60,6 @@ Il trapianto di salvataggio rappresenta un'alternativa al trapianto in prima lin
 
 La strategia di downstaging seguito da trapianto rappresenta un'opzione di salvataggio per i pazienti con HCC oltre i criteri di Milano che raggiungono una risposta oncologica stabile. Il trial **XXL (Mazzaferro)** ha stabilito il paradigma del "test del tempo": i pazienti ricevono downstaging (sorafenib per 3 mesi) e vengono trapiantati solo se mantengono una risposta stabile per ≥3 mesi, con l'obiettivo di selezionare biologicamente i candidati migliori. Questo approccio ha determinato un ++beneficio di sopravvivenza globale significativo con HR 0,32 a 5 anni++ rispetto ai controlli storici. Tuttavia, il tasso di fallimento del downstaging rimane elevato (21-50%), con circa 1/3 dei pazienti che rimangono eleggibili al trapianto al momento della recidiva. ==Raccomandazione FORTE a favore del downstaging+trapianto nei pazienti con HCC localizzato oltre i criteri di Milano e buona prognosi biochimica==.
 
-#### Punti chiave — trapianto di fegato
-- OLT: unica opzione curativa che tratta tumore e cirrosi insieme, OS mediana 10 anni. Criteri di Milano (singolo ≤5cm o ≤3 noduli ≤3cm): OS 5a 70%, benchmark internazionale.
-- Criteri estesi (UCSF, up-to-seven, ASAN, modello AFP): accettabili se OS attesa 5a >70% (Milano) o >50% (oltre Milano) [II,B].
-- Milan-out: OLT riduce mortalità vs alternative — HR 0,58 vs resezione, HR 0,10 vs sorafenib.
-- SLT (trapianto di salvataggio): solo 1/3 dei recidivati rimane eleggibile; mortalità operatoria doppia (OR 2,00) — selettivo, non strategia di prima scelta.
-- Downstaging+trapianto (XXL): "test del tempo" (stabilità ≥3 mesi) — HR 0,32 a 5 anni; fallimento downstaging 21-50%; FORTE a favore se risposta stabile.
-
 
 ## Terapie locoregionali
 
@@ -95,23 +71,12 @@ L'**embolizzazione transarteriale (TACE)** rimane indicata nel trattamento dell'
 
 La **radioembolizzazione con microsfere cariche di ittrio-90 (TARE/SIRT)** è emersa come alternativa preferibile a TACE in specifici scenari clinici. ==Secondo le linee guida ESMO 2025, TARE è raccomandato nei tumori singoli ≤8 cm, in particolare nei pazienti in attesa di trapianto di fegato, per il profilo di tossicità inferiore e i migliori tempi di progressione==. Sebbene il costo sia più elevato rispetto a TACE (circa 20.000€ vs 3.686€), il beneficio clinico e la ridotta morbidità supportano questa scelta in contesti selezionati. La raccomandazione ESMO è di livello III, A; nel trial TRACE, TARE rispetto a TACE ha ridotto il rischio di progressione (HR per TTP 0,39), con OS mediana di 30,2 contro 15,6 mesi. TACE resta efficace nel BCLC-B non candidato a TARE.
 
-#### Punti chiave — terapie locoregionali
-- RFA/MWA: standard per tumori singoli <2cm, buona funzione epatica.
-- SBRT: PFS a 5 anni superiore a TACE (RR 2,00) in BCLC-A non candidato a resezione/ablazione.
-- TACE: standard BCLC-B, terapia ponte per trapianto.
-- TARE/SIRT: preferita a TACE in tumori singoli ≤8cm in attesa di trapianto (TRACE: HR TTP 0,39, OS 30,2 vs 15,6 mesi) — costo maggiore ma tossicità inferiore.
-
 
 ## Terapia sistemica — criteri generali
 
 L'accesso alla terapia sistemica richiede una funzione epatica preservata (**Child-Pugh A**) e un performance status ECOG 0-1; è indicata nello stadio **BCLC C** (avanzato) o nello stadio **BCLC B non suscettibile di trattamento locoregionale**. La conferma istologica è raccomandata prima di iniziare qualsiasi terapia sistemica.
 
 Due aspetti pratici richiedono attenzione specifica prima di iniziare il trattamento. Lo ==**screening endoscopico delle varici esofagee è obbligatorio prima di atezolizumab-bevacizumab**==, data la componente antiangiogenica che aumenta il rischio emorragico; il regime **HIMALAYA (STRIDE)**, non contenendo bevacizumab, non richiede questo screening — una differenza pratica rilevante nella scelta del regime in pazienti con difficile accesso all'endoscopia. Inoltre, la **Vp4** (trombosi del tronco portale principale) era inclusa nella popolazione degli studi IMbrave150 e CARES-310, ma è stata esclusa dagli studi HIMALAYA e CheckMate-9DW — un dettaglio importante nella selezione del regime in base al pattern di invasione vascolare del paziente.
-
-#### Punti chiave
-- Terapia sistemica: richiede Child-Pugh A, ECOG PS 0-1; indicata in BCLC C o BCLC B non suscettibile di locoregionale.
-- Screening varici obbligatorio prima di atezolizumab-bevacizumab; HIMALAYA non lo richiede.
-- Vp4 (trombosi tronco portale): inclusa in IMbrave150/CARES-310, esclusa da HIMALAYA/CheckMate-9DW — guida la scelta del regime.
 
 
 ## Terapia della malattia avanzata/metastatica — prima linea
@@ -141,14 +106,6 @@ I criteri di scelta pratici prevedono, in assenza di controindicazioni, la prefe
 
 Un dato negativo importante riguarda i tentativi di intensificazione della doppietta immunoterapica con un terzo agente: i trial **IMbrave152/SKYSCRAPER-14** (tiragolumab+atezolizumab+bevacizumab) e **TRIPLET-HCC** (atezolizumab+bevacizumab+ipilimumab) sono entrambi risultati negativi, senza beneficio aggiuntivo rispetto alla doppietta standard, e con maggiore tossicità — confermando il principio "1+1+1 non fa 3 ma 2" già discusso nella sezione Novità 2025.
 
-#### Punti chiave — prima linea malattia avanzata
-- IMbrave150 (atezo+bev): primo a superare sorafenib (OS HR 0,66) — endoscopia varici obbligatoria. Rimborsato AIFA da giugno 2022 (gap di ~18 mesi rispetto a EMA nov 2020).
-- HIMALAYA/STRIDE: OS 5a 19,6% vs 9,4% — no endoscopia; Vp4 esclusa dallo studio. Rimborsato AIFA da febbraio 2024 (determina 96/2024).
-- CARES-310 (camrelizumab+rivoceranib): miglior OS assoluto (23,8 mesi, HR 0,64) ma NON approvato — 3ª CRL FDA per problemi produttivi (non efficacia), solo orphan drug EMA.
-- CheckMate-9DW (nivo+ipi): OS HR 0,79 ma curve KM si incrociano a ~12 mesi, nessun vantaggio PFS. Autorizzato EMA/EC a marzo 2025, ma **non rimborsato da AIFA** (determina 530/2026, aprile 2026) — non disponibile tramite SSN in Italia nonostante l'autorizzazione europea.
-- Triplette IO (IMbrave152/SKYSCRAPER-14, TRIPLET-HCC): entrambe negative — il doppietto resta standard.
-- Scelta pratica: ICI-based sempre preferita se non controindicazioni; atezo-bev controindicato se rischio emorragico; STRIDE se controindicazione a bevacizumab (con Vp4 i dati sono di IMbrave150); lenvatinib se IO controindicata. In Italia, tra i regimi ICI-based di prima linea disponibili e rimborsati oggi vi sono solo IMbrave150 e HIMALAYA/STRIDE (non CheckMate-9DW).
-
 
 ## Terapia della malattia avanzata — seconda linea
 
@@ -159,13 +116,6 @@ A differenza di regorafenib e cabozantinib, **ramucirumab non è rimborsato in I
 Il **pembrolizumab** in monoterapia (studi KEYNOTE-224/240/394) ha ottenuto negli Stati Uniti un'approvazione accelerata FDA nel 2018 per la seconda linea post-sorafenib, confermata dall'ODAC (comitato consultivo FDA) all'unanimità nell'aprile 2021 nonostante il mancato raggiungimento formale della significatività statistica nello studio registrativo di conferma KEYNOTE-240, sulla base dei dati aggiuntivi di KEYNOTE-394 nella popolazione asiatica (OS positiva). In Europa, però, pembrolizumab in monoterapia per l'HCC **non ha mai ottenuto l'autorizzazione EMA**: resta un'opzione solo statunitense e non va presentato come disponibile in Italia, dove nell'HCC compare solo nell'adiuvante con lo studio KEYNOTE-937, negativo (vedi Novità 2025-2026).
 
 La chemioterapia sistemica citotossica **non è raccomandata** in nessuna linea di trattamento dell'HCC avanzato, non avendo mai dimostrato un beneficio significativo in studi randomizzati controllati — una peculiarità che distingue l'HCC dalla maggior parte degli altri tumori solidi gastrointestinali, dove la chemioterapia mantiene un ruolo anche nelle linee successive.
-
-#### Punti chiave — seconda linea
-- RESORCE/regorafenib: dopo sorafenib TOLLERATO (non dopo tossicità) — OS HR 0,63 (10,6 vs 7,8 mesi). Rimborsato AIFA dal 2018, registro attivo.
-- CELESTIAL/cabozantinib: dopo 1-2 linee precedenti — OS HR 0,76 (10,2 vs 8,0 mesi). Rimborsato AIFA dal luglio 2020, rinnovi 2022/2024.
-- REACH-2/ramucirumab: unico farmaco selezionato da biomarcatore, solo se AFP ≥400 ng/mL — OS HR 0,71 (8,5 vs 7,3 mesi). **NON rimborsato da AIFA** in Italia (determina 11.05.2021), pur autorizzato EMA dal 2019.
-- Pembrolizumab monoterapia: FDA-only (accelerated approval 2018, riconfermata ODAC 2021) — mai autorizzato EMA, non disponibile in Europa/Italia.
-- Chemioterapia citotossica sistemica: mai raccomandata in nessuna linea, nessun RCT positivo.
 
 
 ## Novità 2025-2026
@@ -179,12 +129,6 @@ La combinazione di **TACE con immunoterapia in stadio intermedio (BCLC-B)** è s
 Il **concetto di "circolarità" del trattamento** rimane un'area di interesse crescente: la terapia sistemica (inclusa l'immunoterapia) può indurre un downstaging tale da rendere resecabile o trapiantabile un HCC inizialmente non operabile. Le linee guida ESMO ammettono l'OLT dopo downstaging con terapia sistemica, inclusi gli ICI [IV, C], con l'avvertenza che un trapianto eseguito a breve distanza dall'ultima dose di ICI comporta un aumentato rischio di rigetto acuto (vedi sezione Tossicità).
 
 Sul fronte adiuvante, il quadro rimane negativo per l'immunoterapia dopo trattamento locale radicale. **IMbrave050** (atezolizumab-bevacizumab adiuvante dopo resezione/ablazione in pazienti ad alto rischio di recidiva) aveva inizialmente mostrato un miglioramento della recurrence-free survival, ma il beneficio non si è mantenuto alla seconda analisi ad interim, portando all'interruzione prematura dello studio. A questo si aggiunge ora un secondo trial negativo nello stesso setting: **KEYNOTE-937** (pembrolizumab adiuvante dopo resezione o ablazione con intento curativo) non ha dimostrato beneficio in recurrence-free survival, con **HR 1,06 (p=0,719)** — un risultato nettamente negativo che rafforza il messaggio che ==l'immunoterapia adiuvante dopo trattamento locale radicale dell'HCC non è al momento raccomandata== [I, E] con nessuno dei regimi finora testati, una conclusione allineata con le linee guida ESMO 2025.
-
-#### Punti chiave — novità 2025-2026
-- Triplette IO (IMbrave152/SKYSCRAPER-14, TRIPLET-HCC): entrambe negative, il doppietto resta standard.
-- EMERALD-1 (TACE+durva±bev) e LEAP-012 (TACE+pembro+lenva) in BCLC-B: OS MATURA e NEGATIVA in entrambi (EMERALD-1: 29,9 vs 33,6 vs 33,3 mesi; LEAP-012: HR 0,80, p=0,087, chiuso per futilità).
-- Circolarità del trattamento: downstaging con terapia sistemica (inclusi ICI) può rendere operabile un HCC iniziale non resecabile — OLT ammesso [IV,C] con attenzione al timing ICI-trapianto.
-- Adiuvante dopo resezione/ablazione: DUE trial negativi — IMbrave050 (atezo-bev) e KEYNOTE-937 (pembrolizumab, RFS HR 1,06, p=0,719) — nessuna immunoterapia adiuvante raccomandata [I,E].
 
 
 ## Farmaci e classi rilevanti
@@ -208,18 +152,12 @@ Un'interazione critica riguarda la **combinazione di immunoterapia e trapianto d
 
 > !!Attenzione — ICI e trapianto:!! un trapianto eseguito meno di 6-8 settimane dopo l'ultima dose di immunoterapia aumenta in modo significativo il rischio di rigetto acuto: il timing va pianificato in sede multidisciplinare.
 
-#### Punti chiave — tossicità
-- Bevacizumab: rischio emorragico in cirrosi/varici non controllate — screening endoscopico obbligatorio prima dell'inizio.
-- Doppiette ICI (tremelimumab, ipilimumab): irAE grade ≥3-4 raddoppiati vs monoterapia — necessari corticosteroidi ad alte dosi in ~20% dei pazienti.
-- TKI (sorafenib, lenvatinib, regorafenib, cabozantinib): tossicità di classe condivisa (mano-piede, ipertensione, diarrea, astenia) con profili differenziali da adattare alle comorbidità.
-- ICI + trapianto: rigetto acuto se trapianto <6-8 settimane dall'ultima dose di ICI — pianificazione temporale multidisciplinare obbligatoria.
-
 
 ## Follow-up
 - Non dettagliato in modo specifico e quantitativo in questa fonte; sorveglianza per HCC su cirrosi tipicamente basata su imaging periodico (ecografia ± AFP ogni 6 mesi, secondo prassi consolidata epatologica).
 
 
-## Punti ad alta resa per orale
+## Punti chiave
 - **Criteri di Milano**: singolo ≤5cm o ≤3 noduli ≤3cm — riferimento storico per il trapianto; criteri estesi (UCSF, up-to-seven, ASAN, AFP-model) per sopravvivenza attesa >70% a 5a (Milano) o >50% a 5a (oltre Milano).
 - **IMbrave150**: primo regime a superare il sorafenib in OS (HR 0,66) — endoscopia varici obbligatoria.
 - **HIMALAYA/STRIDE**: OS 5a 19,6% vs 9,4% — non richiede endoscopia, ma Vp4 esclusa dallo studio (con Vp4 i dati sono di IMbrave150 e CARES-310).
