@@ -1846,6 +1846,17 @@
       ]
     },
     {
+      "id": "mesotelioma",
+      "title": "Mesotelioma",
+      "theme": "Torace",
+      "scheda": "Schede/Torace/Mesotelioma.md",
+      "path": "Algoritmi/mesotelioma.algo.json",
+      "settings": [
+        "Resecabile, candidabile a chirurgia",
+        "Non resecabile / avanzato"
+      ]
+    },
+    {
       "id": "polmone_nsclc",
       "title": "Polmone NSCLC",
       "theme": "Torace",
@@ -1855,6 +1866,18 @@
         "Precoce resecabile (stadio I-III)",
         "Stadio III non resecabile",
         "Avanzato / metastatico"
+      ]
+    },
+    {
+      "id": "polmone_sclc",
+      "title": "Polmone SCLC",
+      "theme": "Torace",
+      "scheda": "Schede/Torace/Polmone_SCLC.md",
+      "path": "Algoritmi/polmone_sclc.algo.json",
+      "settings": [
+        "Stadio limitato (LD)",
+        "Stadio esteso (ED)",
+        "Recidiva o progressione dopo la 1ª linea"
       ]
     }
   ]

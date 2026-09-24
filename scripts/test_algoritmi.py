@@ -354,3 +354,55 @@ class NsclcAlgorithmTest(unittest.TestCase):
                         seen.add(n); queue.append(n)
             self.assertNotIn("precoce_perio", seen)
 
+
+def rimborsabilita_section(title):
+    text = (ROOT / "Schede" / "Trasversali" / "Rimborsabilita.md").read_text(encoding="utf-8")
+    return text.split(f"\n## {title}", 1)[1].split("\n## ", 1)[0]
+
+
+class ToraceAlgorithmsTest(unittest.TestCase):
+    CASES = {"polmone_sclc.algo.json": "SCLC (Polmone)", "mesotelioma.algo.json": "Mesotelioma"}
+
+    def load(self, name):
+        return json.loads((ROOT / "Algoritmi" / name).read_text(encoding="utf-8"))
+
+    def statuses(self, data):
+        return {o["name"]: o["aifa"] for n in data["nodes"].values() if n["type"] == "recommendation" for o in n["options"]}
+
+    def test_are_valid(self):
+        for name in self.CASES:
+            with self.subTest(name=name):
+                self.assertEqual(validate_algorithm(self.load(name), ROOT), [])
+
+    def test_rimborsabilita_doses_match_the_scheda(self):
+        for name, section in self.CASES.items():
+            text = rimborsabilita_section(section)
+            for node_id, node in self.load(name)["nodes"].items():
+                for option in node.get("options", []):
+                    regimen = option.get("regimen")
+                    if not regimen or {s["type"] for s in regimen["sources"]} != {"rimborsabilita"}:
+                        continue
+                    for drug, dose in regimen["rows"]:
+                        for amount in re.findall(r"\d+(?:,\d+)? mg(?:/kg|/m²)?", dose):
+                            self.assertIn(amount.replace("/m²", "/m"), text.replace("/m²", "/m").replace("m2", "m"),
+                                          f"{name} {node_id} / {drug}: {amount}")
+
+    def test_sclc_statuses_match_the_scheda(self):
+        status = self.statuses(self.load("polmone_sclc.algo.json"))
+        self.assertEqual(status["Tarlatamab"], "not_reimbursed")
+        self.assertEqual(status["Lurbinectedin + atezolizumab"], "not_reimbursed")
+        self.assertEqual(status["Durvalumab fino a 24 mesi"], "reimbursed")
+        self.assertEqual(status["Atezolizumab + carboplatino-etoposide"], "reimbursed")
+
+    def test_mesotelioma_statuses_match_the_scheda(self):
+        data = self.load("mesotelioma.algo.json")
+        nonepi = {o["name"]: o["aifa"] for o in data["nodes"]["adv_nonepi"]["options"]}
+        epi = {o["name"]: o["aifa"] for o in data["nodes"]["adv_epi"]["options"]}
+        self.assertEqual(nonepi["Nivolumab + ipilimumab"], "reimbursed")
+        self.assertEqual(epi["Nivolumab + ipilimumab"], "not_reimbursed")
+        self.assertEqual(nonepi["Pembrolizumab + platino-pemetrexed"], "unknown")
+
+    def test_mesotelioma_nivolumab_monotherapy_never_after_immunotherapy(self):
+        names = [o["name"] for o in self.load("mesotelioma.algo.json")["nodes"]["adv_2l_post_io"]["options"]]
+        self.assertNotIn("Nivolumab in monoterapia", names)
+
