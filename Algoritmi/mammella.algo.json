@@ -223,9 +223,9 @@
           "key": "Prosecuzione dello schema KEYNOTE-522."
         },
         {
-          "name": "Capecitabina",
+          "name": "Capecitabina in aggiunta al pembrolizumab",
           "aifa": "standard",
-          "key": "Malattia residua dopo NAT (CREATE-X)."
+          "key": "Malattia residua dopo NAT (CREATE-X): si associa al pembrolizumab, non lo sostituisce."
         },
         {
           "name": "Olaparib 1 anno se gBRCA1/2",
@@ -310,11 +310,18 @@
           "key": "Se alto rischio (criteri monarchE)."
         },
         {
+          "name": "Ribociclib 3 anni + inibitore dell'aromatasi",
+          "aifa": "reimbursed",
+          "key": "Se alto rischio (criteri NATALEE, incluse N0 ad alto rischio). Rimborsato dal 6 marzo 2026.",
+          "detail": "Dose adiuvante 400 mg/die (21 giorni su 28). Popolazione più ampia di monarchE: include anche le pazienti linfonodo-negative ad alto rischio."
+        },
+        {
           "name": "Olaparib 1 anno se gBRCA1/2",
           "aifa": "reimbursed",
           "key": "gBRCA1/2 con malattia residua (OlympiA: iDFS HR 0,63, OS HR 0,68)."
         }
-      ]
+      ],
+      "note": "Abemaciclib e ribociclib sono alternative: si sceglie in base ai criteri di inclusione del rispettivo studio."
     },
 
     "m1_sottotipo": {
@@ -566,7 +573,7 @@
         {
           "name": "Tucatinib + trastuzumab + capecitabina",
           "aifa": "reimbursed",
-          "key": "HER2CLIMB: unico regime con dati prospettici dedicati alle metastasi encefaliche attive."
+          "key": "Da preferire con metastasi encefaliche attive o progressione intracranica, per la maggiore efficacia sulle metastasi cerebrali (HER2CLIMB, unico regime con dati prospettici dedicati)."
         }
       ],
       "next": { "label": "Alla progressione → linee successive", "node": "m1_her2_successive" }

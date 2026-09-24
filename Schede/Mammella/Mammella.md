@@ -241,14 +241,14 @@ Le sequenze terapeutiche cambiano per sottotipo. Nel triplo negativo, lo standar
 
 Nell'HER2+, il doppio blocco trastuzumab+pertuzumab associato a chemioterapia è lo standard se la malattia è almeno cT2 o linfonodo-positiva, con una preferenza crescente per gli schemi anthracycline-free (taxano+carboplatino) per la minore cardiotossicità. Nell'HR+/HER2-, la chemioterapia neoadiuvante resta riservata ai casi ad alto rischio, dove peraltro la pCR è meno frequente; la terapia endocrina neoadiuvante (NET) è un'opzione in casi selezionati — pazienti anziane, con comorbidità, o con malattia fortemente endocrino-sensibile.
 
-La gestione della malattia residua dopo terapia neoadiuvante dipende sia dal sottotipo sia dal risultato della risposta patologica. Nell'HER2+, se si ottiene la risposta patologica completa si completa la terapia anti-HER2 (± terapia endocrina se HR+); in presenza di malattia residua, lo standard diventa **T-DM1** (studio KATHERINE: HR per iDFS 0,50). Nel triplo negativo, la pCR porta a pembrolizumab adiuvante, mentre la malattia residua indica capecitabina (studio CREATE-X). Nell'HR+/HER2-, sia in caso di pCR sia di malattia residua, la scelta resta terapia endocrina, con l'aggiunta di abemaciclib se il rischio è alto. Un'ultima situazione, trasversale ai sottotipi: nelle pazienti con mutazione germinale di BRCA1/2 e malattia HER2-negativa, in presenza di malattia residua lo standard è **olaparib per 1 anno** (studio OlympiA: HR per iDFS 0,63, HR per OS 0,68).
+La gestione della malattia residua dopo terapia neoadiuvante dipende sia dal sottotipo sia dal risultato della risposta patologica. Nell'HER2+, se si ottiene la risposta patologica completa si completa la terapia anti-HER2 (± terapia endocrina se HR+); in presenza di malattia residua, lo standard diventa **T-DM1** (studio KATHERINE: HR per iDFS 0,50). Nel triplo negativo il pembrolizumab adiuvante (9 cicli) si completa qualunque sia la risposta, perché nello schema KEYNOTE-522 prosegue sia dopo pCR sia in presenza di malattia residua; in caso di malattia residua si può associare capecitabina (studio CREATE-X). Nell'HR+/HER2-, sia in caso di pCR sia di malattia residua, la scelta resta terapia endocrina, con l'aggiunta di un inibitore di CDK4/6 se il rischio è alto: abemaciclib per 2 anni (criteri monarchE) o ribociclib per 3 anni (criteri NATALEE). Un'ultima situazione, trasversale ai sottotipi: nelle pazienti con mutazione germinale di BRCA1/2 e malattia HER2-negativa, in presenza di malattia residua lo standard è **olaparib per 1 anno** (studio OlympiA: HR per iDFS 0,63, HR per OS 0,68).
 
 Alcuni accorgimenti tecnici da non dimenticare: la clip di marcatura del letto tumorale è obbligatoria prima di iniziare la terapia neoadiuvante; la biopsia del linfonodo sentinella dopo NAT è indicata nelle pazienti cN0; nelle pazienti cN+ convertite a cN0 dopo terapia, si utilizza il doppio tracciante con clip posizionata sul linfonodo bioptico iniziale, per ridurre il tasso di falsi negativi (tecnica della target axillary dissection).
 
 #### Punti chiave
 - Triplo negativo: pembrolizumab+CT poi pembrolizumab adiuvante (KEYNOTE-522) — pCR 64,8% vs 51,2%; EFS 5 anni 81,2% vs 72,2%; **OS 5 anni 86,6% vs 81,7% (HR 0,66)**.
 - HER2+: doppio blocco trastuzumab+pertuzumab+CT, preferenza per schemi anthracycline-free.
-- Malattia residua dopo NAT: HER2+ → T-DM1 (KATHERINE, iDFS HR 0,50); TNBC → capecitabina (CREATE-X); gBRCA1/2+ HER2- → olaparib 1 anno (OlympiA, iDFS HR 0,63, OS HR 0,68). Le tre strategie NON sono intercambiabili tra sottotipi.
+- Malattia residua dopo NAT: HER2+ → T-DM1 (KATHERINE, iDFS HR 0,50); TNBC → pembrolizumab adiuvante comunque, ± capecitabina (CREATE-X); HR+/HER2- ad alto rischio → ET + abemaciclib (monarchE) o ribociclib (NATALEE); gBRCA1/2+ HER2- → olaparib 1 anno (OlympiA, iDFS HR 0,63, OS HR 0,68). Le tre strategie NON sono intercambiabili tra sottotipi.
 - SLNB dopo NAT nei cN0; nei cN+ convertiti, target axillary dissection (doppio tracciante + clip).
 
 
@@ -311,13 +311,13 @@ Il prezzo di questa efficacia è un profilo di tossicità polmonare che va conos
 
 > !!Attenzione — ILD da T-DXd:!! dispnea o tosse di nuova insorgenza in corso di trattamento impongono la sospensione del farmaco e un work-up immediato, senza attendere.
 
-Per le pazienti con metastasi encefaliche attive, o che progrediscono anche a livello extracranico, l'alternativa è la combinazione **tucatinib + trastuzumab + capecitabina**, testata nello studio HER2CLIMB specificamente in questa popolazione ad alto bisogno clinico — una delle poche coorti con dati prospettici dedicati alle metastasi cerebrali attive, storicamente escluse dai trial registrativi. Oltre la seconda linea, le opzioni si allargano a T-DM1 (se non già usato), lapatinib in combinazione con capecitabina, e altre combinazioni sulla base di performance status e trattamenti precedenti.
+Nelle pazienti con metastasi encefaliche attive o con progressione intracranica, la combinazione **tucatinib + trastuzumab + capecitabina** è da preferire per la sua maggiore efficacia sulle metastasi cerebrali: è stata testata nello studio HER2CLIMB specificamente in questa popolazione ad alto bisogno clinico — una delle poche coorti con dati prospettici dedicati alle metastasi cerebrali attive, storicamente escluse dai trial registrativi. Oltre la seconda linea, le opzioni si allargano a T-DM1 (se non già usato), lapatinib in combinazione con capecitabina, e altre combinazioni sulla base di performance status e trattamenti precedenti.
 
 #### Punti chiave
 - 1ª linea HER2+ metastatico: docetaxel + trastuzumab + pertuzumab (CLEOPATRA); OS mediana end-of-study 57,1 vs 40,8 mesi, HR 0,69 — beneficio mantenuto oltre 8 anni di follow-up.
 - 2ª linea: T-DXd, preferito a T-DM1 (DESTINY-Breast03); OS mediana 52,6 vs 42,7 mesi, HR 0,73 (riduzione rischio morte ~27%).
 - ILD/polmonite: tossicità caratteristica di T-DXd, **cumulativa nel tempo** — con follow-up lungo arriva al 15-17%, non 8% come spesso riportato nelle fonti più datate; la maggior parte è grado 1-2 e insorge entro 12 mesi; grado 5 (fatale) ~2%. Dispnea/tosse in corso di T-DXd → sospensione immediata + work-up, sempre.
-- Metastasi encefaliche attive o progressione extracranica → tucatinib + trastuzumab + capecitabina (HER2CLIMB), unico regime con dati prospettici dedicati a BM attive.
+- Metastasi encefaliche attive o progressione intracranica → preferire tucatinib + trastuzumab + capecitabina (HER2CLIMB), unico regime con dati prospettici dedicati a BM attive.
 - 3ª+ linea: T-DM1 (se non usato prima), lapatinib + capecitabina, altre combinazioni.
 
 
@@ -414,7 +414,7 @@ Di fronte a una recidiva locoregionale, il work-up richiede una ri-stadiazione c
 
 ## Punti ad alta resa per orale
 
-- HR e HER2 sono gli unici due biomarcatori predittivi universalmente accettati per la scelta della terapia sistemica adiuvante.
+- HR, HER2 e BRCA1/2 germinale sono i biomarcatori predittivi che guidano la scelta della terapia sistemica adiuvante: HR → terapia endocrina, HER2 → anti-HER2, gBRCA1/2 → olaparib per 1 anno nell'HER2-negativo ad alto rischio (OlympiA).
 - OFS va associata a ET adiuvante **solo nell'alto rischio** in pre-menopausa (SOFT/TEXT).
 - **CLEOPATRA** resta lo standard di prima linea HER2+ metastatico (OS end-of-study 57,1 vs 40,8 mesi); **T-DXd > T-DM1** in seconda linea (DESTINY-Breast03); attenzione a ILD come tossicità caratteristica, cumulativa nel tempo (15-17% a lungo follow-up).
 - **Ribociclib** è l'unico CDK4/6i con beneficio di OS statisticamente significativo in prima linea vs AI da solo (MONALEESA-2).
@@ -429,7 +429,7 @@ Di fronte a una recidiva locoregionale, il work-up richiede una ri-stadiazione c
 
 ## Errori da evitare
 
-- Non confondere le tre strategie di "escalation" dopo terapia neoadiuvante: **T-DM1 (KATHERINE) per HER2+ residuo**, **capecitabina (CREATE-X) per TNBC residuo**, **olaparib (OlympiA) per gBRCA1/2+ residuo** — non sono intercambiabili tra sottotipi.
+- Non confondere le tre strategie di "escalation" dopo terapia neoadiuvante: **T-DM1 (KATHERINE) per HER2+ residuo**, **capecitabina (CREATE-X) per TNBC residuo, in aggiunta al pembrolizumab adiuvante**, **olaparib (OlympiA) per gBRCA1/2+ residuo** — non sono intercambiabili tra sottotipi.
 - Non testare PD-L1 con un solo clone assumendo intercambiabilità: **SP142 e 22C3 non sono equivalenti**.
 - Non omettere la ri-biopsia alla prima diagnosi di malattia metastatica: lo stato HR/HER2 può cambiare rispetto al primitivo.
 - Non applicare l'ormonoterapia (o la RM mammaria di routine) in gravidanza: entrambe controindicate/non raccomandate.
