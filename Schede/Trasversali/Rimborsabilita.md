@@ -12,7 +12,7 @@ Il metodo di verifica (determine AIFA, Gazzetta Ufficiale, registri.aifa.gov.it,
 
 ## Mammella
 
-*Verifica AIFA condotta il 2026-08-24 — vedi anche le note di "Verifica in letteratura" nel testo di Mammella.md per il ragionamento clinico completo dietro ciascuna correzione.*
+*Verifica AIFA condotta il 2026-08-24 — i criteri di prescrivibilità sono descritti anche nel testo di Mammella.md, sezione HR+/HER2-negativo.*
 
 | Farmaco | Classe | Anno di approvazione | Stato AIFA | Indicazione (setting · sottotipo · limitazioni) |
 |---|---|---|---|---|

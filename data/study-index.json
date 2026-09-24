@@ -263,12 +263,12 @@
       "title": "Mammella",
       "name": "Mammella.md",
       "relative_path": "Schede/Mammella/Mammella.md",
-      "modified": "2026-09-24T08:05:46",
-      "size_bytes": 76877,
+      "modified": "2026-09-24T15:19:03",
+      "size_bytes": 75470,
       "extension": ".md",
       "preview": "Mammella · Definizione e inquadramento · Il carcinoma della mammella è la neoplasia epiteliale maligna che origina dall'unità duttulo-lobulare terminale. È una malattia eterogenea per definizione: lo stesso nome copre uno spettro che va dalla forma precoce/operabile, alla localmente avanzata, fino alla metastatica, ed è gestita da un team multidisciplinare che comprende chirurgo senologo, radioterapista, oncologo medico, patologo, genetista e radiologo — nessuna decisione terapeutica importante andrebbe presa fuori da questo contesto. · Questa scheda si basa su AIOM Mammella Precoce 2023, AIOM Mammella Avanzato 2023 ed ESMO Clinical Practice Guideline \"Metastatic Breast Cancer\" 2026 (aggiornamento maggio 2026), oltre al Congresso Grandangolo Oncologico 2025; i dati numerici sono stati incrociati con le pubblicazioni originali dei trial citati (vedi sezione Fonti). · Epidemiologia",
-      "word_count": 10529,
-      "reading_time_min": 53
+      "word_count": 10332,
+      "reading_time_min": 52
     },
     {
       "category": "Schede",
@@ -458,11 +458,11 @@
       "title": "Rimborsabilita",
       "name": "Rimborsabilita.md",
       "relative_path": "Schede/Trasversali/Rimborsabilita.md",
-      "modified": "2026-09-24T08:05:46",
-      "size_bytes": 106092,
+      "modified": "2026-09-24T15:19:03",
+      "size_bytes": 106058,
       "extension": ".md",
       "preview": "Rimborsabilità · Definizione e inquadramento · Questa scheda è un indice trasversale, non una scheda di patologia: raccoglie, organo per organo, le tabelle di stato AIFA e criteri di prescrivibilità dei farmaci oncologici approvati/con indicazione estesa **dal 2020 in poi**. Nasce perché queste tabelle, inserite direttamente nelle singole schede di patologia (es. Mammella.md), ne appesantivano la sezione \"Farmaci e classi rilevanti\" — meglio centralizzarle qui e lasciare, in ciascuna scheda di patologia, solo un rimando a questa pagina. · Il metodo di verifica (determine AIFA, Gazzetta Ufficiale, registri.aifa.gov.it, rassegne specializzate) è descritto nel documento di convenzioni del progetto, sezione \"Nuova fase: verifica dello stato regolatorio AIFA e criteri di prescrivibilità\". Ogni tabella va aggiornata quando si applica quella verifica a una nuova scheda di patologia; l'eleggibilità puntuale dei registri di monitoraggio va comunque sempre riconfermata su registri.aifa.gov.it, perché le determine cambiano più spesso di quanto queste pagine possano inseguire. · **Criterio di inclusione**: solo farmaci/indicazioni con un evento regolatorio (EMA o AIFA) dal 2020 in avanti. I farmaci più datati (chemioterapia classica, ormonoterapia di base, i primi anti-HER2, i CDK4/6i in fase metastatica, ecc.) restano descritti nella prosa delle singole schede di patologia, ma non compaiono qui: non sono il tipo di informazione che cambia da un mese all'altro e non serve un registro a parte per tenerne traccia.",
-      "word_count": 15475,
+      "word_count": 15468,
       "reading_time_min": 77
     },
     {
