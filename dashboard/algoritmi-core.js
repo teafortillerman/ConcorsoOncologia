@@ -9,7 +9,8 @@
    non indicata, con il motivo. Una risposta con "expire" annulla l'effetto limitante di
    quelle classi (es. recidiva oltre 12 mesi dalla fine della terapia perioperatoria).
    Una domanda con "only_if_any" viene saltata (verso "skip_to") se nessuna di quelle
-   classi è attiva. */
+   classi è attiva; con "skip_if_any" viene saltata se almeno una è attiva. "auto_route"
+   ([{ if_any, next }]) risponde da sola alla domanda quando i trattamenti ricevuti lo dicono già. */
 (function (root, factory) {
   const api = factory();
   if (typeof module === "object" && module.exports) module.exports = api;
@@ -62,9 +63,14 @@
     let id = nodeId;
     for (let guard = 0; guard < 50; guard++) {
       const node = algo.nodes[id];
-      if (!node || node.type !== "question" || !node.only_if_any) return id;
+      if (!node || node.type !== "question" || !(node.only_if_any || node.skip_if_any || node.auto_route)) return id;
       const { active } = exposures(algo, history);
-      if (node.only_if_any.some(t => active.has(t))) return id;
+      const route = (node.auto_route || []).find(r => r.if_any.some(t => active.has(t)));
+      if (route) { id = route.next; continue; }
+      if (!(node.only_if_any || node.skip_if_any)) return id;
+      const skip = (node.only_if_any && !node.only_if_any.some(t => active.has(t))) ||
+                   (node.skip_if_any && node.skip_if_any.some(t => active.has(t)));
+      if (!skip) return id;
       id = node.skip_to;
     }
     return id;
@@ -92,7 +98,7 @@
   }
 
   function nodeTargets(node) {
-    if (node.type === "question") return [...node.answers.map(a => a.next), ...(node.skip_to ? [node.skip_to] : [])];
+    if (node.type === "question") return [...node.answers.map(a => a.next), ...(node.skip_to ? [node.skip_to] : []), ...(node.auto_route || []).map(r => r.next)];
     return [...(node.next ? [node.next.node] : []), ...node.options.filter(o => o.next).map(o => o.next.node)];
   }
 

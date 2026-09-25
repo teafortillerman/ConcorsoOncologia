@@ -3,6 +3,11 @@
   "title": "Pancreas",
   "theme": "Gastrointestinali",
   "scheda": "Schede/Gastrointestinali/Pancreas.md",
+  "exposures": {
+    "ffx": "Oxaliplatino-irinotecano (FOLFIRINOX/NALIRIFOX)",
+    "gem": "Gemcitabina",
+    "parp": "Olaparib"
+  },
   "start": "setting",
   "nodes": {
     "setting": {
@@ -11,10 +16,22 @@
       "short": "Resecabilità",
       "info": "Centri ad alto volume: mortalità a 90 giorni della DCP 3,4% vs 12,3% nei centri a basso volume. Test gBRCA/PALB2 in tutti.",
       "answers": [
-        { "label": "Resecabile", "next": "res_strategia" },
-        { "label": "Borderline resectable", "next": "br_neo" },
-        { "label": "Localmente avanzato non resecabile", "next": "lapc" },
-        { "label": "Metastatico", "next": "m1_profilo" }
+        {
+          "label": "Resecabile",
+          "next": "res_strategia"
+        },
+        {
+          "label": "Borderline resectable",
+          "next": "br_neo"
+        },
+        {
+          "label": "Localmente avanzato non resecabile",
+          "next": "lapc"
+        },
+        {
+          "label": "Metastatico",
+          "next": "m1_profilo"
+        }
       ]
     },
     "res_strategia": {
@@ -33,15 +50,28 @@
           "regimen": {
             "trial": "PREOPANC",
             "rows": [
-              ["Gemcitabina", "1000 mg/m² EV giorni 1, 8 e 15, 3 cicli"],
-              ["+ Radioterapia", "36 Gy in 15 frazioni durante il 2° ciclo"]
+              [
+                "Gemcitabina",
+                "1000 mg/m² EV giorni 1, 8 e 15, 3 cicli"
+              ],
+              [
+                "+ Radioterapia",
+                "36 Gy in 15 frazioni durante il 2° ciclo"
+              ]
             ],
-            "sources": [{"type": "scheda"}]
+            "sources": [
+              {
+                "type": "scheda"
+              }
+            ]
           }
         }
       ],
       "note": "Drenaggio biliare preoperatorio solo se colangite o bilirubina >15 mg/dL. Mai pancreasectomia totale per margine di trancia positivo.",
-      "next": { "label": "Dopo la chirurgia → terapia adiuvante", "node": "res_adj" }
+      "next": {
+        "label": "Dopo la chirurgia → terapia adiuvante",
+        "node": "res_adj"
+      }
     },
     "res_adj": {
       "type": "recommendation",
@@ -54,11 +84,21 @@
           "regimen": {
             "trial": "PRODIGE 24",
             "rows": [
-              ["mFOLFIRINOX", "oxaliplatino 85 + irinotecano 150 + leucovorin 400 mg/m² + 5-FU 2400 mg/m² in 46 ore (senza bolo)"]
+              [
+                "mFOLFIRINOX",
+                "oxaliplatino 85 + irinotecano 150 + leucovorin 400 mg/m² + 5-FU 2400 mg/m² in 46 ore (senza bolo)"
+              ]
             ],
             "note": "Ogni 14 giorni ×12 cicli (6 mesi). Test DPYD e UGT1A1.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "ffx"
+          ]
         },
         {
           "name": "Gemcitabina + capecitabina",
@@ -68,12 +108,25 @@
             "trial": "ESPAC-4",
             "endpoint": "OS 28,0 vs 25,5 mesi, HR 0,82",
             "rows": [
-              ["Gemcitabina", "1000 mg/m² EV giorni 1, 8 e 15"],
-              ["Capecitabina", "830 mg/m² per os ×2/die, giorni 1-21"]
+              [
+                "Gemcitabina",
+                "1000 mg/m² EV giorni 1, 8 e 15"
+              ],
+              [
+                "Capecitabina",
+                "830 mg/m² per os ×2/die, giorni 1-21"
+              ]
             ],
             "note": "Ogni 28 giorni ×6 cicli.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "gem"
+          ]
         },
         {
           "name": "Completare 6 mesi totali dopo neoadiuvante",
@@ -82,7 +135,11 @@
         }
       ],
       "note": "CRT adiuvante: nessun vantaggio di OS (ESPAC-1, RTOG 9704), forse solo se R1.",
-      "next": { "label": "Alla recidiva → malattia metastatica", "node": "m1_profilo" }
+      "next": {
+        "label": "Alla recidiva",
+        "node": "rec_adj"
+      },
+      "select": true
     },
     "br_neo": {
       "type": "recommendation",
@@ -95,11 +152,21 @@
           "regimen": {
             "trial": "CASSANDRA",
             "rows": [
-              ["PAXG", "cisplatino 30 + nab-paclitaxel 150 + gemcitabina 800 mg/m² EV giorni 1 e 15; capecitabina 1250 mg/m²/die giorni 1-28"]
+              [
+                "PAXG",
+                "cisplatino 30 + nab-paclitaxel 150 + gemcitabina 800 mg/m² EV giorni 1 e 15; capecitabina 1250 mg/m²/die giorni 1-28"
+              ]
             ],
             "note": "Ogni 28 giorni.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "gem"
+          ]
         },
         {
           "name": "FOLFIRINOX",
@@ -107,11 +174,21 @@
           "key": "Schema neoadiuvante più usato.",
           "regimen": {
             "rows": [
-              ["FOLFIRINOX", "oxaliplatino 85 + irinotecano 180 + leucovorin 400 mg/m² + 5-FU 400 mg/m² bolo e 2400 mg/m² in 46 ore"]
+              [
+                "FOLFIRINOX",
+                "oxaliplatino 85 + irinotecano 180 + leucovorin 400 mg/m² + 5-FU 400 mg/m² bolo e 2400 mg/m² in 46 ore"
+              ]
             ],
             "note": "Ogni 14 giorni, ≥6 cicli pre-operatori.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "ffx"
+          ]
         },
         {
           "name": "Gemcitabina + nab-paclitaxel",
@@ -119,12 +196,25 @@
           "key": "Se non idoneo alle triplette.",
           "regimen": {
             "rows": [
-              ["Nab-paclitaxel", "125 mg/m² EV giorni 1, 8 e 15"],
-              ["Gemcitabina", "1000 mg/m² EV giorni 1, 8 e 15"]
+              [
+                "Nab-paclitaxel",
+                "125 mg/m² EV giorni 1, 8 e 15"
+              ],
+              [
+                "Gemcitabina",
+                "1000 mg/m² EV giorni 1, 8 e 15"
+              ]
             ],
             "note": "Ogni 28 giorni.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "gem"
+          ]
         },
         {
           "name": "± Chemioradioterapia",
@@ -132,7 +222,11 @@
           "key": "Nel borderline R0 79% vs 13% con chirurgia upfront (PREOPANC); RT conformale 30-54 Gy."
         }
       ],
-      "next": { "label": "Dopo il neoadiuvante → chirurgia e completamento", "node": "res_adj" }
+      "next": {
+        "label": "Dopo il neoadiuvante → chirurgia e completamento",
+        "node": "res_adj"
+      },
+      "select": true
     },
     "lapc": {
       "type": "recommendation",
@@ -144,11 +238,21 @@
           "key": "NEOPAN: PFS migliore di gemcitabina ma nessun vantaggio in OS (15,1 vs 15,6 mesi).",
           "regimen": {
             "rows": [
-              ["FOLFIRINOX", "oxaliplatino 85 + irinotecano 180 + leucovorin 400 mg/m² + 5-FU 400 mg/m² bolo e 2400 mg/m² in 46 ore"]
+              [
+                "FOLFIRINOX",
+                "oxaliplatino 85 + irinotecano 180 + leucovorin 400 mg/m² + 5-FU 400 mg/m² bolo e 2400 mg/m² in 46 ore"
+              ]
             ],
             "note": "Ogni 14 giorni.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "ffx"
+          ]
         },
         {
           "name": "Gemcitabina + nab-paclitaxel",
@@ -156,12 +260,25 @@
           "key": "Se PS o età non consentono FOLFIRINOX.",
           "regimen": {
             "rows": [
-              ["Nab-paclitaxel", "125 mg/m² EV giorni 1, 8 e 15"],
-              ["Gemcitabina", "1000 mg/m² EV giorni 1, 8 e 15"]
+              [
+                "Nab-paclitaxel",
+                "125 mg/m² EV giorni 1, 8 e 15"
+              ],
+              [
+                "Gemcitabina",
+                "1000 mg/m² EV giorni 1, 8 e 15"
+              ]
             ],
             "note": "Ogni 28 giorni.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "gem"
+          ]
         },
         {
           "name": "CRT di consolidamento dopo induzione",
@@ -170,15 +287,29 @@
           "regimen": {
             "trial": "LAP-07",
             "rows": [
-              ["Radioterapia", "54 Gy"],
-              ["+ Capecitabina", "concomitante"]
+              [
+                "Radioterapia",
+                "54 Gy"
+              ],
+              [
+                "+ Capecitabina",
+                "concomitante"
+              ]
             ],
-            "sources": [{"type": "scheda"}]
+            "sources": [
+              {
+                "type": "scheda"
+              }
+            ]
           }
         }
       ],
       "note": "Rivalutare la resecabilità dopo l'induzione.",
-      "next": { "label": "Alla progressione → 2ª linea", "node": "pan_2l_q" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "pan_2l_q"
+      },
+      "select": true
     },
     "m1_profilo": {
       "type": "question",
@@ -186,10 +317,22 @@
       "short": "Profilo / PS",
       "info": "dMMR/MSI-H: pembrolizumab non è rimborsato nel pancreas (sede esclusa dall'indicazione europea). KRAS G12C: adagrasib sperimentale.",
       "answers": [
-        { "label": "gBRCA1/2 mutato", "next": "m1_brca" },
-        { "label": "PS 0-1, età ≤75 anni", "next": "m1_fit" },
-        { "label": "PS 2 o anziano", "next": "m1_unfit" },
-        { "label": "Fusione NTRK (rara)", "next": "m1_ntrk" }
+        {
+          "label": "gBRCA1/2 mutato",
+          "next": "m1_brca"
+        },
+        {
+          "label": "PS 0-1, età ≤75 anni",
+          "next": "m1_fit"
+        },
+        {
+          "label": "PS 2 o anziano",
+          "next": "m1_unfit"
+        },
+        {
+          "label": "Fusione NTRK (rara)",
+          "next": "m1_ntrk"
+        }
       ]
     },
     "m1_brca": {
@@ -202,14 +345,24 @@
           "key": "FOLFIRINOX (o altra combinazione con platino) come prima scelta nei gBRCA1/2.",
           "regimen": {
             "rows": [
-              ["FOLFIRINOX", "oxaliplatino 85 + irinotecano 180 + leucovorin 400 mg/m² + 5-FU 400 mg/m² bolo e 2400 mg/m² in 46 ore"]
+              [
+                "FOLFIRINOX",
+                "oxaliplatino 85 + irinotecano 180 + leucovorin 400 mg/m² + 5-FU 400 mg/m² bolo e 2400 mg/m² in 46 ore"
+              ]
             ],
             "note": "Ogni 14 giorni, almeno 16 settimane.",
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         }
       ],
-      "next": { "label": "Senza progressione dopo ≥16 settimane → mantenimento", "node": "m1_brca_mant" }
+      "next": {
+        "label": "Senza progressione dopo ≥16 settimane → mantenimento",
+        "node": "m1_brca_mant"
+      }
     },
     "m1_brca_mant": {
       "type": "recommendation",
@@ -223,13 +376,27 @@
             "trial": "POLO",
             "endpoint": "PFS 7,4 vs 3,8 mesi, HR 0,53",
             "rows": [
-              ["Olaparib", "300 mg per os ×2/die, in continuo"]
+              [
+                "Olaparib",
+                "300 mg per os ×2/die, in continuo"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "parp"
+          ]
         }
       ],
-      "next": { "label": "Alla progressione → 2ª linea", "node": "pan_2l_q" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "pan_2l_q"
+      },
+      "select": true
     },
     "m1_fit": {
       "type": "recommendation",
@@ -243,11 +410,21 @@
             "trial": "PRODIGE 4 (Conroy)",
             "endpoint": "OS 11,1 vs 6,8 mesi, HR 0,57",
             "rows": [
-              ["FOLFIRINOX", "oxaliplatino 85 + irinotecano 180 + leucovorin 400 mg/m² + 5-FU 400 mg/m² bolo e 2400 mg/m² in 46 ore"]
+              [
+                "FOLFIRINOX",
+                "oxaliplatino 85 + irinotecano 180 + leucovorin 400 mg/m² + 5-FU 400 mg/m² bolo e 2400 mg/m² in 46 ore"
+              ]
             ],
             "note": "Ogni 14 giorni.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "ffx"
+          ]
         },
         {
           "name": "NALIRIFOX",
@@ -257,13 +434,29 @@
             "trial": "NAPOLI-3",
             "endpoint": "OS 11,1 vs 9,2 mesi, HR 0,83",
             "rows": [
-              ["Nal-irinotecan", "50 mg/m² EV"],
-              ["Oxaliplatino", "60 mg/m² EV"],
-              ["Leucovorin + 5-FU", "400 mg/m² + 2400 mg/m² in 46 ore"]
+              [
+                "Nal-irinotecan",
+                "50 mg/m² EV"
+              ],
+              [
+                "Oxaliplatino",
+                "60 mg/m² EV"
+              ],
+              [
+                "Leucovorin + 5-FU",
+                "400 mg/m² + 2400 mg/m² in 46 ore"
+              ]
             ],
             "note": "Giorni 1 e 15 di ogni ciclo di 28 giorni.",
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "ffx"
+          ]
         },
         {
           "name": "PAXG",
@@ -272,11 +465,21 @@
           "regimen": {
             "trial": "PACT-19",
             "rows": [
-              ["PAXG", "cisplatino 30 + nab-paclitaxel 150 + gemcitabina 800 mg/m² EV giorni 1 e 15; capecitabina 1250 mg/m²/die giorni 1-28"]
+              [
+                "PAXG",
+                "cisplatino 30 + nab-paclitaxel 150 + gemcitabina 800 mg/m² EV giorni 1 e 15; capecitabina 1250 mg/m²/die giorni 1-28"
+              ]
             ],
             "note": "Ogni 28 giorni.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "gem"
+          ]
         },
         {
           "name": "Gemcitabina + nab-paclitaxel",
@@ -286,15 +489,32 @@
             "trial": "MPACT",
             "endpoint": "OS 8,5 vs 6,7 mesi, HR 0,72",
             "rows": [
-              ["Nab-paclitaxel", "125 mg/m² EV giorni 1, 8 e 15"],
-              ["Gemcitabina", "1000 mg/m² EV giorni 1, 8 e 15"]
+              [
+                "Nab-paclitaxel",
+                "125 mg/m² EV giorni 1, 8 e 15"
+              ],
+              [
+                "Gemcitabina",
+                "1000 mg/m² EV giorni 1, 8 e 15"
+              ]
             ],
             "note": "Ogni 28 giorni.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "gem"
+          ]
         }
       ],
-      "next": { "label": "Alla progressione → 2ª linea", "node": "pan_2l_q" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "pan_2l_q"
+      },
+      "select": true
     },
     "m1_unfit": {
       "type": "recommendation",
@@ -308,12 +528,25 @@
             "trial": "MPACT",
             "endpoint": "OS 8,5 vs 6,7 mesi, HR 0,72",
             "rows": [
-              ["Nab-paclitaxel", "125 mg/m² EV giorni 1, 8 e 15"],
-              ["Gemcitabina", "1000 mg/m² EV giorni 1, 8 e 15"]
+              [
+                "Nab-paclitaxel",
+                "125 mg/m² EV giorni 1, 8 e 15"
+              ],
+              [
+                "Gemcitabina",
+                "1000 mg/m² EV giorni 1, 8 e 15"
+              ]
             ],
             "note": "Ogni 28 giorni.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "gem"
+          ]
         },
         {
           "name": "Gemcitabina in monoterapia",
@@ -321,13 +554,27 @@
           "key": "Pazienti molto compromessi (KPS 50-70).",
           "regimen": {
             "rows": [
-              ["Gemcitabina", "1000 mg/m² EV settimanale ×7, poi giorni 1, 8 e 15 ogni 28 giorni"]
+              [
+                "Gemcitabina",
+                "1000 mg/m² EV settimanale ×7, poi giorni 1, 8 e 15 ogni 28 giorni"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "gem"
+          ]
         }
       ],
-      "next": { "label": "Alla progressione → 2ª linea", "node": "pan_2l_q" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "pan_2l_q"
+      },
+      "select": true
     },
     "m1_ntrk": {
       "type": "recommendation",
@@ -339,9 +586,16 @@
           "key": "Tumor-agnostic, Registro NTRK.",
           "regimen": {
             "rows": [
-              ["Larotrectinib", "100 mg per os ×2/die, in continuo"]
+              [
+                "Larotrectinib",
+                "100 mg per os ×2/die, in continuo"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         },
         {
@@ -350,21 +604,52 @@
           "key": "Tumor-agnostic, Registro NTRK.",
           "regimen": {
             "rows": [
-              ["Entrectinib", "600 mg/die per os, in continuo"]
+              [
+                "Entrectinib",
+                "600 mg/die per os, in continuo"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         }
       ],
-      "next": { "label": "Alla progressione → 2ª linea", "node": "pan_2l_q" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "pan_2l_q"
+      },
+      "select": true
     },
     "pan_2l_q": {
       "type": "question",
       "text": "Cosa ha ricevuto in 1ª linea?",
       "short": "1ª linea",
       "answers": [
-        { "label": "Gemcitabina-based", "next": "pan_2l_postgem" },
-        { "label": "FOLFIRINOX / oxaliplatino-based", "next": "pan_2l_postffx" }
+        {
+          "label": "Gemcitabina-based",
+          "next": "pan_2l_postgem"
+        },
+        {
+          "label": "FOLFIRINOX / oxaliplatino-based",
+          "next": "pan_2l_postffx"
+        }
+      ],
+      "auto_route": [
+        {
+          "if_any": [
+            "ffx"
+          ],
+          "next": "pan_2l_postffx"
+        },
+        {
+          "if_any": [
+            "gem"
+          ],
+          "next": "pan_2l_postgem"
+        }
       ]
     },
     "pan_2l_postgem": {
@@ -379,11 +664,21 @@
             "trial": "NAPOLI-1",
             "endpoint": "OS 6,1 vs 4,2 mesi, HR 0,67",
             "rows": [
-              ["Nal-irinotecan", "70 mg/m² EV"],
-              ["Leucovorin + 5-FU", "400 mg/m² + 2400 mg/m² in 46 ore"]
+              [
+                "Nal-irinotecan",
+                "70 mg/m² EV"
+              ],
+              [
+                "Leucovorin + 5-FU",
+                "400 mg/m² + 2400 mg/m² in 46 ore"
+              ]
             ],
             "note": "Ogni 2 settimane.",
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         },
         {
@@ -392,10 +687,17 @@
           "key": "CONKO-003 positivo (OS 5,9 vs 3,3 mesi, HR 0,66), ma PANCREOX con risultati opposti.",
           "regimen": {
             "rows": [
-              ["mFOLFOX6", "oxaliplatino 85 + leucovorin 400 mg/m² + 5-FU 400 mg/m² bolo e 2400 mg/m² in 46 ore"]
+              [
+                "mFOLFOX6",
+                "oxaliplatino 85 + leucovorin 400 mg/m² + 5-FU 400 mg/m² bolo e 2400 mg/m² in 46 ore"
+              ]
             ],
             "note": "Ogni 14 giorni.",
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         }
       ]
@@ -410,11 +712,21 @@
           "key": "Dopo FOLFIRINOX, se PS adeguato.",
           "regimen": {
             "rows": [
-              ["Nab-paclitaxel", "125 mg/m² EV giorni 1, 8 e 15"],
-              ["Gemcitabina", "1000 mg/m² EV giorni 1, 8 e 15"]
+              [
+                "Nab-paclitaxel",
+                "125 mg/m² EV giorni 1, 8 e 15"
+              ],
+              [
+                "Gemcitabina",
+                "1000 mg/m² EV giorni 1, 8 e 15"
+              ]
             ],
             "note": "Ogni 28 giorni.",
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         },
         {
@@ -425,12 +737,47 @@
             "trial": "GEMPAX",
             "endpoint": "OS non migliorata (endpoint primario); PFS 3,1 vs 2,0 mesi (HR 0,64)",
             "rows": [
-              ["Gemcitabina", "1000 mg/m² EV giorni 1, 8 e 15"],
-              ["Paclitaxel", "80 mg/m² EV giorni 1, 8 e 15"]
+              [
+                "Gemcitabina",
+                "1000 mg/m² EV giorni 1, 8 e 15"
+              ],
+              [
+                "Paclitaxel",
+                "80 mg/m² EV giorni 1, 8 e 15"
+              ]
             ],
             "note": "Ogni 28 giorni.",
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
+        }
+      ]
+    },
+    "rec_adj": {
+      "type": "question",
+      "text": "Quando si è verificata la recidiva rispetto alla chemioterapia (neo)adiuvante?",
+      "short": "Recidiva",
+      "info": "Recidiva entro 6 mesi dalla chemioterapia (neo)adiuvante: lo schema ricevuto vale come 1ª linea, si passa alla 2ª linea con lo schema alternativo.",
+      "only_if_any": [
+        "ffx",
+        "gem"
+      ],
+      "skip_to": "m1_profilo",
+      "answers": [
+        {
+          "label": "Entro 6 mesi (malattia refrattaria)",
+          "next": "pan_2l_q"
+        },
+        {
+          "label": "Oltre 6 mesi",
+          "next": "m1_profilo",
+          "expire": [
+            "ffx",
+            "gem"
+          ]
         }
       ]
     }

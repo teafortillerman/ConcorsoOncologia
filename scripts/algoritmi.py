@@ -101,11 +101,19 @@ def validate_algorithm(data, root):
                     if field in answer:
                         errors.extend(validate_tags(answer[field], known, f"{where}, risposta {i}", field))
                 targets.append(answer.get("next"))
-            if "only_if_any" in node:
-                errors.extend(validate_tags(node["only_if_any"], known, where, "only_if_any"))
-                if "skip_to" not in node:
-                    errors.append(f"{where}: 'only_if_any' richiede 'skip_to'")
+            for field in ("only_if_any", "skip_if_any"):
+                if field in node:
+                    errors.extend(validate_tags(node[field], known, where, field))
+                    if "skip_to" not in node:
+                        errors.append(f"{where}: '{field}' richiede 'skip_to'")
+            if "skip_to" in node:
                 targets.append(node.get("skip_to"))
+            for i, rule in enumerate(node.get("auto_route", []), start=1):
+                if not (isinstance(rule, dict) and rule.get("next")):
+                    errors.append(f"{where}: la regola {i} di 'auto_route' deve avere 'if_any' e 'next'")
+                    continue
+                errors.extend(validate_tags(rule.get("if_any"), known, f"{where}, auto_route {i}", "if_any"))
+                targets.append(rule["next"])
         elif kind == "recommendation":
             if not node.get("title"):
                 errors.append(f"{where}: manca 'title'")

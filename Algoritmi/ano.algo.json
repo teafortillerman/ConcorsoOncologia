@@ -3,6 +3,10 @@
   "title": "Ano",
   "theme": "Gastrointestinali",
   "scheda": "Schede/Gastrointestinali/Ano.md",
+  "exposures": {
+    "io": "Immunoterapia anti-PD-1",
+    "platino": "Carboplatino-paclitaxel"
+  },
   "start": "setting",
   "nodes": {
     "setting": {
@@ -11,8 +15,14 @@
       "short": "Setting",
       "info": "Carcinoma squamoso HPV-correlato: in HIV+ ben controllati trattamento standard.",
       "answers": [
-        { "label": "Localizzato / localmente avanzato", "next": "loc_stadio" },
-        { "label": "Metastatico o recidiva non operabile", "next": "adv_1l" }
+        {
+          "label": "Localizzato / localmente avanzato",
+          "next": "loc_stadio"
+        },
+        {
+          "label": "Metastatico o recidiva non operabile",
+          "next": "adv_1l"
+        }
       ]
     },
     "loc_stadio": {
@@ -21,8 +31,14 @@
       "short": "Stadio",
       "info": "Anche nello stadio I (T <2 cm, N0) la CTRT è preferita alla sola RT.",
       "answers": [
-        { "label": "Margine anale <2 cm, ben differenziato", "next": "loc_escissione" },
-        { "label": "Tutti gli altri stadi", "next": "loc_ctrt" }
+        {
+          "label": "Margine anale <2 cm, ben differenziato",
+          "next": "loc_escissione"
+        },
+        {
+          "label": "Tutti gli altri stadi",
+          "next": "loc_ctrt"
+        }
       ]
     },
     "loc_escissione": {
@@ -51,11 +67,24 @@
           "key": "CR 80-90%, colostomia <20%. Mitomicina superiore al cisplatino (RTOG 98-11: DFS a 5 anni 67,8% vs 57,8%).",
           "regimen": {
             "rows": [
-              ["5-fluorouracile", "800-1000 mg/m²/die in infusione continua, giorni 1-5 e 29-33"],
-              ["Mitomicina C", "10 mg/m² EV giorno 1 (± giorno 29)"],
-              ["Radioterapia (IMRT)", "45 Gy + boost di 9-20 Gy (totale ≤59 Gy)"]
+              [
+                "5-fluorouracile",
+                "800-1000 mg/m²/die in infusione continua, giorni 1-5 e 29-33"
+              ],
+              [
+                "Mitomicina C",
+                "10 mg/m² EV giorno 1 (± giorno 29)"
+              ],
+              [
+                "Radioterapia (IMRT)",
+                "45 Gy + boost di 9-20 Gy (totale ≤59 Gy)"
+              ]
             ],
-            "sources": [{"type": "scheda"}]
+            "sources": [
+              {
+                "type": "scheda"
+              }
+            ]
           }
         },
         {
@@ -64,14 +93,25 @@
           "key": "Solo se controindicazioni ematologiche alla mitomicina (ACT II: CR sovrapponibili).",
           "regimen": {
             "rows": [
-              ["Cisplatino + 5-FU", "concomitanti alla RT"]
+              [
+                "Cisplatino + 5-FU",
+                "concomitanti alla RT"
+              ]
             ],
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         }
       ],
       "note": "Nessun ruolo per chemioterapia di induzione o di mantenimento (3 RCT negativi).",
-      "next": { "label": "Valutazione della risposta a 26 settimane", "node": "loc_risposta" }
+      "next": {
+        "label": "Valutazione della risposta a 26 settimane",
+        "node": "loc_risposta"
+      },
+      "select": true
     },
     "loc_risposta": {
       "type": "question",
@@ -79,8 +119,14 @@
       "short": "Risposta",
       "info": "Non valutare prima: a 11 settimane il 21% delle amputazioni sarebbe stato non necessario.",
       "answers": [
-        { "label": "Risposta completa", "next": "loc_follow" },
-        { "label": "Malattia residua o recidiva locale", "next": "loc_salvataggio" }
+        {
+          "label": "Risposta completa",
+          "next": "loc_follow"
+        },
+        {
+          "label": "Malattia residua o recidiva locale",
+          "next": "loc_salvataggio"
+        }
       ]
     },
     "loc_follow": {
@@ -93,7 +139,11 @@
           "key": "Recidiva locale nel 20-25%, in media a 6-8 mesi."
         }
       ],
-      "next": { "label": "Alla recidiva locale → chirurgia di salvataggio", "node": "loc_salvataggio" }
+      "next": {
+        "label": "Alla recidiva locale → chirurgia di salvataggio",
+        "node": "loc_salvataggio"
+      },
+      "select": true
     },
     "loc_salvataggio": {
       "type": "recommendation",
@@ -105,7 +155,11 @@
           "key": "OS a 5 anni 39-64%; fattore prognostico dominante il margine R0. Spesso ricostruzione con lembo VRAM in centri specializzati."
         }
       ],
-      "next": { "label": "Se non operabile o metastatico → malattia avanzata", "node": "adv_1l" }
+      "next": {
+        "label": "Se non operabile o metastatico → malattia avanzata",
+        "node": "adv_1l"
+      },
+      "select": true
     },
     "adv_1l": {
       "type": "recommendation",
@@ -119,13 +173,35 @@
             "trial": "POD1UM-303 / InterAACT-2",
             "endpoint": "PFS 9,3 vs 7,4 mesi, HR 0,63",
             "rows": [
-              ["Retifanlimab", "500 mg EV ogni 4 settimane, fino a 12 mesi"],
-              ["Carboplatino", "AUC 5 EV giorno 1"],
-              ["Paclitaxel", "80 mg/m² EV giorni 1, 8 e 15"]
+              [
+                "Retifanlimab",
+                "500 mg EV ogni 4 settimane, fino a 12 mesi"
+              ],
+              [
+                "Carboplatino",
+                "AUC 5 EV giorno 1"
+              ],
+              [
+                "Paclitaxel",
+                "80 mg/m² EV giorni 1, 8 e 15"
+              ]
             ],
             "note": "Chemioterapia ogni 28 giorni ×6 cicli.",
-            "sources": [{"type": "rimborsabilita"}, {"type": "pubmed", "label": "POD1UM-303", "doi": "10.1016/S0140-6736(25)00631-2"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              },
+              {
+                "type": "pubmed",
+                "label": "POD1UM-303",
+                "doi": "10.1016/S0140-6736(25)00631-2"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "platino"
+          ]
         },
         {
           "name": "Carboplatino-paclitaxel",
@@ -134,15 +210,32 @@
           "regimen": {
             "trial": "InterAACT",
             "rows": [
-              ["Carboplatino", "AUC 5 EV giorno 1"],
-              ["Paclitaxel", "80 mg/m² EV giorni 1, 8 e 15"]
+              [
+                "Carboplatino",
+                "AUC 5 EV giorno 1"
+              ],
+              [
+                "Paclitaxel",
+                "80 mg/m² EV giorni 1, 8 e 15"
+              ]
             ],
             "note": "Ogni 28 giorni ×6 cicli.",
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "platino"
+          ]
         }
       ],
-      "next": { "label": "Alla progressione → 2ª linea", "node": "adv_2l" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "adv_2l"
+      },
+      "select": true
     },
     "adv_2l": {
       "type": "recommendation",
@@ -154,11 +247,27 @@
           "key": "Nivolumab (NCI9673, ORR 24,3%) e pembrolizumab (KEYNOTE-158, ORR 10,7%): dati non randomizzati, nessuna indicazione EMA/AIFA per l'anale.",
           "regimen": {
             "rows": [
-              ["Nivolumab", "240 mg EV ogni 2 settimane"],
-              ["oppure Pembrolizumab", "200 mg EV ogni 3 settimane"]
+              [
+                "Nivolumab",
+                "240 mg EV ogni 2 settimane"
+              ],
+              [
+                "oppure Pembrolizumab",
+                "200 mg EV ogni 3 settimane"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "excludes": [
+            {
+              "tag": "io",
+              "reason": "Già ricevuta immunoterapia: il ritrattamento con anti-PD-1 non è raccomandato."
+            }
+          ]
         },
         {
           "name": "Chemioterapia (cisplatino-5-FU o altra)",
@@ -166,11 +275,21 @@
           "key": "Dopo carboplatino-paclitaxel.",
           "regimen": {
             "rows": [
-              ["Cisplatino", "60 mg/m² EV giorno 1"],
-              ["5-fluorouracile", "1000 mg/m²/die in infusione continua, giorni 1-4"]
+              [
+                "Cisplatino",
+                "60 mg/m² EV giorno 1"
+              ],
+              [
+                "5-fluorouracile",
+                "1000 mg/m²/die in infusione continua, giorni 1-4"
+              ]
             ],
             "note": "Ogni 21 giorni.",
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         }
       ]

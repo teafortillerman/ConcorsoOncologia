@@ -3,6 +3,10 @@
   "title": "Mesotelioma",
   "theme": "Torace",
   "scheda": "Schede/Torace/Mesotelioma.md",
+  "exposures": {
+    "io": "Immunoterapia (anti-PD-1 ± anti-CTLA-4)",
+    "platino": "Platino + pemetrexed"
+  },
   "start": "setting",
   "nodes": {
     "setting": {
@@ -11,8 +15,14 @@
       "short": "Setting",
       "info": "Chirurgia solo con buon PS, riserva cardio-respiratoria adeguata, assenza di M1, in centri ad alto volume e in un programma multimodale.",
       "answers": [
-        { "label": "Resecabile, candidabile a chirurgia", "next": "res_istologia" },
-        { "label": "Non resecabile / avanzato", "next": "adv_istologia" }
+        {
+          "label": "Resecabile, candidabile a chirurgia",
+          "next": "res_istologia"
+        },
+        {
+          "label": "Non resecabile / avanzato",
+          "next": "adv_istologia"
+        }
       ]
     },
     "res_istologia": {
@@ -21,8 +31,14 @@
       "short": "Istologia",
       "info": "La chirurgia (soprattutto l'EPP) è generalmente controindicata nei sottotipi sarcomatoide e bifasico: si segue il percorso sistemico.",
       "answers": [
-        { "label": "Epitelioide, stadio I-II", "next": "res_multimodale" },
-        { "label": "Sarcomatoide o bifasico", "next": "adv_nonepi" }
+        {
+          "label": "Epitelioide, stadio I-II",
+          "next": "res_multimodale"
+        },
+        {
+          "label": "Sarcomatoide o bifasico",
+          "next": "adv_nonepi"
+        }
       ]
     },
     "res_multimodale": {
@@ -40,11 +56,24 @@
           "key": "Neoadiuvante o adiuvante, con evidenza molto bassa; da decidere prima dell'intervento.",
           "regimen": {
             "rows": [
-              ["Cisplatino o carboplatino", "cisplatino 75 mg/m² o carboplatino AUC 5 EV giorno 1"],
-              ["Pemetrexed", "500 mg/m² EV giorno 1"]
+              [
+                "Cisplatino o carboplatino",
+                "cisplatino 75 mg/m² o carboplatino AUC 5 EV giorno 1"
+              ],
+              [
+                "Pemetrexed",
+                "500 mg/m² EV giorno 1"
+              ]
             ],
             "note": "Ogni 21 giorni.",
-            "sources": [{"type": "scheda"}, {"type": "standard"}]
+            "sources": [
+              {
+                "type": "scheda"
+              },
+              {
+                "type": "standard"
+              }
+            ]
           }
         },
         {
@@ -54,7 +83,10 @@
         }
       ],
       "note": "La RT profilattica dei tramiti chirurgici non è raccomandata di routine.",
-      "next": { "label": "Alla recidiva → malattia avanzata", "node": "adv_istologia" }
+      "next": {
+        "label": "Alla recidiva → malattia avanzata",
+        "node": "adv_istologia"
+      }
     },
     "adv_istologia": {
       "type": "question",
@@ -62,8 +94,14 @@
       "short": "Istologia",
       "info": "Versamento pleurico: pleurodesi con talco sterile; catetere pleurico a permanenza se polmone intrappolato.",
       "answers": [
-        { "label": "Epitelioide", "next": "adv_epi" },
-        { "label": "Non epitelioide (sarcomatoide o bifasico)", "next": "adv_nonepi" }
+        {
+          "label": "Epitelioide",
+          "next": "adv_epi"
+        },
+        {
+          "label": "Non epitelioide (sarcomatoide o bifasico)",
+          "next": "adv_nonepi"
+        }
       ]
     },
     "adv_epi": {
@@ -76,12 +114,28 @@
           "key": "Standard nell'epitelioide, fino a 6 cicli (EMPHACIS: OS 12,1 vs 9,3 mesi vs cisplatino).",
           "regimen": {
             "rows": [
-              ["Cisplatino o carboplatino", "cisplatino 75 mg/m² o carboplatino AUC 5 EV giorno 1"],
-              ["Pemetrexed", "500 mg/m² EV giorno 1"]
+              [
+                "Cisplatino o carboplatino",
+                "cisplatino 75 mg/m² o carboplatino AUC 5 EV giorno 1"
+              ],
+              [
+                "Pemetrexed",
+                "500 mg/m² EV giorno 1"
+              ]
             ],
             "note": "Ogni 21 giorni, massimo 6 cicli; supplementazione con folati e vitamina B12.",
-            "sources": [{"type": "scheda"}, {"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "scheda"
+              },
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "platino"
+          ]
         },
         {
           "name": "Cisplatino-pemetrexed + bevacizumab",
@@ -91,13 +145,29 @@
             "trial": "MAPS",
             "endpoint": "OS 18,8 vs 16,1 mesi, HR 0,77",
             "rows": [
-              ["Cisplatino", "75 mg/m² EV giorno 1"],
-              ["Pemetrexed", "500 mg/m² EV giorno 1"],
-              ["Bevacizumab", "15 mg/kg EV giorno 1"]
+              [
+                "Cisplatino",
+                "75 mg/m² EV giorno 1"
+              ],
+              [
+                "Pemetrexed",
+                "500 mg/m² EV giorno 1"
+              ],
+              [
+                "Bevacizumab",
+                "15 mg/kg EV giorno 1"
+              ]
             ],
             "note": "Ogni 21 giorni ×6 cicli.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "platino"
+          ]
         },
         {
           "name": "Nivolumab + ipilimumab",
@@ -107,15 +177,32 @@
             "trial": "CheckMate 743",
             "endpoint": "OS 18,1 vs 14,1 mesi; OS a 5 anni 14% vs 6% (HR 0,74)",
             "rows": [
-              ["Nivolumab", "3 mg/kg EV ogni 2 settimane"],
-              ["Ipilimumab", "1 mg/kg EV ogni 6 settimane"]
+              [
+                "Nivolumab",
+                "3 mg/kg EV ogni 2 settimane"
+              ],
+              [
+                "Ipilimumab",
+                "1 mg/kg EV ogni 6 settimane"
+              ]
             ],
             "note": "Fino a 24 mesi o a progressione.",
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io"
+          ]
         }
       ],
-      "next": { "label": "Alla progressione → 2ª linea", "node": "adv_2l_epi" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "adv_2l_epi"
+      },
+      "select": true
     },
     "adv_nonepi": {
       "type": "recommendation",
@@ -129,12 +216,25 @@
             "trial": "CheckMate 743",
             "endpoint": "OS 18,1 vs 14,1 mesi; OS a 5 anni 14% vs 6% (HR 0,74)",
             "rows": [
-              ["Nivolumab", "3 mg/kg EV ogni 2 settimane"],
-              ["Ipilimumab", "1 mg/kg EV ogni 6 settimane"]
+              [
+                "Nivolumab",
+                "3 mg/kg EV ogni 2 settimane"
+              ],
+              [
+                "Ipilimumab",
+                "1 mg/kg EV ogni 6 settimane"
+              ]
             ],
             "note": "Fino a 24 mesi o a progressione.",
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io"
+          ]
         },
         {
           "name": "Pembrolizumab + platino-pemetrexed",
@@ -144,13 +244,33 @@
             "trial": "IND227/KEYNOTE-483",
             "endpoint": "OS 17,3 vs 16,1 mesi, HR 0,79",
             "rows": [
-              ["Pembrolizumab", "200 mg EV ogni 3 settimane (o 400 mg ogni 6 settimane), fino a 2 anni"],
-              ["Cisplatino o carboplatino", "cisplatino 75 mg/m² o carboplatino AUC 5 EV giorno 1"],
-              ["Pemetrexed", "500 mg/m² EV giorno 1"]
+              [
+                "Pembrolizumab",
+                "200 mg EV ogni 3 settimane (o 400 mg ogni 6 settimane), fino a 2 anni"
+              ],
+              [
+                "Cisplatino o carboplatino",
+                "cisplatino 75 mg/m² o carboplatino AUC 5 EV giorno 1"
+              ],
+              [
+                "Pemetrexed",
+                "500 mg/m² EV giorno 1"
+              ]
             ],
             "note": "Platino-pemetrexed per massimo 6 cicli, poi pembrolizumab + pemetrexed.",
-            "sources": [{"type": "rimborsabilita"}, {"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              },
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "platino"
+          ]
         },
         {
           "name": "Platino + pemetrexed",
@@ -158,15 +278,35 @@
           "key": "Se l'immunoterapia non è indicata.",
           "regimen": {
             "rows": [
-              ["Cisplatino o carboplatino", "cisplatino 75 mg/m² o carboplatino AUC 5 EV giorno 1"],
-              ["Pemetrexed", "500 mg/m² EV giorno 1"]
+              [
+                "Cisplatino o carboplatino",
+                "cisplatino 75 mg/m² o carboplatino AUC 5 EV giorno 1"
+              ],
+              [
+                "Pemetrexed",
+                "500 mg/m² EV giorno 1"
+              ]
             ],
             "note": "Ogni 21 giorni, massimo 6 cicli.",
-            "sources": [{"type": "scheda"}, {"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "scheda"
+              },
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "platino"
+          ]
         }
       ],
-      "next": { "label": "Alla progressione → 2ª linea", "node": "adv_2l_post_io" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "adv_2l_post_io"
+      },
+      "select": true
     },
     "adv_2l_epi": {
       "type": "recommendation",
@@ -180,11 +320,24 @@
             "trial": "CONFIRM",
             "endpoint": "PFS 3,0 vs 1,8 mesi (HR 0,67); OS 10,2 vs 6,9 mesi (HR 0,69)",
             "rows": [
-              ["Nivolumab", "240 mg EV ogni 2 settimane"]
+              [
+                "Nivolumab",
+                "240 mg EV ogni 2 settimane"
+              ]
             ],
             "note": "Fino a 12 mesi.",
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "excludes": [
+            {
+              "tag": "io",
+              "reason": "Già ricevuta immunoterapia in 1ª linea."
+            }
+          ]
         },
         {
           "name": "Gemcitabina + ramucirumab",
@@ -194,11 +347,21 @@
             "trial": "RAMES",
             "endpoint": "OS 13,8 vs 7,5 mesi, HR 0,71",
             "rows": [
-              ["Gemcitabina", "1000 mg/m² EV giorni 1 e 8"],
-              ["Ramucirumab", "10 mg/kg EV giorno 1"]
+              [
+                "Gemcitabina",
+                "1000 mg/m² EV giorni 1 e 8"
+              ],
+              [
+                "Ramucirumab",
+                "10 mg/kg EV giorno 1"
+              ]
             ],
             "note": "Ogni 21 giorni fino a progressione.",
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         },
         {
@@ -207,11 +370,27 @@
           "key": "Se il controllo dopo la 1ª linea è durato almeno 6 mesi.",
           "regimen": {
             "rows": [
-              ["Cisplatino o carboplatino", "cisplatino 75 mg/m² o carboplatino AUC 5 EV giorno 1"],
-              ["Pemetrexed", "500 mg/m² EV giorno 1"]
+              [
+                "Cisplatino o carboplatino",
+                "cisplatino 75 mg/m² o carboplatino AUC 5 EV giorno 1"
+              ],
+              [
+                "Pemetrexed",
+                "500 mg/m² EV giorno 1"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "requires": [
+            {
+              "tag": "platino",
+              "reason": "Solo dopo platino-pemetrexed in 1ª linea con buona risposta."
+            }
+          ]
         },
         {
           "name": "Vinorelbina o gemcitabina",
@@ -219,11 +398,32 @@
           "key": "Pazienti selezionati con buon PS.",
           "regimen": {
             "rows": [
-              ["Vinorelbina", "30 mg/m² EV settimanale"],
-              ["oppure Gemcitabina", "1000-1250 mg/m² EV giorni 1 e 8 ogni 21 giorni"]
+              [
+                "Vinorelbina",
+                "30 mg/m² EV settimanale"
+              ],
+              [
+                "oppure Gemcitabina",
+                "1000-1250 mg/m² EV giorni 1 e 8 ogni 21 giorni"
+              ]
             ],
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
+        },
+        {
+          "name": "Platino + pemetrexed",
+          "aifa": "standard",
+          "key": "Dopo nivolumab + ipilimumab in 1ª linea.",
+          "excludes": [
+            {
+              "tag": "platino",
+              "reason": "Platino-pemetrexed già ricevuto in 1ª linea."
+            }
+          ]
         }
       ],
       "note": "Gli studi clinici vanno privilegiati quando disponibili."
@@ -238,12 +438,31 @@
           "key": "Se non usato in 1ª linea (dopo nivolumab-ipilimumab).",
           "regimen": {
             "rows": [
-              ["Cisplatino o carboplatino", "cisplatino 75 mg/m² o carboplatino AUC 5 EV giorno 1"],
-              ["Pemetrexed", "500 mg/m² EV giorno 1"]
+              [
+                "Cisplatino o carboplatino",
+                "cisplatino 75 mg/m² o carboplatino AUC 5 EV giorno 1"
+              ],
+              [
+                "Pemetrexed",
+                "500 mg/m² EV giorno 1"
+              ]
             ],
             "note": "Ogni 21 giorni, massimo 6 cicli.",
-            "sources": [{"type": "scheda"}, {"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "scheda"
+              },
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "excludes": [
+            {
+              "tag": "platino",
+              "reason": "Platino-pemetrexed già ricevuto in 1ª linea."
+            }
+          ]
         },
         {
           "name": "Gemcitabina + ramucirumab",
@@ -253,11 +472,21 @@
             "trial": "RAMES",
             "endpoint": "OS 13,8 vs 7,5 mesi, HR 0,71",
             "rows": [
-              ["Gemcitabina", "1000 mg/m² EV giorni 1 e 8"],
-              ["Ramucirumab", "10 mg/kg EV giorno 1"]
+              [
+                "Gemcitabina",
+                "1000 mg/m² EV giorni 1 e 8"
+              ],
+              [
+                "Ramucirumab",
+                "10 mg/kg EV giorno 1"
+              ]
             ],
             "note": "Ogni 21 giorni fino a progressione.",
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         },
         {
@@ -266,11 +495,48 @@
           "key": "Pazienti selezionati con buon PS.",
           "regimen": {
             "rows": [
-              ["Vinorelbina", "30 mg/m² EV settimanale"],
-              ["oppure Gemcitabina", "1000-1250 mg/m² EV giorni 1 e 8 ogni 21 giorni"]
+              [
+                "Vinorelbina",
+                "30 mg/m² EV settimanale"
+              ],
+              [
+                "oppure Gemcitabina",
+                "1000-1250 mg/m² EV giorni 1 e 8 ogni 21 giorni"
+              ]
             ],
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
+        },
+        {
+          "name": "Nivolumab in monoterapia",
+          "aifa": "reimbursed",
+          "key": "Legge 648/96 (determina gennaio 2025): solo epitelioide, PS 0-1, mai trattato con immunoterapia.",
+          "regimen": {
+            "trial": "CONFIRM",
+            "endpoint": "PFS 3,0 vs 1,8 mesi (HR 0,67); OS 10,2 vs 6,9 mesi (HR 0,69)",
+            "rows": [
+              [
+                "Nivolumab",
+                "240 mg EV ogni 2 settimane"
+              ]
+            ],
+            "note": "Fino a 12 mesi.",
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "excludes": [
+            {
+              "tag": "io",
+              "reason": "Già ricevuta immunoterapia in 1ª linea."
+            }
+          ]
         }
       ],
       "note": "Nivolumab in monoterapia (legge 648/96) esclude chi ha già ricevuto immunoterapia."

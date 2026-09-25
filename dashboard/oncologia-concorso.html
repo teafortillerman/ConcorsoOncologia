@@ -2273,7 +2273,9 @@ function renderAlgorithm() {
       </div>
       ${node.note ? `<div class="ag-note">${escapeHtml(node.note)}</div>` : ""}
       <div class="ag-next-wrap">
-        ${node.select
+        ${node.select && !optionsView.some(v => v.st.available) && node.next
+          ? `<span class="ag-next-hint">Nessuna opzione di questa linea è indicata dopo i trattamenti ricevuti: valuta uno studio clinico.</span><button type="button" class="ag-next" data-proceed>${escapeHtml(node.next.label)} ${ICONS.arrowRight}</button>`
+          : node.select
           ? `<span class="ag-next-hint">Scegli la terapia effettuata: le linee successive terranno conto dei trattamenti ricevuti.</span>`
           : node.next
           ? `<span class="ag-next-hint">Passo successivo della sequenza:</span><button type="button" class="ag-next" data-proceed>${escapeHtml(node.next.label)} ${ICONS.arrowRight}</button>`

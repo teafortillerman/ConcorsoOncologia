@@ -3,6 +3,10 @@
   "title": "Polmone SCLC",
   "theme": "Torace",
   "scheda": "Schede/Torace/Polmone_SCLC.md",
+  "exposures": {
+    "io": "Immunoterapia anti-PD-L1",
+    "platino": "Platino + etoposide"
+  },
   "start": "setting",
   "nodes": {
     "setting": {
@@ -11,9 +15,18 @@
       "short": "Stadio",
       "info": "Limitato = un emitorace + linfonodi regionali, comprendibile in un unico campo di RT; esteso = metastasi a distanza. PD-L1 e bTMB non sono predittivi nel SCLC.",
       "answers": [
-        { "label": "Stadio limitato (LD)", "next": "ld_estensione" },
-        { "label": "Stadio esteso (ED)", "next": "ed_io" },
-        { "label": "Recidiva o progressione dopo la 1ª linea", "next": "sclc_tfi" }
+        {
+          "label": "Stadio limitato (LD)",
+          "next": "ld_estensione"
+        },
+        {
+          "label": "Stadio esteso (ED)",
+          "next": "ed_io"
+        },
+        {
+          "label": "Recidiva o progressione dopo la 1ª linea",
+          "next": "sclc_tfi"
+        }
       ]
     },
     "ld_estensione": {
@@ -22,8 +35,14 @@
       "short": "Estensione",
       "info": "Chirurgia solo cT1-2N0 (~5% dei casi) dopo stadiazione mediastinica invasiva negativa; resezione sublobare non raccomandata.",
       "answers": [
-        { "label": "cT1-2 N0 (mediastino negativo)", "next": "ld_chir" },
-        { "label": "Stadio I-III con N+ o non operabile", "next": "ld_ps" }
+        {
+          "label": "cT1-2 N0 (mediastino negativo)",
+          "next": "ld_chir"
+        },
+        {
+          "label": "Stadio I-III con N+ o non operabile",
+          "next": "ld_ps"
+        }
       ]
     },
     "ld_chir": {
@@ -41,12 +60,25 @@
           "key": "Platino-etoposide per 4 cicli.",
           "regimen": {
             "rows": [
-              ["Cisplatino", "60-80 mg/m² EV giorno 1"],
-              ["Etoposide", "100-120 mg/m² EV giorni 1-3"],
-              ["oppure carboplatino", "AUC 5 EV giorno 1 (se cisplatino controindicato)"]
+              [
+                "Cisplatino",
+                "60-80 mg/m² EV giorno 1"
+              ],
+              [
+                "Etoposide",
+                "100-120 mg/m² EV giorni 1-3"
+              ],
+              [
+                "oppure carboplatino",
+                "AUC 5 EV giorno 1 (se cisplatino controindicato)"
+              ]
             ],
             "note": "Ogni 21 giorni ×4 cicli.",
-            "sources": [{"type": "scheda"}]
+            "sources": [
+              {
+                "type": "scheda"
+              }
+            ]
           }
         },
         {
@@ -55,21 +87,37 @@
           "key": "Da discutere; negli stadi I-II l'alternativa è la sorveglianza con RM encefalo.",
           "regimen": {
             "rows": [
-              ["Radioterapia encefalica profilattica", "25 Gy in 10 frazioni"]
+              [
+                "Radioterapia encefalica profilattica",
+                "25 Gy in 10 frazioni"
+              ]
             ],
-            "sources": [{"type": "scheda"}]
+            "sources": [
+              {
+                "type": "scheda"
+              }
+            ]
           }
         }
       ],
-      "next": { "label": "Alla recidiva o progressione → 2ª linea", "node": "sclc_tfi" }
+      "next": {
+        "label": "Alla recidiva o progressione → 2ª linea",
+        "node": "sclc_tfi"
+      }
     },
     "ld_ps": {
       "type": "question",
       "text": "Performance status?",
       "short": "PS",
       "answers": [
-        { "label": "PS 0-1", "next": "ld_ctrt" },
-        { "label": "PS 2 o superiore", "next": "ld_seq" }
+        {
+          "label": "PS 0-1",
+          "next": "ld_ctrt"
+        },
+        {
+          "label": "PS 2 o superiore",
+          "next": "ld_seq"
+        }
       ]
     },
     "ld_ctrt": {
@@ -82,17 +130,40 @@
           "key": "RT dal 1°-2° ciclo; volume sul residuo post-CT. Iperfrazionato BID: OS a 5 anni 26% vs 16% (Turrisi).",
           "regimen": {
             "rows": [
-              ["Cisplatino", "60-80 mg/m² EV giorno 1"],
-              ["Etoposide", "100-120 mg/m² EV giorni 1-3"],
-              ["oppure carboplatino", "AUC 5 EV giorno 1 (se cisplatino controindicato)"],
-              ["Radioterapia", "45 Gy in 30 frazioni, 1,5 Gy ×2/die (oppure 66 Gy in 33 frazioni)"]
+              [
+                "Cisplatino",
+                "60-80 mg/m² EV giorno 1"
+              ],
+              [
+                "Etoposide",
+                "100-120 mg/m² EV giorni 1-3"
+              ],
+              [
+                "oppure carboplatino",
+                "AUC 5 EV giorno 1 (se cisplatino controindicato)"
+              ],
+              [
+                "Radioterapia",
+                "45 Gy in 30 frazioni, 1,5 Gy ×2/die (oppure 66 Gy in 33 frazioni)"
+              ]
             ],
             "note": "Ogni 21 giorni ×4 cicli, senza riduzioni di dose nei primi 2.",
-            "sources": [{"type": "scheda"}]
-          }
+            "sources": [
+              {
+                "type": "scheda"
+              }
+            ]
+          },
+          "gives": [
+            "platino"
+          ]
         }
       ],
-      "next": { "label": "Dopo CT-RT senza progressione → consolidamento", "node": "ld_consol" }
+      "next": {
+        "label": "Dopo CT-RT senza progressione → consolidamento",
+        "node": "ld_consol"
+      },
+      "select": true
     },
     "ld_seq": {
       "type": "recommendation",
@@ -104,16 +175,36 @@
           "key": "Se la concomitante non è fattibile per PS o comorbidità.",
           "regimen": {
             "rows": [
-              ["Cisplatino", "60-80 mg/m² EV giorno 1"],
-              ["Etoposide", "100-120 mg/m² EV giorni 1-3"],
-              ["oppure carboplatino", "AUC 5 EV giorno 1 (se cisplatino controindicato)"]
+              [
+                "Cisplatino",
+                "60-80 mg/m² EV giorno 1"
+              ],
+              [
+                "Etoposide",
+                "100-120 mg/m² EV giorni 1-3"
+              ],
+              [
+                "oppure carboplatino",
+                "AUC 5 EV giorno 1 (se cisplatino controindicato)"
+              ]
             ],
             "note": "Ogni 21 giorni ×4 cicli, poi RT toracica.",
-            "sources": [{"type": "scheda"}]
-          }
+            "sources": [
+              {
+                "type": "scheda"
+              }
+            ]
+          },
+          "gives": [
+            "platino"
+          ]
         }
       ],
-      "next": { "label": "Alla recidiva o progressione → 2ª linea", "node": "sclc_tfi" }
+      "next": {
+        "label": "Alla recidiva o progressione → 2ª linea",
+        "node": "sclc_tfi"
+      },
+      "select": true
     },
     "ld_consol": {
       "type": "recommendation",
@@ -127,10 +218,17 @@
             "trial": "ADRIATIC",
             "endpoint": "OS 55,9 vs 33,4 mesi (HR 0,73); PFS 16,6 vs 9,2 mesi (HR 0,76)",
             "rows": [
-              ["Durvalumab", "1500 mg EV ogni 4 settimane (20 mg/kg se <30 kg)"]
+              [
+                "Durvalumab",
+                "1500 mg EV ogni 4 settimane (20 mg/kg se <30 kg)"
+              ]
             ],
             "note": "Per un massimo di 24 mesi.",
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         },
         {
@@ -139,22 +237,38 @@
           "key": "In aggiunta al durvalumab, se PS 0-1 e risposta alla CT-RT: metastasi encefaliche HR 0,45, OS HR 0,81.",
           "regimen": {
             "rows": [
-              ["Radioterapia encefalica profilattica", "25 Gy in 10 frazioni"]
+              [
+                "Radioterapia encefalica profilattica",
+                "25 Gy in 10 frazioni"
+              ]
             ],
-            "sources": [{"type": "scheda"}]
+            "sources": [
+              {
+                "type": "scheda"
+              }
+            ]
           }
         }
       ],
       "note": "Negli over 70, fragili o stadio I-II la PCI è una decisione condivisa, in alternativa alla sorveglianza con RM.",
-      "next": { "label": "Alla recidiva o progressione → 2ª linea", "node": "sclc_tfi" }
+      "next": {
+        "label": "Alla recidiva o progressione → 2ª linea",
+        "node": "sclc_tfi"
+      }
     },
     "ed_io": {
       "type": "question",
       "text": "Il paziente è candidabile alla chemio-immunoterapia?",
       "short": "IO",
       "answers": [
-        { "label": "PS 0-1, nessuna controindicazione all'IO", "next": "ed_ctio" },
-        { "label": "Controindicazione all'IO o PS scaduto", "next": "ed_ct" }
+        {
+          "label": "PS 0-1, nessuna controindicazione all'IO",
+          "next": "ed_ctio"
+        },
+        {
+          "label": "Controindicazione all'IO o PS scaduto",
+          "next": "ed_ct"
+        }
       ]
     },
     "ed_ctio": {
@@ -169,13 +283,33 @@
             "trial": "IMpower133",
             "endpoint": "OS 12,3 vs 10,3 mesi (HR 0,70); PFS 5,2 vs 4,3 mesi (HR 0,77)",
             "rows": [
-              ["Atezolizumab", "1200 mg EV ogni 3 settimane"],
-              ["Carboplatino", "AUC 5 EV giorno 1"],
-              ["Etoposide", "100 mg/m² EV giorni 1-3"]
+              [
+                "Atezolizumab",
+                "1200 mg EV ogni 3 settimane"
+              ],
+              [
+                "Carboplatino",
+                "AUC 5 EV giorno 1"
+              ],
+              [
+                "Etoposide",
+                "100 mg/m² EV giorni 1-3"
+              ]
             ],
             "note": "4 cicli ogni 3 settimane.",
-            "sources": [{"type": "rimborsabilita"}, {"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              },
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "platino"
+          ]
         },
         {
           "name": "Durvalumab + platino-etoposide",
@@ -185,17 +319,41 @@
             "trial": "CASPIAN",
             "endpoint": "OS 12,9 vs 10,5 mesi, HR 0,75",
             "rows": [
-              ["Durvalumab", "1500 mg EV ogni 3 settimane"],
-              ["Cisplatino o carboplatino", "cisplatino 75-80 mg/m² o carboplatino AUC 5-6 giorno 1"],
-              ["Etoposide", "80-100 mg/m² EV giorni 1-3"]
+              [
+                "Durvalumab",
+                "1500 mg EV ogni 3 settimane"
+              ],
+              [
+                "Cisplatino o carboplatino",
+                "cisplatino 75-80 mg/m² o carboplatino AUC 5-6 giorno 1"
+              ],
+              [
+                "Etoposide",
+                "80-100 mg/m² EV giorni 1-3"
+              ]
             ],
             "note": "4 cicli ogni 3 settimane.",
-            "sources": [{"type": "rimborsabilita"}, {"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              },
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "platino"
+          ]
         }
       ],
       "note": "Pembrolizumab (KEYNOTE-604) e nivolumab hanno fallito sull'OS: non sono opzioni.",
-      "next": { "label": "Dopo 4 cicli senza progressione → mantenimento", "node": "ed_mant" }
+      "next": {
+        "label": "Dopo 4 cicli senza progressione → mantenimento",
+        "node": "ed_mant"
+      },
+      "select": true
     },
     "ed_mant": {
       "type": "recommendation",
@@ -207,11 +365,21 @@
           "key": "Atezolizumab dopo IMpower133, durvalumab dopo CASPIAN.",
           "regimen": {
             "rows": [
-              ["Atezolizumab", "1200 mg EV ogni 3 settimane"],
-              ["oppure Durvalumab", "1500 mg EV ogni 4 settimane"]
+              [
+                "Atezolizumab",
+                "1200 mg EV ogni 3 settimane"
+              ],
+              [
+                "oppure Durvalumab",
+                "1500 mg EV ogni 4 settimane"
+              ]
             ],
             "note": "Fino a progressione.",
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         },
         {
@@ -222,10 +390,20 @@
             "trial": "IMforte",
             "endpoint": "PFS 5,4 vs 2,1 mesi; OS 13,2 vs 10,6 mesi (HR 0,73)",
             "rows": [
-              ["Lurbinectedin", "3,2 mg/m² EV ogni 3 settimane"],
-              ["Atezolizumab", "1200 mg EV ogni 3 settimane"]
+              [
+                "Lurbinectedin",
+                "3,2 mg/m² EV ogni 3 settimane"
+              ],
+              [
+                "Atezolizumab",
+                "1200 mg EV ogni 3 settimane"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         },
         {
@@ -236,9 +414,16 @@
             "trial": "CREST",
             "endpoint": "OS a 1 anno non significativa (endpoint primario); OS a 2 anni 13% vs 3%",
             "rows": [
-              ["Radioterapia toracica", "30 Gy in 10 frazioni"]
+              [
+                "Radioterapia toracica",
+                "30 Gy in 10 frazioni"
+              ]
             ],
-            "sources": [{"type": "scheda"}]
+            "sources": [
+              {
+                "type": "scheda"
+              }
+            ]
           }
         },
         {
@@ -247,14 +432,24 @@
           "key": "Sorveglianza RM ogni 3 mesi il 1° anno, poi ogni 6: alternativa equivalente secondo ESMO.",
           "regimen": {
             "rows": [
-              ["Radioterapia encefalica profilattica", "20 Gy in 5 frazioni oppure 25 Gy in 10 frazioni"]
+              [
+                "Radioterapia encefalica profilattica",
+                "20 Gy in 5 frazioni oppure 25 Gy in 10 frazioni"
+              ]
             ],
-            "sources": [{"type": "scheda"}]
+            "sources": [
+              {
+                "type": "scheda"
+              }
+            ]
           }
         }
       ],
       "note": "Continuare la stessa chemioterapia oltre 4-6 cicli non dà beneficio.",
-      "next": { "label": "Alla recidiva o progressione → 2ª linea", "node": "sclc_tfi" }
+      "next": {
+        "label": "Alla recidiva o progressione → 2ª linea",
+        "node": "sclc_tfi"
+      }
     },
     "ed_ct": {
       "type": "recommendation",
@@ -266,16 +461,36 @@
           "key": "OS mediana 9-10 mesi; carboplatino equivalente al cisplatino (COCIS).",
           "regimen": {
             "rows": [
-              ["Cisplatino", "60-80 mg/m² EV giorno 1"],
-              ["Etoposide", "100-120 mg/m² EV giorni 1-3"],
-              ["oppure carboplatino", "AUC 5 EV giorno 1 (se cisplatino controindicato)"]
+              [
+                "Cisplatino",
+                "60-80 mg/m² EV giorno 1"
+              ],
+              [
+                "Etoposide",
+                "100-120 mg/m² EV giorni 1-3"
+              ],
+              [
+                "oppure carboplatino",
+                "AUC 5 EV giorno 1 (se cisplatino controindicato)"
+              ]
             ],
             "note": "Ogni 21 giorni ×4-6 cicli.",
-            "sources": [{"type": "scheda"}]
-          }
+            "sources": [
+              {
+                "type": "scheda"
+              }
+            ]
+          },
+          "gives": [
+            "platino"
+          ]
         }
       ],
-      "next": { "label": "Alla recidiva o progressione → 2ª linea", "node": "sclc_tfi" }
+      "next": {
+        "label": "Alla recidiva o progressione → 2ª linea",
+        "node": "sclc_tfi"
+      },
+      "select": true
     },
     "sclc_tfi": {
       "type": "question",
@@ -283,9 +498,18 @@
       "short": "TFI",
       "info": "Risposta al ritrattamento: 20-30% se platino-sensibile, ~15% se resistente.",
       "answers": [
-        { "label": "≥90 giorni (platino-sensibile)", "next": "sclc_2l_sens" },
-        { "label": "<90 giorni (platino-resistente)", "next": "sclc_2l_res" },
-        { "label": "Progressione durante il platino (refrattario)", "next": "sclc_2l_refr" }
+        {
+          "label": "≥90 giorni (platino-sensibile)",
+          "next": "sclc_2l_sens"
+        },
+        {
+          "label": "<90 giorni (platino-resistente)",
+          "next": "sclc_2l_res"
+        },
+        {
+          "label": "Progressione durante il platino (refrattario)",
+          "next": "sclc_2l_refr"
+        }
       ]
     },
     "sclc_2l_sens": {
@@ -300,11 +524,21 @@
             "trial": "DeLLphi-304",
             "endpoint": "OS 13,6 vs 8,3 mesi, HR 0,60",
             "rows": [
-              ["Ciclo 1", "tarlatamab 1 mg EV al giorno 1, poi 10 mg ai giorni 8 e 15"],
-              ["Dal ciclo 2", "tarlatamab 10 mg EV ogni 2 settimane"]
+              [
+                "Ciclo 1",
+                "tarlatamab 1 mg EV al giorno 1, poi 10 mg ai giorni 8 e 15"
+              ],
+              [
+                "Dal ciclo 2",
+                "tarlatamab 10 mg EV ogni 2 settimane"
+              ]
             ],
             "note": "Monitoraggio per CRS (60%, per lo più G1-2) nei primi 2 cicli, spesso in ricovero.",
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         },
         {
@@ -313,11 +547,24 @@
           "key": "Alternativa valida se platino-sensibile [II, B].",
           "regimen": {
             "rows": [
-              ["Cisplatino", "60-80 mg/m² EV giorno 1"],
-              ["Etoposide", "100-120 mg/m² EV giorni 1-3"],
-              ["oppure carboplatino", "AUC 5 EV giorno 1 (se cisplatino controindicato)"]
+              [
+                "Cisplatino",
+                "60-80 mg/m² EV giorno 1"
+              ],
+              [
+                "Etoposide",
+                "100-120 mg/m² EV giorni 1-3"
+              ],
+              [
+                "oppure carboplatino",
+                "AUC 5 EV giorno 1 (se cisplatino controindicato)"
+              ]
             ],
-            "sources": [{"type": "scheda"}]
+            "sources": [
+              {
+                "type": "scheda"
+              }
+            ]
           }
         },
         {
@@ -326,10 +573,17 @@
           "key": "Unico farmaco storicamente approvato in UE in 2ª linea; orale vs BSC: OS 25,9 vs 13,9 settimane.",
           "regimen": {
             "rows": [
-              ["Topotecan", "1,5 mg/m² EV giorni 1-5 oppure 2,3 mg/m² per os giorni 1-5"]
+              [
+                "Topotecan",
+                "1,5 mg/m² EV giorni 1-5 oppure 2,3 mg/m² per os giorni 1-5"
+              ]
             ],
             "note": "Ogni 21 giorni.",
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         }
       ],
@@ -347,11 +601,21 @@
             "trial": "DeLLphi-304",
             "endpoint": "OS 13,6 vs 8,3 mesi, HR 0,60",
             "rows": [
-              ["Ciclo 1", "tarlatamab 1 mg EV al giorno 1, poi 10 mg ai giorni 8 e 15"],
-              ["Dal ciclo 2", "tarlatamab 10 mg EV ogni 2 settimane"]
+              [
+                "Ciclo 1",
+                "tarlatamab 1 mg EV al giorno 1, poi 10 mg ai giorni 8 e 15"
+              ],
+              [
+                "Dal ciclo 2",
+                "tarlatamab 10 mg EV ogni 2 settimane"
+              ]
             ],
             "note": "Monitoraggio per CRS (60%, per lo più G1-2) nei primi 2 cicli, spesso in ricovero.",
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         },
         {
@@ -360,10 +624,17 @@
           "key": "Risposte basse nel platino-resistente.",
           "regimen": {
             "rows": [
-              ["Topotecan", "1,5 mg/m² EV giorni 1-5 oppure 2,3 mg/m² per os giorni 1-5"]
+              [
+                "Topotecan",
+                "1,5 mg/m² EV giorni 1-5 oppure 2,3 mg/m² per os giorni 1-5"
+              ]
             ],
             "note": "Ogni 21 giorni.",
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         },
         {
@@ -372,12 +643,25 @@
           "key": "Alternativa al topotecan [II, B].",
           "regimen": {
             "rows": [
-              ["Ciclofosfamide", "1000 mg/m² EV giorno 1"],
-              ["Doxorubicina", "45 mg/m² EV giorno 1"],
-              ["Vincristina", "1,4 mg/m² EV giorno 1 (massimo 2 mg)"]
+              [
+                "Ciclofosfamide",
+                "1000 mg/m² EV giorno 1"
+              ],
+              [
+                "Doxorubicina",
+                "45 mg/m² EV giorno 1"
+              ],
+              [
+                "Vincristina",
+                "1,4 mg/m² EV giorno 1 (massimo 2 mg)"
+              ]
             ],
             "note": "Ogni 21 giorni.",
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         }
       ]

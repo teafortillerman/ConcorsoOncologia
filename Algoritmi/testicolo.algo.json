@@ -3,6 +3,9 @@
   "title": "Testicolo",
   "theme": "Urologici",
   "scheda": "Schede/Urologici/Testicolo.md",
+  "exposures": {
+    "platino": "Chemioterapia a base di cisplatino o carboplatino"
+  },
   "start": "setting",
   "nodes": {
     "setting": {
@@ -11,11 +14,26 @@
       "short": "Istologia",
       "info": "Orchiectomia inguinale in tutti. Marcatori (AFP, β-hCG, LDH) prima e dopo l'orchiectomia.",
       "answers": [
-        { "label": "Seminoma stadio I", "next": "sem_i" },
-        { "label": "Non-seminoma stadio I", "next": "nsem_i_lvi" },
-        { "label": "Seminoma stadio IIA/B", "next": "sem_ii" },
-        { "label": "Non-seminoma stadio IIA/B", "next": "nsem_ii" },
-        { "label": "Malattia avanzata (IGCCCG)", "next": "adv_igcccg" }
+        {
+          "label": "Seminoma stadio I",
+          "next": "sem_i"
+        },
+        {
+          "label": "Non-seminoma stadio I",
+          "next": "nsem_i_lvi"
+        },
+        {
+          "label": "Seminoma stadio IIA/B",
+          "next": "sem_ii"
+        },
+        {
+          "label": "Non-seminoma stadio IIA/B",
+          "next": "nsem_ii"
+        },
+        {
+          "label": "Malattia avanzata (IGCCCG)",
+          "next": "adv_igcccg"
+        }
       ]
     },
     "sem_i": {
@@ -34,14 +52,28 @@
           "regimen": {
             "trial": "MRC TE19 / EORTC 30982",
             "rows": [
-              ["Carboplatino", "AUC 7 EV, ciclo singolo"]
+              [
+                "Carboplatino",
+                "AUC 7 EV, ciclo singolo"
+              ]
             ],
-            "sources": [{"type": "scheda"}]
-          }
+            "sources": [
+              {
+                "type": "scheda"
+              }
+            ]
+          },
+          "gives": [
+            "platino"
+          ]
         }
       ],
       "note": "La RT adiuvante non va mai usata [II, D] per il rischio di secondi tumori.",
-      "next": { "label": "Alla recidiva → malattia avanzata", "node": "adv_igcccg" }
+      "next": {
+        "label": "Alla recidiva → malattia avanzata",
+        "node": "adv_igcccg"
+      },
+      "select": true
     },
     "nsem_i_lvi": {
       "type": "question",
@@ -49,8 +81,14 @@
       "short": "LVI",
       "info": "Recidiva in sorveglianza: 40-50% se LVI+, 15% se LVI-.",
       "answers": [
-        { "label": "LVI positiva", "next": "nsem_i_pos" },
-        { "label": "LVI negativa", "next": "nsem_i_neg" }
+        {
+          "label": "LVI positiva",
+          "next": "nsem_i_pos"
+        },
+        {
+          "label": "LVI negativa",
+          "next": "nsem_i_neg"
+        }
       ]
     },
     "nsem_i_pos": {
@@ -63,13 +101,29 @@
           "key": "Assenza di recidiva a 2 anni 99,4% vs 92,4% con RPLND (Albers 2008).",
           "regimen": {
             "rows": [
-              ["Cisplatino", "20 mg/m² EV giorni 1-5"],
-              ["Etoposide", "100 mg/m² EV giorni 1-5"],
-              ["Bleomicina", "30.000 UI EV giorni 1, 8 e 15"]
+              [
+                "Cisplatino",
+                "20 mg/m² EV giorni 1-5"
+              ],
+              [
+                "Etoposide",
+                "100 mg/m² EV giorni 1-5"
+              ],
+              [
+                "Bleomicina",
+                "30.000 UI EV giorni 1, 8 e 15"
+              ]
             ],
             "note": "Ciclo singolo.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "platino"
+          ]
         },
         {
           "name": "Sorveglianza",
@@ -77,7 +131,11 @@
           "key": "Opzione in pazienti aderenti al follow-up."
         }
       ],
-      "next": { "label": "Alla recidiva → malattia avanzata", "node": "adv_igcccg" }
+      "next": {
+        "label": "Alla recidiva → malattia avanzata",
+        "node": "adv_igcccg"
+      },
+      "select": true
     },
     "nsem_i_neg": {
       "type": "recommendation",
@@ -94,7 +152,11 @@
           "key": "Alternativa solo in centri esperti; non standard [II, D]."
         }
       ],
-      "next": { "label": "Alla recidiva → malattia avanzata", "node": "adv_igcccg" }
+      "next": {
+        "label": "Alla recidiva → malattia avanzata",
+        "node": "adv_igcccg"
+      },
+      "select": true
     },
     "sem_ii": {
       "type": "recommendation",
@@ -106,9 +168,16 @@
           "key": "Minore tossicità acuta, DFS a 5 anni ~95%.",
           "regimen": {
             "rows": [
-              ["Radioterapia", "30 Gy, campo dog-leg"]
+              [
+                "Radioterapia",
+                "30 Gy, campo dog-leg"
+              ]
             ],
-            "sources": [{"type": "scheda"}]
+            "sources": [
+              {
+                "type": "scheda"
+              }
+            ]
           }
         },
         {
@@ -117,16 +186,36 @@
           "key": "Meno recidive locali (0% vs 28,6% con RT), più tossicità cardiovascolare tardiva; RT 30 Gy + boost 36 Gy alternativa.",
           "regimen": {
             "rows": [
-              ["Cisplatino", "20 mg/m² EV giorni 1-5"],
-              ["Etoposide", "100 mg/m² EV giorni 1-5"],
-              ["Bleomicina", "30.000 UI EV giorni 1, 8 e 15"]
+              [
+                "Cisplatino",
+                "20 mg/m² EV giorni 1-5"
+              ],
+              [
+                "Etoposide",
+                "100 mg/m² EV giorni 1-5"
+              ],
+              [
+                "Bleomicina",
+                "30.000 UI EV giorni 1, 8 e 15"
+              ]
             ],
             "note": "Ogni 21 giorni ×3 cicli.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "platino"
+          ]
         }
       ],
-      "next": { "label": "Masse residue post-chemioterapia", "node": "adv_residui" }
+      "next": {
+        "label": "Masse residue post-chemioterapia",
+        "node": "adv_residui"
+      },
+      "select": true
     },
     "nsem_ii": {
       "type": "recommendation",
@@ -143,24 +232,50 @@
           "key": "Secondo la classe IGCCCG.",
           "regimen": {
             "rows": [
-              ["Cisplatino", "20 mg/m² EV giorni 1-5"],
-              ["Etoposide", "100 mg/m² EV giorni 1-5"],
-              ["Bleomicina", "30.000 UI EV giorni 1, 8 e 15"]
+              [
+                "Cisplatino",
+                "20 mg/m² EV giorni 1-5"
+              ],
+              [
+                "Etoposide",
+                "100 mg/m² EV giorni 1-5"
+              ],
+              [
+                "Bleomicina",
+                "30.000 UI EV giorni 1, 8 e 15"
+              ]
             ],
             "note": "Ogni 21 giorni.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "platino"
+          ]
         }
       ],
-      "next": { "label": "Masse residue post-chemioterapia", "node": "adv_residui" }
+      "next": {
+        "label": "Masse residue post-chemioterapia",
+        "node": "adv_residui"
+      },
+      "select": true
     },
     "adv_igcccg": {
       "type": "question",
       "text": "Qual è la classe prognostica IGCCCG?",
       "short": "IGCCCG",
       "answers": [
-        { "label": "Buona", "next": "adv_buona" },
-        { "label": "Intermedia o sfavorevole", "next": "adv_int" }
+        {
+          "label": "Buona",
+          "next": "adv_buona"
+        },
+        {
+          "label": "Intermedia o sfavorevole",
+          "next": "adv_int"
+        }
       ]
     },
     "adv_buona": {
@@ -173,13 +288,29 @@
           "key": "Preferibile a 4 cicli: stessa efficacia, meno tossicità.",
           "regimen": {
             "rows": [
-              ["Cisplatino", "20 mg/m² EV giorni 1-5"],
-              ["Etoposide", "100 mg/m² EV giorni 1-5"],
-              ["Bleomicina", "30.000 UI EV giorni 1, 8 e 15"]
+              [
+                "Cisplatino",
+                "20 mg/m² EV giorni 1-5"
+              ],
+              [
+                "Etoposide",
+                "100 mg/m² EV giorni 1-5"
+              ],
+              [
+                "Bleomicina",
+                "30.000 UI EV giorni 1, 8 e 15"
+              ]
             ],
             "note": "Ogni 21 giorni ×3 cicli.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "platino"
+          ]
         },
         {
           "name": "PE ×4",
@@ -187,16 +318,33 @@
           "key": "Se la bleomicina è controindicata.",
           "regimen": {
             "rows": [
-              ["Cisplatino", "20 mg/m² EV giorni 1-5"],
-              ["Etoposide", "100 mg/m² EV giorni 1-5"]
+              [
+                "Cisplatino",
+                "20 mg/m² EV giorni 1-5"
+              ],
+              [
+                "Etoposide",
+                "100 mg/m² EV giorni 1-5"
+              ]
             ],
             "note": "Ogni 21 giorni ×4 cicli.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "platino"
+          ]
         }
       ],
       "note": "Rischio tromboembolico molto aumentato con BEP (HR fino a 24,7): considerare profilassi, evitare CVC.",
-      "next": { "label": "Masse residue post-chemioterapia", "node": "adv_residui" }
+      "next": {
+        "label": "Masse residue post-chemioterapia",
+        "node": "adv_residui"
+      },
+      "select": true
     },
     "adv_int": {
       "type": "recommendation",
@@ -208,13 +356,29 @@
           "key": "Anche nella prognosi sfavorevole: il VIP non è superiore ed è più tossico. Mai oltre 4 cicli.",
           "regimen": {
             "rows": [
-              ["Cisplatino", "20 mg/m² EV giorni 1-5"],
-              ["Etoposide", "100 mg/m² EV giorni 1-5"],
-              ["Bleomicina", "30.000 UI EV giorni 1, 8 e 15"]
+              [
+                "Cisplatino",
+                "20 mg/m² EV giorni 1-5"
+              ],
+              [
+                "Etoposide",
+                "100 mg/m² EV giorni 1-5"
+              ],
+              [
+                "Bleomicina",
+                "30.000 UI EV giorni 1, 8 e 15"
+              ]
             ],
             "note": "Ogni 21 giorni ×4 cicli; bleomicina totale 12 dosi (10 se rischio polmonare).",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "platino"
+          ]
         },
         {
           "name": "PEI/VIP ×4 se rischio polmonare",
@@ -222,17 +386,37 @@
           "key": "Alternativa senza bleomicina.",
           "regimen": {
             "rows": [
-              ["Cisplatino", "20 mg/m² EV giorni 1-5"],
-              ["Etoposide", "75 mg/m² EV giorni 1-5"],
-              ["Ifosfamide", "1200 mg/m² EV giorni 1-5 (con mesna)"]
+              [
+                "Cisplatino",
+                "20 mg/m² EV giorni 1-5"
+              ],
+              [
+                "Etoposide",
+                "75 mg/m² EV giorni 1-5"
+              ],
+              [
+                "Ifosfamide",
+                "1200 mg/m² EV giorni 1-5 (con mesna)"
+              ]
             ],
             "note": "Ogni 21 giorni ×4 cicli.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "platino"
+          ]
         }
       ],
       "note": "Mediastinici non-seminomatosi: chirurgia del residuo anche con marcatori elevati.",
-      "next": { "label": "Masse residue post-chemioterapia", "node": "adv_residui" }
+      "next": {
+        "label": "Masse residue post-chemioterapia",
+        "node": "adv_residui"
+      },
+      "select": true
     },
     "adv_residui": {
       "type": "recommendation",
@@ -249,7 +433,11 @@
           "key": "La PET non distingue il teratoma dalla fibrosi: chirurgia indipendentemente dalla PET."
         }
       ],
-      "next": { "label": "Alla recidiva → salvataggio", "node": "adv_recidiva" }
+      "next": {
+        "label": "Alla recidiva → salvataggio",
+        "node": "adv_recidiva"
+      },
+      "select": true
     },
     "adv_recidiva": {
       "type": "recommendation",
@@ -261,10 +449,17 @@
           "key": "TIP, VeIP, PEI/VIP o GIP per 4 cicli; rischio stratificato con IPFSG (PFS a 2 anni 75%→6%).",
           "regimen": {
             "rows": [
-              ["TIP", "paclitaxel 250 mg/m² g1 + ifosfamide 1500 mg/m² g2-5 + cisplatino 25 mg/m² g2-5"]
+              [
+                "TIP",
+                "paclitaxel 250 mg/m² g1 + ifosfamide 1500 mg/m² g2-5 + cisplatino 25 mg/m² g2-5"
+              ]
             ],
             "note": "Ogni 21 giorni ×4 cicli, con mesna e G-CSF.",
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         },
         {

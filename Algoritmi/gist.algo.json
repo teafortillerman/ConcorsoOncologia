@@ -3,6 +3,11 @@
   "title": "GIST",
   "theme": "Gastrointestinali",
   "scheda": "Schede/Gastrointestinali/GIST.md",
+  "exposures": {
+    "imatinib": "Imatinib",
+    "sunitinib": "Sunitinib",
+    "regorafenib": "Regorafenib"
+  },
   "start": "setting",
   "nodes": {
     "setting": {
@@ -11,9 +16,18 @@
       "short": "Setting",
       "info": "L'analisi mutazionale (KIT, PDGFRA) è obbligatoria: cambia farmaco, dose e indicazione all'adiuvante.",
       "answers": [
-        { "label": "Localizzato resecabile", "next": "loc_chir" },
-        { "label": "Localmente avanzato (R0 non fattibile o chirurgia mutilante)", "next": "neo_mut" },
-        { "label": "Avanzato / metastatico", "next": "m1_mut" }
+        {
+          "label": "Localizzato resecabile",
+          "next": "loc_chir"
+        },
+        {
+          "label": "Localmente avanzato (R0 non fattibile o chirurgia mutilante)",
+          "next": "neo_mut"
+        },
+        {
+          "label": "Avanzato / metastatico",
+          "next": "m1_mut"
+        }
       ]
     },
     "loc_chir": {
@@ -27,17 +41,33 @@
         }
       ],
       "note": "La rottura tumorale conferisce un rischio altissimo di recidiva: considerare sempre l'adiuvante.",
-      "next": { "label": "Dopo la chirurgia → rischio di recidiva", "node": "adj_rischio" }
+      "next": {
+        "label": "Dopo la chirurgia → rischio di recidiva",
+        "node": "adj_rischio"
+      },
+      "select": true
     },
     "adj_rischio": {
       "type": "question",
       "text": "Qual è il rischio di recidiva e la mutazione?",
       "short": "Rischio",
       "answers": [
-        { "label": "Alto rischio (o rottura tumorale)", "next": "adj_alto" },
-        { "label": "Rischio intermedio", "next": "adj_intermedio" },
-        { "label": "Basso rischio", "next": "adj_nessuna" },
-        { "label": "PDGFRA D842V, NF1, SDH-deficient, BRAF o NTRK", "next": "adj_nessuna_mut" }
+        {
+          "label": "Alto rischio (o rottura tumorale)",
+          "next": "adj_alto"
+        },
+        {
+          "label": "Rischio intermedio",
+          "next": "adj_intermedio"
+        },
+        {
+          "label": "Basso rischio",
+          "next": "adj_nessuna"
+        },
+        {
+          "label": "PDGFRA D842V, NF1, SDH-deficient, BRAF o NTRK",
+          "next": "adj_nessuna_mut"
+        }
       ]
     },
     "adj_alto": {
@@ -51,11 +81,21 @@
           "regimen": {
             "trial": "SSGXVIII/AIO",
             "rows": [
-              ["Imatinib", "400 mg/die per os (800 mg/die se KIT esone 9)"]
+              [
+                "Imatinib",
+                "400 mg/die per os (800 mg/die se KIT esone 9)"
+              ]
             ],
             "note": "Durata 3 anni.",
-            "sources": [{"type": "scheda"}]
-          }
+            "sources": [
+              {
+                "type": "scheda"
+              }
+            ]
+          },
+          "gives": [
+            "imatinib"
+          ]
         },
         {
           "name": "Imatinib per 6 anni",
@@ -64,14 +104,28 @@
           "regimen": {
             "trial": "IMADGIST",
             "rows": [
-              ["Imatinib", "400 mg/die per os"]
+              [
+                "Imatinib",
+                "400 mg/die per os"
+              ]
             ],
             "note": "Durata 6 anni.",
-            "sources": [{"type": "scheda"}]
-          }
+            "sources": [
+              {
+                "type": "scheda"
+              }
+            ]
+          },
+          "gives": [
+            "imatinib"
+          ]
         }
       ],
-      "next": { "label": "Alla recidiva → malattia avanzata", "node": "m1_mut" }
+      "next": {
+        "label": "Alla recidiva",
+        "node": "rec_ima"
+      },
+      "select": true
     },
     "adj_intermedio": {
       "type": "recommendation",
@@ -83,13 +137,32 @@
           "key": "Rischio stimato di recidiva 30-50%: bilanciare beneficio e tossicità cronica.",
           "regimen": {
             "rows": [
-              ["Imatinib", "400 mg/die per os, in continuo"]
+              [
+                "Imatinib",
+                "400 mg/die per os, in continuo"
+              ]
             ],
-            "sources": [{"type": "scheda"}]
-          }
+            "sources": [
+              {
+                "type": "scheda"
+              }
+            ]
+          },
+          "gives": [
+            "imatinib"
+          ]
+        },
+        {
+          "name": "Sorveglianza",
+          "aifa": "standard",
+          "key": "Se la decisione condivisa è di non trattare."
         }
       ],
-      "next": { "label": "Alla recidiva → malattia avanzata", "node": "m1_mut" }
+      "next": {
+        "label": "Alla recidiva",
+        "node": "rec_ima"
+      },
+      "select": true
     },
     "adj_nessuna": {
       "type": "recommendation",
@@ -101,7 +174,11 @@
           "key": "Nessuna indicazione all'adiuvante nel basso rischio."
         }
       ],
-      "next": { "label": "Alla recidiva → malattia avanzata", "node": "m1_mut" }
+      "next": {
+        "label": "Alla recidiva → malattia avanzata",
+        "node": "m1_mut"
+      },
+      "select": true
     },
     "adj_nessuna_mut": {
       "type": "recommendation",
@@ -113,7 +190,11 @@
           "key": "PDGFRA D842V è resistente a imatinib [IV, D]; NF1, SDH-deficient, BRAF e NTRK rispondono poco a imatinib."
         }
       ],
-      "next": { "label": "Alla recidiva → malattia avanzata", "node": "m1_mut" }
+      "next": {
+        "label": "Alla recidiva → malattia avanzata",
+        "node": "m1_mut"
+      },
+      "select": true
     },
     "neo_mut": {
       "type": "question",
@@ -121,8 +202,14 @@
       "short": "Mutazione",
       "info": "Biopsia con analisi mutazionale obbligatoria prima del neoadiuvante.",
       "answers": [
-        { "label": "KIT o PDGFRA sensibile a imatinib", "next": "neo_ima" },
-        { "label": "PDGFRA D842V", "next": "neo_avapritinib" }
+        {
+          "label": "KIT o PDGFRA sensibile a imatinib",
+          "next": "neo_ima"
+        },
+        {
+          "label": "PDGFRA D842V",
+          "next": "neo_avapritinib"
+        }
       ]
     },
     "neo_ima": {
@@ -135,14 +222,28 @@
           "key": "Oltre 12 mesi lo shrinkage è raro e aumenta il rischio di resistenza secondaria.",
           "regimen": {
             "rows": [
-              ["Imatinib", "400 mg/die per os (800 mg/die se KIT esone 9)"]
+              [
+                "Imatinib",
+                "400 mg/die per os (800 mg/die se KIT esone 9)"
+              ]
             ],
             "note": "6-12 mesi, poi rivalutazione chirurgica.",
-            "sources": [{"type": "scheda"}]
-          }
+            "sources": [
+              {
+                "type": "scheda"
+              }
+            ]
+          },
+          "gives": [
+            "imatinib"
+          ]
         }
       ],
-      "next": { "label": "Dopo la chirurgia → rischio di recidiva", "node": "adj_rischio" }
+      "next": {
+        "label": "Dopo la chirurgia → rischio di recidiva",
+        "node": "adj_rischio"
+      },
+      "select": true
     },
     "neo_avapritinib": {
       "type": "recommendation",
@@ -154,13 +255,24 @@
           "key": "Evidenza solo da case report e serie di casi, nessun trial dedicato.",
           "regimen": {
             "rows": [
-              ["Avapritinib", "300 mg/die per os, in continuo"]
+              [
+                "Avapritinib",
+                "300 mg/die per os, in continuo"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         }
       ],
-      "next": { "label": "Dopo la chirurgia → sorveglianza (niente adiuvante con imatinib)", "node": "adj_nessuna_mut" }
+      "next": {
+        "label": "Dopo la chirurgia → sorveglianza (niente adiuvante con imatinib)",
+        "node": "adj_nessuna_mut"
+      },
+      "select": true
     },
     "m1_mut": {
       "type": "question",
@@ -168,11 +280,26 @@
       "short": "Mutazione",
       "info": "Continuare il TKI indefinitamente fino a progressione o intolleranza: sospenderlo porta a progressione rapida [I, A].",
       "answers": [
-        { "label": "KIT esone 11 o altre sensibili", "next": "m1_ima400" },
-        { "label": "KIT esone 9", "next": "m1_ima800" },
-        { "label": "PDGFRA D842V", "next": "m1_avapritinib" },
-        { "label": "SDH-deficient", "next": "m1_sdh" },
-        { "label": "NTRK riarrangiato", "next": "m1_ntrk" }
+        {
+          "label": "KIT esone 11 o altre sensibili",
+          "next": "m1_ima400"
+        },
+        {
+          "label": "KIT esone 9",
+          "next": "m1_ima800"
+        },
+        {
+          "label": "PDGFRA D842V",
+          "next": "m1_avapritinib"
+        },
+        {
+          "label": "SDH-deficient",
+          "next": "m1_sdh"
+        },
+        {
+          "label": "NTRK riarrangiato",
+          "next": "m1_ntrk"
+        }
       ]
     },
     "m1_ima400": {
@@ -185,13 +312,27 @@
           "key": "Standard [I, A]. Alla progressione: prima aumento a 800 mg/die [III, B].",
           "regimen": {
             "rows": [
-              ["Imatinib", "400 mg/die per os, in continuo"]
+              [
+                "Imatinib",
+                "400 mg/die per os, in continuo"
+              ]
             ],
-            "sources": [{"type": "scheda"}]
-          }
+            "sources": [
+              {
+                "type": "scheda"
+              }
+            ]
+          },
+          "gives": [
+            "imatinib"
+          ]
         }
       ],
-      "next": { "label": "Alla progressione → 2ª linea", "node": "m1_2l" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "m1_2l"
+      },
+      "select": true
     },
     "m1_ima800": {
       "type": "recommendation",
@@ -203,13 +344,27 @@
           "key": "Il KIT esone 9 risponde meno alla dose standard [III, B].",
           "regimen": {
             "rows": [
-              ["Imatinib", "400 mg per os ×2/die, in continuo"]
+              [
+                "Imatinib",
+                "400 mg per os ×2/die, in continuo"
+              ]
             ],
-            "sources": [{"type": "scheda"}]
-          }
+            "sources": [
+              {
+                "type": "scheda"
+              }
+            ]
+          },
+          "gives": [
+            "imatinib"
+          ]
         }
       ],
-      "next": { "label": "Alla progressione → 2ª linea", "node": "m1_2l" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "m1_2l"
+      },
+      "select": true
     },
     "m1_avapritinib": {
       "type": "recommendation",
@@ -222,9 +377,16 @@
           "regimen": {
             "trial": "NAVIGATOR",
             "rows": [
-              ["Avapritinib", "300 mg/die per os, in continuo"]
+              [
+                "Avapritinib",
+                "300 mg/die per os, in continuo"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         }
       ]
@@ -239,9 +401,16 @@
           "key": "Possibile beneficio clinico [III, B]; imatinib poco attivo.",
           "regimen": {
             "rows": [
-              ["Sunitinib", "37,5 mg/die per os in continuo (o 50 mg/die 4 settimane sì + 2 no)"]
+              [
+                "Sunitinib",
+                "37,5 mg/die per os in continuo (o 50 mg/die 4 settimane sì + 2 no)"
+              ]
             ],
-            "sources": [{"type": "scheda"}]
+            "sources": [
+              {
+                "type": "scheda"
+              }
+            ]
           }
         }
       ]
@@ -256,9 +425,16 @@
           "key": "Unica opzione NTRK rimborsata (classe H, innovativo).",
           "regimen": {
             "rows": [
-              ["Larotrectinib", "100 mg per os ×2/die, in continuo"]
+              [
+                "Larotrectinib",
+                "100 mg per os ×2/die, in continuo"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         },
         {
@@ -267,9 +443,16 @@
           "key": "Nella scheda GIST risulta in classe C(nn), non negoziato.",
           "regimen": {
             "rows": [
-              ["Entrectinib", "600 mg/die per os, in continuo"]
+              [
+                "Entrectinib",
+                "600 mg/die per os, in continuo"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         }
       ]
@@ -284,14 +467,28 @@
           "key": "Standard dopo imatinib [I, A].",
           "regimen": {
             "rows": [
-              ["Sunitinib", "50 mg/die per os 4 settimane sì + 2 no, oppure 37,5 mg/die in continuo"]
+              [
+                "Sunitinib",
+                "50 mg/die per os 4 settimane sì + 2 no, oppure 37,5 mg/die in continuo"
+              ]
             ],
-            "sources": [{"type": "scheda"}]
-          }
+            "sources": [
+              {
+                "type": "scheda"
+              }
+            ]
+          },
+          "gives": [
+            "sunitinib"
+          ]
         }
       ],
       "note": "INTRIGUE negativo: ripretinib non supera sunitinib in 2ª linea (OS HR 0,86), pur meno tossico. Bezuclastinib + sunitinib (PEAK) non ancora approvato.",
-      "next": { "label": "Alla progressione → 3ª linea", "node": "m1_3l" }
+      "next": {
+        "label": "Alla progressione → 3ª linea",
+        "node": "m1_3l"
+      },
+      "select": true
     },
     "m1_3l": {
       "type": "recommendation",
@@ -305,13 +502,32 @@
             "trial": "GRID",
             "endpoint": "PFS 4,8 vs 0,9 mesi, HR 0,27",
             "rows": [
-              ["Regorafenib", "160 mg/die per os, 3 settimane sì + 1 no"]
+              [
+                "Regorafenib",
+                "160 mg/die per os, 3 settimane sì + 1 no"
+              ]
             ],
-            "sources": [{"type": "scheda"}, {"type": "pubmed", "label": "GRID", "doi": "10.1016/S0140-6736(12)61857-1"}]
-          }
+            "sources": [
+              {
+                "type": "scheda"
+              },
+              {
+                "type": "pubmed",
+                "label": "GRID",
+                "doi": "10.1016/S0140-6736(12)61857-1"
+              }
+            ]
+          },
+          "gives": [
+            "regorafenib"
+          ]
         }
       ],
-      "next": { "label": "Alla progressione → 4ª linea", "node": "m1_4l" }
+      "next": {
+        "label": "Alla progressione → 4ª linea",
+        "node": "m1_4l"
+      },
+      "select": true
     },
     "m1_4l": {
       "type": "recommendation",
@@ -325,9 +541,21 @@
             "trial": "INVICTUS",
             "endpoint": "PFS 6,3 vs 1,0 mesi, HR 0,15",
             "rows": [
-              ["Ripretinib", "150 mg/die per os, in continuo"]
+              [
+                "Ripretinib",
+                "150 mg/die per os, in continuo"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}, {"type": "pubmed", "label": "INVICTUS", "doi": "10.1016/S1470-2045(20)30168-6"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              },
+              {
+                "type": "pubmed",
+                "label": "INVICTUS",
+                "doi": "10.1016/S1470-2045(20)30168-6"
+              }
+            ]
           }
         },
         {
@@ -336,13 +564,49 @@
           "key": "In casi selezionati [II, B].",
           "regimen": {
             "rows": [
-              ["Imatinib", "400 mg/die per os, in continuo"]
+              [
+                "Imatinib",
+                "400 mg/die per os, in continuo"
+              ]
             ],
-            "sources": [{"type": "scheda"}]
-          }
+            "sources": [
+              {
+                "type": "scheda"
+              }
+            ]
+          },
+          "requires": [
+            {
+              "tag": "imatinib",
+              "reason": "Presuppone una precedente risposta a imatinib."
+            }
+          ]
         }
       ],
       "note": "Resistenza secondaria: mutazioni KIT esoni 13, 14, 17; segno radiologico \"nodule within the mass\"."
+    },
+    "rec_ima": {
+      "type": "question",
+      "text": "La recidiva è avvenuta durante imatinib adiuvante o dopo la sospensione?",
+      "short": "Recidiva",
+      "info": "Recidiva in corso di imatinib: resistenza secondaria, si passa a sunitinib. Recidiva dopo la sospensione: la malattia resta di norma sensibile e si riprende imatinib.",
+      "only_if_any": [
+        "imatinib"
+      ],
+      "skip_to": "m1_mut",
+      "answers": [
+        {
+          "label": "Durante imatinib adiuvante (resistenza)",
+          "next": "m1_2l"
+        },
+        {
+          "label": "Dopo la sospensione",
+          "next": "m1_mut",
+          "expire": [
+            "imatinib"
+          ]
+        }
+      ]
     }
   }
 }

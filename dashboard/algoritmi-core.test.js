@@ -83,17 +83,25 @@ test("aifaLabel: etichette esatte e fallback", () => {
   assert.equal(core.aifaLabel("boh"), "Da verificare");
 });
 
-test("Mammella: ogni percorso completo arriva a una raccomandazione finale e tocca tutti i nodi", () => {
-  const file = path.join(__dirname, "..", "Algoritmi", "mammella.algo.json");
-  const algo = JSON.parse(fs.readFileSync(file, "utf8"));
-  const visited = new Set();
+// Percorre ogni ramo di un algoritmo scegliendo ogni terapia indicata; gli stati con lo stesso nodo
+// e le stesse classi attive si visitano una volta sola.
+function explore(algo) {
+  const visited = new Set(), seen = new Set(), deadEnds = [];
   let endings = 0;
   (function walk(history) {
     const id = core.currentNodeId(algo, history);
     const node = algo.nodes[id];
     visited.add(id);
+    const key = id + "|" + [...core.exposures(algo, history).active].sort().join(",");
+    if (seen.has(key)) return;
+    seen.add(key);
     if (node.type === "question") {
       node.answers.forEach((_, i) => walk(core.choose(algo, history, i)));
+    } else if (node.select) {
+      const ok = node.options.map((o, i) => [o, i]).filter(([o]) => core.optionStatus(algo, history, o).available);
+      if (ok.length) ok.forEach(([, i]) => walk(core.pick(algo, history, i)));
+      else if (node.next) walk(core.proceed(algo, history));
+      else deadEnds.push(id);
     } else if (node.next) {
       walk(core.proceed(algo, history));
     } else {
@@ -101,8 +109,25 @@ test("Mammella: ogni percorso completo arriva a una raccomandazione finale e toc
       assert.ok(core.pills(algo, history).length > 0);
     }
   })([]);
-  assert.ok(endings > 20, `solo ${endings} percorsi`);
-  assert.deepEqual([...Object.keys(algo.nodes)].filter(id => !visited.has(id)), []);
+  return { visited, endings, deadEnds };
+}
+
+const ALGO_DIR = path.join(__dirname, "..", "Algoritmi");
+for (const file of fs.readdirSync(ALGO_DIR).filter(f => f.endsWith(".algo.json"))) {
+  test(`${file}: ogni percorso arriva a una raccomandazione finale, senza vicoli ciechi, e tocca tutti i nodi`, () => {
+    const algo = JSON.parse(fs.readFileSync(path.join(ALGO_DIR, file), "utf8"));
+    const { visited, endings, deadEnds } = explore(algo);
+    assert.ok(endings > 0);
+    assert.deepEqual(deadEnds, []);
+    // i nodi raggiungibili solo tramite una domanda saltata non contano
+    const skipped = Object.entries(algo.nodes).filter(([, n]) => n.only_if_any || n.skip_if_any || n.auto_route).map(([id]) => id);
+    assert.deepEqual(Object.keys(algo.nodes).filter(id => !visited.has(id) && !skipped.includes(id)), []);
+  });
+}
+
+test("Mammella: l'esplorazione copre molti percorsi", () => {
+  const algo = JSON.parse(fs.readFileSync(path.join(ALGO_DIR, "mammella.algo.json"), "utf8"));
+  assert.ok(explore(algo).endings > 20);
 });
 
 test("trail distingue risposte e linee di terapia superate", () => {
@@ -219,3 +244,64 @@ test("urotelio: senza terapia sistemica perioperatoria la domanda sulla recidiva
   const hu = walk(URO, ["Alta via", { pick: "Nefroureterectomia" }, { pick: "Chemioterapia adiuvante" }]);
   assert.equal(core.currentNodeId(URO, hu), "rec_periop");
 });
+
+// ---------- scenari clinici per organo: [algoritmo, percorso, nodo atteso, { terapia: indicata? }] ----------
+// Percorso: "etichetta risposta", { pick: "terapia" }, oppure "next" per proseguire.
+function walkAny(algo, steps) {
+  let h = [];
+  for (const s of steps) {
+    if (s === "next") { h = core.proceed(algo, h); continue; }
+    const node = algo.nodes[core.currentNodeId(algo, h)];
+    if (typeof s === "string") {
+      const i = node.answers.findIndex(a => a.label.startsWith(s));
+      assert.ok(i >= 0, `risposta "${s}" assente in ${core.currentNodeId(algo, h)}`);
+      h = core.choose(algo, h, i);
+    } else {
+      const i = node.options.findIndex(o => o.name === s.pick) >= 0 ? node.options.findIndex(o => o.name === s.pick) : node.options.findIndex(o => o.name.startsWith(s.pick));
+      assert.ok(i >= 0, `terapia "${s.pick}" assente in ${core.currentNodeId(algo, h)}`);
+      h = core.pick(algo, h, i);
+    }
+  }
+  return h;
+}
+const SCENARI = [
+  ["polmone_nsclc", ["Avanzato", "Nessun driver", "PS 0-1", "TPS ≥50%", { pick: "Pembrolizumab" }], "m1_2l_post_io", { "Doppietta a base di platino": true }],
+  ["polmone_nsclc", ["Avanzato", "Nessun driver", "PS 0-1", "TPS <50%", "Non squamoso", { pick: "Pembrolizumab + platino" }], "m1_2l_post_io", { "Doppietta a base di platino": false }],
+  ["polmone_nsclc", ["Avanzato", "EGFR mutato", "Classica", { pick: "Osimertinib + platino" }], "m1_egfr_2l", { "Platino + pemetrexed ± bevacizumab": false, "Docetaxel": true }],
+  ["mesotelioma", ["Non resecabile", "Epitelioide", { pick: "Nivolumab + ipilimumab" }], "adv_2l_epi", { "Nivolumab in monoterapia": false, "Platino + pemetrexed": true }],
+  ["mammella", ["Precoce", "HR+/HER2-", "Alto", { pick: "Abemaciclib" }, "Entro"], "m1_hr_2l", {}],
+  ["mammella", ["Precoce", "HR+/HER2-", "Basso", { pick: "Terapia endocrina adiuvante" }, "Durante", "No"], "m1_hr_pik3ca", {}],
+  ["mammella", ["Metastatico", "HR+/HER2-", "No", "Endocrino-resistente", "Sì", { pick: "Fulvestrant" }, "PIK3CA"], "m1_hr_2l_pi3k", { "Capivasertib + fulvestrant": false, "Everolimus + exemestane": true }],
+  ["stomaco", ["Localizzato", "pMMR", { pick: "Durvalumab" }, "Entro", "HER2 negativo", "PD-L1 CPS ≥5"], "adv_cps5", { "Nivolumab + chemioterapia": false, "Chemioterapia (CAPOX o FOLFOX)": true }],
+  ["esofago", ["Avanzato", "Carcinoma squamoso", { pick: "Pembrolizumab" }], "adv_scc_2l", { "Tislelizumab in monoterapia (se IO-naive)": false, "Taxano": true }],
+  ["colonretto", ["Colon localizzato", "Stadio III", "pMMR", "Alto", { pick: "FOLFOX" }, "Entro", "Malattia non resecabile", "RAS mutato"], "m_ras", { "FOLFOXIRI + bevacizumab": false }],
+  ["colonretto", ["Metastatico", "Malattia non res", "RAS e BRAF", "Colon sinistro", { pick: "Doppietta + anti-EGFR" }], "m_2l", { "Doppietta + anti-EGFR se RAS wild-type e non ancora usato": false }],
+  ["pancreas", ["Metastatico", "PS 0-1", { pick: "FOLFIRINOX" }], "pan_2l_postffx", {}],
+  ["pancreas", ["Resecabile", "next", { pick: "Gemcitabina + capecitabina" }, "Entro"], "pan_2l_postgem", {}],
+  ["epatocarcinoma", ["BCLC C", "Controindicazione all'immunoterapia", { pick: "Lenvatinib" }], "hcc_2l", { "Regorafenib": false, "Sorafenib dopo lenvatinib": true }],
+  ["gist", ["Localizzato", "next", "Alto rischio", { pick: "Imatinib per 3 anni" }, "Durante"], "m1_2l", {}],
+  ["prostata", ["Metastatico ormono", "Alto volume, fit", { pick: "Tripletta ADT + docetaxel + darolutamide" }], "crpc_post_doce", { "Cabazitaxel": true }],
+  ["prostata", ["Metastatico resistente", "Naïve", { pick: "Abiraterone" }], "crpc_post_arsi", { "ARSI (abiraterone o enzalutamide)": false, "Docetaxel": true }],
+  ["rene", ["Avanzato", "Cellule chiare", "Intermedio", { pick: "Nivolumab + ipilimumab" }], "m1_2l_post_ioio", {}],
+  ["rene", ["Localizzato", { pick: "Nefrectomia radicale" }, "Intermedio", { pick: "Pembrolizumab per 1 anno" }, "Entro", "Cellule chiare", "Favorevole"], "m1_fav", { "Pembrolizumab + axitinib": false, "Sunitinib o pazopanib": true }],
+  ["cervice", ["Localmente", "Sì", { pick: "Pembrolizumab + CRT" }, "Entro", "CPS ≥1"], "adv_1l_pembro", { "Pembrolizumab + platino-paclitaxel ± bevacizumab": false, "Cisplatino-paclitaxel + bevacizumab": true }],
+  ["endometrio", ["Avanzato", "pMMR", { pick: "Dostarlimab" }], "adv_2l", { "Lenvatinib + pembrolizumab": false }],
+  ["ovaio", ["Stadio avanzato", { pick: "Citoriduzione" }, { pick: "Carboplatino" }, "BRCA1/2", { pick: "Olaparib" }, "Platino-sensibile", { pick: "Carboplatino + gemcitabina" }], "rec_mant", { "Niraparib": false, "Nessun mantenimento: sorveglianza": true }],
+  ["melanoma", ["Stadio III resecato", "BRAF wild-type", { pick: "Pembrolizumab" }, "Entro", "No", "BRAF wild-type", "PD-L1 <1%"], "adv_io_neg", { "Anti-PD-1 in monoterapia": false, "Nivolumab + ipilimumab": true }],
+  ["melanoma", ["Avanzato", "No", "BRAF V600", "Sì", { pick: "BRAF + MEK inibitore" }], "adv_2l", { "Nivolumab + ipilimumab": true }],
+  ["testacollo", ["Carcinoma squamoso (cavo", "Localmente", "Chirurgia", { pick: "+ Pembrolizumab" }, "R1", { pick: "Chemioradioterapia" }, "Entro"], "rm_2l", { "Nivolumab (IO-naive)": false }],
+  ["sarcomi", ["Malattia avanzata", "No", "Leiomiosarcoma", { pick: "Doxorubicina + trabectedina" }], "adv_2l", { "Trabectedina (leiomiosarcoma, liposarcoma)": false }],
+];
+for (const [id, steps, expectedNode, expected] of SCENARI) {
+  test(`scenario ${id}: ${steps.map(s => typeof s === "string" ? s : s.pick).join(" → ")}`, () => {
+    const algo = JSON.parse(fs.readFileSync(path.join(ALGO_DIR, `${id}.algo.json`), "utf8"));
+    const h = walkAny(algo, steps);
+    assert.equal(core.currentNodeId(algo, h), expectedNode);
+    const node = algo.nodes[expectedNode];
+    for (const [name, ok] of Object.entries(expected)) {
+      const option = node.options.find(o => o.name === name);
+      assert.ok(option, `opzione "${name}" assente in ${expectedNode}`);
+      assert.equal(core.optionStatus(algo, h, option).available, ok, name);
+    }
+  });
+}

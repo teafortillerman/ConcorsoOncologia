@@ -3,6 +3,13 @@
   "title": "Rene",
   "theme": "Urologici",
   "scheda": "Schede/Urologici/Rene.md",
+  "exposures": {
+    "io": "Immunoterapia",
+    "tki": "TKI anti-VEGFR",
+    "iotki": "Combinazione IO + TKI",
+    "ioio": "Nivolumab + ipilimumab",
+    "cabo": "Cabozantinib"
+  },
   "start": "setting",
   "nodes": {
     "setting": {
@@ -11,8 +18,14 @@
       "short": "Setting",
       "info": "Follow-up dopo chirurgia: recidiva nel ~40%, due terzi entro il primo anno. Marcatori e PET-FDG sconsigliati.",
       "answers": [
-        { "label": "Localizzato", "next": "loc_chir" },
-        { "label": "Avanzato / metastatico", "next": "m1_istologia" }
+        {
+          "label": "Localizzato",
+          "next": "loc_chir"
+        },
+        {
+          "label": "Avanzato / metastatico",
+          "next": "m1_istologia"
+        }
       ]
     },
     "loc_chir": {
@@ -35,15 +48,25 @@
           "key": "SBRT: controllo locale 97,2%. L'ablazione non è un'alternativa nell'operabile (OS HR 1,64)."
         }
       ],
-      "next": { "label": "Dopo la nefrectomia → rischio di recidiva", "node": "loc_adj" }
+      "next": {
+        "label": "Dopo la nefrectomia → rischio di recidiva",
+        "node": "loc_adj"
+      },
+      "select": true
     },
     "loc_adj": {
       "type": "question",
       "text": "Qual è il rischio di recidiva?",
       "short": "Rischio",
       "answers": [
-        { "label": "Intermedio-alto / alto, o M1 NED dopo metastasectomia", "next": "loc_pembro" },
-        { "label": "Basso", "next": "loc_follow" }
+        {
+          "label": "Intermedio-alto / alto, o M1 NED dopo metastasectomia",
+          "next": "loc_pembro"
+        },
+        {
+          "label": "Basso",
+          "next": "loc_follow"
+        }
       ]
     },
     "loc_pembro": {
@@ -57,11 +80,21 @@
           "regimen": {
             "trial": "KEYNOTE-564",
             "rows": [
-              ["Pembrolizumab", "200 mg EV ogni 3 settimane ×17 cicli"]
+              [
+                "Pembrolizumab",
+                "200 mg EV ogni 3 settimane ×17 cicli"
+              ]
             ],
             "note": "Durata 1 anno.",
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io"
+          ]
         },
         {
           "name": "Durvalumab + tremelimumab",
@@ -70,15 +103,29 @@
           "regimen": {
             "trial": "RAMPART",
             "rows": [
-              ["Durvalumab", "1500 mg EV ogni 4 settimane (+ tremelimumab nelle prime somministrazioni)"]
+              [
+                "Durvalumab",
+                "1500 mg EV ogni 4 settimane (+ tremelimumab nelle prime somministrazioni)"
+              ]
             ],
             "note": "Circa 1 anno.",
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io"
+          ]
         }
       ],
       "note": "VEGF-TKI adiuvanti mai raccomandati (DFS HR 0,84, nessuna OS, tossicità alta). Nivolumab, nivo-ipi e atezolizumab adiuvanti negativi.",
-      "next": { "label": "Alla recidiva → malattia avanzata", "node": "m1_istologia" }
+      "next": {
+        "label": "Alla recidiva",
+        "node": "rec_io"
+      },
+      "select": true
     },
     "loc_follow": {
       "type": "recommendation",
@@ -90,7 +137,11 @@
           "key": "TC calibrata sul rischio."
         }
       ],
-      "next": { "label": "Alla recidiva → malattia avanzata", "node": "m1_istologia" }
+      "next": {
+        "label": "Alla recidiva → malattia avanzata",
+        "node": "m1_istologia"
+      },
+      "select": true
     },
     "m1_istologia": {
       "type": "question",
@@ -98,10 +149,22 @@
       "short": "Istologia",
       "info": "Nefrectomia citoriduttiva: differita dopo terapia sistemica (SURTIME) o upfront nel favorevole/oligometastatico. Metastasectomia se completa: OS a 5 anni 41% vs 22%.",
       "answers": [
-        { "label": "Cellule chiare", "next": "m1_imdc" },
-        { "label": "Papillare", "next": "m1_papillare" },
-        { "label": "Dotti collettori / midollare", "next": "m1_dotti" },
-        { "label": "HLRCC / FH-deficient", "next": "m1_hlrcc" }
+        {
+          "label": "Cellule chiare",
+          "next": "m1_imdc"
+        },
+        {
+          "label": "Papillare",
+          "next": "m1_papillare"
+        },
+        {
+          "label": "Dotti collettori / midollare",
+          "next": "m1_dotti"
+        },
+        {
+          "label": "HLRCC / FH-deficient",
+          "next": "m1_hlrcc"
+        }
       ]
     },
     "m1_imdc": {
@@ -110,8 +173,14 @@
       "short": "IMDC",
       "info": "Nessuna combinazione IO-TKI è preferita alle altre (ESMO): niente confronti cross-trial. Negli anziani fit le combinazioni non vanno evitate per l'età.",
       "answers": [
-        { "label": "Favorevole", "next": "m1_fav" },
-        { "label": "Intermedio / sfavorevole", "next": "m1_intpoor" }
+        {
+          "label": "Favorevole",
+          "next": "m1_fav"
+        },
+        {
+          "label": "Intermedio / sfavorevole",
+          "next": "m1_intpoor"
+        }
       ]
     },
     "m1_fav": {
@@ -126,11 +195,32 @@
             "trial": "KEYNOTE-426",
             "endpoint": "OS 47,2 vs 40,8 mesi (HR 0,84); PFS 15,7 vs 11,1 mesi (HR 0,69)",
             "rows": [
-              ["Pembrolizumab", "200 mg EV ogni 3 settimane (fino a 35 cicli, ~2 anni)"],
-              ["Axitinib", "5 mg per os ×2/die"]
+              [
+                "Pembrolizumab",
+                "200 mg EV ogni 3 settimane (fino a 35 cicli, ~2 anni)"
+              ],
+              [
+                "Axitinib",
+                "5 mg per os ×2/die"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "tki",
+            "iotki"
+          ],
+          "excludes": [
+            {
+              "tag": "io",
+              "reason": "Recidiva entro 12 mesi da un'immunoterapia adiuvante: preferire un TKI."
+            }
+          ]
         },
         {
           "name": "Pembrolizumab + lenvatinib",
@@ -140,11 +230,32 @@
             "trial": "CLEAR",
             "endpoint": "PFS 23,3 vs 9,2 mesi, HR 0,42",
             "rows": [
-              ["Pembrolizumab", "200 mg EV ogni 3 settimane (fino a 35 cicli, ~2 anni)"],
-              ["Lenvatinib", "20 mg/die per os"]
+              [
+                "Pembrolizumab",
+                "200 mg EV ogni 3 settimane (fino a 35 cicli, ~2 anni)"
+              ],
+              [
+                "Lenvatinib",
+                "20 mg/die per os"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "tki",
+            "iotki"
+          ],
+          "excludes": [
+            {
+              "tag": "io",
+              "reason": "Recidiva entro 12 mesi da un'immunoterapia adiuvante: preferire un TKI."
+            }
+          ]
         },
         {
           "name": "Nivolumab + cabozantinib",
@@ -154,11 +265,33 @@
             "trial": "CheckMate 9ER",
             "endpoint": "PFS 16,6 vs 8,4 mesi, HR 0,59 (OS finale HR 0,79)",
             "rows": [
-              ["Nivolumab", "240 mg EV ogni 2 settimane (fino a ~2 anni)"],
-              ["Cabozantinib", "40 mg/die per os"]
+              [
+                "Nivolumab",
+                "240 mg EV ogni 2 settimane (fino a ~2 anni)"
+              ],
+              [
+                "Cabozantinib",
+                "40 mg/die per os"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "tki",
+            "iotki",
+            "cabo"
+          ],
+          "excludes": [
+            {
+              "tag": "io",
+              "reason": "Recidiva entro 12 mesi da un'immunoterapia adiuvante: preferire un TKI."
+            }
+          ]
         },
         {
           "name": "Sunitinib o pazopanib",
@@ -166,14 +299,31 @@
           "key": "Nel favorevole le IO-TKI migliorano PFS e ORR ma non l'OS (HR 0,99): il TKI da solo resta valido.",
           "regimen": {
             "rows": [
-              ["Sunitinib", "50 mg/die per os, 4 settimane sì + 2 no"],
-              ["oppure Pazopanib", "800 mg/die per os"]
+              [
+                "Sunitinib",
+                "50 mg/die per os, 4 settimane sì + 2 no"
+              ],
+              [
+                "oppure Pazopanib",
+                "800 mg/die per os"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "tki"
+          ]
         }
       ],
-      "next": { "label": "Alla progressione → 2ª linea", "node": "m1_2l_q" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "m1_2l_q"
+      },
+      "select": true
     },
     "m1_intpoor": {
       "type": "recommendation",
@@ -187,11 +337,31 @@
             "trial": "CheckMate 214",
             "endpoint": "OS a 8 anni HR 0,69 negli intermedi/sfavorevoli",
             "rows": [
-              ["Induzione", "nivolumab 3 mg/kg + ipilimumab 1 mg/kg EV ogni 3 settimane ×4"],
-              ["Mantenimento", "nivolumab 240 mg ogni 2 settimane o 480 mg ogni 4"]
+              [
+                "Induzione",
+                "nivolumab 3 mg/kg + ipilimumab 1 mg/kg EV ogni 3 settimane ×4"
+              ],
+              [
+                "Mantenimento",
+                "nivolumab 240 mg ogni 2 settimane o 480 mg ogni 4"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "ioio"
+          ],
+          "excludes": [
+            {
+              "tag": "io",
+              "reason": "Recidiva entro 12 mesi da un'immunoterapia adiuvante: preferire un TKI."
+            }
+          ]
         },
         {
           "name": "Nivolumab + cabozantinib",
@@ -201,11 +371,33 @@
             "trial": "CheckMate 9ER",
             "endpoint": "PFS 16,6 vs 8,4 mesi, HR 0,59 (OS finale HR 0,79)",
             "rows": [
-              ["Nivolumab", "240 mg EV ogni 2 settimane (fino a ~2 anni)"],
-              ["Cabozantinib", "40 mg/die per os"]
+              [
+                "Nivolumab",
+                "240 mg EV ogni 2 settimane (fino a ~2 anni)"
+              ],
+              [
+                "Cabozantinib",
+                "40 mg/die per os"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "tki",
+            "iotki",
+            "cabo"
+          ],
+          "excludes": [
+            {
+              "tag": "io",
+              "reason": "Recidiva entro 12 mesi da un'immunoterapia adiuvante: preferire un TKI."
+            }
+          ]
         },
         {
           "name": "Pembrolizumab + axitinib o + lenvatinib",
@@ -214,11 +406,32 @@
           "regimen": {
             "trial": "KEYNOTE-426 / CLEAR",
             "rows": [
-              ["Pembrolizumab", "200 mg EV ogni 3 settimane (fino a 35 cicli, ~2 anni)"],
-              ["+ Axitinib", "5 mg ×2/die (o lenvatinib 20 mg/die)"]
+              [
+                "Pembrolizumab",
+                "200 mg EV ogni 3 settimane (fino a 35 cicli, ~2 anni)"
+              ],
+              [
+                "+ Axitinib",
+                "5 mg ×2/die (o lenvatinib 20 mg/die)"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "tki",
+            "iotki"
+          ],
+          "excludes": [
+            {
+              "tag": "io",
+              "reason": "Recidiva entro 12 mesi da un'immunoterapia adiuvante: preferire un TKI."
+            }
+          ]
         },
         {
           "name": "Cabozantinib in monoterapia",
@@ -228,14 +441,31 @@
             "trial": "CABOSUN",
             "endpoint": "PFS 8,2 vs 5,6 mesi, HR 0,66",
             "rows": [
-              ["Cabozantinib", "60 mg/die per os"]
+              [
+                "Cabozantinib",
+                "60 mg/die per os"
+              ]
             ],
-            "sources": [{"type": "pubmed", "label": "CABOSUN", "doi": "10.1200/JCO.2016.70.7398"}]
-          }
+            "sources": [
+              {
+                "type": "pubmed",
+                "label": "CABOSUN",
+                "doi": "10.1200/JCO.2016.70.7398"
+              }
+            ]
+          },
+          "gives": [
+            "tki",
+            "cabo"
+          ]
         }
       ],
       "note": "La tripletta nivolumab + ipilimumab + cabozantinib (COSMIC-313) non è raccomandata.",
-      "next": { "label": "Alla progressione → 2ª linea", "node": "m1_2l_q" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "m1_2l_q"
+      },
+      "select": true
     },
     "m1_2l_q": {
       "type": "question",
@@ -243,9 +473,38 @@
       "short": "1ª linea",
       "info": "Il rechallenge con immunoterapia dopo una 1ª linea IO non è raccomandato (CONTACT-03 negativo e più tossico).",
       "answers": [
-        { "label": "IO + TKI", "next": "m1_2l_post_iotki" },
-        { "label": "IO + IO (nivolumab + ipilimumab)", "next": "m1_2l_post_ioio" },
-        { "label": "Solo TKI", "next": "m1_2l_post_tki" }
+        {
+          "label": "IO + TKI",
+          "next": "m1_2l_post_iotki"
+        },
+        {
+          "label": "IO + IO (nivolumab + ipilimumab)",
+          "next": "m1_2l_post_ioio"
+        },
+        {
+          "label": "Solo TKI",
+          "next": "m1_2l_post_tki"
+        }
+      ],
+      "auto_route": [
+        {
+          "if_any": [
+            "iotki"
+          ],
+          "next": "m1_2l_post_iotki"
+        },
+        {
+          "if_any": [
+            "ioio"
+          ],
+          "next": "m1_2l_post_ioio"
+        },
+        {
+          "if_any": [
+            "tki"
+          ],
+          "next": "m1_2l_post_tki"
+        }
       ]
     },
     "m1_2l_post_iotki": {
@@ -258,10 +517,27 @@
           "key": "Dopo IO-TKI: ORR 28%, PFS 8,3 mesi (CaboPoint).",
           "regimen": {
             "rows": [
-              ["Cabozantinib", "60 mg/die per os"]
+              [
+                "Cabozantinib",
+                "60 mg/die per os"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "excludes": [
+            {
+              "tag": "cabo",
+              "reason": "Cabozantinib già ricevuto in 1ª linea."
+            }
+          ],
+          "gives": [
+            "cabo",
+            "tki"
+          ]
         },
         {
           "name": "Sunitinib o sorafenib",
@@ -269,14 +545,31 @@
           "key": "Unici altri farmaci rimborsati in questo contesto.",
           "regimen": {
             "rows": [
-              ["Sunitinib", "50 mg/die per os, 4 settimane sì + 2 no"],
-              ["oppure Sorafenib", "400 mg per os ×2/die"]
+              [
+                "Sunitinib",
+                "50 mg/die per os, 4 settimane sì + 2 no"
+              ],
+              [
+                "oppure Sorafenib",
+                "400 mg per os ×2/die"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "tki"
+          ]
         }
       ],
-      "next": { "label": "Alla progressione → 3ª linea", "node": "m1_3l" }
+      "next": {
+        "label": "Alla progressione → 3ª linea",
+        "node": "m1_3l"
+      },
+      "select": true
     },
     "m1_2l_post_ioio": {
       "type": "recommendation",
@@ -288,14 +581,31 @@
           "key": "Dopo IO-IO cabozantinib non è rimborsato in Italia (CaboPoint: ORR 41%).",
           "regimen": {
             "rows": [
-              ["Sunitinib", "50 mg/die per os, 4 settimane sì + 2 no"],
-              ["oppure Sorafenib", "400 mg per os ×2/die"]
+              [
+                "Sunitinib",
+                "50 mg/die per os, 4 settimane sì + 2 no"
+              ],
+              [
+                "oppure Sorafenib",
+                "400 mg per os ×2/die"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "tki"
+          ]
         }
       ],
-      "next": { "label": "Alla progressione → 3ª linea", "node": "m1_3l" }
+      "next": {
+        "label": "Alla progressione → 3ª linea",
+        "node": "m1_3l"
+      },
+      "select": true
     },
     "m1_2l_post_tki": {
       "type": "recommendation",
@@ -309,10 +619,27 @@
             "trial": "METEOR",
             "endpoint": "PFS HR 0,51 (OS HR 0,66)",
             "rows": [
-              ["Cabozantinib", "60 mg/die per os"]
+              [
+                "Cabozantinib",
+                "60 mg/die per os"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "excludes": [
+            {
+              "tag": "cabo",
+              "reason": "Cabozantinib già ricevuto in 1ª linea."
+            }
+          ],
+          "gives": [
+            "cabo",
+            "tki"
+          ]
         },
         {
           "name": "Nivolumab",
@@ -322,13 +649,33 @@
             "trial": "CheckMate 025",
             "endpoint": "OS 25,8 vs 19,7 mesi, HR 0,73",
             "rows": [
-              ["Nivolumab", "240 mg EV ogni 2 settimane o 480 mg ogni 4 settimane"]
+              [
+                "Nivolumab",
+                "240 mg EV ogni 2 settimane o 480 mg ogni 4 settimane"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "excludes": [
+            {
+              "tag": "io",
+              "reason": "Già ricevuta immunoterapia (adiuvante)."
+            }
+          ],
+          "gives": [
+            "io"
+          ]
         }
       ],
-      "next": { "label": "Alla progressione → 3ª linea", "node": "m1_3l" }
+      "next": {
+        "label": "Alla progressione → 3ª linea",
+        "node": "m1_3l"
+      },
+      "select": true
     },
     "m1_3l": {
       "type": "recommendation",
@@ -342,10 +689,27 @@
             "trial": "LITESPARK-005",
             "endpoint": "PFS HR 0,75; OS non significativa",
             "rows": [
-              ["Belzutifan", "120 mg/die per os, in continuo"]
+              [
+                "Belzutifan",
+                "120 mg/die per os, in continuo"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "requires": [
+            {
+              "tag": "io",
+              "reason": "LITESPARK-005: dopo immunoterapia e TKI."
+            },
+            {
+              "tag": "tki",
+              "reason": "LITESPARK-005: dopo immunoterapia e TKI."
+            }
+          ]
         },
         {
           "name": "Everolimus o altro TKI non ancora usato",
@@ -353,9 +717,16 @@
           "key": "RECORD-1: PFS HR 0,33 dopo TKI.",
           "regimen": {
             "rows": [
-              ["Everolimus", "10 mg/die per os"]
+              [
+                "Everolimus",
+                "10 mg/die per os"
+              ]
             ],
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         }
       ],
@@ -373,9 +744,16 @@
             "trial": "SWOG S1500",
             "endpoint": "PFS 9,0 vs 5,6 mesi, HR 0,60",
             "rows": [
-              ["Cabozantinib", "60 mg/die per os"]
+              [
+                "Cabozantinib",
+                "60 mg/die per os"
+              ]
             ],
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         },
         {
@@ -385,10 +763,20 @@
           "regimen": {
             "trial": "KEYNOTE-B61",
             "rows": [
-              ["Pembrolizumab", "200 mg EV ogni 3 settimane (fino a 35 cicli, ~2 anni)"],
-              ["Lenvatinib", "20 mg/die per os"]
+              [
+                "Pembrolizumab",
+                "200 mg EV ogni 3 settimane (fino a 35 cicli, ~2 anni)"
+              ],
+              [
+                "Lenvatinib",
+                "20 mg/die per os"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         }
       ]
@@ -403,11 +791,21 @@
           "key": "Schema storico; prognosi severissima (5-10% vivi a 24 mesi).",
           "regimen": {
             "rows": [
-              ["Cisplatino (o carboplatino)", "70 mg/m² EV giorno 1 (carboplatino AUC 5)"],
-              ["Gemcitabina", "1250 mg/m² EV giorni 1 e 8"]
+              [
+                "Cisplatino (o carboplatino)",
+                "70 mg/m² EV giorno 1 (carboplatino AUC 5)"
+              ],
+              [
+                "Gemcitabina",
+                "1250 mg/m² EV giorni 1 e 8"
+              ]
             ],
             "note": "Ogni 21 giorni.",
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         },
         {
@@ -417,9 +815,16 @@
           "regimen": {
             "trial": "BONSAI",
             "rows": [
-              ["Cabozantinib", "60 mg/die per os"]
+              [
+                "Cabozantinib",
+                "60 mg/die per os"
+              ]
             ],
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         }
       ]
@@ -434,14 +839,47 @@
           "key": "ORR 72% nell'HLRCC; off-label, nessuna approvazione dedicata (uso compassionevole o legge 648).",
           "regimen": {
             "rows": [
-              ["Bevacizumab", "10 mg/kg EV ogni 2 settimane"],
-              ["Erlotinib", "150 mg/die per os"]
+              [
+                "Bevacizumab",
+                "10 mg/kg EV ogni 2 settimane"
+              ],
+              [
+                "Erlotinib",
+                "150 mg/die per os"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         }
       ],
       "note": "Sospettare HLRCC in presenza di leiomiomi cutanei o uterini: counseling genetico."
+    },
+    "rec_io": {
+      "type": "question",
+      "text": "Quando si è verificata la recidiva rispetto all'immunoterapia adiuvante?",
+      "short": "Recidiva",
+      "info": "Recidiva durante l'immunoterapia adiuvante o entro 12 mesi dalla fine: malattia refrattaria all'IO, 1ª linea con TKI.",
+      "only_if_any": [
+        "io"
+      ],
+      "skip_to": "m1_istologia",
+      "answers": [
+        {
+          "label": "Entro 12 mesi (malattia refrattaria)",
+          "next": "m1_istologia"
+        },
+        {
+          "label": "Oltre 12 mesi",
+          "next": "m1_istologia",
+          "expire": [
+            "io"
+          ]
+        }
+      ]
     }
   }
 }

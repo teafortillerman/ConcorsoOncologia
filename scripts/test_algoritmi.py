@@ -505,8 +505,10 @@ class OrganAlgorithmsTest(unittest.TestCase):
         self.assertEqual(nonepi["Pembrolizumab + platino-pemetrexed"], "unknown")
 
     def test_mesotelioma_nivolumab_monotherapy_never_after_immunotherapy(self):
-        names = [o["name"] for o in self.load("mesotelioma.algo.json")["nodes"]["adv_2l_post_io"]["options"]]
-        self.assertNotIn("Nivolumab in monoterapia", names)
+        nodes = self.load("mesotelioma.algo.json")["nodes"]
+        for node in ("adv_2l_post_io", "adv_2l_epi"):
+            nivo = next(o for o in nodes[node]["options"] if o["name"] == "Nivolumab in monoterapia")
+            self.assertIn("io", [r["tag"] for r in nivo.get("excludes", [])])
 
 
 
