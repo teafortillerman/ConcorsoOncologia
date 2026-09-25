@@ -877,6 +877,28 @@ button.ag-seq-step:hover { border-color: var(--color-primary); }
 .ag-chip.ag-aifa-not_reimbursed { border-color: var(--flow-badge-red); color: var(--flow-badge-red); background: transparent; }
 .ag-chip.ag-aifa-standard { border-color: var(--color-primary); color: var(--color-primary); background: var(--color-primary-soft); }
 .ag-opt-key { font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.5; }
+.ag-option.ag-opt-off { opacity: 0.62; background: var(--color-surface-offset); border-top-color: var(--color-border); }
+.ag-option.ag-opt-off .ag-regimen { display: none; }
+.ag-chip.ag-chip-off { border-color: var(--color-border); color: var(--color-text-muted); background: transparent; }
+.ag-opt-block { font-size: 0.86rem; font-weight: 600; color: var(--color-danger); line-height: 1.45; }
+.ag-opt-block::before { content: "✕ "; }
+.ag-pick {
+  align-self: flex-start; margin-top: 2px; display: inline-flex; align-items: baseline; gap: 8px; flex-wrap: wrap;
+  border: 1px solid var(--color-primary); background: var(--color-primary); color: var(--color-text-inverse);
+  border-radius: 9px; padding: 7px 13px; font-size: 0.86rem; font-weight: 650;
+}
+.ag-pick span { font-weight: 500; opacity: 0.85; font-size: 0.8rem; }
+.ag-pick:hover { filter: brightness(1.08); }
+.ag-adapted { font-size: 0.86rem; line-height: 1.5; padding: 9px 12px; border-radius: 10px; background: var(--color-key-soft); border: 1px solid var(--color-key-border); color: var(--color-text); margin-bottom: 12px; }
+.ag-seq-chosen { display: block; font-size: 0.74rem; font-weight: 500; color: var(--color-text-muted); margin-top: 2px; }
+.ag-tx-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.ag-tx-list li { display: flex; flex-direction: column; gap: 3px; padding: 8px 10px; border-radius: 10px; background: var(--color-surface-offset); }
+.ag-tx-line { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-faint); }
+.ag-tx-name { font-size: 0.88rem; font-weight: 600; line-height: 1.35; }
+.ag-tx-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 2px; }
+.ag-tx-tag { font-size: 0.7rem; font-weight: 600; padding: 1px 7px; border-radius: 999px; background: var(--color-key-soft); color: var(--color-key); border: 1px solid var(--color-key-border); }
+.ag-tx-tag.is-off { text-decoration: line-through; opacity: 0.7; }
+.ag-tx-exp { font-size: 0.76rem; color: var(--color-text-muted); }
 .ag-opt-detail { font-size: 0.84rem; line-height: 1.5; padding: 8px 10px; border-radius: 8px; background: var(--color-warn-highlight); }
 .ag-regimen { margin-top: 4px; border: 1px solid var(--color-key-border); background: var(--color-key-soft); border-radius: 10px; padding: 10px 12px; }
 .ag-reg-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--color-key); margin-bottom: 6px; }
@@ -2105,7 +2127,7 @@ function agSequenceHtml(seq) {
   if (!seq.done.length && !seq.current) return "";
   const arrow = `<div class="ag-seq-arrow" aria-hidden="true">${ICONS.arrowRight}</div>`;
   const steps = [
-    ...seq.done.map(d => `<button type="button" class="ag-seq-step is-done" data-rewind="${d.index}" title="Torna a questa linea"><small>✓ Superata</small><strong>${escapeHtml(d.title)}</strong></button>`),
+    ...seq.done.map(d => `<button type="button" class="ag-seq-step is-done" data-rewind="${d.index}" title="Torna a questa linea"><small>✓ ${d.chosen ? "Effettuata" : "Superata"}</small><strong>${escapeHtml(d.title)}</strong>${d.chosen ? `<span class="ag-seq-chosen">${escapeHtml(d.chosen)}</span>` : ""}</button>`),
     ...(seq.current ? [`<div class="ag-seq-step is-current" aria-current="step"><small>Sei qui</small><strong>${escapeHtml(seq.current.title)}</strong></div>`] : []),
     ...seq.upcoming.map(level => `<div class="ag-seq-step is-next"><small>${level.length > 1 ? "Possibile · a seconda del caso" : "Possibile"}</small>${level.map(t => `<strong>${escapeHtml(t)}</strong>`).join('<span class="ag-seq-or">oppure</span>')}</div>`),
   ];
@@ -2119,7 +2141,7 @@ function agTrailHtml(data, history, node) {
       <li class="is-line"><span class="ag-dot" aria-hidden="true">℞</span>
         <button type="button" data-rewind="${s.index}" title="Torna a questa linea di terapia">
           <span class="ag-t-edit">modifica</span>
-          <span class="ag-t-label">Linea superata</span>
+          <span class="ag-t-label">${s.chosen ? "Terapia effettuata" : "Linea superata"}</span>
           <span class="ag-t-value">${escapeHtml(s.label)}</span>
           <span class="ag-t-sub">${s.options.map(escapeHtml).join(" · ")}</span>
         </button></li>` : `
@@ -2139,6 +2161,26 @@ function agTrailHtml(data, history, node) {
           <button type="button" disabled><span class="ag-t-label">Adesso</span><span class="ag-t-value">${escapeHtml(now)}</span></button></li>
       </ol>
       ${steps.length ? `<p class="ag-trail-hint">Clicca un passaggio per tornarci e cambiare risposta.</p>` : ""}
+    </div>
+    ${agTreatmentsHtml(data, history)}`;
+}
+
+// Trattamenti ricevuti finora, con le classi di farmaco che condizionano le scelte successive.
+function agTreatmentsHtml(data, history) {
+  if (!data.exposures) return "";
+  const { treatments } = AlgoCore.exposures(data, history);
+  const tag = (t, off) => `<span class="ag-tx-tag${off ? " is-off" : ""}">${escapeHtml(data.exposures[t] || t)}</span>`;
+  return `
+    <div class="ag-panel ag-tx">
+      <h2>Trattamenti ricevuti</h2>
+      ${treatments.length ? `<ol class="ag-tx-list">${treatments.map(t => `
+        <li>
+          <span class="ag-tx-line">${escapeHtml(t.line)}</span>
+          <span class="ag-tx-name">${escapeHtml(t.name)}</span>
+          ${t.gives.length ? `<span class="ag-tx-tags">${t.gives.map(g => tag(g, t.expired)).join("")}</span>` : ""}
+          ${t.expired ? `<span class="ag-tx-exp">${escapeHtml(t.expired)}: non preclude il ritrattamento</span>` : ""}
+        </li>`).join("")}</ol>`
+        : `<p class="ag-trail-empty">Nessuno finora. Quando scegli una terapia, le linee successive si adattano: per esempio dopo un'immunoterapia non viene riproposto un anti-PD-1.</p>`}
     </div>`;
 }
 
@@ -2186,7 +2228,13 @@ function renderAlgorithm() {
   const scheda = state.items.find(i => i.relative_path === summary.scheda);
   const content = document.getElementById("content");
   setReaderMode(true);
-  const questionNumber = history.filter(s => s.choice !== "next").length + 1;
+  const questionNumber = history.filter(s => typeof s.choice === "number").length + 1;
+  const { active } = AlgoCore.exposures(data, history);
+  const optionsView = node.type === "recommendation"
+    ? node.options.map((o, i) => ({ o, i, st: AlgoCore.optionStatus(data, history, o) }))
+        .sort((a, b) => Number(b.st.available) - Number(a.st.available))
+    : [];
+  const adapted = active.size > 0 && node.type === "recommendation" && node.options.some(o => o.requires || o.excludes);
 
   const stepHtml = node.type === "question" ? `
     <div class="ag-card ag-q">
@@ -2194,7 +2242,7 @@ function renderAlgorithm() {
       <h2 class="ag-q-text">${escapeHtml(node.text)}</h2>
       <div class="ag-answers">
         ${node.answers.map((a, i) => {
-          const dest = AlgoCore.preview(data, a.next);
+          const dest = AlgoCore.preview(data, AlgoCore.currentNodeId(data, AlgoCore.choose(data, history, i)));
           const destHtml = dest.kind === "recommendation"
             ? `<span class="ag-a-dest is-therapy">→ <b>Terapia · ${escapeHtml(dest.label)}</b></span>`
             : `<span class="ag-a-dest">→ poi: <b>${escapeHtml(dest.label)}</b></span>`;
@@ -2205,22 +2253,29 @@ function renderAlgorithm() {
     <div class="ag-card ag-rec">
       <div class="ag-kicker">Raccomandazione</div>
       <h2 class="ag-rec-title">${escapeHtml(node.title)}</h2>
+      ${adapted ? `<div class="ag-adapted">Opzioni adattate ai trattamenti ricevuti: <b>${[...active].map(t => escapeHtml(data.exposures[t] || t)).join(", ")}</b>.</div>` : ""}
       <div class="ag-options">
-        ${node.options.map(o => `
-          <article class="ag-option ag-aifa-${escapeHtml(o.aifa)}">
+        ${optionsView.map(({ o, i, st }) => `
+          <article class="ag-option ag-aifa-${escapeHtml(o.aifa)}${st.available ? "" : " ag-opt-off"}">
             <div class="ag-opt-head">
               <div class="ag-opt-name">${escapeHtml(o.name)}</div>
-              <span class="ag-chip ag-aifa-${escapeHtml(o.aifa)}">${escapeHtml(AlgoCore.aifaLabel(o.aifa))}</span>
+              ${st.available
+                ? `<span class="ag-chip ag-aifa-${escapeHtml(o.aifa)}">${escapeHtml(AlgoCore.aifaLabel(o.aifa))}</span>`
+                : `<span class="ag-chip ag-chip-off">Non indicato</span>`}
             </div>
+            ${st.available ? "" : `<div class="ag-opt-block">${escapeHtml(st.reason)}</div>`}
             <div class="ag-opt-key">${escapeHtml(o.key)}</div>
             ${o.detail ? `<div class="ag-opt-detail">${escapeHtml(o.detail)}</div>` : ""}
             ${agRegimenHtml(o.regimen)}
+            ${node.select && st.available ? `<button type="button" class="ag-pick" data-pick="${i}">Scegli questa terapia <span>→ ${escapeHtml((o.next || node.next).label)}</span></button>` : ""}
           </article>
         `).join("")}
       </div>
       ${node.note ? `<div class="ag-note">${escapeHtml(node.note)}</div>` : ""}
       <div class="ag-next-wrap">
-        ${node.next
+        ${node.select
+          ? `<span class="ag-next-hint">Scegli la terapia effettuata: le linee successive terranno conto dei trattamenti ricevuti.</span>`
+          : node.next
           ? `<span class="ag-next-hint">Passo successivo della sequenza:</span><button type="button" class="ag-next" data-proceed>${escapeHtml(node.next.label)} ${ICONS.arrowRight}</button>`
           : `<span class="ag-end">Fine del percorso per questo ramo.</span>`}
       </div>
@@ -2251,6 +2306,9 @@ function renderAlgorithm() {
     b.addEventListener("click", () => stepAlgorithm(AlgoCore.rewind(state.algoHistory, Number(b.dataset.rewind))));
   });
   content.querySelector("[data-proceed]")?.addEventListener("click", () => stepAlgorithm(AlgoCore.proceed(data, state.algoHistory)));
+  content.querySelectorAll("[data-pick]").forEach(b => {
+    b.addEventListener("click", () => stepAlgorithm(AlgoCore.pick(data, state.algoHistory, Number(b.dataset.pick))));
+  });
   content.querySelector("[data-restart]")?.addEventListener("click", () => stepAlgorithm([]));
   content.querySelectorAll("[data-open-path]").forEach(b => {
     b.addEventListener("click", () => {

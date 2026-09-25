@@ -149,3 +149,73 @@ test("sequence raggruppa le alternative dello stesso passo", () => {
   };
   assert.deepEqual(core.sequence(algo, []).upcoming, [["Adiuvante", "Adiuvante — residuo"], ["Follow-up"]]);
 });
+
+// ---------- trattamenti ricevuti: scenari sull'algoritmo dell'urotelio ----------
+const URO = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "Algoritmi", "urotelio.algo.json"), "utf8"));
+
+// Percorre l'algoritmo: stringhe = etichetta della risposta, { pick } = nome della terapia scelta.
+function walk(algo, steps) {
+  let h = [];
+  for (const s of steps) {
+    const node = algo.nodes[core.currentNodeId(algo, h)];
+    if (typeof s === "string") {
+      const i = node.answers.findIndex(a => a.label.startsWith(s));
+      assert.ok(i >= 0, `risposta "${s}" assente in ${core.currentNodeId(algo, h)}`);
+      h = core.choose(algo, h, i);
+    } else {
+      const i = node.options.findIndex(o => o.name.startsWith(s.pick));
+      assert.ok(i >= 0, `terapia "${s.pick}" assente in ${core.currentNodeId(algo, h)}`);
+      h = core.pick(algo, h, i);
+    }
+  }
+  return h;
+}
+// Stato delle opzioni nel nodo corrente: { nome: true se indicata }.
+function statuses(algo, h) {
+  const node = algo.nodes[core.currentNodeId(algo, h)];
+  return Object.fromEntries(node.options.map(o => [o.name, core.optionStatus(algo, h, o).available]));
+}
+
+test("urotelio: dopo EV-pembrolizumab in 1ª linea non si ripropongono anti-PD-1 né EV", () => {
+  const h = walk(URO, ["Avanzato", { pick: "Enfortumab vedotin + pembrolizumab" }]);
+  assert.equal(core.currentNodeId(URO, h), "m1_2l");
+  const st = statuses(URO, h);
+  assert.equal(st["Pembrolizumab"], false);
+  assert.equal(st["Enfortumab vedotin"], false);
+  assert.equal(st["Erdafitinib (FGFR3 alterato)"], true);
+  assert.equal(st["Chemioterapia a base di platino"], true);
+});
+
+test("urotelio: chemioterapia senza avelumab lascia la 2ª linea IO-naive", () => {
+  const withAve = walk(URO, ["Avanzato", { pick: "Chemioterapia a base di platino" }, "Sì"]);
+  const noAve = walk(URO, ["Avanzato", { pick: "Chemioterapia a base di platino" }, "No"]);
+  assert.equal(statuses(URO, withAve)["Pembrolizumab"], false);
+  assert.equal(statuses(URO, withAve)["Enfortumab vedotin"], true);
+  assert.equal(statuses(URO, noAve)["Pembrolizumab"], true);
+  assert.equal(statuses(URO, noAve)["Enfortumab vedotin"], false);
+  assert.equal(statuses(URO, noAve)["Chemioterapia a base di platino"], false);
+  assert.deepEqual(core.exposures(URO, withAve).treatments.map(t => t.name),
+    ["Chemioterapia a base di platino ± avelumab di mantenimento", "Avelumab di mantenimento"]);
+});
+
+test("urotelio: recidiva entro 12 mesi da durvalumab perioperatorio → linee successive senza IO", () => {
+  const h = walk(URO, ["Muscolo-invasivo", "Cisplatino-eleggibile", { pick: "Durvalumab" }, "Entro 12 mesi"]);
+  assert.equal(core.currentNodeId(URO, h), "m1_2l");
+  assert.equal(statuses(URO, h)["Pembrolizumab"], false);
+  assert.throws(() => core.pick(URO, h, URO.nodes.m1_2l.options.findIndex(o => o.name === "Pembrolizumab")));
+});
+
+test("urotelio: recidiva oltre 12 mesi riapre la 1ª linea e segna il trattamento come non limitante", () => {
+  const h = walk(URO, ["Muscolo-invasivo", "Cisplatino-eleggibile", { pick: "Durvalumab" }, "Oltre 12 mesi"]);
+  assert.equal(core.currentNodeId(URO, h), "m1_1l");
+  const ex = core.exposures(URO, h);
+  assert.equal(ex.active.size, 0);
+  assert.equal(ex.treatments[0].expired, "Oltre 12 mesi");
+});
+
+test("urotelio: senza terapia sistemica perioperatoria la domanda sulla recidiva si salta", () => {
+  const h = walk(URO, ["Muscolo-invasivo", "Cisplatino-ineleggibile", { pick: "Cistectomia" }, { pick: "Osservazione" }]);
+  assert.equal(core.currentNodeId(URO, h), "m1_1l");
+  const hu = walk(URO, ["Alta via", { pick: "Nefroureterectomia" }, { pick: "Chemioterapia adiuvante" }]);
+  assert.equal(core.currentNodeId(URO, hu), "rec_periop");
+});

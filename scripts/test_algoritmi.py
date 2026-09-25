@@ -144,6 +144,50 @@ class ValidateAlgorithmTest(unittest.TestCase):
         self.assertTrue(any(e.startswith("ciclo:") for e in errors), errors)
 
 
+class TreatmentTrackingValidationTest(unittest.TestCase):
+    """Campi per i trattamenti ricevuti: exposures, select, gives, requires/excludes, expire, only_if_any."""
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.root = Path(self.tmp.name)
+        (self.root / "Schede" / "Mammella").mkdir(parents=True)
+        (self.root / "Schede" / "Mammella" / "Prova.md").write_text("# Prova\n", encoding="utf-8")
+        self.algo = make_algo()
+        self.algo["exposures"] = {"io": "Immunoterapia"}
+        r1 = self.algo["nodes"]["r1"]
+        r1["select"] = True
+        r1["options"][0]["gives"] = ["io"]
+        self.algo["nodes"]["r2"]["options"][0]["excludes"] = [{"tag": "io", "reason": "Già ricevuta"}]
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def test_valid_tracking_fields(self):
+        self.assertEqual(validate_algorithm(self.algo, self.root), [])
+
+    def test_undeclared_tag_is_rejected(self):
+        self.algo["nodes"]["r1"]["options"][0]["gives"] = ["platino"]
+        self.assertTrue(any("non dichiarata" in e for e in validate_algorithm(self.algo, self.root)))
+
+    def test_rule_needs_reason(self):
+        self.algo["nodes"]["r2"]["options"][0]["excludes"] = [{"tag": "io"}]
+        self.assertTrue(any("'tag' e 'reason'" in e for e in validate_algorithm(self.algo, self.root)))
+
+    def test_option_next_requires_select(self):
+        self.algo["nodes"]["r1"]["select"] = False
+        self.algo["nodes"]["r1"]["options"][0]["next"] = {"label": "poi", "node": "r2"}
+        self.assertTrue(any("non ha 'select'" in e for e in validate_algorithm(self.algo, self.root)))
+
+    def test_select_option_needs_a_target(self):
+        self.algo["nodes"]["r2"]["select"] = True
+        self.assertTrue(any("non ha seguito" in e for e in validate_algorithm(self.algo, self.root)))
+
+    def test_only_if_any_requires_skip_to(self):
+        self.algo["nodes"]["q1"]["only_if_any"] = ["io"]
+        self.assertTrue(any("richiede 'skip_to'" in e for e in validate_algorithm(self.algo, self.root)))
+        self.algo["nodes"]["q1"]["skip_to"] = "r2"
+        self.assertEqual(validate_algorithm(self.algo, self.root), [])
+
+
 class SummaryAndLoadTest(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()

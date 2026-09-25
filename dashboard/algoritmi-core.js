@@ -1,6 +1,15 @@
 /* Logica di navigazione degli algoritmi guidati: funzioni pure, nessun accesso al DOM.
    history = array di passi { nodeId, choice }, dove choice è l'indice della risposta
-   (domanda) oppure "next" (raccomandazione proseguita alla linea successiva). */
+   (domanda), "next" (raccomandazione proseguita alla linea successiva) oppure "opt"
+   con { option } (terapia scelta in una raccomandazione con "select": true).
+
+   Trattamenti ricevuti: un'opzione scelta (o una risposta) può dichiarare "gives", le classi
+   di farmaco ricevute (es. "io", "platino"). Le opzioni successive possono avere "requires"
+   ed "excludes" ([{ tag, reason }]): se non sono soddisfatte l'opzione resta visibile ma
+   non indicata, con il motivo. Una risposta con "expire" annulla l'effetto limitante di
+   quelle classi (es. recidiva oltre 12 mesi dalla fine della terapia perioperatoria).
+   Una domanda con "only_if_any" viene saltata (verso "skip_to") se nessuna di quelle
+   classi è attiva. */
 (function (root, factory) {
   const api = factory();
   if (typeof module === "object" && module.exports) module.exports = api;
@@ -15,11 +24,76 @@
 
   function stepTarget(algo, step) {
     const node = algo.nodes[step.nodeId];
-    return step.choice === "next" ? node.next.node : node.answers[step.choice].next;
+    if (step.choice === "next") return node.next.node;
+    if (step.choice === "opt") {
+      const option = node.options[step.option];
+      return (option.next && option.next.node) || node.next.node;
+    }
+    return node.answers[step.choice].next;
+  }
+
+  // Classi di farmaco ricevute lungo il percorso e trattamenti effettuati, in ordine.
+  function exposures(algo, history) {
+    const active = new Set();
+    const treatments = [];
+    const add = (entry, tags) => {
+      (tags || []).forEach(t => active.add(t));
+      treatments.push({ ...entry, gives: [...(tags || [])], expired: null });
+    };
+    history.forEach((step, index) => {
+      const node = algo.nodes[step.nodeId];
+      if (step.choice === "opt") {
+        const option = node.options[step.option];
+        add({ index, line: node.title, name: option.name }, option.gives);
+      } else if (typeof step.choice === "number") {
+        const answer = node.answers[step.choice];
+        if (answer.gives) add({ index, line: node.short || node.text, name: answer.treatment || answer.label }, answer.gives);
+        (answer.expire || []).forEach(tag => {
+          if (!active.delete(tag)) return;
+          treatments.forEach(t => { if (t.gives.includes(tag) && !t.expired) t.expired = answer.label; });
+        });
+      }
+    });
+    return { active, treatments };
+  }
+
+  // Salta le domande che non si applicano ai trattamenti ricevuti ("only_if_any").
+  function resolve(algo, history, nodeId) {
+    let id = nodeId;
+    for (let guard = 0; guard < 50; guard++) {
+      const node = algo.nodes[id];
+      if (!node || node.type !== "question" || !node.only_if_any) return id;
+      const { active } = exposures(algo, history);
+      if (node.only_if_any.some(t => active.has(t))) return id;
+      id = node.skip_to;
+    }
+    return id;
   }
 
   function currentNodeId(algo, history) {
-    return history.length ? stepTarget(algo, history[history.length - 1]) : algo.start;
+    return resolve(algo, history, history.length ? stepTarget(algo, history[history.length - 1]) : algo.start);
+  }
+
+  // Un'opzione è indicata se ha tutte le classi richieste e nessuna di quelle escluse.
+  function optionStatus(algo, history, option) {
+    const { active } = exposures(algo, history);
+    const blocked = (option.excludes || []).find(r => active.has(r.tag)) || (option.requires || []).find(r => !active.has(r.tag));
+    return blocked ? { available: false, reason: blocked.reason } : { available: true, reason: null };
+  }
+
+  function pick(algo, history, optionIndex) {
+    const nodeId = currentNodeId(algo, history);
+    const node = algo.nodes[nodeId];
+    const option = node.type === "recommendation" && node.select ? node.options[optionIndex] : null;
+    if (!option) throw new Error(`Terapia ${optionIndex} non selezionabile nel nodo ${nodeId}`);
+    if (!optionStatus(algo, history, option).available) throw new Error(`Terapia non indicata: ${option.name}`);
+    if (!(option.next || node.next)) throw new Error(`Il nodo ${nodeId} non ha un seguito`);
+    return [...history, { nodeId, choice: "opt", option: optionIndex }];
+  }
+
+  function nodeTargets(node) {
+    if (node.type === "question") return [...node.answers.map(a => a.next), ...(node.skip_to ? [node.skip_to] : [])];
+    return [...(node.next ? [node.next.node] : []), ...node.options.filter(o => o.next).map(o => o.next.node)];
   }
 
   function choose(algo, history, answerIndex) {
@@ -48,6 +122,7 @@
     return history.map((step, index) => {
       const node = algo.nodes[step.nodeId];
       if (step.choice === "next") return { index, label: node.title };
+      if (step.choice === "opt") return { index, label: `${node.title}: ${node.options[step.option].name}` };
       return { index, label: `${node.short || node.text}: ${node.answers[step.choice].label}` };
     });
   }
@@ -59,6 +134,9 @@
       const node = algo.nodes[step.nodeId];
       if (step.choice === "next") {
         return { index, kind: "line", nodeId: step.nodeId, label: node.title, options: node.options.map(o => o.name) };
+      }
+      if (step.choice === "opt") {
+        return { index, kind: "line", nodeId: step.nodeId, label: node.title, chosen: node.options[step.option].name, options: [node.options[step.option].name] };
       }
       return { index, kind: "answer", nodeId: step.nodeId, label: node.short || node.text, value: node.answers[step.choice].label };
     });
@@ -83,7 +161,7 @@
       const node = algo.nodes[id];
       if (!node) continue;
       if (node.type === "recommendation") out.push(id);
-      const targets = node.type === "question" ? node.answers.map(a => a.next) : (node.next ? [node.next.node] : []);
+      const targets = nodeTargets(node);
       for (const t of targets) if (!seen.has(t)) { seen.add(t); queue.push(t); }
     }
     return out;
@@ -100,7 +178,7 @@
       if (!node) continue;
       const level = best.get(id);
       const nextLevel = node.type === "recommendation" ? level + 1 : level;
-      const targets = node.type === "question" ? node.answers.map(a => a.next) : (node.next ? [node.next.node] : []);
+      const targets = nodeTargets(node);
       for (const t of targets) {
         if (!best.has(t) || best.get(t) > nextLevel) { best.set(t, nextLevel); queue.push(t); }
       }
@@ -125,12 +203,17 @@
   function sequence(algo, history) {
     const done = history
       .map((step, index) => ({ step, index }))
-      .filter(({ step }) => step.choice === "next")
-      .map(({ step, index }) => ({ index, nodeId: step.nodeId, title: algo.nodes[step.nodeId].title }));
+      .filter(({ step }) => step.choice === "next" || step.choice === "opt")
+      .map(({ step, index }) => {
+        const node = algo.nodes[step.nodeId];
+        const entry = { index, nodeId: step.nodeId, title: node.title };
+        if (step.choice === "opt") entry.chosen = node.options[step.option].name;
+        return entry;
+      });
     const currentId = currentNodeId(algo, history);
     const node = algo.nodes[currentId];
     const current = node.type === "recommendation" ? { nodeId: currentId, title: node.title } : null;
-    const from = current ? (node.next && node.next.node) : (done.length ? currentId : null);
+    const from = current ? ((node.next && node.next.node) || (node.options.find(o => o.next) || {}).next?.node) : (done.length ? currentId : null);
     const upcoming = from ? upcomingLevels(algo, from, current ? [current.title] : []) : [];
     return { done, current, upcoming };
   }
@@ -139,5 +222,5 @@
     return AIFA_LABELS[code] || AIFA_LABELS.unknown;
   }
 
-  return { currentNodeId, choose, proceed, rewind, pills, trail, preview, reachable, sequence, aifaLabel };
+  return { currentNodeId, choose, proceed, pick, rewind, pills, trail, preview, reachable, sequence, aifaLabel, exposures, optionStatus };
 });

@@ -41,6 +41,26 @@ def validate_regimen(regimen, where):
     return errors
 
 
+def validate_tags(value, known, where, field):
+    """'gives' / 'expire' / 'only_if_any': lista di classi dichiarate in 'exposures'."""
+    if not (isinstance(value, list) and value and all(isinstance(t, str) for t in value)):
+        return [f"{where}: '{field}' deve essere una lista non vuota di classi"]
+    return [f"{where}: '{field}' usa la classe {t!r} non dichiarata in 'exposures'" for t in value if t not in known]
+
+
+def validate_rules(value, known, where, field):
+    """'requires' / 'excludes': lista di { tag, reason }."""
+    if not (isinstance(value, list) and value):
+        return [f"{where}: '{field}' deve essere una lista non vuota"]
+    errors = []
+    for i, rule in enumerate(value, start=1):
+        if not (isinstance(rule, dict) and rule.get("tag") and rule.get("reason")):
+            errors.append(f"{where}: la regola {i} di '{field}' deve avere 'tag' e 'reason'")
+        elif rule["tag"] not in known:
+            errors.append(f"{where}: '{field}' usa la classe {rule['tag']!r} non dichiarata in 'exposures'")
+    return errors
+
+
 def validate_algorithm(data, root):
     """Restituisce l'elenco degli errori; lista vuota = algoritmo valido."""
     if not isinstance(data, dict):
@@ -57,6 +77,12 @@ def validate_algorithm(data, root):
     if data["start"] not in nodes:
         errors.append(f"il nodo iniziale '{data['start']}' non esiste")
 
+    exposures = data.get("exposures", {})
+    if not isinstance(exposures, dict) or not all(isinstance(v, str) and v for v in exposures.values()):
+        errors.append("'exposures' deve essere un oggetto { classe: descrizione }")
+        exposures = {}
+    known = set(exposures)
+
     edges = {}
     for node_id, node in nodes.items():
         where = f"nodo '{node_id}'"
@@ -71,7 +97,15 @@ def validate_algorithm(data, root):
             for i, answer in enumerate(answers, start=1):
                 if not answer.get("label"):
                     errors.append(f"{where}: la risposta {i} non ha 'label'")
+                for field in ("gives", "expire"):
+                    if field in answer:
+                        errors.extend(validate_tags(answer[field], known, f"{where}, risposta {i}", field))
                 targets.append(answer.get("next"))
+            if "only_if_any" in node:
+                errors.extend(validate_tags(node["only_if_any"], known, where, "only_if_any"))
+                if "skip_to" not in node:
+                    errors.append(f"{where}: 'only_if_any' richiede 'skip_to'")
+                targets.append(node.get("skip_to"))
         elif kind == "recommendation":
             if not node.get("title"):
                 errors.append(f"{where}: manca 'title'")
@@ -86,6 +120,20 @@ def validate_algorithm(data, root):
                     errors.append(f"{where}: l'opzione {i} ha uno stato AIFA non valido: {option.get('aifa')!r}")
                 if "regimen" in option:
                     errors.extend(validate_regimen(option["regimen"], f"{where}, opzione {i}"))
+                if "gives" in option:
+                    errors.extend(validate_tags(option["gives"], known, f"{where}, opzione {i}", "gives"))
+                for field in ("requires", "excludes"):
+                    if field in option:
+                        errors.extend(validate_rules(option[field], known, f"{where}, opzione {i}", field))
+                if "next" in option:
+                    if not node.get("select"):
+                        errors.append(f"{where}: l'opzione {i} ha 'next' ma il nodo non ha 'select'")
+                    onext = option["next"] or {}
+                    if not onext.get("label"):
+                        errors.append(f"{where}: il 'next' dell'opzione {i} non ha 'label'")
+                    targets.append(onext.get("node"))
+                elif node.get("select") and "next" not in node:
+                    errors.append(f"{where}: l'opzione {i} non ha seguito (serve 'next' sull'opzione o sul nodo)")
             if "next" in node:
                 nxt = node["next"] or {}
                 if not nxt.get("label"):
