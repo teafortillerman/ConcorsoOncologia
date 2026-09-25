@@ -1,0 +1,259 @@
+{
+  "id": "epatocarcinoma",
+  "title": "Epatocarcinoma",
+  "theme": "Gastrointestinali",
+  "scheda": "Schede/Gastrointestinali/Epatocarcinoma.md",
+  "start": "setting",
+  "nodes": {
+    "setting": {
+      "type": "question",
+      "text": "Qual è lo stadio BCLC?",
+      "short": "BCLC",
+      "info": "Il BCLC integra stadio, funzione epatica (Child-Pugh) e PS. La discussione in MDT riduce la mortalità (HR 0,55).",
+      "answers": [
+        { "label": "BCLC 0-A (precoce)", "next": "hcc_precoce" },
+        { "label": "BCLC B (intermedio)", "next": "hcc_intermedio" },
+        { "label": "BCLC C (avanzato)", "next": "hcc_sys" },
+        { "label": "BCLC D (terminale)", "next": "hcc_bsc" }
+      ]
+    },
+    "hcc_precoce": {
+      "type": "recommendation",
+      "title": "Trattamento curativo",
+      "options": [
+        {
+          "name": "Resezione epatica",
+          "aifa": "standard",
+          "key": "HCC singolo >2 cm, Child-Pugh A: OS a 5 anni 71% vs 60% con RFA. Anche multinodulare (2-3 noduli) o MVI intraepatica in pazienti selezionati."
+        },
+        {
+          "name": "Ablazione (RFA/MWA)",
+          "aifa": "standard",
+          "key": "Tumori singoli ≤2 cm: risultati equivalenti alla resezione con meno morbidità."
+        },
+        {
+          "name": "Trapianto di fegato",
+          "aifa": "standard",
+          "key": "Entro i criteri di Milano (singolo ≤5 cm o ≤3 noduli ≤3 cm): OS a 5 anni 70%. Criteri estesi (UCSF, up-to-seven) accettabili."
+        },
+        {
+          "name": "SBRT",
+          "aifa": "standard",
+          "key": "Se non candidabile a resezione o ablazione: PFS a 5 anni migliore della TACE (RR 2,00)."
+        }
+      ],
+      "note": "Trapianto di salvataggio solo in casi selezionati: 1/3 dei recidivati resta eleggibile, mortalità operatoria doppia.",
+      "next": { "label": "Alla progressione non trattabile localmente → terapia sistemica", "node": "hcc_sys" }
+    },
+    "hcc_intermedio": {
+      "type": "recommendation",
+      "title": "Terapia locoregionale",
+      "options": [
+        {
+          "name": "TACE",
+          "aifa": "standard",
+          "key": "Standard nel BCLC B; terapia ponte al trapianto."
+        },
+        {
+          "name": "TARE (radioembolizzazione Y-90)",
+          "aifa": "standard",
+          "key": "Tumori singoli ≤8 cm, soprattutto in attesa di trapianto: TTP HR 0,39, OS 30,2 vs 15,6 mesi (TRACE)."
+        },
+        {
+          "name": "Resezione se 2-3 noduli e buona funzione epatica",
+          "aifa": "standard",
+          "key": "OS a 5 anni 51-56% vs 18-31% con TACE."
+        },
+        {
+          "name": "Downstaging → trapianto",
+          "aifa": "standard",
+          "key": "\"Test del tempo\": trapianto solo se risposta stabile ≥3 mesi (XXL, HR 0,32 a 5 anni)."
+        }
+      ],
+      "next": { "label": "Se non più trattabile localmente → terapia sistemica", "node": "hcc_sys" }
+    },
+    "hcc_sys": {
+      "type": "question",
+      "text": "Quale immunoterapia è candidabile? (Child-Pugh A, PS 0-1)",
+      "short": "Candidabilità",
+      "info": "Screening endoscopico delle varici obbligatorio prima di atezolizumab-bevacizumab. Vp4 inclusa in IMbrave150, esclusa da HIMALAYA e CheckMate-9DW. Chemioterapia citotossica mai raccomandata.",
+      "answers": [
+        { "label": "IO possibile, varici trattate / basso rischio emorragico", "next": "hcc_1l_atezobev" },
+        { "label": "Controindicazione al bevacizumab (rischio emorragico)", "next": "hcc_1l_stride" },
+        { "label": "Controindicazione all'immunoterapia", "next": "hcc_1l_tki" }
+      ]
+    },
+    "hcc_1l_atezobev": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "Atezolizumab + bevacizumab",
+          "aifa": "reimbursed",
+          "key": "Primo regime a superare sorafenib; dati anche nella Vp4. Rimborsato da giugno 2022.",
+          "regimen": {
+            "trial": "IMbrave150",
+            "endpoint": "OS 19,2 vs 13,4 mesi, HR 0,66",
+            "rows": [
+              ["Atezolizumab", "1200 mg EV ogni 3 settimane"],
+              ["Bevacizumab", "15 mg/kg EV ogni 3 settimane"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Durvalumab + tremelimumab (STRIDE)",
+          "aifa": "reimbursed",
+          "key": "OS a 5 anni 19,6% vs 9,4%; non richiede endoscopia. Rimborsato da febbraio 2024.",
+          "regimen": {
+            "trial": "HIMALAYA",
+            "endpoint": "OS 16,4 vs 13,8 mesi, HR 0,78",
+            "rows": [
+              ["Tremelimumab", "300 mg EV dose singola al 1° ciclo"],
+              ["Durvalumab", "1500 mg EV ogni 4 settimane"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Nivolumab + ipilimumab",
+          "aifa": "not_reimbursed",
+          "key": "Nessun vantaggio in PFS, curve che si incrociano a ~12 mesi; non rimborsato (Determina 530/2026).",
+          "regimen": {
+            "trial": "CheckMate-9DW",
+            "endpoint": "OS 23,7 vs 20,6 mesi, HR 0,79",
+            "rows": [
+              ["Induzione", "nivolumab 1 mg/kg + ipilimumab 3 mg/kg EV ogni 3 settimane ×4"],
+              ["Mantenimento", "nivolumab 480 mg EV ogni 4 settimane"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        }
+      ],
+      "note": "Camrelizumab + rivoceranib (CARES-310, OS 23,8 mesi) non è approvato. Triplette IO negative (IMbrave152, TRIPLET-HCC).",
+      "next": { "label": "Alla progressione → 2ª linea", "node": "hcc_2l" }
+    },
+    "hcc_1l_stride": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "Durvalumab + tremelimumab (STRIDE)",
+          "aifa": "reimbursed",
+          "key": "Opzione preferita se il bevacizumab è controindicato; Vp4 esclusa dallo studio.",
+          "regimen": {
+            "trial": "HIMALAYA",
+            "endpoint": "OS 16,4 vs 13,8 mesi, HR 0,78",
+            "rows": [
+              ["Tremelimumab", "300 mg EV dose singola al 1° ciclo"],
+              ["Durvalumab", "1500 mg EV ogni 4 settimane"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        }
+      ],
+      "next": { "label": "Alla progressione → 2ª linea", "node": "hcc_2l" }
+    },
+    "hcc_1l_tki": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "Lenvatinib",
+          "aifa": "reimbursed",
+          "key": "Preferito a sorafenib: PFS e ORR superiori.",
+          "regimen": {
+            "trial": "REFLECT",
+            "endpoint": "OS non inferiore a sorafenib, HR 0,92",
+            "rows": [
+              ["Lenvatinib", "12 mg/die per os se ≥60 kg, 8 mg/die se <60 kg"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "Sorafenib",
+          "aifa": "reimbursed",
+          "key": "Standard storico (SHARP), oggi ruolo residuale.",
+          "regimen": {
+            "rows": [
+              ["Sorafenib", "400 mg per os ×2/die, in continuo"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ],
+      "next": { "label": "Alla progressione → 2ª linea", "node": "hcc_2l" }
+    },
+    "hcc_2l": {
+      "type": "recommendation",
+      "title": "2ª linea",
+      "options": [
+        {
+          "name": "Cabozantinib",
+          "aifa": "reimbursed",
+          "key": "Dopo 1-2 linee sistemiche; rimborsato dal 2020.",
+          "regimen": {
+            "trial": "CELESTIAL",
+            "endpoint": "OS 10,2 vs 8,0 mesi, HR 0,76",
+            "rows": [
+              ["Cabozantinib", "60 mg/die per os, in continuo"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Regorafenib",
+          "aifa": "reimbursed",
+          "key": "Solo dopo sorafenib tollerato (non dopo interruzione per tossicità).",
+          "regimen": {
+            "trial": "RESORCE",
+            "endpoint": "OS 10,6 vs 7,8 mesi, HR 0,63",
+            "rows": [
+              ["Regorafenib", "160 mg/die per os, giorni 1-21 ogni 28 giorni"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "Lenvatinib o sorafenib dopo immunoterapia",
+          "aifa": "reimbursed",
+          "key": "Opzione più usata dopo IO in 1ª linea (dati registrativi scarsi).",
+          "regimen": {
+            "trial": "REFLECT",
+            "endpoint": "OS non inferiore a sorafenib, HR 0,92",
+            "rows": [
+              ["Lenvatinib", "12 mg/die per os se ≥60 kg, 8 mg/die se <60 kg"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "Ramucirumab se AFP ≥400 ng/mL",
+          "aifa": "not_reimbursed",
+          "key": "Unico farmaco selezionato da biomarcatore; escluso dal SSN (Determina 11/05/2021).",
+          "regimen": {
+            "trial": "REACH-2",
+            "endpoint": "OS 8,5 vs 7,3 mesi, HR 0,71",
+            "rows": [
+              ["Ramucirumab", "8 mg/kg EV ogni 2 settimane"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        }
+      ],
+      "note": "Pembrolizumab in monoterapia: approvato solo FDA, mai autorizzato EMA."
+    },
+    "hcc_bsc": {
+      "type": "recommendation",
+      "title": "Terapia di supporto",
+      "options": [
+        {
+          "name": "Best supportive care",
+          "aifa": "standard",
+          "key": "BCLC D: funzione epatica scompensata o PS scaduto. Valutare il trapianto se candidabile per la sola epatopatia."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,348 @@
+{
+  "id": "urotelio",
+  "title": "Urotelio",
+  "theme": "Urologici",
+  "scheda": "Schede/Urologici/Urotelio.md",
+  "start": "setting",
+  "nodes": {
+    "setting": {
+      "type": "question",
+      "text": "Qual è il setting della malattia?",
+      "short": "Setting",
+      "info": "Re-TUR entro 2-6 settimane se resezione incompleta, assenza di tonaca muscolare, T1 e/o alto grado.",
+      "answers": [
+        { "label": "Non muscolo-invasivo (NMIBC)", "next": "nmibc_rischio" },
+        { "label": "Muscolo-invasivo (MIBC)", "next": "mibc_cis" },
+        { "label": "Alta via escretrice (UTUC)", "next": "utuc" },
+        { "label": "Avanzato / metastatico", "next": "m1_1l" }
+      ]
+    },
+    "nmibc_rischio": {
+      "type": "question",
+      "text": "Qual è il rischio EAU/EORTC?",
+      "short": "Rischio",
+      "answers": [
+        { "label": "Basso", "next": "nmibc_basso" },
+        { "label": "Intermedio", "next": "nmibc_intermedio" },
+        { "label": "Alto / molto alto (incluso CIS)", "next": "nmibc_alto" }
+      ]
+    },
+    "nmibc_basso": {
+      "type": "recommendation",
+      "title": "Terapia endovescicale",
+      "options": [
+        {
+          "name": "TURBT + instillazione singola di chemioterapia",
+          "aifa": "standard",
+          "key": "Entro 24 ore (idealmente 2): recidive -39%.",
+          "regimen": {
+            "rows": [
+              ["Mitomicina C", "40 mg endovescicale, instillazione singola"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ]
+    },
+    "nmibc_intermedio": {
+      "type": "recommendation",
+      "title": "Terapia endovescicale",
+      "options": [
+        {
+          "name": "BCG con mantenimento di 1 anno",
+          "aifa": "standard",
+          "key": "Nel rischio intermedio 1 anno equivale a 3 (EORTC 30962).",
+          "regimen": {
+            "rows": [
+              ["BCG", "induzione 6 instillazioni settimanali, poi mantenimento per 1 anno"]
+            ],
+            "sources": [{"type": "scheda"}]
+          }
+        },
+        {
+          "name": "Chemioterapia endovescicale",
+          "aifa": "standard",
+          "key": "Alternativa (mitomicina C, gemcitabina)."
+        }
+      ]
+    },
+    "nmibc_alto": {
+      "type": "recommendation",
+      "title": "Terapia endovescicale",
+      "options": [
+        {
+          "name": "BCG con mantenimento di 3 anni",
+          "aifa": "standard",
+          "key": "Unico trattamento che riduce anche la progressione (RR 0,39). Nel CIS: CR 72-93%.",
+          "regimen": {
+            "rows": [
+              ["BCG", "induzione 6 instillazioni settimanali, poi mantenimento fino a 3 anni"]
+            ],
+            "sources": [{"type": "scheda"}]
+          }
+        },
+        {
+          "name": "Cistectomia radicale precoce nel molto alto rischio",
+          "aifa": "standard",
+          "key": "Condizionata a favore; CSS 80% se precoce."
+        }
+      ],
+      "next": { "label": "Se BCG-unresponsive", "node": "nmibc_bcg_fail" }
+    },
+    "nmibc_bcg_fail": {
+      "type": "recommendation",
+      "title": "BCG-unresponsive",
+      "options": [
+        {
+          "name": "Cistectomia radicale",
+          "aifa": "standard",
+          "key": "BCG-unresponsive: T1 HG a 3 mesi, Ta HG/CIS persistente a 6 mesi, recidiva entro 6-12 mesi."
+        },
+        {
+          "name": "Secondo ciclo di BCG (Ta G3/CIS residuo a 3 mesi)",
+          "aifa": "standard",
+          "key": "Risposta completa in oltre il 50%."
+        }
+      ]
+    },
+    "mibc_cis": {
+      "type": "question",
+      "text": "È eleggibile al cisplatino?",
+      "short": "Cisplatino",
+      "info": "Ineleggibilità (Galsky): ECOG PS2, clearance creatinina 30-60 ml/min, neuropatia o ipoacusia ≥G2, NYHA ≥III.",
+      "answers": [
+        { "label": "Cisplatino-eleggibile", "next": "mibc_elig" },
+        { "label": "Cisplatino-ineleggibile", "next": "mibc_inel" },
+        { "label": "Preferisce preservare la vescica", "next": "mibc_tmt" }
+      ]
+    },
+    "mibc_elig": {
+      "type": "recommendation",
+      "title": "Terapia perioperatoria",
+      "options": [
+        {
+          "name": "Durvalumab + gemcitabina-cisplatino perioperatorio",
+          "aifa": "reimbursed",
+          "key": "Nuovo standard; OS HR 0,75 già all'analisi primaria. Rimborsato dal 30/06/2026.",
+          "regimen": {
+            "trial": "NIAGARA",
+            "rows": [
+              ["Neoadiuvante", "durvalumab 1500 mg EV + gemcitabina-cisplatino ogni 3 settimane ×4"],
+              ["Adiuvante", "durvalumab 1500 mg EV ogni 4 settimane ×8"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Chemioterapia neoadiuvante con cisplatino → cistectomia",
+          "aifa": "standard",
+          "key": "Unica raccomandazione forte: OS HR 0,82 (+8% a 5 anni), beneficio nei cT3-T4.",
+          "regimen": {
+            "rows": [
+              ["Cisplatino", "70 mg/m² EV giorno 1"],
+              ["Gemcitabina", "1000 mg/m² EV giorni 1 e 8"]
+            ],
+            "note": "Ogni 21 giorni ×4 cicli; in alternativa ddMVAC (VESPER).",
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "Nivolumab adiuvante se PD-L1 ≥1%",
+          "aifa": "reimbursed",
+          "key": "ypT2-4a/ypN+ o pT3/pT4a/pN+; OS HR 0,63 nei PD-L1 ≥1%. Rimborsato (Determina 521/2026).",
+          "regimen": {
+            "trial": "CheckMate 274",
+            "rows": [
+              ["Nivolumab", "240 mg EV ogni 2 settimane o 480 mg ogni 4 settimane"]
+            ],
+            "note": "Durata 1 anno.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        }
+      ],
+      "note": "IMvigor011: adiuvante guidato dal ctDNA, promettente (ctDNA-negativi persistenti con prognosi eccellente senza terapia).",
+      "next": { "label": "Alla recidiva → malattia avanzata", "node": "m1_1l" }
+    },
+    "mibc_inel": {
+      "type": "recommendation",
+      "title": "Terapia perioperatoria",
+      "options": [
+        {
+          "name": "Enfortumab vedotin + pembrolizumab perioperatorio",
+          "aifa": "not_reimbursed",
+          "key": "EFS HR 0,40, OS HR 0,50, pCR 57,1%; approvato UE 24/06/2026 solo nei cisplatino-ineleggibili, non ancora rimborsato.",
+          "regimen": {
+            "trial": "EV-303 / KEYNOTE-905",
+            "rows": [
+              ["Neoadiuvante", "enfortumab vedotin 1,25 mg/kg giorni 1 e 8 + pembrolizumab 200 mg giorno 1, ogni 3 settimane ×3"],
+              ["Adiuvante", "stesso schema fino a ~1 anno"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Cistectomia radicale",
+          "aifa": "standard",
+          "key": "Standard of care; poi nivolumab adiuvante se PD-L1 ≥1%."
+        }
+      ],
+      "next": { "label": "Alla recidiva → malattia avanzata", "node": "m1_1l" }
+    },
+    "mibc_tmt": {
+      "type": "recommendation",
+      "title": "Bladder-sparing",
+      "options": [
+        {
+          "name": "Trattamento trimodale",
+          "aifa": "standard",
+          "key": "TURBT massimale + RT + chemioterapia concomitante: MFS sovrapponibile alla cistectomia (74% vs 74%), vescica preservata nell'80% a 5 anni.",
+          "regimen": {
+            "rows": [
+              ["Radioterapia", "concomitante"],
+              ["+ Chemioterapia", "cisplatino, 5-FU + mitomicina C, o gemcitabina"]
+            ],
+            "sources": [{"type": "scheda"}]
+          }
+        }
+      ],
+      "next": { "label": "Alla recidiva → malattia avanzata", "node": "m1_1l" }
+    },
+    "utuc": {
+      "type": "recommendation",
+      "title": "Trattamento",
+      "options": [
+        {
+          "name": "Nefroureterectomia radicale con cuffia vescicale (alto rischio)",
+          "aifa": "standard",
+          "key": "Linfoadenectomia (≥8 linfonodi) nei T2-T4."
+        },
+        {
+          "name": "Chirurgia conservativa (basso rischio)",
+          "aifa": "standard",
+          "key": "Resezione segmentaria o ureteroscopia con ablazione."
+        },
+        {
+          "name": "Chemioterapia adiuvante a base di platino",
+          "aifa": "standard",
+          "key": "Unico fase III: DFS HR 0,45-0,51, OS HR 0,72 non significativa.",
+          "regimen": {
+            "trial": "POUT",
+            "rows": [
+              ["Cisplatino (o carboplatino) + gemcitabina", "4 cicli ogni 21 giorni"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ],
+      "next": { "label": "Alla recidiva → malattia avanzata", "node": "m1_1l" }
+    },
+    "m1_1l": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "Enfortumab vedotin + pembrolizumab",
+          "aifa": "reimbursed",
+          "key": "Standard indipendentemente dall'eleggibilità al platino; rimborsato dal 21/01/2026.",
+          "regimen": {
+            "trial": "EV-302",
+            "endpoint": "PFS 12,5 vs 6,3 mesi (HR 0,45); OS 31,5 vs 16,1 mesi (HR 0,47)",
+            "rows": [
+              ["Enfortumab vedotin", "1,25 mg/kg EV giorni 1 e 8"],
+              ["Pembrolizumab", "200 mg EV giorno 1 (fino a 35 cicli)"]
+            ],
+            "note": "Ogni 3 settimane; enfortumab fino a progressione.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Nivolumab + gemcitabina-cisplatino (cisplatino-eleggibili)",
+          "aifa": "reimbursed",
+          "key": "Se EV-pembrolizumab non disponibile.",
+          "regimen": {
+            "trial": "CheckMate 901",
+            "endpoint": "OS 21,7 vs 18,9 mesi, HR 0,78",
+            "rows": [
+              ["Nivolumab", "360 mg EV + gemcitabina-cisplatino ogni 3 settimane ×4-6"],
+              ["Mantenimento", "nivolumab 480 mg ogni 4 settimane, fino a 2 anni"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Chemioterapia a base di platino → avelumab di mantenimento",
+          "aifa": "reimbursed",
+          "key": "GC/ddMVAC (o carboplatino-gemcitabina se cisplatino-ineleggibile) per 4-6 cicli, poi avelumab se non progredito.",
+          "regimen": {
+            "trial": "JAVELIN Bladder 100",
+            "endpoint": "OS HR 0,69",
+            "rows": [
+              ["Chemioterapia", "gemcitabina + cisplatino (o carboplatino AUC 4,5-5) ×4-6 cicli"],
+              ["Avelumab", "800 mg EV ogni 2 settimane, da 4-10 settimane dopo la chemio"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        }
+      ],
+      "next": { "label": "Alla progressione → linee successive", "node": "m1_2l" }
+    },
+    "m1_2l": {
+      "type": "recommendation",
+      "title": "Linee successive",
+      "options": [
+        {
+          "name": "Enfortumab vedotin (dopo platino + IO)",
+          "aifa": "reimbursed",
+          "key": "Se non già usato in 1ª linea; rimborsato dal 18/09/2023.",
+          "regimen": {
+            "trial": "EV-301",
+            "endpoint": "OS HR 0,70",
+            "rows": [
+              ["Enfortumab vedotin", "1,25 mg/kg EV giorni 1, 8 e 15 ogni 28 giorni"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Erdafitinib (FGFR3 alterato)",
+          "aifa": "reimbursed",
+          "key": "Dopo almeno una linea con anti-PD-(L)1; rimborsato da ottobre 2025.",
+          "regimen": {
+            "trial": "THOR",
+            "endpoint": "OS HR 0,64",
+            "rows": [
+              ["Erdafitinib", "8 mg/die per os (fino a 9 mg in base alla fosfatemia)"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Pembrolizumab (dopo platino, se IO-naive)",
+          "aifa": "reimbursed",
+          "key": "Atezolizumab in 2ª linea negativo (IMvigor211).",
+          "regimen": {
+            "trial": "KEYNOTE-045",
+            "endpoint": "OS 10,3 vs 7,3 mesi, HR 0,70",
+            "rows": [
+              ["Pembrolizumab", "200 mg EV ogni 3 settimane"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "Chemioterapia a base di platino (dopo EV-pembrolizumab)",
+          "aifa": "standard",
+          "key": "Gemcitabina + cisplatino o carboplatino.",
+          "regimen": {
+            "rows": [
+              ["Cisplatino", "70 mg/m² EV giorno 1"],
+              ["Gemcitabina", "1000 mg/m² EV giorni 1 e 8"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ],
+      "note": "Sacituzumab govitecan: indicazione uroteliale ritirata (TROPiCS-04 negativo), mai richiesta in UE."
+    }
+  }
+}

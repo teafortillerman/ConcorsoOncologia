@@ -1,0 +1,425 @@
+{
+  "id": "esofago",
+  "title": "Esofago",
+  "theme": "Gastrointestinali",
+  "scheda": "Schede/Gastrointestinali/Esofago.md",
+  "start": "setting",
+  "nodes": {
+    "setting": {
+      "type": "question",
+      "text": "Qual è il setting della malattia?",
+      "short": "Setting",
+      "info": "Supporto nutrizionale (anche PEG) parte integrante del percorso: calo ponderale severo in >50% dei pazienti prima della chirurgia.",
+      "answers": [
+        { "label": "Localizzato / localmente avanzato", "next": "loc_stadio" },
+        { "label": "Avanzato / metastatico", "next": "adv_istologia" }
+      ]
+    },
+    "loc_stadio": {
+      "type": "question",
+      "text": "Qual è lo stadio?",
+      "short": "Stadio",
+      "answers": [
+        { "label": "cT1 N0 superficiale", "next": "loc_endo" },
+        { "label": "Oltre cT1 N0, resecabile", "next": "loc_istologia" }
+      ]
+    },
+    "loc_endo": {
+      "type": "recommendation",
+      "title": "Trattamento locale",
+      "options": [
+        {
+          "name": "Resezione endoscopica (EMR o ESD)",
+          "aifa": "standard",
+          "key": "Per displasia di alto grado e T1 superficiali; le lesioni profonde a rischio linfonodale restano una controindicazione relativa."
+        }
+      ]
+    },
+    "loc_istologia": {
+      "type": "question",
+      "text": "Qual è l'istologia?",
+      "short": "Istologia",
+      "info": "Esofagectomia Ivor Lewis o McKeown con linfoadenectomia a due campi; mini-invasiva o robotica nei centri esperti.",
+      "answers": [
+        { "label": "Carcinoma squamoso (SCC)", "next": "loc_scc" },
+        { "label": "Adenocarcinoma / giunzione (AC/GEJ)", "next": "loc_ac" }
+      ]
+    },
+    "loc_scc": {
+      "type": "recommendation",
+      "title": "Terapia neoadiuvante",
+      "options": [
+        {
+          "name": "CRT neoadiuvante → chirurgia",
+          "aifa": "standard",
+          "key": "Standard nello SCC.",
+          "regimen": {
+            "trial": "CROSS",
+            "endpoint": "OS 49,4 vs 24,0 mesi, HR 0,657",
+            "rows": [
+              ["Carboplatino", "AUC 2 EV settimanale ×5"],
+              ["Paclitaxel", "50 mg/m² EV settimanale ×5"],
+              ["Radioterapia", "41,4 Gy in 23 frazioni (5 settimane)"]
+            ],
+            "note": "Chirurgia a 6-8 settimane dalla fine della CRT.",
+            "sources": [{"type": "pubmed", "label": "CROSS", "doi": "10.1056/NEJMoa1112088"}, {"type": "scheda"}]
+          }
+        },
+        {
+          "name": "CRT definitiva + sorveglianza, chirurgia di salvataggio",
+          "aifa": "standard",
+          "key": "Alternativa (es. SCC cervicale o paziente non operabile).",
+          "regimen": {
+            "rows": [
+              ["Radioterapia", "50-50,4 Gy in 25-28 frazioni"],
+              ["+ chemioterapia concomitante", "carboplatino-paclitaxel settimanali o cisplatino-5-FU"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ],
+      "note": "SANO: sorveglianza attiva dopo risposta clinica completa non inferiore in OS a 2 anni ma con DFS peggiore — solo in studio o casi selezionati.",
+      "next": { "label": "Dopo la chirurgia → terapia adiuvante", "node": "loc_adj" }
+    },
+    "loc_ac": {
+      "type": "recommendation",
+      "title": "Terapia perioperatoria",
+      "options": [
+        {
+          "name": "FLOT perioperatorio",
+          "aifa": "standard",
+          "key": "Standard preferito nell'adenocarcinoma dopo ESOPEC; mortalità a 90 giorni 3,1% vs 5,6% con CROSS.",
+          "regimen": {
+            "trial": "ESOPEC",
+            "endpoint": "OS 66 vs 37 mesi (HR 0,70); OS a 5 anni 50,6% vs 38,7%",
+            "rows": [
+              ["Docetaxel", "50 mg/m² EV giorno 1"],
+              ["Oxaliplatino", "85 mg/m² EV giorno 1"],
+              ["Leucovorin", "200 mg/m² EV giorno 1"],
+              ["5-fluorouracile", "2600 mg/m² in infusione continua di 24 ore, giorno 1"]
+            ],
+            "note": "Ogni 14 giorni: 4 cicli prima e 4 dopo la chirurgia. Test DPYD prima delle fluoropirimidine.",
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "CRT neoadiuvante (CROSS) → chirurgia",
+          "aifa": "standard",
+          "key": "Seconda scelta nell'AC, se il paziente non è candidabile a FLOT.",
+          "regimen": {
+            "trial": "CROSS",
+            "endpoint": "OS 49,4 vs 24,0 mesi, HR 0,657",
+            "rows": [
+              ["Carboplatino", "AUC 2 EV settimanale ×5"],
+              ["Paclitaxel", "50 mg/m² EV settimanale ×5"],
+              ["Radioterapia", "41,4 Gy in 23 frazioni (5 settimane)"]
+            ],
+            "note": "Chirurgia a 6-8 settimane dalla fine della CRT.",
+            "sources": [{"type": "pubmed", "label": "CROSS", "doi": "10.1056/NEJMoa1112088"}, {"type": "scheda"}]
+          }
+        }
+      ],
+      "note": "Neo-AEGIS e TOPGEAR non hanno cambiato lo standard. Nessuna terapia adiuvante aggiuntiva raccomandata dopo FLOT completo.",
+      "next": { "label": "Dopo CROSS con residuo → terapia adiuvante", "node": "loc_adj" }
+    },
+    "loc_adj": {
+      "type": "recommendation",
+      "title": "Terapia adiuvante",
+      "options": [
+        {
+          "name": "Nivolumab adiuvante 1 anno se malattia residua",
+          "aifa": "not_reimbursed",
+          "key": "DFS 22,4 vs 11,0 mesi (HR 0,69), OS non significativa (HR 0,85); esclusa esplicitamente dal SSN (Determina AIFA 31/07/2023).",
+          "regimen": {
+            "trial": "CheckMate 577",
+            "rows": [
+              ["Nivolumab", "240 mg EV ogni 2 settimane per 16 settimane, poi 480 mg ogni 4 settimane"]
+            ],
+            "note": "Durata massima 1 anno.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Sorveglianza",
+          "aifa": "standard",
+          "key": "Opzione praticabile in Italia a carico del SSN."
+        }
+      ],
+      "next": { "label": "Alla recidiva → malattia avanzata", "node": "adv_istologia" }
+    },
+    "adv_istologia": {
+      "type": "question",
+      "text": "Qual è l'istologia?",
+      "short": "Istologia",
+      "info": "Il PD-L1 va letto con lo score del farmaco: CPS (pembrolizumab), TPS (nivolumab), TAP (tislelizumab).",
+      "answers": [
+        { "label": "Carcinoma squamoso (SCC)", "next": "adv_scc" },
+        { "label": "Adenocarcinoma / giunzione (AC/GEJ)", "next": "adv_ac_her2" }
+      ]
+    },
+    "adv_scc": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "Pembrolizumab + cisplatino-5-FU (CPS ≥10)",
+          "aifa": "reimbursed",
+          "key": "Rimborsato da luglio 2023.",
+          "regimen": {
+            "trial": "KEYNOTE-590",
+            "endpoint": "OS nei CPS ≥10: HR 0,57",
+            "rows": [
+              ["Pembrolizumab", "200 mg EV ogni 3 settimane (o 400 mg ogni 6), fino a 35 cicli"],
+              ["Cisplatino", "80 mg/m² EV giorno 1"],
+              ["5-fluorouracile", "800 mg/m²/die in infusione continua, giorni 1-5"]
+            ],
+            "note": "Chemioterapia ogni 3 settimane per massimo 6 cicli.",
+            "sources": [{"type": "rimborsabilita"}, {"type": "standard"}]
+          }
+        },
+        {
+          "name": "Nivolumab + fluoropirimidina-platino (TPS ≥1%)",
+          "aifa": "reimbursed",
+          "key": "Rimborsato da agosto 2023 con registro.",
+          "regimen": {
+            "trial": "CheckMate 648",
+            "endpoint": "OS nei TPS ≥1%: HR 0,54",
+            "rows": [
+              ["Nivolumab", "240 mg EV ogni 2 settimane (poi 240 mg q2w o 480 mg q4w)"],
+              ["+ fluoropirimidina e platino", "4 cicli"]
+            ],
+            "note": "Fino a progressione o massimo 2 anni.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Tislelizumab + chemioterapia (TAP ≥5%)",
+          "aifa": "reimbursed",
+          "key": "Rimborsato solo dal 2026.",
+          "regimen": {
+            "trial": "RATIONALE-306",
+            "endpoint": "OS 17,2 vs 10,6 mesi, HR 0,66",
+            "rows": [
+              ["Tislelizumab", "200 mg EV ogni 3 settimane"],
+              ["+ chemioterapia a base di platino", "induzione, poi mantenimento con tislelizumab"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Nivolumab + ipilimumab",
+          "aifa": "not_reimbursed",
+          "key": "Braccio di CheckMate 648 escluso dal SSN (Determina 31/07/2023).",
+          "regimen": {
+            "trial": "CheckMate 648",
+            "rows": [
+              ["Nivolumab", "3 mg/kg EV ogni 2 settimane"],
+              ["Ipilimumab", "1 mg/kg EV ogni 6 settimane"]
+            ],
+            "note": "Fino a progressione o massimo 2 anni.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        }
+      ],
+      "note": "Intensificare con un terzo farmaco non funziona: LEAP-014 e SKYSCRAPER-07 negativi.",
+      "next": { "label": "Alla progressione → 2ª linea", "node": "adv_scc_2l" }
+    },
+    "adv_scc_2l": {
+      "type": "recommendation",
+      "title": "2ª linea",
+      "options": [
+        {
+          "name": "Tislelizumab in monoterapia (se IO-naive)",
+          "aifa": "reimbursed",
+          "key": "Nel TAP ≥10% HR 0,54; stessa rimborsabilità 2026 della 1ª linea.",
+          "regimen": {
+            "trial": "RATIONALE-302",
+            "endpoint": "OS HR 0,70",
+            "rows": [
+              ["Tislelizumab", "200 mg EV ogni 3 settimane"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Nivolumab in monoterapia (se IO-naive)",
+          "aifa": "unknown",
+          "key": "Dopo fluoropirimidina-platino.",
+          "regimen": {
+            "trial": "ATTRACTION-3",
+            "endpoint": "OS HR 0,77",
+            "rows": [
+              ["Nivolumab", "240 mg EV ogni 2 settimane"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "Taxano",
+          "aifa": "standard",
+          "key": "Dopo chemio-immunoterapia in 1ª linea.",
+          "regimen": {
+            "rows": [
+              ["Paclitaxel", "80 mg/m² EV settimanale"],
+              ["oppure Docetaxel", "75 mg/m² EV ogni 3 settimane"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ]
+    },
+    "adv_ac_her2": {
+      "type": "question",
+      "text": "Qual è lo stato di HER2?",
+      "short": "HER2",
+      "info": "Nella malattia avanzata l'adenocarcinoma esofageo/GEJ segue i paradigmi del carcinoma gastrico.",
+      "answers": [
+        { "label": "HER2 positivo", "next": "adv_ac_pos" },
+        { "label": "HER2 negativo", "next": "adv_ac_neg" }
+      ]
+    },
+    "adv_ac_pos": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "Pembrolizumab + trastuzumab + chemioterapia (CPS ≥1)",
+          "aifa": "reimbursed",
+          "key": "Nella scheda Esofago risulta rimborsato dal 20/02/2025 con registro.",
+          "regimen": {
+            "trial": "KEYNOTE-811",
+            "endpoint": "OS 20,3 vs 14,3 mesi, HR 0,73",
+            "rows": [
+              ["Pembrolizumab", "200 mg EV ogni 3 settimane (fino a 35 cicli)"],
+              ["Trastuzumab", "8 mg/kg EV carico, poi 6 mg/kg ogni 3 settimane"],
+              ["+ fluoropirimidina e platino", "CAPOX o cisplatino-5-FU ×6 cicli"]
+            ],
+            "note": "Poi mantenimento con pembrolizumab + trastuzumab.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        }
+      ],
+      "next": { "label": "Alla progressione → 2ª linea", "node": "adv_ac_pos_2l" }
+    },
+    "adv_ac_pos_2l": {
+      "type": "recommendation",
+      "title": "2ª linea",
+      "options": [
+        {
+          "name": "Trastuzumab deruxtecan",
+          "aifa": "reimbursed",
+          "key": "Ha sostituito ramucirumab + paclitaxel dopo trastuzumab.",
+          "regimen": {
+            "trial": "DESTINY-Gastric04",
+            "endpoint": "OS 14,7 vs 11,4 mesi, HR 0,70",
+            "rows": [
+              ["Trastuzumab deruxtecan", "6,4 mg/kg EV ogni 3 settimane"]
+            ],
+            "note": "ILD/polmonite nel 13,9% (per lo più G1-2).",
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "Ramucirumab + paclitaxel",
+          "aifa": "reimbursed",
+          "key": "Standard storico.",
+          "regimen": {
+            "trial": "RAINBOW",
+            "endpoint": "OS 9,6 vs 7,4 mesi, HR 0,81",
+            "rows": [
+              ["Ramucirumab", "8 mg/kg EV giorni 1 e 15"],
+              ["Paclitaxel", "80 mg/m² EV giorni 1, 8 e 15"]
+            ],
+            "note": "Ogni 28 giorni.",
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ]
+    },
+    "adv_ac_neg": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "Nivolumab + chemioterapia (CPS ≥5)",
+          "aifa": "reimbursed",
+          "key": "Rimborsato da ottobre 2022.",
+          "regimen": {
+            "trial": "CheckMate 649",
+            "endpoint": "OS 14,4 vs 11,1 mesi, HR 0,71",
+            "rows": [
+              ["Nivolumab", "360 mg EV ogni 3 settimane + CAPOX, oppure 240 mg ogni 2 settimane + FOLFOX"]
+            ],
+            "note": "Fino a progressione o massimo 2 anni.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Pembrolizumab + cisplatino-5-FU (CPS ≥10)",
+          "aifa": "reimbursed",
+          "key": "Indicazione KEYNOTE-590 estesa all'AC della giunzione.",
+          "regimen": {
+            "trial": "KEYNOTE-590",
+            "endpoint": "OS nei CPS ≥10: HR 0,57",
+            "rows": [
+              ["Pembrolizumab", "200 mg EV ogni 3 settimane, fino a 35 cicli"],
+              ["Cisplatino", "80 mg/m² EV giorno 1"],
+              ["5-fluorouracile", "800 mg/m²/die in infusione continua, giorni 1-5"]
+            ],
+            "sources": [{"type": "rimborsabilita"}, {"type": "standard"}]
+          }
+        },
+        {
+          "name": "Zolbetuximab + CAPOX (CLDN18.2 ≥75%)",
+          "aifa": "not_reimbursed",
+          "key": "Classe C(nn) (Determina AIFA 11/03/2026).",
+          "regimen": {
+            "trial": "GLOW",
+            "endpoint": "PFS 8,21 vs 6,80 mesi, HR 0,687 (OS 14,4 vs 12,2 mesi)",
+            "rows": [
+              ["Zolbetuximab", "800 mg/m² EV carico, poi 600 mg/m² ogni 3 settimane"],
+              ["Oxaliplatino", "130 mg/m² EV giorno 1"],
+              ["Capecitabina", "1000 mg/m² per os ×2/die, giorni 1-14"]
+            ],
+            "note": "Nausea e vomito soprattutto al 1° ciclo.",
+            "sources": [{"type": "rimborsabilita"}, {"type": "standard"}]
+          }
+        }
+      ],
+      "next": { "label": "Alla progressione → 2ª linea", "node": "adv_ac_neg_2l" }
+    },
+    "adv_ac_neg_2l": {
+      "type": "recommendation",
+      "title": "2ª linea",
+      "options": [
+        {
+          "name": "Ramucirumab + paclitaxel",
+          "aifa": "reimbursed",
+          "key": "Standard di 2ª linea HER2-negativo.",
+          "regimen": {
+            "trial": "RAINBOW",
+            "endpoint": "OS 9,6 vs 7,4 mesi, HR 0,81",
+            "rows": [
+              ["Ramucirumab", "8 mg/kg EV giorni 1 e 15"],
+              ["Paclitaxel", "80 mg/m² EV giorni 1, 8 e 15"]
+            ],
+            "note": "Ogni 28 giorni.",
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "Taxano o irinotecano",
+          "aifa": "standard",
+          "key": "Se ramucirumab non è indicato.",
+          "regimen": {
+            "rows": [
+              ["Paclitaxel", "80 mg/m² EV settimanale"],
+              ["oppure Docetaxel", "75 mg/m² EV ogni 3 settimane"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ]
+    }
+  }
+}

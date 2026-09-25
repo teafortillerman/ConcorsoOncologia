@@ -118,7 +118,7 @@
 - Pianificare gravidanza con oncologo e specialista della riproduzione, considerando rischio di recidiva, terapie adiuvanti in corso e necessità di follow-up.
 
 
-## Punti ad alta resa per orale
+## Punti chiave
 - Counselling riproduttivo: alla diagnosi e prima di qualunque terapia gonadotossica.
 - Uomo post-pubere: crioconservazione del seme è standard.
 - Donna post-pubere: crioconservazione ovocitaria è standard se disponibili 2-3 settimane.

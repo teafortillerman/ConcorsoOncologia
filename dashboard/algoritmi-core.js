@@ -52,9 +52,92 @@
     });
   }
 
+  // Percorso arricchito per la timeline: ogni passo è una risposta a una domanda
+  // oppure una linea di terapia superata ("next"), con le opzioni che proponeva.
+  function trail(algo, history) {
+    return history.map((step, index) => {
+      const node = algo.nodes[step.nodeId];
+      if (step.choice === "next") {
+        return { index, kind: "line", nodeId: step.nodeId, label: node.title, options: node.options.map(o => o.name) };
+      }
+      return { index, kind: "answer", nodeId: step.nodeId, label: node.short || node.text, value: node.answers[step.choice].label };
+    });
+  }
+
+  // Dove porta un nodo: la prossima domanda oppure la terapia raccomandata.
+  function preview(algo, nodeId) {
+    const node = algo.nodes[nodeId];
+    if (!node) return null;
+    return node.type === "question"
+      ? { kind: "question", label: node.short || node.text }
+      : { kind: "recommendation", label: node.title, options: node.options.map(o => o.name) };
+  }
+
+  // Raccomandazioni raggiungibili da un nodo (visita in ampiezza), ordinate per distanza.
+  function reachable(algo, fromId) {
+    const seen = new Set([fromId]);
+    const queue = [fromId];
+    const out = [];
+    while (queue.length) {
+      const id = queue.shift();
+      const node = algo.nodes[id];
+      if (!node) continue;
+      if (node.type === "recommendation") out.push(id);
+      const targets = node.type === "question" ? node.answers.map(a => a.next) : (node.next ? [node.next.node] : []);
+      for (const t of targets) if (!seen.has(t)) { seen.add(t); queue.push(t); }
+    }
+    return out;
+  }
+
+  // Linee di terapia successive raggruppate per livello: il livello è il numero di
+  // raccomandazioni attraversate, così le alternative dello stesso passo stanno insieme.
+  function upcomingLevels(algo, fromId, exclude) {
+    const best = new Map([[fromId, 1]]);
+    const queue = [fromId];
+    while (queue.length) {
+      const id = queue.shift();
+      const node = algo.nodes[id];
+      if (!node) continue;
+      const level = best.get(id);
+      const nextLevel = node.type === "recommendation" ? level + 1 : level;
+      const targets = node.type === "question" ? node.answers.map(a => a.next) : (node.next ? [node.next.node] : []);
+      for (const t of targets) {
+        if (!best.has(t) || best.get(t) > nextLevel) { best.set(t, nextLevel); queue.push(t); }
+      }
+    }
+    const levels = [];
+    const seen = new Set(exclude);
+    [...best.entries()]
+      .filter(([id]) => algo.nodes[id] && algo.nodes[id].type === "recommendation")
+      .sort((a, b) => a[1] - b[1])
+      .forEach(([id, level]) => {
+        const title = algo.nodes[id].title;
+        if (seen.has(title)) return;
+        seen.add(title);
+        (levels[level - 1] = levels[level - 1] || []).push(title);
+      });
+    return levels.filter(Boolean);
+  }
+
+  // Sequenza delle linee di terapia sul ramo attuale: linee già superate, linea
+  // corrente (se il nodo corrente è una raccomandazione) e passi successivi possibili,
+  // ciascuno come elenco di alternative.
+  function sequence(algo, history) {
+    const done = history
+      .map((step, index) => ({ step, index }))
+      .filter(({ step }) => step.choice === "next")
+      .map(({ step, index }) => ({ index, nodeId: step.nodeId, title: algo.nodes[step.nodeId].title }));
+    const currentId = currentNodeId(algo, history);
+    const node = algo.nodes[currentId];
+    const current = node.type === "recommendation" ? { nodeId: currentId, title: node.title } : null;
+    const from = current ? (node.next && node.next.node) : (done.length ? currentId : null);
+    const upcoming = from ? upcomingLevels(algo, from, current ? [current.title] : []) : [];
+    return { done, current, upcoming };
+  }
+
   function aifaLabel(code) {
     return AIFA_LABELS[code] || AIFA_LABELS.unknown;
   }
 
-  return { currentNodeId, choose, proceed, rewind, pills, aifaLabel };
+  return { currentNodeId, choose, proceed, rewind, pills, trail, preview, reachable, sequence, aifaLabel };
 });

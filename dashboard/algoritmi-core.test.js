@@ -104,3 +104,48 @@ test("Mammella: ogni percorso completo arriva a una raccomandazione finale e toc
   assert.ok(endings > 20, `solo ${endings} percorsi`);
   assert.deepEqual([...Object.keys(algo.nodes)].filter(id => !visited.has(id)), []);
 });
+
+test("trail distingue risposte e linee di terapia superate", () => {
+  const h = core.proceed(ALGO, core.choose(ALGO, [], 0));
+  assert.deepEqual(core.trail(ALGO, h), [
+    { index: 0, kind: "answer", nodeId: "q1", label: "Setting", value: "A" },
+    { index: 1, kind: "line", nodeId: "r1", label: "1ª linea", options: ["F1"] },
+  ]);
+});
+
+test("preview descrive la destinazione di una risposta", () => {
+  assert.deepEqual(core.preview(ALGO, "q2"), { kind: "question", label: "Sottotipo?" });
+  assert.deepEqual(core.preview(ALGO, "r1"), { kind: "recommendation", label: "1ª linea", options: ["F1"] });
+  assert.equal(core.preview(ALGO, "manca"), null);
+});
+
+test("reachable elenca le raccomandazioni in ordine di distanza", () => {
+  assert.deepEqual(core.reachable(ALGO, "q1"), ["r1", "r2"]);
+  assert.deepEqual(core.reachable(ALGO, "q2"), ["r2"]);
+});
+
+test("sequence mostra linea corrente e successive, poi quelle superate", () => {
+  const h1 = core.choose(ALGO, [], 0);
+  assert.deepEqual(core.sequence(ALGO, h1), { done: [], current: { nodeId: "r1", title: "1ª linea" }, upcoming: [["2ª linea"]] });
+  const h2 = core.proceed(ALGO, h1);
+  assert.deepEqual(core.sequence(ALGO, h2), {
+    done: [{ index: 1, nodeId: "r1", title: "1ª linea" }],
+    current: { nodeId: "r2", title: "2ª linea" },
+    upcoming: [],
+  });
+  assert.deepEqual(core.sequence(ALGO, []), { done: [], current: null, upcoming: [] });
+});
+
+test("sequence raggruppa le alternative dello stesso passo", () => {
+  const algo = {
+    start: "r0",
+    nodes: {
+      r0: { type: "recommendation", title: "Neoadiuvante", options: [], next: { label: "Dopo la chirurgia", node: "q" } },
+      q: { type: "question", text: "Risposta?", answers: [{ label: "pCR", next: "a" }, { label: "Residuo", next: "b" }] },
+      a: { type: "recommendation", title: "Adiuvante", options: [] },
+      b: { type: "recommendation", title: "Adiuvante — residuo", options: [], next: { label: "poi", node: "c" } },
+      c: { type: "recommendation", title: "Follow-up", options: [] },
+    },
+  };
+  assert.deepEqual(core.sequence(algo, []).upcoming, [["Adiuvante", "Adiuvante — residuo"], ["Follow-up"]]);
+});

@@ -1,0 +1,290 @@
+{
+  "id": "gliomi",
+  "title": "Gliomi",
+  "theme": "Neuro-oncologia",
+  "scheda": "Schede/Neuro-oncologia/Gliomi.md",
+  "start": "setting",
+  "nodes": {
+    "setting": {
+      "type": "question",
+      "text": "Qual è la diagnosi integrata (WHO 2021)?",
+      "short": "Diagnosi",
+      "info": "L'oligodendroglioma richiede IDH mutato e codelezione 1p/19q, entrambi. \"Glioblastoma\" indica solo la forma IDH-wild-type.",
+      "answers": [
+        { "label": "Glioblastoma IDH-wild-type", "next": "gbm_chir" },
+        { "label": "Astrocitoma IDH-mutato grado 4", "next": "gbm_chir" },
+        { "label": "Astrocitoma IDH-mutato grado 3", "next": "a3" },
+        { "label": "Oligodendroglioma IDH-mutato 1p/19q-codeleto grado 3", "next": "oligo3" },
+        { "label": "Glioma IDH-mutato grado 2", "next": "g2_rischio" }
+      ]
+    },
+    "gbm_chir": {
+      "type": "recommendation",
+      "title": "Chirurgia",
+      "options": [
+        {
+          "name": "Resezione massimale sicura",
+          "aifa": "standard",
+          "key": "Resezione ≥98% associata a OS 13 vs 8,8 mesi (dati retrospettivi); la funzione neurologica resta prioritaria. RM entro 48 ore."
+        },
+        {
+          "name": "Biopsia stereotassica",
+          "aifa": "standard",
+          "key": "Se la resezione non è sicura o fattibile."
+        }
+      ],
+      "note": "Nessuna profilassi antiepilettica senza crisi pregresse. Desametasone alla minima dose efficace.",
+      "next": { "label": "Dopo la chirurgia → terapia adiuvante", "node": "gbm_eta" }
+    },
+    "gbm_eta": {
+      "type": "question",
+      "text": "Quali sono età e condizioni del paziente?",
+      "short": "Paziente",
+      "answers": [
+        { "label": "≤70 anni, fit", "next": "gbm_stupp" },
+        { "label": "Anziano o fragile", "next": "eld_mgmt" }
+      ]
+    },
+    "gbm_stupp": {
+      "type": "recommendation",
+      "title": "Terapia adiuvante",
+      "options": [
+        {
+          "name": "Protocollo di Stupp",
+          "aifa": "standard",
+          "key": "Standard indipendente dallo stato MGMT nel giovane fit; nel MGMT metilato OS 21,7 vs 15,3 mesi. Profilassi per Pneumocystis durante la concomitante.",
+          "regimen": {
+            "trial": "EORTC/NCIC 22981/26981",
+            "endpoint": "OS 14,6 vs 12,1 mesi, HR 0,63; PFS 6,9 vs 5,0 mesi",
+            "rows": [
+              ["Radioterapia", "60 Gy in 30 frazioni"],
+              ["Temozolomide concomitante", "75 mg/m²/die per os durante la RT"],
+              ["Temozolomide adiuvante", "150-200 mg/m²/die per os giorni 1-5 ogni 28 giorni"]
+            ],
+            "note": "TMZ adiuvante per 6 cicli (fino a 12 se stabile o in risposta: più PFS, non OS).",
+            "sources": [{"type": "scheda"}]
+          }
+        },
+        {
+          "name": "+ TTFields durante la TMZ di mantenimento",
+          "aifa": "unknown",
+          "key": "Beneficio di OS solido, ma AIOM condizionata a sfavore per l'assenza di rimborsabilità uniforme SSN, non per l'efficacia.",
+          "regimen": {
+            "trial": "EF-14",
+            "endpoint": "OS 20,9 vs 16,0 mesi, HR 0,63; PFS 6,7 vs 4,0 mesi",
+            "rows": [
+              ["TTFields (NovoTTF)", "dispositivo indossato ≥18 ore/die"],
+              ["Temozolomide", "adiuvante secondo Stupp"]
+            ],
+            "sources": [{"type": "scheda"}]
+          }
+        }
+      ],
+      "note": "Non standard: bevacizumab (AVAglio, RTOG 0825: solo PFS), lomustina + TMZ nel MGMT metilato (CeTeG/NOA-09: OS 48,1 vs 31,4 mesi, ma trial piccolo, p=0,0492; AIOM condizionata a sfavore), cilengitide, wafer di carmustina.",
+      "next": { "label": "Alla recidiva", "node": "gbm_rec" }
+    },
+    "eld_mgmt": {
+      "type": "question",
+      "text": "Qual è lo stato di metilazione di MGMT?",
+      "short": "MGMT",
+      "answers": [
+        { "label": "Metilato", "next": "eld_met" },
+        { "label": "Non metilato", "next": "eld_unmet" }
+      ]
+    },
+    "eld_met": {
+      "type": "recommendation",
+      "title": "Terapia adiuvante",
+      "options": [
+        {
+          "name": "RT ipofrazionata + temozolomide",
+          "aifa": "standard",
+          "key": "Nel MGMT metilato OS 13,5 vs 7,7 mesi (HR 0,53).",
+          "regimen": {
+            "trial": "Perry / CE.6",
+            "endpoint": "OS 9,3 vs 7,6 mesi, HR 0,67; PFS 5,3 vs 3,9 mesi",
+            "rows": [
+              ["Radioterapia", "40,05 Gy in 15 frazioni"],
+              ["Temozolomide", "75 mg/m²/die concomitante, poi adiuvante 150-200 mg/m² giorni 1-5 ogni 28 giorni"]
+            ],
+            "sources": [{"type": "scheda"}]
+          }
+        },
+        {
+          "name": "Temozolomide in monoterapia",
+          "aifa": "standard",
+          "key": "Nel paziente più fragile, guidata dalla metilazione di MGMT."
+        }
+      ],
+      "next": { "label": "Alla recidiva", "node": "gbm_rec" }
+    },
+    "eld_unmet": {
+      "type": "recommendation",
+      "title": "Terapia adiuvante",
+      "options": [
+        {
+          "name": "RT ipofrazionata in monoterapia",
+          "aifa": "standard",
+          "key": "40,05 Gy in 15 frazioni, non inferiore a 60 Gy/30 frazioni.",
+          "regimen": {
+            "rows": [
+              ["Radioterapia", "40,05 Gy in 15 frazioni"]
+            ],
+            "sources": [{"type": "scheda"}]
+          }
+        },
+        {
+          "name": "RT ipofrazionata + temozolomide",
+          "aifa": "standard",
+          "key": "Beneficio della TMZ marginale nel non metilato (10,0 vs 7,9 mesi, HR 0,75, p=0,055)."
+        }
+      ],
+      "next": { "label": "Alla recidiva", "node": "gbm_rec" }
+    },
+    "gbm_rec": {
+      "type": "recommendation",
+      "title": "Recidiva",
+      "options": [
+        {
+          "name": "Regorafenib (buon PS)",
+          "aifa": "reimbursed",
+          "key": "Legge 648/96; confermato dai dati real-world italiani (REGOMA-OSS).",
+          "regimen": {
+            "trial": "REGOMA",
+            "endpoint": "OS 7,4 vs 5,6 mesi vs lomustina, HR 0,50",
+            "rows": [
+              ["Regorafenib", "160 mg/die per os, 3 settimane sì e 1 no"]
+            ],
+            "sources": [{"type": "scheda"}, {"type": "standard"}]
+          }
+        },
+        {
+          "name": "Lomustina o altre nitrosouree (fotemustina)",
+          "aifa": "standard",
+          "key": "Alternative a regorafenib.",
+          "regimen": {
+            "rows": [
+              ["Lomustina", "110 mg/m² per os ogni 6 settimane"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "Rechallenge con temozolomide",
+          "aifa": "standard",
+          "key": "Dopo un intervallo libero prolungato."
+        },
+        {
+          "name": "Reintervento",
+          "aifa": "standard",
+          "key": "Età <70 anni, KPS >70, intervallo libero >6 mesi e lesione resecabile."
+        }
+      ],
+      "note": "Bevacizumab + lomustina (EORTC 26101): PFS 4,2 vs 1,5 mesi ma OS non migliorata (HR 0,95), più tossicità. TTFields non indicati nella recidiva. Prima di dichiarare la progressione escludere la pseudoprogressione (RANO)."
+    },
+    "a3": {
+      "type": "recommendation",
+      "title": "Terapia adiuvante",
+      "options": [
+        {
+          "name": "Radioterapia + temozolomide adiuvante",
+          "aifa": "standard",
+          "key": "Il beneficio è della fase adiuvante; la TMZ concomitante non aggiunge beneficio (HR 0,81). Nessun beneficio nei tumori IDH-wild-type.",
+          "regimen": {
+            "trial": "CATNON",
+            "endpoint": "OS mediana nell'IDH-mutato 12,5 vs 6,0 anni con TMZ adiuvante, HR 0,54",
+            "rows": [
+              ["Radioterapia", "59,4 Gy in 33 frazioni"],
+              ["Temozolomide adiuvante", "150-200 mg/m²/die per os giorni 1-5 ogni 28 giorni"]
+            ],
+            "note": "TMZ adiuvante per 12 cicli.",
+            "sources": [{"type": "scheda"}, {"type": "standard"}]
+          }
+        }
+      ],
+      "note": "Preceduta da resezione massimale sicura."
+    },
+    "oligo3": {
+      "type": "recommendation",
+      "title": "Terapia adiuvante",
+      "options": [
+        {
+          "name": "Radioterapia + PCV adiuvante",
+          "aifa": "standard",
+          "key": "Molto efficace ma mielotossico, bassa completabilità. La TMZ da sola non sostituisce la RT.",
+          "regimen": {
+            "trial": "EORTC 26951 / RTOG 9402",
+            "endpoint": "OS nei codeleti 14,2 vs 9,3 anni (HR 0,60) e 13,2 vs 7,3 anni (HR 0,61)",
+            "rows": [
+              ["Radioterapia", "54-60 Gy"],
+              ["Procarbazina", "60 mg/m² per os giorni 8-21"],
+              ["Lomustina (CCNU)", "110 mg/m² per os giorno 1"],
+              ["Vincristina", "1,4 mg/m² EV giorni 8 e 29"]
+            ],
+            "note": "PCV ogni 6 settimane.",
+            "sources": [{"type": "scheda"}, {"type": "standard"}]
+          }
+        }
+      ],
+      "note": "Preceduta da resezione massimale sicura."
+    },
+    "g2_rischio": {
+      "type": "question",
+      "text": "Qual è il rischio (criteri RTOG)?",
+      "short": "Rischio",
+      "info": "Fattori favorevoli EORTC: <40 anni, nessun deficit, diametro <6 cm, nessun attraversamento della linea mediana, istologia oligodendrogliale.",
+      "answers": [
+        { "label": "Alto (≥40 anni e/o resezione incompleta o biopsia)", "next": "g2_alto" },
+        { "label": "Residuo o recidiva dopo sola chirurgia, candidabile a osservazione", "next": "g2_basso" }
+      ]
+    },
+    "g2_alto": {
+      "type": "recommendation",
+      "title": "Terapia adiuvante",
+      "options": [
+        {
+          "name": "Radioterapia + PCV",
+          "aifa": "standard",
+          "key": "Tra i più ampi benefici di sopravvivenza nei tumori solidi.",
+          "regimen": {
+            "trial": "RTOG 9802",
+            "endpoint": "PFS 10,4 vs 4,0 anni; OS 13,3 vs 7,8 anni (HR 0,59)",
+            "rows": [
+              ["Radioterapia", "50,4-54 Gy"],
+              ["Procarbazina", "60 mg/m² per os giorni 8-21"],
+              ["Lomustina (CCNU)", "110 mg/m² per os giorno 1"],
+              ["Vincristina", "1,4 mg/m² EV giorni 8 e 29"]
+            ],
+            "sources": [{"type": "scheda"}, {"type": "standard"}]
+          }
+        }
+      ],
+      "note": "La RT precoce aumenta la PFS ma non l'OS rispetto alla RT alla progressione."
+    },
+    "g2_basso": {
+      "type": "recommendation",
+      "title": "Dopo la chirurgia",
+      "options": [
+        {
+          "name": "Vorasidenib",
+          "aifa": "not_reimbursed",
+          "key": "Approvato EMA (settembre 2025), nessuna determina AIFA di rimborsabilità (agosto 2026). Ritarda anche il successivo intervento (HR 0,26).",
+          "regimen": {
+            "trial": "INDIGO",
+            "endpoint": "PFS 27,7 vs 11,1 mesi, HR 0,39",
+            "rows": [
+              ["Vorasidenib", "40 mg/die per os"]
+            ],
+            "sources": [{"type": "scheda"}, {"type": "standard"}]
+          }
+        },
+        {
+          "name": "Sorveglianza con RM",
+          "aifa": "standard",
+          "key": "RM ogni 3-4 mesi nel primo anno, poi ogni 6 mesi se basso rischio."
+        }
+      ],
+      "note": "Alla progressione rivalutare la chirurgia; TMZ o PCV secondo i trattamenti ricevuti."
+    }
+  }
+}

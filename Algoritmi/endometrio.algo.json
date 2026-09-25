@@ -1,0 +1,285 @@
+{
+  "id": "endometrio",
+  "title": "Endometrio",
+  "theme": "Ginecologici",
+  "scheda": "Schede/Ginecologici/Endometrio.md",
+  "start": "setting",
+  "nodes": {
+    "setting": {
+      "type": "question",
+      "text": "Qual è il setting della malattia?",
+      "short": "Setting",
+      "info": "Classificazione molecolare (POLEmut, dMMR, p53abn, NSMP) integrata nel FIGO 2023: guida adiuvante e 1ª linea.",
+      "answers": [
+        { "label": "Localizzato (operabile)", "next": "loc_chir" },
+        { "label": "Avanzato o recidivante", "next": "adv_mmr" }
+      ]
+    },
+    "loc_chir": {
+      "type": "recommendation",
+      "title": "Chirurgia",
+      "options": [
+        {
+          "name": "Isterectomia totale + annessiectomia bilaterale",
+          "aifa": "standard",
+          "key": "Via mininvasiva standard (a differenza della cervice). Linfonodo sentinella negli stadi apparentemente precoci."
+        }
+      ],
+      "next": { "label": "Dopo la chirurgia → gruppo di rischio ESGO-ESTRO-ESP", "node": "loc_rischio" }
+    },
+    "loc_rischio": {
+      "type": "question",
+      "text": "Qual è il gruppo di rischio?",
+      "short": "Rischio",
+      "info": "LVSI sostanziale (≥5 vasi) è un fattore prognostico indipendente. POLEmut: prognosi eccellente, candidato alla de-escalation.",
+      "answers": [
+        { "label": "Basso", "next": "loc_basso" },
+        { "label": "Intermedio", "next": "loc_intermedio" },
+        { "label": "Alto-intermedio", "next": "loc_altoint" },
+        { "label": "Alto", "next": "loc_alto" }
+      ]
+    },
+    "loc_basso": {
+      "type": "recommendation",
+      "title": "Terapia adiuvante",
+      "options": [
+        {
+          "name": "Nessuna terapia adiuvante",
+          "aifa": "standard",
+          "key": "Incluso lo stadio IA1m di tutti i sottogruppi molecolari."
+        }
+      ]
+    },
+    "loc_intermedio": {
+      "type": "recommendation",
+      "title": "Terapia adiuvante",
+      "options": [
+        {
+          "name": "Brachiterapia vaginale",
+          "aifa": "standard",
+          "key": "Omissibile se N0, senza LVSI sostanziale, <60 anni e/o basso grado.",
+          "regimen": {
+            "rows": [
+              ["Brachiterapia vaginale", "es. 21 Gy in 3 frazioni"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ]
+    },
+    "loc_altoint": {
+      "type": "recommendation",
+      "title": "Terapia adiuvante",
+      "options": [
+        {
+          "name": "Radioterapia esterna pelvica",
+          "aifa": "standard",
+          "key": "Preferita; VBT alternativa se linfonodi negativi.",
+          "regimen": {
+            "rows": [
+              ["Radioterapia pelvica", "45-50 Gy"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ]
+    },
+    "loc_alto": {
+      "type": "recommendation",
+      "title": "Terapia adiuvante",
+      "options": [
+        {
+          "name": "Chemioterapia ± radioterapia",
+          "aifa": "standard",
+          "key": "La classificazione molecolare predice il beneficio: massimo nel p53abn, intermedio nel dMMR.",
+          "regimen": {
+            "trial": "PORTEC-3",
+            "rows": [
+              ["Durante la RT", "cisplatino 50 mg/m² ×2 cicli"],
+              ["poi", "carboplatino AUC 5 + paclitaxel 175 mg/m² ×4 cicli"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ],
+      "note": "KEYNOTE-B21: pembrolizumab adiuvante negativo nell'ITT (DFS HR 1,02), beneficio solo nel dMMR (HR 0,31): non cambia lo standard.",
+      "next": { "label": "Alla recidiva → malattia avanzata", "node": "adv_mmr" }
+    },
+    "adv_mmr": {
+      "type": "question",
+      "text": "Qual è lo stato MMR?",
+      "short": "MMR",
+      "answers": [
+        { "label": "dMMR / MSI-H", "next": "adv_dmmr" },
+        { "label": "pMMR / MSS", "next": "adv_pmmr" }
+      ]
+    },
+    "adv_dmmr": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "Dostarlimab + carboplatino-paclitaxel",
+          "aifa": "reimbursed",
+          "key": "Nel dMMR OS HR 0,32.",
+          "regimen": {
+            "trial": "RUBY",
+            "endpoint": "OS ITT 44,6 vs 28,2 mesi (HR 0,69); nel dMMR HR 0,32",
+            "rows": [
+              ["Dostarlimab", "500 mg EV ogni 3 settimane ×6, poi 1000 mg ogni 6 settimane (fino a 3 anni)"],
+              ["Carboplatino", "AUC 5 EV giorno 1"],
+              ["Paclitaxel", "175 mg/m² EV giorno 1"]
+            ],
+            "note": "Carboplatino-paclitaxel ogni 3 settimane ×6.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Pembrolizumab + carboplatino-paclitaxel",
+          "aifa": "reimbursed",
+          "key": "Rimborsato solo nel dMMR (determina 05/02/2026). OS a 48 mesi 78,6% vs 60,4% nel dMMR.",
+          "regimen": {
+            "trial": "NRG-GY018",
+            "endpoint": "PFS nel dMMR HR 0,30; nel pMMR 13,1 vs 8,7 mesi (HR 0,54)",
+            "rows": [
+              ["Pembrolizumab", "200 mg EV ogni 3 settimane ×6, poi 400 mg ogni 6 settimane ×14"],
+              ["Carboplatino", "AUC 5 EV giorno 1"],
+              ["Paclitaxel", "175 mg/m² EV giorno 1"]
+            ],
+            "sources": [{"type": "rimborsabilita"}, {"type": "pubmed", "label": "NRG-GY018", "doi": "10.1056/NEJMoa2302312"}]
+          }
+        },
+        {
+          "name": "Durvalumab + carboplatino-paclitaxel",
+          "aifa": "reimbursed",
+          "key": "Rimborsato solo nel dMMR (registro dal 23/06/2026).",
+          "regimen": {
+            "trial": "DUO-E",
+            "endpoint": "PFS ITT HR 0,71 con durvalumab + CT",
+            "rows": [
+              ["Durvalumab", "1120 mg EV ogni 3 settimane ×6, poi 1500 mg ogni 4 settimane"],
+              ["Carboplatino", "AUC 5 EV giorno 1"],
+              ["Paclitaxel", "175 mg/m² EV giorno 1"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        }
+      ],
+      "note": "Atezolizumab + CT (AtTEnd) non è mai stato approvato EMA per l'endometrio.",
+      "next": { "label": "Alla progressione → 2ª linea", "node": "adv_2l" }
+    },
+    "adv_pmmr": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "Dostarlimab + carboplatino-paclitaxel",
+          "aifa": "reimbursed",
+          "key": "Unico regime CT + IO rimborsato anche nel pMMR (Determina 17/2026). OS pMMR HR 0,79 (p=0,0493).",
+          "regimen": {
+            "trial": "RUBY",
+            "endpoint": "OS ITT 44,6 vs 28,2 mesi (HR 0,69); nel dMMR HR 0,32",
+            "rows": [
+              ["Dostarlimab", "500 mg EV ogni 3 settimane ×6, poi 1000 mg ogni 6 settimane (fino a 3 anni)"],
+              ["Carboplatino", "AUC 5 EV giorno 1"],
+              ["Paclitaxel", "175 mg/m² EV giorno 1"]
+            ],
+            "note": "Carboplatino-paclitaxel ogni 3 settimane ×6.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Pembrolizumab + carboplatino-paclitaxel",
+          "aifa": "not_reimbursed",
+          "key": "Label EMA all-comers, ma AIFA lo rimborsa solo nel dMMR. OS pMMR HR 0,86, non significativa.",
+          "regimen": {
+            "trial": "NRG-GY018",
+            "endpoint": "PFS nel dMMR HR 0,30; nel pMMR 13,1 vs 8,7 mesi (HR 0,54)",
+            "rows": [
+              ["Pembrolizumab", "200 mg EV ogni 3 settimane ×6, poi 400 mg ogni 6 settimane ×14"],
+              ["Carboplatino", "AUC 5 EV giorno 1"],
+              ["Paclitaxel", "175 mg/m² EV giorno 1"]
+            ],
+            "sources": [{"type": "rimborsabilita"}, {"type": "pubmed", "label": "NRG-GY018", "doi": "10.1056/NEJMoa2302312"}]
+          }
+        },
+        {
+          "name": "Durvalumab + olaparib + carboplatino-paclitaxel",
+          "aifa": "not_reimbursed",
+          "key": "Approvato EMA per il pMMR, ma il registro AIFA copre solo il braccio dMMR.",
+          "regimen": {
+            "trial": "DUO-E",
+            "endpoint": "PFS ITT HR 0,55 con durvalumab + olaparib",
+            "rows": [
+              ["Durvalumab", "1120 mg EV ogni 3 settimane ×6, poi 1500 mg ogni 4 settimane"],
+              ["+ Olaparib", "300 mg per os ×2/die in mantenimento"],
+              ["Carboplatino", "AUC 5 EV giorno 1"],
+              ["Paclitaxel", "175 mg/m² EV giorno 1"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Carboplatino-paclitaxel",
+          "aifa": "standard",
+          "key": "Standard storico.",
+          "regimen": {
+            "rows": [
+              ["Carboplatino", "AUC 5 EV giorno 1"],
+              ["Paclitaxel", "175 mg/m² EV giorno 1"]
+            ],
+            "note": "Ogni 21 giorni ×6 cicli.",
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ],
+      "note": "Meta-analisi ESMO 2024: nel pMMR beneficio di PFS (HR 0,78) ma non di OS come effetto di classe.",
+      "next": { "label": "Alla progressione → 2ª linea", "node": "adv_2l" }
+    },
+    "adv_2l": {
+      "type": "recommendation",
+      "title": "2ª linea",
+      "options": [
+        {
+          "name": "Lenvatinib + pembrolizumab",
+          "aifa": "reimbursed",
+          "key": "Standard dopo platino; OS a 5 anni 16,7% vs 7,3% anche nel pMMR (HR 0,70).",
+          "regimen": {
+            "trial": "KEYNOTE-775",
+            "endpoint": "OS a 5 anni 19,9% vs 7,7%, HR 0,66",
+            "rows": [
+              ["Lenvatinib", "20 mg/die per os"],
+              ["Pembrolizumab", "200 mg EV ogni 3 settimane"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Dostarlimab in monoterapia (dMMR, IO-naive)",
+          "aifa": "reimbursed",
+          "key": "ORR 42%; rimborsato dal 2022.",
+          "regimen": {
+            "trial": "GARNET",
+            "rows": [
+              ["Dostarlimab", "500 mg EV ogni 3 settimane ×4, poi 1000 mg ogni 6 settimane"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Pembrolizumab in monoterapia (dMMR, IO-naive)",
+          "aifa": "reimbursed",
+          "key": "ORR 46%; determina tumor-agnostic dMMR del 09/02/2026.",
+          "regimen": {
+            "trial": "KEYNOTE-158",
+            "rows": [
+              ["Pembrolizumab", "200 mg EV ogni 3 settimane o 400 mg ogni 6 settimane, fino a 24 mesi"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        }
+      ],
+      "note": "Selinexor di mantenimento nei TP53 wild-type non confermato (XPORT-EC-042 negativo). HER2: T-DXd ORR 57,5% (non indicazione registrata)."
+    }
+  }
+}

@@ -18,10 +18,6 @@ Sul GCNIS vale la pena essere precisi con i numeri: la prevalenza nella popolazi
 
 L'ecografia scrotale serve a confermare il sospetto, ma la diagnosi patologica richiede sempre l'**orchiectomia inguinale radicale** — !!mai per via transcrotale!!, per il rischio di disseminazione locale e alterazione del drenaggio linfatico. I marcatori tumorali (AFP, β-hCG, LDH) vanno dosati prima e dopo l'orchiectomia: le rispettive emivite — **AFP 5-7 giorni**, **β-hCG 1-2 giorni** — sono il criterio chiave per distinguere lo stadio I dallo stadio IS (marcatori che non si dimezzano secondo la cinetica attesa). La chirurgia organ-sparing resta un'opzione solo in casi selezionati: testosterone normale, piccole lesioni bilaterali sincrone, o monorchidismo.
 
-#### Punti chiave
-- Orchiectomia inguinale radicale sempre — mai transcrotale.
-- Emivite: AFP 5-7 giorni, β-hCG 1-2 giorni — criterio chiave per distinguere stadio I da IS.
-- Biopsia del testicolo controlaterale non raccomandata di routine in Italia (rischio di progressione del GCNIS molto più basso che nei dati scandinavi).
 
 ## Stadiazione
 
@@ -35,11 +31,6 @@ Per la malattia N1-3/M1 si usa la classificazione **IGCCCG**: nel seminoma esist
 
 AFP, β-hCG e LDH restano il perno della diagnostica, della stadiazione secondo IGCCCG, e del monitoraggio della risposta al trattamento. Il **miR-371a-3p** è un biomarcatore emergente — non ancora entrato nella pratica standard, ma con un ruolo che si sta consolidando soprattutto per la ricerca di malattia minima residua (MRD) nello stadio clinico I, come discusso anche all'ASCO GU 2026: è un'area di ricerca attiva su cui vale la pena tenere d'occhio i prossimi aggiornamenti, senza però trattarlo già come uno standard clinico.
 
-#### Punti chiave
-- IGCCCG: seminoma solo 2 categorie (buona/intermedia, mai sfavorevole); non-seminoma 3 categorie.
-- Sfavorevole (solo non-seminoma) = mediastino primitivo OPPURE viscerali extrapolmonari OPPURE markers molto alti.
-- Aggiornamento IGCCCG: LDH>2,5×ULN = nuovo fattore prognostico sfavorevole nel seminoma.
-- miR-371a-3p: biomarcatore emergente per MRD, non ancora standard clinico.
 
 ## Terapia della malattia iniziale (stadio I)
 
@@ -53,11 +44,6 @@ Se si opta per la chemioterapia adiuvante nei pazienti a rischio più alto, lo s
 
 Il fattore prognostico validato è l'**invasione vascolare (LVI)**: il rischio di recidiva in sorveglianza è del 40-50% se LVI-positivo, contro il 15% se LVI-negativo. Nei pazienti LVI-positivi, **un ciclo di PEB adiuvante** riduce drasticamente il rischio: lo studio di Albers (2008) mostra un'assenza di recidiva a 2 anni del 99,4% contro il 92,4% della RPLND. Nei LVI-negativi, la sorveglianza resta la strategia di scelta (l'85% dei pazienti non necessita di ulteriore trattamento), con la RPLND nerve-sparing come alternativa. In generale, la **RPLND non è raccomandata come standard** [ESMO II,D] — resta un'opzione riservata a centri esperti, su casi selezionati.
 
-#### Punti chiave
-- Seminoma I: sorveglianza sempre preferita; mai RT adiuvante (rischio secondi tumori).
-- Se chemio adiuvante nel seminoma I higher-risk: 1 solo ciclo carboplatino AUC7, mai 2 cicli.
-- Non-seminoma I: LVI+ → recidiva 40-50% in sorveglianza → 1 ciclo PEB la riduce a <5%. LVI- → sorveglianza preferita.
-- RPLND non raccomandata come standard — solo centri esperti, casi selezionati.
 
 ## Stadio clinico IIA/B
 
@@ -75,26 +61,15 @@ Sulla bleomicina, la dose totale standard è 12 (riducibile a 10 se il rischio p
 
 Nel **seminoma**, la PET-FDG è utile solo per i residui **≥3cm** (da eseguire dopo almeno 6 settimane dalla fine della chemioterapia; sensibilità 80-89%, specificità 100%, valore predittivo negativo 96-97%); sotto i 3cm, o con PET negativa, si prosegue con il solo follow-up. Nel **non-seminoma**, invece, !!la PET-FDG non è attendibile!!, perché non riesce a distinguere il teratoma dal tessuto fibro-necrotico: la chirurgia (RPLND) è indicata per i residui **superiori a 1cm**, indipendentemente dal risultato PET.
 
-#### Punti chiave
-- PEB×3 (buona prognosi), PEB×4 (intermedia/sfavorevole) — mai più di 4 cicli.
-- BEP: rischio TEV molto aumentato (HR fino a 24,7) — considerare profilassi, evitare CVC.
-- Masse residue: seminoma → PET-FDG utile se ≥3cm; non-seminoma → PET non attendibile, chirurgia se >1cm.
 
 ## Trattamento delle recidive
 
 Il sistema **IPFSG**, basato su 5 variabili prognostiche, stratifica in 5 categorie di rischio, con una PFS a 2 anni che va dal 75% (rischio molto basso) al 6% (rischio molto alto). Gli schemi di salvataggio a dosi standard (4 cicli) sono TIP, VeIP, PEI/VIP, GIP.
 
-La chemioterapia ad alte dosi con supporto di cellule staminali (HDCT, tipicamente carboplatino+etoposide) è un'opzione alla prima ricaduta, ma con qualità dell'evidenza bassa e raccomandazione solo condizionata a favore — !!non è raccomandata come salvataggio standard di prima linea!! secondo ESMO.
-
-> ++Verifica in letteratura:++ la scheda precedente indicava lo studio **TIGER** (che confronta HDCT con la chemioterapia convenzionale TIP come primo salvataggio) come "in corso". In realtà l'arruolamento si è concluso a dicembre 2022 (studio Alliance A031102/EORTC), ma alla verifica più recente i risultati definitivi non risultano ancora pubblicati — la domanda clinica resta quindi aperta, e la raccomandazione ESMO attuale (HDCT non come standard di prima linea) va considerata provvisoria in attesa di questo dato. Vale la pena controllare periodicamente se i risultati sono stati presentati, perché potrebbero cambiare la pratica. [EORTC](https://www.eortc.org/blog/2022/12/19/completion-of-patient-recruitment-tiger-study/).
+La chemioterapia ad alte dosi con supporto di cellule staminali (HDCT, tipicamente carboplatino+etoposide) è un'opzione alla prima ricaduta, ma con qualità dell'evidenza bassa e raccomandazione solo condizionata a favore — !!non è raccomandata come salvataggio standard di prima linea!! secondo ESMO. La domanda è ancora aperta: lo studio **TIGER** (Alliance A031102/EORTC), che confronta HDCT e TIP come primo salvataggio, ha concluso l'arruolamento nel dicembre 2022 ma non ha ancora pubblicato i risultati definitivi, e la raccomandazione ESMO attuale va quindi considerata provvisoria.
 
 Quando i marcatori restano elevati o in crescita dopo un trattamento di salvataggio, ma la malattia è ancora resecabile, si può ricorrere alla cosiddetta "desperation surgery", con una sopravvivenza malattia-specifica che va dal 15 al 54% — un range ampio che riflette quanto la selezione del paziente sia determinante. La recidiva tardiva (oltre 2 anni, 2-3% dei casi) va trattata preferibilmente con chirurgia radicale come prima scelta, se i marcatori sono negativi.
 
-#### Punti chiave
-- IPFSG: 5 categorie di rischio, PFS 2a dal 75% al 6%.
-- Schemi di salvataggio standard: TIP, VeIP, PEI/VIP, GIP (4 cicli).
-- HDCT alla prima ricaduta: solo opzione condizionata, non standard di prima linea (studio TIGER concluso l'arruolamento, risultati ancora attesi).
-- Recidiva tardiva (>2 anni): chirurgia radicale prima scelta se marcatori negativi.
 
 ## Tumori germinali primitivi extragonadici (2-5%)
 
@@ -106,9 +81,7 @@ Nei tumori a cellule di Leydig/Sertoli, la malignità riguarda meno del 10-15% d
 
 ## Farmaci e classi rilevanti
 
-In chemioterapia: cisplatino, etoposide, bleomicina (schema PEB/BEP), ifosfamide (PEI/VIP), carboplatino, paclitaxel (TIP), vinblastina (VeIP), gemcitabina (GIP). In chirurgia: orchiectomia inguinale radicale, RPLND (nerve-sparing). In radioterapia: il campo dog-leg, usato nel seminoma stadio I-II.
-
-> ++Verifica in letteratura:++ tutti i farmaci citati in questa scheda (cisplatino, etoposide, bleomicina, ifosfamide, carboplatino, paclitaxel, vinblastina, gemcitabina) sono generici da decenni, ==in classe A/H e rimborsati dal SSN==, senza eventi regolatori EMA/AIFA dal 2020 in poi: l'area dei tumori germinali del testicolo non ha visto approvazioni di farmaci realmente nuovi in questo periodo. Un punto specifico però merita nota: **carboplatino** (uso nel seminoma stadio I) e **gemcitabina**, da sola o in associazione a **oxaliplatino** (± paclitaxel, schema GemOx/GOT — non citato esplicitamente nel testo ma appartenente alla stessa famiglia di salvataggio del GIP), risultano formalmente inclusi nell'elenco AIFA dei "farmaci con uso consolidato nel trattamento dei tumori solidi dell'adulto" ai sensi della **legge 648/96** (Allegato 1 Oncologia Adulti, versione più recente reperibile: 3/2/2020) — un meccanismo che ne garantisce la rimborsabilità SSN anche per l'indicazione specifica di terapia di salvataggio dei tumori germinali testicolari/extragonadici, pur trattandosi di uso non registrato in scheda tecnica per queste indicazioni. Nessun aggiornamento regolatorio più recente di questa lista è stato reperito per l'oncologia solida dell'adulto. [AIFA — Allegato 1 Oncologia Adulti](https://www.aifa.gov.it/documents/20142/1104892/Allegato-1_oncologia-adulti_03.02.2020.pdf/f644c448-e12c-e07e-551c-f96bed2bd168), [AIFA — Liste dei farmaci](https://www.aifa.gov.it/en/liste-dei-farmaci).
+In chemioterapia: cisplatino, etoposide, bleomicina (schema PEB/BEP), ifosfamide (PEI/VIP), carboplatino, paclitaxel (TIP), vinblastina (VeIP), gemcitabina (GIP). In chirurgia: orchiectomia inguinale radicale, RPLND (nerve-sparing). In radioterapia: il campo dog-leg, usato nel seminoma stadio I-II. Sono tutti farmaci generici da decenni, in classe A/H e rimborsati dal SSN, senza eventi regolatori EMA/AIFA dal 2020 in poi. Carboplatino e gemcitabina, da sola o con oxaliplatino (± paclitaxel, schema GemOx/GOT), rientrano inoltre nell'elenco AIFA dei farmaci a uso consolidato nei tumori solidi dell'adulto ai sensi della **Legge 648/96** (Allegato 1 Oncologia Adulti, versione del 3/2/2020), che ne garantisce la rimborsabilità anche nel salvataggio dei tumori germinali, pur trattandosi di uso fuori scheda tecnica.
 
 ## Tossicità e criticità
 
@@ -122,8 +95,7 @@ Il riferimento è la Consensus AIOM/IGG Milano 2017. La maggior parte delle rica
 
 Un dato pratico importante per ridurre l'esposizione radiante cumulativa in questi pazienti giovani: la **RM è equivalente alla TC** nel follow-up addominale del seminoma stadio I [ESMO I,A]. Infine, la survivorship a lungo termine richiede monitoraggio cardiovascolare, metabolico e psicologico, oltre alla valutazione dell'ipogonadismo — con terapia sostitutiva di testosterone riservata ai casi sintomatici con livelli bassi, non di routine.
 
-## Punti ad alta resa per l'orale
-
+## Punti chiave
 - Mai orchiectomia transcrotale; emivite AFP 5-7 giorni, β-hCG 1-2 giorni.
 - Carboplatino AUC7 per 1 solo ciclo = standard adiuvante nel seminoma I higher-risk (mai 2 cicli); mai RT adiuvante (ESMO).
 - Non-seminoma I con LVI+: recidiva 40-50% in sorveglianza → 1 ciclo PEB la riduce a <5%.
@@ -149,3 +121,5 @@ Un dato pratico importante per ridurre l'esposizione radiante cumulativa in ques
 - ESMO: CPG Testicolo 2022.
 - Altre fonti: Congresso Grandangolo 2025 (Testicolo) — contenuto non estraibile dalla fonte disponibile.
 - Verifica in questa revisione: la letteratura recente conferma sostanzialmente i dati già presenti nella scheda (campo relativamente stabile rispetto a prostata/rene); principali novità verificate: stato dello studio TIGER (arruolamento concluso, risultati attesi) e ruolo emergente di miR-371a-3p per MRD (ASCO GU 2026).
+- Link consultati — trattamento delle recidive: [EORTC](https://www.eortc.org/blog/2022/12/19/completion-of-patient-recruitment-tiger-study/).
+- Link consultati — farmaci e classi rilevanti: [AIFA — Allegato 1 Oncologia Adulti](https://www.aifa.gov.it/documents/20142/1104892/Allegato-1_oncologia-adulti_03.02.2020.pdf/f644c448-e12c-e07e-551c-f96bed2bd168), [AIFA — Liste dei farmaci](https://www.aifa.gov.it/en/liste-dei-farmaci).

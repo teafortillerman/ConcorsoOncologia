@@ -1,0 +1,420 @@
+{
+  "id": "sarcomi",
+  "title": "Sarcomi",
+  "theme": "Sarcomi",
+  "scheda": "Schede/Sarcomi/Sarcomi.md",
+  "start": "setting",
+  "nodes": {
+    "setting": {
+      "type": "question",
+      "text": "Qual è il quadro?",
+      "short": "Setting",
+      "info": "Massa profonda di qualsiasi dimensione o superficiale ≥5 cm: invio a centro sarcoma prima di biopsia o chirurgia. GIST in una scheda separata.",
+      "answers": [
+        { "label": "Sarcoma dei tessuti molli localizzato (arti, tronco)", "next": "loc" },
+        { "label": "Sarcoma retroperitoneale localizzato", "next": "rps" },
+        { "label": "Sarcoma uterino", "next": "ut_chir" },
+        { "label": "Fibromatosi desmoide", "next": "desm" },
+        { "label": "Malattia avanzata o metastatica", "next": "adv_res" }
+      ]
+    },
+    "loc": {
+      "type": "recommendation",
+      "title": "Malattia localizzata",
+      "options": [
+        {
+          "name": "Escissione ampia en bloc R0",
+          "aifa": "standard",
+          "key": "Il margine adeguato dipende da istotipo, sede e barriere anatomiche. Tramite bioptico da asportare con il pezzo."
+        },
+        {
+          "name": "+ Radioterapia (G2-G3)",
+          "aifa": "standard",
+          "key": "Pre-operatoria: più complicanze di ferita, meno tossicità tardiva; post-operatoria: l'opposto.",
+          "regimen": {
+            "rows": [
+              ["Pre-operatoria", "50 Gy in frazioni da 1,8-2 Gy"],
+              ["oppure Post-operatoria", "fino a 66 Gy"]
+            ],
+            "sources": [{"type": "scheda"}]
+          }
+        },
+        {
+          "name": "+ Antraciclina-ifosfamide neoadiuvante (alto rischio)",
+          "aifa": "standard",
+          "key": "Solo paziente fit con OS predetta a 10 anni <60% (Sarculator). 3 cicli non inferiori a 5. Da evitare in ASPS e clear-cell sarcoma.",
+          "regimen": {
+            "rows": [
+              ["Epirubicina", "60 mg/m² EV giorni 1-2"],
+              ["Ifosfamide", "3 g/m² EV giorni 1-3"]
+            ],
+            "note": "Ogni 21 giorni ×3 cicli.",
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ],
+      "note": "G1: spesso sufficiente la sola chirurgia.",
+      "next": { "label": "Alla recidiva → malattia avanzata", "node": "adv_res" }
+    },
+    "rps": {
+      "type": "recommendation",
+      "title": "Sarcoma retroperitoneale",
+      "options": [
+        {
+          "name": "Resezione en bloc con gli organi aderenti",
+          "aifa": "standard",
+          "key": "Completezza macroscopica; evitare la R2. Biopsia core con accesso retroperitoneale."
+        }
+      ],
+      "note": "Radioterapia pre-operatoria non standard (STRASS: RFS addominale HR 1,01, linfopenia G3-4 77% vs 1%); beneficio solo esplorativo nel liposarcoma a basso-intermedio grado. RT post-operatoria, brachiterapia e IORT senza valore routinario. STRASS-2 (chemioterapia neoadiuvante) non ancora maturo.",
+      "next": { "label": "Alla recidiva → malattia avanzata", "node": "adv_res" }
+    },
+    "ut_chir": {
+      "type": "recommendation",
+      "title": "Chirurgia",
+      "options": [
+        {
+          "name": "Isterectomia totale en bloc",
+          "aifa": "standard",
+          "key": "Mai morcellazione. Linfadenectomia non utile nel leiomiosarcoma; preservazione ovarica possibile in casi selezionati."
+        }
+      ],
+      "note": "Il carcinosarcoma si tratta come neoplasia epiteliale. RT e chemioterapia adiuvante non standard.",
+      "next": { "label": "Nella malattia avanzata → istotipo", "node": "ut_isto" }
+    },
+    "ut_isto": {
+      "type": "question",
+      "text": "Qual è l'istotipo uterino?",
+      "short": "Istotipo",
+      "answers": [
+        { "label": "Leiomiosarcoma", "next": "adv_lms" },
+        { "label": "Sarcoma stromale endometriale di basso grado", "next": "ut_lgess" },
+        { "label": "ESS di alto grado, UES o adenosarcoma con overgrowth", "next": "adv_1l" }
+      ]
+    },
+    "ut_lgess": {
+      "type": "recommendation",
+      "title": "ESS di basso grado avanzato",
+      "options": [
+        {
+          "name": "Terapia endocrina",
+          "aifa": "standard",
+          "key": "Progestinici, inibitori dell'aromatasi o analoghi GnRH: tumore estrogeno-dipendente."
+        }
+      ],
+      "note": "Tamoxifene ed estrogeni controindicati."
+    },
+    "desm": {
+      "type": "recommendation",
+      "title": "Fibromatosi desmoide",
+      "options": [
+        {
+          "name": "Sorveglianza attiva con RM",
+          "aifa": "standard",
+          "key": "Prima linea nella maggioranza: possibili stabilità prolungata o regressione spontanea."
+        },
+        {
+          "name": "Nirogacestat (in progressione)",
+          "aifa": "not_reimbursed",
+          "key": "Approvato FDA (11/2023) ed EMA (08/2025), rimborsabilità AIFA non ancora determinata. Disfunzione ovarica nel 75% delle donne fertili (reversibile).",
+          "regimen": {
+            "trial": "DeFi",
+            "endpoint": "PFS HR 0,29; liberi da eventi a 2 anni 76% vs 44%",
+            "rows": [
+              ["Nirogacestat", "150 mg per os ×2/die"]
+            ],
+            "sources": [{"type": "scheda"}, {"type": "standard"}]
+          }
+        },
+        {
+          "name": "Terapie storiche in progressione",
+          "aifa": "standard",
+          "key": "Sorafenib, pazopanib, imatinib, metotrexato-vinblastina/vinorelbina, doxorubicina liposomiale; crioablazione; chirurgia solo in sedi favorevoli, RT in sedi critiche."
+        }
+      ],
+      "note": "CTNNB1 wild-type: escludere una poliposi adenomatosa familiare (APC)."
+    },
+    "adv_res": {
+      "type": "question",
+      "text": "Le metastasi sono resecabili?",
+      "short": "Resecabilità",
+      "answers": [
+        { "label": "Metastasi polmonari isolate, metacrone (intervallo ≥1 anno), resecabili", "next": "adv_metast" },
+        { "label": "No", "next": "adv_isto" }
+      ]
+    },
+    "adv_metast": {
+      "type": "recommendation",
+      "title": "Metastasi resecabili",
+      "options": [
+        {
+          "name": "Metastasectomia",
+          "aifa": "standard",
+          "key": "Dopo esclusione di malattia extrapolmonare. Chemioterapia perioperatoria opzionale (intervallo breve, lesioni multiple, istotipo chemiosensibile)."
+        }
+      ],
+      "note": "Malattia polmonare sincrona: prima il trattamento sistemico, poi resezione dei residui.",
+      "next": { "label": "Alla progressione → terapia sistemica", "node": "adv_isto" }
+    },
+    "adv_isto": {
+      "type": "question",
+      "text": "Qual è l'istotipo?",
+      "short": "Istotipo",
+      "answers": [
+        { "label": "Leiomiosarcoma", "next": "adv_lms" },
+        { "label": "Liposarcoma", "next": "adv_lps" },
+        { "label": "Angiosarcoma", "next": "adv_angio" },
+        { "label": "Con bersaglio o refrattario (DFSP, NTRK, ASPS, epitelioide INI1-deficiente)", "next": "adv_target" },
+        { "label": "Altri sarcomi dei tessuti molli", "next": "adv_1l" }
+      ]
+    },
+    "adv_1l": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "Doxorubicina",
+          "aifa": "standard",
+          "key": "Standard.",
+          "regimen": {
+            "rows": [
+              ["Doxorubicina", "75 mg/m² EV ogni 3 settimane"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "Doxorubicina + ifosfamide",
+          "aifa": "standard",
+          "key": "Più risposte e PFS, senza chiaro vantaggio di OS: se serve citoriduzione e il PS lo consente.",
+          "regimen": {
+            "rows": [
+              ["Doxorubicina", "75 mg/m² EV giorno 1"],
+              ["Ifosfamide", "10 g/m² in 5 giorni, con mesna"]
+            ],
+            "note": "Ogni 21 giorni.",
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ],
+      "note": "Olaratumab: approvazione revocata da FDA ed EMA nel 2020 (ANNOUNCE negativo, OS HR 1,05). Gemcitabina-docetaxel non è una prima linea generale.",
+      "next": { "label": "Alla progressione → linee successive", "node": "adv_2l" }
+    },
+    "adv_lms": {
+      "type": "recommendation",
+      "title": "1ª linea — leiomiosarcoma",
+      "options": [
+        {
+          "name": "Doxorubicina + trabectedina → trabectedina di mantenimento",
+          "aifa": "unknown",
+          "key": "Nessuna label EMA dedicata in 1ª linea (trabectedina approvata dopo antracicline/ifosfamide); adottato nei centri sarcoma. Neutropenia G3-4 80% vs 13%.",
+          "regimen": {
+            "trial": "LMS-04",
+            "endpoint": "PFS 12,2 vs 6,2 mesi (HR 0,41); OS 33 vs 24 mesi (HR 0,65)",
+            "rows": [
+              ["Doxorubicina", "60 mg/m² EV giorno 1 ×6"],
+              ["Trabectedina", "1,1 mg/m² EV giorno 1, poi in mantenimento"]
+            ],
+            "note": "Ogni 21 giorni.",
+            "sources": [{"type": "scheda"}, {"type": "pubmed", "label": "LMS-04", "doi": "10.1056/NEJMoa2403394"}]
+          }
+        },
+        {
+          "name": "Doxorubicina + dacarbazina",
+          "aifa": "standard",
+          "key": "Opzione specifica in leiomiosarcoma e tumore fibroso solitario."
+        },
+        {
+          "name": "Doxorubicina",
+          "aifa": "standard",
+          "key": "Standard storico.",
+          "regimen": {
+            "rows": [
+              ["Doxorubicina", "75 mg/m² EV ogni 3 settimane"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ],
+      "next": { "label": "Alla progressione → linee successive", "node": "adv_2l" }
+    },
+    "adv_lps": {
+      "type": "recommendation",
+      "title": "1ª linea — liposarcoma",
+      "options": [
+        {
+          "name": "Doxorubicina ± ifosfamide",
+          "aifa": "standard",
+          "key": "Standard di 1ª linea.",
+          "regimen": {
+            "rows": [
+              ["Doxorubicina", "75 mg/m² EV ogni 3 settimane"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ],
+      "next": { "label": "Alla progressione → linee successive", "node": "adv_2l_lps" }
+    },
+    "adv_2l_lps": {
+      "type": "recommendation",
+      "title": "Linee successive — liposarcoma",
+      "options": [
+        {
+          "name": "Trabectedina",
+          "aifa": "reimbursed",
+          "key": "Attività particolarmente marcata nel mixoide.",
+          "regimen": {
+            "rows": [
+              ["Trabectedina", "1,5 mg/m² EV in 24 ore ogni 3 settimane"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "Eribulina",
+          "aifa": "reimbursed",
+          "key": "Indicazione regolatoria ristretta al liposarcoma: il beneficio di OS era guidato da questo sottogruppo, non esteso al leiomiosarcoma.",
+          "regimen": {
+            "trial": "Studio 309",
+            "endpoint": "OS 13,5 vs 11,5 mesi vs dacarbazina (liposarcoma + leiomiosarcoma), HR 0,77",
+            "rows": [
+              ["Eribulina", "1,4 mg/m² EV giorni 1 e 8 ogni 21 giorni"]
+            ],
+            "sources": [{"type": "pubmed", "label": "Eribulina vs dacarbazina", "doi": "10.1016/S0140-6736(15)01283-0"}]
+          }
+        }
+      ],
+      "note": "Pazopanib e regorafenib non sono indicati nel liposarcoma."
+    },
+    "adv_2l": {
+      "type": "recommendation",
+      "title": "Linee successive",
+      "options": [
+        {
+          "name": "Pazopanib (non adipocitici)",
+          "aifa": "reimbursed",
+          "key": "Attivo anche nel tumore fibroso solitario.",
+          "regimen": {
+            "trial": "PALETTE",
+            "endpoint": "PFS 4,6 vs 1,6 mesi, HR 0,31 (OS non significativa)",
+            "rows": [
+              ["Pazopanib", "800 mg/die per os"]
+            ],
+            "sources": [{"type": "scheda"}, {"type": "standard"}]
+          }
+        },
+        {
+          "name": "Trabectedina (leiomiosarcoma, liposarcoma)",
+          "aifa": "reimbursed",
+          "key": "Dopo antracicline/ifosfamide.",
+          "regimen": {
+            "rows": [
+              ["Trabectedina", "1,5 mg/m² EV in 24 ore ogni 3 settimane"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "Gemcitabina + docetaxel",
+          "aifa": "standard",
+          "key": "Dopo doxorubicina in leiomiosarcoma e UPS; più tossica.",
+          "regimen": {
+            "rows": [
+              ["Gemcitabina", "900 mg/m² EV giorni 1 e 8"],
+              ["Docetaxel", "100 mg/m² EV giorno 8"]
+            ],
+            "note": "Ogni 21 giorni.",
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "Ifosfamide (alta dose), gemcitabina-dacarbazina, dacarbazina",
+          "aifa": "standard",
+          "key": "Ifosfamide se non già inefficace."
+        },
+        {
+          "name": "Regorafenib",
+          "aifa": "not_reimbursed",
+          "key": "Attivo nei non adipocitici (REGOSARC, fase II), mai approvato FDA/EMA/AIFA per i sarcomi."
+        }
+      ],
+      "note": "RT palliativa per sintomi; nel paziente unfit o molto pretrattato solo cure di supporto."
+    },
+    "adv_angio": {
+      "type": "recommendation",
+      "title": "Angiosarcoma",
+      "options": [
+        {
+          "name": "Paclitaxel settimanale",
+          "aifa": "standard",
+          "key": "I taxani sono particolarmente attivi.",
+          "regimen": {
+            "rows": [
+              ["Paclitaxel", "80 mg/m² EV giorni 1, 8 e 15 ogni 28 giorni"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "Doxorubicina o gemcitabina ± docetaxel",
+          "aifa": "standard",
+          "key": "Alternative."
+        }
+      ],
+      "note": "Angiosarcoma mammario (spesso radioindotto): mastectomia includendo il campo irradiato."
+    },
+    "adv_target": {
+      "type": "recommendation",
+      "title": "Istotipi con bersaglio o refrattari",
+      "options": [
+        {
+          "name": "Imatinib (DFSP)",
+          "aifa": "reimbursed",
+          "key": "Standard nel DFSP avanzato.",
+          "regimen": {
+            "rows": [
+              ["Imatinib", "400 mg/die per os"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "Larotrectinib o entrectinib (fusione NTRK)",
+          "aifa": "reimbursed",
+          "key": "Anche neoadiuvanti se la citoriduzione riduce la morbidità chirurgica.",
+          "regimen": {
+            "rows": [
+              ["Larotrectinib", "100 mg per os ×2/die"],
+              ["oppure Entrectinib", "600 mg/die per os"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "Atezolizumab (ASPS)",
+          "aifa": "not_reimbursed",
+          "key": "Approvato FDA (12/2022), non EMA/AIFA. ORR 37%, PFS mediana 20,8 mesi. Cabozantinib off-label come seconda scelta.",
+          "regimen": {
+            "rows": [
+              ["Atezolizumab", "1200 mg EV ogni 3 settimane"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "Tazemetostat (epitelioide INI1/SMARCB1-deficiente)",
+          "aifa": "not_reimbursed",
+          "key": "Solo FDA (01/2020), nessuna AIC europea; in Italia solo uso compassionevole. ORR 15%.",
+          "regimen": {
+            "rows": [
+              ["Tazemetostat", "800 mg per os ×2/die"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ],
+      "note": "ASPS e clear-cell sarcoma sono refrattari ad antraciclina-ifosfamide."
+    }
+  }
+}

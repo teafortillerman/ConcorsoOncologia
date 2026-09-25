@@ -57,13 +57,30 @@
           "name": "Terapia endocrina adiuvante",
           "aifa": "standard",
           "key": "Tamoxifene 20 mg/die per 5 anni in pre-menopausa; inibitore dell'aromatasi in post-menopausa (upfront o switch dopo tamoxifene).",
-          "detail": "Soppressione ovarica + tamoxifene o AI (SOFT/TEXT) solo nelle pre-menopausa ad alto rischio (<35 anni, T >2 cm, N+, G3, Ki67 alto, PgR <20%): nel basso rischio nessun beneficio in OS. Estensione oltre 5 anni: tamoxifene fino a 10 anni (ATLAS, aTToM); dopo 5 anni di AI fino a 7-8 anni (GIM4, DATA, NSABP B-42), e fino a 10 anni solo con alto rischio residuo (CTS5, Breast Cancer Index)."
+          "detail": "Soppressione ovarica + tamoxifene o AI (SOFT/TEXT) solo nelle pre-menopausa ad alto rischio (<35 anni, T >2 cm, N+, G3, Ki67 alto, PgR <20%): nel basso rischio nessun beneficio in OS. Estensione oltre 5 anni: tamoxifene fino a 10 anni (ATLAS, aTToM); dopo 5 anni di AI fino a 7-8 anni (GIM4, DATA, NSABP B-42), e fino a 10 anni solo con alto rischio residuo (CTS5, Breast Cancer Index).",
+          "regimen": {
+            "rows": [
+              ["Tamoxifene", "20 mg/die per os (pre-menopausa)"],
+              ["Inibitore dell'aromatasi", "letrozolo 2,5 mg, anastrozolo 1 mg o exemestane 25 mg/die per os (post-menopausa o con OFS)"],
+              ["Soppressione ovarica (LHRH-analogo)", "es. goserelin 3,6 mg SC ogni 28 giorni, se pre-menopausa ad alto rischio"]
+            ],
+            "note": "Durata 5 anni, estendibile a 7-10 anni se rischio elevato.",
+            "sources": [{"type": "scheda"}, {"type": "pubmed", "label": "MONARCH 3", "doi": "10.1200/JCO.2017.75.6155"}, {"type": "pubmed", "label": "BOLERO-2", "doi": "10.1056/NEJMoa1109653"}, {"type": "standard"}]
+          }
         },
         {
           "name": "Acido zoledronico o denosumab",
           "aifa": "reimbursed",
           "key": "Post-menopausa in ET adiuvante, indipendentemente dal T-score (Nota AIFA 79): riduzione delle fratture (ABCSG-18, HR 0,50).",
-          "detail": "Acido zoledronico 5 mg ev ogni 12 mesi, oppure denosumab 60 mg sc ogni 6 mesi."
+          "detail": "Acido zoledronico 5 mg ev ogni 12 mesi, oppure denosumab 60 mg sc ogni 6 mesi.",
+          "regimen": {
+            "rows": [
+              ["Acido zoledronico", "5 mg EV ogni 12 mesi"],
+              ["Denosumab", "60 mg SC ogni 6 mesi"]
+            ],
+            "note": "Post-menopausa in terapia endocrina adiuvante (Nota AIFA 79).",
+            "sources": [{"type": "scheda"}]
+          }
         }
       ]
     },
@@ -74,28 +91,71 @@
         {
           "name": "Chemioterapia + terapia endocrina",
           "aifa": "standard",
-          "key": "Antraciclina → taxano, dose-dense se N+; TC se le antracicline sono controindicate. Avvio entro 4-8 settimane dalla chirurgia."
+          "key": "Antraciclina → taxano, dose-dense se N+; TC se le antracicline sono controindicate. Avvio entro 4-8 settimane dalla chirurgia.",
+          "regimen": {
+            "rows": [
+              ["AC dose-dense", "doxorubicina 60 mg/m² + ciclofosfamide 600 mg/m² EV ogni 14 giorni ×4 (con G-CSF)"],
+              ["→ Paclitaxel", "80 mg/m² EV settimanale ×12"],
+              ["oppure TC", "docetaxel 75 mg/m² + ciclofosfamide 600 mg/m² EV ogni 21 giorni ×4-6"],
+              ["poi terapia endocrina", "come da schema endocrino adiuvante, 5-10 anni"]
+            ],
+            "sources": [{"type": "pubmed", "label": "APT", "doi": "10.1056/NEJMoa1406281"}, {"type": "standard"}]
+          }
         },
         {
           "name": "Abemaciclib 2 anni + terapia endocrina",
           "aifa": "reimbursed",
-          "key": "≥4 N+, oppure 1-3 N+ con T ≥5 cm o G3 (monarchE): beneficio anche in OS, HR 0,84 (ESMO 2025)."
+          "key": "≥4 N+, oppure 1-3 N+ con T ≥5 cm o G3 (monarchE): beneficio anche in OS, HR 0,84 (ESMO 2025).",
+          "regimen": {
+            "trial": "monarchE",
+            "rows": [
+              ["Abemaciclib", "150 mg per os ×2/die, in continuo"],
+              ["+ Terapia endocrina", "tamoxifene o inibitore dell'aromatasi"]
+            ],
+            "note": "Durata 2 anni.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
         },
         {
           "name": "Ribociclib 3 anni + inibitore dell'aromatasi",
           "aifa": "reimbursed",
           "key": "Stadio II-III, incluse N0 ad alto rischio (NATALEE): iDFS a 5 anni 85,5% vs 81,0%. Rimborsato dal 6 marzo 2026.",
-          "detail": "Dose adiuvante 400 mg/die (21 giorni su 28). Popolazione più ampia di monarchE: include anche le pazienti linfonodo-negative ad alto rischio."
+          "detail": "Dose adiuvante 400 mg/die (21 giorni su 28). Popolazione più ampia di monarchE: include anche le pazienti linfonodo-negative ad alto rischio.",
+          "regimen": {
+            "trial": "NATALEE",
+            "rows": [
+              ["Ribociclib", "400 mg/die per os, 21 giorni sì + 7 no (ciclo 28 gg)"],
+              ["Inibitore dell'aromatasi", "letrozolo 2,5 mg/die oppure anastrozolo 1 mg/die per os"]
+            ],
+            "note": "Durata 3 anni; ± OFS in pre-menopausa.",
+            "sources": [{"type": "rimborsabilita"}, {"type": "pubmed", "label": "MONARCH 3", "doi": "10.1200/JCO.2017.75.6155"}]
+          }
         },
         {
           "name": "Olaparib 1 anno",
           "aifa": "reimbursed",
-          "key": "gBRCA1/2 ad alto rischio, dopo CT (OlympiA): iDFS HR 0,63, OS HR 0,68."
+          "key": "gBRCA1/2 ad alto rischio, dopo CT (OlympiA): iDFS HR 0,63, OS HR 0,68.",
+          "regimen": {
+            "trial": "OlympiA",
+            "rows": [
+              ["Olaparib", "300 mg per os ×2/die, in continuo"]
+            ],
+            "note": "Durata 1 anno.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
         },
         {
           "name": "Acido zoledronico o denosumab",
           "aifa": "reimbursed",
-          "key": "Post-menopausa in ET adiuvante, indipendentemente dal T-score (Nota AIFA 79): riduzione delle fratture (ABCSG-18, HR 0,50)."
+          "key": "Post-menopausa in ET adiuvante, indipendentemente dal T-score (Nota AIFA 79): riduzione delle fratture (ABCSG-18, HR 0,50).",
+          "regimen": {
+            "rows": [
+              ["Acido zoledronico", "5 mg EV ogni 12 mesi"],
+              ["Denosumab", "60 mg SC ogni 6 mesi"]
+            ],
+            "note": "Post-menopausa in terapia endocrina adiuvante (Nota AIFA 79).",
+            "sources": [{"type": "scheda"}]
+          }
         }
       ],
       "note": "CDK4/6i e olaparib si aggiungono a CT + ET solo se la paziente rientra nei criteri di inclusione del rispettivo studio."
@@ -117,7 +177,16 @@
         {
           "name": "Paclitaxel + trastuzumab (schema APT)",
           "aifa": "reimbursed",
-          "key": "T1a/b N0: DFS a 7 anni 93,3%. Trastuzumab per 1 anno."
+          "key": "T1a/b N0: DFS a 7 anni 93,3%. Trastuzumab per 1 anno.",
+          "regimen": {
+            "trial": "APT",
+            "rows": [
+              ["Paclitaxel", "80 mg/m² EV settimanale ×12"],
+              ["Trastuzumab", "4 mg/kg carico, poi 2 mg/kg settimanale per 12 settimane; poi 6 mg/kg ogni 3 settimane"]
+            ],
+            "note": "Trastuzumab per 1 anno complessivo.",
+            "sources": [{"type": "pubmed", "label": "APT", "doi": "10.1056/NEJMoa1406281"}]
+          }
         }
       ]
     },
@@ -128,22 +197,58 @@
         {
           "name": "Chemioterapia + trastuzumab 1 anno",
           "aifa": "reimbursed",
-          "key": "AC/EC → taxano + trastuzumab, oppure TCH (senza antracicline, meno cardiotossico). 12 mesi restano lo standard (PERSEPHONE)."
+          "key": "AC/EC → taxano + trastuzumab, oppure TCH (senza antracicline, meno cardiotossico). 12 mesi restano lo standard (PERSEPHONE).",
+          "regimen": {
+            "rows": [
+              ["AC dose-dense", "doxorubicina 60 mg/m² + ciclofosfamide 600 mg/m² EV ogni 14 giorni ×4 (con G-CSF)"],
+              ["→ Paclitaxel", "80 mg/m² EV settimanale ×12"],
+              ["oppure TCH", "docetaxel 75 mg/m² + carboplatino AUC 6 EV ogni 21 giorni ×6"],
+              ["Trastuzumab", "8 mg/kg EV carico, poi 6 mg/kg EV ogni 3 settimane"]
+            ],
+            "note": "Trastuzumab dall'inizio del taxano, per 1 anno (18 somministrazioni).",
+            "sources": [{"type": "pubmed", "label": "CLEOPATRA", "doi": "10.1016/S1470-2045(19)30863-0"}, {"type": "standard"}]
+          }
         },
         {
           "name": "+ Pertuzumab se N+",
           "aifa": "reimbursed",
-          "key": "APHINITY: OS a 10 anni HR 0,83 (−17% rischio di morte); nelle N+ HR 0,79."
+          "key": "APHINITY: OS a 10 anni HR 0,83 (−17% rischio di morte); nelle N+ HR 0,79.",
+          "regimen": {
+            "trial": "APHINITY",
+            "rows": [
+              ["Pertuzumab", "840 mg EV carico, poi 420 mg EV ogni 3 settimane"],
+              ["Trastuzumab", "8 mg/kg EV carico, poi 6 mg/kg EV ogni 3 settimane"]
+            ],
+            "note": "Insieme alla chemioterapia, per 1 anno complessivo.",
+            "sources": [{"type": "pubmed", "label": "APHINITY", "doi": "10.1056/NEJMoa1703643"}]
+          }
         },
         {
           "name": "+ Terapia endocrina se HR+",
           "aifa": "standard",
-          "key": "Nel Luminal B HER2+ si associa la terapia endocrina."
+          "key": "Nel Luminal B HER2+ si associa la terapia endocrina.",
+          "regimen": {
+            "rows": [
+              ["Tamoxifene", "20 mg/die per os (pre-menopausa)"],
+              ["Inibitore dell'aromatasi", "letrozolo 2,5 mg, anastrozolo 1 mg o exemestane 25 mg/die per os (post-menopausa o con OFS)"],
+              ["Soppressione ovarica (LHRH-analogo)", "es. goserelin 3,6 mg SC ogni 28 giorni, se pre-menopausa ad alto rischio"]
+            ],
+            "note": "Durata 5 anni, estendibile a 7-10 anni se rischio elevato.",
+            "sources": [{"type": "scheda"}, {"type": "pubmed", "label": "MONARCH 3", "doi": "10.1200/JCO.2017.75.6155"}, {"type": "pubmed", "label": "BOLERO-2", "doi": "10.1056/NEJMoa1109653"}, {"type": "standard"}]
+          }
         },
         {
           "name": "Neratinib dopo 1 anno di trastuzumab",
           "aifa": "not_reimbursed",
-          "key": "ExteNET: beneficio soprattutto nelle ER+, ma non rimborsato dal SSN."
+          "key": "ExteNET: beneficio soprattutto nelle ER+, ma non rimborsato dal SSN.",
+          "regimen": {
+            "trial": "ExteNET",
+            "rows": [
+              ["Neratinib", "240 mg/die per os, in continuo"]
+            ],
+            "note": "Durata 1 anno, dopo il trastuzumab adiuvante; profilassi antidiarroica.",
+            "sources": [{"type": "pubmed", "label": "ExteNET", "doi": "10.1016/S1470-2045(15)00551-3"}]
+          }
         }
       ]
     },
@@ -164,7 +269,15 @@
         {
           "name": "Chirurgia → chemioterapia adiuvante",
           "aifa": "standard",
-          "key": "Antraciclina e taxano. Nello stadio II–III si preferisce invece il trattamento neoadiuvante (KEYNOTE-522)."
+          "key": "Antraciclina e taxano. Nello stadio II–III si preferisce invece il trattamento neoadiuvante (KEYNOTE-522).",
+          "regimen": {
+            "rows": [
+              ["AC dose-dense", "doxorubicina 60 mg/m² + ciclofosfamide 600 mg/m² EV ogni 14 giorni ×4 (con G-CSF)"],
+              ["→ Paclitaxel", "80 mg/m² EV settimanale ×12"],
+              ["oppure TC", "docetaxel 75 mg/m² + ciclofosfamide 600 mg/m² EV ogni 21 giorni ×4-6"]
+            ],
+            "sources": [{"type": "pubmed", "label": "APT", "doi": "10.1056/NEJMoa1406281"}, {"type": "standard"}]
+          }
         }
       ]
     },
@@ -188,7 +301,17 @@
           "name": "Pembrolizumab + chemioterapia (KEYNOTE-522)",
           "aifa": "reimbursed",
           "key": "pCR 64,8% vs 51,2%; OS a 5 anni 86,6% vs 81,7% (HR 0,66). Rimborsato dal luglio 2023, registro dedicato.",
-          "detail": "Carboplatino + paclitaxel per 4 cicli, poi AC/EC per 4 cicli, sempre con pembrolizumab 200 mg ogni 3 settimane: 8 cicli prima della chirurgia."
+          "detail": "Carboplatino + paclitaxel per 4 cicli, poi AC/EC per 4 cicli, sempre con pembrolizumab 200 mg ogni 3 settimane: 8 cicli prima della chirurgia.",
+          "regimen": {
+            "trial": "KEYNOTE-522",
+            "rows": [
+              ["Cicli 1-4", "pembrolizumab 200 mg q3w + paclitaxel settimanale + carboplatino"],
+              ["Cicli 5-8", "pembrolizumab 200 mg q3w + AC o EC q3w"],
+              ["Dopo chirurgia", "pembrolizumab 200 mg q3w ×9 cicli"]
+            ],
+            "note": "17 cicli totali, circa 1 anno.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
         }
       ],
       "next": { "label": "Dopo la chirurgia", "node": "neo_tn_risposta" }
@@ -209,7 +332,15 @@
         {
           "name": "Pembrolizumab adiuvante (9 cicli)",
           "aifa": "reimbursed",
-          "key": "Completa circa 1 anno di immunoterapia (KEYNOTE-522)."
+          "key": "Completa circa 1 anno di immunoterapia (KEYNOTE-522).",
+          "regimen": {
+            "trial": "KEYNOTE-522",
+            "rows": [
+              ["Pembrolizumab", "200 mg EV ogni 3 settimane ×9 cicli"]
+            ],
+            "note": "Completa i 17 cicli totali del programma perioperatorio.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
         }
       ]
     },
@@ -220,17 +351,41 @@
         {
           "name": "Pembrolizumab adiuvante (9 cicli)",
           "aifa": "reimbursed",
-          "key": "Prosecuzione dello schema KEYNOTE-522."
+          "key": "Prosecuzione dello schema KEYNOTE-522.",
+          "regimen": {
+            "trial": "KEYNOTE-522",
+            "rows": [
+              ["Pembrolizumab", "200 mg EV ogni 3 settimane ×9 cicli"]
+            ],
+            "note": "Completa i 17 cicli totali del programma perioperatorio.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
         },
         {
           "name": "Capecitabina in aggiunta al pembrolizumab",
           "aifa": "standard",
-          "key": "Malattia residua dopo NAT (CREATE-X): si associa al pembrolizumab, non lo sostituisce."
+          "key": "Malattia residua dopo NAT (CREATE-X): si associa al pembrolizumab, non lo sostituisce.",
+          "regimen": {
+            "trial": "CREATE-X",
+            "rows": [
+              ["Capecitabina", "1250 mg/m² per os ×2/die, giorni 1-14 ogni 21 giorni"]
+            ],
+            "note": "6-8 cicli.",
+            "sources": [{"type": "pubmed", "label": "CREATE-X", "doi": "10.1056/NEJMoa1612645"}, {"type": "standard"}]
+          }
         },
         {
           "name": "Olaparib 1 anno se gBRCA1/2",
           "aifa": "reimbursed",
-          "key": "OlympiA: iDFS HR 0,63, OS HR 0,68."
+          "key": "OlympiA: iDFS HR 0,63, OS HR 0,68.",
+          "regimen": {
+            "trial": "OlympiA",
+            "rows": [
+              ["Olaparib", "300 mg per os ×2/die, in continuo"]
+            ],
+            "note": "Durata 1 anno.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
         }
       ],
       "note": "Le strategie per la malattia residua (T-DM1, capecitabina, olaparib) non sono intercambiabili tra sottotipi."
@@ -242,7 +397,17 @@
         {
           "name": "Trastuzumab + pertuzumab + chemioterapia",
           "aifa": "reimbursed",
-          "key": "Standard se almeno cT2 o N+; preferire schemi senza antracicline (taxano + carboplatino) per la minore cardiotossicità."
+          "key": "Standard se almeno cT2 o N+; preferire schemi senza antracicline (taxano + carboplatino) per la minore cardiotossicità.",
+          "regimen": {
+            "trial": "NeoSphere",
+            "rows": [
+              ["TCHP", "docetaxel 75 mg/m² + carboplatino AUC 6 EV ogni 21 giorni ×6"],
+              ["Trastuzumab", "8 mg/kg EV carico, poi 6 mg/kg EV ogni 3 settimane"],
+              ["Pertuzumab", "840 mg EV carico, poi 420 mg EV ogni 3 settimane"]
+            ],
+            "note": "In alternativa AC/EC → taxano + trastuzumab + pertuzumab.",
+            "sources": [{"type": "pubmed", "label": "CLEOPATRA", "doi": "10.1016/S1470-2045(19)30863-0"}, {"type": "pubmed", "label": "APHINITY", "doi": "10.1056/NEJMoa1703643"}, {"type": "standard"}]
+          }
         }
       ],
       "next": { "label": "Dopo la chirurgia", "node": "neo_her2_risposta" }
@@ -263,7 +428,16 @@
         {
           "name": "Completare 1 anno di anti-HER2 (± terapia endocrina se HR+)",
           "aifa": "reimbursed",
-          "key": "In caso di pCR si completa la terapia anti-HER2."
+          "key": "In caso di pCR si completa la terapia anti-HER2.",
+          "regimen": {
+            "trial": "APHINITY",
+            "rows": [
+              ["Trastuzumab", "6 mg/kg EV ogni 3 settimane"],
+              ["± Pertuzumab", "420 mg EV ogni 3 settimane (se N+ alla diagnosi)"]
+            ],
+            "note": "Fino a 18 somministrazioni totali (1 anno).",
+            "sources": [{"type": "pubmed", "label": "APHINITY", "doi": "10.1056/NEJMoa1703643"}]
+          }
         }
       ]
     },
@@ -274,7 +448,15 @@
         {
           "name": "T-DM1 adiuvante",
           "aifa": "reimbursed",
-          "key": "KATHERINE: iDFS HR 0,50."
+          "key": "KATHERINE: iDFS HR 0,50.",
+          "regimen": {
+            "trial": "KATHERINE",
+            "rows": [
+              ["Trastuzumab emtansine (T-DM1)", "3,6 mg/kg EV ogni 21 giorni"]
+            ],
+            "note": "14 cicli.",
+            "sources": [{"type": "pubmed", "label": "EMILIA", "doi": "10.1056/NEJMoa1209124"}, {"type": "pubmed", "label": "KATHERINE", "doi": "10.1056/NEJMoa1814017"}]
+          }
         }
       ]
     },
@@ -285,12 +467,26 @@
         {
           "name": "Chemioterapia neoadiuvante",
           "aifa": "standard",
-          "key": "Riservata ai casi ad alto rischio; la pCR è meno frequente che negli altri sottotipi."
+          "key": "Riservata ai casi ad alto rischio; la pCR è meno frequente che negli altri sottotipi.",
+          "regimen": {
+            "rows": [
+              ["AC dose-dense", "doxorubicina 60 mg/m² + ciclofosfamide 600 mg/m² EV ogni 14 giorni ×4 (con G-CSF)"],
+              ["→ Paclitaxel", "80 mg/m² EV settimanale ×12"]
+            ],
+            "sources": [{"type": "pubmed", "label": "APT", "doi": "10.1056/NEJMoa1406281"}, {"type": "standard"}]
+          }
         },
         {
           "name": "Terapia endocrina neoadiuvante",
           "aifa": "standard",
-          "key": "Casi selezionati: pazienti anziane, con comorbidità o malattia fortemente endocrino-sensibile."
+          "key": "Casi selezionati: pazienti anziane, con comorbidità o malattia fortemente endocrino-sensibile.",
+          "regimen": {
+            "rows": [
+              ["Inibitore dell'aromatasi", "letrozolo 2,5 mg/die o anastrozolo 1 mg/die per os"]
+            ],
+            "note": "Almeno 4-6 mesi prima della chirurgia.",
+            "sources": [{"type": "pubmed", "label": "MONARCH 3", "doi": "10.1200/JCO.2017.75.6155"}, {"type": "standard"}]
+          }
         }
       ],
       "next": { "label": "Dopo la chirurgia", "node": "neo_hr_adiuvante" }
@@ -302,23 +498,58 @@
         {
           "name": "Terapia endocrina adiuvante",
           "aifa": "standard",
-          "key": "Sia in caso di pCR sia di malattia residua."
+          "key": "Sia in caso di pCR sia di malattia residua.",
+          "regimen": {
+            "rows": [
+              ["Tamoxifene", "20 mg/die per os (pre-menopausa)"],
+              ["Inibitore dell'aromatasi", "letrozolo 2,5 mg, anastrozolo 1 mg o exemestane 25 mg/die per os (post-menopausa o con OFS)"],
+              ["Soppressione ovarica (LHRH-analogo)", "es. goserelin 3,6 mg SC ogni 28 giorni, se pre-menopausa ad alto rischio"]
+            ],
+            "note": "Durata 5 anni, estendibile a 7-10 anni se rischio elevato.",
+            "sources": [{"type": "scheda"}, {"type": "pubmed", "label": "MONARCH 3", "doi": "10.1200/JCO.2017.75.6155"}, {"type": "pubmed", "label": "BOLERO-2", "doi": "10.1056/NEJMoa1109653"}, {"type": "standard"}]
+          }
         },
         {
           "name": "Abemaciclib 2 anni + terapia endocrina",
           "aifa": "reimbursed",
-          "key": "Se alto rischio (criteri monarchE)."
+          "key": "Se alto rischio (criteri monarchE).",
+          "regimen": {
+            "trial": "monarchE",
+            "rows": [
+              ["Abemaciclib", "150 mg per os ×2/die, in continuo"],
+              ["+ Terapia endocrina", "tamoxifene o inibitore dell'aromatasi"]
+            ],
+            "note": "Durata 2 anni.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
         },
         {
           "name": "Ribociclib 3 anni + inibitore dell'aromatasi",
           "aifa": "reimbursed",
           "key": "Se alto rischio (criteri NATALEE, incluse N0 ad alto rischio). Rimborsato dal 6 marzo 2026.",
-          "detail": "Dose adiuvante 400 mg/die (21 giorni su 28). Popolazione più ampia di monarchE: include anche le pazienti linfonodo-negative ad alto rischio."
+          "detail": "Dose adiuvante 400 mg/die (21 giorni su 28). Popolazione più ampia di monarchE: include anche le pazienti linfonodo-negative ad alto rischio.",
+          "regimen": {
+            "trial": "NATALEE",
+            "rows": [
+              ["Ribociclib", "400 mg/die per os, 21 giorni sì + 7 no (ciclo 28 gg)"],
+              ["Inibitore dell'aromatasi", "letrozolo 2,5 mg/die oppure anastrozolo 1 mg/die per os"]
+            ],
+            "note": "Durata 3 anni; ± OFS in pre-menopausa.",
+            "sources": [{"type": "rimborsabilita"}, {"type": "pubmed", "label": "MONARCH 3", "doi": "10.1200/JCO.2017.75.6155"}]
+          }
         },
         {
           "name": "Olaparib 1 anno se gBRCA1/2",
           "aifa": "reimbursed",
-          "key": "gBRCA1/2 con malattia residua (OlympiA: iDFS HR 0,63, OS HR 0,68)."
+          "key": "gBRCA1/2 con malattia residua (OlympiA: iDFS HR 0,63, OS HR 0,68).",
+          "regimen": {
+            "trial": "OlympiA",
+            "rows": [
+              ["Olaparib", "300 mg per os ×2/die, in continuo"]
+            ],
+            "note": "Durata 1 anno.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
         }
       ],
       "note": "Abemaciclib e ribociclib sono alternative: si sceglie in base ai criteri di inclusione del rispettivo studio."
@@ -351,7 +582,16 @@
         {
           "name": "Chemioterapia (tipicamente paclitaxel + bevacizumab)",
           "aifa": "standard",
-          "key": "Quando serve una risposta rapida."
+          "key": "Quando serve una risposta rapida.",
+          "regimen": {
+            "trial": "E2100",
+            "endpoint": "PFS 11,8 vs 5,9 mesi, HR 0,60",
+            "rows": [
+              ["Paclitaxel", "90 mg/m² EV giorni 1, 8 e 15 ogni 28 giorni"],
+              ["Bevacizumab", "10 mg/kg EV giorni 1 e 15"]
+            ],
+            "sources": [{"type": "pubmed", "label": "E2100", "doi": "10.1056/NEJMoa072113"}]
+          }
         }
       ]
     },
@@ -382,7 +622,19 @@
           "name": "Inibitore dell'aromatasi + CDK4/6i (palbociclib, ribociclib, abemaciclib)",
           "aifa": "reimbursed",
           "key": "Preferire ribociclib: unico con OS significativa vs AI in monoterapia (MONALEESA-2: 63,9 vs 51,4 mesi, HR 0,76).",
-          "detail": "Palbociclib (PALOMA-2) e abemaciclib (MONARCH-3) non hanno raggiunto la significatività statistica in OS nello stesso confronto."
+          "detail": "Palbociclib (PALOMA-2) e abemaciclib (MONARCH-3) non hanno raggiunto la significatività statistica in OS nello stesso confronto.",
+          "regimen": {
+            "trial": "PALOMA-2 · MONALEESA-2 · MONARCH 3",
+            "endpoint": "PFS: palbociclib 24,8 vs 14,5 mesi (HR 0,58); ribociclib HR 0,56; abemaciclib HR 0,54",
+            "rows": [
+              ["Inibitore dell'aromatasi", "letrozolo 2,5 mg/die oppure anastrozolo 1 mg/die per os"],
+              ["Palbociclib", "125 mg/die per os, 21 giorni sì + 7 no (ciclo 28 gg)"],
+              ["Ribociclib", "600 mg/die per os, 21 giorni sì + 7 no (ciclo 28 gg)"],
+              ["Abemaciclib", "150 mg per os ×2/die, in continuo"]
+            ],
+            "note": "Un solo CDK4/6i; fino a progressione. In pre-menopausa + LHRH-analogo.",
+            "sources": [{"type": "pubmed", "label": "PALOMA-1", "doi": "10.1016/S1470-2045(14)71159-3"}, {"type": "pubmed", "label": "MONALEESA-2", "doi": "10.1056/NEJMoa1609709"}, {"type": "pubmed", "label": "MONARCH 3", "doi": "10.1200/JCO.2017.75.6155"}]
+          }
         }
       ],
       "next": { "label": "Alla progressione → 2ª linea", "node": "m1_hr_2l" }
@@ -394,7 +646,19 @@
         {
           "name": "Fulvestrant + CDK4/6i",
           "aifa": "reimbursed",
-          "key": "Malattia endocrino-resistente senza indicazione allo schema INAVO120."
+          "key": "Malattia endocrino-resistente senza indicazione allo schema INAVO120.",
+          "regimen": {
+            "trial": "PALOMA-3 · MONALEESA-3 · MONARCH 2",
+            "endpoint": "PFS: palbociclib 9,5 vs 4,6 mesi (HR 0,46); ribociclib 20,5 vs 12,8 (HR 0,59); abemaciclib 16,4 vs 9,3 (HR 0,55)",
+            "rows": [
+              ["Fulvestrant", "500 mg IM giorni 1 e 15 del 1° ciclo, poi giorno 1 ogni 28 giorni"],
+              ["Palbociclib", "125 mg/die per os, 21 giorni sì + 7 no (ciclo 28 gg)"],
+              ["Ribociclib", "600 mg/die per os, 21 giorni sì + 7 no (ciclo 28 gg)"],
+              ["Abemaciclib", "150 mg per os ×2/die, in continuo"]
+            ],
+            "note": "Un solo CDK4/6i; fino a progressione.",
+            "sources": [{"type": "rimborsabilita"}, {"type": "pubmed", "label": "PALOMA-1", "doi": "10.1016/S1470-2045(14)71159-3"}, {"type": "pubmed", "label": "MONALEESA-2", "doi": "10.1056/NEJMoa1609709"}, {"type": "pubmed", "label": "MONARCH 3", "doi": "10.1200/JCO.2017.75.6155"}]
+          }
         }
       ],
       "next": { "label": "Alla progressione → 2ª linea", "node": "m1_hr_2l" }
@@ -406,7 +670,18 @@
         {
           "name": "Fulvestrant + palbociclib + inavolisib",
           "aifa": "reimbursed",
-          "key": "PIK3CA mutato con recidiva endocrina precoce (INAVO120). Rimborsato dall'ottobre 2025."
+          "key": "PIK3CA mutato con recidiva endocrina precoce (INAVO120). Rimborsato dall'ottobre 2025.",
+          "regimen": {
+            "trial": "INAVO120",
+            "endpoint": "PFS 15,0 vs 7,3 mesi, HR 0,43",
+            "rows": [
+              ["Inavolisib", "9 mg/die per os, in continuo"],
+              ["Palbociclib", "125 mg/die per os, 21 giorni sì + 7 no"],
+              ["Fulvestrant", "500 mg IM giorni 1 e 15 del 1° ciclo, poi giorno 1 ogni 28 giorni"]
+            ],
+            "note": "Fino a progressione.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
         }
       ],
       "next": { "label": "Alla progressione → 2ª linea", "node": "m1_hr_2l" }
@@ -430,12 +705,30 @@
         {
           "name": "Elacestrant",
           "aifa": "reimbursed",
-          "key": "Dopo progressione a CDK4/6i + ET (EMERALD)."
+          "key": "Dopo progressione a CDK4/6i + ET (EMERALD).",
+          "regimen": {
+            "trial": "EMERALD",
+            "endpoint": "PFS nei pazienti ESR1-mutati HR 0,55 (popolazione totale HR 0,70)",
+            "rows": [
+              ["Elacestrant", "345 mg/die per os, in continuo"]
+            ],
+            "note": "Fino a progressione.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
         },
         {
           "name": "Imlunestrant",
           "aifa": "not_reimbursed",
-          "key": "Approvato solo dalla FDA: non autorizzato né rimborsato in Italia."
+          "key": "Approvato solo dalla FDA: non autorizzato né rimborsato in Italia.",
+          "regimen": {
+            "trial": "EMBER-3",
+            "endpoint": "PFS nei pazienti ESR1-mutati 5,5 vs 3,8 mesi (nessun beneficio nella popolazione totale)",
+            "rows": [
+              ["Imlunestrant", "400 mg/die per os, in continuo"]
+            ],
+            "note": "Fino a progressione.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
         }
       ],
       "next": { "label": "Alla progressione → linee successive", "node": "m1_hr_successive" }
@@ -447,13 +740,33 @@
         {
           "name": "Capivasertib + fulvestrant",
           "aifa": "reimbursed",
-          "key": "Alterazioni PIK3CA/AKT1/PTEN, dopo un regime endocrino (CAPItello-291). Rimborsato dall'ottobre 2025."
+          "key": "Alterazioni PIK3CA/AKT1/PTEN, dopo un regime endocrino (CAPItello-291). Rimborsato dall'ottobre 2025.",
+          "regimen": {
+            "trial": "CAPItello-291",
+            "endpoint": "PFS 7,2 vs 3,6 mesi, HR 0,60 (con alterazioni AKT: 7,3 vs 3,1 mesi, HR 0,50)",
+            "rows": [
+              ["Capivasertib", "400 mg per os ×2/die, 4 giorni sì + 3 no ogni settimana"],
+              ["Fulvestrant", "500 mg IM giorni 1 e 15 del 1° ciclo, poi giorno 1 ogni 28 giorni"]
+            ],
+            "note": "Fino a progressione.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
         },
         {
           "name": "Alpelisib + fulvestrant",
           "aifa": "reimbursed",
           "key": "Solo PIK3CA mutato, dopo un inibitore dell'aromatasi (SOLAR-1). Rimborsato dalla Determina 1195/2021, rinnovata nel 2025: non è off-label.",
-          "detail": "Con capivasertib e alpelisib vanno monitorate iperglicemia e tossicità cutanea."
+          "detail": "Con capivasertib e alpelisib vanno monitorate iperglicemia e tossicità cutanea.",
+          "regimen": {
+            "trial": "SOLAR-1",
+            "endpoint": "PFS nei PIK3CA-mutati 11,0 vs 5,7 mesi, HR 0,65",
+            "rows": [
+              ["Alpelisib", "300 mg/die per os, in continuo"],
+              ["Fulvestrant", "500 mg IM giorni 1 e 15 del 1° ciclo, poi giorno 1 ogni 28 giorni"]
+            ],
+            "note": "Fino a progressione; controllo glicemico.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
         }
       ],
       "next": { "label": "Alla progressione → linee successive", "node": "m1_hr_successive" }
@@ -465,7 +778,17 @@
         {
           "name": "Olaparib o talazoparib",
           "aifa": "reimbursed",
-          "key": "HER2-negativo gBRCA1/2 mutato, indipendentemente dallo stato HR; nelle HR+ serve pregressa ET o non eleggibilità alla stessa."
+          "key": "HER2-negativo gBRCA1/2 mutato, indipendentemente dallo stato HR; nelle HR+ serve pregressa ET o non eleggibilità alla stessa.",
+          "regimen": {
+            "trial": "OlympiAD · EMBRACA",
+            "endpoint": "PFS: olaparib 7,0 vs 4,2 mesi (HR 0,58); talazoparib 8,6 vs 5,6 mesi (HR 0,54)",
+            "rows": [
+              ["Olaparib", "300 mg per os ×2/die, in continuo"],
+              ["Talazoparib", "1 mg/die per os, in continuo"]
+            ],
+            "note": "Fino a progressione o tossicità inaccettabile.",
+            "sources": [{"type": "pubmed", "label": "OlympiAD", "doi": "10.1056/NEJMoa1706450"}, {"type": "pubmed", "label": "EMBRACA", "doi": "10.1056/NEJMoa1802905"}]
+          }
         }
       ],
       "next": { "label": "Alla progressione → linee successive", "node": "m1_hr_successive" }
@@ -477,12 +800,29 @@
         {
           "name": "Everolimus + exemestane",
           "aifa": "reimbursed",
-          "key": "BOLERO-2."
+          "key": "BOLERO-2.",
+          "regimen": {
+            "trial": "BOLERO-2",
+            "endpoint": "PFS 6,9 vs 2,8 mesi, HR 0,43",
+            "rows": [
+              ["Everolimus", "10 mg/die per os"],
+              ["Exemestane", "25 mg/die per os"]
+            ],
+            "note": "Fino a progressione; profilassi della stomatite.",
+            "sources": [{"type": "pubmed", "label": "BOLERO-2", "doi": "10.1056/NEJMoa1109653"}]
+          }
         },
         {
           "name": "Cambio di fulvestrant o di CDK4/6i",
           "aifa": "standard",
-          "key": "Alternativa in assenza di alterazioni target."
+          "key": "Alternativa in assenza di alterazioni target.",
+          "regimen": {
+            "rows": [
+              ["Fulvestrant", "500 mg IM giorni 1 e 15 del 1° ciclo, poi giorno 1 ogni 28 giorni"],
+              ["± altro CDK4/6i", "dosi come in 1ª linea"]
+            ],
+            "sources": [{"type": "rimborsabilita"}, {"type": "standard"}]
+          }
         }
       ],
       "next": { "label": "Alla progressione → linee successive", "node": "m1_hr_successive" }
@@ -505,7 +845,16 @@
           "name": "Trastuzumab deruxtecan (T-DXd)",
           "aifa": "reimbursed",
           "key": "HER2-low dopo ≥1 linea di CT per malattia metastatica (DESTINY-Breast04). Rimborsato anche nell'HR+ dal 9 gennaio 2024.",
-          "detail": "L'estensione EMA 2025 a HER2-ultralow e all'uso dopo la sola ET (DESTINY-Breast06) non è ancora recepita da un registro italiano dedicato. Attenzione all'ILD/polmonite: incidenza cumulativa 15-17% con follow-up lungo."
+          "detail": "L'estensione EMA 2025 a HER2-ultralow e all'uso dopo la sola ET (DESTINY-Breast06) non è ancora recepita da un registro italiano dedicato. Attenzione all'ILD/polmonite: incidenza cumulativa 15-17% con follow-up lungo.",
+          "regimen": {
+            "trial": "DESTINY-Breast04",
+            "endpoint": "PFS nella coorte HR+ 10,1 vs 5,4 mesi, HR 0,51",
+            "rows": [
+              ["Trastuzumab deruxtecan", "5,4 mg/kg EV ogni 3 settimane"]
+            ],
+            "note": "Fino a progressione o tossicità inaccettabile.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
         }
       ],
       "next": { "label": "Alla progressione", "node": "m1_hr_adc" }
@@ -517,17 +866,44 @@
         {
           "name": "Sacituzumab govitecan",
           "aifa": "reimbursed",
-          "key": "Metastasi viscerali, dopo ET e almeno altre 2 terapie sistemiche (TROPiCS-02). Rimborsato dal 20 febbraio 2025."
+          "key": "Metastasi viscerali, dopo ET e almeno altre 2 terapie sistemiche (TROPiCS-02). Rimborsato dal 20 febbraio 2025.",
+          "regimen": {
+            "trial": "TROPiCS-02",
+            "endpoint": "PFS 5,5 vs 4,0 mesi, HR 0,66",
+            "rows": [
+              ["Sacituzumab govitecan", "10 mg/kg EV giorni 1 e 8 ogni 21 giorni"]
+            ],
+            "note": "Fino a progressione o tossicità inaccettabile.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
         },
         {
           "name": "Datopotamab deruxtecan",
           "aifa": "not_reimbursed",
-          "key": "Autorizzato EMA (aprile 2025), non rimborsato in Italia."
+          "key": "Autorizzato EMA (aprile 2025), non rimborsato in Italia.",
+          "regimen": {
+            "trial": "TROPION-Breast01",
+            "endpoint": "PFS HR 0,63; OS non significativa (HR 1,01)",
+            "rows": [
+              ["Datopotamab deruxtecan", "6 mg/kg EV ogni 3 settimane"]
+            ],
+            "note": "Fino a progressione.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
         },
         {
           "name": "Chemioterapia sequenziale (capecitabina, eribulina, vinorelbina)",
           "aifa": "standard",
-          "key": "Dopo l'esaurimento delle opzioni target."
+          "key": "Dopo l'esaurimento delle opzioni target.",
+          "regimen": {
+            "rows": [
+              ["Capecitabina", "1000-1250 mg/m² per os ×2/die, giorni 1-14 ogni 21 giorni"],
+              ["Eribulina", "1,4 mg/m² EV giorni 1 e 8 ogni 21 giorni"],
+              ["Vinorelbina", "25-30 mg/m² EV giorni 1 e 8 ogni 21 giorni (o per os)"]
+            ],
+            "note": "Monoterapie in sequenza, fino a progressione o tossicità.",
+            "sources": [{"type": "pubmed", "label": "EMBRACE", "doi": "10.1016/S0140-6736(11)60070-6"}, {"type": "standard"}]
+          }
         }
       ]
     },
@@ -539,7 +915,18 @@
         {
           "name": "Docetaxel + trastuzumab + pertuzumab",
           "aifa": "reimbursed",
-          "key": "CLEOPATRA: OS mediana 57,1 vs 40,8 mesi (HR 0,69), beneficio mantenuto oltre 8 anni."
+          "key": "CLEOPATRA: OS mediana 57,1 vs 40,8 mesi (HR 0,69), beneficio mantenuto oltre 8 anni.",
+          "regimen": {
+            "trial": "CLEOPATRA",
+            "endpoint": "PFS 18,5 vs 12,4 mesi, HR 0,62",
+            "rows": [
+              ["Docetaxel", "75 mg/m² EV ogni 3 settimane (fino a 100) ×6 cicli"],
+              ["Trastuzumab", "8 mg/kg EV carico, poi 6 mg/kg EV ogni 3 settimane"],
+              ["Pertuzumab", "840 mg EV carico, poi 420 mg EV ogni 3 settimane"]
+            ],
+            "note": "Trastuzumab + pertuzumab proseguiti fino a progressione (± ET di mantenimento se HR+).",
+            "sources": [{"type": "pubmed", "label": "CLEOPATRA", "doi": "10.1016/S1470-2045(19)30863-0"}]
+          }
         }
       ],
       "next": { "label": "Alla progressione → 2ª linea", "node": "m1_her2_encefalo" }
@@ -561,7 +948,16 @@
           "name": "Trastuzumab deruxtecan (T-DXd)",
           "aifa": "reimbursed",
           "key": "Preferito a T-DM1 (DESTINY-Breast03): OS 52,6 vs 42,7 mesi, HR 0,73.",
-          "detail": "ILD/polmonite: incidenza cumulativa 15-17% con follow-up lungo (grado 5 ~2%). Dispnea o tosse di nuova insorgenza impongono sospensione e work-up immediati."
+          "detail": "ILD/polmonite: incidenza cumulativa 15-17% con follow-up lungo (grado 5 ~2%). Dispnea o tosse di nuova insorgenza impongono sospensione e work-up immediati.",
+          "regimen": {
+            "trial": "DESTINY-Breast03",
+            "endpoint": "PFS a 12 mesi 75,8% vs 34,1%, HR 0,28",
+            "rows": [
+              ["Trastuzumab deruxtecan", "5,4 mg/kg EV ogni 3 settimane"]
+            ],
+            "note": "Fino a progressione o tossicità inaccettabile.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
         }
       ],
       "next": { "label": "Alla progressione → linee successive", "node": "m1_her2_successive" }
@@ -573,7 +969,18 @@
         {
           "name": "Tucatinib + trastuzumab + capecitabina",
           "aifa": "reimbursed",
-          "key": "Da preferire con metastasi encefaliche attive o progressione intracranica, per la maggiore efficacia sulle metastasi cerebrali (HER2CLIMB, unico regime con dati prospettici dedicati)."
+          "key": "Da preferire con metastasi encefaliche attive o progressione intracranica, per la maggiore efficacia sulle metastasi cerebrali (HER2CLIMB, unico regime con dati prospettici dedicati).",
+          "regimen": {
+            "trial": "HER2CLIMB",
+            "endpoint": "PFS 7,8 vs 5,6 mesi, HR 0,54",
+            "rows": [
+              ["Tucatinib", "300 mg per os ×2/die, in continuo"],
+              ["Trastuzumab", "8 mg/kg EV carico, poi 6 mg/kg EV ogni 3 settimane"],
+              ["Capecitabina", "1000 mg/m² per os ×2/die, giorni 1-14 ogni 21 giorni"]
+            ],
+            "note": "Fino a progressione.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
         }
       ],
       "next": { "label": "Alla progressione → linee successive", "node": "m1_her2_successive" }
@@ -585,12 +992,28 @@
         {
           "name": "T-DM1 (se non usato prima)",
           "aifa": "reimbursed",
-          "key": "Opzione dopo T-DXd."
+          "key": "Opzione dopo T-DXd.",
+          "regimen": {
+            "trial": "EMILIA",
+            "endpoint": "PFS 9,6 vs 6,4 mesi (HR 0,65); OS 30,9 vs 25,1 mesi (HR 0,68)",
+            "rows": [
+              ["Trastuzumab emtansine (T-DM1)", "3,6 mg/kg EV ogni 21 giorni"]
+            ],
+            "note": "Fino a progressione.",
+            "sources": [{"type": "pubmed", "label": "EMILIA", "doi": "10.1056/NEJMoa1209124"}]
+          }
         },
         {
           "name": "Lapatinib + capecitabina",
           "aifa": "reimbursed",
-          "key": "Secondo performance status e trattamenti precedenti."
+          "key": "Secondo performance status e trattamenti precedenti.",
+          "regimen": {
+            "rows": [
+              ["Lapatinib", "1250 mg/die per os, in continuo"],
+              ["Capecitabina", "1000 mg/m² per os ×2/die, giorni 1-14 ogni 21 giorni"]
+            ],
+            "sources": [{"type": "pubmed", "label": "Geyer 2006", "doi": "10.1056/NEJMoa064320"}, {"type": "pubmed", "label": "EMILIA", "doi": "10.1056/NEJMoa1209124"}]
+          }
         }
       ]
     },
@@ -613,13 +1036,33 @@
         {
           "name": "Pembrolizumab + chemioterapia",
           "aifa": "unknown",
-          "key": "CPS ≥10 con 22C3 (KEYNOTE-355). La scheda non indica lo stato di rimborsabilità AIFA."
+          "key": "CPS ≥10 con 22C3 (KEYNOTE-355). La scheda non indica lo stato di rimborsabilità AIFA.",
+          "regimen": {
+            "trial": "KEYNOTE-355",
+            "endpoint": "PFS con CPS ≥10: 9,7 vs 5,6 mesi, HR 0,65",
+            "rows": [
+              ["Pembrolizumab", "200 mg EV ogni 3 settimane"],
+              ["+ chemioterapia", "nab-paclitaxel, paclitaxel o gemcitabina + carboplatino"]
+            ],
+            "note": "PD-L1 CPS ≥10 (22C3).",
+            "sources": [{"type": "pubmed", "label": "KEYNOTE-355", "doi": "10.1016/S0140-6736(20)32531-9"}]
+          }
         },
         {
           "name": "Atezolizumab + nab-paclitaxel",
           "aifa": "reimbursed",
           "key": "SP142 ≥1% (IMpassion130). In UE/Italia autorizzato e rimborsato (classe H, registro AIFA): il ritiro del 2021 riguarda solo gli USA (FDA).",
-          "detail": "Eleggibilità da registro: prima linea metastatica, ECOG 0-2; escluse le pazienti con taxani nei 12 mesi precedenti o precedente anti-PD-1/PD-L1."
+          "detail": "Eleggibilità da registro: prima linea metastatica, ECOG 0-2; escluse le pazienti con taxani nei 12 mesi precedenti o precedente anti-PD-1/PD-L1.",
+          "regimen": {
+            "trial": "IMpassion130",
+            "endpoint": "PFS nei PD-L1+ 7,5 vs 5,0 mesi, HR 0,62",
+            "rows": [
+              ["Atezolizumab", "840 mg EV ogni 2 settimane"],
+              ["Nab-paclitaxel", "100 mg/m² EV giorni 1, 8 e 15 ogni 28 giorni"]
+            ],
+            "note": "PD-L1 IC ≥1% (SP142); fino a progressione.",
+            "sources": [{"type": "pubmed", "label": "IMpassion130", "doi": "10.1093/jnci/djab004"}]
+          }
         }
       ],
       "next": { "label": "Alla progressione → 2ª linea", "node": "m1_tn_2l" }
@@ -631,12 +1074,28 @@
         {
           "name": "Olaparib o talazoparib",
           "aifa": "reimbursed",
-          "key": "gBRCA1/2 mutato."
+          "key": "gBRCA1/2 mutato.",
+          "regimen": {
+            "trial": "OlympiAD · EMBRACA",
+            "endpoint": "PFS: olaparib 7,0 vs 4,2 mesi (HR 0,58); talazoparib 8,6 vs 5,6 mesi (HR 0,54)",
+            "rows": [
+              ["Olaparib", "300 mg per os ×2/die, in continuo"],
+              ["Talazoparib", "1 mg/die per os, in continuo"]
+            ],
+            "note": "Fino a progressione o tossicità inaccettabile.",
+            "sources": [{"type": "pubmed", "label": "OlympiAD", "doi": "10.1056/NEJMoa1706450"}, {"type": "pubmed", "label": "EMBRACA", "doi": "10.1056/NEJMoa1802905"}]
+          }
         },
         {
           "name": "Chemioterapia a base di platino",
           "aifa": "standard",
-          "key": "Alternativa nelle pazienti gBRCA1/2 mutate."
+          "key": "Alternativa nelle pazienti gBRCA1/2 mutate.",
+          "regimen": {
+            "rows": [
+              ["Carboplatino", "AUC 6 EV ogni 21 giorni"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
         }
       ],
       "next": { "label": "Alla progressione → 2ª linea", "node": "m1_tn_2l" }
@@ -648,7 +1107,15 @@
         {
           "name": "Chemioterapia (taxano ± carboplatino ± bevacizumab)",
           "aifa": "standard",
-          "key": "PD-L1 negativo e BRCA wild-type."
+          "key": "PD-L1 negativo e BRCA wild-type.",
+          "regimen": {
+            "rows": [
+              ["Paclitaxel", "90 mg/m² EV giorni 1, 8 e 15 ogni 28 giorni"],
+              ["± Bevacizumab", "10 mg/kg EV giorni 1 e 15"],
+              ["± Carboplatino", "AUC 2 settimanale o AUC 5-6 ogni 21 giorni"]
+            ],
+            "sources": [{"type": "pubmed", "label": "E2100", "doi": "10.1056/NEJMoa072113"}, {"type": "standard"}]
+          }
         }
       ],
       "next": { "label": "Alla progressione → 2ª linea", "node": "m1_tn_2l" }
@@ -661,17 +1128,44 @@
           "name": "Sacituzumab govitecan",
           "aifa": "reimbursed",
           "key": "ASCENT: OS 12,1 vs 6,7 mesi.",
-          "detail": "Rimborsato dopo ≥2 terapie sistemiche; dal 2025 anche in 2ª linea metastatica se la recidiva è avvenuta oltre 12 mesi dal (neo)adiuvante. Attenzione al genotipo UGT1A1*28 (tossicità ematologica)."
+          "detail": "Rimborsato dopo ≥2 terapie sistemiche; dal 2025 anche in 2ª linea metastatica se la recidiva è avvenuta oltre 12 mesi dal (neo)adiuvante. Attenzione al genotipo UGT1A1*28 (tossicità ematologica).",
+          "regimen": {
+            "trial": "ASCENT",
+            "endpoint": "PFS 5,6 vs 1,7 mesi, HR 0,41",
+            "rows": [
+              ["Sacituzumab govitecan", "10 mg/kg EV giorni 1 e 8 ogni 21 giorni"]
+            ],
+            "note": "Fino a progressione o tossicità inaccettabile.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
         },
         {
           "name": "Trastuzumab deruxtecan (T-DXd) se HER2-low",
           "aifa": "reimbursed",
-          "key": "DESTINY-Breast04."
+          "key": "DESTINY-Breast04.",
+          "regimen": {
+            "trial": "DESTINY-Breast04",
+            "endpoint": "PFS nella popolazione totale 9,9 vs 5,1 mesi, HR 0,50",
+            "rows": [
+              ["Trastuzumab deruxtecan", "5,4 mg/kg EV ogni 3 settimane"]
+            ],
+            "note": "Fino a progressione o tossicità inaccettabile.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
         },
         {
           "name": "Chemioterapia sequenziale (eribulina, capecitabina, vinorelbina)",
           "aifa": "standard",
-          "key": "Linee successive."
+          "key": "Linee successive.",
+          "regimen": {
+            "rows": [
+              ["Capecitabina", "1000-1250 mg/m² per os ×2/die, giorni 1-14 ogni 21 giorni"],
+              ["Eribulina", "1,4 mg/m² EV giorni 1 e 8 ogni 21 giorni"],
+              ["Vinorelbina", "25-30 mg/m² EV giorni 1 e 8 ogni 21 giorni (o per os)"]
+            ],
+            "note": "Monoterapie in sequenza, fino a progressione o tossicità.",
+            "sources": [{"type": "pubmed", "label": "EMBRACE", "doi": "10.1016/S0140-6736(11)60070-6"}, {"type": "standard"}]
+          }
         }
       ]
     },
@@ -722,7 +1216,17 @@
         {
           "name": "Chemioterapia adiuvante",
           "aifa": "standard",
-          "key": "CALOR: beneficio in DFS dopo l'asportazione della recidiva, più marcato se HR-negativo."
+          "key": "CALOR: beneficio in DFS dopo l'asportazione della recidiva, più marcato se HR-negativo.",
+          "regimen": {
+            "trial": "CALOR",
+            "rows": [
+              ["AC dose-dense", "doxorubicina 60 mg/m² + ciclofosfamide 600 mg/m² EV ogni 14 giorni ×4 (con G-CSF)"],
+              ["→ Paclitaxel", "80 mg/m² EV settimanale ×12"],
+              ["oppure TC", "docetaxel 75 mg/m² + ciclofosfamide 600 mg/m² EV ogni 21 giorni ×4-6"]
+            ],
+            "note": "Nella recidiva ER-negativa completamente resecata; se HR+ terapia endocrina.",
+            "sources": [{"type": "standard"}]
+          }
         }
       ]
     }

@@ -10,11 +10,6 @@ Il riferimento italiano resta la linea guida AIOM "Emergenze ed urgenze in oncol
 
 I principi generali restano tre: stabilizzazione secondo l'approccio ABCDE, identificazione attiva della causa reversibile (molte urgenze oncologiche sono correggibili se riconosciute in tempo) e valutazione prognostica che orienti un trattamento proporzionato agli obiettivi di cura del singolo paziente, evitando sia l'inerzia terapeutica sia l'accanimento in un contesto di prognosi ormai limitata.
 
-#### Punti chiave
-
-- Riferimento principale: AIOM 2021 (emergenze/urgenze), tuttora la versione più recente; ESMO Handbook 2018, integrato dalle singole ESMO CPG tematiche più aggiornate.
-- Gestione multidisciplinare per definizione: oncologia, urgenza, radiologia interventistica, radioterapia, chirurgia, cardiologia, neurologia, cure palliative.
-- Stabilizzazione ABCDE, ricerca della causa reversibile, proporzionalità del trattamento rispetto alla prognosi e agli obiettivi di cura condivisi.
 
 ## Principi operativi
 
@@ -22,14 +17,8 @@ La valutazione iniziale deve essere rapida e strutturata: parametri vitali, stat
 
 La soglia per la consulenza specialistica urgente deve essere bassa: compromissione emodinamica, respiratoria, neurologica, emorragica o metabolica giustifica sempre l'attivazione tempestiva dello specialista competente, senza attendere la piena stabilizzazione del quadro. L'imaging va scelto in modo mirato sul sospetto clinico — ecografia, TC con contrasto, RM, angiografia, ecocardiogramma o semplice radiografia — evitando percorsi diagnostici standardizzati che non tengano conto della specifica urgenza sospettata.
 
-!!Un principio da ricordare sempre in sede di orale: nei quadri instabili non si deve ritardare un trattamento salvavita per completare l'iter diagnostico!! — la stabilizzazione precede, quando necessario, la caratterizzazione completa. Infine, nei pazienti con prognosi estremamente limitata l'integrazione tempestiva di controllo sintomatico e cure palliative non è un'alternativa al trattamento attivo, ma parte integrante della gestione dell'urgenza stessa.
+!!Un principio da ricordare sempre: nei quadri instabili non si deve ritardare un trattamento salvavita per completare l'iter diagnostico!! — la stabilizzazione precede, quando necessario, la caratterizzazione completa. Infine, nei pazienti con prognosi estremamente limitata l'integrazione tempestiva di controllo sintomatico e cure palliative non è un'alternativa al trattamento attivo, ma parte integrante della gestione dell'urgenza stessa.
 
-#### Punti chiave
-
-- Valutazione rapida e strutturata: vitali, neurologico, dolore, performance status, terapia in corso, anticoagulanti/immunosoppressione, direttive condivise.
-- Soglia bassa per consulenza specialistica urgente in caso di compromissione emodinamica, respiratoria, neurologica, emorragica o metabolica.
-- Non ritardare trattamenti salvavita per completare la diagnostica nei quadri instabili.
-- Integrazione precoce delle cure palliative nei pazienti a prognosi molto limitata.
 
 ## Complicanze cardiovascolari
 
@@ -59,12 +48,6 @@ Di fronte a un'occlusione trombotica del catetere va sempre esclusa preliminarme
 
 Le altre complicanze da tenere presenti nella gestione dei CVC sono la trombosi venosa catetere-correlata, l'infezione (locale o batteriemica), il malposizionamento, il sanguinamento nel sito di inserzione, lo pneumotorace e, più raramente, l'embolia gassosa in corso di manipolazione.
 
-#### Punti chiave — complicanze cardiovascolari
-
-- Tamponamento: ecocardiogramma per la diagnosi, pericardiocentesi/drenaggio urgente se instabilità emodinamica; alto rischio di recidiva, da anticipare con terapia sistemica/radioterapia/opzioni locali.
-- Crisi ipertensiva: distinguere emergenza (danno d'organo) da urgenza; frequente con antiangiogenici; ACE-inibitori/sartani considerabili in questo contesto.
-- SVCS: angio-TC torace come esame principale; stenting per sollievo rapido nei quadri gravi; segni di allarme (stridor, confusione, edema cerebrale/laringeo) da riconoscere subito.
-- CVC: escludere causa meccanica prima della diagnosi di trombosi; fibrinolisi locale dopo fallimento della manovra meccanica.
 
 ## Complicanze neurologiche
 
@@ -96,13 +79,6 @@ Il desametasone è il cardine del trattamento medico dell'edema vasogenico assoc
 
 La TC encefalo urgente e la correzione di un'eventuale coagulopatia o trombocitopenia sono i primi due passaggi imprescindibili, insieme a una valutazione neurochirurgica e neuroradiologica immediata. La gestione successiva comprende il controllo della pressione arteriosa, delle crisi epilettiche, dell'ipertensione endocranica secondaria e la revisione critica di eventuali terapie anticoagulanti o antiaggreganti in corso.
 
-#### Punti chiave — complicanze neurologiche
-
-- Compressione midollare: RM urgente di tutto il rachide, steroide immediato su sospetto clinico, consulto congiunto radioterapista/chirurgo spinale.
-- Carcinosi meningea: RM encefalo+neuroasse, rachicentesi se sicura, gestione multimodale individualizzata.
-- Ipertensione endocranica: TC urgente, desametasone per l'edema vasogenico, neurochirurgia/radioterapia secondo causa.
-- Nessuna profilassi antiepilettica primaria senza crisi pregresse; terapia dopo la prima crisi con attenzione alle interazioni.
-- Emorragia intracranica: TC urgente, correzione della coagulopatia, valutazione neurochirurgica immediata.
 
 ## Complicanze renali e metaboliche
 
@@ -134,12 +110,6 @@ La prevenzione si basa su idratazione adeguata in tutti i pazienti a rischio, al
 
 > ++Verifica in letteratura:++ un consensus statunitense aggiornato con metodo Delphi (2023) conferma l'impianto classico prevenzione/stratificazione del rischio ma rafforza alcuni punti pratici: preferenza per la rasburicase (anziché l'allopurinolo) nei pazienti ad alto rischio fin dall'inizio della terapia citoriduttiva, attenzione allo screening di deficit di G6PD prima della somministrazione di rasburicase (rischio di emolisi), e un interesse crescente — ancora non standard di cura ma in letteratura recente — per schemi di rasburicase a dose fissa anziché calcolata sul peso corporeo, con l'obiettivo di ridurre i costi mantenendo l'efficacia nei pazienti a rischio intermedio-alto.
 
-#### Punti chiave — complicanze renali e metaboliche
-
-- IRA: cercare causa reversibile (volemia, nefrotossici, ostruzione, lisi tumorale, infiltrazione); consulto nefrologico/dialisi se iperkaliemia refrattaria, acidosi, edema polmonare o anuria.
-- Ipercalcemia: fluidi + antiriassorbitivo osseo (denosumab ora preferito secondo Endocrine Society 2023), calcitonina nei casi severi come ponte, trattare la neoplasia di base.
-- SIADH/iponatriemia: distinguere le cause, salina ipertonica se grave sintomatica, correzione lenta per evitare mielinolisi osmotica.
-- Lisi tumorale: stratificare il rischio, idratazione universale, allopurinolo/rasburicase secondo rischio, monitoraggio elettrolitico stretto, dialisi se refrattaria.
 
 ## Complicanze respiratorie
 
@@ -159,11 +129,6 @@ Nell'emottisi massiva le priorità sono la protezione della via aerea, il suppor
 
 Si definisce persistente quando supera le 48 ore e intrattabile quando supera il mese di durata. Le cause da ricercare sono gastroenteriche, mediastiniche, diaframmatiche, del sistema nervoso centrale, farmacologiche (es. desametasone stesso, alcuni chemioterapici) e metaboliche. Le opzioni sintomatiche più utilizzate sono metoclopramide, baclofen o clorpromazina, da individualizzare su causa sospetta, comorbidità e profilo di tossicità di ciascun farmaco nel singolo paziente.
 
-#### Punti chiave — complicanze respiratorie
-
-- Dispnea: trattamento sempre orientato alla causa; oppioidi per la dispnea refrattaria come misura aggiuntiva, sicuri sulla saturazione nelle evidenze disponibili.
-- Emottisi massiva: protezione della via aerea come priorità assoluta, poi supporto emodinamico, broncoscopia/embolizzazione bronchiale.
-- Singhiozzo incoercibile: distinguere persistente (>48h) da intrattabile (>1 mese); metoclopramide, baclofen o clorpromazina secondo causa.
 
 ## Emergenze immuno-ematologiche
 
@@ -195,13 +160,6 @@ L'infusione va fermata immediatamente alla comparsa dei sintomi; la gravità va 
 
 Il sospetto nasce dalla combinazione di sanguinamento e/o trombosi, piastrinopenia, fibrinogeno basso, D-dimero elevato e segni di consumo dei fattori della coagulazione. Il trattamento è sempre in primo luogo quello della causa scatenante (spesso una sepsi o la neoplasia stessa, in particolare la leucemia promielocitica acuta), con supporto trasfusionale mirato se presente sanguinamento attivo o in previsione di una procedura invasiva, e correzione degli squilibri in stretta collaborazione con l'ematologo.
 
-#### Punti chiave — emergenze immuno-ematologiche
-
-- Neutropenia febbrile: definizione invariata (<500/µL o <1.000/µL in rapido calo); antibiotici entro un'ora nel paziente instabile; MASCC/CISNE per selezionare i candidati alla gestione ambulatoriale.
-- Shock settico: fluidi, vasopressori, antibiotici senza ritardo, controllo della fonte.
-- Reazioni trasfusionali: interruzione immediata, diagnosi differenziale ampia (emolisi, allergia/anafilassi, TRALI, TACO, sepsi da emocomponente).
-- Ipersensibilità/infusion reaction: adrenalina IM di prima linea nell'anafilassi; decisione su rechallenge/desensibilizzazione individualizzata.
-- CID: trattare la causa, supporto trasfusionale mirato, gestione condivisa con l'ematologo.
 
 ## Stravaso di chemioterapici
 
@@ -209,19 +167,12 @@ Il sospetto nasce da dolore, bruciore, eritema, formazione di pomfo, edema, resi
 
 L'applicazione di freddo o calore locale va scelta secondo l'agente coinvolto, evitando sempre il contatto diretto tra ghiaccio/impacco caldo e la cute. Per gli alcaloidi della vinca e i taxani, ialuronidasi locale e calore sono le misure previste dai protocolli standard. Per le antracicline, il dexrazoxane per via endovenosa entro le prime ore dallo stravaso può essere considerato come antidoto specifico.
 
-> ++Verifica in letteratura:++ lo schema di dexrazoxane riportato nella scheda (1.000 mg/m² alle ore 0 e 24, poi 500 mg/m² a 48 ore) è confermato dalla scheda tecnica statunitense più recente (Totect/Savene), che specifica: giorno 1 e giorno 2, 1.000 mg/m² (dose massima 2.000 mg), giorno 3, 500 mg/m² (dose massima 1.000 mg), somministrazioni successive a distanza di 24 ore ± 3 ore l'una dall'altra. La finestra temporale per l'inizio del trattamento resta ==entro le prime 6 ore dallo stravaso==, non oltre — un dettaglio spesso oggetto di domanda in sede di orale, perché l'efficacia dell'antidoto si riduce nettamente se l'infusione inizia più tardi.
+> ++Verifica in letteratura:++ lo schema di dexrazoxane riportato nella scheda (1.000 mg/m² alle ore 0 e 24, poi 500 mg/m² a 48 ore) è confermato dalla scheda tecnica statunitense più recente (Totect/Savene), che specifica: giorno 1 e giorno 2, 1.000 mg/m² (dose massima 2.000 mg), giorno 3, 500 mg/m² (dose massima 1.000 mg), somministrazioni successive a distanza di 24 ore ± 3 ore l'una dall'altra. La finestra temporale per l'inizio del trattamento resta ==entro le prime 6 ore dallo stravaso==, non oltre — un dettaglio importante, perché l'efficacia dell'antidoto si riduce nettamente se l'infusione inizia più tardi.
 
 Un consulto chirurgico o plastico è indicato in caso di necrosi, ulcerazione, sindrome compartimentale o lesione in progressione nonostante le misure iniziali — segni che indicano il fallimento della gestione conservativa e la necessità di un intervento più invasivo.
 
-#### Punti chiave
 
-- Non rimuovere l'accesso: fermare l'infusione, aspirare, delimitare/fotografare, identificare il farmaco.
-- Freddo o caldo secondo l'agente; mai contatto diretto con la cute.
-- Vinca-alcaloidi/taxani: ialuronidasi + calore. Antracicline: dexrazoxane entro 6 ore, schema 1.000/1.000/500 mg/m² confermato dalla scheda tecnica.
-- Consulto chirurgico/plastico se necrosi, ulcerazione o sindrome compartimentale.
-
-## Punti ad alta resa per orale
-
+## Punti chiave
 - Compressione midollare: RM urgente, steroide immediato e consulto radiochirurgico congiunto.
 - SVCS con segni gravi (stridor, confusione, edema cerebrale/laringeo): angio-TC e stenting per sollievo rapido.
 - Tamponamento cardiaco: ecocardiogramma per la diagnosi, pericardiocentesi urgente se instabilità emodinamica.

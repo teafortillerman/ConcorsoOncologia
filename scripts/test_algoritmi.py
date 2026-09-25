@@ -1,5 +1,6 @@
 import copy
 import json
+import re
 import tempfile
 import unittest
 from pathlib import Path
@@ -81,6 +82,48 @@ class ValidateAlgorithmTest(unittest.TestCase):
         del algo["nodes"]["r2"]["options"][0]["key"]
         errors = validate_algorithm(algo, self.root)
         self.assertIn("nodo 'r2': l'opzione 1 non ha 'key'", errors)
+
+    def test_valid_regimen_is_accepted(self):
+        algo = make_algo()
+        algo["nodes"]["r1"]["options"][0]["regimen"] = {
+            "trial": "Trial X", "endpoint": "PFS 10,0 vs 5,0 mesi, HR 0,50",
+            "rows": [["Farmaco X", "10 mg/die per os"]], "note": "Fino a progressione.",
+            "sources": [{"type": "rimborsabilita"}, {"type": "pubmed", "label": "Trial X", "doi": "10.1/x"}]}
+        self.assertEqual(validate_algorithm(algo, self.root), [])
+
+    def test_regimen_rows_must_be_pairs(self):
+        algo = make_algo()
+        algo["nodes"]["r1"]["options"][0]["regimen"] = {"rows": [["solo farmaco"]], "sources": [{"type": "standard"}]}
+        errors = validate_algorithm(algo, self.root)
+        self.assertTrue(any("[farmaco, dose]" in e for e in errors), errors)
+
+    def test_regimen_pubmed_source_needs_doi(self):
+        algo = make_algo()
+        algo["nodes"]["r1"]["options"][0]["regimen"] = {
+            "rows": [["X", "1 mg"]], "sources": [{"type": "pubmed", "label": "Trial X"}]}
+        errors = validate_algorithm(algo, self.root)
+        self.assertTrue(any("'label' e 'doi'" in e for e in errors), errors)
+
+    def test_regimen_endpoint_must_be_pfs_or_os(self):
+        algo = make_algo()
+        algo["nodes"]["r1"]["options"][0]["regimen"] = {
+            "trial": "Trial X", "endpoint": "pCR 64,8% vs 51,2%",
+            "rows": [["X", "1 mg"]], "sources": [{"type": "standard"}]}
+        errors = validate_algorithm(algo, self.root)
+        self.assertTrue(any("o OS" in e for e in errors), errors)
+
+    def test_regimen_endpoint_needs_trial(self):
+        algo = make_algo()
+        algo["nodes"]["r1"]["options"][0]["regimen"] = {
+            "endpoint": "PFS 10 vs 5 mesi", "rows": [["X", "1 mg"]], "sources": [{"type": "standard"}]}
+        errors = validate_algorithm(algo, self.root)
+        self.assertTrue(any("richiede 'regimen.trial'" in e for e in errors), errors)
+
+    def test_regimen_source_type_is_checked(self):
+        algo = make_algo()
+        algo["nodes"]["r1"]["options"][0]["regimen"] = {"rows": [["X", "1 mg"]], "sources": [{"type": "web"}]}
+        errors = validate_algorithm(algo, self.root)
+        self.assertTrue(any("tipo non valido" in e for e in errors), errors)
 
     def test_invalid_node_type(self):
         algo = make_algo()
@@ -215,3 +258,242 @@ class MammellaAlgorithmTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class MammellaRegimenTest(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.data = json.loads(MAMMELLA.read_text(encoding="utf-8"))
+        text = (ROOT / "Schede" / "Trasversali" / "Rimborsabilita.md").read_text(encoding="utf-8")
+        cls.rimborsabilita = text.split("\n## Mammella", 1)[1].split("\n## ", 1)[0]
+
+    def options(self):
+        for node_id, node in self.data["nodes"].items():
+            if node["type"] == "recommendation":
+                for option in node["options"]:
+                    yield node_id, option
+
+    def test_every_drug_option_has_a_regimen(self):
+        # solo i trattamenti locali della recidiva non hanno uno schema farmacologico
+        missing = [(n, o["name"]) for n, o in self.options() if "regimen" not in o and not n.startswith("rec_")]
+        self.assertEqual(missing, [])
+
+    def test_rimborsabilita_doses_match_the_scheda(self):
+        for node_id, option in self.options():
+            regimen = option.get("regimen")
+            if not regimen or {s["type"] for s in regimen["sources"]} != {"rimborsabilita"}:
+                continue
+            for drug, dose in regimen["rows"]:
+                for amount in re.findall(r"\d+(?:,\d+)? mg(?:/kg)?", dose):
+                    self.assertIn(amount, self.rimborsabilita, f"{node_id} / {drug}: {amount}")
+
+    def test_new_targeted_drugs_name_their_registration_trial(self):
+        expected = {"Elacestrant": "EMERALD", "Capivasertib + fulvestrant": "CAPItello-291",
+                    "Tucatinib + trastuzumab + capecitabina": "HER2CLIMB", "Datopotamab deruxtecan": "TROPION-Breast01"}
+        found = {o["name"]: o["regimen"].get("trial") for _, o in self.options() if o["name"] in expected}
+        self.assertEqual(found, expected)
+
+
+NSCLC = ROOT / "Algoritmi" / "polmone_nsclc.algo.json"
+
+
+class NsclcAlgorithmTest(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.data = json.loads(NSCLC.read_text(encoding="utf-8"))
+        text = (ROOT / "Schede" / "Trasversali" / "Rimborsabilita.md").read_text(encoding="utf-8")
+        cls.rimborsabilita = text.split("\n## NSCLC", 1)[1].split("\n## ", 1)[0]
+
+    def options(self):
+        for node_id, node in self.data["nodes"].items():
+            if node["type"] == "recommendation":
+                for option in node["options"]:
+                    yield node_id, option
+
+    def test_is_valid(self):
+        self.assertEqual(validate_algorithm(self.data, ROOT), [])
+
+    def test_three_settings(self):
+        start = self.data["nodes"][self.data["start"]]
+        self.assertEqual([a["label"] for a in start["answers"]],
+                         ["Precoce resecabile (stadio I-III)", "Stadio III non resecabile", "Avanzato / metastatico"])
+
+    def test_driver_groups(self):
+        labels = [a["label"] for a in self.data["nodes"]["m1_driver"]["answers"]]
+        self.assertEqual(len(labels), 6)
+        self.assertIn("Nessun driver (non oncogene-addicted)", labels)
+
+    def test_aifa_statuses_match_the_scheda(self):
+        status = {o["name"]: o["aifa"] for _, o in self.options()}
+        self.assertEqual(status["Repotrectinib"], "not_reimbursed")
+        self.assertEqual(status["Trastuzumab deruxtecan"], "not_reimbursed")
+        self.assertEqual(status["Tislelizumab perioperatorio"], "not_reimbursed")
+        self.assertEqual(status["Nivolumab perioperatorio"], "unknown")
+        self.assertEqual(status["Pembrolizumab perioperatorio"], "reimbursed")
+        self.assertEqual(status["Amivantamab + lazertinib"], "reimbursed")
+
+    def test_rimborsabilita_doses_match_the_scheda(self):
+        for node_id, option in self.options():
+            regimen = option.get("regimen")
+            if not regimen or {s["type"] for s in regimen["sources"]} != {"rimborsabilita"}:
+                continue
+            for drug, dose in regimen["rows"]:
+                for amount in re.findall(r"\d+(?:,\d+)? mg(?:/kg|/m²)?", dose):
+                    self.assertIn(amount, self.rimborsabilita, f"{node_id} / {drug}: {amount}")
+
+    def test_egfr_alk_never_reach_perioperative_immunotherapy(self):
+        # dai rami EGFR/ALK del precoce non si deve arrivare alla CT-ICI perioperatoria
+        from collections import deque
+        for start in ("precoce_egfr", "precoce_alk"):
+            seen, queue = {start}, deque([start])
+            while queue:
+                node = self.data["nodes"][queue.popleft()]
+                nxt = [a["next"] for a in node.get("answers", [])] + ([node["next"]["node"]] if "next" in node else [])
+                for n in nxt:
+                    if n not in seen:
+                        seen.add(n); queue.append(n)
+            self.assertNotIn("precoce_perio", seen)
+
+
+def rimborsabilita_section(title):
+    text = (ROOT / "Schede" / "Trasversali" / "Rimborsabilita.md").read_text(encoding="utf-8")
+    return text.split(f"\n## {title}", 1)[1].split("\n## ", 1)[0]
+
+
+class OrganAlgorithmsTest(unittest.TestCase):
+    CASES = {"polmone_sclc.algo.json": "SCLC (Polmone)", "mesotelioma.algo.json": "Mesotelioma",
+             "esofago.algo.json": "Esofago", "stomaco.algo.json": "Stomaco", "colonretto.algo.json": "Colon-Retto",
+             "ano.algo.json": "Ano", "pancreas.algo.json": "Pancreas", "viebiliari.algo.json": "Vie Biliari",
+             "epatocarcinoma.algo.json": "Epatocarcinoma (HCC)", "gist.algo.json": "GIST", "net.algo.json": "NET (Tumori Neuroendocrini)",
+             "prostata.algo.json": "Prostata", "rene.algo.json": "Rene", "urotelio.algo.json": "Urotelio",
+             "cervice.algo.json": "Cervice", "endometrio.algo.json": "Endometrio", "ovaio.algo.json": "Ovaio",
+             "melanoma.algo.json": "Melanoma", "testacollo.algo.json": "Testa-Collo"}
+    # Senza sezione nella scheda Rimborsabilità: solo validazione.
+    VALID_ONLY = ("gliomi.algo.json", "sarcomi.algo.json")
+
+    def load(self, name):
+        return json.loads((ROOT / "Algoritmi" / name).read_text(encoding="utf-8"))
+
+    def statuses(self, data):
+        return {o["name"]: o["aifa"] for n in data["nodes"].values() if n["type"] == "recommendation" for o in n["options"]}
+
+    def test_are_valid(self):
+        for name in (*self.CASES, *self.VALID_ONLY):
+            with self.subTest(name=name):
+                self.assertEqual(validate_algorithm(self.load(name), ROOT), [])
+
+    def test_rimborsabilita_doses_match_the_scheda(self):
+        missing = []
+        for name, section in self.CASES.items():
+            text = rimborsabilita_section(section).replace("/m²", "/m").replace("m2", "m")
+            for node_id, node in self.load(name)["nodes"].items():
+                for option in node.get("options", []):
+                    regimen = option.get("regimen")
+                    if not regimen or {s["type"] for s in regimen["sources"]} != {"rimborsabilita"}:
+                        continue
+                    for drug, dose in regimen["rows"]:
+                        for amount in re.findall(r"\d+(?:,\d+)? mg(?:/kg|/m²)?", dose):
+                            if amount.replace("/m²", "/m") not in text:
+                                missing.append(f"{name} {node_id} / {drug}: {amount}")
+        self.assertEqual(missing, [])
+
+    def test_sclc_statuses_match_the_scheda(self):
+        status = self.statuses(self.load("polmone_sclc.algo.json"))
+        self.assertEqual(status["Tarlatamab"], "not_reimbursed")
+        self.assertEqual(status["Lurbinectedin + atezolizumab"], "not_reimbursed")
+        self.assertEqual(status["Durvalumab fino a 24 mesi"], "reimbursed")
+        self.assertEqual(status["Atezolizumab + carboplatino-etoposide"], "reimbursed")
+
+    def test_uro_gyn_traps_match_the_scheda(self):
+        cases = {"prostata.algo.json": {"+ Abiraterone 2 anni (very high-risk o cN+)": "not_reimbursed"},
+                 "rene.algo.json": {"Belzutifan": "not_reimbursed"},
+                 "urotelio.algo.json": {"Enfortumab vedotin + pembrolizumab perioperatorio": "not_reimbursed"},
+                 "cervice.algo.json": {"Tisotumab vedotin": "not_reimbursed",
+                                       "Pembrolizumab + CRT → pembrolizumab di mantenimento": "reimbursed"},
+                 "ovaio.algo.json": {"Relacorilant + nab-paclitaxel": "not_reimbursed", "+ Bevacizumab": "not_reimbursed",
+                                     "Mirvetuximab soravtansine (FRα ≥75%)": "reimbursed"}}
+        for name, expected in cases.items():
+            status = self.statuses(self.load(name))
+            for option, aifa in expected.items():
+                with self.subTest(name=name, option=option):
+                    self.assertEqual(status[option], aifa)
+
+    def test_neuro_cute_testacollo_sarcomi_traps(self):
+        cases = {"gliomi.algo.json": {"Vorasidenib": "not_reimbursed", "Regorafenib (buon PS)": "reimbursed",
+                                      "+ TTFields durante la TMZ di mantenimento": "unknown"},
+                 "melanoma.algo.json": {"Lifileucel (TIL)": "not_reimbursed", "Tebentafusp": "reimbursed",
+                                        "Nivolumab + ipilimumab (schema NADINA)": "reimbursed"},
+                 "testacollo.algo.json": {"+ Pembrolizumab perioperatorio (CPS ≥1)": "not_reimbursed", "+ Nivolumab": "not_reimbursed",
+                                          "Toripalimab + gemcitabina-cisplatino": "reimbursed"},
+                 "sarcomi.algo.json": {"Nirogacestat (in progressione)": "not_reimbursed", "Atezolizumab (ASPS)": "not_reimbursed",
+                                       "Tazemetostat (epitelioide INI1/SMARCB1-deficiente)": "not_reimbursed", "Regorafenib": "not_reimbursed"}}
+        for name, expected in cases.items():
+            status = self.statuses(self.load(name))
+            for option, aifa in expected.items():
+                with self.subTest(name=name, option=option):
+                    self.assertEqual(status[option], aifa)
+
+    def test_melanoma_nivo_ipi_is_reimbursed_only_with_pd_l1_below_1(self):
+        nodes = self.load("melanoma.algo.json")["nodes"]
+        status = lambda node: {o["name"]: o["aifa"] for o in nodes[node]["options"]}
+        self.assertEqual(status("adv_io_neg")["Nivolumab + ipilimumab"], "reimbursed")
+        self.assertEqual(status("adv_io_pos")["Nivolumab + ipilimumab"], "not_reimbursed")
+        self.assertEqual(status("adv_io_pos")["Nivolumab + relatlimab"], "not_reimbursed")
+        self.assertEqual(status("brain_asx")["Nivolumab + ipilimumab"], "reimbursed")
+
+    def test_endometrio_pmmr_only_dostarlimab_is_reimbursed(self):
+        nodes = self.load("endometrio.algo.json")["nodes"]
+        pmmr = {o["name"]: o["aifa"] for o in nodes["adv_pmmr"]["options"]}
+        dmmr = {o["name"]: o["aifa"] for o in nodes["adv_dmmr"]["options"]}
+        self.assertEqual(pmmr["Dostarlimab + carboplatino-paclitaxel"], "reimbursed")
+        self.assertEqual(pmmr["Pembrolizumab + carboplatino-paclitaxel"], "not_reimbursed")
+        self.assertEqual(pmmr["Durvalumab + olaparib + carboplatino-paclitaxel"], "not_reimbursed")
+        self.assertEqual(dmmr["Pembrolizumab + carboplatino-paclitaxel"], "reimbursed")
+        names = " ".join(o["name"] for n in nodes.values() for o in n.get("options", []))
+        self.assertNotIn("Atezolizumab", names)
+
+    def test_mesotelioma_statuses_match_the_scheda(self):
+        data = self.load("mesotelioma.algo.json")
+        nonepi = {o["name"]: o["aifa"] for o in data["nodes"]["adv_nonepi"]["options"]}
+        epi = {o["name"]: o["aifa"] for o in data["nodes"]["adv_epi"]["options"]}
+        self.assertEqual(nonepi["Nivolumab + ipilimumab"], "reimbursed")
+        self.assertEqual(epi["Nivolumab + ipilimumab"], "not_reimbursed")
+        self.assertEqual(nonepi["Pembrolizumab + platino-pemetrexed"], "unknown")
+
+    def test_mesotelioma_nivolumab_monotherapy_never_after_immunotherapy(self):
+        names = [o["name"] for o in self.load("mesotelioma.algo.json")["nodes"]["adv_2l_post_io"]["options"]]
+        self.assertNotIn("Nivolumab in monoterapia", names)
+
+
+
+class GastrointestinaliStatusTest(unittest.TestCase):
+    def status(self, name, node, option):
+        data = json.loads((ROOT / "Algoritmi" / name).read_text(encoding="utf-8"))
+        return {o["name"]: o["aifa"] for o in data["nodes"][node]["options"]}[option]
+
+    def test_trap_statuses_match_the_schede(self):
+        cases = [
+            ("esofago.algo.json", "loc_adj", "Nivolumab adiuvante 1 anno se malattia residua", "not_reimbursed"),
+            ("esofago.algo.json", "adv_scc", "Nivolumab + ipilimumab", "not_reimbursed"),
+            ("stomaco.algo.json", "adv_cldn", "Zolbetuximab + CAPOX", "not_reimbursed"),
+            ("stomaco.algo.json", "loc_perio", "Durvalumab + FLOT perioperatorio", "not_reimbursed"),
+            ("stomaco.algo.json", "st_2l_pos", "Trastuzumab deruxtecan", "reimbursed"),
+            ("colonretto.algo.json", "m_later", "Sotorasib + panitumumab (KRAS G12C)", "not_reimbursed"),
+            ("colonretto.algo.json", "m_msi", "Nivolumab + ipilimumab", "reimbursed"),
+            ("pancreas.algo.json", "m1_fit", "NALIRIFOX", "not_reimbursed"),
+            ("pancreas.algo.json", "m1_brca_mant", "Olaparib", "reimbursed"),
+            ("viebiliari.algo.json", "adv_her2", "Zanidatamab", "not_reimbursed"),
+            ("epatocarcinoma.algo.json", "hcc_1l_atezobev", "Nivolumab + ipilimumab", "not_reimbursed"),
+            ("epatocarcinoma.algo.json", "hcc_2l", "Ramucirumab se AFP ≥400 ng/mL", "not_reimbursed"),
+            ("gist.algo.json", "m1_ntrk", "Entrectinib", "not_reimbursed"),
+            ("ano.algo.json", "adv_1l", "Retifanlimab + carboplatino-paclitaxel", "not_reimbursed"),
+            ("net.algo.json", "adv_2l_pan", "Cabozantinib", "reimbursed"),
+        ]
+        for name, node, option, expected in cases:
+            with self.subTest(algo=name, option=option):
+                self.assertEqual(self.status(name, node, option), expected)
+
+    def test_gist_d842v_never_gets_adjuvant_imatinib(self):
+        data = json.loads((ROOT / "Algoritmi" / "gist.algo.json").read_text(encoding="utf-8"))
+        names = [o["name"] for o in data["nodes"]["adj_nessuna_mut"]["options"]]
+        self.assertEqual(names, ["Nessuna terapia adiuvante"])

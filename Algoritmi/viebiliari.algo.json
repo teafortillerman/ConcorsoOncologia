@@ -1,0 +1,257 @@
+{
+  "id": "viebiliari",
+  "title": "Vie Biliari",
+  "theme": "Gastrointestinali",
+  "scheda": "Schede/Gastrointestinali/VieBiliari.md",
+  "start": "setting",
+  "nodes": {
+    "setting": {
+      "type": "question",
+      "text": "Qual è il setting della malattia?",
+      "short": "Setting",
+      "info": "Profilo NGS alla diagnosi di malattia avanzata: FGFR2, IDH1, BRAF V600E, HER2, MSI.",
+      "answers": [
+        { "label": "Resecabile", "next": "res_chir" },
+        { "label": "Avanzato / metastatico", "next": "adv_1l" }
+      ]
+    },
+    "res_chir": {
+      "type": "recommendation",
+      "title": "Chirurgia",
+      "options": [
+        {
+          "name": "Resezione R0 sede-specifica",
+          "aifa": "standard",
+          "key": "iCCA → epatectomia; perilare → epatectomia estesa + via biliare + linfoadenectomia; distale → DCP; colecisti → colecistectomia radicale con segmenti IVb-V (se ≥T1b/T2)."
+        },
+        {
+          "name": "Trapianto di fegato (perilare non resecabile precoce)",
+          "aifa": "standard",
+          "key": "Protocollo Mayo Clinic: CRT neoadiuvante e laparotomia di staging, solo in centri dedicati."
+        }
+      ],
+      "next": { "label": "Dopo la resezione → terapia adiuvante", "node": "res_adj" }
+    },
+    "res_adj": {
+      "type": "recommendation",
+      "title": "Terapia adiuvante",
+      "options": [
+        {
+          "name": "Capecitabina per 6 mesi",
+          "aifa": "standard",
+          "key": "Standard dopo resezione; RFS 24,4 vs 17,5 mesi.",
+          "regimen": {
+            "trial": "BILCAP",
+            "endpoint": "OS ITT 51,1 vs 36,4 mesi, HR 0,81 (non significativa); per-protocol 53 vs 36 mesi",
+            "rows": [
+              ["Capecitabina", "1250 mg/m² per os ×2/die, giorni 1-14"]
+            ],
+            "note": "Ogni 21 giorni ×8 cicli.",
+            "sources": [{"type": "pubmed", "label": "BILCAP", "doi": "10.1016/S1470-2045(18)30915-X"}]
+          }
+        },
+        {
+          "name": "Chemioradioterapia se R1 extraepatico",
+          "aifa": "standard",
+          "key": "Evidenza meno solida."
+        }
+      ],
+      "next": { "label": "Alla recidiva → malattia avanzata", "node": "adv_1l" }
+    },
+    "adv_1l": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "Durvalumab + gemcitabina-cisplatino",
+          "aifa": "reimbursed",
+          "key": "OS a 3 anni 14,6% vs 6,9% (HR 0,74 all'aggiornamento). Rimborsato da febbraio 2024.",
+          "regimen": {
+            "trial": "TOPAZ-1",
+            "endpoint": "OS 12,8 vs 11,5 mesi, HR 0,80",
+            "rows": [
+              ["Durvalumab", "1500 mg EV ogni 3 settimane con la chemioterapia ×8 cicli, poi 1500 mg ogni 4 settimane"],
+              ["Cisplatino", "25 mg/m² EV giorni 1 e 8"],
+              ["Gemcitabina", "1000 mg/m² EV giorni 1 e 8"]
+            ],
+            "note": "Chemioterapia ogni 21 giorni ×8 cicli.",
+            "sources": [{"type": "rimborsabilita"}, {"type": "standard"}]
+          }
+        },
+        {
+          "name": "Pembrolizumab + gemcitabina-cisplatino",
+          "aifa": "reimbursed",
+          "key": "Rimborsato da febbraio 2025; bassa riattivazione di HBV.",
+          "regimen": {
+            "trial": "KEYNOTE-966",
+            "endpoint": "OS 12,7 vs 10,9 mesi, HR 0,83",
+            "rows": [
+              ["Pembrolizumab", "200 mg EV ogni 3 settimane, fino a 35 cicli"],
+              ["Cisplatino", "25 mg/m² EV giorni 1 e 8"],
+              ["Gemcitabina", "1000 mg/m² EV giorni 1 e 8"]
+            ],
+            "note": "Cisplatino fino a 8 cicli, gemcitabina senza durata massima.",
+            "sources": [{"type": "rimborsabilita"}, {"type": "pubmed", "label": "KEYNOTE-966", "doi": "10.1016/S0140-6736(23)00727-4"}]
+          }
+        },
+        {
+          "name": "Gemcitabina-cisplatino",
+          "aifa": "standard",
+          "key": "Standard storico (ABC-02) se l'immunoterapia è controindicata.",
+          "regimen": {
+            "rows": [
+              ["Cisplatino", "25 mg/m² EV giorni 1 e 8"],
+              ["Gemcitabina", "1000 mg/m² EV giorni 1 e 8"]
+            ],
+            "note": "Ogni 21 giorni.",
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ],
+      "next": { "label": "Alla progressione → 2ª linea guidata da NGS", "node": "adv_2l_q" }
+    },
+    "adv_2l_q": {
+      "type": "question",
+      "text": "Qual è l'alterazione identificata con NGS?",
+      "short": "Target",
+      "answers": [
+        { "label": "Fusione / riarrangiamento FGFR2", "next": "adv_fgfr2" },
+        { "label": "Mutazione IDH1 R132", "next": "adv_idh1" },
+        { "label": "BRAF V600E", "next": "adv_braf" },
+        { "label": "HER2 3+", "next": "adv_her2" },
+        { "label": "Nessun target actionable", "next": "adv_folfox" }
+      ]
+    },
+    "adv_fgfr2": {
+      "type": "recommendation",
+      "title": "2ª linea",
+      "options": [
+        {
+          "name": "Pemigatinib",
+          "aifa": "reimbursed",
+          "key": "Rimborsato dal 2022 con registro; iperfosfatemia.",
+          "regimen": {
+            "trial": "FIGHT-202",
+            "rows": [
+              ["Pemigatinib", "13,5 mg/die per os, 14 giorni sì + 7 no"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Futibatinib",
+          "aifa": "reimbursed",
+          "key": "Inibitore irreversibile; rimborsato dal 2024 con registro.",
+          "regimen": {
+            "trial": "FOENIX-CCA2",
+            "rows": [
+              ["Futibatinib", "20 mg/die per os, in continuo"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        }
+      ],
+      "note": "In sviluppo alla resistenza: tinengotinib (FIRST-308) e lirafugratinib, non approvati."
+    },
+    "adv_idh1": {
+      "type": "recommendation",
+      "title": "2ª linea",
+      "options": [
+        {
+          "name": "Ivosidenib",
+          "aifa": "reimbursed",
+          "key": "OS ITT 10,3 vs 7,5 mesi (HR 0,79, non significativa per crossover 70%); corretta per crossover HR 0,49. Monitoraggio QT.",
+          "regimen": {
+            "trial": "ClarIDHy",
+            "endpoint": "PFS 2,7 vs 1,4 mesi, HR 0,37",
+            "rows": [
+              ["Ivosidenib", "500 mg/die per os, in continuo"]
+            ],
+            "sources": [{"type": "rimborsabilita"}, {"type": "pubmed", "label": "ClarIDHy", "doi": "10.1016/S1470-2045(20)30157-1"}]
+          }
+        }
+      ]
+    },
+    "adv_braf": {
+      "type": "recommendation",
+      "title": "2ª linea",
+      "options": [
+        {
+          "name": "Dabrafenib + trametinib",
+          "aifa": "reimbursed",
+          "key": "Legge 648/96 per le vie biliari BRAF V600E (nessuna indicazione EMA per il BTC).",
+          "regimen": {
+            "rows": [
+              ["Dabrafenib", "150 mg per os ×2/die"],
+              ["Trametinib", "2 mg/die per os"]
+            ],
+            "note": "In continuo fino a progressione.",
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        }
+      ]
+    },
+    "adv_her2": {
+      "type": "recommendation",
+      "title": "2ª linea",
+      "options": [
+        {
+          "name": "Zanidatamab",
+          "aifa": "not_reimbursed",
+          "key": "ORR 41,3%, OS 15,5 mesi; approvazione condizionata UE 07/2025, non rimborsato.",
+          "regimen": {
+            "trial": "HERIZON-BTC-01",
+            "rows": [
+              ["Zanidatamab", "20 mg/kg EV giorni 1 e 15 ogni 28 giorni"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "Trastuzumab deruxtecan",
+          "aifa": "not_reimbursed",
+          "key": "ORR 56,3% nel sottogruppo IHC 3+; approvazione UE tumor-agnostic 06/2026, non rimborsato.",
+          "regimen": {
+            "trial": "DESTINY-PanTumor02",
+            "rows": [
+              ["Trastuzumab deruxtecan", "5,4 mg/kg EV ogni 3 settimane"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "mFOLFOX",
+          "aifa": "standard",
+          "key": "Alternativa rimborsata.",
+          "regimen": {
+            "rows": [
+              ["mFOLFOX", "oxaliplatino 85 mg/m², 5-FU 400 mg/m² bolo e 2400 mg/m² in 46 ore"]
+            ],
+            "note": "Ogni 14 giorni, massimo 12 cicli.",
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ]
+    },
+    "adv_folfox": {
+      "type": "recommendation",
+      "title": "2ª linea",
+      "options": [
+        {
+          "name": "mFOLFOX",
+          "aifa": "standard",
+          "key": "Standard di 2ª linea senza target; FOLFIRI come alternativa.",
+          "regimen": {
+            "trial": "ABC-06",
+            "endpoint": "OS 6,2 vs 5,3 mesi, HR 0,69",
+            "rows": [
+              ["mFOLFOX", "oxaliplatino 85 mg/m², 5-FU 400 mg/m² bolo e 2400 mg/m² in 46 ore"]
+            ],
+            "note": "Ogni 14 giorni, massimo 12 cicli.",
+            "sources": [{"type": "pubmed", "label": "ABC-06", "doi": "10.1016/S1470-2045(21)00027-9"}]
+          }
+        }
+      ]
+    }
+  }
+}

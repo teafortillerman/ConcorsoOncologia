@@ -132,7 +132,7 @@
 - I lungo-sopravviventi seguono gli screening della popolazione generale; se sospetto di predisposizione ereditaria, inviare a consulenza genetica.
 
 
-## Punti ad alta resa per orale
+## Punti chiave
 - CUP è una diagnosi dopo workup appropriato, non dopo ricerca infinita del primitivo.
 - Prima domanda: sottotipo favorevole o sfavorevole?
 - Favourable CUP: trattare secondo il primitivo presunto.

@@ -104,7 +104,7 @@
 - Coordinare oncologo, nutrizionista/dietista, infermiere, fisioterapista, psicologo e cure palliative.
 
 
-## Punti ad alta resa per orale
+## Punti chiave
 - Screening nutrizionale alla diagnosi, a ogni visita e entro 48 ore dal ricovero.
 - Peso e BMI non bastano: valutare sarcopenia e composizione corporea.
 - Intervento precoce: counseling, supplementi orali, poi enterale/parenterale se necessario.

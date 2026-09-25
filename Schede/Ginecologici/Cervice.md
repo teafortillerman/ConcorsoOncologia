@@ -14,10 +14,6 @@ A livello mondiale il carcinoma della cervice è la seconda neoplasia per incide
 
 Il fattore causale predominante è l'infezione persistente da **HPV ad alto rischio**, in particolare i genotipi 16, 18, 31, 33, 45, 52 e 58, responsabili insieme del 99% dei casi. A questo si sommano fattori comportamentali che favoriscono l'acquisizione e la persistenza dell'infezione — inizio precoce dell'attività sessuale, partner multipli, fumo, immunosoppressione (HIV, trapianti d'organo) e uso prolungato di contraccettivi orali — e fattori socio-economici come il basso livello di istruzione e il mancato accesso allo screening. Tra i cofattori riconosciuti figurano la multiparità e le co-infezioni sessualmente trasmesse, in particolare Chlamydia trachomatis e HSV-2.
 
-#### Punti chiave
-- **99% dei casi correlato a HPV-HR** (genotipi 16/18/31/33/45/52/58): è il dato epidemiologico più citato in assoluto.
-- Unica neoplasia ginecologica con prevenzione sia primaria (vaccino) sia secondaria (screening); unico programma di eradicazione WHO (obiettivo <4/100.000).
-- Forte gradiente socio-economico: LMIC vs HIC, accesso a vaccino/screening come determinante principale.
 
 ## Prevenzione
 
@@ -42,10 +38,6 @@ La stadiazione FIGO 2018 ha aggiornato quella del 2009 introducendo, per la prim
 
 Il punto concettualmente più importante — e più frequentemente frainteso — della FIGO 2018 è che **lo stadio IIIC si assegna sulla base del solo stato linfonodale (N+), indipendentemente dall'estensione locale del tumore**: una lesione che per estensione locale rientrerebbe in uno stadio IB o IIA, se accompagnata da linfonodi positivi, viene comunque classificata come IIIC. Questo rappresenta una discontinuità importante rispetto alla FIGO 2009, che non includeva lo stato linfonodale tra i criteri di stadio.
 
-#### Punti chiave
-- FIGO 2018 (vs 2009): introduce per la prima volta lo stato linfonodale come criterio di stadio (IIIC).
-- !!IIIC si assegna per il solo N+, indipendentemente dall'estensione locale del tumore!! — una malattia IB/IIA per estensione locale diventa IIIC se linfonodi positivi.
-- IIIC1 = linfonodi pelvici; IIIC2 = linfonodi paraortici; suffisso r/p per modalità di accertamento (radiologico/patologico).
 
 ## Biomarcatori
 
@@ -67,17 +59,10 @@ La seconda, e più pratica-modificante, è l'ingresso dell'immunoterapia in ques
 
 > ++Verifica in letteratura:++ pembrolizumab+CRT (KEYNOTE-A18) è **rimborsato da AIFA in classe H, senza restrizione di PD-L1 CPS** (a differenza dell'indicazione in prima linea metastatica). La determina è stata firmata il 13.01.2025 ma la sua attivazione/comunicazione pubblica (registro di monitoraggio incluso) risale solo a inizio febbraio 2026 — un intervallo di oltre un anno tra firma della determina e disponibilità operativa nei centri prescrittori, utile da ricordare come esempio di gap che può esistere anche tra approvazione EMA/determina AIFA e reale accesso clinico. [Determina AIFA Pres. 4/2026 – Keytruda](https://www.aifa.gov.it/documents/20142/961234/Determina_Pres-4-2026_KEYTRUDA.pdf), [PharmaStar](https://www.pharmastar.it/news/italia/aifa-approva-pembrolizumab-in-3-nuove-indicazioni-carcinomi-di-cervice-endometrio-e-urotelio--49701).
 
-> !!Verifica in letteratura — attenzione:!! la scheda precedente attribuiva erroneamente questo risultato a **KEYNOTE-826**, definendolo genericamente come "dati estesi al setting locale". Si tratta in realtà di **due studi registrativi distinti**, con acronimi, popolazioni e disegni diversi, da non confondere: **KEYNOTE-826** riguarda la malattia avanzata/metastatica di prima linea (pembrolizumab + chemioterapia ± bevacizumab, vedi sezione dedicata più sotto), mentre **KEYNOTE-A18/ENGOT-cx11/GOG-3047** è lo studio dedicato alla malattia localmente avanzata (pembrolizumab + chemioradioterapia). Sono entrambi pratica-modificanti, ma rispondono a domande cliniche diverse e vanno tenuti ben distinti anche per l'orale. [Lancet (OS results)](https://www.sciencedirect.com/science/article/abs/pii/S0140673624018087), [ASCO Post](https://ascopost.com/issues/october-10-2024/keynote-a18-overall-survival-in-cervical-cancer-improved-by-pembrolizumab-plus-chemoradiotherapy/).
+> !!Verifica in letteratura — attenzione:!! la scheda precedente attribuiva erroneamente questo risultato a **KEYNOTE-826**, definendolo genericamente come "dati estesi al setting locale". Si tratta in realtà di **due studi registrativi distinti**, con acronimi, popolazioni e disegni diversi, da non confondere: **KEYNOTE-826** riguarda la malattia avanzata/metastatica di prima linea (pembrolizumab + chemioterapia ± bevacizumab, vedi sezione dedicata più sotto), mentre **KEYNOTE-A18/ENGOT-cx11/GOG-3047** è lo studio dedicato alla malattia localmente avanzata (pembrolizumab + chemioradioterapia). Sono entrambi pratica-modificanti, ma rispondono a domande cliniche diverse e vanno tenuti ben distinti. [Lancet (OS results)](https://www.sciencedirect.com/science/article/abs/pii/S0140673624018087), [ASCO Post](https://ascopost.com/issues/october-10-2024/keynote-a18-overall-survival-in-cervical-cancer-improved-by-pembrolizumab-plus-chemoradiotherapy/).
 
 Un trial concettualmente simile ma con esito opposto è il **CALLA** (durvalumab + CRT in malattia localmente avanzata), risultato negativo per PFS: un promemoria utile che non tutte le combinazioni IO+CRT funzionano allo stesso modo, e che i dati vanno sempre riferiti al farmaco e allo studio specifico.
 
-#### Punti chiave
-- Studio LACC: approccio mininvasivo peggiora PFS/OS nell'isterectomia radicale → **open resta lo standard**.
-- INTERLACE: induzione CT prima di CRT migliora PFS (HR 0,65) e OS (HR 0,61), ma con limiti (controllo non-IMRT, rischio tossicità, incertezza su IO successiva).
-- ++KEYNOTE-A18: OS a 36 mesi 82,6% vs 74,8% (HR 0,67) con pembrolizumab+CRT+mantenimento — nuovo standard nella malattia localmente avanzata ad alto rischio, approvato FDA/EMA, ==rimborsato AIFA classe H senza restrizione PD-L1== (determina firmata 13.01.2025, attivazione operativa a inizio 2026)++.
-- !!Non confondere KEYNOTE-A18 (localmente avanzato, + CRT) con KEYNOTE-826 (avanzato/metastatico, + CT ± bev)!! — sono due trial distinti.
-- CALLA (durvalumab+CRT): negativo — non generalizzare l'effetto positivo dell'IO a tutte le combinazioni con la radioterapia.
-- Dose brachiterapia ≥90 Gy al volume target per controllo locale ottimale.
 
 ## Terapia della malattia avanzata/metastatica
 
@@ -105,12 +90,6 @@ Sul fronte HER2, il target un tempo definito solo "potenziale" ha oggi un primo 
 
 > ++Verifica in letteratura:++ la scheda precedente citava HER2 solo come "potenziale target futuro" senza dati clinici a supporto. Il DESTINY-PanTumor02 fornisce oggi un primo segnale di attività concreto (ORR 50% nella coorte cervicale, 75% negli IHC 3+), utile da conoscere anche se non ancora un'indicazione approvata. [CancerNetwork](https://www.cancernetwork.com/view/trastuzumab-deruxtecan-showcases-clinical-efficacy-in-her2-gynecological-cancers).
 
-#### Punti chiave
-- KEYNOTE-826: pembrolizumab + CT ± bev in 1L avanzata, PFS HR 0,62, OS HR 0,64 — richiede **PD-L1 CPS ≥1**; ==rimborsato AIFA classe H dal 10.07.2023==.
-- Cadonilimab (COMPASSION-16): PFS/OS positive, approvato solo NMPA (Cina) — non ancora standard in Europa, nessuna domanda EMA.
-- EMPOWER-Cervical 1 (cemiplimab): analisi finale conferma OS HR 0,656 in 2L; label EMA indipendente da PD-L1, ma !!AIFA rimborsa solo i tumori PD-L1 ≥1%!! (Determina 309/2024) — attenzione alla discrepanza label EMA/rimborsabilità SSN.
-- ++Tisotumab vedotin: oltre a FDA 2024, ora approvato anche EMA/Commissione Europea (marzo 2025), ma !!non ancora rimborsato da AIFA!! alla data di questa verifica++.
-- ++T-DXd (DESTINY-PanTumor02): primo segnale clinico concreto in HER2, ORR 50% (75% se IHC 3+) — non ancora indicazione approvata++.
 
 ## Farmaci e classi rilevanti
 - **Chemioterapia**: cisplatino, carboplatino, paclitaxel, topotecan, gemcitabina, vinorelbina.
@@ -131,7 +110,7 @@ Per lo stato di rimborsabilità AIFA aggiornato di ciascun farmaco (classe, data
 
 Nei primi due anni la visita ginecologica con esame obiettivo va ripetuta ogni 3-4 mesi, per poi diradarsi a ogni 6 mesi tra il terzo e il quinto anno e diventare annuale oltre i 5 anni. L'imaging (TC/RM) non è raccomandato di routine, ma solo in presenza di sintomi o sospetto clinico. Il PAP test non ha indicazione dopo isterectomia radicale, mentre resta annuale nelle pazienti sottoposte a trachelectomia con conservazione della cervice.
 
-## Punti ad alta resa per orale
+## Punti chiave
 - **HPV e prevenzione**: 99% correlato a HPV-HR; unica neoplasia con prevenzione primaria e secondaria; programma di eradicazione WHO 2020.
 - **Studio LACC**: chirurgia mininvasiva peggiora la sopravvivenza → open resta standard per isterectomia radicale.
 - **INTERLACE**: induzione CT prima di CRT migliora PFS/OS, ma con controversie (controllo non-IMRT, rischio di compromettere la RT).

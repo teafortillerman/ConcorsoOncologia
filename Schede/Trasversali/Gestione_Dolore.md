@@ -113,7 +113,7 @@
 - Coinvolgere precocemente cure palliative nel dolore complesso, nelle esigenze psicosociali e nella pianificazione delle cure.
 
 
-## Punti ad alta resa per orale
+## Punti chiave
 - Il dolore oncologico richiede valutazione eziologica e multidimensionale, non solo scala numerica.
 - Dolore severo: possibile inizio diretto con oppioide forte.
 - Terapia di fondo a orari fissi più rescue per dolore episodico.

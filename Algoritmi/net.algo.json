@@ -1,0 +1,413 @@
+{
+  "id": "net",
+  "title": "NET",
+  "theme": "Gastrointestinali",
+  "scheda": "Schede/Gastrointestinali/NET.md",
+  "start": "setting",
+  "nodes": {
+    "setting": {
+      "type": "question",
+      "text": "NET ben differenziato o NEC?",
+      "short": "Differenziazione",
+      "info": "WHO 2022: NET G3 e NEC possono avere lo stesso Ki-67 >20% ma comportamento e risposta al platino diversi. 68Ga-SST PET/TC standard of care (sensibilità 97%).",
+      "answers": [
+        { "label": "NET ben differenziato (G1-G3)", "next": "net_setting" },
+        { "label": "NEC scarsamente differenziato", "next": "nec_1l" }
+      ]
+    },
+    "net_setting": {
+      "type": "question",
+      "text": "Qual è il setting?",
+      "short": "Setting",
+      "answers": [
+        { "label": "Localizzato resecabile", "next": "net_loc_sede" },
+        { "label": "Avanzato / metastatico", "next": "net_adv_sede" }
+      ]
+    },
+    "net_loc_sede": {
+      "type": "question",
+      "text": "Qual è la sede del primitivo?",
+      "short": "Sede",
+      "answers": [
+        { "label": "Pancreas", "next": "loc_pan" },
+        { "label": "Piccolo intestino", "next": "loc_ileo" },
+        { "label": "Appendice", "next": "loc_app" },
+        { "label": "Retto", "next": "loc_retto" },
+        { "label": "Stomaco", "next": "loc_stomaco" },
+        { "label": "Duodeno", "next": "loc_duod" }
+      ]
+    },
+    "loc_pan": {
+      "type": "recommendation",
+      "title": "Chirurgia",
+      "options": [
+        {
+          "name": "Enucleazione se <2 cm G1-2",
+          "aifa": "standard",
+          "key": "Preserva la funzione pancreatica, con più rischio di fistola."
+        },
+        {
+          "name": "Resezione formale se >2 cm o funzionante",
+          "aifa": "standard",
+          "key": "Raccomandazione forte: OS a 5 anni 86,6% vs 40,1% senza chirurgia. Insulinoma: guarigione ~93%."
+        },
+        {
+          "name": "Follow-up nel MEN1 con PanNET non funzionante <2 cm",
+          "aifa": "standard",
+          "key": "Crescita molto lenta (0,4 mm/anno)."
+        }
+      ],
+      "note": "Rischio di malignità dei non funzionanti: 19% (≤2 cm), 35% (2-4 cm), 85% (>4 cm)."
+    },
+    "loc_ileo": {
+      "type": "recommendation",
+      "title": "Chirurgia",
+      "options": [
+        {
+          "name": "Resezione del primitivo con linfoadenectomia mesenterica",
+          "aifa": "standard",
+          "key": "Anche con metastasi non resecabili (UKINETS: OS 9,9 vs 4,7 anni). Multifocalità nel 40%."
+        }
+      ]
+    },
+    "loc_app": {
+      "type": "recommendation",
+      "title": "Chirurgia",
+      "options": [
+        {
+          "name": "Appendicectomia semplice se <2 cm, basso grado, R0",
+          "aifa": "standard",
+          "key": "Nei 1-2 cm l'emicolectomia non è necessaria (Nesti 2023, ENETS 2023)."
+        },
+        {
+          "name": "Emicolectomia destra se >2 cm",
+          "aifa": "standard",
+          "key": "Nei 1-2 cm solo se G2 con Ki-67 >10%, linfonodi positivi o R1/R2."
+        }
+      ]
+    },
+    "loc_retto": {
+      "type": "recommendation",
+      "title": "Trattamento locale",
+      "options": [
+        {
+          "name": "ESD o m-EMR",
+          "aifa": "standard",
+          "key": "Preferite alla polipectomia semplice; la dimensione è il fattore prognostico dominante (cut-off 5 mm, lesioni <16 mm)."
+        }
+      ]
+    },
+    "loc_stomaco": {
+      "type": "recommendation",
+      "title": "Trattamento per tipo",
+      "options": [
+        {
+          "name": "Tipo I: sorveglianza endoscopica",
+          "aifa": "standard",
+          "key": "70-80%, da gastrite atrofica; metastasi <2%. SSA se ricorrente."
+        },
+        {
+          "name": "Tipo II: PPI ad alte dosi, resezione del gastrinoma",
+          "aifa": "standard",
+          "key": "ZES in MEN1; metastasi linfonodali nel 30%."
+        },
+        {
+          "name": "Tipo III: gastrectomia + linfoadenectomia",
+          "aifa": "standard",
+          "key": "Sporadico e aggressivo (metastasi 50-100%); EMR solo se G1 ≤10 mm."
+        }
+      ]
+    },
+    "loc_duod": {
+      "type": "recommendation",
+      "title": "Trattamento locale",
+      "options": [
+        {
+          "name": "Resezione endoscopica se <1 cm",
+          "aifa": "standard",
+          "key": "Il grading guida il rischio di recidiva più della procedura."
+        },
+        {
+          "name": "DCP se >2 cm",
+          "aifa": "standard",
+          "key": "Nella fascia 1-2 cm decidere su grading e invasione."
+        }
+      ]
+    },
+    "net_adv_sede": {
+      "type": "question",
+      "text": "Qual è il primitivo e il comportamento?",
+      "short": "Primitivo",
+      "info": "Sindrome da carcinoide: SSA; telotristat per la diarrea refrattaria. FDG-PET positiva = prognosi peggiore (HR 10,3).",
+      "answers": [
+        { "label": "GEP-NET G1-G2, SSTR+, lentamente progressivo", "next": "adv_ssa" },
+        { "label": "GEP-NET G2 Ki-67 ≥10% o G3 ben differenziato", "next": "adv_alto" },
+        { "label": "PanNET sintomatico / voluminoso", "next": "adv_pan_ct" }
+      ]
+    },
+    "adv_ssa": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "Analogo della somatostatina",
+          "aifa": "reimbursed",
+          "key": "Pilastro della 1ª linea (PROMID: octreotide LAR, TTP 14,3 vs 6 mesi).",
+          "regimen": {
+            "trial": "CLARINET",
+            "endpoint": "PFS non raggiunta vs 18 mesi, HR 0,47",
+            "rows": [
+              ["Lanreotide", "120 mg SC ogni 28 giorni"],
+              ["oppure Octreotide LAR", "30 mg IM ogni 28 giorni"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ],
+      "next": { "label": "Alla progressione → 2ª linea", "node": "adv_2l_sede" }
+    },
+    "adv_alto": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "PRRT + octreotide LAR",
+          "aifa": "not_reimbursed",
+          "key": "Recepito da NCCN; l'indicazione EMA/AIFA di Lutathera resta limitata ai G1-G2 progressivi (nessuna estensione alla 1ª linea).",
+          "regimen": {
+            "trial": "NETTER-2",
+            "endpoint": "PFS 22,8 vs 8,5 mesi, HR 0,28",
+            "rows": [
+              ["[177Lu]Lu-DOTA-TATE", "7,4 GBq EV ogni 8 settimane ×4"],
+              ["+ Octreotide LAR", "30 mg IM"]
+            ],
+            "sources": [{"type": "scheda"}]
+          }
+        },
+        {
+          "name": "CAPTEM (soprattutto PanNET)",
+          "aifa": "standard",
+          "key": "Chemioterapia se serve citoriduzione.",
+          "regimen": {
+            "trial": "ECOG-ACRIN E2211",
+            "endpoint": "PFS 22,7 vs 14,4 mesi, HR 0,58",
+            "rows": [
+              ["Capecitabina", "750 mg/m² per os ×2/die, giorni 1-14"],
+              ["Temozolomide", "200 mg/m²/die per os, giorni 10-14"]
+            ],
+            "note": "Ogni 28 giorni.",
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ],
+      "next": { "label": "Alla progressione → 2ª linea", "node": "adv_2l_sede" }
+    },
+    "adv_pan_ct": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "CAPTEM",
+          "aifa": "standard",
+          "key": "Quando serve una risposta obiettiva nei PanNET.",
+          "regimen": {
+            "trial": "ECOG-ACRIN E2211",
+            "endpoint": "PFS 22,7 vs 14,4 mesi, HR 0,58",
+            "rows": [
+              ["Capecitabina", "750 mg/m² per os ×2/die, giorni 1-14"],
+              ["Temozolomide", "200 mg/m²/die per os, giorni 10-14"]
+            ],
+            "note": "Ogni 28 giorni.",
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "Streptozotocina + 5-FU",
+          "aifa": "standard",
+          "key": "Opzione storica, limitata da difficoltà di approvvigionamento."
+        }
+      ],
+      "next": { "label": "Alla progressione → 2ª linea", "node": "adv_2l_sede" }
+    },
+    "adv_2l_sede": {
+      "type": "question",
+      "text": "Qual è la sede del primitivo?",
+      "short": "Sede",
+      "answers": [
+        { "label": "Pancreatico (PanNET)", "next": "adv_2l_pan" },
+        { "label": "Gastrointestinale (midgut / altri GEP)", "next": "adv_2l_gi" }
+      ]
+    },
+    "adv_2l_pan": {
+      "type": "recommendation",
+      "title": "Linee successive",
+      "options": [
+        {
+          "name": "Everolimus",
+          "aifa": "reimbursed",
+          "key": "Stomatite, iperglicemia, polmonite.",
+          "regimen": {
+            "trial": "RADIANT-3",
+            "endpoint": "PFS 11,0 vs 4,6 mesi, HR 0,35",
+            "rows": [
+              ["Everolimus", "10 mg/die per os, in continuo"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "Sunitinib",
+          "aifa": "reimbursed",
+          "key": "Solo PanNET.",
+          "regimen": {
+            "trial": "SUN-1111",
+            "endpoint": "PFS 11,4 vs 5,5 mesi, HR 0,42",
+            "rows": [
+              ["Sunitinib", "37,5 mg/die per os, in continuo"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "PRRT (Lutathera)",
+          "aifa": "reimbursed",
+          "key": "GEP-NET G1-G2 SSTR+ progressivi.",
+          "regimen": {
+            "rows": [
+              ["[177Lu]Lu-DOTA-TATE", "7,4 GBq EV ogni 8 settimane ×4"],
+              ["+ Octreotide LAR", "30 mg IM"]
+            ],
+            "sources": [{"type": "scheda"}]
+          }
+        },
+        {
+          "name": "Cabozantinib",
+          "aifa": "reimbursed",
+          "key": "Dopo almeno una terapia sistemica; rimborsato da luglio 2026.",
+          "regimen": {
+            "trial": "CABINET",
+            "endpoint": "PFS nei pNET 13,8 vs 4,4 mesi, HR 0,23",
+            "rows": [
+              ["Cabozantinib", "60 mg/die per os, in continuo"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        },
+        {
+          "name": "CAPTEM",
+          "aifa": "standard",
+          "key": "Se non usato prima.",
+          "regimen": {
+            "trial": "ECOG-ACRIN E2211",
+            "endpoint": "PFS 22,7 vs 14,4 mesi, HR 0,58",
+            "rows": [
+              ["Capecitabina", "750 mg/m² per os ×2/die, giorni 1-14"],
+              ["Temozolomide", "200 mg/m²/die per os, giorni 10-14"]
+            ],
+            "note": "Ogni 28 giorni.",
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ]
+    },
+    "adv_2l_gi": {
+      "type": "recommendation",
+      "title": "Linee successive",
+      "options": [
+        {
+          "name": "PRRT (Lutathera)",
+          "aifa": "reimbursed",
+          "key": "NET midgut in progressione su octreotide; OS non significativa per crossover (46%).",
+          "regimen": {
+            "trial": "NETTER-1",
+            "endpoint": "PFS a 20 mesi 65,2% vs 10,8%, HR 0,21",
+            "rows": [
+              ["[177Lu]Lu-DOTA-TATE", "7,4 GBq EV ogni 8 settimane ×4"],
+              ["+ Octreotide LAR", "30 mg IM"]
+            ],
+            "sources": [{"type": "scheda"}]
+          }
+        },
+        {
+          "name": "Everolimus (non funzionanti GI e polmonari)",
+          "aifa": "reimbursed",
+          "key": "RADIANT-2 (midgut con sindrome, + octreotide) formalmente negativo.",
+          "regimen": {
+            "trial": "RADIANT-4",
+            "endpoint": "PFS 11,0 vs 3,9 mesi, HR 0,48",
+            "rows": [
+              ["Everolimus", "10 mg/die per os, in continuo"]
+            ],
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "Cabozantinib",
+          "aifa": "reimbursed",
+          "key": "Dopo almeno una terapia sistemica; rimborsato da luglio 2026.",
+          "regimen": {
+            "trial": "CABINET",
+            "endpoint": "PFS nei NET extra-pancreatici 8,4 vs 3,9 mesi, HR 0,38",
+            "rows": [
+              ["Cabozantinib", "60 mg/die per os, in continuo"]
+            ],
+            "sources": [{"type": "rimborsabilita"}]
+          }
+        }
+      ],
+      "note": "177Lu-edotreotide (COMPETE) e surufatinib non sono approvati."
+    },
+    "nec_1l": {
+      "type": "recommendation",
+      "title": "1ª linea",
+      "options": [
+        {
+          "name": "Platino + etoposide",
+          "aifa": "standard",
+          "key": "Estrapolato dal SCLC; OS mediana 7,5-11 mesi. Ki-67 ≥55%: più chemiosensibile.",
+          "regimen": {
+            "rows": [
+              ["Cisplatino o carboplatino", "cisplatino 75 mg/m² o carboplatino AUC 5 EV giorno 1"],
+              ["Etoposide", "100 mg/m² EV giorni 1-3"]
+            ],
+            "note": "Ogni 21 giorni ×4-6 cicli.",
+            "sources": [{"type": "standard"}]
+          }
+        },
+        {
+          "name": "CAPTEM se Ki-67 <55%",
+          "aifa": "standard",
+          "key": "Minore chemiosensibilità al platino in questo sottogruppo.",
+          "regimen": {
+            "rows": [
+              ["Capecitabina", "750 mg/m² per os ×2/die, giorni 1-14"],
+              ["Temozolomide", "200 mg/m²/die per os, giorni 10-14"]
+            ],
+            "note": "Ogni 28 giorni.",
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ],
+      "next": { "label": "Alla progressione → 2ª linea", "node": "nec_2l" }
+    },
+    "nec_2l": {
+      "type": "recommendation",
+      "title": "2ª linea",
+      "options": [
+        {
+          "name": "FOLFIRI o CAPTEM",
+          "aifa": "standard",
+          "key": "Opzioni dopo platino-etoposide.",
+          "regimen": {
+            "trial": "SENECA",
+            "rows": [
+              ["FOLFIRI", "irinotecano 180 + leucovorin 400 mg/m² + 5-FU 400 mg/m² bolo e 2400 mg/m² in 46 ore"]
+            ],
+            "note": "Ogni 14 giorni.",
+            "sources": [{"type": "standard"}]
+          }
+        }
+      ]
+    }
+  }
+}

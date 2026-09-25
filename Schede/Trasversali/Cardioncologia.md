@@ -113,7 +113,7 @@
 - I sopravviventi oncologici necessitano di prevenzione cardiovascolare continuativa, stile di vita sano e collegamento tra medicina territoriale, oncologia e cardiologia.
 
 
-## Punti ad alta resa per orale
+## Punti chiave
 - Cardioncologia = prevenire, identificare presto, trattare e non sospendere inutilmente oncoterapia.
 - Basale: storia CV, fattori di rischio, ECG; FE per antracicline e anti-HER2.
 - GLS utile per disfunzione subclinica, complementare alla FE.
