@@ -3,6 +3,15 @@
   "title": "Polmone NSCLC",
   "theme": "Torace",
   "scheda": "Schede/Torace/Polmone_NSCLC.md",
+  "exposures": {
+    "io": "Immunoterapia anti-PD-(L)1",
+    "platino": "Chemioterapia a base di platino",
+    "osimertinib": "Osimertinib",
+    "amivantamab": "Amivantamab",
+    "alk2g": "TKI anti-ALK di 2ª generazione",
+    "lorlatinib": "Lorlatinib",
+    "braf": "Dabrafenib + trametinib"
+  },
   "start": "setting",
   "nodes": {
     "setting": {
@@ -11,9 +20,18 @@
       "short": "Setting",
       "info": "Resecabilità e stadio (TNM VIII, IX edizione operativa dal 2025) si decidono sempre in un team multidisciplinare, soprattutto nel N2.",
       "answers": [
-        { "label": "Precoce resecabile (stadio I-III)", "next": "precoce_stadio" },
-        { "label": "Stadio III non resecabile", "next": "iii_driver" },
-        { "label": "Avanzato / metastatico", "next": "m1_driver" }
+        {
+          "label": "Precoce resecabile (stadio I-III)",
+          "next": "precoce_stadio"
+        },
+        {
+          "label": "Stadio III non resecabile",
+          "next": "iii_driver"
+        },
+        {
+          "label": "Avanzato / metastatico",
+          "next": "m1_driver"
+        }
       ]
     },
     "precoce_stadio": {
@@ -22,8 +40,14 @@
       "short": "Stadio",
       "info": "La chemioterapia adiuvante è indicata solo dallo stadio II (LACE: nello stadio IA è dannosa, HR 1,40).",
       "answers": [
-        { "label": "Stadio I (T ≤4 cm, N0)", "next": "precoce_i" },
-        { "label": "Stadio II-III resecabile", "next": "precoce_driver" }
+        {
+          "label": "Stadio I (T ≤4 cm, N0)",
+          "next": "precoce_i"
+        },
+        {
+          "label": "Stadio II-III resecabile",
+          "next": "precoce_driver"
+        }
       ]
     },
     "precoce_i": {
@@ -47,10 +71,17 @@
           "regimen": {
             "trial": "ADAURA",
             "rows": [
-              ["Osimertinib", "80 mg/die per os, in continuo"]
+              [
+                "Osimertinib",
+                "80 mg/die per os, in continuo"
+              ]
             ],
             "note": "Durata 3 anni.",
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         }
       ],
@@ -62,9 +93,18 @@
       "short": "Driver",
       "info": "EGFR, ALK e PD-L1 vanno testati prima di qualsiasi immunoterapia: EGFR mutato o ALK riarrangiato escludono la chemio-immunoterapia perioperatoria.",
       "answers": [
-        { "label": "EGFR mutato (Ex19del / L858R)", "next": "precoce_egfr" },
-        { "label": "ALK riarrangiato", "next": "precoce_alk" },
-        { "label": "EGFR e ALK wild-type", "next": "precoce_wt_strategia" }
+        {
+          "label": "EGFR mutato (Ex19del / L858R)",
+          "next": "precoce_egfr"
+        },
+        {
+          "label": "ALK riarrangiato",
+          "next": "precoce_alk"
+        },
+        {
+          "label": "EGFR e ALK wild-type",
+          "next": "precoce_wt_strategia"
+        }
       ]
     },
     "precoce_egfr": {
@@ -77,11 +117,24 @@
           "key": "Cisplatino-vinorelbina negli stadi II-III, prima dell'osimertinib.",
           "regimen": {
             "rows": [
-              ["Cisplatino", "75-80 mg/m² EV giorno 1"],
-              ["Vinorelbina", "25-30 mg/m² EV giorni 1 e 8"]
+              [
+                "Cisplatino",
+                "75-80 mg/m² EV giorno 1"
+              ],
+              [
+                "Vinorelbina",
+                "25-30 mg/m² EV giorni 1 e 8"
+              ]
             ],
             "note": "Ogni 21 giorni ×4 cicli.",
-            "sources": [{"type": "scheda"}, {"type": "standard"}]
+            "sources": [
+              {
+                "type": "scheda"
+              },
+              {
+                "type": "standard"
+              }
+            ]
           }
         },
         {
@@ -91,13 +144,28 @@
           "regimen": {
             "trial": "ADAURA",
             "rows": [
-              ["Osimertinib", "80 mg/die per os, in continuo"]
+              [
+                "Osimertinib",
+                "80 mg/die per os, in continuo"
+              ]
             ],
             "note": "Durata 3 anni.",
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "osimertinib"
+          ]
         }
-      ]
+      ],
+      "next": {
+        "label": "Alla recidiva",
+        "node": "rec_egfr"
+      },
+      "select": true
     },
     "precoce_alk": {
       "type": "recommendation",
@@ -110,13 +178,28 @@
           "regimen": {
             "trial": "ALINA",
             "rows": [
-              ["Alectinib", "600 mg per os ×2/die, in continuo"]
+              [
+                "Alectinib",
+                "600 mg per os ×2/die, in continuo"
+              ]
             ],
             "note": "Durata 2 anni.",
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "alk2g"
+          ]
         }
-      ]
+      ],
+      "next": {
+        "label": "Alla recidiva",
+        "node": "rec_alk"
+      },
+      "select": true
     },
     "precoce_wt_strategia": {
       "type": "question",
@@ -124,8 +207,14 @@
       "short": "Strategia",
       "info": "La chemio-immunoterapia neo/perioperatoria è oggi lo standard ESMO [I, A] negli stadi II-III resecabili EGFR/ALK wild-type.",
       "answers": [
-        { "label": "Terapia neoadiuvante / perioperatoria", "next": "precoce_perio" },
-        { "label": "Chirurgia upfront (già operato)", "next": "precoce_upfront_pdl1" }
+        {
+          "label": "Terapia neoadiuvante / perioperatoria",
+          "next": "precoce_perio"
+        },
+        {
+          "label": "Chirurgia upfront (già operato)",
+          "next": "precoce_upfront_pdl1"
+        }
       ]
     },
     "precoce_perio": {
@@ -139,12 +228,26 @@
           "regimen": {
             "trial": "CheckMate 816",
             "rows": [
-              ["Nivolumab", "360 mg EV ogni 3 settimane"],
-              ["+ doppietta di platino", "ogni 3 settimane"]
+              [
+                "Nivolumab",
+                "360 mg EV ogni 3 settimane"
+              ],
+              [
+                "+ doppietta di platino",
+                "ogni 3 settimane"
+              ]
             ],
             "note": "3 cicli prima della chirurgia; nessuna immunoterapia adiuvante.",
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "platino"
+          ]
         },
         {
           "name": "Pembrolizumab perioperatorio",
@@ -154,12 +257,26 @@
             "trial": "KEYNOTE-671",
             "endpoint": "OS HR 0,72 (endpoint co-primario con EFS: HR 0,58)",
             "rows": [
-              ["Neoadiuvante", "pembrolizumab 200 mg EV ogni 3 settimane + CT a base di platino ×4 cicli"],
-              ["Adiuvante", "pembrolizumab 200 mg EV ogni 3 settimane ×13 cicli"]
+              [
+                "Neoadiuvante",
+                "pembrolizumab 200 mg EV ogni 3 settimane + CT a base di platino ×4 cicli"
+              ],
+              [
+                "Adiuvante",
+                "pembrolizumab 200 mg EV ogni 3 settimane ×13 cicli"
+              ]
             ],
             "note": "17 cicli complessivi, circa 1 anno.",
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "platino"
+          ]
         },
         {
           "name": "Durvalumab perioperatorio",
@@ -168,11 +285,28 @@
           "regimen": {
             "trial": "AEGEAN",
             "rows": [
-              ["Neoadiuvante", "durvalumab 1500 mg EV ogni 3 settimane + CT a base di platino ×4 cicli"],
-              ["Adiuvante", "durvalumab 1500 mg EV ogni 4 settimane ×12 cicli"]
+              [
+                "Neoadiuvante",
+                "durvalumab 1500 mg EV ogni 3 settimane + CT a base di platino ×4 cicli"
+              ],
+              [
+                "Adiuvante",
+                "durvalumab 1500 mg EV ogni 4 settimane ×12 cicli"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}, {"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              },
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "platino"
+          ]
         },
         {
           "name": "Nivolumab perioperatorio",
@@ -181,11 +315,25 @@
           "regimen": {
             "trial": "CheckMate 77T",
             "rows": [
-              ["Neoadiuvante", "nivolumab 360 mg EV ogni 3 settimane + doppietta di platino ×4 cicli"],
-              ["Adiuvante", "nivolumab 480 mg EV ogni 4 settimane ×13 cicli"]
+              [
+                "Neoadiuvante",
+                "nivolumab 360 mg EV ogni 3 settimane + doppietta di platino ×4 cicli"
+              ],
+              [
+                "Adiuvante",
+                "nivolumab 480 mg EV ogni 4 settimane ×13 cicli"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "platino"
+          ]
         },
         {
           "name": "Tislelizumab perioperatorio",
@@ -194,14 +342,33 @@
           "regimen": {
             "trial": "RATIONALE-315",
             "rows": [
-              ["Neoadiuvante", "tislelizumab 200 mg EV ogni 3 settimane + doppietta di platino ×3-4 cicli"],
-              ["Adiuvante", "tislelizumab 400 mg EV ogni 6 settimane ×8 cicli"]
+              [
+                "Neoadiuvante",
+                "tislelizumab 200 mg EV ogni 3 settimane + doppietta di platino ×3-4 cicli"
+              ],
+              [
+                "Adiuvante",
+                "tislelizumab 400 mg EV ogni 6 settimane ×8 cicli"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "platino"
+          ]
         }
       ],
-      "note": "Non esistono confronti diretti tra gli schemi; l'OS è confermata solo per CheckMate 816 e KEYNOTE-671."
+      "note": "Non esistono confronti diretti tra gli schemi; l'OS è confermata solo per CheckMate 816 e KEYNOTE-671.",
+      "next": {
+        "label": "Alla recidiva",
+        "node": "rec_io"
+      },
+      "select": true
     },
     "precoce_upfront_pdl1": {
       "type": "question",
@@ -209,8 +376,14 @@
       "short": "PD-L1",
       "info": "Atezolizumab adiuvante è rimborsato solo con PD-L1 ≥50% ed EGFR/ALK wild-type; pembrolizumab adiuvante (KEYNOTE-091) non è disponibile in Italia.",
       "answers": [
-        { "label": "TPS ≥50%", "next": "precoce_adj_atezo" },
-        { "label": "TPS <50%", "next": "precoce_adj_ct" }
+        {
+          "label": "TPS ≥50%",
+          "next": "precoce_adj_atezo"
+        },
+        {
+          "label": "TPS <50%",
+          "next": "precoce_adj_ct"
+        }
       ]
     },
     "precoce_adj_atezo": {
@@ -224,15 +397,43 @@
           "regimen": {
             "trial": "IMpower010",
             "rows": [
-              ["Cisplatino", "75-80 mg/m² EV giorno 1"],
-              ["Vinorelbina", "25-30 mg/m² EV giorni 1 e 8"],
-              ["poi Atezolizumab", "1200 mg EV ogni 3 settimane ×16 cicli"]
+              [
+                "Cisplatino",
+                "75-80 mg/m² EV giorno 1"
+              ],
+              [
+                "Vinorelbina",
+                "25-30 mg/m² EV giorni 1 e 8"
+              ],
+              [
+                "poi Atezolizumab",
+                "1200 mg EV ogni 3 settimane ×16 cicli"
+              ]
             ],
             "note": "Cisplatino-vinorelbina ogni 21 giorni ×4, poi atezolizumab per circa 1 anno.",
-            "sources": [{"type": "scheda"}, {"type": "rimborsabilita"}, {"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "scheda"
+              },
+              {
+                "type": "rimborsabilita"
+              },
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "platino"
+          ]
         }
-      ]
+      ],
+      "next": {
+        "label": "Alla recidiva",
+        "node": "rec_io"
+      },
+      "select": true
     },
     "precoce_adj_ct": {
       "type": "recommendation",
@@ -244,15 +445,33 @@
           "key": "Cisplatino-vinorelbina, schema preferito (LACE: OS HR 0,83 negli stadi II-III).",
           "regimen": {
             "rows": [
-              ["Cisplatino", "75-80 mg/m² EV giorno 1"],
-              ["Vinorelbina", "25-30 mg/m² EV giorni 1 e 8"]
+              [
+                "Cisplatino",
+                "75-80 mg/m² EV giorno 1"
+              ],
+              [
+                "Vinorelbina",
+                "25-30 mg/m² EV giorni 1 e 8"
+              ]
             ],
             "note": "Ogni 21 giorni ×4 cicli.",
-            "sources": [{"type": "scheda"}, {"type": "standard"}]
+            "sources": [
+              {
+                "type": "scheda"
+              },
+              {
+                "type": "standard"
+              }
+            ]
           }
         }
       ],
-      "note": "PORT solo se resezione R1 (LungART: nessun beneficio nel pN2)."
+      "note": "PORT solo se resezione R1 (LungART: nessun beneficio nel pN2).",
+      "next": {
+        "label": "Alla recidiva → malattia avanzata",
+        "node": "m1_nodriver_ps"
+      },
+      "select": true
     },
     "iii_driver": {
       "type": "question",
@@ -260,8 +479,14 @@
       "short": "Driver",
       "info": "CT-RT concomitante superiore alla sequenziale (OS HR 0,74-0,84); 60 Gy, dosi superiori non aggiungono beneficio (RTOG 0617).",
       "answers": [
-        { "label": "EGFR mutato", "next": "iii_egfr" },
-        { "label": "EGFR wild-type", "next": "iii_pdl1" }
+        {
+          "label": "EGFR mutato",
+          "next": "iii_egfr"
+        },
+        {
+          "label": "EGFR wild-type",
+          "next": "iii_pdl1"
+        }
       ]
     },
     "iii_egfr": {
@@ -276,15 +501,39 @@
             "trial": "LAURA",
             "endpoint": "PFS 39,1 vs 5,6 mesi, HR 0,16",
             "rows": [
-              ["Radioterapia", "60 Gy in 30 frazioni"],
-              ["+ doppietta di platino", "2-3 cicli concomitanti"],
-              ["poi Osimertinib", "80 mg/die per os, fino a progressione"]
+              [
+                "Radioterapia",
+                "60 Gy in 30 frazioni"
+              ],
+              [
+                "+ doppietta di platino",
+                "2-3 cicli concomitanti"
+              ],
+              [
+                "poi Osimertinib",
+                "80 mg/die per os, fino a progressione"
+              ]
             ],
-            "sources": [{"type": "scheda"}, {"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "scheda"
+              },
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "osimertinib",
+            "platino"
+          ]
         }
       ],
-      "next": { "label": "Alla progressione → 2ª linea EGFR", "node": "m1_egfr_2l" }
+      "next": {
+        "label": "Alla progressione → 2ª linea EGFR",
+        "node": "m1_egfr_2l"
+      },
+      "select": true
     },
     "iii_pdl1": {
       "type": "question",
@@ -292,8 +541,14 @@
       "short": "PD-L1",
       "info": "EMA/AIFA approvano durvalumab solo con PD-L1 ≥1% (FDA indipendentemente dal PD-L1).",
       "answers": [
-        { "label": "TPS ≥1%", "next": "iii_pacific" },
-        { "label": "TPS <1%", "next": "iii_ctrt" }
+        {
+          "label": "TPS ≥1%",
+          "next": "iii_pacific"
+        },
+        {
+          "label": "TPS <1%",
+          "next": "iii_ctrt"
+        }
       ]
     },
     "iii_pacific": {
@@ -308,12 +563,32 @@
             "trial": "PACIFIC",
             "endpoint": "PFS 16,8 vs 5,6 mesi (HR 0,52); OS a 5 anni 42,9% vs 33,4%",
             "rows": [
-              ["Radioterapia", "60 Gy in 30 frazioni"],
-              ["+ doppietta di platino", "cisplatino-etoposide, carboplatino-paclitaxel o cisplatino-pemetrexed (non squamoso)"],
-              ["poi Durvalumab", "10 mg/kg EV ogni 2 settimane (o 1500 mg ogni 4 settimane) per 12 mesi"]
+              [
+                "Radioterapia",
+                "60 Gy in 30 frazioni"
+              ],
+              [
+                "+ doppietta di platino",
+                "cisplatino-etoposide, carboplatino-paclitaxel o cisplatino-pemetrexed (non squamoso)"
+              ],
+              [
+                "poi Durvalumab",
+                "10 mg/kg EV ogni 2 settimane (o 1500 mg ogni 4 settimane) per 12 mesi"
+              ]
             ],
-            "sources": [{"type": "scheda"}, {"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "scheda"
+              },
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "platino"
+          ]
         },
         {
           "name": "CT-RT sequenziale",
@@ -321,7 +596,11 @@
           "key": "Se il paziente non è candidabile alla concomitante (PS, comorbidità, volume di irradiazione)."
         }
       ],
-      "next": { "label": "Alla progressione → malattia avanzata", "node": "m1_nodriver_ps" }
+      "next": {
+        "label": "Alla progressione",
+        "node": "rec_pacific"
+      },
+      "select": true
     },
     "iii_ctrt": {
       "type": "recommendation",
@@ -333,10 +612,23 @@
           "key": "Nessun consolidamento: con PD-L1 <1% durvalumab non è approvato in UE (post-hoc HR 1,36).",
           "regimen": {
             "rows": [
-              ["Radioterapia", "60 Gy in 30 frazioni"],
-              ["+ doppietta di platino", "cisplatino-etoposide, carboplatino-paclitaxel o cisplatino-pemetrexed (non squamoso)"]
+              [
+                "Radioterapia",
+                "60 Gy in 30 frazioni"
+              ],
+              [
+                "+ doppietta di platino",
+                "cisplatino-etoposide, carboplatino-paclitaxel o cisplatino-pemetrexed (non squamoso)"
+              ]
             ],
-            "sources": [{"type": "scheda"}, {"type": "standard"}]
+            "sources": [
+              {
+                "type": "scheda"
+              },
+              {
+                "type": "standard"
+              }
+            ]
           }
         },
         {
@@ -345,7 +637,11 @@
           "key": "Se il paziente non è candidabile alla concomitante."
         }
       ],
-      "next": { "label": "Alla progressione → malattia avanzata", "node": "m1_nodriver_ps" }
+      "next": {
+        "label": "Alla progressione → malattia avanzata",
+        "node": "m1_nodriver_ps"
+      },
+      "select": true
     },
     "m1_driver": {
       "type": "question",
@@ -353,12 +649,30 @@
       "short": "Driver",
       "info": "Reflex testing con NGS ampio in tutti gli stadi IIIB-IV; biopsia liquida se il tessuto è insufficiente. Oligometastatico (≤5 lesioni, ≤3 sedi): aggiungere il trattamento locale ablativo (OS HR 0,51).",
       "answers": [
-        { "label": "EGFR mutato", "next": "m1_egfr_tipo" },
-        { "label": "ALK riarrangiato", "next": "m1_alk_1l" },
-        { "label": "ROS1 riarrangiato", "next": "m1_ros1_1l" },
-        { "label": "Target in 1ª linea: BRAF V600E, RET, NTRK", "next": "m1_altri_tipo" },
-        { "label": "Target dalla 2ª linea: KRAS G12C, MET ex14, HER2", "next": "m1_tardivi_tipo" },
-        { "label": "Nessun driver (non oncogene-addicted)", "next": "m1_nodriver_ps" }
+        {
+          "label": "EGFR mutato",
+          "next": "m1_egfr_tipo"
+        },
+        {
+          "label": "ALK riarrangiato",
+          "next": "m1_alk_1l"
+        },
+        {
+          "label": "ROS1 riarrangiato",
+          "next": "m1_ros1_1l"
+        },
+        {
+          "label": "Target in 1ª linea: BRAF V600E, RET, NTRK",
+          "next": "m1_altri_tipo"
+        },
+        {
+          "label": "Target dalla 2ª linea: KRAS G12C, MET ex14, HER2",
+          "next": "m1_tardivi_tipo"
+        },
+        {
+          "label": "Nessun driver (non oncogene-addicted)",
+          "next": "m1_nodriver_ps"
+        }
       ]
     },
     "m1_egfr_tipo": {
@@ -367,8 +681,14 @@
       "short": "EGFR",
       "info": "Le mutazioni classiche sono l'85%; l'esone 20 il 3-6% (va cercata con NGS, l'immunoterapia è inefficace).",
       "answers": [
-        { "label": "Classica (Ex19del / L858R)", "next": "m1_egfr_1l" },
-        { "label": "Inserzione nell'esone 20", "next": "m1_ex20_1l" }
+        {
+          "label": "Classica (Ex19del / L858R)",
+          "next": "m1_egfr_1l"
+        },
+        {
+          "label": "Inserzione nell'esone 20",
+          "next": "m1_ex20_1l"
+        }
       ]
     },
     "m1_egfr_1l": {
@@ -383,10 +703,20 @@
             "trial": "FLAURA",
             "endpoint": "PFS 18,9 vs 10,2 mesi, HR 0,46",
             "rows": [
-              ["Osimertinib", "80 mg/die per os, in continuo"]
+              [
+                "Osimertinib",
+                "80 mg/die per os, in continuo"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "osimertinib"
+          ]
         },
         {
           "name": "Osimertinib + platino-pemetrexed",
@@ -396,12 +726,29 @@
             "trial": "FLAURA2",
             "endpoint": "PFS 25,5 vs 16,7 mesi, HR 0,62",
             "rows": [
-              ["Osimertinib", "80 mg/die per os, in continuo"],
-              ["Pemetrexed", "500 mg/m² EV ogni 3 settimane, anche in mantenimento"],
-              ["Platino", "cisplatino ×4 cicli o carboplatino fino a 6 cicli"]
+              [
+                "Osimertinib",
+                "80 mg/die per os, in continuo"
+              ],
+              [
+                "Pemetrexed",
+                "500 mg/m² EV ogni 3 settimane, anche in mantenimento"
+              ],
+              [
+                "Platino",
+                "cisplatino ×4 cicli o carboplatino fino a 6 cicli"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "osimertinib",
+            "platino"
+          ]
         },
         {
           "name": "Amivantamab + lazertinib",
@@ -411,15 +758,32 @@
             "trial": "MARIPOSA",
             "endpoint": "PFS 23,7 vs 16,6 mesi, HR 0,70",
             "rows": [
-              ["Amivantamab", "1050 mg EV (1400 mg se ≥80 kg) settimanale ×4, poi ogni 2 settimane"],
-              ["Lazertinib", "240 mg/die per os, in continuo"]
+              [
+                "Amivantamab",
+                "1050 mg EV (1400 mg se ≥80 kg) settimanale ×4, poi ogni 2 settimane"
+              ],
+              [
+                "Lazertinib",
+                "240 mg/die per os, in continuo"
+              ]
             ],
             "note": "Profilassi anticoagulante nei primi 4 mesi.",
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "amivantamab"
+          ]
         }
       ],
-      "next": { "label": "Alla progressione → 2ª linea", "node": "m1_egfr_2l" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "m1_egfr_2l"
+      },
+      "select": true
     },
     "m1_egfr_2l": {
       "type": "recommendation",
@@ -431,12 +795,34 @@
           "key": "Dopo ri-biopsia/NGS: resistenza da amplificazione di MET (la più frequente), C797S, HER2, trasformazione in SCLC.",
           "regimen": {
             "rows": [
-              ["Cisplatino o carboplatino", "cisplatino 75 mg/m² o carboplatino AUC 5 EV ogni 21 giorni ×4 cicli"],
-              ["Pemetrexed", "500 mg/m² EV ogni 21 giorni, poi in mantenimento"],
-              ["± Bevacizumab", "15 mg/kg EV ogni 21 giorni"]
+              [
+                "Cisplatino o carboplatino",
+                "cisplatino 75 mg/m² o carboplatino AUC 5 EV ogni 21 giorni ×4 cicli"
+              ],
+              [
+                "Pemetrexed",
+                "500 mg/m² EV ogni 21 giorni, poi in mantenimento"
+              ],
+              [
+                "± Bevacizumab",
+                "15 mg/kg EV ogni 21 giorni"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "excludes": [
+            {
+              "tag": "platino",
+              "reason": "Chemioterapia a base di platino già ricevuta in 1ª linea (FLAURA2)."
+            }
+          ],
+          "gives": [
+            "platino"
+          ]
         },
         {
           "name": "Atezolizumab + bevacizumab + carboplatino-paclitaxel",
@@ -446,13 +832,41 @@
             "trial": "IMpower150",
             "endpoint": "OS HR 0,80 nella popolazione complessiva",
             "rows": [
-              ["Atezolizumab", "1200 mg EV ogni 3 settimane"],
-              ["Bevacizumab", "15 mg/kg EV ogni 3 settimane"],
-              ["Carboplatino + paclitaxel", "AUC 6 + 200 mg/m² ogni 3 settimane ×4-6 cicli"]
+              [
+                "Atezolizumab",
+                "1200 mg EV ogni 3 settimane"
+              ],
+              [
+                "Bevacizumab",
+                "15 mg/kg EV ogni 3 settimane"
+              ],
+              [
+                "Carboplatino + paclitaxel",
+                "AUC 6 + 200 mg/m² ogni 3 settimane ×4-6 cicli"
+              ]
             ],
             "note": "Poi mantenimento con atezolizumab + bevacizumab.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "excludes": [
+            {
+              "tag": "platino",
+              "reason": "Chemioterapia a base di platino già ricevuta in 1ª linea (FLAURA2)."
+            }
+          ],
+          "gives": [
+            "io",
+            "platino"
+          ]
+        },
+        {
+          "name": "Docetaxel",
+          "aifa": "standard",
+          "key": "Dopo TKI e chemioterapia a base di platino."
         }
       ],
       "note": "Dopo TKI di 1ª/2ª generazione cercare T790M (50-60%): osimertinib in 2ª linea (AURA3, PFS HR 0,30)."
@@ -469,12 +883,29 @@
             "trial": "PAPILLON",
             "endpoint": "PFS 11,4 vs 6,7 mesi, HR 0,40",
             "rows": [
-              ["Amivantamab", "1400 mg EV (1750 mg se ≥80 kg) g1, 8, 15 del ciclo 1 e g1 del ciclo 2; poi 1750 mg (2100 mg) ogni 3 settimane"],
-              ["Carboplatino", "AUC 5 ogni 3 settimane, massimo 4 cicli"],
-              ["Pemetrexed", "500 mg/m² ogni 3 settimane, anche in mantenimento"]
+              [
+                "Amivantamab",
+                "1400 mg EV (1750 mg se ≥80 kg) g1, 8, 15 del ciclo 1 e g1 del ciclo 2; poi 1750 mg (2100 mg) ogni 3 settimane"
+              ],
+              [
+                "Carboplatino",
+                "AUC 5 ogni 3 settimane, massimo 4 cicli"
+              ],
+              [
+                "Pemetrexed",
+                "500 mg/m² ogni 3 settimane, anche in mantenimento"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "amivantamab",
+            "platino"
+          ]
         },
         {
           "name": "Platino + pemetrexed",
@@ -482,14 +913,31 @@
           "key": "Prima linea storica; l'immunoterapia è inefficace.",
           "regimen": {
             "rows": [
-              ["Cisplatino o carboplatino", "cisplatino 75 mg/m² o carboplatino AUC 5 EV ogni 21 giorni ×4 cicli"],
-              ["Pemetrexed", "500 mg/m² EV ogni 21 giorni, poi in mantenimento"]
+              [
+                "Cisplatino o carboplatino",
+                "cisplatino 75 mg/m² o carboplatino AUC 5 EV ogni 21 giorni ×4 cicli"
+              ],
+              [
+                "Pemetrexed",
+                "500 mg/m² EV ogni 21 giorni, poi in mantenimento"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "platino"
+          ]
         }
       ],
-      "next": { "label": "Alla progressione → 2ª linea", "node": "m1_ex20_2l" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "m1_ex20_2l"
+      },
+      "select": true
     },
     "m1_ex20_2l": {
       "type": "recommendation",
@@ -502,10 +950,23 @@
           "regimen": {
             "trial": "CHRYSALIS",
             "rows": [
-              ["Amivantamab", "1050 mg EV (1400 mg se ≥80 kg) settimanale ×4, poi ogni 2 settimane"]
+              [
+                "Amivantamab",
+                "1050 mg EV (1400 mg se ≥80 kg) settimanale ×4, poi ogni 2 settimane"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "excludes": [
+            {
+              "tag": "amivantamab",
+              "reason": "Amivantamab già ricevuto in 1ª linea."
+            }
+          ]
         },
         {
           "name": "Docetaxel",
@@ -513,10 +974,17 @@
           "key": "Dopo amivantamab.",
           "regimen": {
             "rows": [
-              ["Docetaxel", "75 mg/m² EV giorno 1 ogni 21 giorni"]
+              [
+                "Docetaxel",
+                "75 mg/m² EV giorno 1 ogni 21 giorni"
+              ]
             ],
             "note": "Fino a progressione o tossicità inaccettabile.",
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         }
       ],
@@ -534,9 +1002,23 @@
             "trial": "CROWN",
             "endpoint": "PFS a 5 anni 60% vs 8%, HR 0,28",
             "rows": [
-              ["Lorlatinib", "100 mg/die per os, in continuo"]
+              [
+                "Lorlatinib",
+                "100 mg/die per os, in continuo"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "lorlatinib"
+          ],
+          "next": {
+            "label": "Alla progressione → chemioterapia",
+            "node": "m1_driver_ct"
           }
         },
         {
@@ -547,10 +1029,20 @@
             "trial": "ALEX",
             "endpoint": "PFS 34,8 vs 10,9 mesi, HR 0,43",
             "rows": [
-              ["Alectinib", "600 mg per os ×2/die, in continuo"]
+              [
+                "Alectinib",
+                "600 mg per os ×2/die, in continuo"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "alk2g"
+          ]
         },
         {
           "name": "Brigatinib",
@@ -560,13 +1052,29 @@
             "trial": "ALTA-1L",
             "endpoint": "PFS a 12 mesi 67% vs 43%, HR 0,49",
             "rows": [
-              ["Brigatinib", "90 mg/die per os per 7 giorni, poi 180 mg/die"]
+              [
+                "Brigatinib",
+                "90 mg/die per os per 7 giorni, poi 180 mg/die"
+              ]
             ],
-            "sources": [{"type": "pubmed", "label": "ALTA-1L", "doi": "10.1056/NEJMoa1810171"}]
-          }
+            "sources": [
+              {
+                "type": "pubmed",
+                "label": "ALTA-1L",
+                "doi": "10.1056/NEJMoa1810171"
+              }
+            ]
+          },
+          "gives": [
+            "alk2g"
+          ]
         }
       ],
-      "next": { "label": "Alla progressione → 2ª linea", "node": "m1_alk_2l" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "m1_alk_2l"
+      },
+      "select": true
     },
     "m1_alk_2l": {
       "type": "recommendation",
@@ -578,13 +1086,39 @@
           "key": "Attivo sulla maggior parte delle mutazioni di resistenza (inclusa G1202R).",
           "regimen": {
             "rows": [
-              ["Lorlatinib", "100 mg/die per os, in continuo"]
+              [
+                "Lorlatinib",
+                "100 mg/die per os, in continuo"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "requires": [
+            {
+              "tag": "alk2g",
+              "reason": "Indicato dopo un TKI anti-ALK di 2ª generazione."
+            }
+          ],
+          "excludes": [
+            {
+              "tag": "lorlatinib",
+              "reason": "Lorlatinib già ricevuto."
+            }
+          ],
+          "gives": [
+            "lorlatinib"
+          ]
         }
       ],
-      "next": { "label": "Esaurite le opzioni target → chemioterapia", "node": "m1_driver_ct" }
+      "next": {
+        "label": "Esaurite le opzioni target → chemioterapia",
+        "node": "m1_driver_ct"
+      },
+      "select": true
     },
     "m1_ros1_1l": {
       "type": "recommendation",
@@ -597,9 +1131,18 @@
           "regimen": {
             "trial": "PROFILE 1001",
             "rows": [
-              ["Crizotinib", "250 mg per os ×2/die, in continuo"]
+              [
+                "Crizotinib",
+                "250 mg per os ×2/die, in continuo"
+              ]
             ],
-            "sources": [{"type": "pubmed", "label": "ALTA-1L", "doi": "10.1056/NEJMoa1810171"}]
+            "sources": [
+              {
+                "type": "pubmed",
+                "label": "ALTA-1L",
+                "doi": "10.1056/NEJMoa1810171"
+              }
+            ]
           }
         },
         {
@@ -608,9 +1151,16 @@
           "key": "Migliore attività sul SNC (ORR 68%, PFS 15,7 mesi).",
           "regimen": {
             "rows": [
-              ["Entrectinib", "600 mg/die per os, in continuo"]
+              [
+                "Entrectinib",
+                "600 mg/die per os, in continuo"
+              ]
             ],
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         },
         {
@@ -620,23 +1170,43 @@
           "regimen": {
             "trial": "TRIDENT-1",
             "rows": [
-              ["Repotrectinib", "160 mg/die per os per 14 giorni, poi 160 mg ×2/die"]
+              [
+                "Repotrectinib",
+                "160 mg/die per os per 14 giorni, poi 160 mg ×2/die"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         }
       ],
       "note": "La conferma con FISH è obbligatoria se l'IHC per ROS1 è positiva.",
-      "next": { "label": "Alla progressione → chemioterapia", "node": "m1_driver_ct" }
+      "next": {
+        "label": "Alla progressione → chemioterapia",
+        "node": "m1_driver_ct"
+      },
+      "select": true
     },
     "m1_altri_tipo": {
       "type": "question",
       "text": "Quale alterazione?",
       "short": "Driver",
       "answers": [
-        { "label": "BRAF V600E", "next": "m1_braf" },
-        { "label": "RET riarrangiato", "next": "m1_ret" },
-        { "label": "NTRK riarrangiato", "next": "m1_ntrk" }
+        {
+          "label": "BRAF V600E",
+          "next": "m1_braf"
+        },
+        {
+          "label": "RET riarrangiato",
+          "next": "m1_ret"
+        },
+        {
+          "label": "NTRK riarrangiato",
+          "next": "m1_ntrk"
+        }
       ]
     },
     "m1_braf": {
@@ -649,15 +1219,32 @@
           "key": "Unica combinazione approvata; ORR 64%, PFS 10,8-14,6 mesi. V600E sia in fumatori sia in non fumatori.",
           "regimen": {
             "rows": [
-              ["Dabrafenib", "150 mg per os ×2/die"],
-              ["Trametinib", "2 mg/die per os"]
+              [
+                "Dabrafenib",
+                "150 mg per os ×2/die"
+              ],
+              [
+                "Trametinib",
+                "2 mg/die per os"
+              ]
             ],
             "note": "In continuo fino a progressione.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "braf"
+          ]
         }
       ],
-      "next": { "label": "Alla progressione → percorso non oncogene-addicted", "node": "m1_nodriver_ps" }
+      "next": {
+        "label": "Alla progressione → percorso non oncogene-addicted",
+        "node": "m1_nodriver_ps"
+      },
+      "select": true
     },
     "m1_ret": {
       "type": "recommendation",
@@ -671,13 +1258,24 @@
             "trial": "LIBRETTO-431",
             "endpoint": "PFS 24,8 vs 11,2 mesi, HR 0,46",
             "rows": [
-              ["Selpercatinib", "160 mg per os ×2/die (120 mg se <50 kg), in continuo"]
+              [
+                "Selpercatinib",
+                "160 mg per os ×2/die (120 mg se <50 kg), in continuo"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         }
       ],
-      "next": { "label": "Alla progressione → chemioterapia", "node": "m1_driver_ct" }
+      "next": {
+        "label": "Alla progressione → chemioterapia",
+        "node": "m1_driver_ct"
+      },
+      "select": true
     },
     "m1_ntrk": {
       "type": "recommendation",
@@ -689,9 +1287,16 @@
           "key": "Tumor-agnostic; nel NSCLC ORR 73%, PFS 35,4 mesi.",
           "regimen": {
             "rows": [
-              ["Larotrectinib", "100 mg per os ×2/die, in continuo"]
+              [
+                "Larotrectinib",
+                "100 mg per os ×2/die, in continuo"
+              ]
             ],
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         },
         {
@@ -700,13 +1305,24 @@
           "key": "ORR 64%, PFS 14,9 mesi; attivo sul SNC.",
           "regimen": {
             "rows": [
-              ["Entrectinib", "600 mg/die per os, in continuo"]
+              [
+                "Entrectinib",
+                "600 mg/die per os, in continuo"
+              ]
             ],
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         }
       ],
-      "next": { "label": "Alla progressione → chemioterapia", "node": "m1_driver_ct" }
+      "next": {
+        "label": "Alla progressione → chemioterapia",
+        "node": "m1_driver_ct"
+      },
+      "select": true
     },
     "m1_driver_ct": {
       "type": "recommendation",
@@ -718,11 +1334,24 @@
           "key": "La malattia ALK e ROS1 è particolarmente sensibile al pemetrexed; l'immunoterapia è poco efficace negli oncogene-addicted.",
           "regimen": {
             "rows": [
-              ["Cisplatino o carboplatino", "cisplatino 75 mg/m² o carboplatino AUC 5 EV ogni 21 giorni ×4 cicli"],
-              ["Pemetrexed", "500 mg/m² EV ogni 21 giorni, poi in mantenimento"],
-              ["± Bevacizumab", "15 mg/kg EV ogni 21 giorni (non squamoso)"]
+              [
+                "Cisplatino o carboplatino",
+                "cisplatino 75 mg/m² o carboplatino AUC 5 EV ogni 21 giorni ×4 cicli"
+              ],
+              [
+                "Pemetrexed",
+                "500 mg/m² EV ogni 21 giorni, poi in mantenimento"
+              ],
+              [
+                "± Bevacizumab",
+                "15 mg/kg EV ogni 21 giorni (non squamoso)"
+              ]
             ],
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         }
       ]
@@ -733,9 +1362,18 @@
       "short": "Driver",
       "info": "In Italia la terapia target per questi driver è rimborsata dopo platino ± immunoterapia: la 1ª linea segue il percorso non oncogene-addicted.",
       "answers": [
-        { "label": "KRAS G12C", "next": "m1_kras_1l" },
-        { "label": "MET exon 14 skipping", "next": "m1_met_1l" },
-        { "label": "HER2 (ERBB2) mutato", "next": "m1_her2_1l" }
+        {
+          "label": "KRAS G12C",
+          "next": "m1_kras_1l"
+        },
+        {
+          "label": "MET exon 14 skipping",
+          "next": "m1_met_1l"
+        },
+        {
+          "label": "HER2 (ERBB2) mutato",
+          "next": "m1_her2_1l"
+        }
       ]
     },
     "m1_kras_1l": {
@@ -750,13 +1388,30 @@
             "trial": "KEYNOTE-189",
             "endpoint": "OS 22,0 vs 10,6 mesi, HR 0,60",
             "rows": [
-              ["Pembrolizumab", "200 mg EV ogni 3 settimane (fino a 35 cicli, circa 2 anni)"],
-              ["Cisplatino o carboplatino", "cisplatino 75 mg/m² o carboplatino AUC 5 EV ogni 21 giorni ×4 cicli"],
-              ["Pemetrexed", "500 mg/m² EV ogni 21 giorni, poi in mantenimento"]
+              [
+                "Pembrolizumab",
+                "200 mg EV ogni 3 settimane (fino a 35 cicli, circa 2 anni)"
+              ],
+              [
+                "Cisplatino o carboplatino",
+                "cisplatino 75 mg/m² o carboplatino AUC 5 EV ogni 21 giorni ×4 cicli"
+              ],
+              [
+                "Pemetrexed",
+                "500 mg/m² EV ogni 21 giorni, poi in mantenimento"
+              ]
             ],
             "note": "Supplementazione con acido folico e vitamina B12 per il pemetrexed.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "platino"
+          ]
         },
         {
           "name": "Pembrolizumab in monoterapia se PD-L1 ≥50%",
@@ -766,14 +1421,28 @@
             "trial": "KEYNOTE-024",
             "endpoint": "PFS 10,3 vs 6,0 mesi, HR 0,50",
             "rows": [
-              ["Pembrolizumab", "200 mg EV ogni 3 settimane (o 400 mg ogni 6 settimane), fino a 2 anni"]
+              [
+                "Pembrolizumab",
+                "200 mg EV ogni 3 settimane (o 400 mg ogni 6 settimane), fino a 2 anni"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "io"
+          ]
         }
       ],
       "note": "KRAS G12C: spesso fumatori con PD-L1/TMB alti, la 1ª linea resta IO ± CT.",
-      "next": { "label": "Alla progressione → 2ª linea target", "node": "m1_kras_2l" }
+      "next": {
+        "label": "Alla progressione → 2ª linea target",
+        "node": "m1_kras_2l"
+      },
+      "select": true
     },
     "m1_met_1l": {
       "type": "recommendation",
@@ -787,13 +1456,30 @@
             "trial": "KEYNOTE-189",
             "endpoint": "OS 22,0 vs 10,6 mesi, HR 0,60",
             "rows": [
-              ["Pembrolizumab", "200 mg EV ogni 3 settimane (fino a 35 cicli, circa 2 anni)"],
-              ["Cisplatino o carboplatino", "cisplatino 75 mg/m² o carboplatino AUC 5 EV ogni 21 giorni ×4 cicli"],
-              ["Pemetrexed", "500 mg/m² EV ogni 21 giorni, poi in mantenimento"]
+              [
+                "Pembrolizumab",
+                "200 mg EV ogni 3 settimane (fino a 35 cicli, circa 2 anni)"
+              ],
+              [
+                "Cisplatino o carboplatino",
+                "cisplatino 75 mg/m² o carboplatino AUC 5 EV ogni 21 giorni ×4 cicli"
+              ],
+              [
+                "Pemetrexed",
+                "500 mg/m² EV ogni 21 giorni, poi in mantenimento"
+              ]
             ],
             "note": "Supplementazione con acido folico e vitamina B12 per il pemetrexed.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "platino"
+          ]
         },
         {
           "name": "Pembrolizumab in monoterapia se PD-L1 ≥50%",
@@ -803,14 +1489,28 @@
             "trial": "KEYNOTE-024",
             "endpoint": "PFS 10,3 vs 6,0 mesi, HR 0,50",
             "rows": [
-              ["Pembrolizumab", "200 mg EV ogni 3 settimane (o 400 mg ogni 6 settimane), fino a 2 anni"]
+              [
+                "Pembrolizumab",
+                "200 mg EV ogni 3 settimane (o 400 mg ogni 6 settimane), fino a 2 anni"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "io"
+          ]
         }
       ],
       "note": "MET ex14: tipicamente anziani e fumatori.",
-      "next": { "label": "Alla progressione → 2ª linea target", "node": "m1_met_2l" }
+      "next": {
+        "label": "Alla progressione → 2ª linea target",
+        "node": "m1_met_2l"
+      },
+      "select": true
     },
     "m1_her2_1l": {
       "type": "recommendation",
@@ -824,13 +1524,30 @@
             "trial": "KEYNOTE-189",
             "endpoint": "OS 22,0 vs 10,6 mesi, HR 0,60",
             "rows": [
-              ["Pembrolizumab", "200 mg EV ogni 3 settimane (fino a 35 cicli, circa 2 anni)"],
-              ["Cisplatino o carboplatino", "cisplatino 75 mg/m² o carboplatino AUC 5 EV ogni 21 giorni ×4 cicli"],
-              ["Pemetrexed", "500 mg/m² EV ogni 21 giorni, poi in mantenimento"]
+              [
+                "Pembrolizumab",
+                "200 mg EV ogni 3 settimane (fino a 35 cicli, circa 2 anni)"
+              ],
+              [
+                "Cisplatino o carboplatino",
+                "cisplatino 75 mg/m² o carboplatino AUC 5 EV ogni 21 giorni ×4 cicli"
+              ],
+              [
+                "Pemetrexed",
+                "500 mg/m² EV ogni 21 giorni, poi in mantenimento"
+              ]
             ],
             "note": "Supplementazione con acido folico e vitamina B12 per il pemetrexed.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "platino"
+          ]
         },
         {
           "name": "Pembrolizumab in monoterapia se PD-L1 ≥50%",
@@ -840,14 +1557,28 @@
             "trial": "KEYNOTE-024",
             "endpoint": "PFS 10,3 vs 6,0 mesi, HR 0,50",
             "rows": [
-              ["Pembrolizumab", "200 mg EV ogni 3 settimane (o 400 mg ogni 6 settimane), fino a 2 anni"]
+              [
+                "Pembrolizumab",
+                "200 mg EV ogni 3 settimane (o 400 mg ogni 6 settimane), fino a 2 anni"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "io"
+          ]
         }
       ],
       "note": "HER2 mutato (non amplificato): tipicamente donne non fumatrici.",
-      "next": { "label": "Alla progressione → 2ª linea target", "node": "m1_her2_2l" }
+      "next": {
+        "label": "Alla progressione → 2ª linea target",
+        "node": "m1_her2_2l"
+      },
+      "select": true
     },
     "m1_kras_2l": {
       "type": "recommendation",
@@ -861,9 +1592,16 @@
             "trial": "CodeBreaK 200",
             "endpoint": "PFS 5,6 vs 4,5 mesi, HR 0,66",
             "rows": [
-              ["Sotorasib", "960 mg/die per os, in continuo"]
+              [
+                "Sotorasib",
+                "960 mg/die per os, in continuo"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         },
         {
@@ -874,9 +1612,16 @@
             "trial": "KRYSTAL-12",
             "endpoint": "PFS 5,5 vs 3,8 mesi, HR 0,58",
             "rows": [
-              ["Adagrasib", "600 mg per os ×2/die, in continuo"]
+              [
+                "Adagrasib",
+                "600 mg per os ×2/die, in continuo"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         }
       ]
@@ -892,9 +1637,16 @@
           "regimen": {
             "trial": "GEOMETRY mono-1",
             "rows": [
-              ["Capmatinib", "400 mg per os ×2/die, in continuo"]
+              [
+                "Capmatinib",
+                "400 mg per os ×2/die, in continuo"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         },
         {
@@ -904,9 +1656,16 @@
           "regimen": {
             "trial": "VISION",
             "rows": [
-              ["Tepotinib", "450 mg/die per os, in continuo"]
+              [
+                "Tepotinib",
+                "450 mg/die per os, in continuo"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         }
       ]
@@ -922,9 +1681,16 @@
           "regimen": {
             "trial": "DESTINY-Lung02",
             "rows": [
-              ["Trastuzumab deruxtecan", "5,4 mg/kg EV ogni 3 settimane"]
+              [
+                "Trastuzumab deruxtecan",
+                "5,4 mg/kg EV ogni 3 settimane"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         },
         {
@@ -933,10 +1699,17 @@
           "key": "Se trastuzumab deruxtecan non è accessibile.",
           "regimen": {
             "rows": [
-              ["Docetaxel", "75 mg/m² EV giorno 1 ogni 21 giorni"]
+              [
+                "Docetaxel",
+                "75 mg/m² EV giorno 1 ogni 21 giorni"
+              ]
             ],
             "note": "Fino a progressione o tossicità inaccettabile.",
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         }
       ]
@@ -947,10 +1720,22 @@
       "short": "PS / IO",
       "info": "Controindicano l'IO: autoimmunità attiva, steroidi cronici, ILD, metastasi encefaliche sintomatiche non trattate.",
       "answers": [
-        { "label": "PS 0-1, immunoterapia possibile", "next": "m1_pdl1" },
-        { "label": "Controindicazione all'immunoterapia", "next": "m1_ct_sola" },
-        { "label": "PS 2 o anziano fragile", "next": "m1_ps2" },
-        { "label": "PS 3-4", "next": "m1_bsc" }
+        {
+          "label": "PS 0-1, immunoterapia possibile",
+          "next": "m1_pdl1"
+        },
+        {
+          "label": "Controindicazione all'immunoterapia",
+          "next": "m1_ct_sola"
+        },
+        {
+          "label": "PS 2 o anziano fragile",
+          "next": "m1_ps2"
+        },
+        {
+          "label": "PS 3-4",
+          "next": "m1_bsc"
+        }
       ]
     },
     "m1_pdl1": {
@@ -959,8 +1744,14 @@
       "short": "PD-L1",
       "info": "Servono almeno 100 cellule vitali. Cloni 22C3, SP263 e 28-8 armonizzati; SP142 e 73-10 non intercambiabili.",
       "answers": [
-        { "label": "TPS ≥50%", "next": "m1_io_alto" },
-        { "label": "TPS <50%", "next": "m1_istologia" }
+        {
+          "label": "TPS ≥50%",
+          "next": "m1_io_alto"
+        },
+        {
+          "label": "TPS <50%",
+          "next": "m1_istologia"
+        }
       ]
     },
     "m1_io_alto": {
@@ -975,10 +1766,20 @@
             "trial": "KEYNOTE-024",
             "endpoint": "PFS 10,3 vs 6,0 mesi, HR 0,50",
             "rows": [
-              ["Pembrolizumab", "200 mg EV ogni 3 settimane (o 400 mg ogni 6 settimane), fino a 2 anni"]
+              [
+                "Pembrolizumab",
+                "200 mg EV ogni 3 settimane (o 400 mg ogni 6 settimane), fino a 2 anni"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "io"
+          ]
         },
         {
           "name": "Atezolizumab",
@@ -988,10 +1789,20 @@
             "trial": "IMpower110",
             "endpoint": "OS 20,2 vs 13,1 mesi, HR 0,59",
             "rows": [
-              ["Atezolizumab", "1200 mg EV ogni 3 settimane"]
+              [
+                "Atezolizumab",
+                "1200 mg EV ogni 3 settimane"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "io"
+          ]
         },
         {
           "name": "Cemiplimab",
@@ -1001,10 +1812,20 @@
             "trial": "EMPOWER-Lung1",
             "endpoint": "OS 26,1 vs 13,3 mesi (HR 0,57); PFS 8,1 vs 5,3 mesi (HR 0,51)",
             "rows": [
-              ["Cemiplimab", "350 mg EV ogni 3 settimane"]
+              [
+                "Cemiplimab",
+                "350 mg EV ogni 3 settimane"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "io"
+          ]
         },
         {
           "name": "Chemio-immunoterapia",
@@ -1014,16 +1835,37 @@
             "trial": "KEYNOTE-189",
             "endpoint": "OS 22,0 vs 10,6 mesi, HR 0,60",
             "rows": [
-              ["Pembrolizumab", "200 mg EV ogni 3 settimane (fino a 35 cicli, circa 2 anni)"],
-              ["Cisplatino o carboplatino", "cisplatino 75 mg/m² o carboplatino AUC 5 EV ogni 21 giorni ×4 cicli"],
-              ["Pemetrexed", "500 mg/m² EV ogni 21 giorni, poi in mantenimento"]
+              [
+                "Pembrolizumab",
+                "200 mg EV ogni 3 settimane (fino a 35 cicli, circa 2 anni)"
+              ],
+              [
+                "Cisplatino o carboplatino",
+                "cisplatino 75 mg/m² o carboplatino AUC 5 EV ogni 21 giorni ×4 cicli"
+              ],
+              [
+                "Pemetrexed",
+                "500 mg/m² EV ogni 21 giorni, poi in mantenimento"
+              ]
             ],
             "note": "Supplementazione con acido folico e vitamina B12 per il pemetrexed.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "platino"
+          ]
         }
       ],
-      "next": { "label": "Alla progressione → 2ª linea", "node": "m1_2l_post_io" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "m1_2l_post_io"
+      },
+      "select": true
     },
     "m1_istologia": {
       "type": "question",
@@ -1031,8 +1873,14 @@
       "short": "Istologia",
       "info": "Pemetrexed e bevacizumab sono controindicati nello squamoso. KEYNOTE-042 (mono-IO con PD-L1 1-49%) è negativo.",
       "answers": [
-        { "label": "Non squamoso", "next": "m1_ctio_nonsq" },
-        { "label": "Squamoso", "next": "m1_ctio_sq" }
+        {
+          "label": "Non squamoso",
+          "next": "m1_ctio_nonsq"
+        },
+        {
+          "label": "Squamoso",
+          "next": "m1_ctio_sq"
+        }
       ]
     },
     "m1_ctio_nonsq": {
@@ -1047,13 +1895,30 @@
             "trial": "KEYNOTE-189",
             "endpoint": "OS 22,0 vs 10,6 mesi, HR 0,60",
             "rows": [
-              ["Pembrolizumab", "200 mg EV ogni 3 settimane (fino a 35 cicli, circa 2 anni)"],
-              ["Cisplatino o carboplatino", "cisplatino 75 mg/m² o carboplatino AUC 5 EV ogni 21 giorni ×4 cicli"],
-              ["Pemetrexed", "500 mg/m² EV ogni 21 giorni, poi in mantenimento"]
+              [
+                "Pembrolizumab",
+                "200 mg EV ogni 3 settimane (fino a 35 cicli, circa 2 anni)"
+              ],
+              [
+                "Cisplatino o carboplatino",
+                "cisplatino 75 mg/m² o carboplatino AUC 5 EV ogni 21 giorni ×4 cicli"
+              ],
+              [
+                "Pemetrexed",
+                "500 mg/m² EV ogni 21 giorni, poi in mantenimento"
+              ]
             ],
             "note": "Supplementazione con acido folico e vitamina B12 per il pemetrexed.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "platino"
+          ]
         },
         {
           "name": "Nivolumab + ipilimumab + 2 cicli di chemioterapia",
@@ -1063,13 +1928,30 @@
             "trial": "CheckMate 9LA",
             "endpoint": "OS 15,8 vs 11,0 mesi, HR 0,72",
             "rows": [
-              ["Nivolumab", "360 mg EV ogni 3 settimane"],
-              ["Ipilimumab", "1 mg/kg EV ogni 6 settimane"],
-              ["+ doppietta di platino", "2 cicli (ogni 3 settimane)"]
+              [
+                "Nivolumab",
+                "360 mg EV ogni 3 settimane"
+              ],
+              [
+                "Ipilimumab",
+                "1 mg/kg EV ogni 6 settimane"
+              ],
+              [
+                "+ doppietta di platino",
+                "2 cicli (ogni 3 settimane)"
+              ]
             ],
             "note": "Immunoterapia fino a 2 anni.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "platino"
+          ]
         },
         {
           "name": "Atezolizumab + bevacizumab + carboplatino-paclitaxel",
@@ -1079,13 +1961,30 @@
             "trial": "IMpower150",
             "endpoint": "OS HR 0,80",
             "rows": [
-              ["Atezolizumab", "1200 mg EV ogni 3 settimane"],
-              ["Bevacizumab", "15 mg/kg EV ogni 3 settimane"],
-              ["Carboplatino + paclitaxel", "AUC 6 + 200 mg/m² ogni 3 settimane ×4-6 cicli"]
+              [
+                "Atezolizumab",
+                "1200 mg EV ogni 3 settimane"
+              ],
+              [
+                "Bevacizumab",
+                "15 mg/kg EV ogni 3 settimane"
+              ],
+              [
+                "Carboplatino + paclitaxel",
+                "AUC 6 + 200 mg/m² ogni 3 settimane ×4-6 cicli"
+              ]
             ],
             "note": "Poi mantenimento con atezolizumab + bevacizumab.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "platino"
+          ]
         },
         {
           "name": "Cemiplimab + chemioterapia",
@@ -1095,15 +1994,33 @@
             "trial": "EMPOWER-Lung3",
             "endpoint": "OS 21,9 vs 13,0 mesi, HR 0,71",
             "rows": [
-              ["Cemiplimab", "350 mg EV ogni 3 settimane"],
-              ["+ doppietta di platino", "×4 cicli, poi mantenimento"]
+              [
+                "Cemiplimab",
+                "350 mg EV ogni 3 settimane"
+              ],
+              [
+                "+ doppietta di platino",
+                "×4 cicli, poi mantenimento"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "platino"
+          ]
         }
       ],
       "note": "STK11/KEAP1 mutati: possibile beneficio dal doppio blocco CTLA-4/PD-(L)1 (POSEIDON).",
-      "next": { "label": "Alla progressione → 2ª linea", "node": "m1_2l_post_io" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "m1_2l_post_io"
+      },
+      "select": true
     },
     "m1_ctio_sq": {
       "type": "recommendation",
@@ -1117,12 +2034,29 @@
             "trial": "KEYNOTE-407",
             "endpoint": "OS 17,2 vs 11,6 mesi, HR 0,71",
             "rows": [
-              ["Pembrolizumab", "200 mg EV ogni 3 settimane (fino a 35 cicli)"],
-              ["Carboplatino", "AUC 6 EV ogni 3 settimane ×4 cicli"],
-              ["Paclitaxel o nab-paclitaxel", "paclitaxel 200 mg/m² ogni 3 settimane o nab-paclitaxel 100 mg/m² g1, 8, 15"]
+              [
+                "Pembrolizumab",
+                "200 mg EV ogni 3 settimane (fino a 35 cicli)"
+              ],
+              [
+                "Carboplatino",
+                "AUC 6 EV ogni 3 settimane ×4 cicli"
+              ],
+              [
+                "Paclitaxel o nab-paclitaxel",
+                "paclitaxel 200 mg/m² ogni 3 settimane o nab-paclitaxel 100 mg/m² g1, 8, 15"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "platino"
+          ]
         },
         {
           "name": "Nivolumab + ipilimumab + 2 cicli di chemioterapia",
@@ -1132,16 +2066,37 @@
             "trial": "CheckMate 9LA",
             "endpoint": "OS 15,8 vs 11,0 mesi, HR 0,72",
             "rows": [
-              ["Nivolumab", "360 mg EV ogni 3 settimane"],
-              ["Ipilimumab", "1 mg/kg EV ogni 6 settimane"],
-              ["+ doppietta di platino", "2 cicli (ogni 3 settimane)"]
+              [
+                "Nivolumab",
+                "360 mg EV ogni 3 settimane"
+              ],
+              [
+                "Ipilimumab",
+                "1 mg/kg EV ogni 6 settimane"
+              ],
+              [
+                "+ doppietta di platino",
+                "2 cicli (ogni 3 settimane)"
+              ]
             ],
             "note": "Immunoterapia fino a 2 anni.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "platino"
+          ]
         }
       ],
-      "next": { "label": "Alla progressione → 2ª linea", "node": "m1_2l_post_io" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "m1_2l_post_io"
+      },
+      "select": true
     },
     "m1_2l_post_io": {
       "type": "recommendation",
@@ -1155,10 +2110,20 @@
             "trial": "LUME-Lung 1",
             "endpoint": "PFS 3,4 vs 2,7 mesi, HR 0,79 (OS migliore solo negli adenocarcinomi)",
             "rows": [
-              ["Docetaxel", "75 mg/m² EV giorno 1 ogni 21 giorni"],
-              ["Nintedanib", "200 mg per os ×2/die, giorni 2-21"]
+              [
+                "Docetaxel",
+                "75 mg/m² EV giorno 1 ogni 21 giorni"
+              ],
+              [
+                "Nintedanib",
+                "200 mg per os ×2/die, giorni 2-21"
+              ]
             ],
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         },
         {
@@ -1167,11 +2132,32 @@
           "key": "Istologia squamosa o nintedanib non indicato.",
           "regimen": {
             "rows": [
-              ["Docetaxel", "75 mg/m² EV giorno 1 ogni 21 giorni"]
+              [
+                "Docetaxel",
+                "75 mg/m² EV giorno 1 ogni 21 giorni"
+              ]
             ],
             "note": "Fino a progressione o tossicità inaccettabile.",
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
+        },
+        {
+          "name": "Doppietta a base di platino",
+          "aifa": "standard",
+          "key": "Dopo immunoterapia in monoterapia: platino + pemetrexed (non squamoso) o carboplatino + paclitaxel (squamoso).",
+          "excludes": [
+            {
+              "tag": "platino",
+              "reason": "Chemioterapia a base di platino già ricevuta."
+            }
+          ],
+          "gives": [
+            "platino"
+          ]
         }
       ],
       "note": "Errore da evitare: erlotinib al posto del docetaxel nell'EGFR wild-type (inferiore in TAILOR e DELTA)."
@@ -1186,12 +2172,28 @@
           "key": "Mantenimento con pemetrexed (PARAMOUNT: OS HR 0,78).",
           "regimen": {
             "rows": [
-              ["Cisplatino o carboplatino", "cisplatino 75 mg/m² o carboplatino AUC 5 EV ogni 21 giorni ×4 cicli"],
-              ["Pemetrexed", "500 mg/m² EV ogni 21 giorni, poi in mantenimento"],
-              ["± Bevacizumab", "15 mg/kg EV ogni 21 giorni"]
+              [
+                "Cisplatino o carboplatino",
+                "cisplatino 75 mg/m² o carboplatino AUC 5 EV ogni 21 giorni ×4 cicli"
+              ],
+              [
+                "Pemetrexed",
+                "500 mg/m² EV ogni 21 giorni, poi in mantenimento"
+              ],
+              [
+                "± Bevacizumab",
+                "15 mg/kg EV ogni 21 giorni"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "platino"
+          ]
         },
         {
           "name": "Squamoso: carboplatino + paclitaxel o cisplatino + gemcitabina",
@@ -1199,15 +2201,32 @@
           "key": "Pemetrexed controindicato (JMDB: HR 1,23).",
           "regimen": {
             "rows": [
-              ["Carboplatino + paclitaxel", "AUC 6 + 200 mg/m² EV ogni 21 giorni"],
-              ["oppure cisplatino + gemcitabina", "75 mg/m² g1 + 1250 mg/m² g1 e 8, ogni 21 giorni"]
+              [
+                "Carboplatino + paclitaxel",
+                "AUC 6 + 200 mg/m² EV ogni 21 giorni"
+              ],
+              [
+                "oppure cisplatino + gemcitabina",
+                "75 mg/m² g1 + 1250 mg/m² g1 e 8, ogni 21 giorni"
+              ]
             ],
             "note": "4-6 cicli.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "platino"
+          ]
         }
       ],
-      "next": { "label": "Alla progressione → 2ª linea", "node": "m1_2l_post_io" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "m1_2l_post_io"
+      },
+      "select": true
     },
     "m1_ps2": {
       "type": "recommendation",
@@ -1219,12 +2238,25 @@
           "key": "Superiore alla monoterapia negli anziani (IFCT-0501: OS HR 0,64), con più morti tossiche.",
           "regimen": {
             "rows": [
-              ["Carboplatino", "AUC 6 EV giorno 1"],
-              ["Paclitaxel", "90 mg/m² EV giorni 1, 8 e 15"]
+              [
+                "Carboplatino",
+                "AUC 6 EV giorno 1"
+              ],
+              [
+                "Paclitaxel",
+                "90 mg/m² EV giorni 1, 8 e 15"
+              ]
             ],
             "note": "Ogni 28 giorni.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "platino"
+          ]
         },
         {
           "name": "Monochemioterapia",
@@ -1232,15 +2264,32 @@
           "key": "Gemcitabina o vinorelbina se la doppietta non è tollerabile.",
           "regimen": {
             "rows": [
-              ["Gemcitabina", "1000-1250 mg/m² EV giorni 1 e 8 ogni 21 giorni"],
-              ["oppure Vinorelbina", "25-30 mg/m² EV giorni 1 e 8 ogni 21 giorni"]
+              [
+                "Gemcitabina",
+                "1000-1250 mg/m² EV giorni 1 e 8 ogni 21 giorni"
+              ],
+              [
+                "oppure Vinorelbina",
+                "25-30 mg/m² EV giorni 1 e 8 ogni 21 giorni"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "platino"
+          ]
         }
       ],
       "note": "Il cisplatino non è raccomandato di routine negli anziani (MILES-3/4).",
-      "next": { "label": "Alla progressione → 2ª linea", "node": "m1_2l_io_naive" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "m1_2l_io_naive"
+      },
+      "select": true
     },
     "m1_2l_io_naive": {
       "type": "recommendation",
@@ -1254,10 +2303,23 @@
             "trial": "CheckMate 017 / 057",
             "endpoint": "OS HR 0,59 (squamoso) e 0,73 (non squamoso)",
             "rows": [
-              ["Nivolumab", "240 mg EV ogni 2 settimane o 480 mg ogni 4 settimane"]
+              [
+                "Nivolumab",
+                "240 mg EV ogni 2 settimane o 480 mg ogni 4 settimane"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "excludes": [
+            {
+              "tag": "io",
+              "reason": "Già ricevuta un'immunoterapia: il ritrattamento con anti-PD-(L)1 non è raccomandato."
+            }
+          ]
         },
         {
           "name": "Atezolizumab",
@@ -1267,10 +2329,23 @@
             "trial": "OAK",
             "endpoint": "OS HR 0,73",
             "rows": [
-              ["Atezolizumab", "1200 mg EV ogni 3 settimane"]
+              [
+                "Atezolizumab",
+                "1200 mg EV ogni 3 settimane"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "excludes": [
+            {
+              "tag": "io",
+              "reason": "Già ricevuta un'immunoterapia: il ritrattamento con anti-PD-(L)1 non è raccomandato."
+            }
+          ]
         },
         {
           "name": "Pembrolizumab se PD-L1 ≥1%",
@@ -1279,10 +2354,23 @@
           "regimen": {
             "trial": "KEYNOTE-010",
             "rows": [
-              ["Pembrolizumab", "200 mg EV ogni 3 settimane"]
+              [
+                "Pembrolizumab",
+                "200 mg EV ogni 3 settimane"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "excludes": [
+            {
+              "tag": "io",
+              "reason": "Già ricevuta un'immunoterapia: il ritrattamento con anti-PD-(L)1 non è raccomandato."
+            }
+          ]
         },
         {
           "name": "Docetaxel",
@@ -1290,10 +2378,17 @@
           "key": "Se l'immunoterapia non è indicata.",
           "regimen": {
             "rows": [
-              ["Docetaxel", "75 mg/m² EV giorno 1 ogni 21 giorni"]
+              [
+                "Docetaxel",
+                "75 mg/m² EV giorno 1 ogni 21 giorni"
+              ]
             ],
             "note": "Fino a progressione o tossicità inaccettabile.",
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         }
       ]
@@ -1309,6 +2404,100 @@
         }
       ],
       "note": "Con un driver oncogenico il TKI può essere considerato anche con PS scaduto, se il PS dipende dalla malattia."
+    },
+    "rec_egfr": {
+      "type": "question",
+      "text": "Quando si è verificata la recidiva rispetto a osimertinib adiuvante?",
+      "short": "Recidiva",
+      "info": "Recidiva durante osimertinib adiuvante o entro 12 mesi dalla fine: malattia resistente al TKI. Oltre 12 mesi dalla fine è possibile ritrattare con osimertinib.",
+      "only_if_any": [
+        "osimertinib"
+      ],
+      "skip_to": "m1_egfr_1l",
+      "answers": [
+        {
+          "label": "Entro 12 mesi (malattia refrattaria)",
+          "next": "m1_egfr_2l"
+        },
+        {
+          "label": "Oltre 12 mesi",
+          "next": "m1_egfr_1l",
+          "expire": [
+            "osimertinib"
+          ]
+        }
+      ]
+    },
+    "rec_alk": {
+      "type": "question",
+      "text": "Quando si è verificata la recidiva rispetto ad alectinib adiuvante?",
+      "short": "Recidiva",
+      "info": "Recidiva durante alectinib adiuvante o entro 12 mesi dalla fine: resistenza al TKI di 2ª generazione, si passa a lorlatinib.",
+      "only_if_any": [
+        "alk2g"
+      ],
+      "skip_to": "m1_alk_1l",
+      "answers": [
+        {
+          "label": "Entro 12 mesi (malattia refrattaria)",
+          "next": "m1_alk_2l"
+        },
+        {
+          "label": "Oltre 12 mesi",
+          "next": "m1_alk_1l",
+          "expire": [
+            "alk2g"
+          ]
+        }
+      ]
+    },
+    "rec_io": {
+      "type": "question",
+      "text": "Quando si è verificata la recidiva rispetto alla fine della terapia (neo)adiuvante?",
+      "short": "Recidiva",
+      "info": "Convenzione degli studi: recidiva entro 12 mesi dalla fine di una chemio-immunoterapia (neo)adiuvante = malattia refrattaria a platino e anti-PD-(L)1.",
+      "only_if_any": [
+        "io",
+        "platino"
+      ],
+      "skip_to": "m1_nodriver_ps",
+      "answers": [
+        {
+          "label": "Entro 12 mesi (malattia refrattaria)",
+          "next": "m1_2l_post_io"
+        },
+        {
+          "label": "Oltre 12 mesi",
+          "next": "m1_nodriver_ps",
+          "expire": [
+            "io",
+            "platino"
+          ]
+        }
+      ]
+    },
+    "rec_pacific": {
+      "type": "question",
+      "text": "Quando si è verificata la progressione rispetto al consolidamento con durvalumab?",
+      "short": "Recidiva",
+      "info": "Progressione durante durvalumab o entro 12 mesi dalla fine: malattia refrattaria all'immunoterapia.",
+      "only_if_any": [
+        "io"
+      ],
+      "skip_to": "m1_nodriver_ps",
+      "answers": [
+        {
+          "label": "Entro 12 mesi (malattia refrattaria)",
+          "next": "m1_2l_post_io"
+        },
+        {
+          "label": "Oltre 12 mesi",
+          "next": "m1_nodriver_ps",
+          "expire": [
+            "io"
+          ]
+        }
+      ]
     }
   }
 }

@@ -3,6 +3,10 @@
   "title": "Cervice",
   "theme": "Ginecologici",
   "scheda": "Schede/Ginecologici/Cervice.md",
+  "exposures": {
+    "io": "Immunoterapia anti-PD-1",
+    "platino": "Chemioterapia a base di platino"
+  },
   "start": "setting",
   "nodes": {
     "setting": {
@@ -10,9 +14,18 @@
       "text": "Qual è lo stadio FIGO?",
       "short": "Stadio",
       "answers": [
-        { "label": "Precoce (IA1-IB2, IIA selezionati)", "next": "early_chir" },
-        { "label": "Localmente avanzato (IB3-IVA)", "next": "la_rischio" },
-        { "label": "Avanzato, recidivante o metastatico", "next": "adv_pdl1" }
+        {
+          "label": "Precoce (IA1-IB2, IIA selezionati)",
+          "next": "early_chir"
+        },
+        {
+          "label": "Localmente avanzato (IB3-IVA)",
+          "next": "la_rischio"
+        },
+        {
+          "label": "Avanzato, recidivante o metastatico",
+          "next": "adv_pdl1"
+        }
       ]
     },
     "early_chir": {
@@ -30,15 +43,25 @@
           "key": "IA1 senza LVSI, oppure IA2-IB1 <2 cm con desiderio di gravidanza."
         }
       ],
-      "next": { "label": "Dopo la chirurgia → fattori di rischio", "node": "early_rischio" }
+      "next": {
+        "label": "Dopo la chirurgia → fattori di rischio",
+        "node": "early_rischio"
+      },
+      "select": true
     },
     "early_rischio": {
       "type": "question",
       "text": "Ci sono fattori di rischio post-operatori?",
       "short": "Rischio",
       "answers": [
-        { "label": "Margini positivi, linfonodi positivi o invasione parametriale", "next": "early_crt" },
-        { "label": "Nessuno", "next": "early_follow" }
+        {
+          "label": "Margini positivi, linfonodi positivi o invasione parametriale",
+          "next": "early_crt"
+        },
+        {
+          "label": "Nessuno",
+          "next": "early_follow"
+        }
       ]
     },
     "early_crt": {
@@ -51,14 +74,28 @@
           "key": "Indicata con fattori di rischio maggiori.",
           "regimen": {
             "rows": [
-              ["Cisplatino", "40 mg/m² EV settimanale (massimo 70 mg) durante la RT"],
-              ["Radioterapia", "pelvica esterna + brachiterapia (≥90 Gy al volume target)"]
+              [
+                "Cisplatino",
+                "40 mg/m² EV settimanale (massimo 70 mg) durante la RT"
+              ],
+              [
+                "Radioterapia",
+                "pelvica esterna + brachiterapia (≥90 Gy al volume target)"
+              ]
             ],
-            "sources": [{"type": "scheda"}]
+            "sources": [
+              {
+                "type": "scheda"
+              }
+            ]
           }
         }
       ],
-      "next": { "label": "Alla recidiva → malattia avanzata", "node": "adv_pdl1" }
+      "next": {
+        "label": "Alla recidiva → malattia avanzata",
+        "node": "adv_pdl1"
+      },
+      "select": true
     },
     "early_follow": {
       "type": "recommendation",
@@ -70,7 +107,11 @@
           "key": "Nessuna terapia adiuvante."
         }
       ],
-      "next": { "label": "Alla recidiva → malattia avanzata", "node": "adv_pdl1" }
+      "next": {
+        "label": "Alla recidiva → malattia avanzata",
+        "node": "adv_pdl1"
+      },
+      "select": true
     },
     "la_rischio": {
       "type": "question",
@@ -78,8 +119,14 @@
       "short": "Rischio",
       "info": "CALLA (durvalumab + CRT) negativo: l'effetto dell'IO con la RT non è generalizzabile.",
       "answers": [
-        { "label": "Sì, alto rischio", "next": "la_pembro" },
-        { "label": "No (IB3-IIB N0)", "next": "la_crt" }
+        {
+          "label": "Sì, alto rischio",
+          "next": "la_pembro"
+        },
+        {
+          "label": "No (IB3-IIB N0)",
+          "next": "la_crt"
+        }
       ]
     },
     "la_pembro": {
@@ -94,16 +141,40 @@
             "trial": "KEYNOTE-A18",
             "endpoint": "OS a 36 mesi 82,6% vs 74,8% (HR 0,67); PFS HR 0,68",
             "rows": [
-              ["Pembrolizumab", "200 mg EV ogni 3 settimane ×5 con la CRT, poi 400 mg ogni 6 settimane ×15"],
-              ["Cisplatino", "40 mg/m² EV settimanale (massimo 70 mg) durante la RT"],
-              ["Radioterapia", "pelvica esterna + brachiterapia (≥90 Gy al volume target)"]
+              [
+                "Pembrolizumab",
+                "200 mg EV ogni 3 settimane ×5 con la CRT, poi 400 mg ogni 6 settimane ×15"
+              ],
+              [
+                "Cisplatino",
+                "40 mg/m² EV settimanale (massimo 70 mg) durante la RT"
+              ],
+              [
+                "Radioterapia",
+                "pelvica esterna + brachiterapia (≥90 Gy al volume target)"
+              ]
             ],
             "note": "Circa 2 anni complessivi.",
-            "sources": [{"type": "rimborsabilita"}, {"type": "scheda"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              },
+              {
+                "type": "scheda"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "platino"
+          ]
         }
       ],
-      "next": { "label": "Alla recidiva → malattia avanzata", "node": "adv_pdl1" }
+      "next": {
+        "label": "Alla recidiva",
+        "node": "rec_io"
+      },
+      "select": true
     },
     "la_crt": {
       "type": "recommendation",
@@ -115,10 +186,20 @@
           "key": "Standard storico.",
           "regimen": {
             "rows": [
-              ["Cisplatino", "40 mg/m² EV settimanale (massimo 70 mg) durante la RT"],
-              ["Radioterapia", "pelvica esterna + brachiterapia (≥90 Gy al volume target)"]
+              [
+                "Cisplatino",
+                "40 mg/m² EV settimanale (massimo 70 mg) durante la RT"
+              ],
+              [
+                "Radioterapia",
+                "pelvica esterna + brachiterapia (≥90 Gy al volume target)"
+              ]
             ],
-            "sources": [{"type": "scheda"}]
+            "sources": [
+              {
+                "type": "scheda"
+              }
+            ]
           }
         },
         {
@@ -129,23 +210,49 @@
             "trial": "INTERLACE",
             "endpoint": "PFS HR 0,65; OS HR 0,61",
             "rows": [
-              ["Carboplatino", "AUC 2 EV settimanale ×6"],
-              ["Paclitaxel", "80 mg/m² EV settimanale ×6"],
-              ["poi CRT", "cisplatino settimanale + RT"]
+              [
+                "Carboplatino",
+                "AUC 2 EV settimanale ×6"
+              ],
+              [
+                "Paclitaxel",
+                "80 mg/m² EV settimanale ×6"
+              ],
+              [
+                "poi CRT",
+                "cisplatino settimanale + RT"
+              ]
             ],
-            "sources": [{"type": "scheda"}, {"type": "standard"}]
+            "sources": [
+              {
+                "type": "scheda"
+              },
+              {
+                "type": "standard"
+              }
+            ]
           }
         }
       ],
-      "next": { "label": "Alla recidiva → malattia avanzata", "node": "adv_pdl1" }
+      "next": {
+        "label": "Alla recidiva → malattia avanzata",
+        "node": "adv_pdl1"
+      },
+      "select": true
     },
     "adv_pdl1": {
       "type": "question",
       "text": "Qual è il PD-L1 (CPS)?",
       "short": "PD-L1",
       "answers": [
-        { "label": "CPS ≥1", "next": "adv_1l_pembro" },
-        { "label": "CPS <1", "next": "adv_1l_ct" }
+        {
+          "label": "CPS ≥1",
+          "next": "adv_1l_pembro"
+        },
+        {
+          "label": "CPS <1",
+          "next": "adv_1l_ct"
+        }
       ]
     },
     "adv_1l_pembro": {
@@ -160,17 +267,79 @@
             "trial": "KEYNOTE-826",
             "endpoint": "PFS 10,4 vs 8,2 mesi (HR 0,62); OS 24,4 vs 16,5 mesi (HR 0,64)",
             "rows": [
-              ["Pembrolizumab", "200 mg EV ogni 3 settimane (fino a 35 cicli)"],
-              ["Cisplatino o carboplatino", "50 mg/m² o AUC 5"],
-              ["Paclitaxel", "175 mg/m² ogni 3 settimane"],
-              ["± Bevacizumab", "15 mg/kg ogni 3 settimane"]
+              [
+                "Pembrolizumab",
+                "200 mg EV ogni 3 settimane (fino a 35 cicli)"
+              ],
+              [
+                "Cisplatino o carboplatino",
+                "50 mg/m² o AUC 5"
+              ],
+              [
+                "Paclitaxel",
+                "175 mg/m² ogni 3 settimane"
+              ],
+              [
+                "± Bevacizumab",
+                "15 mg/kg ogni 3 settimane"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "platino"
+          ],
+          "excludes": [
+            {
+              "tag": "io",
+              "reason": "Recidiva entro 12 mesi da un anti-PD-1: 1ª linea senza immunoterapia."
+            }
+          ]
+        },
+        {
+          "name": "Cisplatino-paclitaxel + bevacizumab",
+          "aifa": "standard",
+          "key": "Standard senza immunoterapia.",
+          "regimen": {
+            "trial": "GOG-240",
+            "endpoint": "OS 16,8 vs 13,3 mesi",
+            "rows": [
+              [
+                "Cisplatino",
+                "50 mg/m² EV giorno 1"
+              ],
+              [
+                "Paclitaxel",
+                "135-175 mg/m² EV giorno 1"
+              ],
+              [
+                "Bevacizumab",
+                "15 mg/kg EV giorno 1"
+              ]
+            ],
+            "note": "Ogni 21 giorni.",
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "platino"
+          ]
         }
       ],
       "note": "Cadonilimab (COMPASSION-16) approvato solo in Cina.",
-      "next": { "label": "Alla progressione → 2ª linea", "node": "adv_2l" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "adv_2l"
+      },
+      "select": true
     },
     "adv_1l_ct": {
       "type": "recommendation",
@@ -184,16 +353,36 @@
             "trial": "GOG-240",
             "endpoint": "OS 16,8 vs 13,3 mesi",
             "rows": [
-              ["Cisplatino", "50 mg/m² EV giorno 1"],
-              ["Paclitaxel", "135-175 mg/m² EV giorno 1"],
-              ["Bevacizumab", "15 mg/kg EV giorno 1"]
+              [
+                "Cisplatino",
+                "50 mg/m² EV giorno 1"
+              ],
+              [
+                "Paclitaxel",
+                "135-175 mg/m² EV giorno 1"
+              ],
+              [
+                "Bevacizumab",
+                "15 mg/kg EV giorno 1"
+              ]
             ],
             "note": "Ogni 21 giorni.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "platino"
+          ]
         }
       ],
-      "next": { "label": "Alla progressione → 2ª linea", "node": "adv_2l" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "adv_2l"
+      },
+      "select": true
     },
     "adv_2l": {
       "type": "recommendation",
@@ -207,10 +396,23 @@
             "trial": "EMPOWER-Cervical 1",
             "endpoint": "OS 11,7 vs 8,5 mesi, HR 0,656",
             "rows": [
-              ["Cemiplimab", "350 mg EV ogni 3 settimane, fino a ~2 anni"]
+              [
+                "Cemiplimab",
+                "350 mg EV ogni 3 settimane, fino a ~2 anni"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "excludes": [
+            {
+              "tag": "io",
+              "reason": "Già ricevuta immunoterapia: il ritrattamento con anti-PD-1 non è raccomandato."
+            }
+          ]
         },
         {
           "name": "Tisotumab vedotin",
@@ -220,9 +422,21 @@
             "trial": "innovaTV 301",
             "endpoint": "OS 11,5 vs 9,5 mesi, HR 0,70",
             "rows": [
-              ["Tisotumab vedotin", "2 mg/kg EV (massimo 200 mg) ogni 3 settimane"]
+              [
+                "Tisotumab vedotin",
+                "2 mg/kg EV (massimo 200 mg) ogni 3 settimane"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}, {"type": "pubmed", "label": "innovaTV 301", "doi": "10.1056/NEJMoa2313811"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              },
+              {
+                "type": "pubmed",
+                "label": "innovaTV 301",
+                "doi": "10.1056/NEJMoa2313811"
+              }
+            ]
           }
         },
         {
@@ -232,6 +446,29 @@
         }
       ],
       "note": "HER2: T-DXd (DESTINY-PanTumor02) ORR 50% nella coorte cervicale, non ancora indicazione registrata."
+    },
+    "rec_io": {
+      "type": "question",
+      "text": "Quando si è verificata la recidiva rispetto a pembrolizumab + CRT?",
+      "short": "Recidiva",
+      "info": "Recidiva entro 12 mesi da pembrolizumab + CRT (KEYNOTE-A18): malattia refrattaria all'anti-PD-1, 1ª linea senza immunoterapia.",
+      "only_if_any": [
+        "io"
+      ],
+      "skip_to": "adv_pdl1",
+      "answers": [
+        {
+          "label": "Entro 12 mesi (malattia refrattaria)",
+          "next": "adv_pdl1"
+        },
+        {
+          "label": "Oltre 12 mesi",
+          "next": "adv_pdl1",
+          "expire": [
+            "io"
+          ]
+        }
+      ]
     }
   }
 }

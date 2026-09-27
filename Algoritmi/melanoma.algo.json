@@ -3,6 +3,11 @@
   "title": "Melanoma",
   "theme": "Cute",
   "scheda": "Schede/Cute/Melanoma.md",
+  "exposures": {
+    "io": "Anti-PD-1",
+    "ipi": "Ipilimumab (anti-CTLA-4)",
+    "braf": "BRAF + MEK inibitore"
+  },
   "start": "setting",
   "nodes": {
     "setting": {
@@ -11,12 +16,30 @@
       "short": "Setting",
       "info": "Gli stadi IIB-IIC sono il 50% dello stadio II e hanno sopravvivenza a 10 anni (75-82%) sovrapponibile allo stadio III.",
       "answers": [
-        { "label": "Stadio IIB-IIC resecato", "next": "adj_ii" },
-        { "label": "Stadio III resecato (malattia linfonodale microscopica)", "next": "adj_iii_braf" },
-        { "label": "Stadio III con linfonodi palpabili, resecabile", "next": "neo" },
-        { "label": "Stadio IV resecato", "next": "adj_iv" },
-        { "label": "Avanzato non resecabile o metastatico", "next": "adv_brain" },
-        { "label": "Melanoma uveale metastatico", "next": "uveal" }
+        {
+          "label": "Stadio IIB-IIC resecato",
+          "next": "adj_ii"
+        },
+        {
+          "label": "Stadio III resecato (malattia linfonodale microscopica)",
+          "next": "adj_iii_braf"
+        },
+        {
+          "label": "Stadio III con linfonodi palpabili, resecabile",
+          "next": "neo"
+        },
+        {
+          "label": "Stadio IV resecato",
+          "next": "adj_iv"
+        },
+        {
+          "label": "Avanzato non resecabile o metastatico",
+          "next": "adv_brain"
+        },
+        {
+          "label": "Melanoma uveale metastatico",
+          "next": "uveal"
+        }
       ]
     },
     "adj_ii": {
@@ -30,10 +53,20 @@
           "regimen": {
             "trial": "KEYNOTE-716",
             "rows": [
-              ["Pembrolizumab", "200 mg EV ogni 3 settimane (o 400 mg ogni 6 settimane), per 1 anno"]
+              [
+                "Pembrolizumab",
+                "200 mg EV ogni 3 settimane (o 400 mg ogni 6 settimane), per 1 anno"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io"
+          ]
         },
         {
           "name": "Nivolumab",
@@ -42,22 +75,42 @@
           "regimen": {
             "trial": "CheckMate 76K",
             "rows": [
-              ["Nivolumab", "480 mg EV ogni 4 settimane, per 1 anno"]
+              [
+                "Nivolumab",
+                "480 mg EV ogni 4 settimane, per 1 anno"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io"
+          ]
         }
       ],
       "note": "Beneficio dimostrato su RFS/DMFS, non ancora sull'OS. Confronto indiretto 2026: nessuna differenza tra i due farmaci.",
-      "next": { "label": "Alla recidiva → malattia avanzata", "node": "adv_brain" }
+      "next": {
+        "label": "Alla recidiva",
+        "node": "rec_adj"
+      },
+      "select": true
     },
     "adj_iii_braf": {
       "type": "question",
       "text": "Qual è lo stato di BRAF?",
       "short": "BRAF",
       "answers": [
-        { "label": "BRAF V600 mutato", "next": "adj_iii_mut" },
-        { "label": "BRAF wild-type", "next": "adj_iii_wt" }
+        {
+          "label": "BRAF V600 mutato",
+          "next": "adj_iii_mut"
+        },
+        {
+          "label": "BRAF wild-type",
+          "next": "adj_iii_wt"
+        }
       ]
     },
     "adj_iii_mut": {
@@ -71,12 +124,25 @@
           "regimen": {
             "trial": "COMBI-AD",
             "rows": [
-              ["Dabrafenib", "150 mg per os ×2/die"],
-              ["Trametinib", "2 mg/die per os"]
+              [
+                "Dabrafenib",
+                "150 mg per os ×2/die"
+              ],
+              [
+                "Trametinib",
+                "2 mg/die per os"
+              ]
             ],
             "note": "Per 12 mesi.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "braf"
+          ]
         },
         {
           "name": "Pembrolizumab",
@@ -85,10 +151,20 @@
           "regimen": {
             "trial": "KEYNOTE-054",
             "rows": [
-              ["Pembrolizumab", "200 mg EV ogni 3 settimane (o 400 mg ogni 6 settimane), per 1 anno"]
+              [
+                "Pembrolizumab",
+                "200 mg EV ogni 3 settimane (o 400 mg ogni 6 settimane), per 1 anno"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io"
+          ]
         },
         {
           "name": "Nivolumab",
@@ -97,14 +173,28 @@
           "regimen": {
             "trial": "CheckMate 238",
             "rows": [
-              ["Nivolumab", "480 mg EV ogni 4 settimane, per 1 anno"]
+              [
+                "Nivolumab",
+                "480 mg EV ogni 4 settimane, per 1 anno"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io"
+          ]
         }
       ],
       "note": "Nessuno dei trial adiuvanti di stadio III ha dimostrato un vantaggio di OS significativo.",
-      "next": { "label": "Alla recidiva → malattia avanzata", "node": "adv_brain" }
+      "next": {
+        "label": "Alla recidiva",
+        "node": "rec_adj"
+      },
+      "select": true
     },
     "adj_iii_wt": {
       "type": "recommendation",
@@ -117,10 +207,20 @@
           "regimen": {
             "trial": "KEYNOTE-054",
             "rows": [
-              ["Pembrolizumab", "200 mg EV ogni 3 settimane (o 400 mg ogni 6 settimane), per 1 anno"]
+              [
+                "Pembrolizumab",
+                "200 mg EV ogni 3 settimane (o 400 mg ogni 6 settimane), per 1 anno"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io"
+          ]
         },
         {
           "name": "Nivolumab",
@@ -129,14 +229,28 @@
           "regimen": {
             "trial": "CheckMate 238",
             "rows": [
-              ["Nivolumab", "480 mg EV ogni 4 settimane, per 1 anno"]
+              [
+                "Nivolumab",
+                "480 mg EV ogni 4 settimane, per 1 anno"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io"
+          ]
         }
       ],
       "note": "irAE croniche più frequenti e persistenti delle acute: punto centrale del counseling.",
-      "next": { "label": "Alla recidiva → malattia avanzata", "node": "adv_brain" }
+      "next": {
+        "label": "Alla recidiva",
+        "node": "rec_adj"
+      },
+      "select": true
     },
     "neo": {
       "type": "recommendation",
@@ -149,13 +263,33 @@
           "regimen": {
             "trial": "NADINA",
             "rows": [
-              ["Ipilimumab + nivolumab", "80 mg + 240 mg EV ogni 3 settimane ×2, poi linfoadenectomia"],
-              ["Se risposta patologica maggiore", "sola osservazione"],
-              ["Altrimenti, BRAF wild-type", "nivolumab 480 mg EV ogni 4 settimane ×11"],
-              ["Altrimenti, BRAF V600 mutato", "dabrafenib 150 mg ×2/die + trametinib 2 mg/die per 46 settimane"]
+              [
+                "Ipilimumab + nivolumab",
+                "80 mg + 240 mg EV ogni 3 settimane ×2, poi linfoadenectomia"
+              ],
+              [
+                "Se risposta patologica maggiore",
+                "sola osservazione"
+              ],
+              [
+                "Altrimenti, BRAF wild-type",
+                "nivolumab 480 mg EV ogni 4 settimane ×11"
+              ],
+              [
+                "Altrimenti, BRAF V600 mutato",
+                "dabrafenib 150 mg ×2/die + trametinib 2 mg/die per 46 settimane"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "ipi"
+          ]
         },
         {
           "name": "Pembrolizumab perioperatorio (schema SWOG S1801)",
@@ -164,14 +298,28 @@
           "regimen": {
             "trial": "SWOG S1801",
             "rows": [
-              ["Pembrolizumab", "200 mg EV ogni 3 settimane: 3 cicli prima della chirurgia e 15 dopo"]
+              [
+                "Pembrolizumab",
+                "200 mg EV ogni 3 settimane: 3 cicli prima della chirurgia e 15 dopo"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io"
+          ]
         }
       ],
       "note": "Nuovo standard nei linfonodi palpabili (N1b, N2b, N3): da non confondere con l'adiuvante della malattia microscopica.",
-      "next": { "label": "Alla recidiva → malattia avanzata", "node": "adv_brain" }
+      "next": {
+        "label": "Alla recidiva",
+        "node": "rec_adj"
+      },
+      "select": true
     },
     "adj_iv": {
       "type": "recommendation",
@@ -184,10 +332,20 @@
           "regimen": {
             "trial": "CheckMate 238",
             "rows": [
-              ["Nivolumab", "480 mg EV ogni 4 settimane, per 1 anno"]
+              [
+                "Nivolumab",
+                "480 mg EV ogni 4 settimane, per 1 anno"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io"
+          ]
         },
         {
           "name": "Dabrafenib + trametinib (BRAF mutato)",
@@ -196,24 +354,50 @@
           "regimen": {
             "trial": "COMBI-AD",
             "rows": [
-              ["Dabrafenib", "150 mg per os ×2/die"],
-              ["Trametinib", "2 mg/die per os"]
+              [
+                "Dabrafenib",
+                "150 mg per os ×2/die"
+              ],
+              [
+                "Trametinib",
+                "2 mg/die per os"
+              ]
             ],
             "note": "Per 12 mesi.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "braf"
+          ]
         }
       ],
-      "next": { "label": "Alla recidiva → malattia avanzata", "node": "adv_brain" }
+      "next": {
+        "label": "Alla recidiva",
+        "node": "rec_adj"
+      },
+      "select": true
     },
     "adv_brain": {
       "type": "question",
       "text": "Ci sono metastasi encefaliche?",
       "short": "Encefalo",
       "answers": [
-        { "label": "No", "next": "adv_braf" },
-        { "label": "Sì, asintomatiche", "next": "brain_asx" },
-        { "label": "Sì, sintomatiche o leptomeningee", "next": "brain_sx" }
+        {
+          "label": "No",
+          "next": "adv_braf"
+        },
+        {
+          "label": "Sì, asintomatiche",
+          "next": "brain_asx"
+        },
+        {
+          "label": "Sì, sintomatiche o leptomeningee",
+          "next": "brain_sx"
+        }
       ]
     },
     "adv_braf": {
@@ -222,8 +406,14 @@
       "short": "BRAF",
       "info": "Nel BRAF mutato la sequenza immunoterapia → target therapy dà un beneficio di OS e PFS a 5 anni.",
       "answers": [
-        { "label": "BRAF V600 mutato", "next": "adv_mut" },
-        { "label": "BRAF wild-type", "next": "adv_pdl1" }
+        {
+          "label": "BRAF V600 mutato",
+          "next": "adv_mut"
+        },
+        {
+          "label": "BRAF wild-type",
+          "next": "adv_pdl1"
+        }
       ]
     },
     "adv_mut": {
@@ -231,8 +421,14 @@
       "text": "Serve una risposta rapida?",
       "short": "Urgenza",
       "answers": [
-        { "label": "Sì: malattia molto sintomatica, rapidamente evolutiva o ad alto carico", "next": "adv_target" },
-        { "label": "No", "next": "adv_pdl1" }
+        {
+          "label": "Sì: malattia molto sintomatica, rapidamente evolutiva o ad alto carico",
+          "next": "adv_target"
+        },
+        {
+          "label": "No",
+          "next": "adv_pdl1"
+        }
       ]
     },
     "adv_target": {
@@ -245,17 +441,43 @@
           "key": "Preferito se serve una risposta rapida o l'immunoterapia combinata non è somministrabile in sicurezza.",
           "regimen": {
             "rows": [
-              ["Dabrafenib + trametinib", "150 mg ×2/die + 2 mg/die per os"],
-              ["Encorafenib + binimetinib", "450 mg/die + 45 mg ×2/die per os"],
-              ["Vemurafenib + cobimetinib", "960 mg ×2/die + 60 mg/die (21 giorni su 28) per os"]
+              [
+                "Dabrafenib + trametinib",
+                "150 mg ×2/die + 2 mg/die per os"
+              ],
+              [
+                "Encorafenib + binimetinib",
+                "450 mg/die + 45 mg ×2/die per os"
+              ],
+              [
+                "Vemurafenib + cobimetinib",
+                "960 mg ×2/die + 60 mg/die (21 giorni su 28) per os"
+              ]
             ],
             "note": "Fino a progressione.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "braf"
+          ],
+          "excludes": [
+            {
+              "tag": "braf",
+              "reason": "Recidiva entro 6 mesi da BRAF + MEK adiuvante: resistenza alla terapia target."
+            }
+          ]
         }
       ],
       "note": "Approccio \"sandwich\" possibile con LDH elevato e alto carico tumorale.",
-      "next": { "label": "Alla progressione → 2ª linea", "node": "adv_2l" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "adv_2l"
+      },
+      "select": true
     },
     "adv_pdl1": {
       "type": "question",
@@ -263,8 +485,14 @@
       "short": "PD-L1",
       "info": "Il rimborso AIFA di nivolumab + ipilimumab e di nivolumab + relatlimab è limitato a PD-L1 <1% (nivolumab + ipilimumab anche con metastasi encefaliche asintomatiche).",
       "answers": [
-        { "label": "PD-L1 <1%", "next": "adv_io_neg" },
-        { "label": "PD-L1 ≥1%", "next": "adv_io_pos" }
+        {
+          "label": "PD-L1 <1%",
+          "next": "adv_io_neg"
+        },
+        {
+          "label": "PD-L1 ≥1%",
+          "next": "adv_io_pos"
+        }
       ]
     },
     "adv_io_neg": {
@@ -279,11 +507,31 @@
             "trial": "CheckMate 067",
             "endpoint": "OS a 10 anni 43% (combinazione) vs 37% (nivolumab) vs 19% (ipilimumab)",
             "rows": [
-              ["Nivolumab + ipilimumab", "1 mg/kg + 3 mg/kg EV ogni 3 settimane ×4"],
-              ["poi Nivolumab", "240 mg ogni 2 settimane o 480 mg ogni 4 settimane"]
+              [
+                "Nivolumab + ipilimumab",
+                "1 mg/kg + 3 mg/kg EV ogni 3 settimane ×4"
+              ],
+              [
+                "poi Nivolumab",
+                "240 mg ogni 2 settimane o 480 mg ogni 4 settimane"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "ipi"
+          ],
+          "excludes": [
+            {
+              "tag": "ipi",
+              "reason": "Nivolumab + ipilimumab già ricevuto (schema NADINA)."
+            }
+          ]
         },
         {
           "name": "Nivolumab + relatlimab",
@@ -293,10 +541,26 @@
             "trial": "RELATIVITY-047",
             "endpoint": "PFS superiore a nivolumab; OS 51,0 vs 34,1 mesi, HR 0,80",
             "rows": [
-              ["Nivolumab/relatlimab", "480 mg/160 mg EV ogni 4 settimane"]
+              [
+                "Nivolumab/relatlimab",
+                "480 mg/160 mg EV ogni 4 settimane"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io"
+          ],
+          "excludes": [
+            {
+              "tag": "io",
+              "reason": "Recidiva entro 6 mesi da un anti-PD-1 (neo)adiuvante: RELATIVITY-047 richiedeva almeno 6 mesi dalla fine dell'adiuvante."
+            }
+          ]
         },
         {
           "name": "Anti-PD-1 in monoterapia",
@@ -305,14 +569,37 @@
           "regimen": {
             "trial": "KEYNOTE-006 / CheckMate 066",
             "rows": [
-              ["Pembrolizumab", "200 mg EV ogni 3 settimane o 400 mg ogni 6 settimane"],
-              ["oppure Nivolumab", "240 mg EV ogni 2 settimane o 480 mg ogni 4 settimane"]
+              [
+                "Pembrolizumab",
+                "200 mg EV ogni 3 settimane o 400 mg ogni 6 settimane"
+              ],
+              [
+                "oppure Nivolumab",
+                "240 mg EV ogni 2 settimane o 480 mg ogni 4 settimane"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "io"
+          ],
+          "excludes": [
+            {
+              "tag": "io",
+              "reason": "Recidiva entro 6 mesi da un anti-PD-1 (neo)adiuvante: la monoterapia non è indicata."
+            }
+          ]
         }
       ],
-      "next": { "label": "Alla progressione → 2ª linea", "node": "adv_2l" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "adv_2l"
+      },
+      "select": true
     },
     "adv_io_pos": {
       "type": "recommendation",
@@ -325,11 +612,30 @@
           "regimen": {
             "trial": "KEYNOTE-006 / CheckMate 066",
             "rows": [
-              ["Pembrolizumab", "200 mg EV ogni 3 settimane o 400 mg ogni 6 settimane"],
-              ["oppure Nivolumab", "240 mg EV ogni 2 settimane o 480 mg ogni 4 settimane"]
+              [
+                "Pembrolizumab",
+                "200 mg EV ogni 3 settimane o 400 mg ogni 6 settimane"
+              ],
+              [
+                "oppure Nivolumab",
+                "240 mg EV ogni 2 settimane o 480 mg ogni 4 settimane"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "io"
+          ],
+          "excludes": [
+            {
+              "tag": "io",
+              "reason": "Recidiva entro 6 mesi da un anti-PD-1 (neo)adiuvante: la monoterapia non è indicata."
+            }
+          ]
         },
         {
           "name": "Nivolumab + ipilimumab",
@@ -339,11 +645,31 @@
             "trial": "CheckMate 067",
             "endpoint": "OS a 10 anni 43% (combinazione) vs 37% (nivolumab) vs 19% (ipilimumab)",
             "rows": [
-              ["Nivolumab + ipilimumab", "1 mg/kg + 3 mg/kg EV ogni 3 settimane ×4"],
-              ["poi Nivolumab", "240 mg ogni 2 settimane o 480 mg ogni 4 settimane"]
+              [
+                "Nivolumab + ipilimumab",
+                "1 mg/kg + 3 mg/kg EV ogni 3 settimane ×4"
+              ],
+              [
+                "poi Nivolumab",
+                "240 mg ogni 2 settimane o 480 mg ogni 4 settimane"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "ipi"
+          ],
+          "excludes": [
+            {
+              "tag": "ipi",
+              "reason": "Nivolumab + ipilimumab già ricevuto (schema NADINA)."
+            }
+          ]
         },
         {
           "name": "Nivolumab + relatlimab",
@@ -353,13 +679,33 @@
             "trial": "RELATIVITY-047",
             "endpoint": "PFS superiore a nivolumab; OS 51,0 vs 34,1 mesi, HR 0,80",
             "rows": [
-              ["Nivolumab/relatlimab", "480 mg/160 mg EV ogni 4 settimane"]
+              [
+                "Nivolumab/relatlimab",
+                "480 mg/160 mg EV ogni 4 settimane"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io"
+          ],
+          "excludes": [
+            {
+              "tag": "io",
+              "reason": "Recidiva entro 6 mesi da un anti-PD-1 (neo)adiuvante: RELATIVITY-047 richiedeva almeno 6 mesi dalla fine dell'adiuvante."
+            }
+          ]
         }
       ],
-      "next": { "label": "Alla progressione → 2ª linea", "node": "adv_2l" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "adv_2l"
+      },
+      "select": true
     },
     "brain_asx": {
       "type": "recommendation",
@@ -372,11 +718,25 @@
           "regimen": {
             "trial": "ABC / CheckMate 204",
             "rows": [
-              ["Nivolumab + ipilimumab", "1 mg/kg + 3 mg/kg EV ogni 3 settimane ×4"],
-              ["poi Nivolumab", "240 mg ogni 2 settimane o 480 mg ogni 4 settimane"]
+              [
+                "Nivolumab + ipilimumab",
+                "1 mg/kg + 3 mg/kg EV ogni 3 settimane ×4"
+              ],
+              [
+                "poi Nivolumab",
+                "240 mg ogni 2 settimane o 480 mg ogni 4 settimane"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "ipi"
+          ]
         },
         {
           "name": "+ Radioterapia stereotassica",
@@ -384,7 +744,11 @@
           "key": "Da discutere sempre in sede multidisciplinare; SRS + immunoterapia combinata associata a sopravvivenza a lungo termine (dati retrospettivi)."
         }
       ],
-      "next": { "label": "Alla progressione → 2ª linea", "node": "adv_2l" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "adv_2l"
+      },
+      "select": true
     },
     "brain_sx": {
       "type": "recommendation",
@@ -397,10 +761,26 @@
           "regimen": {
             "trial": "COMBI-MB",
             "rows": [
-              ["Dabrafenib + trametinib", "150 mg ×2/die + 2 mg/die per os"]
+              [
+                "Dabrafenib + trametinib",
+                "150 mg ×2/die + 2 mg/die per os"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "braf"
+          ],
+          "excludes": [
+            {
+              "tag": "braf",
+              "reason": "Recidiva entro 6 mesi da BRAF + MEK adiuvante: resistenza alla terapia target."
+            }
+          ]
         },
         {
           "name": "Radioterapia (SRS/SRT) + steroidi",
@@ -409,11 +789,15 @@
         }
       ],
       "note": "Nivolumab in monoterapia modesto nelle sintomatiche (ORR 6%, CheckMate 204).",
-      "next": { "label": "Alla progressione → 2ª linea", "node": "adv_2l" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "adv_2l"
+      },
+      "select": true
     },
     "adv_2l": {
       "type": "recommendation",
-      "title": "2ª linea (dopo anti-PD-1)",
+      "title": "2ª linea",
       "options": [
         {
           "name": "BRAF + MEK inibitore (se BRAF mutato e non usato)",
@@ -421,13 +805,35 @@
           "key": "Tra le opzioni più consistenti dopo anti-PD-1.",
           "regimen": {
             "rows": [
-              ["Dabrafenib + trametinib", "150 mg ×2/die + 2 mg/die per os"],
-              ["Encorafenib + binimetinib", "450 mg/die + 45 mg ×2/die per os"],
-              ["Vemurafenib + cobimetinib", "960 mg ×2/die + 60 mg/die (21 giorni su 28) per os"]
+              [
+                "Dabrafenib + trametinib",
+                "150 mg ×2/die + 2 mg/die per os"
+              ],
+              [
+                "Encorafenib + binimetinib",
+                "450 mg/die + 45 mg ×2/die per os"
+              ],
+              [
+                "Vemurafenib + cobimetinib",
+                "960 mg ×2/die + 60 mg/die (21 giorni su 28) per os"
+              ]
             ],
             "note": "Fino a progressione.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "excludes": [
+            {
+              "tag": "braf",
+              "reason": "BRAF + MEK già ricevuto."
+            }
+          ],
+          "gives": [
+            "braf"
+          ]
         },
         {
           "name": "Ipilimumab ± nivolumab",
@@ -435,10 +841,32 @@
           "key": "ORR dell'anti-CTLA-4 dopo anti-PD-1 ~17,5%.",
           "regimen": {
             "rows": [
-              ["Ipilimumab", "3 mg/kg EV ogni 3 settimane ×4"]
+              [
+                "Ipilimumab",
+                "3 mg/kg EV ogni 3 settimane ×4"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "excludes": [
+            {
+              "tag": "ipi",
+              "reason": "Ipilimumab già ricevuto."
+            }
+          ],
+          "requires": [
+            {
+              "tag": "io",
+              "reason": "Opzione dopo progressione ad anti-PD-1."
+            }
+          ],
+          "gives": [
+            "ipi"
+          ]
         },
         {
           "name": "Lifileucel (TIL)",
@@ -446,15 +874,94 @@
           "key": "Solo FDA (02/2024); domanda EMA ritirata il 22/07/2025 per efficacia insufficiente e decessi correlati al trattamento.",
           "regimen": {
             "rows": [
-              ["Lifileucel", "infusione singola di TIL autologhi dopo linfodeplezione, poi IL-2 ad alte dosi"]
+              [
+                "Lifileucel",
+                "infusione singola di TIL autologhi dopo linfodeplezione, poi IL-2 ad alte dosi"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "requires": [
+            {
+              "tag": "io",
+              "reason": "Registrato (solo FDA) dopo anti-PD-1."
+            }
+          ]
         },
         {
           "name": "Studio clinico",
           "aifa": "standard",
           "key": "Gli ORR restano <35% con quasi tutte le nuove strategie (vaccini, virus oncolitici, T-cell engager anti-PRAME)."
+        },
+        {
+          "name": "Nivolumab + ipilimumab",
+          "aifa": "reimbursed",
+          "key": "Dopo BRAF + MEK in 1ª linea (immunoterapia non ancora ricevuta). Rimborsato con PD-L1 <1%. Tossicità di grado 3-4 elevata.",
+          "regimen": {
+            "trial": "CheckMate 067",
+            "endpoint": "OS a 10 anni 43% (combinazione) vs 37% (nivolumab) vs 19% (ipilimumab)",
+            "rows": [
+              [
+                "Nivolumab + ipilimumab",
+                "1 mg/kg + 3 mg/kg EV ogni 3 settimane ×4"
+              ],
+              [
+                "poi Nivolumab",
+                "240 mg ogni 2 settimane o 480 mg ogni 4 settimane"
+              ]
+            ],
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "ipi"
+          ],
+          "excludes": [
+            {
+              "tag": "io",
+              "reason": "Già ricevuto un anti-PD-1."
+            }
+          ]
+        },
+        {
+          "name": "Anti-PD-1 in monoterapia",
+          "aifa": "reimbursed",
+          "key": "Dopo BRAF + MEK in 1ª linea (immunoterapia non ancora ricevuta). Alternativa meno tossica.",
+          "regimen": {
+            "trial": "KEYNOTE-006 / CheckMate 066",
+            "rows": [
+              [
+                "Pembrolizumab",
+                "200 mg EV ogni 3 settimane o 400 mg ogni 6 settimane"
+              ],
+              [
+                "oppure Nivolumab",
+                "240 mg EV ogni 2 settimane o 480 mg ogni 4 settimane"
+              ]
+            ],
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "io"
+          ],
+          "excludes": [
+            {
+              "tag": "io",
+              "reason": "Già ricevuto un anti-PD-1."
+            }
+          ]
         }
       ],
       "note": "Treatment beyond progression (KEYNOTE-001, ORR 8,6%) e ritrattamento (ORR 15%) sono concetti distinti."
@@ -464,8 +971,14 @@
       "text": "Qual è l'HLA?",
       "short": "HLA",
       "answers": [
-        { "label": "HLA-A*02:01 positivo", "next": "uveal_hla" },
-        { "label": "HLA-A*02:01 negativo", "next": "uveal_neg" }
+        {
+          "label": "HLA-A*02:01 positivo",
+          "next": "uveal_hla"
+        },
+        {
+          "label": "HLA-A*02:01 negativo",
+          "next": "uveal_neg"
+        }
       ]
     },
     "uveal_hla": {
@@ -480,10 +993,17 @@
             "trial": "IMCgp100-202",
             "endpoint": "OS 21,6 vs 16,9 mesi, HR 0,67",
             "rows": [
-              ["Tebentafusp", "20 mcg giorno 1, 30 mcg giorno 8, poi 68 mcg EV settimanale"]
+              [
+                "Tebentafusp",
+                "20 mcg giorno 1, 30 mcg giorno 8, poi 68 mcg EV settimanale"
+              ]
             ],
             "note": "Fino a progressione o tossicità.",
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         }
       ],
@@ -502,6 +1022,33 @@
           "name": "Immunoterapia",
           "aifa": "standard",
           "key": "Attività limitata nell'uveale."
+        }
+      ]
+    },
+    "rec_adj": {
+      "type": "question",
+      "text": "Quando si è verificata la recidiva rispetto alla fine della terapia (neo)adiuvante?",
+      "short": "Recidiva",
+      "info": "Recidiva durante la terapia (neo)adiuvante o entro 6 mesi dalla fine: malattia refrattaria a quel trattamento. RELATIVITY-047 ammetteva un adiuvante solo con recidiva oltre 6 mesi.",
+      "only_if_any": [
+        "io",
+        "ipi",
+        "braf"
+      ],
+      "skip_to": "adv_brain",
+      "answers": [
+        {
+          "label": "Entro 6 mesi (malattia refrattaria)",
+          "next": "adv_brain"
+        },
+        {
+          "label": "Oltre 6 mesi",
+          "next": "adv_brain",
+          "expire": [
+            "io",
+            "ipi",
+            "braf"
+          ]
         }
       ]
     }

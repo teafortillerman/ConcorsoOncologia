@@ -3,6 +3,10 @@
   "title": "Vie Biliari",
   "theme": "Gastrointestinali",
   "scheda": "Schede/Gastrointestinali/VieBiliari.md",
+  "exposures": {
+    "io": "Immunoterapia anti-PD-(L)1",
+    "platino": "Gemcitabina-cisplatino"
+  },
   "start": "setting",
   "nodes": {
     "setting": {
@@ -11,8 +15,14 @@
       "short": "Setting",
       "info": "Profilo NGS alla diagnosi di malattia avanzata: FGFR2, IDH1, BRAF V600E, HER2, MSI.",
       "answers": [
-        { "label": "Resecabile", "next": "res_chir" },
-        { "label": "Avanzato / metastatico", "next": "adv_1l" }
+        {
+          "label": "Resecabile",
+          "next": "res_chir"
+        },
+        {
+          "label": "Avanzato / metastatico",
+          "next": "adv_1l"
+        }
       ]
     },
     "res_chir": {
@@ -30,7 +40,10 @@
           "key": "Protocollo Mayo Clinic: CRT neoadiuvante e laparotomia di staging, solo in centri dedicati."
         }
       ],
-      "next": { "label": "Dopo la resezione → terapia adiuvante", "node": "res_adj" }
+      "next": {
+        "label": "Dopo la resezione → terapia adiuvante",
+        "node": "res_adj"
+      }
     },
     "res_adj": {
       "type": "recommendation",
@@ -44,10 +57,19 @@
             "trial": "BILCAP",
             "endpoint": "OS ITT 51,1 vs 36,4 mesi, HR 0,81 (non significativa); per-protocol 53 vs 36 mesi",
             "rows": [
-              ["Capecitabina", "1250 mg/m² per os ×2/die, giorni 1-14"]
+              [
+                "Capecitabina",
+                "1250 mg/m² per os ×2/die, giorni 1-14"
+              ]
             ],
             "note": "Ogni 21 giorni ×8 cicli.",
-            "sources": [{"type": "pubmed", "label": "BILCAP", "doi": "10.1016/S1470-2045(18)30915-X"}]
+            "sources": [
+              {
+                "type": "pubmed",
+                "label": "BILCAP",
+                "doi": "10.1016/S1470-2045(18)30915-X"
+              }
+            ]
           }
         },
         {
@@ -56,7 +78,11 @@
           "key": "Evidenza meno solida."
         }
       ],
-      "next": { "label": "Alla recidiva → malattia avanzata", "node": "adv_1l" }
+      "next": {
+        "label": "Alla recidiva → malattia avanzata",
+        "node": "adv_1l"
+      },
+      "select": true
     },
     "adv_1l": {
       "type": "recommendation",
@@ -70,13 +96,33 @@
             "trial": "TOPAZ-1",
             "endpoint": "OS 12,8 vs 11,5 mesi, HR 0,80",
             "rows": [
-              ["Durvalumab", "1500 mg EV ogni 3 settimane con la chemioterapia ×8 cicli, poi 1500 mg ogni 4 settimane"],
-              ["Cisplatino", "25 mg/m² EV giorni 1 e 8"],
-              ["Gemcitabina", "1000 mg/m² EV giorni 1 e 8"]
+              [
+                "Durvalumab",
+                "1500 mg EV ogni 3 settimane con la chemioterapia ×8 cicli, poi 1500 mg ogni 4 settimane"
+              ],
+              [
+                "Cisplatino",
+                "25 mg/m² EV giorni 1 e 8"
+              ],
+              [
+                "Gemcitabina",
+                "1000 mg/m² EV giorni 1 e 8"
+              ]
             ],
             "note": "Chemioterapia ogni 21 giorni ×8 cicli.",
-            "sources": [{"type": "rimborsabilita"}, {"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              },
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "platino"
+          ]
         },
         {
           "name": "Pembrolizumab + gemcitabina-cisplatino",
@@ -86,13 +132,35 @@
             "trial": "KEYNOTE-966",
             "endpoint": "OS 12,7 vs 10,9 mesi, HR 0,83",
             "rows": [
-              ["Pembrolizumab", "200 mg EV ogni 3 settimane, fino a 35 cicli"],
-              ["Cisplatino", "25 mg/m² EV giorni 1 e 8"],
-              ["Gemcitabina", "1000 mg/m² EV giorni 1 e 8"]
+              [
+                "Pembrolizumab",
+                "200 mg EV ogni 3 settimane, fino a 35 cicli"
+              ],
+              [
+                "Cisplatino",
+                "25 mg/m² EV giorni 1 e 8"
+              ],
+              [
+                "Gemcitabina",
+                "1000 mg/m² EV giorni 1 e 8"
+              ]
             ],
             "note": "Cisplatino fino a 8 cicli, gemcitabina senza durata massima.",
-            "sources": [{"type": "rimborsabilita"}, {"type": "pubmed", "label": "KEYNOTE-966", "doi": "10.1016/S0140-6736(23)00727-4"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              },
+              {
+                "type": "pubmed",
+                "label": "KEYNOTE-966",
+                "doi": "10.1016/S0140-6736(23)00727-4"
+              }
+            ]
+          },
+          "gives": [
+            "io",
+            "platino"
+          ]
         },
         {
           "name": "Gemcitabina-cisplatino",
@@ -100,26 +168,58 @@
           "key": "Standard storico (ABC-02) se l'immunoterapia è controindicata.",
           "regimen": {
             "rows": [
-              ["Cisplatino", "25 mg/m² EV giorni 1 e 8"],
-              ["Gemcitabina", "1000 mg/m² EV giorni 1 e 8"]
+              [
+                "Cisplatino",
+                "25 mg/m² EV giorni 1 e 8"
+              ],
+              [
+                "Gemcitabina",
+                "1000 mg/m² EV giorni 1 e 8"
+              ]
             ],
             "note": "Ogni 21 giorni.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "platino"
+          ]
         }
       ],
-      "next": { "label": "Alla progressione → 2ª linea guidata da NGS", "node": "adv_2l_q" }
+      "next": {
+        "label": "Alla progressione → 2ª linea guidata da NGS",
+        "node": "adv_2l_q"
+      },
+      "select": true
     },
     "adv_2l_q": {
       "type": "question",
       "text": "Qual è l'alterazione identificata con NGS?",
       "short": "Target",
       "answers": [
-        { "label": "Fusione / riarrangiamento FGFR2", "next": "adv_fgfr2" },
-        { "label": "Mutazione IDH1 R132", "next": "adv_idh1" },
-        { "label": "BRAF V600E", "next": "adv_braf" },
-        { "label": "HER2 3+", "next": "adv_her2" },
-        { "label": "Nessun target actionable", "next": "adv_folfox" }
+        {
+          "label": "Fusione / riarrangiamento FGFR2",
+          "next": "adv_fgfr2"
+        },
+        {
+          "label": "Mutazione IDH1 R132",
+          "next": "adv_idh1"
+        },
+        {
+          "label": "BRAF V600E",
+          "next": "adv_braf"
+        },
+        {
+          "label": "HER2 3+",
+          "next": "adv_her2"
+        },
+        {
+          "label": "Nessun target actionable",
+          "next": "adv_folfox"
+        }
       ]
     },
     "adv_fgfr2": {
@@ -133,9 +233,16 @@
           "regimen": {
             "trial": "FIGHT-202",
             "rows": [
-              ["Pemigatinib", "13,5 mg/die per os, 14 giorni sì + 7 no"]
+              [
+                "Pemigatinib",
+                "13,5 mg/die per os, 14 giorni sì + 7 no"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         },
         {
@@ -145,9 +252,16 @@
           "regimen": {
             "trial": "FOENIX-CCA2",
             "rows": [
-              ["Futibatinib", "20 mg/die per os, in continuo"]
+              [
+                "Futibatinib",
+                "20 mg/die per os, in continuo"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         }
       ],
@@ -165,9 +279,21 @@
             "trial": "ClarIDHy",
             "endpoint": "PFS 2,7 vs 1,4 mesi, HR 0,37",
             "rows": [
-              ["Ivosidenib", "500 mg/die per os, in continuo"]
+              [
+                "Ivosidenib",
+                "500 mg/die per os, in continuo"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}, {"type": "pubmed", "label": "ClarIDHy", "doi": "10.1016/S1470-2045(20)30157-1"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              },
+              {
+                "type": "pubmed",
+                "label": "ClarIDHy",
+                "doi": "10.1016/S1470-2045(20)30157-1"
+              }
+            ]
           }
         }
       ]
@@ -182,11 +308,21 @@
           "key": "Legge 648/96 per le vie biliari BRAF V600E (nessuna indicazione EMA per il BTC).",
           "regimen": {
             "rows": [
-              ["Dabrafenib", "150 mg per os ×2/die"],
-              ["Trametinib", "2 mg/die per os"]
+              [
+                "Dabrafenib",
+                "150 mg per os ×2/die"
+              ],
+              [
+                "Trametinib",
+                "2 mg/die per os"
+              ]
             ],
             "note": "In continuo fino a progressione.",
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         }
       ]
@@ -202,9 +338,16 @@
           "regimen": {
             "trial": "HERIZON-BTC-01",
             "rows": [
-              ["Zanidatamab", "20 mg/kg EV giorni 1 e 15 ogni 28 giorni"]
+              [
+                "Zanidatamab",
+                "20 mg/kg EV giorni 1 e 15 ogni 28 giorni"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         },
         {
@@ -214,9 +357,16 @@
           "regimen": {
             "trial": "DESTINY-PanTumor02",
             "rows": [
-              ["Trastuzumab deruxtecan", "5,4 mg/kg EV ogni 3 settimane"]
+              [
+                "Trastuzumab deruxtecan",
+                "5,4 mg/kg EV ogni 3 settimane"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         },
         {
@@ -225,10 +375,17 @@
           "key": "Alternativa rimborsata.",
           "regimen": {
             "rows": [
-              ["mFOLFOX", "oxaliplatino 85 mg/m², 5-FU 400 mg/m² bolo e 2400 mg/m² in 46 ore"]
+              [
+                "mFOLFOX",
+                "oxaliplatino 85 mg/m², 5-FU 400 mg/m² bolo e 2400 mg/m² in 46 ore"
+              ]
             ],
             "note": "Ogni 14 giorni, massimo 12 cicli.",
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         }
       ]
@@ -245,10 +402,19 @@
             "trial": "ABC-06",
             "endpoint": "OS 6,2 vs 5,3 mesi, HR 0,69",
             "rows": [
-              ["mFOLFOX", "oxaliplatino 85 mg/m², 5-FU 400 mg/m² bolo e 2400 mg/m² in 46 ore"]
+              [
+                "mFOLFOX",
+                "oxaliplatino 85 mg/m², 5-FU 400 mg/m² bolo e 2400 mg/m² in 46 ore"
+              ]
             ],
             "note": "Ogni 14 giorni, massimo 12 cicli.",
-            "sources": [{"type": "pubmed", "label": "ABC-06", "doi": "10.1016/S1470-2045(21)00027-9"}]
+            "sources": [
+              {
+                "type": "pubmed",
+                "label": "ABC-06",
+                "doi": "10.1016/S1470-2045(21)00027-9"
+              }
+            ]
           }
         }
       ]

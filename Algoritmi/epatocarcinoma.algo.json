@@ -3,6 +3,12 @@
   "title": "Epatocarcinoma",
   "theme": "Gastrointestinali",
   "scheda": "Schede/Gastrointestinali/Epatocarcinoma.md",
+  "exposures": {
+    "io": "Immunoterapia",
+    "tki": "TKI (lenvatinib/sorafenib)",
+    "sorafenib": "Sorafenib",
+    "lenvatinib": "Lenvatinib"
+  },
   "start": "setting",
   "nodes": {
     "setting": {
@@ -11,10 +17,22 @@
       "short": "BCLC",
       "info": "Il BCLC integra stadio, funzione epatica (Child-Pugh) e PS. La discussione in MDT riduce la mortalità (HR 0,55).",
       "answers": [
-        { "label": "BCLC 0-A (precoce)", "next": "hcc_precoce" },
-        { "label": "BCLC B (intermedio)", "next": "hcc_intermedio" },
-        { "label": "BCLC C (avanzato)", "next": "hcc_sys" },
-        { "label": "BCLC D (terminale)", "next": "hcc_bsc" }
+        {
+          "label": "BCLC 0-A (precoce)",
+          "next": "hcc_precoce"
+        },
+        {
+          "label": "BCLC B (intermedio)",
+          "next": "hcc_intermedio"
+        },
+        {
+          "label": "BCLC C (avanzato)",
+          "next": "hcc_sys"
+        },
+        {
+          "label": "BCLC D (terminale)",
+          "next": "hcc_bsc"
+        }
       ]
     },
     "hcc_precoce": {
@@ -43,7 +61,11 @@
         }
       ],
       "note": "Trapianto di salvataggio solo in casi selezionati: 1/3 dei recidivati resta eleggibile, mortalità operatoria doppia.",
-      "next": { "label": "Alla progressione non trattabile localmente → terapia sistemica", "node": "hcc_sys" }
+      "next": {
+        "label": "Alla progressione non trattabile localmente → terapia sistemica",
+        "node": "hcc_sys"
+      },
+      "select": true
     },
     "hcc_intermedio": {
       "type": "recommendation",
@@ -70,7 +92,11 @@
           "key": "\"Test del tempo\": trapianto solo se risposta stabile ≥3 mesi (XXL, HR 0,32 a 5 anni)."
         }
       ],
-      "next": { "label": "Se non più trattabile localmente → terapia sistemica", "node": "hcc_sys" }
+      "next": {
+        "label": "Se non più trattabile localmente → terapia sistemica",
+        "node": "hcc_sys"
+      },
+      "select": true
     },
     "hcc_sys": {
       "type": "question",
@@ -78,9 +104,18 @@
       "short": "Candidabilità",
       "info": "Screening endoscopico delle varici obbligatorio prima di atezolizumab-bevacizumab. Vp4 inclusa in IMbrave150, esclusa da HIMALAYA e CheckMate-9DW. Chemioterapia citotossica mai raccomandata.",
       "answers": [
-        { "label": "IO possibile, varici trattate / basso rischio emorragico", "next": "hcc_1l_atezobev" },
-        { "label": "Controindicazione al bevacizumab (rischio emorragico)", "next": "hcc_1l_stride" },
-        { "label": "Controindicazione all'immunoterapia", "next": "hcc_1l_tki" }
+        {
+          "label": "IO possibile, varici trattate / basso rischio emorragico",
+          "next": "hcc_1l_atezobev"
+        },
+        {
+          "label": "Controindicazione al bevacizumab (rischio emorragico)",
+          "next": "hcc_1l_stride"
+        },
+        {
+          "label": "Controindicazione all'immunoterapia",
+          "next": "hcc_1l_tki"
+        }
       ]
     },
     "hcc_1l_atezobev": {
@@ -95,11 +130,24 @@
             "trial": "IMbrave150",
             "endpoint": "OS 19,2 vs 13,4 mesi, HR 0,66",
             "rows": [
-              ["Atezolizumab", "1200 mg EV ogni 3 settimane"],
-              ["Bevacizumab", "15 mg/kg EV ogni 3 settimane"]
+              [
+                "Atezolizumab",
+                "1200 mg EV ogni 3 settimane"
+              ],
+              [
+                "Bevacizumab",
+                "15 mg/kg EV ogni 3 settimane"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io"
+          ]
         },
         {
           "name": "Durvalumab + tremelimumab (STRIDE)",
@@ -109,11 +157,24 @@
             "trial": "HIMALAYA",
             "endpoint": "OS 16,4 vs 13,8 mesi, HR 0,78",
             "rows": [
-              ["Tremelimumab", "300 mg EV dose singola al 1° ciclo"],
-              ["Durvalumab", "1500 mg EV ogni 4 settimane"]
+              [
+                "Tremelimumab",
+                "300 mg EV dose singola al 1° ciclo"
+              ],
+              [
+                "Durvalumab",
+                "1500 mg EV ogni 4 settimane"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io"
+          ]
         },
         {
           "name": "Nivolumab + ipilimumab",
@@ -123,15 +184,32 @@
             "trial": "CheckMate-9DW",
             "endpoint": "OS 23,7 vs 20,6 mesi, HR 0,79",
             "rows": [
-              ["Induzione", "nivolumab 1 mg/kg + ipilimumab 3 mg/kg EV ogni 3 settimane ×4"],
-              ["Mantenimento", "nivolumab 480 mg EV ogni 4 settimane"]
+              [
+                "Induzione",
+                "nivolumab 1 mg/kg + ipilimumab 3 mg/kg EV ogni 3 settimane ×4"
+              ],
+              [
+                "Mantenimento",
+                "nivolumab 480 mg EV ogni 4 settimane"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io"
+          ]
         }
       ],
       "note": "Camrelizumab + rivoceranib (CARES-310, OS 23,8 mesi) non è approvato. Triplette IO negative (IMbrave152, TRIPLET-HCC).",
-      "next": { "label": "Alla progressione → 2ª linea", "node": "hcc_2l" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "hcc_2l"
+      },
+      "select": true
     },
     "hcc_1l_stride": {
       "type": "recommendation",
@@ -145,14 +223,31 @@
             "trial": "HIMALAYA",
             "endpoint": "OS 16,4 vs 13,8 mesi, HR 0,78",
             "rows": [
-              ["Tremelimumab", "300 mg EV dose singola al 1° ciclo"],
-              ["Durvalumab", "1500 mg EV ogni 4 settimane"]
+              [
+                "Tremelimumab",
+                "300 mg EV dose singola al 1° ciclo"
+              ],
+              [
+                "Durvalumab",
+                "1500 mg EV ogni 4 settimane"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "io"
+          ]
         }
       ],
-      "next": { "label": "Alla progressione → 2ª linea", "node": "hcc_2l" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "hcc_2l"
+      },
+      "select": true
     },
     "hcc_1l_tki": {
       "type": "recommendation",
@@ -166,10 +261,21 @@
             "trial": "REFLECT",
             "endpoint": "OS non inferiore a sorafenib, HR 0,92",
             "rows": [
-              ["Lenvatinib", "12 mg/die per os se ≥60 kg, 8 mg/die se <60 kg"]
+              [
+                "Lenvatinib",
+                "12 mg/die per os se ≥60 kg, 8 mg/die se <60 kg"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "lenvatinib",
+            "tki"
+          ]
         },
         {
           "name": "Sorafenib",
@@ -177,13 +283,28 @@
           "key": "Standard storico (SHARP), oggi ruolo residuale.",
           "regimen": {
             "rows": [
-              ["Sorafenib", "400 mg per os ×2/die, in continuo"]
+              [
+                "Sorafenib",
+                "400 mg per os ×2/die, in continuo"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "sorafenib",
+            "tki"
+          ]
         }
       ],
-      "next": { "label": "Alla progressione → 2ª linea", "node": "hcc_2l" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "hcc_2l"
+      },
+      "select": true
     },
     "hcc_2l": {
       "type": "recommendation",
@@ -197,10 +318,23 @@
             "trial": "CELESTIAL",
             "endpoint": "OS 10,2 vs 8,0 mesi, HR 0,76",
             "rows": [
-              ["Cabozantinib", "60 mg/die per os, in continuo"]
+              [
+                "Cabozantinib",
+                "60 mg/die per os, in continuo"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "requires": [
+            {
+              "tag": "tki",
+              "reason": "Registrato dopo un TKI (CELESTIAL: dopo sorafenib)."
+            }
+          ]
         },
         {
           "name": "Regorafenib",
@@ -210,10 +344,23 @@
             "trial": "RESORCE",
             "endpoint": "OS 10,6 vs 7,8 mesi, HR 0,63",
             "rows": [
-              ["Regorafenib", "160 mg/die per os, giorni 1-21 ogni 28 giorni"]
+              [
+                "Regorafenib",
+                "160 mg/die per os, giorni 1-21 ogni 28 giorni"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "requires": [
+            {
+              "tag": "sorafenib",
+              "reason": "RESORCE: solo dopo sorafenib tollerato."
+            }
+          ]
         },
         {
           "name": "Lenvatinib o sorafenib dopo immunoterapia",
@@ -223,10 +370,29 @@
             "trial": "REFLECT",
             "endpoint": "OS non inferiore a sorafenib, HR 0,92",
             "rows": [
-              ["Lenvatinib", "12 mg/die per os se ≥60 kg, 8 mg/die se <60 kg"]
+              [
+                "Lenvatinib",
+                "12 mg/die per os se ≥60 kg, 8 mg/die se <60 kg"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "requires": [
+            {
+              "tag": "io",
+              "reason": "Opzione dopo immunoterapia in 1ª linea."
+            }
+          ],
+          "excludes": [
+            {
+              "tag": "tki",
+              "reason": "TKI già ricevuto in 1ª linea."
+            }
+          ]
         },
         {
           "name": "Ramucirumab se AFP ≥400 ng/mL",
@@ -236,10 +402,34 @@
             "trial": "REACH-2",
             "endpoint": "OS 8,5 vs 7,3 mesi, HR 0,71",
             "rows": [
-              ["Ramucirumab", "8 mg/kg EV ogni 2 settimane"]
+              [
+                "Ramucirumab",
+                "8 mg/kg EV ogni 2 settimane"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "requires": [
+            {
+              "tag": "sorafenib",
+              "reason": "REACH-2: dopo sorafenib."
+            }
+          ]
+        },
+        {
+          "name": "Sorafenib dopo lenvatinib",
+          "aifa": "reimbursed",
+          "key": "Pratica clinica: nessuno studio dedicato dopo lenvatinib.",
+          "requires": [
+            {
+              "tag": "lenvatinib",
+              "reason": "Opzione dopo lenvatinib in 1ª linea."
+            }
+          ]
         }
       ],
       "note": "Pembrolizumab in monoterapia: approvato solo FDA, mai autorizzato EMA."

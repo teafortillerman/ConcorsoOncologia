@@ -3,6 +3,14 @@
   "title": "Prostata",
   "theme": "Urologici",
   "scheda": "Schede/Urologici/Prostata.md",
+  "exposures": {
+    "arsi": "ARSI (abiraterone, enzalutamide, apalutamide, darolutamide)",
+    "doce": "Docetaxel",
+    "parp": "PARP-inibitore",
+    "caba": "Cabazitaxel",
+    "lu": "¹⁷⁷Lu-PSMA-617",
+    "ra": "Radio-223"
+  },
   "start": "setting",
   "nodes": {
     "setting": {
@@ -11,11 +19,26 @@
       "short": "Setting",
       "info": "Recidiva biochimica: PSA ≥0,2 ng/ml dopo prostatectomia; nadir + 2 ng/ml dopo RT (Phoenix). PET-PSMA per la ristadiazione prima del salvataggio.",
       "answers": [
-        { "label": "Localizzato", "next": "loc_rischio" },
-        { "label": "Recidiva biochimica dopo trattamento locale", "next": "bcr_q" },
-        { "label": "Non metastatico resistente alla castrazione (nmCRPC)", "next": "nm_psadt" },
-        { "label": "Metastatico ormono-sensibile (mHSPC)", "next": "hspc_volume" },
-        { "label": "Metastatico resistente alla castrazione (mCRPC)", "next": "crpc_q" }
+        {
+          "label": "Localizzato",
+          "next": "loc_rischio"
+        },
+        {
+          "label": "Recidiva biochimica dopo trattamento locale",
+          "next": "bcr_q"
+        },
+        {
+          "label": "Non metastatico resistente alla castrazione (nmCRPC)",
+          "next": "nm_psadt"
+        },
+        {
+          "label": "Metastatico ormono-sensibile (mHSPC)",
+          "next": "hspc_volume"
+        },
+        {
+          "label": "Metastatico resistente alla castrazione (mCRPC)",
+          "next": "crpc_q"
+        }
       ]
     },
     "loc_rischio": {
@@ -24,9 +47,18 @@
       "short": "Rischio",
       "info": "Sorveglianza attiva: ISUP 1, cT1c/cT2a, PSA <10, PSA-density <0,15.",
       "answers": [
-        { "label": "Molto basso / basso", "next": "loc_basso" },
-        { "label": "Intermedio", "next": "loc_intermedio" },
-        { "label": "Alto / localmente avanzato", "next": "loc_alto" }
+        {
+          "label": "Molto basso / basso",
+          "next": "loc_basso"
+        },
+        {
+          "label": "Intermedio",
+          "next": "loc_intermedio"
+        },
+        {
+          "label": "Alto / localmente avanzato",
+          "next": "loc_alto"
+        }
       ]
     },
     "loc_basso": {
@@ -44,13 +76,24 @@
           "key": "Alternative; nessuna linfadenectomia nel basso rischio.",
           "regimen": {
             "rows": [
-              ["Radioterapia", "60 Gy in 20 frazioni (ipofrazionamento moderato) o SBRT 36,25 Gy in 5 frazioni"]
+              [
+                "Radioterapia",
+                "60 Gy in 20 frazioni (ipofrazionamento moderato) o SBRT 36,25 Gy in 5 frazioni"
+              ]
             ],
-            "sources": [{"type": "scheda"}]
+            "sources": [
+              {
+                "type": "scheda"
+              }
+            ]
           }
         }
       ],
-      "next": { "label": "Alla recidiva biochimica", "node": "bcr_q" }
+      "next": {
+        "label": "Alla recidiva biochimica",
+        "node": "bcr_q"
+      },
+      "select": true
     },
     "loc_intermedio": {
       "type": "recommendation",
@@ -62,11 +105,24 @@
           "key": "Ipofrazionamento moderato standard (CHHiP); SBRT possibile.",
           "regimen": {
             "rows": [
-              ["Radioterapia", "60 Gy in 20 frazioni (o SBRT 36,25 Gy in 5 frazioni)"],
-              ["ADT", "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"]
+              [
+                "Radioterapia",
+                "60 Gy in 20 frazioni (o SBRT 36,25 Gy in 5 frazioni)"
+              ],
+              [
+                "ADT",
+                "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"
+              ]
             ],
             "note": "ADT per 4-6 mesi (MARCAP).",
-            "sources": [{"type": "scheda"}, {"type": "standard"}]
+            "sources": [
+              {
+                "type": "scheda"
+              },
+              {
+                "type": "standard"
+              }
+            ]
           }
         },
         {
@@ -75,7 +131,11 @@
           "key": "Robotica: recupero funzionale migliore; linfadenectomia se rischio N+ >5%."
         }
       ],
-      "next": { "label": "Alla recidiva biochimica", "node": "bcr_q" }
+      "next": {
+        "label": "Alla recidiva biochimica",
+        "node": "bcr_q"
+      },
+      "select": true
     },
     "loc_alto": {
       "type": "recommendation",
@@ -89,11 +149,24 @@
             "trial": "GETUG-AFU 18",
             "endpoint": "PFS a 10 anni 83,6% vs 72,2%, HR 0,56 (OS da confermare)",
             "rows": [
-              ["Radioterapia", "fino a 80 Gy (dose-escalation)"],
-              ["ADT", "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"]
+              [
+                "Radioterapia",
+                "fino a 80 Gy (dose-escalation)"
+              ],
+              [
+                "ADT",
+                "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"
+              ]
             ],
             "note": "ADT per 18-36 mesi.",
-            "sources": [{"type": "scheda"}, {"type": "standard"}]
+            "sources": [
+              {
+                "type": "scheda"
+              },
+              {
+                "type": "standard"
+              }
+            ]
           }
         },
         {
@@ -103,12 +176,28 @@
           "regimen": {
             "trial": "STAMPEDE",
             "rows": [
-              ["Abiraterone", "1000 mg/die per os + prednisolone 5 mg/die"],
-              ["ADT", "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"]
+              [
+                "Abiraterone",
+                "1000 mg/die per os + prednisolone 5 mg/die"
+              ],
+              [
+                "ADT",
+                "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"
+              ]
             ],
             "note": "Durata fissa 2 anni.",
-            "sources": [{"type": "rimborsabilita"}, {"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              },
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "arsi"
+          ]
         },
         {
           "name": "Prostatectomia radicale con linfadenectomia estesa",
@@ -117,16 +206,29 @@
         }
       ],
       "note": "Docetaxel nella malattia localizzata: mai indicato (RTOG 0521 negativo). Dopo prostatectomia: RT di salvataggio precoce preferita all'adiuvante (tranne pN1).",
-      "next": { "label": "Alla recidiva biochimica", "node": "bcr_q" }
+      "next": {
+        "label": "Alla recidiva biochimica",
+        "node": "bcr_q"
+      },
+      "select": true
     },
     "bcr_q": {
       "type": "question",
       "text": "Qual è lo scenario della recidiva biochimica?",
       "short": "Recidiva",
       "answers": [
-        { "label": "Dopo prostatectomia, candidabile a RT di salvataggio", "next": "bcr_salvage" },
-        { "label": "Alto rischio (PSA-DT ≤9 mesi), non candidabile a salvataggio", "next": "bcr_embark" },
-        { "label": "Recidiva linfonodale pelvica alla PET", "next": "bcr_nodi" }
+        {
+          "label": "Dopo prostatectomia, candidabile a RT di salvataggio",
+          "next": "bcr_salvage"
+        },
+        {
+          "label": "Alto rischio (PSA-DT ≤9 mesi), non candidabile a salvataggio",
+          "next": "bcr_embark"
+        },
+        {
+          "label": "Recidiva linfonodale pelvica alla PET",
+          "next": "bcr_nodi"
+        }
       ]
     },
     "bcr_salvage": {
@@ -139,11 +241,21 @@
           "key": "Iniziare con PSA <0,5 ng/ml (ogni 0,1 ng/ml in più +2,6% di fallimento). 6 mesi di ADT (GETUG-AFU 16); RT pelvica (SPPORT).",
           "regimen": {
             "rows": [
-              ["Radioterapia", "letto prostatico ± pelvi"],
-              ["ADT", "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"]
+              [
+                "Radioterapia",
+                "letto prostatico ± pelvi"
+              ],
+              [
+                "ADT",
+                "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"
+              ]
             ],
             "note": "ADT per 6 mesi.",
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         },
         {
@@ -153,14 +265,25 @@
           "regimen": {
             "trial": "RTOG 9601",
             "rows": [
-              ["Bicalutamide", "150 mg/die per os"]
+              [
+                "Bicalutamide",
+                "150 mg/die per os"
+              ]
             ],
             "note": "Per 24 mesi.",
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         }
       ],
-      "next": { "label": "Alla progressione in castrazione", "node": "nm_psadt" }
+      "next": {
+        "label": "Alla progressione in castrazione",
+        "node": "nm_psadt"
+      },
+      "select": true
     },
     "bcr_embark": {
       "type": "recommendation",
@@ -173,15 +296,32 @@
           "regimen": {
             "trial": "EMBARK",
             "rows": [
-              ["Enzalutamide", "160 mg/die per os"],
-              ["+ Leuprorelina", "ADT continua"]
+              [
+                "Enzalutamide",
+                "160 mg/die per os"
+              ],
+              [
+                "+ Leuprorelina",
+                "ADT continua"
+              ]
             ],
             "note": "Possibile sospensione a PSA non dosabile e ripresa alla risalita.",
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "arsi"
+          ]
         }
       ],
-      "next": { "label": "Alla progressione in castrazione", "node": "nm_psadt" }
+      "next": {
+        "label": "Alla progressione in castrazione",
+        "node": "nm_psadt"
+      },
+      "select": true
     },
     "bcr_nodi": {
       "type": "recommendation",
@@ -198,7 +338,11 @@
           "key": "Opzione nell'oligorecidiva [II, B], ancora in parte investigazionale."
         }
       ],
-      "next": { "label": "Alla progressione in castrazione", "node": "nm_psadt" }
+      "next": {
+        "label": "Alla progressione in castrazione",
+        "node": "nm_psadt"
+      },
+      "select": true
     },
     "nm_psadt": {
       "type": "question",
@@ -206,8 +350,14 @@
       "short": "PSA-DT",
       "info": "La PSMA-PET riclassifica spesso come M1, ma non va usata di routine al posto dell'imaging convenzionale (AIOM, condizionata a sfavore).",
       "answers": [
-        { "label": "≤10 mesi", "next": "nm_arsi" },
-        { "label": ">10 mesi", "next": "nm_adt" }
+        {
+          "label": "≤10 mesi",
+          "next": "nm_arsi"
+        },
+        {
+          "label": ">10 mesi",
+          "next": "nm_adt"
+        }
       ]
     },
     "nm_arsi": {
@@ -221,11 +371,24 @@
           "regimen": {
             "trial": "SPARTAN",
             "rows": [
-              ["Apalutamide", "240 mg/die per os"],
-              ["ADT", "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"]
+              [
+                "Apalutamide",
+                "240 mg/die per os"
+              ],
+              [
+                "ADT",
+                "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "arsi"
+          ]
         },
         {
           "name": "Enzalutamide",
@@ -234,11 +397,24 @@
           "regimen": {
             "trial": "PROSPER",
             "rows": [
-              ["Enzalutamide", "160 mg/die per os"],
-              ["ADT", "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"]
+              [
+                "Enzalutamide",
+                "160 mg/die per os"
+              ],
+              [
+                "ADT",
+                "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "arsi"
+          ]
         },
         {
           "name": "Darolutamide",
@@ -247,14 +423,31 @@
           "regimen": {
             "trial": "ARAMIS",
             "rows": [
-              ["Darolutamide", "600 mg per os ×2/die"],
-              ["ADT", "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"]
+              [
+                "Darolutamide",
+                "600 mg per os ×2/die"
+              ],
+              [
+                "ADT",
+                "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "arsi"
+          ]
         }
       ],
-      "next": { "label": "Alla comparsa di metastasi → mCRPC", "node": "crpc_q" }
+      "next": {
+        "label": "Alla comparsa di metastasi → mCRPC",
+        "node": "crpc_q"
+      },
+      "select": true
     },
     "nm_adt": {
       "type": "recommendation",
@@ -266,13 +459,24 @@
           "key": "Con PSA-DT >10 mesi nessun ARSI è indicato.",
           "regimen": {
             "rows": [
-              ["ADT", "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"]
+              [
+                "ADT",
+                "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"
+              ]
             ],
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         }
       ],
-      "next": { "label": "Alla comparsa di metastasi → mCRPC", "node": "crpc_q" }
+      "next": {
+        "label": "Alla comparsa di metastasi → mCRPC",
+        "node": "crpc_q"
+      },
+      "select": true
     },
     "hspc_volume": {
       "type": "question",
@@ -280,9 +484,18 @@
       "short": "Volume",
       "info": "Alto volume (CHAARTED): metastasi viscerali, oppure ≥4 lesioni ossee di cui ≥1 extra-assiale. Da non confondere con l'alto rischio LATITUDE.",
       "answers": [
-        { "label": "Alto volume, fit per docetaxel", "next": "hspc_alto_fit" },
-        { "label": "Alto volume, non fit per chemioterapia", "next": "hspc_doppietta" },
-        { "label": "Basso volume", "next": "hspc_basso" }
+        {
+          "label": "Alto volume, fit per docetaxel",
+          "next": "hspc_alto_fit"
+        },
+        {
+          "label": "Alto volume, non fit per chemioterapia",
+          "next": "hspc_doppietta"
+        },
+        {
+          "label": "Basso volume",
+          "next": "hspc_basso"
+        }
       ]
     },
     "hspc_alto_fit": {
@@ -297,12 +510,32 @@
             "trial": "ARASENS",
             "endpoint": "OS HR 0,68",
             "rows": [
-              ["Darolutamide", "600 mg per os ×2/die"],
-              ["Docetaxel", "75 mg/m² EV ogni 3 settimane ×6 cicli"],
-              ["ADT", "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"]
+              [
+                "Darolutamide",
+                "600 mg per os ×2/die"
+              ],
+              [
+                "Docetaxel",
+                "75 mg/m² EV ogni 3 settimane ×6 cicli"
+              ],
+              [
+                "ADT",
+                "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}, {"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              },
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "arsi",
+            "doce"
+          ]
         },
         {
           "name": "Tripletta ADT + docetaxel + abiraterone",
@@ -312,12 +545,29 @@
             "trial": "PEACE-1",
             "endpoint": "rPFS HR 0,50; OS HR 0,75",
             "rows": [
-              ["Abiraterone", "1000 mg/die per os + prednisone 5 mg/die"],
-              ["Docetaxel", "75 mg/m² EV ogni 3 settimane ×6 cicli"],
-              ["ADT", "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"]
+              [
+                "Abiraterone",
+                "1000 mg/die per os + prednisone 5 mg/die"
+              ],
+              [
+                "Docetaxel",
+                "75 mg/m² EV ogni 3 settimane ×6 cicli"
+              ],
+              [
+                "ADT",
+                "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "arsi",
+            "doce"
+          ]
         },
         {
           "name": "Doppietta ADT + ARSI",
@@ -325,16 +575,36 @@
           "key": "ESMO 2026: equivalente alla tripletta nell'alto volume (nessun confronto diretto).",
           "regimen": {
             "rows": [
-              ["Abiraterone", "1000 mg/die per os + prednisone 5 mg/die"],
-              ["oppure", "enzalutamide 160 mg/die, apalutamide 240 mg/die o darolutamide 600 mg ×2/die"],
-              ["ADT", "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"]
+              [
+                "Abiraterone",
+                "1000 mg/die per os + prednisone 5 mg/die"
+              ],
+              [
+                "oppure",
+                "enzalutamide 160 mg/die, apalutamide 240 mg/die o darolutamide 600 mg ×2/die"
+              ],
+              [
+                "ADT",
+                "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "arsi"
+          ]
         }
       ],
       "note": "RT sul primitivo anche nell'alto volume per prevenire i sintomi locali (PEACE-1). Docetaxel + ADT da solo non è più la prima scelta se è disponibile un ARSI.",
-      "next": { "label": "Alla progressione in castrazione → mCRPC", "node": "crpc_q" }
+      "next": {
+        "label": "Alla progressione in castrazione → mCRPC",
+        "node": "crpc_q"
+      },
+      "select": true
     },
     "hspc_doppietta": {
       "type": "recommendation",
@@ -348,11 +618,24 @@
             "trial": "LATITUDE",
             "endpoint": "OS HR 0,66 (analisi aggiornata)",
             "rows": [
-              ["Abiraterone", "1000 mg/die per os + prednisone 5 mg/die"],
-              ["ADT", "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"]
+              [
+                "Abiraterone",
+                "1000 mg/die per os + prednisone 5 mg/die"
+              ],
+              [
+                "ADT",
+                "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "arsi"
+          ]
         },
         {
           "name": "ADT + apalutamide",
@@ -362,11 +645,24 @@
             "trial": "TITAN",
             "endpoint": "OS HR 0,65",
             "rows": [
-              ["Apalutamide", "240 mg/die per os"],
-              ["ADT", "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"]
+              [
+                "Apalutamide",
+                "240 mg/die per os"
+              ],
+              [
+                "ADT",
+                "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "arsi"
+          ]
         },
         {
           "name": "ADT + enzalutamide",
@@ -376,11 +672,24 @@
             "trial": "ARCHES",
             "endpoint": "rPFS HR 0,39 (OS HR 0,66)",
             "rows": [
-              ["Enzalutamide", "160 mg/die per os"],
-              ["ADT", "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"]
+              [
+                "Enzalutamide",
+                "160 mg/die per os"
+              ],
+              [
+                "ADT",
+                "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "arsi"
+          ]
         },
         {
           "name": "ADT + darolutamide",
@@ -390,15 +699,37 @@
             "trial": "ARANOTE",
             "endpoint": "rPFS HR 0,54",
             "rows": [
-              ["Darolutamide", "600 mg per os ×2/die"],
-              ["ADT", "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"]
+              [
+                "Darolutamide",
+                "600 mg per os ×2/die"
+              ],
+              [
+                "ADT",
+                "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}, {"type": "pubmed", "label": "ARANOTE", "doi": "10.1200/JCO-24-01798"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              },
+              {
+                "type": "pubmed",
+                "label": "ARANOTE",
+                "doi": "10.1200/JCO-24-01798"
+              }
+            ]
+          },
+          "gives": [
+            "arsi"
+          ]
         }
       ],
       "note": "Meta-analisi dei 5 trial ADT + ARSI: OS HR 0,62, NNT 6,7.",
-      "next": { "label": "Alla progressione in castrazione → mCRPC", "node": "crpc_q" }
+      "next": {
+        "label": "Alla progressione in castrazione → mCRPC",
+        "node": "crpc_q"
+      },
+      "select": true
     },
     "hspc_basso": {
       "type": "recommendation",
@@ -410,37 +741,89 @@
           "key": "Abiraterone, apalutamide, enzalutamide o darolutamide.",
           "regimen": {
             "rows": [
-              ["Abiraterone", "1000 mg/die per os + prednisone 5 mg/die"],
-              ["oppure", "enzalutamide 160 mg/die, apalutamide 240 mg/die o darolutamide 600 mg ×2/die"],
-              ["ADT", "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"]
+              [
+                "Abiraterone",
+                "1000 mg/die per os + prednisone 5 mg/die"
+              ],
+              [
+                "oppure",
+                "enzalutamide 160 mg/die, apalutamide 240 mg/die o darolutamide 600 mg ×2/die"
+              ],
+              [
+                "ADT",
+                "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "arsi"
+          ]
         },
         {
           "name": "+ RT sul primitivo",
           "aifa": "standard",
-          "key": "Beneficio di OS dimostrato nel basso volume (STAMPEDE)."
+          "key": "Beneficio di OS dimostrato nel basso volume (STAMPEDE).",
+          "gives": [
+            "arsi"
+          ]
         },
         {
           "name": "Metastasis-directed therapy nell'oligometastatico",
           "aifa": "standard",
-          "key": "STOMP, ORIOLE: raccomandabile nell'oligometastatico [II, B]."
+          "key": "STOMP, ORIOLE: raccomandabile nell'oligometastatico [II, B].",
+          "gives": [
+            "arsi"
+          ]
         }
       ],
       "note": "Docetaxel + ADT: nessun beneficio di OS nel basso volume (CHAARTED).",
-      "next": { "label": "Alla progressione in castrazione → mCRPC", "node": "crpc_q" }
+      "next": {
+        "label": "Alla progressione in castrazione → mCRPC",
+        "node": "crpc_q"
+      },
+      "select": true
     },
     "crpc_q": {
       "type": "question",
       "text": "Stato BRCA1/2 e terapie già ricevute?",
       "short": "mCRPC",
-      "info": "Test HRR su tessuto o ctDNA: beneficio dei PARP-inibitori robusto in BRCA1/2 (ESCAT I-A), assente per CHEK2/ATM.",
+      "info": "Test HRR su tessuto o ctDNA: beneficio dei PARP-inibitori robusto in BRCA1/2 (ESCAT I-A), assente per CHEK2/ATM. Se le terapie ricevute sono già note dal percorso, la domanda si salta.",
       "answers": [
-        { "label": "BRCA1/2 mutato, chemioterapia non indicata", "next": "crpc_parp_1l" },
-        { "label": "Naïve ad ARSI e docetaxel", "next": "crpc_1l" },
-        { "label": "Già trattato con ARSI (es. in mHSPC)", "next": "crpc_post_arsi" },
-        { "label": "Dopo ARSI e docetaxel", "next": "crpc_post_doce" }
+        {
+          "label": "BRCA1/2 mutato, chemioterapia non indicata",
+          "next": "crpc_parp_1l"
+        },
+        {
+          "label": "Naïve ad ARSI e docetaxel",
+          "next": "crpc_1l"
+        },
+        {
+          "label": "Già trattato con ARSI (es. in mHSPC)",
+          "next": "crpc_post_arsi"
+        },
+        {
+          "label": "Dopo ARSI e docetaxel",
+          "next": "crpc_post_doce"
+        }
+      ],
+      "auto_route": [
+        {
+          "if_any": [
+            "doce"
+          ],
+          "next": "crpc_post_doce"
+        },
+        {
+          "if_any": [
+            "arsi"
+          ],
+          "next": "crpc_post_arsi"
+        }
       ]
     },
     "crpc_parp_1l": {
@@ -455,11 +838,25 @@
             "trial": "PROpel",
             "endpoint": "rPFS migliorata nella popolazione non selezionata (endpoint primario); nei BRCA2 rPFS HR 0,20",
             "rows": [
-              ["Olaparib", "300 mg per os ×2/die"],
-              ["Abiraterone", "1000 mg/die per os + prednisone 5 mg ×2/die"]
+              [
+                "Olaparib",
+                "300 mg per os ×2/die"
+              ],
+              [
+                "Abiraterone",
+                "1000 mg/die per os + prednisone 5 mg ×2/die"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "parp",
+            "arsi"
+          ]
         },
         {
           "name": "Niraparib + abiraterone",
@@ -469,10 +866,21 @@
             "trial": "MAGNITUDE",
             "endpoint": "rPFS nei BRCA1/2 16,6 vs 10,9 mesi, HR 0,53",
             "rows": [
-              ["Niraparib/abiraterone", "200 mg/1000 mg per os una volta al giorno + prednisone 5 mg ×2/die"]
+              [
+                "Niraparib/abiraterone",
+                "200 mg/1000 mg per os una volta al giorno + prednisone 5 mg ×2/die"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "parp",
+            "arsi"
+          ]
         },
         {
           "name": "Talazoparib + enzalutamide",
@@ -482,14 +890,32 @@
             "trial": "TALAPRO-2",
             "endpoint": "rPFS HR 0,63 (popolazione complessiva)",
             "rows": [
-              ["Talazoparib", "0,5 mg/die per os"],
-              ["Enzalutamide", "160 mg/die per os"]
+              [
+                "Talazoparib",
+                "0,5 mg/die per os"
+              ],
+              [
+                "Enzalutamide",
+                "160 mg/die per os"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "parp",
+            "arsi"
+          ]
         }
       ],
-      "next": { "label": "Alla progressione → linee successive", "node": "crpc_post_arsi" }
+      "next": {
+        "label": "Alla progressione → linee successive",
+        "node": "crpc_post_arsi"
+      },
+      "select": true
     },
     "crpc_1l": {
       "type": "recommendation",
@@ -503,11 +929,24 @@
             "trial": "COU-AA-302",
             "endpoint": "rPFS HR 0,53; OS 34,7 vs 30,3 mesi (HR 0,81)",
             "rows": [
-              ["Abiraterone", "1000 mg/die per os + prednisone 5 mg ×2/die"],
-              ["ADT", "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"]
+              [
+                "Abiraterone",
+                "1000 mg/die per os + prednisone 5 mg ×2/die"
+              ],
+              [
+                "ADT",
+                "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "arsi"
+          ]
         },
         {
           "name": "Enzalutamide",
@@ -517,11 +956,24 @@
             "trial": "PREVAIL",
             "endpoint": "rPFS HR 0,32; OS 35,3 vs 31,3 mesi (HR 0,77)",
             "rows": [
-              ["Enzalutamide", "160 mg/die per os"],
-              ["ADT", "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"]
+              [
+                "Enzalutamide",
+                "160 mg/die per os"
+              ],
+              [
+                "ADT",
+                "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "arsi"
+          ]
         },
         {
           "name": "Docetaxel",
@@ -531,16 +983,33 @@
             "trial": "TAX 327",
             "endpoint": "OS HR 0,76",
             "rows": [
-              ["Docetaxel", "75 mg/m² EV ogni 3 settimane + prednisone 5 mg ×2/die"],
-              ["ADT", "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"]
+              [
+                "Docetaxel",
+                "75 mg/m² EV ogni 3 settimane + prednisone 5 mg ×2/die"
+              ],
+              [
+                "ADT",
+                "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"
+              ]
             ],
             "note": "Fino a 10 cicli.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "doce"
+          ]
         }
       ],
       "note": "ADT sempre proseguita. Radio-223 mai insieme ad abiraterone (ERA 223: più fratture e decessi).",
-      "next": { "label": "Alla progressione → linee successive", "node": "crpc_post_arsi" }
+      "next": {
+        "label": "Alla progressione → linee successive",
+        "node": "crpc_post_arsi"
+      },
+      "select": true
     },
     "crpc_post_arsi": {
       "type": "recommendation",
@@ -552,12 +1021,31 @@
           "key": "Dopo ARSI, se non ricevuto prima.",
           "regimen": {
             "rows": [
-              ["Docetaxel", "75 mg/m² EV ogni 3 settimane + prednisone 5 mg ×2/die"],
-              ["ADT", "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"]
+              [
+                "Docetaxel",
+                "75 mg/m² EV ogni 3 settimane + prednisone 5 mg ×2/die"
+              ],
+              [
+                "ADT",
+                "agonista LHRH (es. leuprorelina 22,5 mg ogni 3 mesi) o antagonista (relugolix 360 mg carico, poi 120 mg/die per os)"
+              ]
             ],
             "note": "Fino a 10 cicli.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "excludes": [
+            {
+              "tag": "doce",
+              "reason": "Docetaxel già ricevuto."
+            }
+          ],
+          "gives": [
+            "doce"
+          ]
         },
         {
           "name": "Olaparib (BRCA1/2)",
@@ -567,10 +1055,32 @@
             "trial": "PROfound",
             "endpoint": "rPFS nella coorte BRCA/ATM HR 0,34",
             "rows": [
-              ["Olaparib", "300 mg per os ×2/die, in continuo"]
+              [
+                "Olaparib",
+                "300 mg per os ×2/die, in continuo"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "requires": [
+            {
+              "tag": "arsi",
+              "reason": "PROfound: dopo un ARSI."
+            }
+          ],
+          "excludes": [
+            {
+              "tag": "parp",
+              "reason": "PARP-inibitore già ricevuto."
+            }
+          ],
+          "gives": [
+            "parp"
+          ]
         },
         {
           "name": "¹⁷⁷Lu-PSMA-617",
@@ -580,14 +1090,54 @@
             "trial": "PSMAfore",
             "endpoint": "rPFS HR 0,41",
             "rows": [
-              ["¹⁷⁷Lu-PSMA-617", "7,4 GBq EV ogni 6 settimane, fino a 6 cicli"]
+              [
+                "¹⁷⁷Lu-PSMA-617",
+                "7,4 GBq EV ogni 6 settimane, fino a 6 cicli"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "requires": [
+            {
+              "tag": "arsi",
+              "reason": "PSMAfore: dopo un ARSI, prima del taxano."
+            }
+          ],
+          "excludes": [
+            {
+              "tag": "doce",
+              "reason": "Dopo taxano l'indicazione rimborsata è quella VISION (linee successive)."
+            }
+          ],
+          "gives": [
+            "lu"
+          ]
+        },
+        {
+          "name": "ARSI (abiraterone o enzalutamide)",
+          "aifa": "reimbursed",
+          "key": "Se non ancora ricevuto (es. dopo docetaxel in 1ª linea mCRPC).",
+          "excludes": [
+            {
+              "tag": "arsi",
+              "reason": "Resistenza crociata tra ARSI: il cambio di ARSI dopo progressione non è raccomandato."
+            }
+          ],
+          "gives": [
+            "arsi"
+          ]
         }
       ],
       "note": "Cambiare ARSI dopo un ARSI è subottimale.",
-      "next": { "label": "Alla progressione dopo docetaxel", "node": "crpc_post_doce" }
+      "next": {
+        "label": "Alla progressione dopo docetaxel",
+        "node": "crpc_post_doce"
+      },
+      "select": true
     },
     "crpc_post_doce": {
       "type": "recommendation",
@@ -601,10 +1151,26 @@
             "trial": "CARD",
             "endpoint": "rPFS HR 0,54 (OS HR 0,64)",
             "rows": [
-              ["Cabazitaxel", "25 mg/m² (o 20 mg/m²) EV ogni 3 settimane + prednisone 10 mg/die"]
+              [
+                "Cabazitaxel",
+                "25 mg/m² (o 20 mg/m²) EV ogni 3 settimane + prednisone 10 mg/die"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "requires": [
+            {
+              "tag": "doce",
+              "reason": "CARD: dopo docetaxel e un ARSI."
+            }
+          ],
+          "gives": [
+            "caba"
+          ]
         },
         {
           "name": "Olaparib (BRCA1/2)",
@@ -614,13 +1180,39 @@
             "trial": "PROfound",
             "endpoint": "rPFS nella coorte BRCA/ATM HR 0,34",
             "rows": [
-              ["Olaparib", "300 mg per os ×2/die, in continuo"]
+              [
+                "Olaparib",
+                "300 mg per os ×2/die, in continuo"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "requires": [
+            {
+              "tag": "arsi",
+              "reason": "PROfound: dopo un ARSI."
+            }
+          ],
+          "excludes": [
+            {
+              "tag": "parp",
+              "reason": "PARP-inibitore già ricevuto."
+            }
+          ],
+          "gives": [
+            "parp"
+          ]
         }
       ],
-      "next": { "label": "Alla progressione → radioligandi e radio-223", "node": "crpc_late" }
+      "next": {
+        "label": "Alla progressione → radioligandi e radio-223",
+        "node": "crpc_late"
+      },
+      "select": true
     },
     "crpc_late": {
       "type": "recommendation",
@@ -634,10 +1226,36 @@
             "trial": "VISION",
             "endpoint": "OS HR 0,62; rPFS HR 0,40",
             "rows": [
-              ["¹⁷⁷Lu-PSMA-617", "7,4 GBq EV ogni 6 settimane, fino a 6 cicli"]
+              [
+                "¹⁷⁷Lu-PSMA-617",
+                "7,4 GBq EV ogni 6 settimane, fino a 6 cicli"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "requires": [
+            {
+              "tag": "arsi",
+              "reason": "VISION: dopo ARSI e taxano."
+            },
+            {
+              "tag": "doce",
+              "reason": "VISION: dopo ARSI e taxano."
+            }
+          ],
+          "excludes": [
+            {
+              "tag": "lu",
+              "reason": "¹⁷⁷Lu-PSMA-617 già ricevuto."
+            }
+          ],
+          "gives": [
+            "lu"
+          ]
         },
         {
           "name": "Radio-223",
@@ -647,10 +1265,22 @@
             "trial": "ALSYMPCA",
             "endpoint": "OS 14,9 vs 11,3 mesi, HR 0,70",
             "rows": [
-              ["Radio-223", "55 kBq/kg EV ogni 4 settimane ×6"]
+              [
+                "Radio-223",
+                "55 kBq/kg EV ogni 4 settimane ×6"
+              ]
             ],
-            "sources": [{"type": "pubmed", "label": "ALSYMPCA", "doi": "10.1056/NEJMoa1213755"}]
-          }
+            "sources": [
+              {
+                "type": "pubmed",
+                "label": "ALSYMPCA",
+                "doi": "10.1056/NEJMoa1213755"
+              }
+            ]
+          },
+          "gives": [
+            "ra"
+          ]
         }
       ],
       "note": "Protezione ossea con acido zoledronico o denosumab per ridurre gli eventi scheletrici."

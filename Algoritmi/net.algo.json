@@ -3,6 +3,12 @@
   "title": "NET",
   "theme": "Gastrointestinali",
   "scheda": "Schede/Gastrointestinali/NET.md",
+  "exposures": {
+    "ssa": "Analogo della somatostatina",
+    "prrt": "PRRT",
+    "captem": "CAPTEM",
+    "everolimus": "Everolimus"
+  },
   "start": "setting",
   "nodes": {
     "setting": {
@@ -11,8 +17,14 @@
       "short": "Differenziazione",
       "info": "WHO 2022: NET G3 e NEC possono avere lo stesso Ki-67 >20% ma comportamento e risposta al platino diversi. 68Ga-SST PET/TC standard of care (sensibilità 97%).",
       "answers": [
-        { "label": "NET ben differenziato (G1-G3)", "next": "net_setting" },
-        { "label": "NEC scarsamente differenziato", "next": "nec_1l" }
+        {
+          "label": "NET ben differenziato (G1-G3)",
+          "next": "net_setting"
+        },
+        {
+          "label": "NEC scarsamente differenziato",
+          "next": "nec_1l"
+        }
       ]
     },
     "net_setting": {
@@ -20,8 +32,14 @@
       "text": "Qual è il setting?",
       "short": "Setting",
       "answers": [
-        { "label": "Localizzato resecabile", "next": "net_loc_sede" },
-        { "label": "Avanzato / metastatico", "next": "net_adv_sede" }
+        {
+          "label": "Localizzato resecabile",
+          "next": "net_loc_sede"
+        },
+        {
+          "label": "Avanzato / metastatico",
+          "next": "net_adv_sede"
+        }
       ]
     },
     "net_loc_sede": {
@@ -29,12 +47,30 @@
       "text": "Qual è la sede del primitivo?",
       "short": "Sede",
       "answers": [
-        { "label": "Pancreas", "next": "loc_pan" },
-        { "label": "Piccolo intestino", "next": "loc_ileo" },
-        { "label": "Appendice", "next": "loc_app" },
-        { "label": "Retto", "next": "loc_retto" },
-        { "label": "Stomaco", "next": "loc_stomaco" },
-        { "label": "Duodeno", "next": "loc_duod" }
+        {
+          "label": "Pancreas",
+          "next": "loc_pan"
+        },
+        {
+          "label": "Piccolo intestino",
+          "next": "loc_ileo"
+        },
+        {
+          "label": "Appendice",
+          "next": "loc_app"
+        },
+        {
+          "label": "Retto",
+          "next": "loc_retto"
+        },
+        {
+          "label": "Stomaco",
+          "next": "loc_stomaco"
+        },
+        {
+          "label": "Duodeno",
+          "next": "loc_duod"
+        }
       ]
     },
     "loc_pan": {
@@ -140,9 +176,18 @@
       "short": "Primitivo",
       "info": "Sindrome da carcinoide: SSA; telotristat per la diarrea refrattaria. FDG-PET positiva = prognosi peggiore (HR 10,3).",
       "answers": [
-        { "label": "GEP-NET G1-G2, SSTR+, lentamente progressivo", "next": "adv_ssa" },
-        { "label": "GEP-NET G2 Ki-67 ≥10% o G3 ben differenziato", "next": "adv_alto" },
-        { "label": "PanNET sintomatico / voluminoso", "next": "adv_pan_ct" }
+        {
+          "label": "GEP-NET G1-G2, SSTR+, lentamente progressivo",
+          "next": "adv_ssa"
+        },
+        {
+          "label": "GEP-NET G2 Ki-67 ≥10% o G3 ben differenziato",
+          "next": "adv_alto"
+        },
+        {
+          "label": "PanNET sintomatico / voluminoso",
+          "next": "adv_pan_ct"
+        }
       ]
     },
     "adv_ssa": {
@@ -157,14 +202,31 @@
             "trial": "CLARINET",
             "endpoint": "PFS non raggiunta vs 18 mesi, HR 0,47",
             "rows": [
-              ["Lanreotide", "120 mg SC ogni 28 giorni"],
-              ["oppure Octreotide LAR", "30 mg IM ogni 28 giorni"]
+              [
+                "Lanreotide",
+                "120 mg SC ogni 28 giorni"
+              ],
+              [
+                "oppure Octreotide LAR",
+                "30 mg IM ogni 28 giorni"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "ssa"
+          ]
         }
       ],
-      "next": { "label": "Alla progressione → 2ª linea", "node": "adv_2l_sede" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "adv_2l_sede"
+      },
+      "select": true
     },
     "adv_alto": {
       "type": "recommendation",
@@ -178,11 +240,25 @@
             "trial": "NETTER-2",
             "endpoint": "PFS 22,8 vs 8,5 mesi, HR 0,28",
             "rows": [
-              ["[177Lu]Lu-DOTA-TATE", "7,4 GBq EV ogni 8 settimane ×4"],
-              ["+ Octreotide LAR", "30 mg IM"]
+              [
+                "[177Lu]Lu-DOTA-TATE",
+                "7,4 GBq EV ogni 8 settimane ×4"
+              ],
+              [
+                "+ Octreotide LAR",
+                "30 mg IM"
+              ]
             ],
-            "sources": [{"type": "scheda"}]
-          }
+            "sources": [
+              {
+                "type": "scheda"
+              }
+            ]
+          },
+          "gives": [
+            "prrt",
+            "ssa"
+          ]
         },
         {
           "name": "CAPTEM (soprattutto PanNET)",
@@ -192,15 +268,32 @@
             "trial": "ECOG-ACRIN E2211",
             "endpoint": "PFS 22,7 vs 14,4 mesi, HR 0,58",
             "rows": [
-              ["Capecitabina", "750 mg/m² per os ×2/die, giorni 1-14"],
-              ["Temozolomide", "200 mg/m²/die per os, giorni 10-14"]
+              [
+                "Capecitabina",
+                "750 mg/m² per os ×2/die, giorni 1-14"
+              ],
+              [
+                "Temozolomide",
+                "200 mg/m²/die per os, giorni 10-14"
+              ]
             ],
             "note": "Ogni 28 giorni.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "captem"
+          ]
         }
       ],
-      "next": { "label": "Alla progressione → 2ª linea", "node": "adv_2l_sede" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "adv_2l_sede"
+      },
+      "select": true
     },
     "adv_pan_ct": {
       "type": "recommendation",
@@ -214,12 +307,25 @@
             "trial": "ECOG-ACRIN E2211",
             "endpoint": "PFS 22,7 vs 14,4 mesi, HR 0,58",
             "rows": [
-              ["Capecitabina", "750 mg/m² per os ×2/die, giorni 1-14"],
-              ["Temozolomide", "200 mg/m²/die per os, giorni 10-14"]
+              [
+                "Capecitabina",
+                "750 mg/m² per os ×2/die, giorni 1-14"
+              ],
+              [
+                "Temozolomide",
+                "200 mg/m²/die per os, giorni 10-14"
+              ]
             ],
             "note": "Ogni 28 giorni.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "captem"
+          ]
         },
         {
           "name": "Streptozotocina + 5-FU",
@@ -227,15 +333,25 @@
           "key": "Opzione storica, limitata da difficoltà di approvvigionamento."
         }
       ],
-      "next": { "label": "Alla progressione → 2ª linea", "node": "adv_2l_sede" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "adv_2l_sede"
+      },
+      "select": true
     },
     "adv_2l_sede": {
       "type": "question",
       "text": "Qual è la sede del primitivo?",
       "short": "Sede",
       "answers": [
-        { "label": "Pancreatico (PanNET)", "next": "adv_2l_pan" },
-        { "label": "Gastrointestinale (midgut / altri GEP)", "next": "adv_2l_gi" }
+        {
+          "label": "Pancreatico (PanNET)",
+          "next": "adv_2l_pan"
+        },
+        {
+          "label": "Gastrointestinale (midgut / altri GEP)",
+          "next": "adv_2l_gi"
+        }
       ]
     },
     "adv_2l_pan": {
@@ -250,9 +366,16 @@
             "trial": "RADIANT-3",
             "endpoint": "PFS 11,0 vs 4,6 mesi, HR 0,35",
             "rows": [
-              ["Everolimus", "10 mg/die per os, in continuo"]
+              [
+                "Everolimus",
+                "10 mg/die per os, in continuo"
+              ]
             ],
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         },
         {
@@ -263,9 +386,16 @@
             "trial": "SUN-1111",
             "endpoint": "PFS 11,4 vs 5,5 mesi, HR 0,42",
             "rows": [
-              ["Sunitinib", "37,5 mg/die per os, in continuo"]
+              [
+                "Sunitinib",
+                "37,5 mg/die per os, in continuo"
+              ]
             ],
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         },
         {
@@ -274,11 +404,27 @@
           "key": "GEP-NET G1-G2 SSTR+ progressivi.",
           "regimen": {
             "rows": [
-              ["[177Lu]Lu-DOTA-TATE", "7,4 GBq EV ogni 8 settimane ×4"],
-              ["+ Octreotide LAR", "30 mg IM"]
+              [
+                "[177Lu]Lu-DOTA-TATE",
+                "7,4 GBq EV ogni 8 settimane ×4"
+              ],
+              [
+                "+ Octreotide LAR",
+                "30 mg IM"
+              ]
             ],
-            "sources": [{"type": "scheda"}]
-          }
+            "sources": [
+              {
+                "type": "scheda"
+              }
+            ]
+          },
+          "excludes": [
+            {
+              "tag": "prrt",
+              "reason": "PRRT già eseguita in 1ª linea (NETTER-2)."
+            }
+          ]
         },
         {
           "name": "Cabozantinib",
@@ -288,9 +434,16 @@
             "trial": "CABINET",
             "endpoint": "PFS nei pNET 13,8 vs 4,4 mesi, HR 0,23",
             "rows": [
-              ["Cabozantinib", "60 mg/die per os, in continuo"]
+              [
+                "Cabozantinib",
+                "60 mg/die per os, in continuo"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         },
         {
@@ -301,12 +454,28 @@
             "trial": "ECOG-ACRIN E2211",
             "endpoint": "PFS 22,7 vs 14,4 mesi, HR 0,58",
             "rows": [
-              ["Capecitabina", "750 mg/m² per os ×2/die, giorni 1-14"],
-              ["Temozolomide", "200 mg/m²/die per os, giorni 10-14"]
+              [
+                "Capecitabina",
+                "750 mg/m² per os ×2/die, giorni 1-14"
+              ],
+              [
+                "Temozolomide",
+                "200 mg/m²/die per os, giorni 10-14"
+              ]
             ],
             "note": "Ogni 28 giorni.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "excludes": [
+            {
+              "tag": "captem",
+              "reason": "CAPTEM già ricevuto in 1ª linea."
+            }
+          ]
         }
       ]
     },
@@ -322,11 +491,27 @@
             "trial": "NETTER-1",
             "endpoint": "PFS a 20 mesi 65,2% vs 10,8%, HR 0,21",
             "rows": [
-              ["[177Lu]Lu-DOTA-TATE", "7,4 GBq EV ogni 8 settimane ×4"],
-              ["+ Octreotide LAR", "30 mg IM"]
+              [
+                "[177Lu]Lu-DOTA-TATE",
+                "7,4 GBq EV ogni 8 settimane ×4"
+              ],
+              [
+                "+ Octreotide LAR",
+                "30 mg IM"
+              ]
             ],
-            "sources": [{"type": "scheda"}]
-          }
+            "sources": [
+              {
+                "type": "scheda"
+              }
+            ]
+          },
+          "excludes": [
+            {
+              "tag": "prrt",
+              "reason": "PRRT già eseguita in 1ª linea (NETTER-2)."
+            }
+          ]
         },
         {
           "name": "Everolimus (non funzionanti GI e polmonari)",
@@ -336,9 +521,16 @@
             "trial": "RADIANT-4",
             "endpoint": "PFS 11,0 vs 3,9 mesi, HR 0,48",
             "rows": [
-              ["Everolimus", "10 mg/die per os, in continuo"]
+              [
+                "Everolimus",
+                "10 mg/die per os, in continuo"
+              ]
             ],
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         },
         {
@@ -349,9 +541,16 @@
             "trial": "CABINET",
             "endpoint": "PFS nei NET extra-pancreatici 8,4 vs 3,9 mesi, HR 0,38",
             "rows": [
-              ["Cabozantinib", "60 mg/die per os, in continuo"]
+              [
+                "Cabozantinib",
+                "60 mg/die per os, in continuo"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         }
       ],
@@ -367,11 +566,21 @@
           "key": "Estrapolato dal SCLC; OS mediana 7,5-11 mesi. Ki-67 ≥55%: più chemiosensibile.",
           "regimen": {
             "rows": [
-              ["Cisplatino o carboplatino", "cisplatino 75 mg/m² o carboplatino AUC 5 EV giorno 1"],
-              ["Etoposide", "100 mg/m² EV giorni 1-3"]
+              [
+                "Cisplatino o carboplatino",
+                "cisplatino 75 mg/m² o carboplatino AUC 5 EV giorno 1"
+              ],
+              [
+                "Etoposide",
+                "100 mg/m² EV giorni 1-3"
+              ]
             ],
             "note": "Ogni 21 giorni ×4-6 cicli.",
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         },
         {
@@ -380,15 +589,29 @@
           "key": "Minore chemiosensibilità al platino in questo sottogruppo.",
           "regimen": {
             "rows": [
-              ["Capecitabina", "750 mg/m² per os ×2/die, giorni 1-14"],
-              ["Temozolomide", "200 mg/m²/die per os, giorni 10-14"]
+              [
+                "Capecitabina",
+                "750 mg/m² per os ×2/die, giorni 1-14"
+              ],
+              [
+                "Temozolomide",
+                "200 mg/m²/die per os, giorni 10-14"
+              ]
             ],
             "note": "Ogni 28 giorni.",
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         }
       ],
-      "next": { "label": "Alla progressione → 2ª linea", "node": "nec_2l" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "nec_2l"
+      },
+      "select": true
     },
     "nec_2l": {
       "type": "recommendation",
@@ -401,10 +624,17 @@
           "regimen": {
             "trial": "SENECA",
             "rows": [
-              ["FOLFIRI", "irinotecano 180 + leucovorin 400 mg/m² + 5-FU 400 mg/m² bolo e 2400 mg/m² in 46 ore"]
+              [
+                "FOLFIRI",
+                "irinotecano 180 + leucovorin 400 mg/m² + 5-FU 400 mg/m² bolo e 2400 mg/m² in 46 ore"
+              ]
             ],
             "note": "Ogni 14 giorni.",
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         }
       ]

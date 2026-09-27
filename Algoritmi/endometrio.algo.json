@@ -3,6 +3,11 @@
   "title": "Endometrio",
   "theme": "Ginecologici",
   "scheda": "Schede/Ginecologici/Endometrio.md",
+  "exposures": {
+    "io": "Immunoterapia anti-PD-(L)1",
+    "platino": "Carboplatino-paclitaxel",
+    "parp": "Olaparib"
+  },
   "start": "setting",
   "nodes": {
     "setting": {
@@ -11,8 +16,14 @@
       "short": "Setting",
       "info": "Classificazione molecolare (POLEmut, dMMR, p53abn, NSMP) integrata nel FIGO 2023: guida adiuvante e 1ª linea.",
       "answers": [
-        { "label": "Localizzato (operabile)", "next": "loc_chir" },
-        { "label": "Avanzato o recidivante", "next": "adv_mmr" }
+        {
+          "label": "Localizzato (operabile)",
+          "next": "loc_chir"
+        },
+        {
+          "label": "Avanzato o recidivante",
+          "next": "adv_mmr"
+        }
       ]
     },
     "loc_chir": {
@@ -25,7 +36,11 @@
           "key": "Via mininvasiva standard (a differenza della cervice). Linfonodo sentinella negli stadi apparentemente precoci."
         }
       ],
-      "next": { "label": "Dopo la chirurgia → gruppo di rischio ESGO-ESTRO-ESP", "node": "loc_rischio" }
+      "next": {
+        "label": "Dopo la chirurgia → gruppo di rischio ESGO-ESTRO-ESP",
+        "node": "loc_rischio"
+      },
+      "select": true
     },
     "loc_rischio": {
       "type": "question",
@@ -33,10 +48,22 @@
       "short": "Rischio",
       "info": "LVSI sostanziale (≥5 vasi) è un fattore prognostico indipendente. POLEmut: prognosi eccellente, candidato alla de-escalation.",
       "answers": [
-        { "label": "Basso", "next": "loc_basso" },
-        { "label": "Intermedio", "next": "loc_intermedio" },
-        { "label": "Alto-intermedio", "next": "loc_altoint" },
-        { "label": "Alto", "next": "loc_alto" }
+        {
+          "label": "Basso",
+          "next": "loc_basso"
+        },
+        {
+          "label": "Intermedio",
+          "next": "loc_intermedio"
+        },
+        {
+          "label": "Alto-intermedio",
+          "next": "loc_altoint"
+        },
+        {
+          "label": "Alto",
+          "next": "loc_alto"
+        }
       ]
     },
     "loc_basso": {
@@ -48,7 +75,12 @@
           "aifa": "standard",
           "key": "Incluso lo stadio IA1m di tutti i sottogruppi molecolari."
         }
-      ]
+      ],
+      "next": {
+        "label": "Alla recidiva",
+        "node": "adv_mmr"
+      },
+      "select": true
     },
     "loc_intermedio": {
       "type": "recommendation",
@@ -60,12 +92,24 @@
           "key": "Omissibile se N0, senza LVSI sostanziale, <60 anni e/o basso grado.",
           "regimen": {
             "rows": [
-              ["Brachiterapia vaginale", "es. 21 Gy in 3 frazioni"]
+              [
+                "Brachiterapia vaginale",
+                "es. 21 Gy in 3 frazioni"
+              ]
             ],
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         }
-      ]
+      ],
+      "next": {
+        "label": "Alla recidiva",
+        "node": "adv_mmr"
+      },
+      "select": true
     },
     "loc_altoint": {
       "type": "recommendation",
@@ -77,12 +121,24 @@
           "key": "Preferita; VBT alternativa se linfonodi negativi.",
           "regimen": {
             "rows": [
-              ["Radioterapia pelvica", "45-50 Gy"]
+              [
+                "Radioterapia pelvica",
+                "45-50 Gy"
+              ]
             ],
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         }
-      ]
+      ],
+      "next": {
+        "label": "Alla recidiva",
+        "node": "adv_mmr"
+      },
+      "select": true
     },
     "loc_alto": {
       "type": "recommendation",
@@ -95,23 +151,46 @@
           "regimen": {
             "trial": "PORTEC-3",
             "rows": [
-              ["Durante la RT", "cisplatino 50 mg/m² ×2 cicli"],
-              ["poi", "carboplatino AUC 5 + paclitaxel 175 mg/m² ×4 cicli"]
+              [
+                "Durante la RT",
+                "cisplatino 50 mg/m² ×2 cicli"
+              ],
+              [
+                "poi",
+                "carboplatino AUC 5 + paclitaxel 175 mg/m² ×4 cicli"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "platino"
+          ]
         }
       ],
       "note": "KEYNOTE-B21: pembrolizumab adiuvante negativo nell'ITT (DFS HR 1,02), beneficio solo nel dMMR (HR 0,31): non cambia lo standard.",
-      "next": { "label": "Alla recidiva → malattia avanzata", "node": "adv_mmr" }
+      "next": {
+        "label": "Alla recidiva",
+        "node": "rec_ct"
+      },
+      "select": true
     },
     "adv_mmr": {
       "type": "question",
       "text": "Qual è lo stato MMR?",
       "short": "MMR",
       "answers": [
-        { "label": "dMMR / MSI-H", "next": "adv_dmmr" },
-        { "label": "pMMR / MSS", "next": "adv_pmmr" }
+        {
+          "label": "dMMR / MSI-H",
+          "next": "adv_dmmr"
+        },
+        {
+          "label": "pMMR / MSS",
+          "next": "adv_pmmr"
+        }
       ]
     },
     "adv_dmmr": {
@@ -126,13 +205,30 @@
             "trial": "RUBY",
             "endpoint": "OS ITT 44,6 vs 28,2 mesi (HR 0,69); nel dMMR HR 0,32",
             "rows": [
-              ["Dostarlimab", "500 mg EV ogni 3 settimane ×6, poi 1000 mg ogni 6 settimane (fino a 3 anni)"],
-              ["Carboplatino", "AUC 5 EV giorno 1"],
-              ["Paclitaxel", "175 mg/m² EV giorno 1"]
+              [
+                "Dostarlimab",
+                "500 mg EV ogni 3 settimane ×6, poi 1000 mg ogni 6 settimane (fino a 3 anni)"
+              ],
+              [
+                "Carboplatino",
+                "AUC 5 EV giorno 1"
+              ],
+              [
+                "Paclitaxel",
+                "175 mg/m² EV giorno 1"
+              ]
             ],
             "note": "Carboplatino-paclitaxel ogni 3 settimane ×6.",
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "platino",
+            "io"
+          ]
         },
         {
           "name": "Pembrolizumab + carboplatino-paclitaxel",
@@ -142,12 +238,34 @@
             "trial": "NRG-GY018",
             "endpoint": "PFS nel dMMR HR 0,30; nel pMMR 13,1 vs 8,7 mesi (HR 0,54)",
             "rows": [
-              ["Pembrolizumab", "200 mg EV ogni 3 settimane ×6, poi 400 mg ogni 6 settimane ×14"],
-              ["Carboplatino", "AUC 5 EV giorno 1"],
-              ["Paclitaxel", "175 mg/m² EV giorno 1"]
+              [
+                "Pembrolizumab",
+                "200 mg EV ogni 3 settimane ×6, poi 400 mg ogni 6 settimane ×14"
+              ],
+              [
+                "Carboplatino",
+                "AUC 5 EV giorno 1"
+              ],
+              [
+                "Paclitaxel",
+                "175 mg/m² EV giorno 1"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}, {"type": "pubmed", "label": "NRG-GY018", "doi": "10.1056/NEJMoa2302312"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              },
+              {
+                "type": "pubmed",
+                "label": "NRG-GY018",
+                "doi": "10.1056/NEJMoa2302312"
+              }
+            ]
+          },
+          "gives": [
+            "platino",
+            "io"
+          ]
         },
         {
           "name": "Durvalumab + carboplatino-paclitaxel",
@@ -157,16 +275,37 @@
             "trial": "DUO-E",
             "endpoint": "PFS ITT HR 0,71 con durvalumab + CT",
             "rows": [
-              ["Durvalumab", "1120 mg EV ogni 3 settimane ×6, poi 1500 mg ogni 4 settimane"],
-              ["Carboplatino", "AUC 5 EV giorno 1"],
-              ["Paclitaxel", "175 mg/m² EV giorno 1"]
+              [
+                "Durvalumab",
+                "1120 mg EV ogni 3 settimane ×6, poi 1500 mg ogni 4 settimane"
+              ],
+              [
+                "Carboplatino",
+                "AUC 5 EV giorno 1"
+              ],
+              [
+                "Paclitaxel",
+                "175 mg/m² EV giorno 1"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "platino",
+            "io"
+          ]
         }
       ],
       "note": "Atezolizumab + CT (AtTEnd) non è mai stato approvato EMA per l'endometrio.",
-      "next": { "label": "Alla progressione → 2ª linea", "node": "adv_2l" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "adv_2l"
+      },
+      "select": true
     },
     "adv_pmmr": {
       "type": "recommendation",
@@ -180,13 +319,30 @@
             "trial": "RUBY",
             "endpoint": "OS ITT 44,6 vs 28,2 mesi (HR 0,69); nel dMMR HR 0,32",
             "rows": [
-              ["Dostarlimab", "500 mg EV ogni 3 settimane ×6, poi 1000 mg ogni 6 settimane (fino a 3 anni)"],
-              ["Carboplatino", "AUC 5 EV giorno 1"],
-              ["Paclitaxel", "175 mg/m² EV giorno 1"]
+              [
+                "Dostarlimab",
+                "500 mg EV ogni 3 settimane ×6, poi 1000 mg ogni 6 settimane (fino a 3 anni)"
+              ],
+              [
+                "Carboplatino",
+                "AUC 5 EV giorno 1"
+              ],
+              [
+                "Paclitaxel",
+                "175 mg/m² EV giorno 1"
+              ]
             ],
             "note": "Carboplatino-paclitaxel ogni 3 settimane ×6.",
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "platino",
+            "io"
+          ]
         },
         {
           "name": "Pembrolizumab + carboplatino-paclitaxel",
@@ -196,12 +352,34 @@
             "trial": "NRG-GY018",
             "endpoint": "PFS nel dMMR HR 0,30; nel pMMR 13,1 vs 8,7 mesi (HR 0,54)",
             "rows": [
-              ["Pembrolizumab", "200 mg EV ogni 3 settimane ×6, poi 400 mg ogni 6 settimane ×14"],
-              ["Carboplatino", "AUC 5 EV giorno 1"],
-              ["Paclitaxel", "175 mg/m² EV giorno 1"]
+              [
+                "Pembrolizumab",
+                "200 mg EV ogni 3 settimane ×6, poi 400 mg ogni 6 settimane ×14"
+              ],
+              [
+                "Carboplatino",
+                "AUC 5 EV giorno 1"
+              ],
+              [
+                "Paclitaxel",
+                "175 mg/m² EV giorno 1"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}, {"type": "pubmed", "label": "NRG-GY018", "doi": "10.1056/NEJMoa2302312"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              },
+              {
+                "type": "pubmed",
+                "label": "NRG-GY018",
+                "doi": "10.1056/NEJMoa2302312"
+              }
+            ]
+          },
+          "gives": [
+            "platino",
+            "io"
+          ]
         },
         {
           "name": "Durvalumab + olaparib + carboplatino-paclitaxel",
@@ -211,13 +389,34 @@
             "trial": "DUO-E",
             "endpoint": "PFS ITT HR 0,55 con durvalumab + olaparib",
             "rows": [
-              ["Durvalumab", "1120 mg EV ogni 3 settimane ×6, poi 1500 mg ogni 4 settimane"],
-              ["+ Olaparib", "300 mg per os ×2/die in mantenimento"],
-              ["Carboplatino", "AUC 5 EV giorno 1"],
-              ["Paclitaxel", "175 mg/m² EV giorno 1"]
+              [
+                "Durvalumab",
+                "1120 mg EV ogni 3 settimane ×6, poi 1500 mg ogni 4 settimane"
+              ],
+              [
+                "+ Olaparib",
+                "300 mg per os ×2/die in mantenimento"
+              ],
+              [
+                "Carboplatino",
+                "AUC 5 EV giorno 1"
+              ],
+              [
+                "Paclitaxel",
+                "175 mg/m² EV giorno 1"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "platino",
+            "io",
+            "parp"
+          ]
         },
         {
           "name": "Carboplatino-paclitaxel",
@@ -225,16 +424,33 @@
           "key": "Standard storico.",
           "regimen": {
             "rows": [
-              ["Carboplatino", "AUC 5 EV giorno 1"],
-              ["Paclitaxel", "175 mg/m² EV giorno 1"]
+              [
+                "Carboplatino",
+                "AUC 5 EV giorno 1"
+              ],
+              [
+                "Paclitaxel",
+                "175 mg/m² EV giorno 1"
+              ]
             ],
             "note": "Ogni 21 giorni ×6 cicli.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "platino"
+          ]
         }
       ],
       "note": "Meta-analisi ESMO 2024: nel pMMR beneficio di PFS (HR 0,78) ma non di OS come effetto di classe.",
-      "next": { "label": "Alla progressione → 2ª linea", "node": "adv_2l" }
+      "next": {
+        "label": "Alla progressione → 2ª linea",
+        "node": "adv_2l"
+      },
+      "select": true
     },
     "adv_2l": {
       "type": "recommendation",
@@ -248,11 +464,27 @@
             "trial": "KEYNOTE-775",
             "endpoint": "OS a 5 anni 19,9% vs 7,7%, HR 0,66",
             "rows": [
-              ["Lenvatinib", "20 mg/die per os"],
-              ["Pembrolizumab", "200 mg EV ogni 3 settimane"]
+              [
+                "Lenvatinib",
+                "20 mg/die per os"
+              ],
+              [
+                "Pembrolizumab",
+                "200 mg EV ogni 3 settimane"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "excludes": [
+            {
+              "tag": "io",
+              "reason": "KEYNOTE-775 escludeva le pazienti già trattate con immunoterapia."
+            }
+          ]
         },
         {
           "name": "Dostarlimab in monoterapia (dMMR, IO-naive)",
@@ -261,10 +493,23 @@
           "regimen": {
             "trial": "GARNET",
             "rows": [
-              ["Dostarlimab", "500 mg EV ogni 3 settimane ×4, poi 1000 mg ogni 6 settimane"]
+              [
+                "Dostarlimab",
+                "500 mg EV ogni 3 settimane ×4, poi 1000 mg ogni 6 settimane"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "excludes": [
+            {
+              "tag": "io",
+              "reason": "Già ricevuta immunoterapia: il ritrattamento con anti-PD-1 non è raccomandato."
+            }
+          ]
         },
         {
           "name": "Pembrolizumab in monoterapia (dMMR, IO-naive)",
@@ -273,13 +518,54 @@
           "regimen": {
             "trial": "KEYNOTE-158",
             "rows": [
-              ["Pembrolizumab", "200 mg EV ogni 3 settimane o 400 mg ogni 6 settimane, fino a 24 mesi"]
+              [
+                "Pembrolizumab",
+                "200 mg EV ogni 3 settimane o 400 mg ogni 6 settimane, fino a 24 mesi"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "excludes": [
+            {
+              "tag": "io",
+              "reason": "Già ricevuta immunoterapia: il ritrattamento con anti-PD-1 non è raccomandato."
+            }
+          ]
+        },
+        {
+          "name": "Chemioterapia (doxorubicina o paclitaxel settimanale)",
+          "aifa": "standard",
+          "key": "Dopo chemio-immunoterapia in 1ª linea; valutare studi clinici."
         }
       ],
       "note": "Selinexor di mantenimento nei TP53 wild-type non confermato (XPORT-EC-042 negativo). HER2: T-DXd ORR 57,5% (non indicazione registrata)."
+    },
+    "rec_ct": {
+      "type": "question",
+      "text": "Quando si è verificata la recidiva rispetto alla chemioterapia adiuvante?",
+      "short": "Recidiva",
+      "info": "RUBY richiedeva almeno 6 mesi dalla chemioterapia adiuvante: con recidiva più precoce la chemioterapia a base di platino conta come 1ª linea (KEYNOTE-775).",
+      "only_if_any": [
+        "platino"
+      ],
+      "skip_to": "adv_mmr",
+      "answers": [
+        {
+          "label": "Entro 6 mesi (malattia refrattaria)",
+          "next": "adv_2l"
+        },
+        {
+          "label": "Oltre 6 mesi",
+          "next": "adv_mmr",
+          "expire": [
+            "platino"
+          ]
+        }
+      ]
     }
   }
 }

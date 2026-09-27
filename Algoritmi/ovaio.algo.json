@@ -3,6 +3,10 @@
   "title": "Ovaio",
   "theme": "Ginecologici",
   "scheda": "Schede/Ginecologici/Ovaio.md",
+  "exposures": {
+    "parp": "PARP-inibitore",
+    "bev": "Bevacizumab"
+  },
   "start": "setting",
   "nodes": {
     "setting": {
@@ -11,9 +15,18 @@
       "short": "Setting",
       "info": "Test BRCA germinale e somatico e HRD alla diagnosi di carcinoma sieroso di alto grado: guidano il mantenimento.",
       "answers": [
-        { "label": "Stadio iniziale (I-II)", "next": "early_chir" },
-        { "label": "Stadio avanzato (III-IV)", "next": "adv_chir" },
-        { "label": "Recidiva", "next": "rec_pfi" }
+        {
+          "label": "Stadio iniziale (I-II)",
+          "next": "early_chir"
+        },
+        {
+          "label": "Stadio avanzato (III-IV)",
+          "next": "adv_chir"
+        },
+        {
+          "label": "Recidiva",
+          "next": "rec_pfi"
+        }
       ]
     },
     "early_chir": {
@@ -36,15 +49,28 @@
           "key": "IA-IB G3, IC G2-3, stadio II o staging incompleto; nel basso rischio nessuna CT, nell'intermedio opzionale.",
           "regimen": {
             "rows": [
-              ["Carboplatino", "AUC 5 EV giorno 1"],
-              ["Paclitaxel", "175 mg/m² EV giorno 1"]
+              [
+                "Carboplatino",
+                "AUC 5 EV giorno 1"
+              ],
+              [
+                "Paclitaxel",
+                "175 mg/m² EV giorno 1"
+              ]
             ],
             "note": "Ogni 21 giorni ×6 cicli (o carboplatino AUC 5-6 in monoterapia).",
-            "sources": [{"type": "scheda"}]
+            "sources": [
+              {
+                "type": "scheda"
+              }
+            ]
           }
         }
       ],
-      "next": { "label": "Alla recidiva", "node": "rec_pfi" }
+      "next": {
+        "label": "Alla recidiva",
+        "node": "rec_pfi"
+      }
     },
     "adv_chir": {
       "type": "recommendation",
@@ -61,7 +87,11 @@
           "key": "OS/PFS sovrapponibili alla PDS con meno complicanze; TRUST: PDS migliore solo se residuo assente."
         }
       ],
-      "next": { "label": "Chemioterapia di 1ª linea", "node": "adv_1l" }
+      "next": {
+        "label": "Chemioterapia di 1ª linea",
+        "node": "adv_1l"
+      },
+      "select": true
     },
     "adv_1l": {
       "type": "recommendation",
@@ -73,25 +103,54 @@
           "key": "Bevacizumab (GOG-218, ICON7) da considerare dopo citoriduzione ottimale, fortemente raccomandato se non ottimale.",
           "regimen": {
             "rows": [
-              ["Carboplatino", "AUC 5 EV giorno 1"],
-              ["Paclitaxel", "175 mg/m² EV giorno 1"],
-              ["± Bevacizumab", "15 mg/kg EV ogni 3 settimane, fino a 15 mesi totali"]
+              [
+                "Carboplatino",
+                "AUC 5 EV giorno 1"
+              ],
+              [
+                "Paclitaxel",
+                "175 mg/m² EV giorno 1"
+              ],
+              [
+                "± Bevacizumab",
+                "15 mg/kg EV ogni 3 settimane, fino a 15 mesi totali"
+              ]
             ],
             "note": "Ogni 21 giorni ×6 cicli.",
-            "sources": [{"type": "scheda"}, {"type": "standard"}]
+            "sources": [
+              {
+                "type": "scheda"
+              },
+              {
+                "type": "standard"
+              }
+            ]
           }
         }
       ],
-      "next": { "label": "Dopo la risposta → mantenimento", "node": "adv_mant_q" }
+      "next": {
+        "label": "Dopo la risposta → mantenimento",
+        "node": "adv_mant_q"
+      },
+      "select": true
     },
     "adv_mant_q": {
       "type": "question",
       "text": "Qual è lo stato BRCA/HRD?",
       "short": "BRCA / HRD",
       "answers": [
-        { "label": "BRCA1/2 mutato", "next": "mant_brca" },
-        { "label": "BRCA wild-type, HRD positivo", "next": "mant_hrd" },
-        { "label": "HR proficient (HRp)", "next": "mant_hrp" }
+        {
+          "label": "BRCA1/2 mutato",
+          "next": "mant_brca"
+        },
+        {
+          "label": "BRCA wild-type, HRD positivo",
+          "next": "mant_hrd"
+        },
+        {
+          "label": "HR proficient (HRp)",
+          "next": "mant_hrp"
+        }
       ]
     },
     "mant_brca": {
@@ -106,11 +165,21 @@
             "trial": "SOLO-1",
             "endpoint": "PFS 56 vs 13,8 mesi, HR 0,30",
             "rows": [
-              ["Olaparib", "300 mg per os ×2/die"]
+              [
+                "Olaparib",
+                "300 mg per os ×2/die"
+              ]
             ],
             "note": "Durata 2 anni.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "parp"
+          ]
         },
         {
           "name": "Niraparib",
@@ -120,11 +189,21 @@
             "trial": "PRIMA",
             "endpoint": "PFS HR 0,62 (BRCA-mut 0,40, HRD 0,50, HRp 0,68); OS finale HR 1,01",
             "rows": [
-              ["Niraparib", "200 mg/die (300 mg se peso ≥77 kg e piastrine ≥150.000) per os"]
+              [
+                "Niraparib",
+                "200 mg/die (300 mg se peso ≥77 kg e piastrine ≥150.000) per os"
+              ]
             ],
             "note": "Fino a 3 anni.",
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "parp"
+          ]
         },
         {
           "name": "Rucaparib",
@@ -134,14 +213,28 @@
             "trial": "ATHENA-MONO",
             "endpoint": "PFS HRD 28,7 vs 11,3 mesi (HR 0,47); ITT HR 0,52",
             "rows": [
-              ["Rucaparib", "600 mg per os ×2/die"]
+              [
+                "Rucaparib",
+                "600 mg per os ×2/die"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "parp"
+          ]
         }
       ],
       "note": "Olaparib + bevacizumab è rimborsato solo nell'HRD BRCA wild-type: le BRCA-mutate vanno a olaparib in monoterapia.",
-      "next": { "label": "Alla recidiva", "node": "rec_pfi" }
+      "next": {
+        "label": "Alla recidiva",
+        "node": "rec_pfi"
+      },
+      "select": true
     },
     "mant_hrd": {
       "type": "recommendation",
@@ -155,11 +248,25 @@
             "trial": "PAOLA-1",
             "endpoint": "PFS 37,2 vs 17,7 mesi, HR 0,33",
             "rows": [
-              ["Olaparib", "300 mg per os ×2/die, fino a 2 anni"],
-              ["Bevacizumab", "15 mg/kg EV ogni 3 settimane, fino a 15 mesi"]
+              [
+                "Olaparib",
+                "300 mg per os ×2/die, fino a 2 anni"
+              ],
+              [
+                "Bevacizumab",
+                "15 mg/kg EV ogni 3 settimane, fino a 15 mesi"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "parp",
+            "bev"
+          ]
         },
         {
           "name": "Niraparib",
@@ -169,11 +276,21 @@
             "trial": "PRIMA",
             "endpoint": "PFS HR 0,62 (BRCA-mut 0,40, HRD 0,50, HRp 0,68); OS finale HR 1,01",
             "rows": [
-              ["Niraparib", "200 mg/die (300 mg se peso ≥77 kg e piastrine ≥150.000) per os"]
+              [
+                "Niraparib",
+                "200 mg/die (300 mg se peso ≥77 kg e piastrine ≥150.000) per os"
+              ]
             ],
             "note": "Fino a 3 anni.",
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "parp"
+          ]
         },
         {
           "name": "Rucaparib",
@@ -183,14 +300,28 @@
             "trial": "ATHENA-MONO",
             "endpoint": "PFS HRD 28,7 vs 11,3 mesi (HR 0,47); ITT HR 0,52",
             "rows": [
-              ["Rucaparib", "600 mg per os ×2/die"]
+              [
+                "Rucaparib",
+                "600 mg per os ×2/die"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "parp"
+          ]
         }
       ],
       "note": "DUO-O e FIRST: PFS positive ma OS non significativa, nessuna ricaduta pratica.",
-      "next": { "label": "Alla recidiva", "node": "rec_pfi" }
+      "next": {
+        "label": "Alla recidiva",
+        "node": "rec_pfi"
+      },
+      "select": true
     },
     "mant_hrp": {
       "type": "recommendation",
@@ -204,11 +335,21 @@
             "trial": "PRIMA",
             "endpoint": "PFS HR 0,62 (BRCA-mut 0,40, HRD 0,50, HRp 0,68); OS finale HR 1,01",
             "rows": [
-              ["Niraparib", "200 mg/die (300 mg se peso ≥77 kg e piastrine ≥150.000) per os"]
+              [
+                "Niraparib",
+                "200 mg/die (300 mg se peso ≥77 kg e piastrine ≥150.000) per os"
+              ]
             ],
             "note": "Fino a 3 anni.",
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "parp"
+          ]
         },
         {
           "name": "Rucaparib",
@@ -218,10 +359,20 @@
             "trial": "ATHENA-MONO",
             "endpoint": "PFS HRD 28,7 vs 11,3 mesi (HR 0,47); ITT HR 0,52",
             "rows": [
-              ["Rucaparib", "600 mg per os ×2/die"]
+              [
+                "Rucaparib",
+                "600 mg per os ×2/die"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
-          }
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
+          },
+          "gives": [
+            "parp"
+          ]
         },
         {
           "name": "Bevacizumab (se iniziato con la CT)",
@@ -229,14 +380,28 @@
           "key": "Beneficio di OS solo nell'alto rischio.",
           "regimen": {
             "rows": [
-              ["Bevacizumab", "15 mg/kg EV ogni 3 settimane, fino a 15 mesi"]
+              [
+                "Bevacizumab",
+                "15 mg/kg EV ogni 3 settimane, fino a 15 mesi"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "bev"
+          ]
         }
       ],
       "note": "Olaparib + bevacizumab non va esteso all'HRp.",
-      "next": { "label": "Alla recidiva", "node": "rec_pfi" }
+      "next": {
+        "label": "Alla recidiva",
+        "node": "rec_pfi"
+      },
+      "select": true
     },
     "rec_pfi": {
       "type": "question",
@@ -244,9 +409,18 @@
       "short": "PFI",
       "info": "Un aumento isolato del CA-125 non è indicazione a riprendere il trattamento.",
       "answers": [
-        { "label": "Platino-sensibile (>6 mesi)", "next": "rec_sens" },
-        { "label": "Platino-resistente (<6 mesi)", "next": "rec_res" },
-        { "label": "Sieroso di basso grado recidivato", "next": "rec_lgsc" }
+        {
+          "label": "Platino-sensibile (>6 mesi)",
+          "next": "rec_sens"
+        },
+        {
+          "label": "Platino-resistente (<6 mesi)",
+          "next": "rec_res"
+        },
+        {
+          "label": "Sieroso di basso grado recidivato",
+          "next": "rec_lgsc"
+        }
       ]
     },
     "rec_sens": {
@@ -261,9 +435,18 @@
             "trial": "DESKTOP III",
             "endpoint": "OS 53,7 vs 46,0 mesi, HR 0,75",
             "rows": [
-              ["Chirurgia", "citoriduzione completa"]
+              [
+                "Chirurgia",
+                "citoriduzione completa"
+              ]
             ],
-            "sources": [{"type": "pubmed", "label": "DESKTOP III", "doi": "10.1056/NEJMoa2103294"}]
+            "sources": [
+              {
+                "type": "pubmed",
+                "label": "DESKTOP III",
+                "doi": "10.1056/NEJMoa2103294"
+              }
+            ]
           }
         },
         {
@@ -274,13 +457,29 @@
             "trial": "OCEANS",
             "endpoint": "PFS 12,4 vs 8,4 mesi, HR 0,48",
             "rows": [
-              ["Carboplatino", "AUC 4 EV giorno 1"],
-              ["Gemcitabina", "1000 mg/m² EV giorni 1 e 8"],
-              ["Bevacizumab", "15 mg/kg EV giorno 1"]
+              [
+                "Carboplatino",
+                "AUC 4 EV giorno 1"
+              ],
+              [
+                "Gemcitabina",
+                "1000 mg/m² EV giorni 1 e 8"
+              ],
+              [
+                "Bevacizumab",
+                "15 mg/kg EV giorno 1"
+              ]
             ],
             "note": "Ogni 21 giorni; bevacizumab fino a progressione.",
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "gives": [
+            "bev"
+          ]
         },
         {
           "name": "Trabectedina + PLD (PFI 6-12 mesi)",
@@ -290,11 +489,23 @@
             "trial": "OVA-301",
             "endpoint": "PFS migliorata (endpoint primario); OS complessiva non significativa (HR 0,86), HR 0,64 nel PFI 6-12 mesi",
             "rows": [
-              ["Trabectedina", "1,1 mg/m² EV"],
-              ["Doxorubicina liposomiale pegilata", "30 mg/m² EV"]
+              [
+                "Trabectedina",
+                "1,1 mg/m² EV"
+              ],
+              [
+                "Doxorubicina liposomiale pegilata",
+                "30 mg/m² EV"
+              ]
             ],
             "note": "Ogni 21 giorni.",
-            "sources": [{"type": "pubmed", "label": "OVA-301", "doi": "10.1016/j.ejca.2012.04.001"}]
+            "sources": [
+              {
+                "type": "pubmed",
+                "label": "OVA-301",
+                "doi": "10.1016/j.ejca.2012.04.001"
+              }
+            ]
           }
         },
         {
@@ -303,14 +514,28 @@
           "key": "Carboplatino + paclitaxel o + PLD, superiori al platino da solo.",
           "regimen": {
             "rows": [
-              ["Carboplatino", "AUC 5 EV giorno 1"],
-              ["Paclitaxel", "175 mg/m² EV giorno 1"]
+              [
+                "Carboplatino",
+                "AUC 5 EV giorno 1"
+              ],
+              [
+                "Paclitaxel",
+                "175 mg/m² EV giorno 1"
+              ]
             ],
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         }
       ],
-      "next": { "label": "Dopo la risposta → mantenimento", "node": "rec_mant" }
+      "next": {
+        "label": "Dopo la risposta → mantenimento",
+        "node": "rec_mant"
+      },
+      "select": true
     },
     "rec_mant": {
       "type": "recommendation",
@@ -324,10 +549,26 @@
             "trial": "SOLO-2",
             "endpoint": "PFS 19,1 vs 5,5 mesi, HR 0,30",
             "rows": [
-              ["Olaparib", "300 mg per os ×2/die"]
+              [
+                "Olaparib",
+                "300 mg per os ×2/die"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "excludes": [
+            {
+              "tag": "parp",
+              "reason": "PARP-inibitore già ricevuto in 1ª linea: il ritrattamento non è raccomandato (OReO)."
+            }
+          ],
+          "gives": [
+            "parp"
+          ]
         },
         {
           "name": "Niraparib",
@@ -337,10 +578,28 @@
             "trial": "NOVA",
             "endpoint": "PFS nei gBRCA 21,0 vs 5,5 mesi, HR 0,27",
             "rows": [
-              ["Niraparib", "200-300 mg/die per os"]
+              [
+                "Niraparib",
+                "200-300 mg/die per os"
+              ]
             ],
-            "sources": [{"type": "pubmed", "label": "NOVA", "doi": "10.1056/NEJMoa1611310"}]
-          }
+            "sources": [
+              {
+                "type": "pubmed",
+                "label": "NOVA",
+                "doi": "10.1056/NEJMoa1611310"
+              }
+            ]
+          },
+          "excludes": [
+            {
+              "tag": "parp",
+              "reason": "PARP-inibitore già ricevuto in 1ª linea: il ritrattamento non è raccomandato (OReO)."
+            }
+          ],
+          "gives": [
+            "parp"
+          ]
         },
         {
           "name": "Rucaparib",
@@ -350,14 +609,39 @@
             "trial": "ARIEL3",
             "endpoint": "PFS nei BRCA-mutati HR 0,23",
             "rows": [
-              ["Rucaparib", "600 mg per os ×2/die"]
+              [
+                "Rucaparib",
+                "600 mg per os ×2/die"
+              ]
             ],
-            "sources": [{"type": "standard"}]
-          }
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
+          },
+          "excludes": [
+            {
+              "tag": "parp",
+              "reason": "PARP-inibitore già ricevuto in 1ª linea: il ritrattamento non è raccomandato (OReO)."
+            }
+          ],
+          "gives": [
+            "parp"
+          ]
+        },
+        {
+          "name": "Nessun mantenimento: sorveglianza",
+          "aifa": "standard",
+          "key": "Dopo PARP-inibitore in 1ª linea; bevacizumab prosegue fino a progressione se iniziato con la chemioterapia."
         }
       ],
       "note": "Rechallenge con PARPi (OReO) non raccomandato; rechallenge con bevacizumab (MITO16b) non approvato in Italia.",
-      "next": { "label": "Alla recidiva successiva", "node": "rec_res" }
+      "next": {
+        "label": "Alla recidiva successiva",
+        "node": "rec_res"
+      },
+      "select": true
     },
     "rec_res": {
       "type": "recommendation",
@@ -371,9 +655,16 @@
             "trial": "MIRASOL",
             "endpoint": "PFS 5,62 vs 3,98 mesi, HR 0,65",
             "rows": [
-              ["Mirvetuximab soravtansine", "6 mg/kg (peso ideale corretto) EV ogni 3 settimane"]
+              [
+                "Mirvetuximab soravtansine",
+                "6 mg/kg (peso ideale corretto) EV ogni 3 settimane"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         },
         {
@@ -382,10 +673,20 @@
           "key": "PLD, paclitaxel settimanale, topotecan, gemcitabina: ORR 10-20%, nessun beneficio di OS.",
           "regimen": {
             "rows": [
-              ["PLD", "40 mg/m² EV ogni 4 settimane"],
-              ["oppure Paclitaxel", "80 mg/m² EV settimanale"]
+              [
+                "PLD",
+                "40 mg/m² EV ogni 4 settimane"
+              ],
+              [
+                "oppure Paclitaxel",
+                "80 mg/m² EV settimanale"
+              ]
             ],
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         },
         {
@@ -396,9 +697,16 @@
             "trial": "AURELIA",
             "endpoint": "PFS 6,7 vs 3,4 mesi, HR 0,48",
             "rows": [
-              ["Bevacizumab", "10 mg/kg ogni 2 settimane o 15 mg/kg ogni 3 settimane"]
+              [
+                "Bevacizumab",
+                "10 mg/kg ogni 2 settimane o 15 mg/kg ogni 3 settimane"
+              ]
             ],
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         },
         {
@@ -409,10 +717,20 @@
             "trial": "ROSELLA",
             "endpoint": "PFS HR 0,70; OS 16,0 vs 11,9 mesi (HR 0,65)",
             "rows": [
-              ["Relacorilant", "150 mg per os il giorno prima, il giorno stesso e il giorno dopo ogni infusione"],
-              ["Nab-paclitaxel", "80 mg/m² EV giorni 1, 8 e 15 ogni 28 giorni"]
+              [
+                "Relacorilant",
+                "150 mg per os il giorno prima, il giorno stesso e il giorno dopo ogni infusione"
+              ],
+              [
+                "Nab-paclitaxel",
+                "80 mg/m² EV giorni 1, 8 e 15 ogni 28 giorni"
+              ]
             ],
-            "sources": [{"type": "rimborsabilita"}]
+            "sources": [
+              {
+                "type": "rimborsabilita"
+              }
+            ]
           }
         }
       ],
@@ -430,9 +748,16 @@
             "trial": "GOG 281 / LOGS",
             "endpoint": "PFS HR 0,48 vs chemioterapia standard",
             "rows": [
-              ["Trametinib", "2 mg/die per os, in continuo"]
+              [
+                "Trametinib",
+                "2 mg/die per os, in continuo"
+              ]
             ],
-            "sources": [{"type": "standard"}]
+            "sources": [
+              {
+                "type": "standard"
+              }
+            ]
           }
         },
         {
