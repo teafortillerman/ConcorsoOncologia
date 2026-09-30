@@ -380,12 +380,12 @@
       "title": "Antiemetica",
       "name": "Antiemetica.md",
       "relative_path": "Schede/Trasversali/Antiemetica.md",
-      "modified": "2026-09-24T19:55:19",
-      "size_bytes": 9709,
+      "modified": "2026-09-30T22:11:35",
+      "size_bytes": 25974,
       "extension": ".md",
-      "preview": "Terapia_Antiemetica · Definizione e inquadramento · Tema: prevenzione e trattamento di nausea e vomito indotti da chemioterapia e radioterapia. · Ambito clinico: oncologia medica, radioterapia, farmacia clinica e cure di supporto. · Ultimo aggiornamento: Linee guida AIOM Terapia antiemetica, edizione 2024, aggiornata a gennaio 2024 e pubblicata/aggiornata nello SNLG a gennaio 2025.",
-      "word_count": 1302,
-      "reading_time_min": 7
+      "preview": "Terapia_Antiemetica · Definizione e inquadramento · La terapia antiemetica riguarda la prevenzione e il trattamento della nausea e del vomito indotti da chemioterapia (CINV) e da radioterapia (RINV), una delle tossicità che i pazienti percepiscono come più invalidanti e che, se mal controllata, compromette l'aderenza al trattamento e l'intake nutrizionale. È un ambito condiviso tra oncologia medica, radioterapia, farmacia clinica e cure di supporto. Il principio cardine è che la profilassi va impostata **prima** della terapia antitumorale, personalizzandola sia sul potenziale emetogeno del regime sia sui fattori di rischio del singolo paziente: tutte le raccomandazioni si riferiscono al primo ciclo, e nei cicli successivi vanno adattate in base a quanto osservato. · Il riferimento italiano è la linea guida **AIOM \"Terapia antiemetica\", edizione 2024** (aggiornata a gennaio 2024 e recepita nel Sistema Nazionale Linee Guida a gennaio 2025). A livello internazionale il documento di riferimento è l'aggiornamento **MASCC/ESMO 2023** (pubblicato su ESMO Open nel 2024), affiancato dalla linea guida **ASCO 2020** e dalle linee guida NCCN, che vengono aggiornate più volte l'anno. · > ++Verifica in letteratura:++ l'aggiornamento MASCC/ESMO 2023 (Herrstedt et al., ESMO Open 2024) è la versione internazionale più recente. La linea guida ASCO sugli antiemetici resta quella del 2020 (Hesketh et al., JCO 2020), senza aggiornamenti successivi pubblicati.",
+      "word_count": 3666,
+      "reading_time_min": 18
     },
     {
       "category": "Schede",
@@ -510,12 +510,12 @@
       "title": "Tumori Ereditari",
       "name": "Tumori_Ereditari.md",
       "relative_path": "Schede/Trasversali/Tumori_Ereditari.md",
-      "modified": "2026-09-24T19:55:19",
-      "size_bytes": 13117,
+      "modified": "2026-09-30T22:11:35",
+      "size_bytes": 32588,
       "extension": ".md",
-      "preview": "Tumori_Ereditari · Definizione e inquadramento · Tema: sindromi di predisposizione ereditaria ai tumori, con focus su geni della ricombinazione omologa e principali sindromi gastrointestinali ereditarie. · Ambito clinico: oncologia di precisione, genetica medica, senologia, ginecologia oncologica, gastroenterologia, urologia, chirurgia preventiva e psicologia. · Ultimo aggiornamento: Linee guida AIOM Sindromi di predisposizione ereditaria ai tumori associati ai geni della ricombinazione omologa, edizione 2025; ESMO Hereditary gastrointestinal cancers, 2019.",
-      "word_count": 1810,
-      "reading_time_min": 9
+      "preview": "Tumori_Ereditari · Definizione e inquadramento · Le sindromi di predisposizione ereditaria ai tumori sono responsabili di una quota minoritaria ma clinicamente decisiva delle neoplasie: circa il 5-10% complessivo, con percentuali molto più alte in alcuni tumori, come il carcinoma ovarico sieroso di alto grado, in cui una variante germinale BRCA1/2 si trova in circa un caso su cinque. Questa scheda si concentra sui geni della ricombinazione omologa (BRCA1, BRCA2 e geni affini) e sulle principali sindromi gastrointestinali ereditarie (Lynch, poliposi, tumori gastrici ereditari, poliposi amartomatose). La gestione coinvolge oncologo, genetista, senologo, ginecologo oncologo, gastroenterologo, urologo, chirurgo e psicologo. · Gli obiettivi del percorso sono quattro: identificare i portatori di varianti patogenetiche; offrire il test a cascata ai familiari; attuare strategie di prevenzione primaria (chirurgia di riduzione del rischio, chemioprevenzione) e secondaria (sorveglianza intensiva); usare il risultato genetico come **biomarcatore predittivo** di risposta a terapie specifiche (PARP-inibitori, platino, immunoterapia). I riferimenti principali sono le linee guida **AIOM \"Sindromi di predisposizione ereditaria ai tumori associati ai geni della ricombinazione omologa\" (edizione 2025)**, la linea guida **ESMO sulla riduzione del rischio e lo screening nelle sindromi ereditarie mammella-ovaio** (Annals of Oncology, 2023) e la linea guida **ESMO sui tumori gastrointestinali ereditari** (2019). · > ++Verifica in letteratura:++ la linea guida ESMO dedicata a riduzione del rischio e screening nelle sindromi mammella-ovaio ereditarie è stata pubblicata a fine 2022 (Sessa et al., Ann Oncol 2023;34:33-47) e affianca la linea guida ESMO 2019 sui tumori GI ereditari. Nella versione precedente della scheda compariva senza anno.",
+      "word_count": 4701,
+      "reading_time_min": 24
     },
     {
       "category": "Schede",
