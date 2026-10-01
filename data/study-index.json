@@ -16,7 +16,7 @@
     "Altro"
   ],
   "counts": {
-    "Schede": 42,
+    "Schede": 43,
     "AIOM": 29,
     "ESMO CPG": 38,
     "Congressi": 29
@@ -32,7 +32,7 @@
     "Sarcomi": 2,
     "Testa-Collo": 6,
     "Torace": 13,
-    "Trasversali": 24,
+    "Trasversali": 25,
     "Urologici": 18
   },
   "items": [
@@ -386,6 +386,19 @@
       "preview": "Terapia_Antiemetica · Definizione e inquadramento · Tema: prevenzione e trattamento di nausea e vomito indotti da chemioterapia e radioterapia. · Ambito clinico: oncologia medica, radioterapia, farmacia clinica e cure di supporto. · Ultimo aggiornamento: Linee guida AIOM Terapia antiemetica, edizione 2024, aggiornata a gennaio 2024 e pubblicata/aggiornata nello SNLG a gennaio 2025.",
       "word_count": 1302,
       "reading_time_min": 7
+    },
+    {
+      "category": "Schede",
+      "theme": "Trasversali",
+      "title": "Biopsia Liquida",
+      "name": "Biopsia_Liquida.md",
+      "relative_path": "Schede/Trasversali/Biopsia_Liquida.md",
+      "modified": "2026-09-30T22:43:57",
+      "size_bytes": 25843,
+      "extension": ".md",
+      "preview": "Biopsia_Liquida · Definizione e inquadramento · La biopsia liquida è l'analisi di materiale di origine tumorale presente nei fluidi biologici, per lo più nel plasma. L'analita di gran lunga più usato in clinica è il **DNA tumorale circolante (ctDNA)**, cioè la frazione del DNA libero circolante (cfDNA) rilasciata dalle cellule neoplastiche per apoptosi e necrosi. Accanto al ctDNA si studiano le **cellule tumorali circolanti (CTC)**, l'RNA libero circolante e le vescicole extracellulari. Altri fluidi sono il liquor, fondamentale nei tumori cerebrali e nelle metastasi leptomeningee perché il plasma è poco informativo, e l'urina, promettente nei tumori uroteliali. · La biopsia liquida non sostituisce la biopsia tissutale, che resta necessaria per la **diagnosi istologica** e per i biomarcatori che richiedono il tessuto (PD-L1, HER2 in immunoistochimica, stato dei mismatch repair in immunoistochimica). È però uno strumento **complementare** con quattro usi clinici: la **genotipizzazione** alla diagnosi quando il tessuto è insufficiente o non ottenibile; l'identificazione dei **meccanismi di resistenza** alla progressione; il **monitoraggio** della risposta e l'identificazione precoce della progressione molecolare; la ricerca della **malattia minima residua (MRD)** dopo terapia a intento curativo. Un quinto uso, la **diagnosi precoce** nella popolazione generale, è ancora sperimentale. · Il riferimento italiano sono le **Raccomandazioni 2025 per l'esecuzione di test molecolari su biopsia liquida**, documento congiunto AIOM, SIAPeC-IAP, SIBioC e SIF. A livello internazionale il riferimento è la raccomandazione ESMO sull'uso dei test su ctDNA (ESMO Precision Medicine Working Group, 2022).",
+      "word_count": 3772,
+      "reading_time_min": 19
     },
     {
       "category": "Schede",
