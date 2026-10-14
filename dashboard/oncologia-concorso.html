@@ -779,6 +779,63 @@ button { font-family: inherit; cursor: pointer; }
   margin-left: auto; font-size: 0.68rem; color: var(--color-text-faint);
   background: var(--color-surface-offset); border-radius: 999px; padding: 2px 7px;
 }
+/* CASI CLINICI */
+.cs-card-steps { margin-top: 8px; font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-primary); }
+.cs-story { font-size: 1rem; line-height: 1.6; margin: 10px 0 14px; }
+.cs-block { border: 1px solid var(--color-border); border-radius: 12px; padding: 12px 14px; margin-bottom: 14px; background: var(--color-surface); }
+.cs-block p { margin: 0; line-height: 1.55; font-size: 0.94rem; }
+.cs-block-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-muted); margin-bottom: 6px; }
+.cs-exams { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.cs-exams td { padding: 6px 4px; border-top: 1px solid var(--color-divider); vertical-align: top; }
+.cs-exams tr:first-child td { border-top: none; }
+.cs-val { font-weight: 650; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.cs-ref { color: var(--color-text-faint); font-size: 0.82rem; white-space: nowrap; }
+.cs-exams tr.is-high .cs-val, .cs-exams tr.is-low .cs-val { color: var(--color-danger); }
+.cs-flag { font-size: 0.75em; }
+.cs-hint { font-size: 0.84rem; color: var(--color-text-muted); margin: -10px 0 12px; }
+.ag-panel .cs-hint { margin: 10px 0 0; }
+.cs-options { display: flex; flex-direction: column; gap: 10px; }
+.cs-opt { display: flex; gap: 10px; align-items: flex-start; text-align: left; width: 100%; border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text); border-radius: 12px; padding: 12px 14px; font-size: 0.95rem; line-height: 1.45; }
+button.cs-opt:hover { border-color: var(--color-primary); }
+.cs-opt.is-picked { border-color: var(--color-primary); box-shadow: 0 0 0 2px var(--color-primary-highlight); }
+.cs-box { color: var(--color-primary); font-size: 1.05rem; line-height: 1.3; }
+.cs-opt.is-revealed { flex-direction: column; gap: 6px; cursor: default; border-left-width: 4px; }
+.cs-opt.is-revealed.is-best { border-left-color: var(--flow-badge-green); }
+.cs-opt.is-revealed.is-ok { border-left-color: var(--color-warn); }
+.cs-opt.is-revealed.is-wrong { border-left-color: var(--flow-badge-red); }
+.cs-opt-head { display: flex; justify-content: space-between; gap: 10px; align-items: flex-start; font-weight: 600; width: 100%; }
+.cs-grade { flex-shrink: 0; font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 999px; border: 1px solid; white-space: nowrap; }
+.cs-grade.is-best { color: var(--flow-criteria-text); background: var(--flow-criteria-bg); border-color: var(--flow-badge-green); }
+.cs-grade.is-ok { color: var(--color-warn); background: var(--color-warn-highlight); border-color: var(--color-warn); }
+.cs-grade.is-wrong { color: var(--color-danger); background: var(--color-danger-soft); border-color: var(--color-danger-border); }
+.cs-yours { align-self: flex-start; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-primary); }
+.cs-why { font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.5; }
+.cs-verdict { margin: 18px 0 12px; padding: 10px 14px; border-radius: 10px; font-weight: 700; }
+.cs-verdict.is-best { background: var(--flow-criteria-bg); color: var(--flow-criteria-text); }
+.cs-verdict.is-ok, .cs-verdict.is-partial { background: var(--color-warn-highlight); color: var(--color-warn); }
+.cs-verdict.is-wrong { background: var(--color-danger-soft); color: var(--color-danger); }
+.cs-explain, .cs-result { border-radius: 12px; padding: 12px 14px; margin-bottom: 12px; }
+.cs-explain { background: var(--color-key-soft); border: 1px solid var(--color-key-border); }
+.cs-result { background: var(--color-primary-soft); border: 1px solid var(--color-primary-highlight); }
+.cs-explain p, .cs-result p { margin: 0; line-height: 1.55; font-size: 0.94rem; }
+.cs-evidence { margin: 10px 0 0; padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 6px; font-size: 0.88rem; line-height: 1.45; }
+.cs-evidence .trial { color: var(--color-key); background: var(--color-surface-2); padding: 0 6px; border-radius: 4px; margin-right: 4px; }
+.cs-patient { margin: 0; font-size: 0.9rem; line-height: 1.5; }
+.cs-diary { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.cs-diary li { display: flex; gap: 10px; }
+.cs-diary li > div { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.cs-d-dot { flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; }
+.cs-d-dot.is-best { background: var(--flow-criteria-bg); color: var(--flow-badge-green); }
+.cs-d-dot.is-ok, .cs-d-dot.is-partial { background: var(--color-warn-highlight); color: var(--color-warn); }
+.cs-d-dot.is-wrong { background: var(--color-danger-soft); color: var(--color-danger); }
+.cs-d-answer { font-size: 0.84rem; font-weight: 600; line-height: 1.35; }
+.cs-d-result { font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.4; }
+.cs-recap { margin: 0 0 16px; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
+.cs-recap li.is-best::marker { color: var(--flow-badge-green); }
+.cs-recap li.is-wrong::marker { color: var(--color-danger); }
+.cs-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+.ag-next[disabled] { opacity: 0.45; cursor: not-allowed; }
+
 .ag { min-width: 0; }
 .ag-list-theme { font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-muted); margin: 26px 0 10px; }
 .ag-top { display: flex; align-items: flex-end; justify-content: space-between; gap: 14px; flex-wrap: wrap; margin-bottom: 20px; }
@@ -1051,6 +1108,11 @@ button.ag-seq-step:hover { border-color: var(--color-primary); }
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="5" r="2"/><circle cx="18" cy="5" r="2"/><circle cx="12" cy="19" r="2"/><path d="M6 7v2a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V7M12 12v5"/></svg>
         <span>Algoritmi</span>
         <span class="nav-count" id="navAlgorithmsCount"></span>
+      </div>
+      <div class="nav-all" id="navCases" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4.5V3h6v1.5M9 10h6M9 14h6M9 18h3"/></svg>
+        <span>Casi clinici</span>
+        <span class="nav-count" id="navCasesCount"></span>
       </div>
     </div>
 
@@ -1650,6 +1712,7 @@ async function loadData() {
     state.themes = json.themes || {};
     state.items = json.items || [];
     state.algorithms = json.algorithms || [];
+    state.cases = json.cases || [];
     renderAlgorithmsNav();
     Object.keys(state.themes).forEach(t => state.openThemes.add(t));
     renderStatPills();
@@ -1822,6 +1885,7 @@ async function openScheda(item) {
     const { prev, next } = readerNav(item);
     const algo = algorithmForScheda(item.relative_path);
     const kpEntry = toc.find(t => t.text === "Punti chiave");
+    const caseForScheda = state.cases.find(c => c.scheda === item.relative_path);
 
     content.innerHTML = `
       <div class="reader-layout">
@@ -1833,9 +1897,10 @@ async function openScheda(item) {
               <span>${ICONS.calendar} aggiornata ${escapeHtml((item.modified || "").slice(0,10))}</span>
               <span>${ICONS.clock} ${item.reading_time_min || 1} min di lettura</span>
             </div>
-            ${(algo || kpEntry) ? `<div class="reader-actions">
+            ${(algo || kpEntry || caseForScheda) ? `<div class="reader-actions">
               ${kpEntry ? `<button type="button" class="kp-jump" data-jump="${kpEntry.id}">Punti chiave</button>` : ""}
               ${algo ? `<button type="button" class="ag-open-btn" data-open-algo="${escapeHtml(algo.id)}">${ICONS.branch} Apri algoritmo</button>` : ""}
+              ${caseForScheda ? `<button type="button" class="ag-open-btn" data-open-case="${escapeHtml(caseForScheda.id)}">Caso clinico</button>` : ""}
             </div>` : ""}
           </div>
           <div class="md-content">${html}</div>
@@ -1885,6 +1950,7 @@ async function openScheda(item) {
       });
     });
     content.querySelector("[data-open-algo]")?.addEventListener("click", () => openAlgorithm(algo.id));
+    content.querySelector("[data-open-case]")?.addEventListener("click", (ev) => openCase(ev.currentTarget.dataset.openCase));
     content.querySelector("[data-jump]")?.addEventListener("click", (ev) => {
       document.getElementById(ev.currentTarget.dataset.jump)?.scrollIntoView({ behavior: "smooth", block: "start" });
     });
@@ -2007,17 +2073,233 @@ function renderHome() {
   });
 }
 
+
+/* ---------- casi clinici ---------- */
+const caseCache = {};
+const CASE_GRADE = { best: "Corretta", ok: "Accettabile", wrong: "Non corretta" };
+
+function goToCases() {
+  leaveForAlgorithms("cases");
+  renderCasesList();
+  window.scrollTo(0, 0);
+}
+
+function renderCasesList() {
+  document.getElementById("crumbs").innerHTML = "<strong>Casi clinici</strong>";
+  const content = document.getElementById("content");
+  const themes = [...new Set(state.cases.map(c => c.theme))].sort((a, b) => a.localeCompare(b));
+  content.innerHTML = `
+    <div class="overview-hero">
+      <div class="hero-left">
+        <div class="eyebrow">Mettiti alla prova</div>
+        <h1>Casi clinici</h1>
+        <p>Un paziente seguito nel tempo: a ogni tappa scegli cosa richiedere o quale terapia fare, poi leggi perché, con gli studi di riferimento.</p>
+      </div>
+    </div>
+    ${themes.map(theme => `
+      <h2 class="ag-list-theme">${escapeHtml(theme)}</h2>
+      <div class="theme-cards">
+        ${state.cases.filter(c => c.theme === theme).map(c => `
+          <div class="theme-card cs-card" data-case="${escapeHtml(c.id)}" style="--card-accent:${themeColor(c.theme)};cursor:pointer">
+            <div class="tc-head">${themeBadge(c.theme)}<div class="tc-title">${escapeHtml(c.title)}</div></div>
+            <div class="tc-count">${escapeHtml(c.patient)}</div>
+            <div class="cs-card-steps">${c.steps} tappe</div>
+          </div>`).join("")}
+      </div>`).join("") || emptyState(ICONS.folder, "Nessun caso clinico disponibile.", "")}
+  `;
+  content.querySelectorAll("[data-case]").forEach(el => el.addEventListener("click", () => openCase(el.dataset.case)));
+}
+
+async function openCase(id) {
+  leaveForAlgorithms("case");
+  const summary = state.cases.find(c => c.id === id);
+  state.caseRun = null;
+  state.requestedCase = id;
+  const content = document.getElementById("content");
+  document.getElementById("crumbs").innerHTML = `<strong>Casi clinici</strong><span class="sep">/</span>${escapeHtml(summary ? summary.title : id)}`;
+  if (!summary) { content.innerHTML = emptyState(ICONS.inbox, "Caso non trovato", escapeHtml(id)); return; }
+  content.innerHTML = emptyState(ICONS.clock, "Caricamento del caso...", "");
+  try {
+    let data = caseCache[summary.path];
+    if (!data) {
+      const res = await fetch("../" + encodeURI(summary.path) + "?t=" + Date.now());
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      data = await res.json();
+      caseCache[summary.path] = data;
+    }
+    if (state.view !== "case" || state.requestedCase !== id) return;
+    state.caseRun = { data, step: 0, answers: data.steps.map(() => ({ picked: [], submitted: false })), done: false };
+    renderCase();
+    window.scrollTo(0, 0);
+  } catch (e) {
+    if (state.view !== "case" || state.requestedCase !== id) return;
+    content.innerHTML = emptyState(ICONS.inbox, `Impossibile caricare il caso «${escapeHtml(summary.title)}»`, escapeHtml(summary.path));
+  }
+}
+
+// Giudizio della risposta: singola = giudizio dell'opzione; multipla = tutte le "best" e nessuna "wrong".
+function caseVerdict(step, picked) {
+  if (!step.multi) return step.options[picked[0]].grade;
+  const wrong = picked.some(i => step.options[i].grade === "wrong");
+  const missed = step.options.some((o, i) => o.grade === "best" && !picked.includes(i));
+  return wrong ? "wrong" : missed ? "partial" : "best";
+}
+const VERDICT_TEXT = {
+  best: "Risposta corretta",
+  ok: "Accettabile, ma non la scelta migliore",
+  partial: "Incompleta: manca qualcosa di importante",
+  wrong: "Non corretta",
+};
+
+function csExamsHtml(exams) {
+  if (!exams || !exams.length) return "";
+  return `<div class="cs-block"><div class="cs-block-label">Esami</div><table class="cs-exams"><tbody>
+    ${exams.map(e => `<tr class="${e.flag ? "is-" + e.flag : ""}"><td>${escapeHtml(e.name)}</td><td class="cs-val">${escapeHtml(e.value)}${e.flag ? ` <span class="cs-flag">${e.flag === "high" ? "▲" : "▼"}</span>` : ""}</td><td class="cs-ref">${e.ref ? "v.n. " + escapeHtml(e.ref) : ""}</td></tr>`).join("")}
+  </tbody></table></div>`;
+}
+
+function renderCase() {
+  const run = state.caseRun;
+  const { data } = run;
+  const content = document.getElementById("content");
+  setReaderMode(true);
+  const scheda = state.items.find(i => i.relative_path === data.scheda);
+  const algo = data.algorithm && state.algorithms.find(a => a.id === data.algorithm);
+  const total = data.steps.length;
+
+  const strip = data.steps.map((st, i) => {
+    const a = run.answers[i];
+    const cls = run.done || a.submitted && i < run.step ? "is-done" : i === run.step ? "is-current" : "is-next";
+    const label = cls === "is-done" ? `✓ Tappa ${i + 1}` : cls === "is-current" ? `Tappa ${i + 1} · adesso` : `Tappa ${i + 1}`;
+    return `<div class="ag-seq-step ${cls}"><small>${label}</small><strong>${escapeHtml(st.title)}</strong></div>`;
+  }).join(`<div class="ag-seq-arrow" aria-hidden="true">${ICONS.arrowRight}</div>`);
+
+  const diary = data.steps.slice(0, run.done ? total : run.step).map((st, i) => {
+    const a = run.answers[i];
+    const v = caseVerdict(st, a.picked);
+    return `<li><span class="cs-d-dot is-${v}" aria-hidden="true">${v === "best" ? "✓" : v === "wrong" ? "✕" : "~"}</span>
+      <div><span class="ag-t-label">${escapeHtml(st.title)}</span>
+      <span class="cs-d-answer">${a.picked.map(j => escapeHtml(st.options[j].text)).join(" · ")}</span>
+      ${st.result ? `<span class="cs-d-result">${escapeHtml(st.result)}</span>` : ""}</div></li>`;
+  }).join("");
+
+  let main;
+  if (run.done) {
+    const tally = data.steps.map((st, i) => caseVerdict(st, run.answers[i].picked));
+    main = `
+      <div class="ag-card cs-end">
+        <div class="ag-kicker">Caso concluso</div>
+        <h2 class="ag-q-text">${escapeHtml(data.title)}</h2>
+        <ol class="cs-recap">${data.steps.map((st, i) => `<li class="is-${tally[i]}"><b>${escapeHtml(st.title)}</b> — ${VERDICT_TEXT[tally[i]]}</li>`).join("")}</ol>
+        ${data.closing ? `<div class="ag-note">${escapeHtml(data.closing)}</div>` : ""}
+        <div class="cs-actions">
+          <button type="button" class="ag-next" data-cs-restart>↺ Rifai il caso</button>
+          <button type="button" class="ag-link" data-cs-list>Altri casi ${ICONS.arrowRight}</button>
+        </div>
+      </div>`;
+  } else {
+    const st = data.steps[run.step];
+    const a = run.answers[run.step];
+    const verdict = a.submitted ? caseVerdict(st, a.picked) : null;
+    main = `
+      <div class="ag-card cs-step">
+        <div class="ag-kicker">Tappa ${run.step + 1} di ${total} · ${escapeHtml(st.title)}</div>
+        ${st.story ? `<p class="cs-story">${escapeHtml(st.story)}</p>` : ""}
+        ${st.imaging ? `<div class="cs-block"><div class="cs-block-label">Imaging</div><p>${escapeHtml(st.imaging)}</p></div>` : ""}
+        ${csExamsHtml(st.exams)}
+        <h2 class="ag-q-text">${escapeHtml(st.question)}</h2>
+        ${st.multi && !a.submitted ? `<p class="cs-hint">Puoi selezionare più risposte.</p>` : ""}
+        <div class="cs-options">
+          ${st.options.map((o, i) => {
+            const picked = a.picked.includes(i);
+            if (!a.submitted) return `<button type="button" class="cs-opt${picked ? " is-picked" : ""}" data-cs-pick="${i}" aria-pressed="${picked}"><span class="cs-box" aria-hidden="true">${st.multi ? (picked ? "☑" : "☐") : (picked ? "◉" : "○")}</span><span>${escapeHtml(o.text)}</span></button>`;
+            return `<div class="cs-opt is-revealed is-${o.grade}${picked ? " is-picked" : ""}">
+              <div class="cs-opt-head"><span>${escapeHtml(o.text)}</span><span class="cs-grade is-${o.grade}">${CASE_GRADE[o.grade]}</span></div>
+              ${picked ? `<span class="cs-yours">la tua scelta</span>` : ""}
+              <div class="cs-why">${escapeHtml(o.why)}</div></div>`;
+          }).join("")}
+        </div>
+        ${a.submitted ? `
+          <div class="cs-verdict is-${verdict}">${VERDICT_TEXT[verdict]}</div>
+          <div class="cs-explain"><div class="cs-block-label">Perché</div><p>${escapeHtml(st.explanation)}</p>
+            ${(st.evidence || []).length ? `<ul class="cs-evidence">${st.evidence.map(e => `<li><strong class="trial">${escapeHtml(e.trial)}</strong> ${escapeHtml(e.finding)}</li>`).join("")}</ul>` : ""}
+          </div>
+          ${st.result ? `<div class="cs-result"><div class="cs-block-label">Esito</div><p>${escapeHtml(st.result)}</p></div>` : ""}
+          <div class="ag-next-wrap"><button type="button" class="ag-next" data-cs-next>${run.step + 1 < total ? `Prosegui: ${escapeHtml(data.steps[run.step + 1].title)}` : "Concludi il caso"} ${ICONS.arrowRight}</button></div>`
+        : `<div class="ag-next-wrap"><button type="button" class="ag-next" data-cs-submit ${a.picked.length ? "" : "disabled"}>Conferma la risposta</button></div>`}
+      </div>`;
+  }
+
+  content.innerHTML = `
+    <div class="ag cs">
+      <header class="ag-top">
+        <div><div class="ag-eyebrow">Caso clinico</div><h1>${escapeHtml(data.title)}</h1></div>
+        <div class="ag-top-actions">
+          <button type="button" class="ag-restart" data-cs-restart>↺ Ricomincia</button>
+          ${scheda ? `<button type="button" class="ag-link" data-cs-open="scheda">Vai alla scheda ${ICONS.arrowRight}</button>` : ""}
+        </div>
+      </header>
+      <nav class="ag-seq" aria-label="Tappe del caso"><div class="ag-seq-title">Tappe<br>del caso</div>${strip}</nav>
+      <div class="ag-grid">
+        <aside class="ag-side">
+          <div class="ag-panel"><h2>Il paziente</h2><p class="cs-patient">${escapeHtml(data.patient)}</p></div>
+          <div class="ag-panel"><h2>Diario clinico</h2>${diary ? `<ol class="cs-diary">${diary}</ol>` : `<p class="ag-trail-empty">Le tappe concluse e i loro esiti compariranno qui.</p>`}</div>
+        </aside>
+        <section class="ag-main">${main}</section>
+        <aside class="ag-side">
+          <div class="ag-panel"><h2>Come funziona</h2>
+            <ul class="ag-legend">
+              <li><span class="cs-grade is-best">${CASE_GRADE.best}</span> la scelta migliore</li>
+              <li><span class="cs-grade is-ok">${CASE_GRADE.ok}</span> possibile, ma non la migliore</li>
+              <li><span class="cs-grade is-wrong">${CASE_GRADE.wrong}</span> da evitare in questo paziente</li>
+            </ul>
+            <p class="cs-hint">Dopo la risposta il caso prosegue sempre sulla strada corretta.</p>
+          </div>
+          <div class="ag-panel"><h2>Approfondisci</h2><div class="ag-links">
+            ${scheda ? `<button type="button" class="ag-link" data-cs-open="scheda">Scheda ${escapeHtml(scheda.title)} ${ICONS.arrowRight}</button>` : ""}
+            ${algo ? `<button type="button" class="ag-link" data-cs-open="algo">Algoritmo ${escapeHtml(algo.title)} ${ICONS.arrowRight}</button>` : ""}
+          </div></div>
+        </aside>
+      </div>
+    </div>`;
+
+  const rerender = () => { renderCase(); };
+  content.querySelectorAll("[data-cs-pick]").forEach(b => b.addEventListener("click", () => {
+    const st = data.steps[run.step], a = run.answers[run.step], i = Number(b.dataset.csPick);
+    if (st.multi) a.picked = a.picked.includes(i) ? a.picked.filter(x => x !== i) : [...a.picked, i].sort((x, y) => x - y);
+    else a.picked = [i];
+    rerender();
+  }));
+  content.querySelector("[data-cs-submit]")?.addEventListener("click", () => { run.answers[run.step].submitted = true; rerender(); });
+  content.querySelector("[data-cs-next]")?.addEventListener("click", () => {
+    if (run.step + 1 < total) run.step += 1; else run.done = true;
+    rerender(); window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+  content.querySelectorAll("[data-cs-restart]").forEach(b => b.addEventListener("click", () => {
+    state.caseRun = { data, step: 0, answers: data.steps.map(() => ({ picked: [], submitted: false })), done: false };
+    rerender(); window.scrollTo(0, 0);
+  }));
+  content.querySelector("[data-cs-list]")?.addEventListener("click", goToCases);
+  content.querySelectorAll("[data-cs-open]").forEach(b => b.addEventListener("click", () => {
+    if (b.dataset.csOpen === "algo") openAlgorithm(algo.id);
+    else if (scheda) openScheda(scheda);
+  }));
+}
+
 /* ---------- algoritmi guidati ---------- */
 const algoCache = {};
 
 function renderAlgorithmsNav() {
   document.getElementById("navAlgorithms").hidden = state.algorithms.length === 0;
   document.getElementById("navAlgorithmsCount").textContent = state.algorithms.length;
+  document.getElementById("navCases").hidden = state.cases.length === 0;
+  document.getElementById("navCasesCount").textContent = state.cases.length;
 }
 
 function updateNavActive() {
   const inAlgorithms = state.view === "algorithms" || state.view === "algorithm";
   document.getElementById("navAlgorithms").classList.toggle("active", inAlgorithms);
+  document.getElementById("navCases").classList.toggle("active", state.view === "cases" || state.view === "case");
 }
 
 function algorithmForScheda(relPath) {
@@ -2215,6 +2497,7 @@ function agContextHtml(data, history, node, nodeId, scheda) {
       <div class="ag-links">
         ${scheda ? `<button type="button" class="ag-link" data-open-path="__scheda__">Scheda ${escapeHtml(data.title)} ${ICONS.arrowRight}</button>` : ""}
         ${rimb ? `<button type="button" class="ag-link" data-open-path="${RIMBORSABILITA_PATH}">Rimborsabilità e schemi ${ICONS.arrowRight}</button>` : ""}
+        ${state.cases.filter(c => c.algorithm === data.id).map(c => `<button type="button" class="ag-link" data-open-case="${escapeHtml(c.id)}">Caso clinico: ${escapeHtml(c.title)} ${ICONS.arrowRight}</button>`).join("")}
       </div>
     </div>`);
   return panels.join("");
@@ -2312,6 +2595,7 @@ function renderAlgorithm() {
     b.addEventListener("click", () => stepAlgorithm(AlgoCore.pick(data, state.algoHistory, Number(b.dataset.pick))));
   });
   content.querySelector("[data-restart]")?.addEventListener("click", () => stepAlgorithm([]));
+  content.querySelectorAll("[data-open-case]").forEach(b => b.addEventListener("click", () => openCase(b.dataset.openCase)));
   content.querySelectorAll("[data-open-path]").forEach(b => {
     b.addEventListener("click", () => {
       const path = b.dataset.openPath === "__scheda__" ? summary.scheda : b.dataset.openPath;
@@ -2329,6 +2613,8 @@ function renderView() {
   if (state.view === "scheda" && state.activeItem) { openScheda(state.activeItem); return; }
   if (state.view === "algorithms") { renderAlgorithmsList(); return; }
   if (state.view === "algorithm" && state.activeAlgorithm) { renderAlgorithm(); return; }
+  if (state.view === "cases") { renderCasesList(); return; }
+  if (state.view === "case" && state.caseRun) { renderCase(); return; }
   renderHome();
 }
 
@@ -2421,6 +2707,7 @@ document.addEventListener("keydown", (e) => {
 
 document.getElementById("navHome").addEventListener("click", goHome);
 document.getElementById("navAlgorithms").addEventListener("click", goToAlgorithms);
+document.getElementById("navCases").addEventListener("click", goToCases);
 document.getElementById("printBtn").addEventListener("click", () => window.print());
 window.addEventListener("scroll", updateReadingProgress, { passive: true });
 

@@ -6,6 +6,7 @@ from pathlib import Path
 from datetime import datetime
 
 from algoritmi import load_algorithms
+from casi import load_cases
 
 ROOT = Path("/Users/lorenzodemarchi/Library/CloudStorage/OneDrive-UniversitàdegliStudidiUdine/OncologiaConcorso")
 OUT = ROOT / "data" / "study-index.json"
@@ -162,6 +163,13 @@ if algo_errors:
         print(f"  - {err}", file=sys.stderr)
     sys.exit(1)
 
+cases, case_errors = load_cases(ROOT, {a["id"] for a in algorithms})
+if case_errors:
+    print("Errori nei casi clinici — indice NON aggiornato:", file=sys.stderr)
+    for err in case_errors:
+        print(f"  - {err}", file=sys.stderr)
+    sys.exit(1)
+
 payload = {
     "generated_at": datetime.now().isoformat(timespec="seconds"),
     "root": str(ROOT),
@@ -170,6 +178,7 @@ payload = {
     "themes": {},
     "items": all_items,
     "algorithms": algorithms,
+    "cases": cases,
 }
 
 for item in all_items:
@@ -177,4 +186,4 @@ for item in all_items:
     payload["themes"][item["theme"]] = payload["themes"].get(item["theme"], 0) + 1
 
 OUT.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
-print(f"Creato indice con {len(all_items)} risorse e {len(algorithms)} algoritmi in {OUT}")
+print(f"Creato indice con {len(all_items)} risorse, {len(algorithms)} algoritmi e {len(cases)} casi clinici in {OUT}")

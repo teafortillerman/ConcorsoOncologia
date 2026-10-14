@@ -1,0 +1,207 @@
+{
+  "id": "nsclc-egfr",
+  "title": "Adenocarcinoma polmonare con metastasi encefaliche",
+  "theme": "Torace",
+  "scheda": "Schede/Torace/Polmone_NSCLC.md",
+  "algorithm": "polmone_nsclc",
+  "patient": "Donna di 63 anni, ex fumatrice (8 pack-year, ha smesso 20 anni fa), ECOG PS 1. Tosse da due mesi e calo ponderale di 4 kg.",
+  "steps": [
+    {
+      "title": "Diagnosi e profilo molecolare",
+      "story": "La biopsia in EBUS di un linfonodo mediastinico mostra un adenocarcinoma TTF-1 positivo. La stadiazione conclude per uno stadio IVB.",
+      "imaging": "TC torace-addome con mezzo di contrasto: massa di 4,5 cm al lobo superiore destro, adenopatie mediastiniche, noduli polmonari bilaterali e due metastasi epatiche. RM encefalo: due metastasi di 6 e 8 mm, asintomatiche.",
+      "question": "Quali esami richiedi prima di scegliere la 1ª linea?",
+      "multi": true,
+      "options": [
+        {
+          "text": "NGS su tessuto (EGFR, ALK, ROS1, BRAF, KRAS, MET, RET, NTRK, HER2)",
+          "grade": "best",
+          "why": "Nell'adenocarcinoma avanzato la profilazione molecolare estesa è obbligatoria: un driver con terapia target cambia completamente la 1ª linea."
+        },
+        {
+          "text": "PD-L1 (TPS) in immunoistochimica",
+          "grade": "best",
+          "why": "Va sempre determinato: se non emerge un driver decide tra immunoterapia in monoterapia e chemio-immunoterapia."
+        },
+        {
+          "text": "Biopsia liquida (ctDNA) in parallelo",
+          "grade": "ok",
+          "why": "Utile se il tessuto è scarso o per accorciare i tempi, ma è complementare e non sostituisce il tessuto."
+        },
+        {
+          "text": "Solo EGFR con PCR",
+          "grade": "wrong",
+          "why": "Un test singolo non vede ALK, ROS1, RET, MET, BRAF e gli altri driver: servono pannelli NGS."
+        },
+        {
+          "text": "CEA e CYFRA 21-1",
+          "grade": "wrong",
+          "why": "I marcatori sierici non guidano la scelta della terapia."
+        }
+      ],
+      "explanation": "Prima di qualunque terapia sistemica nell'adenocarcinoma avanzato servono NGS esteso e PD-L1. Avviare un'immunoterapia prima di conoscere il profilo molecolare è un errore frequente, perché nei tumori oncogene-addicted l'IO è poco efficace.",
+      "result": "NGS: delezione dell'esone 19 di EGFR, nessun altro driver. PD-L1 TPS 60%."
+    },
+    {
+      "title": "1ª linea",
+      "story": "EGFR Ex19del con PD-L1 al 60%, due metastasi encefaliche asintomatiche e malattia epatica. Funzione renale ed epatica nella norma.",
+      "exams": [
+        {
+          "name": "Creatinina",
+          "value": "0,9 mg/dL",
+          "ref": "0,5-1,1"
+        },
+        {
+          "name": "ALT",
+          "value": "28 U/L",
+          "ref": "<40"
+        },
+        {
+          "name": "Neutrofili",
+          "value": "5.200/mm³",
+          "ref": "2.000-7.500"
+        }
+      ],
+      "question": "Quale 1ª linea proponi?",
+      "options": [
+        {
+          "text": "Pembrolizumab in monoterapia (PD-L1 ≥50%)",
+          "grade": "wrong",
+          "why": "Nel NSCLC EGFR-mutato l'immunoterapia ha un beneficio scarso anche con PD-L1 alto: va prima usato il TKI. La sequenza immunoterapia → osimertinib espone inoltre a tossicità polmonare grave."
+        },
+        {
+          "text": "Osimertinib",
+          "grade": "best",
+          "why": "Standard consolidato e TKI con la migliore attività nel SNC (risposta intracranica 66% vs 43%)."
+        },
+        {
+          "text": "Osimertinib + platino-pemetrexed",
+          "grade": "best",
+          "why": "Nei pazienti con maggior carico di malattia (qui encefalo e fegato) l'aggiunta della chemioterapia prolunga PFS e OS, a prezzo di più tossicità ematologica."
+        },
+        {
+          "text": "Amivantamab + lazertinib",
+          "grade": "ok",
+          "why": "Alternativa registrata e rimborsata (MARIPOSA), con più tossicità cutanea, infusionale e tromboembolica."
+        },
+        {
+          "text": "Gefitinib",
+          "grade": "wrong",
+          "why": "I TKI di 1ª generazione sono superati da osimertinib."
+        }
+      ],
+      "explanation": "Il driver EGFR guida la scelta: il PD-L1 alto non conta in presenza di una mutazione classica. Con malattia encefalica ed epatica sia osimertinib da solo sia osimertinib + chemioterapia sono corretti; la scelta si discute con la paziente.",
+      "evidence": [
+        {
+          "trial": "FLAURA",
+          "finding": "PFS 18,9 vs 10,2 mesi (HR 0,46); OS 38,6 vs 31,8 mesi (HR 0,80)"
+        },
+        {
+          "trial": "FLAURA2",
+          "finding": "PFS 25,5 vs 16,7 mesi (HR 0,62); OS 47,5 vs 37,6 mesi (HR 0,77)"
+        },
+        {
+          "trial": "MARIPOSA",
+          "finding": "PFS 23,7 vs 16,6 mesi (HR 0,70); OS HR 0,75 vs osimertinib"
+        }
+      ],
+      "result": "La paziente sceglie osimertinib in monoterapia per la minore tossicità. Risposta parziale, anche intracranica."
+    },
+    {
+      "title": "Progressione",
+      "story": "Dopo 21 mesi compaiono nuove lesioni epatiche e ossee; l'encefalo resta stabile. PS 1.",
+      "question": "Cosa fai prima di scegliere la 2ª linea?",
+      "multi": true,
+      "options": [
+        {
+          "text": "Ri-biopsia tissutale di una lesione in progressione con NGS",
+          "grade": "best",
+          "why": "Cerca i meccanismi di resistenza a osimertinib: amplificazione di MET (il più frequente), C797S, amplificazione di HER2 e trasformazione in carcinoma a piccole cellule, che si dimostra solo sul tessuto."
+        },
+        {
+          "text": "Biopsia liquida (ctDNA)",
+          "grade": "ok",
+          "why": "Complementare: individua alcune alterazioni, ma non la trasformazione istologica."
+        },
+        {
+          "text": "Ricerca di T790M sul plasma",
+          "grade": "wrong",
+          "why": "T790M è la resistenza ai TKI di 1ª-2ª generazione; dopo osimertinib non guida la terapia."
+        },
+        {
+          "text": "Passare subito a un altro TKI di EGFR",
+          "grade": "wrong",
+          "why": "Non esiste un TKI di EGFR efficace dopo osimertinib senza un meccanismo di resistenza identificato."
+        }
+      ],
+      "explanation": "Alla progressione a osimertinib la ri-biopsia è raccomandata: un meccanismo trattabile (MET, HER2) o una trasformazione in SCLC cambiano la terapia.",
+      "result": "Biopsia epatica: adenocarcinoma, nessun meccanismo di resistenza trattabile, nessuna trasformazione istologica."
+    },
+    {
+      "title": "2ª linea",
+      "story": "Nel frattempo la funzione renale è peggiorata per una nefropatia diabetica.",
+      "exams": [
+        {
+          "name": "Creatinina",
+          "value": "1,9 mg/dL",
+          "ref": "0,5-1,1",
+          "flag": "high"
+        },
+        {
+          "name": "Clearance della creatinina (Cockcroft-Gault)",
+          "value": "38 mL/min",
+          "ref": "≥90",
+          "flag": "low"
+        },
+        {
+          "name": "Emoglobina",
+          "value": "11,8 g/dL",
+          "ref": "12-16",
+          "flag": "low"
+        },
+        {
+          "name": "Piastrine",
+          "value": "210.000/mm³",
+          "ref": "150.000-400.000"
+        }
+      ],
+      "question": "Quale 2ª linea scegli?",
+      "options": [
+        {
+          "text": "Carboplatino + pemetrexed",
+          "grade": "wrong",
+          "why": "Il pemetrexed non va usato con clearance della creatinina <45 mL/min: aumenta il rischio di mielotossicità grave."
+        },
+        {
+          "text": "Carboplatino + paclitaxel (± bevacizumab)",
+          "grade": "best",
+          "why": "Doppietta di platino senza pemetrexed: il carboplatino si dosa sulla clearance (formula di Calvert) e resta utilizzabile con funzione renale ridotta."
+        },
+        {
+          "text": "Atezolizumab + bevacizumab + carboplatino-paclitaxel",
+          "grade": "ok",
+          "why": "IMpower150: beneficio nel sottogruppo EGFR-mutato dopo TKI (dato esplorativo); stato di rimborsabilità da verificare per questa indicazione."
+        },
+        {
+          "text": "Pembrolizumab in monoterapia",
+          "grade": "wrong",
+          "why": "Dopo TKI l'immunoterapia da sola ha un'attività molto bassa nel NSCLC EGFR-mutato."
+        },
+        {
+          "text": "Docetaxel",
+          "grade": "wrong",
+          "why": "Si riserva a dopo la doppietta di platino."
+        }
+      ],
+      "explanation": "Senza un meccanismo di resistenza trattabile lo standard è la chemioterapia a base di platino. La funzione renale cambia il partner: niente pemetrexed sotto 45 mL/min, sì al carboplatino dosato con Calvert.",
+      "evidence": [
+        {
+          "trial": "IMpower150",
+          "finding": "OS HR 0,80 nella popolazione complessiva; HR 0,60 nel sottogruppo EGFR-mutato dopo TKI"
+        }
+      ],
+      "result": "Inizia carboplatino + paclitaxel + bevacizumab con buona tolleranza."
+    }
+  ],
+  "closing": "Punti da ricordare: NGS e PD-L1 prima di ogni terapia; il driver prevale sul PD-L1; ri-biopsia alla progressione a osimertinib; la funzione renale decide il partner del platino."
+}

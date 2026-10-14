@@ -2140,5 +2140,47 @@
         "Avanzato / metastatico"
       ]
     }
+  ],
+  "cases": [
+    {
+      "id": "colon-sinistro",
+      "title": "Carcinoma del sigma con metastasi epatiche",
+      "theme": "Gastrointestinali",
+      "scheda": "Schede/Gastrointestinali/ColonRetto.md",
+      "algorithm": "colonretto",
+      "patient": "Uomo di 61 anni, ECOG PS 0, nessuna comorbidità di rilievo. Alvo alterno e anemia sideropenica da tre mesi.",
+      "steps": 6,
+      "path": "Casi/colon-sinistro.case.json"
+    },
+    {
+      "id": "mammella-hr",
+      "title": "Recidiva metastatica di carcinoma mammario HR+/HER2-",
+      "theme": "Mammella",
+      "scheda": "Schede/Mammella/Mammella.md",
+      "algorithm": "mammella",
+      "patient": "Donna di 58 anni in postmenopausa. Nove anni fa carcinoma duttale pT1c N0 HR+/HER2-: chirurgia conservativa, radioterapia e letrozolo per 5 anni, terminato 4 anni fa. In terapia con citalopram.",
+      "steps": 6,
+      "path": "Casi/mammella-hr.case.json"
+    },
+    {
+      "id": "nsclc-egfr",
+      "title": "Adenocarcinoma polmonare con metastasi encefaliche",
+      "theme": "Torace",
+      "scheda": "Schede/Torace/Polmone_NSCLC.md",
+      "algorithm": "polmone_nsclc",
+      "patient": "Donna di 63 anni, ex fumatrice (8 pack-year, ha smesso 20 anni fa), ECOG PS 1. Tosse da due mesi e calo ponderale di 4 kg.",
+      "steps": 4,
+      "path": "Casi/nsclc-egfr.case.json"
+    },
+    {
+      "id": "urotelio-m1",
+      "title": "Recidiva metastatica di carcinoma uroteliale",
+      "theme": "Urologici",
+      "scheda": "Schede/Urologici/Urotelio.md",
+      "algorithm": "urotelio",
+      "patient": "Uomo di 72 anni, ex fumatore, diabete di tipo 2 in metformina, ECOG PS 1. Tre anni fa cistectomia radicale per carcinoma uroteliale pT2 N0, senza terapia perioperatoria.",
+      "steps": 5,
+      "path": "Casi/urotelio-m1.case.json"
+    }
   ]
 }

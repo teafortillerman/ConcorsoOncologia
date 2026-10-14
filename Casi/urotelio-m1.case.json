@@ -1,0 +1,212 @@
+{
+  "id": "urotelio-m1",
+  "title": "Recidiva metastatica di carcinoma uroteliale",
+  "theme": "Urologici",
+  "scheda": "Schede/Urologici/Urotelio.md",
+  "algorithm": "urotelio",
+  "patient": "Uomo di 72 anni, ex fumatore, diabete di tipo 2 in metformina, ECOG PS 1. Tre anni fa cistectomia radicale per carcinoma uroteliale pT2 N0, senza terapia perioperatoria.",
+  "steps": [
+    {
+      "title": "Recidiva",
+      "story": "Biopsia di un linfonodo: carcinoma uroteliale.",
+      "imaging": "TC torace-addome: adenopatie retroperitoneali e tre noduli polmonari.",
+      "exams": [
+        {
+          "name": "Creatinina",
+          "value": "1,5 mg/dL",
+          "ref": "0,7-1,2",
+          "flag": "high"
+        },
+        {
+          "name": "Clearance della creatinina",
+          "value": "48 mL/min",
+          "ref": "≥60",
+          "flag": "low"
+        },
+        {
+          "name": "HbA1c",
+          "value": "7,2%",
+          "ref": "<7",
+          "flag": "high"
+        },
+        {
+          "name": "Audiometria",
+          "value": "nella norma"
+        },
+        {
+          "name": "Neuropatia periferica",
+          "value": "assente"
+        }
+      ],
+      "question": "Il paziente è eleggibile al cisplatino?",
+      "options": [
+        {
+          "text": "Sì",
+          "grade": "wrong",
+          "why": "Con clearance della creatinina tra 30 e 60 mL/min il paziente è cisplatino-ineleggibile (criteri di Galsky)."
+        },
+        {
+          "text": "No: clearance della creatinina tra 30 e 60 mL/min",
+          "grade": "best",
+          "why": "Criteri di Galsky: PS 2, clearance 30-60, neuropatia o ipoacusia ≥G2, NYHA ≥III; basta uno."
+        },
+        {
+          "text": "Sì, con idratazione abbondante",
+          "grade": "wrong",
+          "why": "L'idratazione non rende eleggibile un paziente con clearance <60 mL/min."
+        }
+      ],
+      "explanation": "L'eleggibilità al cisplatino richiede PS 0-1 e clearance ≥60 mL/min. Oggi però la 1ª linea preferita non dipende da questo criterio.",
+      "result": "Paziente cisplatino-ineleggibile."
+    },
+    {
+      "title": "1ª linea",
+      "question": "Quale 1ª linea proponi?",
+      "options": [
+        {
+          "text": "Enfortumab vedotin + pembrolizumab",
+          "grade": "best",
+          "why": "Standard indipendentemente dall'eleggibilità al platino, con il beneficio di OS più ampio. Il diabete compensato non lo controindica, ma la glicemia va monitorata."
+        },
+        {
+          "text": "Nivolumab + gemcitabina-cisplatino",
+          "grade": "wrong",
+          "why": "Richiede l'eleggibilità al cisplatino."
+        },
+        {
+          "text": "Carboplatino-gemcitabina → avelumab di mantenimento",
+          "grade": "ok",
+          "why": "Alternativa valida quando EV-pembrolizumab non è utilizzabile."
+        },
+        {
+          "text": "Pembrolizumab in monoterapia",
+          "grade": "wrong",
+          "why": "Non è lo standard di 1ª linea: EV-pembrolizumab è superiore."
+        }
+      ],
+      "explanation": "EV-pembrolizumab ha cambiato la 1ª linea dell'uroteliale metastatico, indipendentemente dal platino.",
+      "evidence": [
+        {
+          "trial": "EV-302",
+          "finding": "PFS 12,5 vs 6,3 mesi (HR 0,45); OS 31,5 vs 16,1 mesi (HR 0,47)"
+        },
+        {
+          "trial": "JAVELIN Bladder 100",
+          "finding": "avelumab di mantenimento: OS HR 0,69"
+        }
+      ],
+      "result": "Inizia enfortumab vedotin 1,25 mg/kg (giorni 1 e 8) + pembrolizumab 200 mg ogni 3 settimane."
+    },
+    {
+      "title": "Tossicità",
+      "story": "Al ciclo 3: poliuria e polidipsia, rash maculare lieve.",
+      "exams": [
+        {
+          "name": "Glicemia",
+          "value": "312 mg/dL",
+          "ref": "70-100",
+          "flag": "high"
+        },
+        {
+          "name": "HbA1c",
+          "value": "8,9%",
+          "ref": "<7",
+          "flag": "high"
+        },
+        {
+          "name": "Chetonuria",
+          "value": "assente"
+        },
+        {
+          "name": "Neuropatia sensitiva",
+          "value": "grado 1"
+        }
+      ],
+      "question": "Come gestisci?",
+      "options": [
+        {
+          "text": "Sospendo EV finché la glicemia non scende sotto 250 mg/dL, ottimizzo la terapia ipoglicemizzante ed escludo un diabete immuno-relato; poi riprendo EV",
+          "grade": "best",
+          "why": "L'iperglicemia è una tossicità tipica di EV: si sospende sopra 250 mg/dL e si riprende al rientro. In corso di pembrolizumab va escluso un diabete autoimmune (chetoacidosi, peptide C)."
+        },
+        {
+          "text": "Proseguo EV senza modifiche",
+          "grade": "wrong",
+          "why": "Con glicemia >250 mg/dL EV va sospeso."
+        },
+        {
+          "text": "Sospendo definitivamente EV e pembrolizumab",
+          "grade": "wrong",
+          "why": "Non serve al primo episodio: la tossicità è gestibile e pembrolizumab può proseguire."
+        },
+        {
+          "text": "Riduco solo la metformina",
+          "grade": "wrong",
+          "why": "Serve intensificare, non ridurre, la terapia ipoglicemizzante."
+        }
+      ],
+      "explanation": "Le tossicità tipiche di EV sono neuropatia periferica, rash e iperglicemia; quelle di pembrolizumab sono immuno-relate, compreso il diabete autoimmune.",
+      "result": "Insulina basale, glicemia a 180 mg/dL in 10 giorni; EV ripreso. Risposta parziale per 14 mesi."
+    },
+    {
+      "title": "Progressione",
+      "story": "Dopo 14 mesi: progressione polmonare. PS 1.",
+      "question": "Quale test richiedi?",
+      "multi": true,
+      "options": [
+        {
+          "text": "Alterazioni di FGFR3 (tessuto o ctDNA)",
+          "grade": "best",
+          "why": "Presenti nel 16-21% degli uroteliali (più nell'UTUC): aprono a erdafitinib."
+        },
+        {
+          "text": "PD-L1",
+          "grade": "wrong",
+          "why": "Non guida la scelta: il paziente ha già ricevuto immunoterapia."
+        },
+        {
+          "text": "Nessun test: chemioterapia",
+          "grade": "wrong",
+          "why": "Si perderebbe un'opzione mirata con beneficio di OS."
+        }
+      ],
+      "explanation": "Dopo EV-pembrolizumab la ricerca di FGFR3 identifica i candidati a erdafitinib.",
+      "result": "Mutazione FGFR3 S249C."
+    },
+    {
+      "title": "2ª linea",
+      "question": "Quale 2ª linea scegli?",
+      "options": [
+        {
+          "text": "Erdafitinib",
+          "grade": "best",
+          "why": "FGFR3 alterato dopo almeno una linea con anti-PD-(L)1: beneficio di OS. Tossicità tipiche: iperfosfatemia, alterazioni oculari e ungueali."
+        },
+        {
+          "text": "Carboplatino-gemcitabina",
+          "grade": "ok",
+          "why": "Opzione valida in un paziente non ancora esposto al platino."
+        },
+        {
+          "text": "Pembrolizumab",
+          "grade": "wrong",
+          "why": "Già ricevuto: il ritrattamento con anti-PD-1 non è raccomandato."
+        },
+        {
+          "text": "Enfortumab vedotin in monoterapia",
+          "grade": "wrong",
+          "why": "Già ricevuto in 1ª linea."
+        }
+      ],
+      "explanation": "La sequenza tiene conto di quello che il paziente ha già ricevuto: dopo EV-pembrolizumab restano FGFR3-inibitore (se alterato) e chemioterapia a base di platino.",
+      "evidence": [
+        {
+          "trial": "THOR",
+          "finding": "erdafitinib vs chemioterapia: OS HR 0,64"
+        }
+      ],
+      "result": "Inizia erdafitinib 8 mg/die, con titolazione a 9 mg in base alla fosfatemia."
+    }
+  ],
+  "closing": "Punti da ricordare: criteri di Galsky; EV-pembrolizumab indipendente dal platino; iperglicemia da EV e diabete immuno-relato; FGFR3 alla progressione."
+}

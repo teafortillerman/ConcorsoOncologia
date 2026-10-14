@@ -1,0 +1,247 @@
+{
+  "id": "mammella-hr",
+  "title": "Recidiva metastatica di carcinoma mammario HR+/HER2-",
+  "theme": "Mammella",
+  "scheda": "Schede/Mammella/Mammella.md",
+  "algorithm": "mammella",
+  "patient": "Donna di 58 anni in postmenopausa. Nove anni fa carcinoma duttale pT1c N0 HR+/HER2-: chirurgia conservativa, radioterapia e letrozolo per 5 anni, terminato 4 anni fa. In terapia con citalopram.",
+  "steps": [
+    {
+      "title": "Recidiva",
+      "story": "Dolore lombare e astenia da un mese, nessuna dispnea, funzione epatica conservata.",
+      "imaging": "TC e scintigrafia ossea: metastasi ossee multiple (L2, bacino) e tre metastasi epatiche, la maggiore di 2 cm. Nessun segno di crisi viscerale.",
+      "question": "Quali esami richiedi?",
+      "multi": true,
+      "options": [
+        {
+          "text": "Biopsia di una metastasi con ER, PR, HER2 e Ki-67",
+          "grade": "best",
+          "why": "Il fenotipo della recidiva può differire dal primitivo e decide la terapia (anche lo stato HER2-low)."
+        },
+        {
+          "text": "Test BRCA1/2 germinale",
+          "grade": "best",
+          "why": "Raccomandato nella malattia metastatica HER2-negativa: identifica le candidate a PARP-inibitore."
+        },
+        {
+          "text": "Mutazioni di PIK3CA (tessuto o ctDNA)",
+          "grade": "ok",
+          "why": "Utile già alla recidiva, soprattutto se c'è resistenza endocrina; diventa indispensabile alla progressione."
+        },
+        {
+          "text": "Test genomico prognostico (Oncotype DX)",
+          "grade": "wrong",
+          "why": "Si usa solo nella malattia precoce per decidere la chemioterapia adiuvante."
+        },
+        {
+          "text": "CA 15-3 per scegliere la terapia",
+          "grade": "wrong",
+          "why": "Il marcatore sierico non guida la scelta del trattamento."
+        }
+      ],
+      "explanation": "Alla recidiva si ripete la caratterizzazione biologica su una metastasi e si avviano i test che guideranno le linee successive (BRCA germinale, PIK3CA).",
+      "result": "Biopsia epatica: ER 90%, PR 20%, HER2 IHC 1+ (HER2-low), Ki-67 20%. BRCA1/2 germinale wild-type, PIK3CA wild-type."
+    },
+    {
+      "title": "1ª linea",
+      "story": "Recidiva 4 anni dopo la fine del letrozolo: malattia endocrino-sensibile (criteri ABC5). Prima di iniziare la terapia esegue un ECG.",
+      "exams": [
+        {
+          "name": "QTcF all'ECG",
+          "value": "478 ms",
+          "ref": "<450",
+          "flag": "high"
+        },
+        {
+          "name": "Potassio",
+          "value": "4,1 mEq/L",
+          "ref": "3,5-5,0"
+        },
+        {
+          "name": "ALT",
+          "value": "31 U/L",
+          "ref": "<40"
+        }
+      ],
+      "question": "Quale 1ª linea proponi?",
+      "options": [
+        {
+          "text": "Letrozolo + ribociclib",
+          "grade": "wrong",
+          "why": "Il ribociclib prolunga il QT: con QTcF basale >450 ms non va iniziato, a maggior ragione in una paziente in terapia con citalopram. È il CDK4/6i con beneficio di OS significativo, ma qui è controindicato."
+        },
+        {
+          "text": "Inibitore dell'aromatasi + palbociclib o abemaciclib",
+          "grade": "best",
+          "why": "Malattia endocrino-sensibile senza crisi viscerale: AI + CDK4/6i è lo standard, scegliendo un CDK4/6i che non prolunga il QT."
+        },
+        {
+          "text": "Fulvestrant + CDK4/6i",
+          "grade": "ok",
+          "why": "Possibile, ma nella malattia endocrino-sensibile lo standard è l'inibitore dell'aromatasi; fulvestrant + CDK4/6i è la scelta nella resistenza endocrina."
+        },
+        {
+          "text": "Paclitaxel + bevacizumab",
+          "grade": "wrong",
+          "why": "La chemioterapia in 1ª linea si riserva alla crisi viscerale, assente qui."
+        },
+        {
+          "text": "Letrozolo da solo",
+          "grade": "wrong",
+          "why": "L'aggiunta di un CDK4/6i migliora la PFS (e l'OS con ribociclib): l'endocrina da sola non è lo standard."
+        }
+      ],
+      "explanation": "La sensibilità endocrina (recidiva oltre 12 mesi dalla fine dell'adiuvante) indica AI + CDK4/6i. Il QTc prolungato esclude il ribociclib: si sceglie palbociclib o abemaciclib.",
+      "evidence": [
+        {
+          "trial": "MONALEESA-2",
+          "finding": "OS 63,9 vs 51,4 mesi (HR 0,76) con ribociclib + AI"
+        },
+        {
+          "trial": "PALOMA-2 / MONARCH-3",
+          "finding": "beneficio di PFS; OS non statisticamente significativa vs AI da solo"
+        }
+      ],
+      "result": "Inizia letrozolo + abemaciclib: risposta parziale per 22 mesi."
+    },
+    {
+      "title": "Progressione",
+      "story": "Dopo 22 mesi progressione epatica, asintomatica.",
+      "question": "Quale test guida la 2ª linea?",
+      "multi": true,
+      "options": [
+        {
+          "text": "Biopsia liquida (ctDNA) per ESR1, PIK3CA, AKT1 e PTEN",
+          "grade": "best",
+          "why": "Le mutazioni di ESR1 sono acquisite sotto inibitore dell'aromatasi: vanno cercate alla progressione, e il ctDNA è il campione ideale."
+        },
+        {
+          "text": "Rivalutare HER2 su una nuova biopsia",
+          "grade": "ok",
+          "why": "Utile per confermare lo stato HER2-low che aprirà a T-DXd nelle linee successive."
+        },
+        {
+          "text": "Ripetere il test BRCA germinale",
+          "grade": "wrong",
+          "why": "Lo stato germinale non cambia nel tempo."
+        },
+        {
+          "text": "Nessun test: cambiare terapia endocrina",
+          "grade": "wrong",
+          "why": "Senza test si perde la possibilità di una terapia mirata."
+        }
+      ],
+      "explanation": "Dopo AI + CDK4/6i la 2ª linea è guidata dai biomarcatori: ESR1 (elacestrant), PIK3CA/AKT1/PTEN (capivasertib, alpelisib), BRCA (PARP-inibitori).",
+      "result": "ctDNA: mutazione ESR1 Y537S; PIK3CA, AKT1 e PTEN wild-type."
+    },
+    {
+      "title": "2ª linea",
+      "question": "Quale 2ª linea scegli?",
+      "options": [
+        {
+          "text": "Elacestrant",
+          "grade": "best",
+          "why": "SERD orale efficace proprio nella malattia ESR1-mutata dopo CDK4/6i."
+        },
+        {
+          "text": "Fulvestrant in monoterapia",
+          "grade": "wrong",
+          "why": "La mutazione ESR1 riduce l'efficacia di fulvestrant; elacestrant è superiore in questo sottogruppo."
+        },
+        {
+          "text": "Capivasertib + fulvestrant",
+          "grade": "wrong",
+          "why": "Richiede alterazioni di PIK3CA, AKT1 o PTEN, assenti qui."
+        },
+        {
+          "text": "Everolimus + exemestane",
+          "grade": "ok",
+          "why": "Opzione senza bersaglio; con ESR1 mutato elacestrant è preferibile."
+        },
+        {
+          "text": "Trastuzumab deruxtecan",
+          "grade": "wrong",
+          "why": "Nell'HR+ HER2-low è indicato dopo almeno una linea di chemioterapia per la malattia metastatica: non ancora."
+        }
+      ],
+      "explanation": "La mutazione ESR1 è il bersaglio: elacestrant è rimborsato dopo progressione a CDK4/6i + terapia endocrina.",
+      "evidence": [
+        {
+          "trial": "EMERALD",
+          "finding": "PFS nei pazienti ESR1-mutati HR 0,55 (popolazione totale HR 0,70)"
+        }
+      ],
+      "result": "Elacestrant per 8 mesi, poi progressione. Riceve capecitabina (DPYD normale) per 6 mesi, poi nuova progressione."
+    },
+    {
+      "title": "Linee successive",
+      "story": "HER2 IHC 1+ confermato su una nuova biopsia epatica. PS 1.",
+      "question": "Quale terapia proponi?",
+      "options": [
+        {
+          "text": "Trastuzumab deruxtecan",
+          "grade": "best",
+          "why": "HER2-low dopo almeno una linea di chemioterapia: è l'ADC con il beneficio più ampio in questo setting."
+        },
+        {
+          "text": "Sacituzumab govitecan",
+          "grade": "ok",
+          "why": "Opzione nelle linee successive (TROPiCS-02), ma con HER2-low si preferisce prima T-DXd."
+        },
+        {
+          "text": "Eribulina",
+          "grade": "ok",
+          "why": "Chemioterapia possibile, meno efficace degli ADC."
+        },
+        {
+          "text": "Datopotamab deruxtecan",
+          "grade": "wrong",
+          "why": "Autorizzato EMA ma non rimborsato in Italia per questa indicazione."
+        }
+      ],
+      "explanation": "Dopo terapia endocrina e una linea di chemioterapia, nella malattia HER2-low si usa T-DXd.",
+      "evidence": [
+        {
+          "trial": "DESTINY-Breast04",
+          "finding": "PFS nella coorte HR+ 10,1 vs 5,4 mesi (HR 0,51)"
+        },
+        {
+          "trial": "TROPiCS-02",
+          "finding": "PFS 5,5 vs 4,0 mesi (HR 0,66)"
+        }
+      ],
+      "result": "Inizia T-DXd 5,4 mg/kg ogni 3 settimane: riduzione delle lesioni epatiche."
+    },
+    {
+      "title": "Tossicità",
+      "story": "Dopo 5 cicli: tosse secca e dispnea da sforzo da una settimana, SpO₂ 94% in aria ambiente, apiretica.",
+      "imaging": "TC torace: opacità a vetro smerigliato bilaterali, nessuna progressione di malattia.",
+      "question": "Cosa fai?",
+      "options": [
+        {
+          "text": "Sospendo T-DXd, work-up (infettivologico ± broncoscopia) e steroidi; non lo riprendo se la polmonite è di grado ≥2",
+          "grade": "best",
+          "why": "Quadro di ILD/polmonite da T-DXd sintomatica: si sospende subito e, dal grado 2, la sospensione è definitiva."
+        },
+        {
+          "text": "Proseguo T-DXd e prescrivo un antibiotico",
+          "grade": "wrong",
+          "why": "Sintomi respiratori nuovi in corso di T-DXd vanno considerati ILD fino a prova contraria."
+        },
+        {
+          "text": "Riduco la dose di T-DXd",
+          "grade": "wrong",
+          "why": "Per l'ILD la dose non si riduce: si sospende il farmaco."
+        },
+        {
+          "text": "Rivaluto con TC tra 3 mesi",
+          "grade": "wrong",
+          "why": "L'ILD può essere fatale (2,2% nelle analisi pooled): serve un work-up immediato."
+        }
+      ],
+      "explanation": "L'ILD è la tossicità caratteristica di T-DXd: il rischio è cumulativo e con follow-up lungo arriva al 15-17%. Tosse o dispnea nuove impongono sospensione e work-up immediati.",
+      "result": "Polmonite di grado 2: T-DXd sospeso definitivamente, prednisone con miglioramento clinico e radiologico."
+    }
+  ],
+  "closing": "Punti da ricordare: sensibilità endocrina e QTc guidano la 1ª linea; alla progressione si cerca ESR1 sul ctDNA; T-DXd nell'HER2-low dopo chemioterapia, con attenzione all'ILD."
+}

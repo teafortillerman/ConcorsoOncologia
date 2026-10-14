@@ -1,0 +1,230 @@
+{
+  "id": "colon-sinistro",
+  "title": "Carcinoma del sigma con metastasi epatiche",
+  "theme": "Gastrointestinali",
+  "scheda": "Schede/Gastrointestinali/ColonRetto.md",
+  "algorithm": "colonretto",
+  "patient": "Uomo di 61 anni, ECOG PS 0, nessuna comorbidità di rilievo. Alvo alterno e anemia sideropenica da tre mesi.",
+  "steps": [
+    {
+      "title": "Diagnosi",
+      "story": "Colonscopia: adenocarcinoma del sigma. Il team multidisciplinare giudica le metastasi epatiche non resecabili (residuo epatico insufficiente).",
+      "imaging": "TC torace-addome: cinque metastasi epatiche bilobari, la maggiore di 4 cm; nessuna malattia extraepatica.",
+      "question": "Quali test richiedi prima della chemioterapia?",
+      "multi": true,
+      "options": [
+        {
+          "text": "RAS (KRAS/NRAS esoni 2-4) e BRAF V600E",
+          "grade": "best",
+          "why": "Decidono tra anti-EGFR e bevacizumab e identificano la malattia BRAF-mutata (BREAKWATER)."
+        },
+        {
+          "text": "Stato MMR/MSI",
+          "grade": "best",
+          "why": "La malattia MSI-H/dMMR va all'immunoterapia in 1ª linea."
+        },
+        {
+          "text": "Test DPYD",
+          "grade": "best",
+          "why": "Obbligatorio prima delle fluoropirimidine (nota EMA 2020): il deficit di DPD espone a tossicità severa o fatale."
+        },
+        {
+          "text": "UGT1A1*28",
+          "grade": "ok",
+          "why": "Predittivo di tossicità da irinotecan: utile se si prevede un regime con irinotecano."
+        },
+        {
+          "text": "CEA per scegliere il regime",
+          "grade": "wrong",
+          "why": "Il CEA è prognostico e serve al monitoraggio, non alla scelta della terapia."
+        }
+      ],
+      "explanation": "Prima della 1ª linea servono RAS, BRAF e MMR per scegliere il regime, e il DPYD per la sicurezza delle fluoropirimidine.",
+      "result": "RAS e BRAF wild-type, pMMR. DPYD: variante c.1905+1G>A in eterozigosi (deficit parziale di DPD)."
+    },
+    {
+      "title": "Sicurezza della fluoropirimidina",
+      "story": "Il deficit parziale di DPD riduce la capacità di eliminare 5-FU e capecitabina.",
+      "question": "Come gestisci la fluoropirimidina?",
+      "options": [
+        {
+          "text": "Dose piena con monitoraggio stretto",
+          "grade": "wrong",
+          "why": "Con deficit parziale la dose piena espone a mucosite, diarrea e neutropenia gravi o fatali."
+        },
+        {
+          "text": "Riduzione iniziale del 50% della dose, poi titolazione in base alla tolleranza",
+          "grade": "best",
+          "why": "È la gestione raccomandata nel portatore eterozigote di una variante non funzionante (deficit parziale)."
+        },
+        {
+          "text": "Evitare del tutto le fluoropirimidine",
+          "grade": "wrong",
+          "why": "Si evitano solo nel deficit completo di DPD; nel deficit parziale si usano a dose ridotta."
+        }
+      ],
+      "explanation": "Il test DPYD non serve a escludere il paziente dalla chemioterapia ma a dosarla: nel deficit parziale si parte dal 50% e si titola.",
+      "result": "Si imposta 5-FU al 50% della dose, con piano di titolazione dopo i primi cicli."
+    },
+    {
+      "title": "1ª linea",
+      "story": "Colon sinistro, RAS/BRAF wild-type, pMMR. Obiettivo: risposta che renda resecabili le metastasi epatiche.",
+      "question": "Quale 1ª linea proponi?",
+      "options": [
+        {
+          "text": "FOLFOX (5-FU ridotto) + anti-EGFR (panitumumab o cetuximab)",
+          "grade": "best",
+          "why": "Nel colon sinistro RAS/BRAF wild-type l'anti-EGFR dà il beneficio di OS maggiore e un'alta probabilità di risposta, utile alla conversione."
+        },
+        {
+          "text": "FOLFOXIRI + bevacizumab",
+          "grade": "ok",
+          "why": "Schema intensificato preferito nel colon destro o nella malattia RAS-mutata; nel sinistro RAS wild-type l'anti-EGFR è preferito."
+        },
+        {
+          "text": "Doppietta + bevacizumab",
+          "grade": "ok",
+          "why": "Accettabile, ma nel colon sinistro RAS/BRAF wild-type inferiore all'anti-EGFR."
+        },
+        {
+          "text": "Pembrolizumab",
+          "grade": "wrong",
+          "why": "L'immunoterapia è indicata solo nella malattia MSI-H/dMMR; qui è pMMR."
+        }
+      ],
+      "explanation": "La sede del primitivo guida la scelta del biologico nella malattia RAS/BRAF wild-type: anti-EGFR a sinistra, bevacizumab a destra.",
+      "evidence": [
+        {
+          "trial": "Metanalisi sulla sede (FIRE-3, CAIRO5, PEAK)",
+          "finding": "colon sinistro: anti-EGFR preferito, OS HR 0,77; colon destro: bevacizumab preferito, PFS HR 0,73"
+        },
+        {
+          "trial": "TRIBE",
+          "finding": "FOLFOXIRI + bevacizumab: PFS 12,1 vs 9,7 mesi (HR 0,75); OS 29,8 vs 25,8 mesi"
+        }
+      ],
+      "result": "Dopo 8 cicli di FOLFOX + panitumumab: risposta parziale (−55%). Il team giudica ora resecabili le metastasi."
+    },
+    {
+      "title": "Rivalutazione",
+      "question": "Cosa proponi?",
+      "options": [
+        {
+          "text": "Resezione epatica di conversione, poi completamento della chemioterapia",
+          "grade": "best",
+          "why": "Se la risposta rende le metastasi resecabili, la chirurgia R0 è l'unica possibilità di lunga sopravvivenza."
+        },
+        {
+          "text": "Proseguire la stessa terapia fino a progressione",
+          "grade": "wrong",
+          "why": "Si perderebbe la finestra di resecabilità."
+        },
+        {
+          "text": "Sospendere tutto e osservare",
+          "grade": "wrong",
+          "why": "La malattia resta attiva: la resezione va proposta."
+        }
+      ],
+      "explanation": "L'obiettivo della 1ª linea intensiva era la conversione: va rivalutata la resecabilità ogni 2-3 mesi in sede multidisciplinare.",
+      "result": "Epatectomia R0. Dopo 14 mesi: recidiva epatica e polmonare non resecabile. Residua una neuropatia periferica di grado 2 da oxaliplatino."
+    },
+    {
+      "title": "2ª linea",
+      "exams": [
+        {
+          "name": "Neuropatia periferica (CTCAE)",
+          "value": "grado 2",
+          "ref": "grado 0",
+          "flag": "high"
+        },
+        {
+          "name": "Neutrofili",
+          "value": "3.900/mm³",
+          "ref": "2.000-7.500"
+        },
+        {
+          "name": "Bilirubina totale",
+          "value": "0,8 mg/dL",
+          "ref": "<1,2"
+        }
+      ],
+      "question": "Quale 2ª linea scegli?",
+      "options": [
+        {
+          "text": "FOLFIRI + bevacizumab (5-FU ridotto per DPYD)",
+          "grade": "best",
+          "why": "Cambio di doppietta con antiangiogenico: evita l'oxaliplatino, che peggiorerebbe la neuropatia."
+        },
+        {
+          "text": "Riprendere FOLFOX + anti-EGFR",
+          "grade": "wrong",
+          "why": "La neuropatia di grado 2 sconsiglia l'oxaliplatino e la malattia è progredita dopo l'anti-EGFR."
+        },
+        {
+          "text": "Regorafenib",
+          "grade": "wrong",
+          "why": "È un'opzione delle linee successive, non della 2ª."
+        },
+        {
+          "text": "Trifluridina/tipiracil + bevacizumab",
+          "grade": "wrong",
+          "why": "Indicato dopo due linee di terapia (SUNLIGHT)."
+        }
+      ],
+      "explanation": "In 2ª linea si cambia la doppietta e si aggiunge un antiangiogenico. La tossicità residua (neuropatia) e il DPYD restano parte della decisione.",
+      "result": "FOLFIRI + bevacizumab per 9 mesi, poi progressione. PS 1."
+    },
+    {
+      "title": "3ª linea",
+      "story": "Si esegue una biopsia liquida.",
+      "exams": [
+        {
+          "name": "ctDNA: KRAS, NRAS, BRAF",
+          "value": "wild-type"
+        },
+        {
+          "name": "CEA",
+          "value": "86 ng/mL",
+          "ref": "<5",
+          "flag": "high"
+        }
+      ],
+      "question": "Quale terapia proponi?",
+      "options": [
+        {
+          "text": "Trifluridina/tipiracil + bevacizumab",
+          "grade": "best",
+          "why": "Nuovo standard delle linee successive, con beneficio di OS."
+        },
+        {
+          "text": "Rechallenge anti-EGFR guidato dal ctDNA",
+          "grade": "best",
+          "why": "Con RAS/BRAF wild-type sul ctDNA il rechallenge è efficace (CRICKET, CAVE, CHRONOS)."
+        },
+        {
+          "text": "Regorafenib",
+          "grade": "ok",
+          "why": "Opzione con beneficio di OS, più tossica (cute mano-piede, fegato)."
+        },
+        {
+          "text": "FOLFOXIRI",
+          "grade": "wrong",
+          "why": "Nessun ruolo dopo progressione a oxaliplatino e irinotecano."
+        }
+      ],
+      "explanation": "Nelle linee successive le scelte sono trifluridina/tipiracil + bevacizumab, regorafenib o, se il ctDNA è RAS/BRAF wild-type, il rechallenge anti-EGFR.",
+      "evidence": [
+        {
+          "trial": "SUNLIGHT",
+          "finding": "OS 10,8 vs 7,5 mesi (HR 0,61)"
+        },
+        {
+          "trial": "CORRECT",
+          "finding": "regorafenib: OS HR 0,77"
+        }
+      ],
+      "result": "Inizia trifluridina/tipiracil + bevacizumab."
+    }
+  ],
+  "closing": "Punti da ricordare: RAS, BRAF, MMR e DPYD prima della 1ª linea; sede del primitivo e anti-EGFR; obiettivo di conversione; tossicità residue e ctDNA guidano le linee successive."
+}
