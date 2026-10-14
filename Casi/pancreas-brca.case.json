@@ -1,0 +1,270 @@
+{
+  "id": "pancreas-brca",
+  "title": "Adenocarcinoma pancreatico metastatico con variante BRCA2",
+  "theme": "Gastrointestinali",
+  "scheda": "Schede/Gastrointestinali/Pancreas.md",
+  "algorithm": "pancreas",
+  "patient": "Donna di 52 anni, ECOG PS 0. Ittero e prurito da due settimane, urine scure. La madre ha avuto un carcinoma ovarico a 58 anni.",
+  "steps": [
+    {
+      "title": "Ittero ostruttivo",
+      "imaging": "TC addome con protocollo pancreatico: massa ipodensa di 3,5 cm della testa del pancreas, coinvolgimento dell'arteria mesenterica superiore >180°, dilatazione delle vie biliari e del Wirsung, tre metastasi epatiche.",
+      "exams": [
+        {
+          "name": "Bilirubina totale",
+          "value": "9,8 mg/dL",
+          "ref": "<1,2",
+          "flag": "high"
+        },
+        {
+          "name": "ALT",
+          "value": "184 U/L",
+          "ref": "<35",
+          "flag": "high"
+        },
+        {
+          "name": "Fosfatasi alcalina",
+          "value": "620 U/L",
+          "ref": "35-105",
+          "flag": "high"
+        },
+        {
+          "name": "CA 19-9",
+          "value": "2.400 U/mL",
+          "ref": "<37",
+          "flag": "high"
+        }
+      ],
+      "question": "Qual è il primo passo?",
+      "options": [
+        {
+          "text": "Ecoendoscopia con biopsia e drenaggio biliare endoscopico con stent metallico",
+          "grade": "best",
+          "why": "Serve la conferma istologica e la bilirubina va riportata nella norma prima della chemioterapia. Nella malattia metastatica lo stent metallico ha pervietà più lunga di quello in plastica."
+        },
+        {
+          "text": "Drenaggio biliare con stent in plastica",
+          "grade": "ok",
+          "why": "Risolve l'ittero, ma con malattia metastatica e chemioterapia prevista lo stent metallico si occlude e si infetta di meno."
+        },
+        {
+          "text": "Avvio subito FOLFIRINOX a dose piena",
+          "grade": "wrong",
+          "why": "Con bilirubina a 9,8 mg/dL l'irinotecan è controindicato (eliminazione biliare, rischio di tossicità gravissima) e manca ancora la diagnosi istologica."
+        },
+        {
+          "text": "Duodenocefalopancreasectomia",
+          "grade": "wrong",
+          "why": "La malattia è metastatica: la chirurgia non ha indicazione."
+        }
+      ],
+      "explanation": "Nel pancreas con ittero ostruttivo si fa diagnosi e drenaggio nella stessa procedura endoscopica; la chemioterapia comincia solo con bilirubina vicina alla norma.",
+      "result": "Biopsia EUS: adenocarcinoma duttale. Stent metallico coledocico: dopo 2 settimane bilirubina 1,4 mg/dL."
+    },
+    {
+      "title": "Profilo molecolare",
+      "question": "Quali test richiedi?",
+      "multi": true,
+      "options": [
+        {
+          "text": "Test germinale (BRCA1/2, PALB2 e pannello) con consulenza genetica",
+          "grade": "best",
+          "why": "Raccomandato in tutti i pazienti con carcinoma pancreatico, indipendentemente dalla storia familiare: la presenza di una variante germinale apre al mantenimento con olaparib e ha implicazioni per i familiari."
+        },
+        {
+          "text": "NGS somatico su tessuto (KRAS; se wild-type fusioni NTRK, NRG1, RET, BRAF; MSI)",
+          "grade": "best",
+          "why": "Il 5-10% dei pancreas ha un bersaglio trattabile, soprattutto se KRAS è wild-type."
+        },
+        {
+          "text": "Test DPYD",
+          "grade": "best",
+          "why": "Obbligatorio in Italia prima del 5-fluorouracile."
+        },
+        {
+          "text": "PD-L1",
+          "grade": "wrong",
+          "why": "Non guida la terapia nel pancreas, in cui l'immunoterapia è attiva solo nel MSI-H."
+        },
+        {
+          "text": "Solo CA 19-9 seriato",
+          "grade": "wrong",
+          "why": "È un marcatore di monitoraggio, non un test predittivo."
+        }
+      ],
+      "explanation": "Nel pancreas metastatico il test germinale è universale: il 5-7% dei pazienti è portatore di varianti BRCA1/2 e la sensibilità al platino cambia la strategia.",
+      "result": "Variante patogenetica germinale di BRCA2. KRAS G12D, MSS. DPYD wild-type."
+    },
+    {
+      "title": "1ª linea",
+      "story": "PS 0, bilirubina normalizzata, nessuna comorbidità.",
+      "exams": [
+        {
+          "name": "Bilirubina totale",
+          "value": "1,1 mg/dL",
+          "ref": "<1,2"
+        },
+        {
+          "name": "Neutrofili",
+          "value": "4.800/mm³",
+          "ref": "2.000-7.500"
+        },
+        {
+          "name": "Albumina",
+          "value": "3,9 g/dL",
+          "ref": "3,5-5"
+        }
+      ],
+      "question": "Quale 1ª linea proponi?",
+      "options": [
+        {
+          "text": "mFOLFIRINOX",
+          "grade": "best",
+          "why": "Con PS 0 è lo schema di riferimento; nella variante BRCA il platino è particolarmente attivo ed è la premessa per il mantenimento con olaparib."
+        },
+        {
+          "text": "NALIRIFOX",
+          "grade": "ok",
+          "why": "Superiore a gemcitabina + nab-paclitaxel (NAPOLI-3) e contiene oxaliplatino, ma in Italia non è ancora rimborsato."
+        },
+        {
+          "text": "Gemcitabina + nab-paclitaxel",
+          "grade": "ok",
+          "why": "Standard valido, ma in un paziente BRCA in buone condizioni rinuncia al platino."
+        },
+        {
+          "text": "Olaparib subito in 1ª linea",
+          "grade": "wrong",
+          "why": "Olaparib è indicato solo come mantenimento dopo almeno 16 settimane di platino senza progressione."
+        },
+        {
+          "text": "Gemcitabina in monoterapia",
+          "grade": "wrong",
+          "why": "Riservata ai pazienti fragili con PS 2."
+        }
+      ],
+      "explanation": "Nel pancreas metastatico con PS 0-1 si usano schemi di combinazione; in presenza di variante BRCA o PALB2 si preferisce un regime con platino.",
+      "evidence": [
+        {
+          "trial": "PRODIGE 4/ACCORD 11",
+          "finding": "FOLFIRINOX vs gemcitabina: OS 11,1 vs 6,8 mesi (HR 0,57)"
+        },
+        {
+          "trial": "NAPOLI-3",
+          "finding": "NALIRIFOX vs gemcitabina + nab-paclitaxel: OS 11,1 vs 9,2 mesi (HR 0,83)"
+        }
+      ],
+      "result": "Dopo 8 cicli (4 mesi) di mFOLFIRINOX: risposta parziale, CA 19-9 310 U/mL. Neuropatia sensitiva di grado 2."
+    },
+    {
+      "title": "Mantenimento",
+      "exams": [
+        {
+          "name": "Neuropatia periferica",
+          "value": "grado 2"
+        },
+        {
+          "name": "Emoglobina",
+          "value": "11,2 g/dL",
+          "ref": "12-16",
+          "flag": "low"
+        },
+        {
+          "name": "Piastrine",
+          "value": "168.000/mm³",
+          "ref": "150.000-400.000"
+        }
+      ],
+      "question": "Come prosegui?",
+      "options": [
+        {
+          "text": "Mantenimento con olaparib",
+          "grade": "best",
+          "why": "Variante BRCA germinale e malattia controllata dopo ≥16 settimane di platino: olaparib raddoppia la PFS mantenendo la qualità di vita. In Italia è rimborsato dal 2026."
+        },
+        {
+          "text": "Mantenimento con 5-FU/acido folinico (± irinotecan), sospendendo l'oxaliplatino",
+          "grade": "ok",
+          "why": "Strategia valida per ridurre la neuropatia, ma nella variante BRCA olaparib offre un mantenimento senza chemioterapia."
+        },
+        {
+          "text": "Prosecuzione di mFOLFIRINOX completo",
+          "grade": "wrong",
+          "why": "Con neuropatia di grado 2 l'oxaliplatino va sospeso: proseguire espone a neuropatia invalidante."
+        },
+        {
+          "text": "Sospensione di ogni terapia",
+          "grade": "wrong",
+          "why": "Senza mantenimento la malattia progredisce rapidamente."
+        }
+      ],
+      "explanation": "Olaparib nel POLO ha prolungato la PFS ma non ha migliorato l'OS: l'obiettivo è un intervallo libero da chemioterapia con buona qualità di vita.",
+      "evidence": [
+        {
+          "trial": "POLO",
+          "finding": "olaparib vs placebo: PFS 7,4 vs 3,8 mesi (HR 0,53); OS 19,0 vs 19,2 mesi (non significativa)"
+        }
+      ],
+      "result": "Inizia olaparib 300 mg due volte al giorno. Dopo 9 mesi, astenia ingravescente."
+    },
+    {
+      "title": "Tossicità ematologica",
+      "exams": [
+        {
+          "name": "Emoglobina",
+          "value": "7,6 g/dL",
+          "ref": "12-16",
+          "flag": "low"
+        },
+        {
+          "name": "MCV",
+          "value": "106 fL",
+          "ref": "80-98",
+          "flag": "high"
+        },
+        {
+          "name": "Piastrine",
+          "value": "92.000/mm³",
+          "ref": "150.000-400.000",
+          "flag": "low"
+        },
+        {
+          "name": "Neutrofili",
+          "value": "1.600/mm³",
+          "ref": "2.000-7.500",
+          "flag": "low"
+        },
+        {
+          "name": "Vitamina B12 e folati",
+          "value": "nella norma"
+        }
+      ],
+      "question": "Come gestisci?",
+      "options": [
+        {
+          "text": "Sospendo olaparib e trasfondo; alla ripresa riduco a 250 mg due volte al giorno; se i valori non recuperano entro 4 settimane, consulenza ematologica e aspirato midollare",
+          "grade": "best",
+          "why": "L'anemia da PARP-inibitore richiede sospensione e ripresa a dose ridotta. Una citopenia persistente dopo 4 settimane di sospensione impone di escludere una sindrome mielodisplastica o una leucemia acuta, rare ma descritte."
+        },
+        {
+          "text": "Proseguo olaparib con trasfusioni ed eritropoietina",
+          "grade": "wrong",
+          "why": "Con anemia di grado 3 olaparib va sospeso; l'eritropoietina non è la risposta alla tossicità midollare."
+        },
+        {
+          "text": "Sospendo definitivamente olaparib",
+          "grade": "wrong",
+          "why": "Al primo episodio la tossicità è gestibile con sospensione e riduzione di dose."
+        },
+        {
+          "text": "Riduco la dose senza sospendere",
+          "grade": "wrong",
+          "why": "Con Hb <8 g/dL serve la sospensione fino al recupero (Hb ≥9 g/dL)."
+        }
+      ],
+      "explanation": "La macrocitosi è attesa con i PARP-inibitori. Le citopenie che non recuperano dopo la sospensione sono un campanello d'allarme per MDS/AML.",
+      "result": "Dopo 3 settimane: Hb 10,1 g/dL, piastrine 160.000/mm³. Olaparib ripreso a 250 mg due volte al giorno."
+    }
+  ],
+  "closing": "Punti da ricordare: drenare prima di trattare; test germinale universale; platino nel BRCA; olaparib di mantenimento dopo ≥16 settimane di platino (PFS, non OS); citopenie persistenti e MDS/AML."
+}

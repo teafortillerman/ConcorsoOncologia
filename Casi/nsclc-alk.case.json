@@ -1,0 +1,240 @@
+{
+  "id": "nsclc-alk",
+  "title": "Adenocarcinoma polmonare ALK-positivo operato",
+  "theme": "Torace",
+  "scheda": "Schede/Torace/Polmone_NSCLC.md",
+  "algorithm": "polmone_nsclc",
+  "patient": "Donna di 44 anni, mai fumatrice, ECOG PS 0. Riscontro di nodulo polmonare a una radiografia eseguita per una tosse persistente.",
+  "steps": [
+    {
+      "title": "Dopo la chirurgia",
+      "story": "Lobectomia superiore sinistra con linfadenectomia sistematica: adenocarcinoma di 4,8 cm, pT2b pN1 (2 linfonodi ilari), margini indenni. Stadio IIB.",
+      "question": "Quali determinazioni richiedi sul pezzo operatorio?",
+      "multi": true,
+      "options": [
+        {
+          "text": "EGFR",
+          "grade": "best",
+          "why": "Nello stadio IB-IIIA EGFR-mutato l'osimertinib adiuvante (ADAURA) migliora DFS e OS."
+        },
+        {
+          "text": "ALK",
+          "grade": "best",
+          "why": "Nello stadio IB-IIIA ALK-positivo l'alectinib adiuvante (ALINA) è superiore alla chemioterapia."
+        },
+        {
+          "text": "PD-L1",
+          "grade": "best",
+          "why": "Decide l'eventuale atezolizumab o pembrolizumab adiuvante nei tumori senza driver."
+        },
+        {
+          "text": "Nessun test: nello stadio iniziale non cambia la terapia",
+          "grade": "wrong",
+          "why": "Oggi EGFR, ALK e PD-L1 cambiano la terapia adiuvante e vanno determinati su tutti i non squamosi operati."
+        },
+        {
+          "text": "Solo KRAS",
+          "grade": "wrong",
+          "why": "KRAS non ha oggi un'indicazione nell'adiuvante."
+        }
+      ],
+      "explanation": "La profilazione molecolare è entrata nello stadio iniziale: senza EGFR e ALK non si può scegliere correttamente l'adiuvante, e i tumori con driver non traggono beneficio dall'immunoterapia.",
+      "result": "ALK positivo (IHC D5F3, confermato da NGS: EML4-ALK). EGFR wild-type. PD-L1 TPS 40%."
+    },
+    {
+      "title": "Adiuvante",
+      "exams": [
+        {
+          "name": "ALT",
+          "value": "19 U/L",
+          "ref": "<35"
+        },
+        {
+          "name": "CPK",
+          "value": "110 U/L",
+          "ref": "<200"
+        },
+        {
+          "name": "Frequenza cardiaca",
+          "value": "72 bpm"
+        }
+      ],
+      "question": "Quale terapia adiuvante proponi?",
+      "options": [
+        {
+          "text": "Alectinib 600 mg due volte al giorno per 2 anni",
+          "grade": "best",
+          "why": "Nello stadio II-IIIA ALK-positivo riduce di oltre tre quarti il rischio di recidiva rispetto alla chemioterapia, comprese le recidive cerebrali. In Italia è rimborsato dal 2025."
+        },
+        {
+          "text": "Cisplatino-vinorelbina, poi atezolizumab",
+          "grade": "wrong",
+          "why": "Nei tumori ALK-positivi l'immunoterapia adiuvante non è indicata: l'indicazione europea esclude EGFR e ALK."
+        },
+        {
+          "text": "Cisplatino-vinorelbina per 4 cicli",
+          "grade": "ok",
+          "why": "Era lo standard prima di ALINA ed è un'alternativa se alectinib non è utilizzabile."
+        },
+        {
+          "text": "Solo follow-up",
+          "grade": "wrong",
+          "why": "Nello stadio IIB il rischio di recidiva supera il 50%."
+        }
+      ],
+      "explanation": "Nell'adiuvante del NSCLC il driver decide: osimertinib per EGFR, alectinib per ALK, immunoterapia solo in assenza di driver.",
+      "evidence": [
+        {
+          "trial": "ALINA",
+          "finding": "alectinib vs chemioterapia: DFS a 2 anni 93,8% vs 63,0% (HR 0,24); DFS cerebrale HR 0,22"
+        }
+      ],
+      "result": "Inizia alectinib."
+    },
+    {
+      "title": "Tossicità",
+      "story": "Al quinto mese: mialgie diffuse e lieve astenia.",
+      "exams": [
+        {
+          "name": "CPK",
+          "value": "1.450 U/L",
+          "ref": "<200",
+          "flag": "high"
+        },
+        {
+          "name": "Creatinina",
+          "value": "0,8 mg/dL",
+          "ref": "0,5-1,1"
+        },
+        {
+          "name": "Bilirubina totale",
+          "value": "1,1 mg/dL",
+          "ref": "<1,2"
+        },
+        {
+          "name": "Frequenza cardiaca",
+          "value": "54 bpm",
+          "ref": "60-100",
+          "flag": "low"
+        }
+      ],
+      "question": "Come gestisci?",
+      "options": [
+        {
+          "text": "Sospendo alectinib fino a CPK ≤2,5 volte il limite, poi riprendo alla stessa dose; bradicardia asintomatica da monitorare",
+          "grade": "best",
+          "why": "Un aumento di CPK oltre 5 volte il limite è un grado 3: si sospende e, al primo episodio, si riprende alla stessa dose. La bradicardia asintomatica è un effetto di classe che non richiede interventi."
+        },
+        {
+          "text": "Proseguo senza modifiche",
+          "grade": "wrong",
+          "why": "Con CPK di grado 3 e mialgie il farmaco va sospeso per il rischio di rabdomiolisi."
+        },
+        {
+          "text": "Sospendo definitivamente alectinib",
+          "grade": "wrong",
+          "why": "La tossicità è reversibile: in adiuvante interrompere significa rinunciare al beneficio."
+        },
+        {
+          "text": "Passo a lorlatinib",
+          "grade": "wrong",
+          "why": "Non c'è motivo di cambiare TKI per una tossicità gestibile; lorlatinib non è approvato in adiuvante."
+        }
+      ],
+      "explanation": "Le tossicità tipiche di alectinib sono mialgie con aumento di CPK, bradicardia, iperbilirubinemia, edema e aumento di peso.",
+      "result": "CPK 320 U/L dopo 10 giorni; alectinib ripreso e completato per 2 anni."
+    },
+    {
+      "title": "Recidiva",
+      "story": "Quattordici mesi dopo la fine di alectinib: cefalea mattutina.",
+      "imaging": "RM encefalo: quattro metastasi (massima 1,6 cm) con edema lieve. TC: noduli pleurici sinistri.",
+      "exams": [
+        {
+          "name": "Biopsia liquida (ctDNA)",
+          "value": "EML4-ALK, nessuna mutazione di resistenza di ALK"
+        }
+      ],
+      "question": "Quale terapia proponi?",
+      "options": [
+        {
+          "text": "Lorlatinib",
+          "grade": "best",
+          "why": "TKI ALK con la migliore attività intracranica; attivo anche dopo un TKI di 2ª generazione."
+        },
+        {
+          "text": "Ripresa di alectinib",
+          "grade": "ok",
+          "why": "La recidiva a distanza dalla fine dell'adiuvante fa pensare che la malattia sia ancora sensibile, ma con metastasi cerebrali multiple lorlatinib offre il miglior controllo intracranico."
+        },
+        {
+          "text": "Carboplatino-pemetrexed + pembrolizumab",
+          "grade": "wrong",
+          "why": "Nella malattia ALK-positiva l'immunoterapia è poco efficace: va usato un TKI."
+        },
+        {
+          "text": "Radioterapia panencefalica, poi TKI",
+          "grade": "wrong",
+          "why": "Con metastasi asintomatiche o poco sintomatiche e un TKI attivo nel SNC si inizia dal farmaco, riservando la radioterapia alle lesioni che non rispondono."
+        }
+      ],
+      "explanation": "Le recidive dopo TKI adiuvante sono un territorio nuovo. In presenza di metastasi cerebrali si sceglie il TKI con la migliore penetrazione nel SNC.",
+      "evidence": [
+        {
+          "trial": "CROWN",
+          "finding": "lorlatinib vs crizotinib: PFS a 5 anni 60% vs 8% (HR 0,19); progressione intracranica HR 0,06"
+        }
+      ],
+      "result": "Inizia lorlatinib 100 mg/die. Risposta intracranica completa a 3 mesi."
+    },
+    {
+      "title": "Tossicità di lorlatinib",
+      "story": "A 3 mesi: aumento di peso di 5 kg e lieve irritabilità riferita dal marito, senza alterazioni cognitive.",
+      "exams": [
+        {
+          "name": "Colesterolo totale",
+          "value": "342 mg/dL",
+          "ref": "<200",
+          "flag": "high"
+        },
+        {
+          "name": "LDL",
+          "value": "236 mg/dL",
+          "ref": "<115",
+          "flag": "high"
+        },
+        {
+          "name": "Trigliceridi",
+          "value": "520 mg/dL",
+          "ref": "<150",
+          "flag": "high"
+        }
+      ],
+      "question": "Come gestisci?",
+      "options": [
+        {
+          "text": "Avvio rosuvastatina (± fenofibrato per i trigliceridi), proseguo lorlatinib a dose piena e monitoro i sintomi neuro-psichici",
+          "grade": "best",
+          "why": "La dislipidemia è attesa con lorlatinib e si tratta senza ridurre il farmaco. Lorlatinib è induttore del CYP3A: si preferiscono statine poco dipendenti dal CYP3A come rosuvastatina o pravastatina."
+        },
+        {
+          "text": "Sospendo lorlatinib finché i lipidi non si normalizzano",
+          "grade": "wrong",
+          "why": "La dislipidemia si gestisce farmacologicamente; si sospende solo nel grado 4."
+        },
+        {
+          "text": "Torno ad alectinib",
+          "grade": "wrong",
+          "why": "Si perderebbe il controllo intracranico ottenuto con lorlatinib per una tossicità gestibile."
+        },
+        {
+          "text": "Avvio simvastatina 40 mg",
+          "grade": "wrong",
+          "why": "Simvastatina è metabolizzata dal CYP3A e lorlatinib ne riduce l'efficacia."
+        }
+      ],
+      "explanation": "Le tossicità tipiche di lorlatinib sono dislipidemia, aumento di peso, edemi ed effetti sul SNC (umore, cognitività). Gli effetti sul SNC di grado 2 richiedono una riduzione di dose, che non ne riduce l'efficacia.",
+      "result": "Rosuvastatina 10 mg + fenofibrato: colesterolo 198 mg/dL, trigliceridi 180 mg/dL dopo 8 settimane."
+    }
+  ],
+  "closing": "Punti da ricordare: EGFR, ALK e PD-L1 anche nello stadio iniziale; alectinib adiuvante (ALINA), niente IO nei driver; CPK e bradicardia da alectinib; lorlatinib per il SNC (CROWN); dislipidemia e interazioni CYP3A."
+}

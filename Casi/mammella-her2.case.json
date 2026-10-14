@@ -1,0 +1,211 @@
+{
+  "id": "mammella-her2",
+  "title": "Carcinoma mammario HER2-positivo metastatico de novo",
+  "theme": "Mammella",
+  "scheda": "Schede/Mammella/Mammella.md",
+  "algorithm": "mammella",
+  "patient": "Donna di 47 anni in premenopausa, ECOG PS 0, nessuna comorbidità. Nodulo alla mammella destra notato da due mesi e dolore all'ipocondrio destro.",
+  "steps": [
+    {
+      "title": "Diagnosi",
+      "story": "Biopsia del nodulo mammario: carcinoma duttale infiltrante G3, ER 5%, PgR 0%, HER2 3+, Ki67 45%.",
+      "imaging": "TC torace-addome e scintigrafia ossea: nodulo mammario di 4 cm, adenopatie ascellari, quattro metastasi epatiche e due metastasi ossee vertebrali senza rischio di frattura.",
+      "question": "Cosa esegui prima di avviare la 1ª linea?",
+      "multi": true,
+      "options": [
+        {
+          "text": "Ecocardiogramma per la FEVE basale",
+          "grade": "best",
+          "why": "Indispensabile prima di trastuzumab e pertuzumab, da ripetere ogni 3 mesi."
+        },
+        {
+          "text": "Biopsia di una metastasi epatica",
+          "grade": "ok",
+          "why": "Utile per confermare la natura metastatica e il profilo, ma nella malattia de novo la biopsia del primitivo è già sufficiente per decidere."
+        },
+        {
+          "text": "Valutazione odontoiatrica e avvio di un agente osteoprotettivo",
+          "grade": "ok",
+          "why": "Ragionevole con metastasi ossee: denosumab o acido zoledronico riducono gli eventi scheletrici, previa visita odontoiatrica."
+        },
+        {
+          "text": "Test genomico (Oncotype DX)",
+          "grade": "wrong",
+          "why": "I test genomici servono solo nella malattia iniziale HR+/HER2-."
+        },
+        {
+          "text": "CA 15-3 per decidere il trattamento",
+          "grade": "wrong",
+          "why": "Il marcatore non guida la scelta della terapia."
+        }
+      ],
+      "explanation": "Con ER 1-10% (ER-low) il tumore si comporta come un HR-negativo: la strategia è guidata da HER2 e il fattore da controllare prima di iniziare è la funzione cardiaca.",
+      "result": "FEVE 63%. Avviato denosumab dopo visita odontoiatrica."
+    },
+    {
+      "title": "1ª linea",
+      "question": "Quale 1ª linea proponi?",
+      "options": [
+        {
+          "text": "Docetaxel + trastuzumab + pertuzumab",
+          "grade": "best",
+          "why": "Standard di 1ª linea nel HER2-positivo metastatico, con il beneficio di OS più lungo e maturo."
+        },
+        {
+          "text": "Trastuzumab deruxtecan + pertuzumab",
+          "grade": "ok",
+          "why": "DESTINY-Breast09 ha mostrato una PFS superiore a THP, ma l'OS non è ancora matura e in Italia l'indicazione non è rimborsata."
+        },
+        {
+          "text": "T-DM1",
+          "grade": "wrong",
+          "why": "In 1ª linea è inferiore alla combinazione con doppio blocco (MARIANNE) e oggi è riservato alla malattia residua dopo neoadiuvante."
+        },
+        {
+          "text": "Trastuzumab + inibitore dell'aromatasi con soppressione ovarica",
+          "grade": "wrong",
+          "why": "Strategia senza chemioterapia per pazienti fragili con tumore fortemente ormono-sensibile: con ER 5% e malattia viscerale non è indicata."
+        }
+      ],
+      "explanation": "Il doppio blocco con trastuzumab e pertuzumab più un taxano è il riferimento: dopo 6-8 cicli il taxano si sospende e il doppio blocco prosegue in mantenimento.",
+      "evidence": [
+        {
+          "trial": "CLEOPATRA",
+          "finding": "pertuzumab + trastuzumab + docetaxel: OS 57,1 vs 40,8 mesi (HR 0,69)"
+        },
+        {
+          "trial": "DESTINY-Breast09",
+          "finding": "T-DXd + pertuzumab vs THP: PFS 40,7 vs 26,9 mesi (HR 0,56); OS immatura"
+        }
+      ],
+      "result": "Dopo 6 cicli di docetaxel: risposta parziale epatica. Mantenimento con trastuzumab + pertuzumab, FEVE stabile."
+    },
+    {
+      "title": "Progressione cerebrale",
+      "story": "Dopo 22 mesi: cefalea e instabilità nella marcia. La malattia extracranica è stabile.",
+      "imaging": "RM encefalo: tre metastasi (2,4 cm in sede cerebellare, 1,1 e 0,8 cm frontali) con modesto edema. TC: lesioni epatiche e ossee invariate.",
+      "question": "Come gestisci?",
+      "options": [
+        {
+          "text": "Radioterapia stereotassica sulle tre lesioni, desametasone a breve termine, proseguo trastuzumab + pertuzumab",
+          "grade": "best",
+          "why": "Con poche metastasi cerebrali e malattia extracranica controllata si trattano localmente le lesioni e si mantiene la terapia sistemica che funziona."
+        },
+        {
+          "text": "Tucatinib + trastuzumab + capecitabina",
+          "grade": "ok",
+          "why": "Attivo sulle metastasi cerebrali (HER2CLIMB) e opzione valida, ma con progressione solo encefalica la terapia locale permette di non cambiare linea."
+        },
+        {
+          "text": "Radioterapia panencefalica",
+          "grade": "wrong",
+          "why": "Con 1-4 lesioni la stereotassi ha pari controllo locale e meno deterioramento cognitivo."
+        },
+        {
+          "text": "Solo desametasone",
+          "grade": "wrong",
+          "why": "Controlla i sintomi da edema ma non tratta la malattia."
+        }
+      ],
+      "explanation": "Nell'HER2-positivo la progressione solo cerebrale è frequente: se il resto della malattia è controllato, si fa terapia locale e si prosegue la linea in corso.",
+      "result": "Stereotassi eseguita, desametasone sospeso in 3 settimane. Dopo 8 mesi progressione epatica; encefalo stabile. PS 0, FEVE 58%."
+    },
+    {
+      "title": "2ª linea",
+      "exams": [
+        {
+          "name": "FEVE",
+          "value": "58%",
+          "ref": "≥55"
+        },
+        {
+          "name": "SpO2",
+          "value": "98%"
+        },
+        {
+          "name": "TC torace",
+          "value": "nessuna interstiziopatia"
+        }
+      ],
+      "question": "Quale 2ª linea scegli?",
+      "options": [
+        {
+          "text": "Trastuzumab deruxtecan",
+          "grade": "best",
+          "why": "Standard di 2ª linea con beneficio di PFS e OS su T-DM1; attivo anche sulle metastasi cerebrali stabili o trattate."
+        },
+        {
+          "text": "Tucatinib + trastuzumab + capecitabina",
+          "grade": "ok",
+          "why": "Alternativa valida, da preferire se la progressione fosse soprattutto cerebrale e attiva."
+        },
+        {
+          "text": "T-DM1",
+          "grade": "wrong",
+          "why": "Inferiore a T-DXd nel confronto diretto (DESTINY-Breast03)."
+        },
+        {
+          "text": "Lapatinib + capecitabina",
+          "grade": "wrong",
+          "why": "Superato dalle opzioni attuali per efficacia."
+        }
+      ],
+      "explanation": "Con T-DXd va impostata la sorveglianza della pneumopatia interstiziale (TC ogni 6-12 settimane, sintomi respiratori) e una profilassi antiemetica adeguata.",
+      "evidence": [
+        {
+          "trial": "DESTINY-Breast03",
+          "finding": "T-DXd vs T-DM1: PFS 28,8 vs 6,8 mesi (HR 0,33); OS 52,6 vs 42,7 mesi (HR 0,73)"
+        },
+        {
+          "trial": "HER2CLIMB",
+          "finding": "tucatinib + trastuzumab + capecitabina: OS 21,9 vs 17,4 mesi (HR 0,66), anche nelle metastasi cerebrali attive"
+        }
+      ],
+      "result": "Inizia T-DXd 5,4 mg/kg ogni 3 settimane. Al controllo TC dopo 4 cicli: risposta parziale; la paziente è asintomatica ma la TC mostra opacità a vetro smerigliato subpleuriche bilaterali di nuova comparsa."
+    },
+    {
+      "title": "Pneumopatia asintomatica",
+      "exams": [
+        {
+          "name": "SpO2",
+          "value": "97%"
+        },
+        {
+          "name": "Sintomi respiratori",
+          "value": "assenti"
+        },
+        {
+          "name": "PCR",
+          "value": "4 mg/L",
+          "ref": "<5"
+        }
+      ],
+      "question": "Come gestisci?",
+      "options": [
+        {
+          "text": "Sospendo T-DXd, valuto con lo pneumologo ed escludo un'infezione; riprendo alla stessa dose se l'interstiziopatia si risolve entro 28 giorni",
+          "grade": "best",
+          "why": "Una ILD di grado 1 (asintomatica) richiede la sospensione; se si risolve entro 28 giorni T-DXd si riprende alla stessa dose, altrimenti con una riduzione. Gli steroidi si considerano se i segni persistono."
+        },
+        {
+          "text": "Proseguo T-DXd e ripeto la TC tra 3 mesi",
+          "grade": "wrong",
+          "why": "Anche la ILD asintomatica impone la sospensione: proseguire espone al rischio di progressione verso forme gravi, talvolta fatali."
+        },
+        {
+          "text": "Sospendo definitivamente T-DXd e avvio prednisone 1 mg/kg",
+          "grade": "wrong",
+          "why": "È la gestione del grado 2 o superiore: nel grado 1 il farmaco può essere ripreso."
+        },
+        {
+          "text": "Riduco la dose e proseguo",
+          "grade": "wrong",
+          "why": "La riduzione non sostituisce la sospensione."
+        }
+      ],
+      "explanation": "La ILD da T-DXd si gestisce per grado: grado 1 sospensione e ripresa se risolta; grado ≥2 sospensione definitiva e steroidi.",
+      "result": "Dopo 3 settimane la TC mostra risoluzione: T-DXd ripreso alla stessa dose con sorveglianza ravvicinata."
+    }
+  ],
+  "closing": "Punti da ricordare: ER-low si comporta come HR-negativo; THP in 1ª linea (CLEOPATRA); progressione solo cerebrale → terapia locale e prosecuzione; T-DXd in 2ª linea; ILD gestita per grado."
+}

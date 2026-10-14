@@ -1,0 +1,250 @@
+{
+  "id": "rene-ccrcc",
+  "title": "Carcinoma renale a cellule chiare metastatico",
+  "theme": "Urologici",
+  "scheda": "Schede/Urologici/Rene.md",
+  "algorithm": "rene",
+  "patient": "Uomo di 58 anni, Karnofsky 80%, ipertensione in terapia con amlodipina. Ematuria e dolore al fianco sinistro da due mesi.",
+  "steps": [
+    {
+      "title": "Classe di rischio",
+      "imaging": "TC: massa renale sinistra di 9 cm, trombo nella vena renale, multipli noduli polmonari bilaterali (massimo 2,5 cm) e una metastasi ossea iliaca.",
+      "story": "Biopsia renale: carcinoma a cellule chiare. Diagnosi da meno di un anno.",
+      "exams": [
+        {
+          "name": "Emoglobina",
+          "value": "11,2 g/dL",
+          "ref": "13,5-17,5",
+          "flag": "low"
+        },
+        {
+          "name": "Calcemia corretta",
+          "value": "10,1 mg/dL",
+          "ref": "8,5-10,5"
+        },
+        {
+          "name": "Neutrofili",
+          "value": "6.200/mm³",
+          "ref": "2.000-7.500"
+        },
+        {
+          "name": "Piastrine",
+          "value": "485.000/mm³",
+          "ref": "150.000-400.000",
+          "flag": "high"
+        },
+        {
+          "name": "Karnofsky",
+          "value": "80%"
+        }
+      ],
+      "question": "Qual è la classe di rischio IMDC?",
+      "options": [
+        {
+          "text": "Sfavorevole: 3 fattori (intervallo diagnosi-terapia <1 anno, anemia, piastrinosi)",
+          "grade": "best",
+          "why": "I sei fattori IMDC sono Karnofsky <80%, intervallo <1 anno, anemia, ipercalcemia, neutrofilia e piastrinosi. Tre o più fattori indicano rischio sfavorevole."
+        },
+        {
+          "text": "Intermedio: 2 fattori",
+          "grade": "wrong",
+          "why": "Va contato anche l'intervallo dalla diagnosi inferiore a un anno."
+        },
+        {
+          "text": "Sfavorevole: 4 fattori, incluso il Karnofsky",
+          "grade": "wrong",
+          "why": "Il fattore di rischio è un Karnofsky inferiore all'80%: 80% non conta."
+        },
+        {
+          "text": "Favorevole",
+          "grade": "wrong",
+          "why": "Con anemia e piastrinosi il rischio non può essere favorevole."
+        }
+      ],
+      "explanation": "La classe IMDC orienta la nefrectomia citoriduttiva e alcune scelte di 1ª linea, come nivolumab-ipilimumab, riservato al rischio intermedio e sfavorevole.",
+      "result": "Rischio IMDC sfavorevole."
+    },
+    {
+      "title": "Nefrectomia",
+      "question": "Proponi una nefrectomia citoriduttiva prima della terapia sistemica?",
+      "options": [
+        {
+          "text": "No: terapia sistemica subito, nefrectomia differita da valutare in caso di ottima risposta",
+          "grade": "best",
+          "why": "Nel rischio sfavorevole con malattia metastatica estesa la nefrectomia iniziale ritarda la terapia sistemica senza vantaggio."
+        },
+        {
+          "text": "Sì, nefrectomia prima della terapia sistemica",
+          "grade": "wrong",
+          "why": "CARMENA ha mostrato che nel rischio intermedio e sfavorevole la nefrectomia iniziale non migliora la sopravvivenza."
+        },
+        {
+          "text": "Embolizzazione renale e osservazione",
+          "grade": "wrong",
+          "why": "Serve solo come palliazione dell'ematuria grave, non come strategia oncologica."
+        }
+      ],
+      "explanation": "La nefrectomia citoriduttiva iniziale resta un'opzione solo per pazienti selezionati con buona prognosi e poca malattia metastatica.",
+      "evidence": [
+        {
+          "trial": "CARMENA",
+          "finding": "sunitinib da solo non inferiore a nefrectomia + sunitinib: OS 18,4 vs 13,9 mesi"
+        }
+      ],
+      "result": "Si avvia la terapia sistemica."
+    },
+    {
+      "title": "1ª linea",
+      "exams": [
+        {
+          "name": "Pressione arteriosa",
+          "value": "136/84 mmHg"
+        },
+        {
+          "name": "Creatinina",
+          "value": "1,2 mg/dL",
+          "ref": "0,7-1,2"
+        },
+        {
+          "name": "TSH",
+          "value": "1,8 mU/L",
+          "ref": "0,4-4"
+        }
+      ],
+      "question": "Quale 1ª linea proponi?",
+      "options": [
+        {
+          "text": "Combinazione immunoterapia + TKI (pembrolizumab-axitinib, nivolumab-cabozantinib o pembrolizumab-lenvatinib)",
+          "grade": "best",
+          "why": "Standard in tutte le classi IMDC, con alte risposte: utile con malattia sintomatica ed estesa."
+        },
+        {
+          "text": "Nivolumab + ipilimumab",
+          "grade": "best",
+          "why": "Standard nel rischio intermedio e sfavorevole, con la quota più alta di risposte complete durature."
+        },
+        {
+          "text": "Sunitinib o pazopanib",
+          "grade": "wrong",
+          "why": "Inferiori alle combinazioni con immunoterapia."
+        },
+        {
+          "text": "Nivolumab in monoterapia",
+          "grade": "wrong",
+          "why": "Non è uno standard di 1ª linea."
+        }
+      ],
+      "explanation": "Le combinazioni con immunoterapia hanno sostituito i TKI da soli. La scelta tra IO-IO e IO-TKI dipende dal bisogno di risposta rapida, dalla tollerabilità e dalle comorbidità.",
+      "evidence": [
+        {
+          "trial": "CheckMate 214",
+          "finding": "nivolumab + ipilimumab vs sunitinib nel rischio intermedio e sfavorevole: OS HR 0,69 (follow-up lungo)"
+        },
+        {
+          "trial": "KEYNOTE-426",
+          "finding": "pembrolizumab + axitinib vs sunitinib: OS HR 0,84"
+        },
+        {
+          "trial": "CheckMate 9ER",
+          "finding": "nivolumab + cabozantinib vs sunitinib: OS 46,5 vs 35,5 mesi (HR 0,79)"
+        }
+      ],
+      "result": "Inizia pembrolizumab + axitinib 5 mg due volte al giorno."
+    },
+    {
+      "title": "Epatotossicità",
+      "story": "Alla settimana 8: paziente asintomatico. Risposta parziale polmonare alla TC.",
+      "exams": [
+        {
+          "name": "ALT",
+          "value": "320 U/L",
+          "ref": "<40",
+          "flag": "high"
+        },
+        {
+          "name": "AST",
+          "value": "210 U/L",
+          "ref": "<40",
+          "flag": "high"
+        },
+        {
+          "name": "Bilirubina totale",
+          "value": "0,9 mg/dL",
+          "ref": "<1,2"
+        },
+        {
+          "name": "Sierologia virale",
+          "value": "negativa"
+        },
+        {
+          "name": "Ecografia epatica",
+          "value": "nella norma"
+        }
+      ],
+      "question": "Come gestisci?",
+      "options": [
+        {
+          "text": "Sospendo entrambi i farmaci; se dopo alcuni giorni senza axitinib le transaminasi non scendono, la tratto come epatite immuno-relata con prednisone 1 mg/kg",
+          "grade": "best",
+          "why": "L'aumento delle transaminasi può dipendere da entrambi i farmaci. Axitinib ha un'emivita breve: se la tossicità dipende da lui migliora in pochi giorni, altrimenti è un'epatite da pembrolizumab da trattare con steroidi."
+        },
+        {
+          "text": "Prednisone 1 mg/kg subito e prosecuzione di axitinib",
+          "grade": "wrong",
+          "why": "Si rischia di trattare con steroidi una tossicità da TKI e di continuare il farmaco responsabile."
+        },
+        {
+          "text": "Sospensione definitiva di pembrolizumab",
+          "grade": "wrong",
+          "why": "Nel grado 3 senza aumento della bilirubina la sospensione è temporanea."
+        },
+        {
+          "text": "Proseguo entrambi con controlli settimanali",
+          "grade": "wrong",
+          "why": "ALT oltre 5 volte il limite è un grado 3: va sospeso il trattamento."
+        }
+      ],
+      "explanation": "Nelle combinazioni IO-TKI le tossicità sovrapposte (epatica, diarrea, astenia, ipotiroidismo) richiedono di capire quale farmaco è responsabile prima di dare steroidi.",
+      "result": "Dopo 5 giorni senza axitinib ALT ancora 300 U/L: epatite immuno-relata. Prednisone con risoluzione in 3 settimane, poi ripresa di axitinib e, dopo scalaggio dello steroide, di pembrolizumab. Dopo 20 mesi progressione polmonare. PS 1."
+    },
+    {
+      "title": "2ª linea",
+      "question": "Quale 2ª linea proponi?",
+      "options": [
+        {
+          "text": "Cabozantinib",
+          "grade": "best",
+          "why": "TKI con il beneficio di OS più solido dopo un anti-VEGF, attivo anche dopo immunoterapia e sulle metastasi ossee."
+        },
+        {
+          "text": "Lenvatinib + everolimus",
+          "grade": "ok",
+          "why": "Opzione valida dopo terapia anti-VEGF."
+        },
+        {
+          "text": "Belzutifan",
+          "grade": "ok",
+          "why": "Attivo dopo immunoterapia e anti-VEGF (LITESPARK-005), ma in Italia non è rimborsato e lo studio non ha migliorato l'OS."
+        },
+        {
+          "text": "Nivolumab dopo pembrolizumab",
+          "grade": "wrong",
+          "why": "Il ritrattamento con immunoterapia dopo progressione non dà beneficio (CONTACT-03, TiNivo-2)."
+        }
+      ],
+      "explanation": "Dopo una combinazione IO-TKI si sceglie un altro VEGFR-TKI, preferibilmente diverso da quello già usato.",
+      "evidence": [
+        {
+          "trial": "METEOR",
+          "finding": "cabozantinib vs everolimus: OS 21,4 vs 16,5 mesi (HR 0,66)"
+        },
+        {
+          "trial": "LITESPARK-005",
+          "finding": "belzutifan vs everolimus: PFS HR 0,75; ORR 22% vs 3,5%; OS non significativa"
+        }
+      ],
+      "result": "Inizia cabozantinib 60 mg/die."
+    }
+  ],
+  "closing": "Punti da ricordare: sei fattori IMDC (Karnofsky <80%, non ≤80%); niente nefrectomia iniziale nel rischio sfavorevole (CARMENA); IO-IO o IO-TKI; capire quale farmaco causa l'epatotossicità; niente rechallenge IO in 2ª linea."
+}

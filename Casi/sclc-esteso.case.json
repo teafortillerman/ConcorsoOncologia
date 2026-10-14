@@ -1,0 +1,228 @@
+{
+  "id": "sclc-esteso",
+  "title": "Microcitoma polmonare esteso con SIADH",
+  "theme": "Torace",
+  "scheda": "Schede/Torace/Polmone_SCLC.md",
+  "algorithm": "polmone_sclc",
+  "patient": "Uomo di 64 anni, fumatore attivo (45 pack-year), ECOG PS 1. Da una settimana confusione, nausea e astenia marcata.",
+  "steps": [
+    {
+      "title": "Iponatremia",
+      "story": "EBUS: carcinoma a piccole cellule (TTF-1+, sinaptofisina+, Ki67 90%). Il paziente è euvolemico, senza edemi né segni di disidratazione.",
+      "imaging": "TC: massa ilare sinistra, adenopatie mediastiniche bulky bilaterali, multiple metastasi epatiche.",
+      "exams": [
+        {
+          "name": "Sodio",
+          "value": "121 mEq/L",
+          "ref": "135-145",
+          "flag": "low"
+        },
+        {
+          "name": "Osmolalità plasmatica",
+          "value": "254 mOsm/kg",
+          "ref": "275-295",
+          "flag": "low"
+        },
+        {
+          "name": "Osmolalità urinaria",
+          "value": "480 mOsm/kg",
+          "flag": "high"
+        },
+        {
+          "name": "Sodio urinario",
+          "value": "62 mEq/L",
+          "flag": "high"
+        },
+        {
+          "name": "TSH e cortisolo",
+          "value": "nella norma"
+        }
+      ],
+      "question": "Come gestisci l'iponatremia?",
+      "options": [
+        {
+          "text": "Restrizione idrica, soluzione ipertonica al 3% in boli solo se i sintomi peggiorano, correzione non oltre 8-10 mEq/L in 24 ore; avvio rapido della chemioterapia",
+          "grade": "best",
+          "why": "È una SIADH paraneoplastica: la terapia più efficace è quella del tumore. La correzione va limitata per evitare la mielinolisi osmotica; tolvaptan nelle forme refrattarie."
+        },
+        {
+          "text": "Soluzione fisiologica 0,9% 2 litri al giorno",
+          "grade": "wrong",
+          "why": "Nella SIADH la fisiologica può peggiorare l'iponatremia perché il sodio viene escreto e l'acqua trattenuta."
+        },
+        {
+          "text": "Ipertonica in infusione continua fino a 135 mEq/L in 24 ore",
+          "grade": "wrong",
+          "why": "Una correzione di 14 mEq/L in 24 ore espone a mielinolisi osmotica."
+        },
+        {
+          "text": "Rimandare la chemioterapia finché il sodio non si normalizza",
+          "grade": "wrong",
+          "why": "La SIADH si risolve soprattutto con il controllo del tumore, molto chemiosensibile."
+        }
+      ],
+      "explanation": "Iponatremia ipotonica con urine concentrate e sodio urinario alto in un paziente euvolemico, con tiroide e surrene normali, è una SIADH: nel microcitoma è la sindrome paraneoplastica più frequente.",
+      "result": "Restrizione idrica e un bolo di ipertonica: sodio 127 mEq/L dopo 24 ore. RM encefalo: nessuna metastasi."
+    },
+    {
+      "title": "1ª linea",
+      "question": "Quale 1ª linea proponi?",
+      "options": [
+        {
+          "text": "Carboplatino-etoposide + atezolizumab o durvalumab per 4 cicli, poi immunoterapia di mantenimento",
+          "grade": "best",
+          "why": "Standard nella malattia estesa, con beneficio di OS e una quota di lungo-sopravviventi."
+        },
+        {
+          "text": "Carboplatino-etoposide per 4-6 cicli",
+          "grade": "wrong",
+          "why": "Senza immunoterapia si rinuncia a un beneficio di sopravvivenza dimostrato."
+        },
+        {
+          "text": "Chemio-radioterapia concomitante",
+          "grade": "wrong",
+          "why": "È lo standard della malattia limitata: qui la malattia è estesa per le metastasi epatiche."
+        },
+        {
+          "text": "Topotecan",
+          "grade": "wrong",
+          "why": "È un farmaco di 2ª linea."
+        }
+      ],
+      "explanation": "Nel microcitoma esteso la chemio-immunoterapia con anti-PD-L1 è lo standard; la SIADH tende a risolversi con la risposta.",
+      "evidence": [
+        {
+          "trial": "IMpower133",
+          "finding": "atezolizumab + carboplatino-etoposide: OS 12,3 vs 10,3 mesi (HR 0,70)"
+        },
+        {
+          "trial": "CASPIAN",
+          "finding": "durvalumab + platino-etoposide: OS 13,0 vs 10,3 mesi (HR 0,73)"
+        }
+      ],
+      "result": "Dopo 4 cicli: risposta parziale, sodio normalizzato. Residuo mediastinico di 2 cm."
+    },
+    {
+      "title": "Dopo l'induzione",
+      "question": "Come prosegui dopo i 4 cicli?",
+      "multi": true,
+      "options": [
+        {
+          "text": "Mantenimento con atezolizumab",
+          "grade": "best",
+          "why": "Fa parte dello schema e prosegue fino a progressione."
+        },
+        {
+          "text": "RM encefalo di sorveglianza ogni 3 mesi",
+          "grade": "best",
+          "why": "Nella malattia estesa con buona risposta la sorveglianza con RM è un'alternativa alla PCI, che non ha dimostrato vantaggio di OS quando si esegue la RM di stadiazione."
+        },
+        {
+          "text": "Radioterapia toracica di consolidamento sul residuo",
+          "grade": "ok",
+          "why": "Può ridurre le recidive toraciche nei pazienti con buona risposta extratoracica (CREST), ma il suo ruolo con l'immunoterapia è meno definito."
+        },
+        {
+          "text": "Lurbinectedin + atezolizumab di mantenimento",
+          "grade": "ok",
+          "why": "IMforte ha mostrato un beneficio di OS, ma in Italia non è ancora rimborsato."
+        },
+        {
+          "text": "Sospendere ogni terapia e osservare",
+          "grade": "wrong",
+          "why": "Senza mantenimento si perde il beneficio dell'immunoterapia."
+        }
+      ],
+      "explanation": "Dopo l'induzione il mantenimento immunoterapico è standard; per l'encefalo si sceglie tra PCI e RM seriate.",
+      "result": "Mantenimento con atezolizumab e RM ogni 3 mesi. Dopo 5 mesi dall'ultimo platino: progressione epatica e nuova iponatremia (sodio 128 mEq/L). PS 1."
+    },
+    {
+      "title": "2ª linea",
+      "question": "Quale 2ª linea proponi?",
+      "options": [
+        {
+          "text": "Tarlatamab",
+          "grade": "best",
+          "why": "Il bispecifico DLL3×CD3 è superiore alla chemioterapia in OS e con meno tossicità di grado 3. Autorizzato in UE nel 2026, in attesa di rimborsabilità: richiede monitoraggio per la sindrome da rilascio di citochine."
+        },
+        {
+          "text": "Ripresa di carboplatino-etoposide",
+          "grade": "ok",
+          "why": "Con un intervallo libero da platino di almeno 3 mesi il ritrattamento è un'opzione valida."
+        },
+        {
+          "text": "Topotecan",
+          "grade": "ok",
+          "why": "È lo standard storico europeo, ma è meno efficace di tarlatamab."
+        },
+        {
+          "text": "Lurbinectedin in monoterapia",
+          "grade": "wrong",
+          "why": "Approvata dalla FDA, ma non autorizzata in Europa per questa indicazione."
+        },
+        {
+          "text": "Nivolumab in monoterapia",
+          "grade": "wrong",
+          "why": "Il paziente progredisce durante un anti-PD-L1."
+        }
+      ],
+      "explanation": "In 2ª linea conta l'intervallo libero da platino: sotto i 3 mesi la malattia è platino-resistente, sopra si può ritrattare. Tarlatamab è il nuovo riferimento.",
+      "evidence": [
+        {
+          "trial": "DeLLphi-304",
+          "finding": "tarlatamab vs chemioterapia: OS 13,6 vs 8,3 mesi (HR 0,60); tossicità di grado ≥3 27% vs 62%"
+        }
+      ],
+      "result": "Inizia tarlatamab con ricovero per le prime somministrazioni. Dopo 12 ore dalla seconda dose: febbre a 39 °C, PA 88/55 mmHg che risponde ai liquidi, SpO2 96%."
+    },
+    {
+      "title": "Sindrome da rilascio di citochine",
+      "exams": [
+        {
+          "name": "Temperatura",
+          "value": "39,1 °C",
+          "flag": "high"
+        },
+        {
+          "name": "Pressione arteriosa",
+          "value": "88/55 mmHg",
+          "flag": "low"
+        },
+        {
+          "name": "SpO2 in aria ambiente",
+          "value": "96%"
+        },
+        {
+          "name": "Stato neurologico",
+          "value": "vigile e orientato (ICE 10/10)"
+        }
+      ],
+      "question": "Come gestisci?",
+      "options": [
+        {
+          "text": "Liquidi ev, emocolture e antibiotico empirico, desametasone; tocilizumab se non migliora; la dose successiva si rimanda fino alla risoluzione",
+          "grade": "best",
+          "why": "Febbre con ipotensione che risponde ai liquidi senza bisogno di vasopressori e senza ossigeno è una CRS di grado 2. Va sempre esclusa una sepsi."
+        },
+        {
+          "text": "Solo paracetamolo e prosecuzione secondo il programma",
+          "grade": "wrong",
+          "why": "Con ipotensione la CRS è almeno di grado 2 e richiede trattamento attivo."
+        },
+        {
+          "text": "Sospendo definitivamente tarlatamab",
+          "grade": "wrong",
+          "why": "La sospensione definitiva è prevista per la CRS di grado 4 o ricorrente di grado 3."
+        },
+        {
+          "text": "Vasopressori e terapia intensiva",
+          "grade": "wrong",
+          "why": "L'ipotensione risponde ai liquidi: non è una CRS di grado 3-4."
+        }
+      ],
+      "explanation": "La CRS da bispecifici si gradua su febbre, ipotensione e ipossia (criteri ASTCT). Si concentra nei primi cicli: va sorvegliata anche la neurotossicità (ICANS).",
+      "result": "Risoluzione in 24 ore. Tarlatamab proseguito; risposta parziale epatica e sodio normalizzato al controllo successivo."
+    }
+  ],
+  "closing": "Punti da ricordare: SIADH paraneoplastica, correzione lenta e terapia del tumore; chemio-immunoterapia nella malattia estesa; PCI o RM di sorveglianza; intervallo libero da platino; tarlatamab e CRS di grado 2."
+}

@@ -1,0 +1,229 @@
+{
+  "id": "prostata-mhspc",
+  "title": "Carcinoma prostatico metastatico ormonosensibile ad alto volume",
+  "theme": "Urologici",
+  "scheda": "Schede/Urologici/Prostata.md",
+  "algorithm": "prostata",
+  "patient": "Uomo di 66 anni, ECOG PS 1, ipertensione ben controllata. Lombalgia e dolore dorsale da un mese.",
+  "steps": [
+    {
+      "title": "Diagnosi e volume",
+      "story": "PSA 210 ng/mL. Biopsia prostatica: adenocarcinoma Gleason 4+5 (ISUP 5) in 10 prelievi su 12.",
+      "imaging": "TC e scintigrafia ossea: sei metastasi ossee (vertebre, bacino e una costa), adenopatie iliache e due metastasi epatiche.",
+      "question": "Come inquadri la malattia e cosa richiedi?",
+      "multi": true,
+      "options": [
+        {
+          "text": "Alto volume secondo CHAARTED (metastasi viscerali)",
+          "grade": "best",
+          "why": "L'alto volume è definito da metastasi viscerali, oppure da 4 o più metastasi ossee di cui almeno una fuori da colonna e bacino: qui ci sono entrambe."
+        },
+        {
+          "text": "Test BRCA1/2 e geni HRR (germinale e somatico)",
+          "grade": "best",
+          "why": "Va eseguito già alla diagnosi metastatica: orienta i PARP-inibitori e ha implicazioni familiari."
+        },
+        {
+          "text": "PSMA-PET obbligatoria per decidere la terapia",
+          "grade": "wrong",
+          "why": "Gli studi registrativi hanno usato l'imaging convenzionale: la PSMA-PET non è necessaria per scegliere la terapia nella malattia già metastatica alla TC."
+        },
+        {
+          "text": "Basso volume",
+          "grade": "wrong",
+          "why": "La presenza di metastasi viscerali definisce l'alto volume."
+        }
+      ],
+      "explanation": "Nella malattia ormonosensibile il volume (CHAARTED) e il rischio (LATITUDE) orientano soprattutto l'uso del docetaxel e della radioterapia sul primitivo.",
+      "result": "Alto volume. Variante patogenetica germinale di BRCA2."
+    },
+    {
+      "title": "Compressione midollare",
+      "story": "Due giorni dopo: dolore dorsale ingravescente a cintura, nessun deficit motorio né sfinterico.",
+      "imaging": "RM del rachide: metastasi di T10 con epidurite e compressione del midollo, senza segni di mielopatia.",
+      "question": "Come gestisci?",
+      "options": [
+        {
+          "text": "Desametasone ad alte dosi, valutazione neurochirurgica e radioterapica urgente, ADT con antagonista LHRH (degarelix) o con antiandrogeno prima dell'agonista",
+          "grade": "best",
+          "why": "La compressione midollare è un'emergenza: steroidi e decompressione chirurgica o radioterapia. Con un agonista LHRH da solo il flare iniziale del testosterone può peggiorare la compressione."
+        },
+        {
+          "text": "Agonista LHRH da solo e controllo tra 2 settimane",
+          "grade": "wrong",
+          "why": "Il flare del testosterone nelle prime settimane può causare un deficit neurologico."
+        },
+        {
+          "text": "Prima PSMA-PET di ristadiazione",
+          "grade": "wrong",
+          "why": "Non deve ritardare il trattamento di un'emergenza neurologica."
+        },
+        {
+          "text": "Solo analgesici e fisioterapia",
+          "grade": "wrong",
+          "why": "Senza trattamento la compressione evolve verso la paraplegia."
+        }
+      ],
+      "explanation": "Lo stato neurologico al momento del trattamento predice l'esito: chi cammina all'inizio cammina di solito anche dopo.",
+      "result": "Desametasone 16 mg/die, degarelix e radioterapia su T10 (20 Gy in 5 frazioni). Dolore controllato, nessun deficit."
+    },
+    {
+      "title": "Terapia sistemica",
+      "exams": [
+        {
+          "name": "Creatinina",
+          "value": "0,9 mg/dL",
+          "ref": "0,7-1,2"
+        },
+        {
+          "name": "ALT",
+          "value": "24 U/L",
+          "ref": "<40"
+        },
+        {
+          "name": "Neutrofili",
+          "value": "5.400/mm³",
+          "ref": "2.000-7.500"
+        },
+        {
+          "name": "Emoglobina",
+          "value": "12,4 g/dL",
+          "ref": "13,5-17,5",
+          "flag": "low"
+        }
+      ],
+      "question": "Quale terapia sistemica proponi?",
+      "options": [
+        {
+          "text": "ADT + docetaxel + darolutamide",
+          "grade": "best",
+          "why": "La tripletta migliora l'OS nell'alto volume rispetto a ADT + docetaxel; darolutamide ha poche interazioni ed è ben tollerato."
+        },
+        {
+          "text": "ADT + docetaxel + abiraterone",
+          "grade": "best",
+          "why": "Tripletta alternativa con beneficio di OS nell'alto volume (PEACE-1)."
+        },
+        {
+          "text": "ADT + ARPI (enzalutamide, apalutamide o abiraterone)",
+          "grade": "ok",
+          "why": "Doppietta efficace e meno tossica, ma in un paziente giovane e in forma con malattia viscerale la tripletta è preferibile."
+        },
+        {
+          "text": "ADT + docetaxel",
+          "grade": "wrong",
+          "why": "Inferiore alla tripletta nei confronti diretti."
+        },
+        {
+          "text": "Solo ADT",
+          "grade": "wrong",
+          "why": "La sola ADT non è più uno standard nella malattia metastatica."
+        }
+      ],
+      "explanation": "Nella malattia ormonosensibile un inibitore del recettore androgenico va sempre aggiunto all'ADT; nell'alto volume, se il paziente è candidabile, si aggiunge anche il docetaxel.",
+      "evidence": [
+        {
+          "trial": "ARASENS",
+          "finding": "darolutamide + docetaxel + ADT vs docetaxel + ADT: OS HR 0,68"
+        },
+        {
+          "trial": "PEACE-1",
+          "finding": "abiraterone + docetaxel + ADT nell'alto volume: OS 5,1 vs 3,5 anni (HR 0,72)"
+        }
+      ],
+      "result": "Sei cicli di docetaxel con darolutamide e ADT. PSA nadir 0,4 ng/mL. Dopo 22 mesi: PSA in aumento a 18 ng/mL, testosterone 18 ng/dL, nuove metastasi ossee e epatiche."
+    },
+    {
+      "title": "Resistenza alla castrazione",
+      "exams": [
+        {
+          "name": "Testosterone",
+          "value": "18 ng/dL",
+          "ref": "<50 (castrazione)"
+        },
+        {
+          "name": "PSA",
+          "value": "18 ng/mL",
+          "flag": "high"
+        },
+        {
+          "name": "Emoglobina",
+          "value": "11,0 g/dL",
+          "ref": "13,5-17,5",
+          "flag": "low"
+        }
+      ],
+      "question": "Quale terapia proponi?",
+      "options": [
+        {
+          "text": "Olaparib",
+          "grade": "best",
+          "why": "Con variante BRCA dopo un ARPI olaparib migliora la rPFS e l'OS rispetto al cambio di ormonoterapia."
+        },
+        {
+          "text": "Cabazitaxel",
+          "grade": "ok",
+          "why": "Indicato dopo docetaxel e ARPI (CARD), ma nel BRCA mutato il PARP-inibitore viene prima."
+        },
+        {
+          "text": "Enzalutamide",
+          "grade": "wrong",
+          "why": "Dopo darolutamide il cambio di ARPI dà benefici minimi per la resistenza crociata."
+        },
+        {
+          "text": "Olaparib + abiraterone",
+          "grade": "wrong",
+          "why": "PROpel ha arruolato pazienti non ancora trattati con un ARPI nella fase resistente alla castrazione."
+        }
+      ],
+      "explanation": "Prima di parlare di resistenza alla castrazione va verificato il testosterone in castrazione; la scelta successiva dipende da cosa è già stato usato e dal profilo HRR.",
+      "evidence": [
+        {
+          "trial": "PROfound",
+          "finding": "coorte A (BRCA1/2, ATM): olaparib vs ARPI: rPFS 7,4 vs 3,6 mesi (HR 0,34); OS 19,1 vs 14,7 mesi (HR 0,69)"
+        }
+      ],
+      "result": "Inizia olaparib 300 mg due volte al giorno. Dopo 11 mesi: progressione ossea ed epatica. PS 1, neutrofili e piastrine nella norma."
+    },
+    {
+      "title": "Linea successiva",
+      "story": "Metastasi epatiche in aumento. Neuropatia di grado 1 dopo docetaxel.",
+      "question": "Quale terapia proponi?",
+      "options": [
+        {
+          "text": "Cabazitaxel con profilassi primaria con G-CSF",
+          "grade": "best",
+          "why": "Dopo docetaxel e ARPI cabazitaxel è superiore al cambio di ormonoterapia. Oltre i 65 anni la profilassi con G-CSF è raccomandata."
+        },
+        {
+          "text": "Lutezio-177-PSMA-617",
+          "grade": "ok",
+          "why": "Efficace dopo ARPI e taxano (VISION), ma in Italia è rimborsato dopo due taxani: può seguire il cabazitaxel."
+        },
+        {
+          "text": "Radio-223",
+          "grade": "wrong",
+          "why": "È controindicato con metastasi viscerali: agisce solo sull'osso."
+        },
+        {
+          "text": "Ritrattamento con docetaxel",
+          "grade": "wrong",
+          "why": "Dopo progressione durante ARPI il cabazitaxel è la scelta più efficace."
+        }
+      ],
+      "explanation": "Nella resistenza alla castrazione la sequenza dipende dalle linee già fatte, dalle sedi di malattia (il radio-223 richiede malattia solo ossea) e dalle regole di rimborsabilità.",
+      "evidence": [
+        {
+          "trial": "CARD",
+          "finding": "cabazitaxel vs ARPI dopo docetaxel e un altro ARPI: OS 13,6 vs 11,0 mesi (HR 0,64)"
+        },
+        {
+          "trial": "VISION",
+          "finding": "lutezio-PSMA vs terapia standard: OS 15,3 vs 11,3 mesi (HR 0,62)"
+        }
+      ],
+      "result": "Inizia cabazitaxel 25 mg/m² ogni 3 settimane con pegfilgrastim."
+    }
+  ],
+  "closing": "Punti da ricordare: definizione di alto volume; test HRR alla diagnosi metastatica; compressione midollare e flare; tripletta nell'alto volume; testosterone in castrazione; PARP-inibitore nel BRCA; radio-223 solo senza metastasi viscerali."
+}

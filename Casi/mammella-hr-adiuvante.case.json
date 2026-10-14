@@ -1,0 +1,206 @@
+{
+  "id": "mammella-hr-adiuvante",
+  "title": "Carcinoma mammario HR+/HER2- iniziale in premenopausa",
+  "theme": "Mammella",
+  "scheda": "Schede/Mammella/Mammella.md",
+  "algorithm": "mammella",
+  "patient": "Donna di 44 anni in premenopausa, ECOG PS 0, nessuna comorbidità. Diagnosi su mammografia di screening opportunistico.",
+  "steps": [
+    {
+      "title": "Dopo la chirurgia",
+      "story": "Quadrantectomia e biopsia del linfonodo sentinella: carcinoma duttale pT2 (2,6 cm) pN1a (2/3 linfonodi sentinella positivi), G2, ER 95%, PgR 60%, HER2 0, Ki67 22%. Non eseguita dissezione ascellare (criteri Z0011). Stadiazione negativa.",
+      "question": "Serve un test genomico per decidere la chemioterapia?",
+      "options": [
+        {
+          "text": "No: in premenopausa con 1-3 linfonodi positivi la chemioterapia dà beneficio anche con RS basso; si propone antraciclina e taxano",
+          "grade": "best",
+          "why": "RxPONDER ha mostrato che nelle pazienti N1 in premenopausa la chemioterapia migliora l'iDFS anche con RS ≤25: il test non risparmia la chemioterapia."
+        },
+        {
+          "text": "Sì: Oncotype DX e chemioterapia solo se RS >25",
+          "grade": "wrong",
+          "why": "È il criterio delle pazienti N1 in postmenopausa, non in premenopausa."
+        },
+        {
+          "text": "Soppressione ovarica con inibitore dell'aromatasi senza chemioterapia",
+          "grade": "ok",
+          "why": "Parte del beneficio della chemioterapia in premenopausa potrebbe dipendere dall'amenorrea indotta: alcune pazienti scelgono questa via dopo discussione, ma non è lo standard."
+        },
+        {
+          "text": "Solo tamoxifene",
+          "grade": "wrong",
+          "why": "Con N+ in premenopausa il rischio è troppo alto per il solo tamoxifene."
+        }
+      ],
+      "explanation": "Nelle pazienti N1 la decisione sulla chemioterapia dipende dalla menopausa: in postmenopausa con RS ≤25 si evita, in premenopausa no.",
+      "evidence": [
+        {
+          "trial": "RxPONDER",
+          "finding": "premenopausa, N1, RS ≤25: iDFS a 5 anni 93,9% con chemioterapia vs 89,0% senza (HR 0,60)"
+        }
+      ],
+      "result": "Epirubicina-ciclofosfamide per 4 cicli, poi paclitaxel settimanale per 12 settimane. Radioterapia mammaria."
+    },
+    {
+      "title": "Endocrinoterapia",
+      "story": "Al termine della chemioterapia la paziente ha ancora mestruazioni e un estradiolo da premenopausa.",
+      "exams": [
+        {
+          "name": "Estradiolo",
+          "value": "88 pg/mL",
+          "ref": "premenopausa"
+        },
+        {
+          "name": "DEXA",
+          "value": "T-score −1,1 lombare (osteopenia)"
+        }
+      ],
+      "question": "Quale endocrinoterapia imposti?",
+      "multi": true,
+      "options": [
+        {
+          "text": "Soppressione ovarica con LHRH-analogo + inibitore dell'aromatasi",
+          "grade": "best",
+          "why": "Nell'alto rischio in premenopausa (N+, chemioterapia) OFS + exemestane è la scelta più efficace (SOFT/TEXT)."
+        },
+        {
+          "text": "Acido zoledronico ogni 6 mesi per 3 anni",
+          "grade": "best",
+          "why": "Con soppressione ovarica i bisfosfonati riducono le recidive ossee e proteggono dalla perdita di massa ossea."
+        },
+        {
+          "text": "Inibitore dell'aromatasi senza soppressione ovarica",
+          "grade": "wrong",
+          "why": "In premenopausa l'inibitore dell'aromatasi da solo stimola l'ovaio e non è efficace."
+        },
+        {
+          "text": "Tamoxifene da solo",
+          "grade": "wrong",
+          "why": "Adeguato solo nel basso rischio in premenopausa."
+        }
+      ],
+      "explanation": "Nella premenopausa ad alto rischio si sopprime la funzione ovarica; con OFS si associa un bisfosfonato per efficacia e salute ossea.",
+      "evidence": [
+        {
+          "trial": "SOFT/TEXT",
+          "finding": "OFS + exemestane vs tamoxifene: recidiva a distanza ridotta in modo assoluto del 2-3% a 12 anni nell'alto rischio, con vantaggio di OS nelle pazienti che avevano fatto chemioterapia"
+        }
+      ],
+      "result": "Triptorelina mensile + exemestane, acido zoledronico semestrale."
+    },
+    {
+      "title": "Inibitore di CDK4/6",
+      "story": "pT2 (2,6 cm) pN1 (2 linfonodi), G2, Ki67 22%.",
+      "exams": [
+        {
+          "name": "ECG",
+          "value": "QTcF 418 ms",
+          "ref": "<450"
+        },
+        {
+          "name": "ALT",
+          "value": "22 U/L",
+          "ref": "<35"
+        },
+        {
+          "name": "Neutrofili",
+          "value": "3.900/mm³",
+          "ref": "2.000-7.500"
+        }
+      ],
+      "question": "Aggiungi un inibitore di CDK4/6?",
+      "options": [
+        {
+          "text": "Ribociclib 400 mg/die per 3 anni",
+          "grade": "best",
+          "why": "La paziente rientra nei criteri di NATALEE (stadio II con N+), ma non in quelli di monarchE. In Italia ribociclib adiuvante è rimborsato dal 2026."
+        },
+        {
+          "text": "Abemaciclib per 2 anni",
+          "grade": "wrong",
+          "why": "monarchE richiede 4 o più linfonodi positivi, oppure 1-3 con tumore ≥5 cm o G3: la paziente ha 2 linfonodi, T 2,6 cm e G2."
+        },
+        {
+          "text": "Nessun inibitore di CDK4/6",
+          "grade": "ok",
+          "why": "Accettabile, ma rinuncia a una riduzione del rischio di recidiva dimostrata in questo profilo."
+        },
+        {
+          "text": "Ribociclib 600 mg/die",
+          "grade": "wrong",
+          "why": "È la dose del metastatico: nell'adiuvante la dose è 400 mg/die."
+        }
+      ],
+      "explanation": "I due inibitori di CDK4/6 adiuvanti hanno criteri di eleggibilità diversi: abemaciclib solo nelle N+ ad alto rischio (2 anni), ribociclib anche in N1 a rischio intermedio e N0 ad alto rischio (3 anni, dose ridotta).",
+      "evidence": [
+        {
+          "trial": "NATALEE",
+          "finding": "ribociclib + endocrinoterapia: iDFS a 4 anni 88,5% vs 83,6% (HR 0,72)"
+        },
+        {
+          "trial": "monarchE",
+          "finding": "abemaciclib + endocrinoterapia nell'alto rischio: iDFS a 5 anni 83,6% vs 76,0% (HR 0,68), con beneficio di OS"
+        }
+      ],
+      "result": "Inizia ribociclib 400 mg/die, 21 giorni su 28."
+    },
+    {
+      "title": "Tossicità epatica",
+      "story": "Al secondo mese, controllo di routine. Paziente asintomatica.",
+      "exams": [
+        {
+          "name": "ALT",
+          "value": "290 U/L",
+          "ref": "<35",
+          "flag": "high"
+        },
+        {
+          "name": "AST",
+          "value": "198 U/L",
+          "ref": "<35",
+          "flag": "high"
+        },
+        {
+          "name": "Bilirubina totale",
+          "value": "0,7 mg/dL",
+          "ref": "<1,2"
+        },
+        {
+          "name": "QTcF",
+          "value": "426 ms",
+          "ref": "<450"
+        },
+        {
+          "name": "Sierologia HAV, HBV, HCV",
+          "value": "negativa"
+        }
+      ],
+      "question": "Come gestisci?",
+      "options": [
+        {
+          "text": "Sospendo ribociclib fino a ALT ≤3 volte il limite, poi riprendo a 200 mg/die; proseguo l'endocrinoterapia",
+          "grade": "best",
+          "why": "ALT >5 volte il limite senza aumento della bilirubina è un grado 3: si sospende e si riprende al livello di dose inferiore."
+        },
+        {
+          "text": "Proseguo ribociclib a dose piena con controlli settimanali",
+          "grade": "wrong",
+          "why": "Con grado 3 il farmaco va sospeso."
+        },
+        {
+          "text": "Sospendo definitivamente ribociclib",
+          "grade": "wrong",
+          "why": "La sospensione definitiva serve con ALT >3 volte e bilirubina >2 volte il limite (criteri di Hy) o con grado 4."
+        },
+        {
+          "text": "Passo ad abemaciclib",
+          "grade": "wrong",
+          "why": "La paziente non rientra nei criteri di monarchE."
+        }
+      ],
+      "explanation": "Con ribociclib si controllano funzione epatica ed ECG ogni 2 settimane nei primi 2 cicli: l'epatotossicità è in genere precoce e reversibile.",
+      "result": "Dopo 3 settimane ALT 41 U/L: ribociclib ripreso a 200 mg/die, ben tollerato."
+    }
+  ],
+  "closing": "Punti da ricordare: in premenopausa N1 il test genomico non risparmia la chemioterapia (RxPONDER); OFS + AI e bisfosfonato nell'alto rischio; criteri diversi di NATALEE e monarchE; dose adiuvante di ribociclib 400 mg; gestione dell'epatotossicità."
+}

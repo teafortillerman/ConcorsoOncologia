@@ -1,0 +1,189 @@
+{
+  "id": "nsclc-squamoso",
+  "title": "Carcinoma squamoso del polmone metastatico",
+  "theme": "Torace",
+  "scheda": "Schede/Torace/Polmone_NSCLC.md",
+  "algorithm": "polmone_nsclc",
+  "patient": "Uomo di 67 anni, fumatore attivo (50 pack-year), BPCO in terapia inalatoria, ECOG PS 1. Episodi di emottisi lieve da tre settimane.",
+  "steps": [
+    {
+      "title": "Diagnosi",
+      "story": "La broncoscopia mostra una lesione vegetante del bronco lobare superiore destro: carcinoma squamoso (p40+, TTF-1−).",
+      "imaging": "TC: massa ilare destra di 6 cm con area di escavazione centrale, adenopatie mediastiniche, metastasi surrenalica sinistra e due metastasi ossee costali.",
+      "question": "Quali determinazioni richiedi?",
+      "multi": true,
+      "options": [
+        {
+          "text": "PD-L1 (TPS)",
+          "grade": "best",
+          "why": "Determinante nello squamoso: decide tra immunoterapia in monoterapia e chemio-immunoterapia."
+        },
+        {
+          "text": "NGS su tessuto",
+          "grade": "ok",
+          "why": "Le linee guida la raccomandano anche nello squamoso, ma in un forte fumatore la probabilità di un driver trattabile è molto bassa: non deve ritardare l'inizio della terapia."
+        },
+        {
+          "text": "Solo EGFR con PCR",
+          "grade": "wrong",
+          "why": "Un test singolo ha poco senso: se si esegue una profilazione deve essere estesa."
+        },
+        {
+          "text": "CYFRA 21-1 per la scelta della terapia",
+          "grade": "wrong",
+          "why": "Il marcatore non guida la terapia."
+        }
+      ],
+      "explanation": "Nello squamoso del forte fumatore la scelta della 1ª linea si basa soprattutto sul PD-L1; la profilazione molecolare è più utile nei non fumatori o nei fumatori leggeri.",
+      "result": "PD-L1 TPS 0%. NGS: nessun driver trattabile."
+    },
+    {
+      "title": "1ª linea",
+      "exams": [
+        {
+          "name": "Creatinina",
+          "value": "1,1 mg/dL",
+          "ref": "0,7-1,2"
+        },
+        {
+          "name": "Neutrofili",
+          "value": "6.100/mm³",
+          "ref": "2.000-7.500"
+        },
+        {
+          "name": "Calcemia corretta",
+          "value": "9,8 mg/dL",
+          "ref": "8,5-10,5"
+        }
+      ],
+      "question": "Quale 1ª linea proponi?",
+      "options": [
+        {
+          "text": "Carboplatino + paclitaxel (o nab-paclitaxel) + pembrolizumab",
+          "grade": "best",
+          "why": "Standard nello squamoso indipendentemente dal PD-L1, con beneficio di OS anche nel TPS <1%."
+        },
+        {
+          "text": "Nivolumab + ipilimumab + 2 cicli di chemioterapia",
+          "grade": "ok",
+          "why": "Opzione valida nel TPS <1% (CheckMate 9LA), con più tossicità immuno-relata."
+        },
+        {
+          "text": "Carboplatino + pemetrexed + pembrolizumab",
+          "grade": "wrong",
+          "why": "Il pemetrexed non è attivo nello squamoso."
+        },
+        {
+          "text": "Carboplatino + paclitaxel + bevacizumab",
+          "grade": "wrong",
+          "why": "Bevacizumab è controindicato nello squamoso e con emottisi o escavazione per il rischio di emorragia fatale."
+        },
+        {
+          "text": "Pembrolizumab in monoterapia",
+          "grade": "wrong",
+          "why": "Con TPS 0% l'immunoterapia da sola è inferiore alla combinazione con chemioterapia."
+        }
+      ],
+      "explanation": "Nello squamoso si evitano pemetrexed e bevacizumab; con PD-L1 negativo l'immunoterapia va sempre associata alla chemioterapia.",
+      "evidence": [
+        {
+          "trial": "KEYNOTE-407",
+          "finding": "pembrolizumab + carboplatino-taxano: OS 17,1 vs 11,6 mesi (HR 0,71), beneficio anche nel TPS <1%"
+        },
+        {
+          "trial": "CheckMate 9LA",
+          "finding": "nivolumab + ipilimumab + 2 cicli di chemioterapia: OS 15,8 vs 11,0 mesi (HR 0,72)"
+        }
+      ],
+      "result": "Dopo 4 cicli: risposta parziale. Prosegue pembrolizumab di mantenimento. Avviato denosumab per le metastasi ossee."
+    },
+    {
+      "title": "Tossicità polmonare",
+      "story": "Al ciclo 8: dispnea ingravescente a riposo e tosse secca da 5 giorni, senza febbre.",
+      "imaging": "TC torace: opacità a vetro smerigliato e consolidazioni bilaterali di nuova comparsa, non presenti al controllo precedente.",
+      "exams": [
+        {
+          "name": "SpO2 in aria ambiente",
+          "value": "89%",
+          "ref": "≥94",
+          "flag": "low"
+        },
+        {
+          "name": "PCR",
+          "value": "28 mg/L",
+          "ref": "<5",
+          "flag": "high"
+        },
+        {
+          "name": "Procalcitonina",
+          "value": "0,08 ng/mL",
+          "ref": "<0,5"
+        },
+        {
+          "name": "Tampone respiratorio",
+          "value": "negativo"
+        }
+      ],
+      "question": "Come gestisci?",
+      "options": [
+        {
+          "text": "Ricovero, ossigeno, esclusione delle infezioni (anche con broncoscopia e BAL se possibile), metilprednisolone 1-2 mg/kg e sospensione definitiva di pembrolizumab",
+          "grade": "best",
+          "why": "Dispnea a riposo e necessità di ossigeno indicano una polmonite immuno-relata di grado 3: steroidi ad alte dosi e sospensione definitiva. Se non migliora entro 48 ore si aggiungono infliximab, micofenolato o immunoglobuline."
+        },
+        {
+          "text": "Antibiotici e prosecuzione di pembrolizumab",
+          "grade": "wrong",
+          "why": "Il quadro, con procalcitonina normale e tampone negativo, è tipico di polmonite da immunoterapia: proseguire è pericoloso."
+        },
+        {
+          "text": "Prednisone 0,5 mg/kg a domicilio e ripresa di pembrolizumab dopo la risoluzione",
+          "grade": "wrong",
+          "why": "È la gestione del grado 1-2; nel grado 3 il ritrattamento non è indicato."
+        },
+        {
+          "text": "Solo broncodilatatori per riacutizzazione di BPCO",
+          "grade": "wrong",
+          "why": "Le nuove opacità bilaterali non sono spiegate da una riacutizzazione di BPCO."
+        }
+      ],
+      "explanation": "La polmonite da immunoterapia è più frequente nei pazienti con BPCO e nei fumatori. Si gestisce per grado: i gradi 3-4 richiedono ricovero, steroidi ad alte dosi e sospensione definitiva.",
+      "result": "Miglioramento in 72 ore; steroide scalato in 6 settimane. Pembrolizumab sospeso. Dopo 4 mesi progressione polmonare e surrenalica; PS 1, nessuna emottisi recente."
+    },
+    {
+      "title": "2ª linea",
+      "question": "Quale 2ª linea scegli?",
+      "options": [
+        {
+          "text": "Docetaxel ± ramucirumab",
+          "grade": "best",
+          "why": "Standard di 2ª linea dopo chemio-immunoterapia; ramucirumab aggiunge un piccolo beneficio di OS ed è utilizzabile nello squamoso, valutando il rischio emorragico."
+        },
+        {
+          "text": "Docetaxel + nintedanib",
+          "grade": "wrong",
+          "why": "LUME-Lung 1 ha mostrato un beneficio solo nell'adenocarcinoma."
+        },
+        {
+          "text": "Ripresa di pembrolizumab",
+          "grade": "wrong",
+          "why": "Dopo una polmonite di grado 3 il ritrattamento con immunoterapia è controindicato."
+        },
+        {
+          "text": "Carboplatino + pemetrexed",
+          "grade": "wrong",
+          "why": "Il pemetrexed non è attivo nello squamoso."
+        }
+      ],
+      "explanation": "Le opzioni dopo chemio-immunoterapia nello squamoso sono limitate: la 2ª linea di riferimento è il docetaxel, con o senza ramucirumab.",
+      "evidence": [
+        {
+          "trial": "REVEL",
+          "finding": "docetaxel + ramucirumab vs docetaxel: OS 10,5 vs 9,1 mesi (HR 0,86), beneficio anche nello squamoso"
+        }
+      ],
+      "result": "Inizia docetaxel con profilassi primaria con G-CSF."
+    }
+  ],
+  "closing": "Punti da ricordare: nello squamoso niente pemetrexed né bevacizumab; chemio-immunoterapia nel TPS <1%; polmonite da IO di grado 3: steroidi e stop definitivo; docetaxel ± ramucirumab in 2ª linea."
+}

@@ -1,0 +1,247 @@
+{
+  "id": "stomaco-her2",
+  "title": "Adenocarcinoma gastrico HER2-positivo metastatico",
+  "theme": "Gastrointestinali",
+  "scheda": "Schede/Gastrointestinali/Stomaco.md",
+  "algorithm": "stomaco",
+  "patient": "Uomo di 66 anni, ECOG PS 1, ipertensione in terapia con ramipril. Epigastralgia, sazietà precoce e calo ponderale di 7 kg in tre mesi.",
+  "steps": [
+    {
+      "title": "Diagnosi e profilo biologico",
+      "story": "L'EGDS mostra una lesione ulcerata del corpo gastrico: le biopsie documentano un adenocarcinoma di tipo intestinale secondo Lauren.",
+      "imaging": "TC torace-addome con mezzo di contrasto: ispessimento parietale del corpo gastrico, adenopatie perigastriche e multiple metastasi epatiche bilobari (la maggiore di 4 cm).",
+      "question": "Quali determinazioni richiedi sul tessuto e nel sangue prima della 1ª linea?",
+      "multi": true,
+      "options": [
+        {
+          "text": "HER2 (immunoistochimica, con ISH se 2+)",
+          "grade": "best",
+          "why": "Obbligatorio nella malattia avanzata: se positivo il trastuzumab entra in 1ª linea. Va valutato su più frammenti per l'eterogeneità tipica del tumore gastrico."
+        },
+        {
+          "text": "PD-L1 con punteggio CPS",
+          "grade": "best",
+          "why": "Decide l'aggiunta dell'immunoterapia e, nel HER2-positivo, l'indicazione europea di pembrolizumab (CPS ≥1)."
+        },
+        {
+          "text": "MMR/MSI",
+          "grade": "best",
+          "why": "Va sempre determinato: i tumori dMMR/MSI-H sono i più sensibili all'immunoterapia."
+        },
+        {
+          "text": "Claudina 18.2",
+          "grade": "best",
+          "why": "Nel HER2-negativo apre a zolbetuximab: conviene determinarla in parallelo per non ripetere la biopsia."
+        },
+        {
+          "text": "Test DPYD",
+          "grade": "best",
+          "why": "In Italia è obbligatorio prima di qualunque fluoropirimidina (AIFA 2020)."
+        },
+        {
+          "text": "CEA e CA 19-9 per scegliere la terapia",
+          "grade": "wrong",
+          "why": "I marcatori servono al monitoraggio, non alla scelta del trattamento."
+        }
+      ],
+      "explanation": "Nel carcinoma gastrico avanzato il pannello minimo comprende HER2, PD-L1 (CPS), MMR/MSI e Claudina 18.2, insieme al DPYD prima della fluoropirimidina. È il profilo biologico, non la sola istologia, a scegliere la 1ª linea.",
+      "result": "HER2 3+ (in più del 10% delle cellule), PD-L1 CPS 6, pMMR, Claudina 18.2 positiva al 75%. DPYD wild-type. FEVE basale 61%."
+    },
+    {
+      "title": "1ª linea",
+      "story": "HER2-positivo con CPS 6. Funzione renale ed epatica conservate, nessuna cardiopatia.",
+      "exams": [
+        {
+          "name": "Creatinina",
+          "value": "1,0 mg/dL",
+          "ref": "0,7-1,2"
+        },
+        {
+          "name": "Bilirubina totale",
+          "value": "0,8 mg/dL",
+          "ref": "<1,2"
+        },
+        {
+          "name": "FEVE (ecocardiogramma)",
+          "value": "61%",
+          "ref": "≥55"
+        }
+      ],
+      "question": "Quale 1ª linea proponi?",
+      "options": [
+        {
+          "text": "Trastuzumab + pembrolizumab + fluoropirimidina e platino (CAPOX o FP)",
+          "grade": "best",
+          "why": "Nel HER2-positivo con CPS ≥1 l'aggiunta di pembrolizumab a trastuzumab e chemioterapia migliora risposte, PFS e OS: è lo standard rimborsato."
+        },
+        {
+          "text": "Trastuzumab + fluoropirimidina e platino",
+          "grade": "ok",
+          "why": "È lo standard storico (ToGA) e resta la scelta se CPS <1 o se l'immunoterapia è controindicata."
+        },
+        {
+          "text": "Zolbetuximab + CAPOX",
+          "grade": "wrong",
+          "why": "SPOTLIGHT e GLOW hanno arruolato solo tumori HER2-negativi: con HER2 positivo si perde il beneficio del trastuzumab."
+        },
+        {
+          "text": "Nivolumab + chemioterapia",
+          "grade": "wrong",
+          "why": "CheckMate 649 ha escluso i tumori HER2-positivi noti: anche qui manca il trastuzumab."
+        }
+      ],
+      "explanation": "Quando HER2 e Claudina 18.2 sono entrambi positivi prevale HER2: il trastuzumab è il cardine e l'immunoterapia si aggiunge in base al CPS.",
+      "evidence": [
+        {
+          "trial": "KEYNOTE-811",
+          "finding": "pembrolizumab + trastuzumab + chemioterapia: ORR 74% vs 52%; nel CPS ≥1 PFS 10,9 vs 7,3 mesi (HR 0,71) e OS 20,1 vs 15,7 mesi (HR 0,79)"
+        },
+        {
+          "trial": "ToGA",
+          "finding": "trastuzumab + chemioterapia: OS 13,8 vs 11,1 mesi (HR 0,74)"
+        }
+      ],
+      "result": "Dopo 6 cicli di CAPOX + trastuzumab + pembrolizumab: risposta parziale epatica (−58%). Prosegue il mantenimento con capecitabina, trastuzumab e pembrolizumab."
+    },
+    {
+      "title": "Tossicità cardiaca",
+      "story": "Al controllo dopo 7 mesi di trattamento il paziente è asintomatico, senza dispnea né edemi.",
+      "exams": [
+        {
+          "name": "FEVE (ecocardiogramma)",
+          "value": "43%",
+          "ref": "≥55",
+          "flag": "low"
+        },
+        {
+          "name": "Troponina I hs",
+          "value": "6 ng/L",
+          "ref": "<20"
+        },
+        {
+          "name": "NT-proBNP",
+          "value": "410 pg/mL",
+          "ref": "<125",
+          "flag": "high"
+        },
+        {
+          "name": "ECG",
+          "value": "ritmo sinusale, nessuna alterazione di conduzione"
+        }
+      ],
+      "question": "Come gestisci?",
+      "options": [
+        {
+          "text": "Sospendo il trastuzumab, avvio terapia cardioprotettiva con il cardiologo, ripeto l'ecocardiogramma dopo 3-4 settimane; pembrolizumab e capecitabina possono proseguire",
+          "grade": "best",
+          "why": "Un calo di FEVE ≥10 punti sotto il 50% impone la sospensione del trastuzumab. La cardiotossicità da trastuzumab è in genere reversibile e il farmaco si riprende se la FEVE recupera. La troponina normale e l'ECG senza alterazioni rendono improbabile una miocardite da pembrolizumab."
+        },
+        {
+          "text": "Proseguo tutto senza modifiche",
+          "grade": "wrong",
+          "why": "Sotto il 45%, o sotto il 50% con calo ≥10 punti, il trastuzumab va sospeso anche nel paziente asintomatico."
+        },
+        {
+          "text": "Riduco la dose di trastuzumab",
+          "grade": "wrong",
+          "why": "Il trastuzumab non si riduce di dose: si sospende e si riprende."
+        },
+        {
+          "text": "Sospendo definitivamente trastuzumab e pembrolizumab",
+          "grade": "wrong",
+          "why": "Non serve: la disfunzione è spesso reversibile e non ci sono segni di miocardite immuno-relata."
+        }
+      ],
+      "explanation": "Due possibili cause cardiache convivono: la disfunzione ventricolare da trastuzumab (reversibile, non dose-dipendente) e la miocardite da immunoterapia (rara ma grave, con troponina elevata e alterazioni ECG). Si distinguono con troponina, ECG ed eventualmente RM cardiaca.",
+      "result": "Ramipril aumentato e bisoprololo avviato. Dopo 4 settimane FEVE 54%: trastuzumab ripreso con controlli ogni 3 mesi. Dopo 15 mesi dall'inizio progressione epatica; la biopsia di una nuova lesione conferma HER2 3+. PS 1."
+    },
+    {
+      "title": "2ª linea",
+      "exams": [
+        {
+          "name": "FEVE",
+          "value": "55%",
+          "ref": "≥55"
+        },
+        {
+          "name": "Neuropatia periferica",
+          "value": "grado 1 (da oxaliplatino)"
+        },
+        {
+          "name": "SpO2",
+          "value": "98%"
+        }
+      ],
+      "question": "Quale 2ª linea scegli?",
+      "options": [
+        {
+          "text": "Trastuzumab deruxtecan",
+          "grade": "best",
+          "why": "Dopo progressione a trastuzumab, con HER2 confermato sulla nuova biopsia, T-DXd è superiore a ramucirumab-paclitaxel anche in OS. Richiede monitoraggio di FEVE e della pneumopatia interstiziale."
+        },
+        {
+          "text": "Ramucirumab + paclitaxel",
+          "grade": "ok",
+          "why": "Era lo standard di 2ª linea indipendentemente da HER2: resta valido, ma nel HER2-positivo è inferiore a T-DXd."
+        },
+        {
+          "text": "Trastuzumab con chemioterapia diversa (paclitaxel)",
+          "grade": "wrong",
+          "why": "Proseguire il trastuzumab oltre la progressione non dà beneficio nel gastrico (T-ACT)."
+        },
+        {
+          "text": "Pembrolizumab in monoterapia",
+          "grade": "wrong",
+          "why": "Il paziente è già in progressione durante pembrolizumab."
+        }
+      ],
+      "explanation": "Dopo trastuzumab una quota di tumori gastrici perde l'espressione di HER2: DESTINY-Gastric04 richiedeva la conferma su una biopsia dopo la progressione, e quando è fattibile la ri-biopsia è utile. Se la valutazione basale era adeguata non è comunque obbligatoria.",
+      "evidence": [
+        {
+          "trial": "DESTINY-Gastric04",
+          "finding": "T-DXd vs ramucirumab + paclitaxel: OS 14,7 vs 11,4 mesi (HR 0,70)"
+        },
+        {
+          "trial": "RAINBOW",
+          "finding": "ramucirumab + paclitaxel vs paclitaxel: OS 9,6 vs 7,4 mesi (HR 0,81)"
+        }
+      ],
+      "result": "Inizia T-DXd 6,4 mg/kg ogni 3 settimane. Risposta parziale per 9 mesi, poi progressione peritoneale. PS 1, FEVE 53%, nessuna pneumopatia."
+    },
+    {
+      "title": "3ª linea",
+      "question": "Quale 3ª linea proponi?",
+      "options": [
+        {
+          "text": "Ramucirumab + paclitaxel",
+          "grade": "best",
+          "why": "Il paziente non l'ha ancora ricevuto: con PS 1 e neuropatia di grado 1 è la scelta più efficace ancora disponibile."
+        },
+        {
+          "text": "Trifluridina/tipiracil",
+          "grade": "ok",
+          "why": "Standard di 3ª linea (TAGS), ma qui conviene prima usare la combinazione con ramucirumab non ancora utilizzata."
+        },
+        {
+          "text": "Ritrattamento con T-DXd",
+          "grade": "wrong",
+          "why": "Il paziente è in progressione durante T-DXd."
+        },
+        {
+          "text": "Nivolumab in monoterapia",
+          "grade": "wrong",
+          "why": "ATTRACTION-2 ha arruolato solo pazienti asiatici e il paziente è già stato esposto a pembrolizumab."
+        }
+      ],
+      "explanation": "In 3ª linea la scelta dipende da cosa resta da usare: chi ha ricevuto T-DXd in 2ª linea può ancora beneficiare di ramucirumab-paclitaxel, e la trifluridina/tipiracil rimane per la linea successiva.",
+      "evidence": [
+        {
+          "trial": "TAGS",
+          "finding": "trifluridina/tipiracil vs placebo: OS 5,7 vs 3,6 mesi (HR 0,69)"
+        }
+      ],
+      "result": "Inizia ramucirumab + paclitaxel settimanale."
+    }
+  ],
+  "closing": "Punti da ricordare: pannello completo (HER2, CPS, MMR, CLDN18.2, DPYD); con HER2 positivo prevale il trastuzumab; disfunzione da trastuzumab vs miocardite da IO; ri-biopsia prima di T-DXd; la sequenza si adatta a cosa è già stato usato."
+}

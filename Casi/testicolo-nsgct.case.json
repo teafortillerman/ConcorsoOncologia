@@ -1,0 +1,212 @@
+{
+  "id": "testicolo-nsgct",
+  "title": "Tumore germinale non seminomatoso metastatico",
+  "theme": "Urologici",
+  "scheda": "Schede/Urologici/Testicolo.md",
+  "algorithm": "testicolo",
+  "patient": "Uomo di 28 anni, ECOG PS 0, non fumatore. Tumefazione indolore del testicolo destro da due mesi e tosse secca da tre settimane.",
+  "steps": [
+    {
+      "title": "Prima dell'orchiectomia",
+      "story": "Ecografia scrotale: massa disomogenea di 4 cm del testicolo destro.",
+      "question": "Cosa esegui prima dell'orchiectomia?",
+      "multi": true,
+      "options": [
+        {
+          "text": "AFP, beta-hCG e LDH",
+          "grade": "best",
+          "why": "Sono indispensabili per la diagnosi, la stadiazione e la classificazione prognostica: vanno dosati prima e dopo l'orchiectomia."
+        },
+        {
+          "text": "Crioconservazione del seme",
+          "grade": "best",
+          "why": "Va proposta prima di qualunque trattamento, compresa l'orchiectomia."
+        },
+        {
+          "text": "TC torace-addome-pelvi",
+          "grade": "best",
+          "why": "Necessaria per la stadiazione; si può eseguire anche subito dopo l'orchiectomia."
+        },
+        {
+          "text": "Biopsia transcrotale",
+          "grade": "wrong",
+          "why": "La biopsia per via scrotale è controindicata per il rischio di disseminazione: la diagnosi si fa con orchiectomia per via inguinale."
+        }
+      ],
+      "explanation": "Nel tumore del testicolo l'orchiectomia inguinale è diagnostica e terapeutica; i marcatori servono anche a classificare il rischio.",
+      "result": "AFP 2.400 ng/mL, beta-hCG 8.200 UI/L, LDH 1,8 volte il limite. Orchiectomia: tumore misto (carcinoma embrionale 60%, yolk sac, teratoma). TC: massa retroperitoneale di 6 cm e multipli noduli polmonari. Nessuna metastasi viscerale extrapolmonare."
+    },
+    {
+      "title": "Classe prognostica",
+      "exams": [
+        {
+          "name": "AFP dopo orchiectomia",
+          "value": "1.800 ng/mL",
+          "ref": "<10",
+          "flag": "high"
+        },
+        {
+          "name": "Beta-hCG dopo orchiectomia",
+          "value": "6.500 UI/L",
+          "ref": "<5",
+          "flag": "high"
+        },
+        {
+          "name": "LDH",
+          "value": "1,6 volte il limite",
+          "flag": "high"
+        }
+      ],
+      "question": "Qual è la classe prognostica IGCCCG?",
+      "options": [
+        {
+          "text": "Intermedia",
+          "grade": "best",
+          "why": "Primitivo gonadico, metastasi solo polmonari e marcatori S2 (AFP 1.000-10.000 ng/mL o hCG 5.000-50.000 UI/L o LDH 1,5-10 volte il limite)."
+        },
+        {
+          "text": "Buona",
+          "grade": "wrong",
+          "why": "Nel non seminoma la classe buona richiede marcatori S1 (AFP <1.000, hCG <5.000, LDH <1,5 volte il limite)."
+        },
+        {
+          "text": "Sfavorevole",
+          "grade": "wrong",
+          "why": "Richiede primitivo mediastinico, metastasi viscerali extrapolmonari o marcatori S3."
+        }
+      ],
+      "explanation": "La classificazione IGCCCG usa i marcatori dosati prima della chemioterapia, la sede del primitivo e la presenza di metastasi viscerali non polmonari.",
+      "result": "Classe intermedia."
+    },
+    {
+      "title": "Chemioterapia",
+      "exams": [
+        {
+          "name": "Clearance della creatinina",
+          "value": "118 mL/min",
+          "ref": "≥90"
+        },
+        {
+          "name": "DLCO",
+          "value": "92% del predetto",
+          "ref": "≥80"
+        },
+        {
+          "name": "Audiometria",
+          "value": "nella norma"
+        }
+      ],
+      "question": "Quale chemioterapia proponi?",
+      "options": [
+        {
+          "text": "BEP per 4 cicli",
+          "grade": "best",
+          "why": "Standard nella classe intermedia e sfavorevole, in un paziente giovane con funzione renale e respiratoria normali."
+        },
+        {
+          "text": "BEP per 3 cicli",
+          "grade": "wrong",
+          "why": "Tre cicli bastano solo nella classe buona."
+        },
+        {
+          "text": "EP per 4 cicli",
+          "grade": "wrong",
+          "why": "È l'alternativa a BEP x3 nella classe buona, non nella intermedia."
+        },
+        {
+          "text": "VIP per 4 cicli",
+          "grade": "ok",
+          "why": "Efficacia equivalente a BEP x4, ma più mielotossico: si usa quando la bleomicina è controindicata."
+        },
+        {
+          "text": "Carboplatino in monoterapia",
+          "grade": "wrong",
+          "why": "Inferiore al cisplatino nei tumori germinali: usato solo nel seminoma stadio I."
+        }
+      ],
+      "explanation": "Nei tumori germinali la chemioterapia è a intento curativo: va eseguita a dose piena e nei tempi previsti, senza ritardi.",
+      "evidence": [
+        {
+          "trial": "IGCCCG (aggiornamento 2021)",
+          "finding": "non seminoma a rischio intermedio: PFS a 5 anni del 79% e OS dell'89% con chemioterapia a base di cisplatino"
+        }
+      ],
+      "result": "Inizia BEP."
+    },
+    {
+      "title": "Tossicità polmonare",
+      "story": "Al terzo ciclo: tosse secca ingravescente, dispnea da sforzo e crepitii basali bilaterali.",
+      "imaging": "TC torace: reticolazioni subpleuriche basali bilaterali di nuova comparsa; noduli polmonari in netta riduzione.",
+      "exams": [
+        {
+          "name": "DLCO",
+          "value": "64% del predetto",
+          "ref": "≥80",
+          "flag": "low"
+        },
+        {
+          "name": "SpO2",
+          "value": "95%"
+        },
+        {
+          "name": "Temperatura",
+          "value": "36,8 °C"
+        }
+      ],
+      "question": "Come gestisci?",
+      "options": [
+        {
+          "text": "Sospendo definitivamente la bleomicina e completo con cisplatino-etoposide (o con ifosfamide, schema VIP); steroidi se i sintomi peggiorano",
+          "grade": "best",
+          "why": "Il quadro è tipico della tossicità polmonare da bleomicina: il farmaco va sospeso e il trattamento completato senza perdere l'intento curativo."
+        },
+        {
+          "text": "Proseguo BEP a dose piena",
+          "grade": "wrong",
+          "why": "Proseguire la bleomicina espone a fibrosi polmonare potenzialmente fatale."
+        },
+        {
+          "text": "Riduco la dose di bleomicina",
+          "grade": "wrong",
+          "why": "La tossicità polmonare da bleomicina impone la sospensione definitiva."
+        },
+        {
+          "text": "Interrompo tutta la chemioterapia",
+          "grade": "wrong",
+          "why": "La malattia risponde e l'intento è curativo: va completata la chemioterapia senza bleomicina."
+        }
+      ],
+      "explanation": "Il rischio polmonare da bleomicina aumenta con la dose cumulativa, l'età, il fumo e l'insufficienza renale. In futuro, durante le anestesie, la FiO2 va mantenuta bassa.",
+      "result": "Completa 4 cicli con cisplatino-etoposide (o ifosfamide). Marcatori normalizzati. TC: massa retroperitoneale residua di 3 cm, noduli polmonari scomparsi."
+    },
+    {
+      "title": "Massa residua",
+      "question": "Come gestisci la massa retroperitoneale residua?",
+      "options": [
+        {
+          "text": "Linfadenectomia retroperitoneale con risparmio nervoso in centro esperto",
+          "grade": "best",
+          "why": "Nel non seminoma ogni massa residua >1 cm con marcatori normali va asportata: può contenere teratoma (circa 40%) o tumore vitale (circa 10%)."
+        },
+        {
+          "text": "PET-FDG e chirurgia solo se positiva",
+          "grade": "wrong",
+          "why": "Nel non seminoma la PET non distingue il teratoma, che non capta ma va comunque asportato."
+        },
+        {
+          "text": "Osservazione con TC ogni 3 mesi",
+          "grade": "wrong",
+          "why": "Il teratoma residuo può crescere (growing teratoma) o trasformarsi."
+        },
+        {
+          "text": "Altri 2 cicli di chemioterapia",
+          "grade": "wrong",
+          "why": "Con marcatori normali la massa va asportata, non trattata con altra chemioterapia."
+        }
+      ],
+      "explanation": "La PET ha un ruolo nelle masse residue del seminoma, non del non seminoma.",
+      "result": "Linfadenectomia retroperitoneale: teratoma maturo, nessun tumore vitale. Inizia il follow-up."
+    }
+  ],
+  "closing": "Punti da ricordare: marcatori e crioconservazione prima dell'orchiectomia inguinale; classi IGCCCG; BEP x4 nella classe intermedia; tossicità da bleomicina; chirurgia della massa residua nel non seminoma senza PET."
+}

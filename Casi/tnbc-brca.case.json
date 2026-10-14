@@ -1,0 +1,230 @@
+{
+  "id": "tnbc-brca",
+  "title": "Carcinoma mammario triplo negativo iniziale in portatrice BRCA1",
+  "theme": "Mammella",
+  "scheda": "Schede/Mammella/Mammella.md",
+  "algorithm": "mammella",
+  "patient": "Donna di 36 anni, ECOG PS 0, nullipara, desiderio di gravidanza. La madre ha avuto un carcinoma ovarico a 49 anni.",
+  "steps": [
+    {
+      "title": "Diagnosi",
+      "story": "Nodulo di 3,2 cm della mammella sinistra e linfonodo ascellare palpabile. Biopsia: carcinoma duttale G3, ER 0%, PgR 0%, HER2 0, Ki67 70%; agoaspirato del linfonodo positivo. Stadio cT2 cN1.",
+      "question": "Cosa programmi prima della terapia?",
+      "multi": true,
+      "options": [
+        {
+          "text": "Test germinale BRCA1/2 con consulenza genetica",
+          "grade": "best",
+          "why": "Indicato per età, triplo negativo e storia familiare di carcinoma ovarico: il risultato orienta la terapia adiuvante e la prevenzione."
+        },
+        {
+          "text": "Counselling oncofertilità e crioconservazione degli ovociti",
+          "grade": "best",
+          "why": "Va proposta prima della chemioterapia a tutte le pazienti giovani che desiderano una gravidanza; si può associare un LHRH-analogo durante la chemioterapia."
+        },
+        {
+          "text": "Clip di repere sulla lesione e sul linfonodo",
+          "grade": "best",
+          "why": "Dopo la neoadiuvante la lesione può scomparire: la clip permette di asportare correttamente la sede e il linfonodo inizialmente positivo."
+        },
+        {
+          "text": "Stadiazione con TC torace-addome e scintigrafia ossea",
+          "grade": "best",
+          "why": "Indicata nello stadio II con linfonodi positivi e nel triplo negativo."
+        },
+        {
+          "text": "PD-L1 per decidere se dare pembrolizumab",
+          "grade": "wrong",
+          "why": "Nella malattia iniziale il beneficio di pembrolizumab è indipendente dal PD-L1."
+        },
+        {
+          "text": "Chirurgia subito",
+          "grade": "wrong",
+          "why": "In un triplo negativo cT2 N1 la neoadiuvante è lo standard: aumenta la chirurgia conservativa e la risposta guida l'adiuvante."
+        }
+      ],
+      "explanation": "Nel triplo negativo dallo stadio II la sequenza è neoadiuvante, chirurgia e adiuvante adattata alla risposta. Le decisioni su fertilità e test genetico vanno prese prima di iniziare.",
+      "result": "Variante patogenetica germinale di BRCA1. Stadiazione negativa. Crioconservati 12 ovociti."
+    },
+    {
+      "title": "Neoadiuvante",
+      "question": "Quale terapia neoadiuvante proponi?",
+      "options": [
+        {
+          "text": "Paclitaxel-carboplatino + pembrolizumab, poi antraciclina-ciclofosfamide + pembrolizumab (schema KEYNOTE-522)",
+          "grade": "best",
+          "why": "Standard nel triplo negativo stadio II-III: aumenta la pCR e migliora EFS e OS."
+        },
+        {
+          "text": "Antraciclina e taxano senza pembrolizumab",
+          "grade": "wrong",
+          "why": "Rinuncia a un beneficio di sopravvivenza dimostrato."
+        },
+        {
+          "text": "Olaparib neoadiuvante",
+          "grade": "wrong",
+          "why": "Olaparib ha indicazione nel post-operatorio (OlympiA), non come neoadiuvante."
+        },
+        {
+          "text": "Capecitabina neoadiuvante",
+          "grade": "wrong",
+          "why": "La capecitabina si usa nell'adiuvante dopo malattia residua (CREATE-X)."
+        }
+      ],
+      "explanation": "Lo schema KEYNOTE-522 prevede 8 cicli neoadiuvanti con pembrolizumab e 9 cicli adiuvanti dopo la chirurgia, qualunque sia la risposta.",
+      "evidence": [
+        {
+          "trial": "KEYNOTE-522",
+          "finding": "pCR 64,8% vs 51,2%; EFS a 5 anni 81,2% vs 72,2% (HR 0,65); OS a 5 anni 86,6% vs 81,7% (HR 0,66)"
+        }
+      ],
+      "result": "Inizia lo schema KEYNOTE-522."
+    },
+    {
+      "title": "Tossicità immuno-relata",
+      "story": "Durante la fase con epirubicina-ciclofosfamide: astenia marcata, nausea, ipotensione ortostatica e cefalea.",
+      "exams": [
+        {
+          "name": "Sodio",
+          "value": "129 mEq/L",
+          "ref": "135-145",
+          "flag": "low"
+        },
+        {
+          "name": "Potassio",
+          "value": "4,4 mEq/L",
+          "ref": "3,5-5"
+        },
+        {
+          "name": "Glicemia",
+          "value": "64 mg/dL",
+          "ref": "70-100",
+          "flag": "low"
+        },
+        {
+          "name": "Cortisolo ore 8",
+          "value": "2,1 µg/dL",
+          "ref": "6-23",
+          "flag": "low"
+        },
+        {
+          "name": "ACTH",
+          "value": "6 pg/mL",
+          "ref": "10-60",
+          "flag": "low"
+        },
+        {
+          "name": "TSH",
+          "value": "0,3 mU/L",
+          "ref": "0,4-4",
+          "flag": "low"
+        },
+        {
+          "name": "fT4",
+          "value": "0,6 ng/dL",
+          "ref": "0,9-1,7",
+          "flag": "low"
+        }
+      ],
+      "question": "Come gestisci?",
+      "options": [
+        {
+          "text": "Avvio subito idrocortisone, poi levotiroxina dopo qualche giorno; RM dell'ipofisi; pembrolizumab può proseguire con la terapia sostitutiva",
+          "grade": "best",
+          "why": "Cortisolo e ACTH bassi con TSH e fT4 bassi indicano un'ipofisite (insufficienza surrenalica e ipotiroidismo centrali). Si dà prima il cortisolo: avviare la tiroxina per prima può scatenare una crisi surrenalica. Con terapia sostitutiva l'immunoterapia può continuare."
+        },
+        {
+          "text": "Avvio subito levotiroxina",
+          "grade": "wrong",
+          "why": "Senza prima il cortisolo la levotiroxina accelera il metabolismo del cortisolo e può precipitare una crisi surrenalica."
+        },
+        {
+          "text": "Sospendo definitivamente pembrolizumab",
+          "grade": "wrong",
+          "why": "Le endocrinopatie da immunoterapia si gestiscono con la terapia sostitutiva, che è in genere definitiva, senza obbligo di sospendere il farmaco."
+        },
+        {
+          "text": "Prednisone 1 mg/kg per 4 settimane",
+          "grade": "wrong",
+          "why": "Le dosi immunosoppressive non servono nell'ipofisite senza effetto massa: basta la dose sostitutiva."
+        }
+      ],
+      "explanation": "Nelle endocrinopatie da immunoterapia la regola è sostituire l'ormone mancante. L'ipofisite colpisce più spesso con anti-CTLA-4 ma è descritta anche con anti-PD-1.",
+      "result": "Idrocortisone 15-5-5 mg e levotiroxina. RM: ipofisi lievemente ingrandita. Completa la neoadiuvante; mastectomia nipple-sparing: residuo ypT1b (8 mm) ypN0."
+    },
+    {
+      "title": "Adiuvante",
+      "story": "Malattia residua dopo KEYNOTE-522 in portatrice di BRCA1. La radioterapia è stata discussa in base al cN1 iniziale.",
+      "question": "Quale terapia adiuvante proponi?",
+      "options": [
+        {
+          "text": "Completo pembrolizumab (9 cicli) e aggiungo olaparib per 1 anno",
+          "grade": "best",
+          "why": "Con variante BRCA germinale e malattia residua olaparib per 1 anno migliora iDFS e OS; pembrolizumab va completato secondo lo schema KEYNOTE-522."
+        },
+        {
+          "text": "Completo pembrolizumab e aggiungo capecitabina",
+          "grade": "ok",
+          "why": "È l'opzione per la malattia residua (CREATE-X), ma nella portatrice BRCA olaparib ha dato beneficio di OS."
+        },
+        {
+          "text": "Solo pembrolizumab",
+          "grade": "ok",
+          "why": "È lo schema KEYNOTE-522, ma con malattia residua e BRCA si perde il beneficio di olaparib."
+        },
+        {
+          "text": "Solo follow-up",
+          "grade": "wrong",
+          "why": "Con malattia residua il rischio di recidiva è alto."
+        }
+      ],
+      "explanation": "Le strategie di escalation dopo neoadiuvante dipendono dal sottotipo: capecitabina nel triplo negativo residuo, olaparib nel gBRCA residuo, T-DM1 nell'HER2-positivo residuo.",
+      "evidence": [
+        {
+          "trial": "OlympiA",
+          "finding": "olaparib per 1 anno: iDFS HR 0,63; OS HR 0,68"
+        },
+        {
+          "trial": "CREATE-X",
+          "finding": "capecitabina nel triplo negativo residuo: DFS HR 0,58"
+        }
+      ],
+      "result": "Completa pembrolizumab e olaparib. Nessuna recidiva a 2 anni."
+    },
+    {
+      "title": "Prevenzione",
+      "question": "Cosa proponi nel follow-up oltre al controllo oncologico?",
+      "multi": true,
+      "options": [
+        {
+          "text": "Annessiectomia bilaterale profilattica dopo i 35-40 anni, una volta completato il desiderio di gravidanza",
+          "grade": "best",
+          "why": "Nelle portatrici BRCA1 riduce il rischio di carcinoma ovarico e migliora la sopravvivenza."
+        },
+        {
+          "text": "Test a cascata nei familiari",
+          "grade": "best",
+          "why": "I familiari di primo grado hanno il 50% di probabilità di essere portatori."
+        },
+        {
+          "text": "Discussione della mastectomia controlaterale profilattica o RM mammaria annuale",
+          "grade": "best",
+          "why": "Il rischio di carcinoma controlaterale è elevato nelle portatrici BRCA1."
+        },
+        {
+          "text": "Tamoxifene di prevenzione",
+          "grade": "wrong",
+          "why": "Nel triplo negativo e nelle portatrici BRCA1 non ha un ruolo dimostrato."
+        },
+        {
+          "text": "CA 15-3 e TC ogni 6 mesi",
+          "grade": "wrong",
+          "why": "Il follow-up strumentale intensivo non migliora la sopravvivenza."
+        }
+      ],
+      "explanation": "La portatrice BRCA va seguita anche per il rischio di secondi tumori: la chirurgia di riduzione del rischio va pianificata con il progetto di gravidanza.",
+      "result": "Inserita nel percorso ad alto rischio eredo-familiare; test a cascata alle sorelle."
+    }
+  ],
+  "closing": "Punti da ricordare: test germinale, oncofertilità e clip prima della neoadiuvante; KEYNOTE-522 indipendente da PD-L1; ipofisite: prima il cortisolo; adiuvante adattata alla risposta (olaparib nel gBRCA, capecitabina nel TN); prevenzione BRCA."
+}

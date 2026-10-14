@@ -2153,6 +2153,36 @@
       "path": "Casi/colon-sinistro.case.json"
     },
     {
+      "id": "hcc-portale",
+      "title": "Epatocarcinoma con trombosi portale neoplastica",
+      "theme": "Gastrointestinali",
+      "scheda": "Schede/Gastrointestinali/Epatocarcinoma.md",
+      "algorithm": "epatocarcinoma",
+      "patient": "Uomo di 69 anni, ECOG PS 0. Cirrosi da HCV, eradicato con antivirali diretti nel 2019. Diabete di tipo 2. In sorveglianza ecografica semestrale.",
+      "steps": 5,
+      "path": "Casi/hcc-portale.case.json"
+    },
+    {
+      "id": "mammella-her2",
+      "title": "Carcinoma mammario HER2-positivo metastatico de novo",
+      "theme": "Mammella",
+      "scheda": "Schede/Mammella/Mammella.md",
+      "algorithm": "mammella",
+      "patient": "Donna di 47 anni in premenopausa, ECOG PS 0, nessuna comorbidità. Nodulo alla mammella destra notato da due mesi e dolore all'ipocondrio destro.",
+      "steps": 5,
+      "path": "Casi/mammella-her2.case.json"
+    },
+    {
+      "id": "mammella-hr-adiuvante",
+      "title": "Carcinoma mammario HR+/HER2- iniziale in premenopausa",
+      "theme": "Mammella",
+      "scheda": "Schede/Mammella/Mammella.md",
+      "algorithm": "mammella",
+      "patient": "Donna di 44 anni in premenopausa, ECOG PS 0, nessuna comorbidità. Diagnosi su mammografia di screening opportunistico.",
+      "steps": 4,
+      "path": "Casi/mammella-hr-adiuvante.case.json"
+    },
+    {
       "id": "mammella-hr",
       "title": "Recidiva metastatica di carcinoma mammario HR+/HER2-",
       "theme": "Mammella",
@@ -2163,6 +2193,16 @@
       "path": "Casi/mammella-hr.case.json"
     },
     {
+      "id": "nsclc-alk",
+      "title": "Adenocarcinoma polmonare ALK-positivo operato",
+      "theme": "Torace",
+      "scheda": "Schede/Torace/Polmone_NSCLC.md",
+      "algorithm": "polmone_nsclc",
+      "patient": "Donna di 44 anni, mai fumatrice, ECOG PS 0. Riscontro di nodulo polmonare a una radiografia eseguita per una tosse persistente.",
+      "steps": 5,
+      "path": "Casi/nsclc-alk.case.json"
+    },
+    {
       "id": "nsclc-egfr",
       "title": "Adenocarcinoma polmonare con metastasi encefaliche",
       "theme": "Torace",
@@ -2171,6 +2211,86 @@
       "patient": "Donna di 63 anni, ex fumatrice (8 pack-year, ha smesso 20 anni fa), ECOG PS 1. Tosse da due mesi e calo ponderale di 4 kg.",
       "steps": 4,
       "path": "Casi/nsclc-egfr.case.json"
+    },
+    {
+      "id": "nsclc-squamoso",
+      "title": "Carcinoma squamoso del polmone metastatico",
+      "theme": "Torace",
+      "scheda": "Schede/Torace/Polmone_NSCLC.md",
+      "algorithm": "polmone_nsclc",
+      "patient": "Uomo di 67 anni, fumatore attivo (50 pack-year), BPCO in terapia inalatoria, ECOG PS 1. Episodi di emottisi lieve da tre settimane.",
+      "steps": 4,
+      "path": "Casi/nsclc-squamoso.case.json"
+    },
+    {
+      "id": "pancreas-brca",
+      "title": "Adenocarcinoma pancreatico metastatico con variante BRCA2",
+      "theme": "Gastrointestinali",
+      "scheda": "Schede/Gastrointestinali/Pancreas.md",
+      "algorithm": "pancreas",
+      "patient": "Donna di 52 anni, ECOG PS 0. Ittero e prurito da due settimane, urine scure. La madre ha avuto un carcinoma ovarico a 58 anni.",
+      "steps": 5,
+      "path": "Casi/pancreas-brca.case.json"
+    },
+    {
+      "id": "prostata-mhspc",
+      "title": "Carcinoma prostatico metastatico ormonosensibile ad alto volume",
+      "theme": "Urologici",
+      "scheda": "Schede/Urologici/Prostata.md",
+      "algorithm": "prostata",
+      "patient": "Uomo di 66 anni, ECOG PS 1, ipertensione ben controllata. Lombalgia e dolore dorsale da un mese.",
+      "steps": 5,
+      "path": "Casi/prostata-mhspc.case.json"
+    },
+    {
+      "id": "rene-ccrcc",
+      "title": "Carcinoma renale a cellule chiare metastatico",
+      "theme": "Urologici",
+      "scheda": "Schede/Urologici/Rene.md",
+      "algorithm": "rene",
+      "patient": "Uomo di 58 anni, Karnofsky 80%, ipertensione in terapia con amlodipina. Ematuria e dolore al fianco sinistro da due mesi.",
+      "steps": 5,
+      "path": "Casi/rene-ccrcc.case.json"
+    },
+    {
+      "id": "sclc-esteso",
+      "title": "Microcitoma polmonare esteso con SIADH",
+      "theme": "Torace",
+      "scheda": "Schede/Torace/Polmone_SCLC.md",
+      "algorithm": "polmone_sclc",
+      "patient": "Uomo di 64 anni, fumatore attivo (45 pack-year), ECOG PS 1. Da una settimana confusione, nausea e astenia marcata.",
+      "steps": 5,
+      "path": "Casi/sclc-esteso.case.json"
+    },
+    {
+      "id": "stomaco-her2",
+      "title": "Adenocarcinoma gastrico HER2-positivo metastatico",
+      "theme": "Gastrointestinali",
+      "scheda": "Schede/Gastrointestinali/Stomaco.md",
+      "algorithm": "stomaco",
+      "patient": "Uomo di 66 anni, ECOG PS 1, ipertensione in terapia con ramipril. Epigastralgia, sazietà precoce e calo ponderale di 7 kg in tre mesi.",
+      "steps": 5,
+      "path": "Casi/stomaco-her2.case.json"
+    },
+    {
+      "id": "testicolo-nsgct",
+      "title": "Tumore germinale non seminomatoso metastatico",
+      "theme": "Urologici",
+      "scheda": "Schede/Urologici/Testicolo.md",
+      "algorithm": "testicolo",
+      "patient": "Uomo di 28 anni, ECOG PS 0, non fumatore. Tumefazione indolore del testicolo destro da due mesi e tosse secca da tre settimane.",
+      "steps": 5,
+      "path": "Casi/testicolo-nsgct.case.json"
+    },
+    {
+      "id": "tnbc-brca",
+      "title": "Carcinoma mammario triplo negativo iniziale in portatrice BRCA1",
+      "theme": "Mammella",
+      "scheda": "Schede/Mammella/Mammella.md",
+      "algorithm": "mammella",
+      "patient": "Donna di 36 anni, ECOG PS 0, nullipara, desiderio di gravidanza. La madre ha avuto un carcinoma ovarico a 49 anni.",
+      "steps": 5,
+      "path": "Casi/tnbc-brca.case.json"
     },
     {
       "id": "urotelio-m1",

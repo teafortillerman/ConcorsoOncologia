@@ -1,0 +1,247 @@
+{
+  "id": "hcc-portale",
+  "title": "Epatocarcinoma con trombosi portale neoplastica",
+  "theme": "Gastrointestinali",
+  "scheda": "Schede/Gastrointestinali/Epatocarcinoma.md",
+  "algorithm": "epatocarcinoma",
+  "patient": "Uomo di 69 anni, ECOG PS 0. Cirrosi da HCV, eradicato con antivirali diretti nel 2019. Diabete di tipo 2. In sorveglianza ecografica semestrale.",
+  "steps": [
+    {
+      "title": "Diagnosi e stadiazione",
+      "story": "L'ecografia di sorveglianza mostra un nodulo di nuova comparsa.",
+      "imaging": "TC trifasica: lesione di 7 cm del segmento VIII con iperenhancement in fase arteriosa e wash-out in fase portale (LI-RADS 5), due noduli satelliti e trombosi neoplastica del ramo portale destro. Nessuna metastasi extraepatica.",
+      "exams": [
+        {
+          "name": "Bilirubina totale",
+          "value": "1,4 mg/dL",
+          "ref": "<1,2",
+          "flag": "high"
+        },
+        {
+          "name": "Albumina",
+          "value": "3,6 g/dL",
+          "ref": "3,5-5"
+        },
+        {
+          "name": "INR",
+          "value": "1,2",
+          "ref": "0,8-1,2"
+        },
+        {
+          "name": "Ascite",
+          "value": "assente"
+        },
+        {
+          "name": "Encefalopatia",
+          "value": "assente"
+        },
+        {
+          "name": "Alfa-fetoproteina",
+          "value": "1.850 ng/mL",
+          "ref": "<10",
+          "flag": "high"
+        },
+        {
+          "name": "Piastrine",
+          "value": "98.000/mm³",
+          "ref": "150.000-400.000",
+          "flag": "low"
+        }
+      ],
+      "question": "Come inquadri il paziente?",
+      "options": [
+        {
+          "text": "BCLC C per invasione portale, Child-Pugh A6; la diagnosi radiologica è sufficiente",
+          "grade": "best",
+          "why": "Nel fegato cirrotico un nodulo LI-RADS 5 è diagnostico senza biopsia. L'invasione vascolare porta allo stadio BCLC C, la cui indicazione è la terapia sistemica."
+        },
+        {
+          "text": "BCLC B: candidato a chemioembolizzazione",
+          "grade": "wrong",
+          "why": "Il BCLC B richiede l'assenza di invasione vascolare: la trombosi portale neoplastica controindica la TACE."
+        },
+        {
+          "text": "La biopsia è obbligatoria prima di qualunque terapia",
+          "grade": "wrong",
+          "why": "Nel cirrotico i criteri radiologici bastano; la biopsia serve nei casi atipici o non cirrotici."
+        },
+        {
+          "text": "BCLC D: solo terapia di supporto",
+          "grade": "wrong",
+          "why": "Lo stadio D richiede Child-Pugh C o PS 3-4: il paziente è PS 0 e Child-Pugh A."
+        }
+      ],
+      "explanation": "La scelta nell'HCC dipende insieme da estensione del tumore, funzione epatica (Child-Pugh) e PS: in BCLC C con Child-Pugh A la terapia sistemica di combinazione è lo standard.",
+      "result": "BCLC C, Child-Pugh A6, PS 0. Si programma la terapia sistemica."
+    },
+    {
+      "title": "Prima della terapia",
+      "question": "Cosa esegui prima di iniziare una combinazione con bevacizumab?",
+      "multi": true,
+      "options": [
+        {
+          "text": "EGDS per la ricerca di varici (entro 6 mesi dall'inizio)",
+          "grade": "best",
+          "why": "Bevacizumab aumenta il rischio emorragico: IMbrave150 richiedeva un'EGDS recente e il trattamento delle varici a rischio."
+        },
+        {
+          "text": "Esame urine per la proteinuria",
+          "grade": "best",
+          "why": "La proteinuria è una tossicità tipica del bevacizumab e va valutata al basale."
+        },
+        {
+          "text": "Profilo HBV (HBsAg, anti-HBc) e funzione tiroidea",
+          "grade": "ok",
+          "why": "Utili prima dell'immunoterapia: il paziente è HCV eradicato, ma va esclusa una coinfezione HBV da riattivare."
+        },
+        {
+          "text": "Biopsia del trombo portale",
+          "grade": "wrong",
+          "why": "Non necessaria: la natura neoplastica del trombo è definita dall'enhancement arterioso alla TC."
+        },
+        {
+          "text": "PET-FDG",
+          "grade": "wrong",
+          "why": "Ha scarsa sensibilità nell'HCC e non cambia la strategia."
+        }
+      ],
+      "explanation": "Prima di atezolizumab-bevacizumab il rischio emorragico da ipertensione portale va valutato e trattato.",
+      "result": "EGDS: varici esofagee F2 con segni rossi. Legatura elastica e carvedilolo. HBsAg e anti-HBc negativi. Proteinuria assente."
+    },
+    {
+      "title": "1ª linea",
+      "question": "Quale 1ª linea proponi?",
+      "options": [
+        {
+          "text": "Atezolizumab + bevacizumab, dopo il trattamento delle varici",
+          "grade": "best",
+          "why": "Standard di 1ª linea con il beneficio di OS più solido; le varici trattate con legatura non lo controindicano."
+        },
+        {
+          "text": "Durvalumab + tremelimumab (STRIDE)",
+          "grade": "best",
+          "why": "Alternativa di pari livello e senza anti-VEGF: particolarmente adatta quando il rischio emorragico è elevato. Attenzione: HIMALAYA escludeva la trombosi del tronco portale (Vp4), qui assente perché è coinvolto un ramo."
+        },
+        {
+          "text": "Lenvatinib o sorafenib",
+          "grade": "ok",
+          "why": "Opzioni valide se l'immunoterapia è controindicata (es. trapianto, autoimmunità grave), ma meno efficaci delle combinazioni."
+        },
+        {
+          "text": "Chemioembolizzazione (TACE)",
+          "grade": "wrong",
+          "why": "Controindicata dalla trombosi portale."
+        },
+        {
+          "text": "Resezione epatica",
+          "grade": "wrong",
+          "why": "Lesione di 7 cm con satelliti e trombosi portale in fegato cirrotico con piastrinopenia: non è un candidato chirurgico."
+        }
+      ],
+      "explanation": "Le combinazioni con immunoterapia hanno sostituito i TKI in 1ª linea. La scelta tra atezolizumab-bevacizumab e STRIDE dipende soprattutto dal rischio emorragico.",
+      "evidence": [
+        {
+          "trial": "IMbrave150",
+          "finding": "atezolizumab + bevacizumab vs sorafenib: OS 19,2 vs 13,4 mesi (HR 0,66)"
+        },
+        {
+          "trial": "HIMALAYA",
+          "finding": "STRIDE vs sorafenib: OS 16,4 vs 13,8 mesi (HR 0,78), con OS a 5 anni del 19,6%"
+        }
+      ],
+      "result": "Inizia atezolizumab + bevacizumab. Risposta parziale con AFP a 210 ng/mL."
+    },
+    {
+      "title": "Tossicità",
+      "story": "Al ciclo 8 il paziente nota urine schiumose. Nessun edema.",
+      "exams": [
+        {
+          "name": "Pressione arteriosa",
+          "value": "165/100 mmHg",
+          "ref": "<140/90",
+          "flag": "high"
+        },
+        {
+          "name": "Proteinuria delle 24 ore",
+          "value": "2,6 g",
+          "ref": "<0,15",
+          "flag": "high"
+        },
+        {
+          "name": "Creatinina",
+          "value": "1,0 mg/dL",
+          "ref": "0,7-1,2"
+        },
+        {
+          "name": "TSH",
+          "value": "2,1 mU/L",
+          "ref": "0,4-4"
+        }
+      ],
+      "question": "Come gestisci?",
+      "options": [
+        {
+          "text": "Sospendo bevacizumab fino a proteinuria <2 g/24 h, avvio un ACE-inibitore, proseguo atezolizumab",
+          "grade": "best",
+          "why": "Proteinuria ≥2 g/24 h e ipertensione sono tossicità da anti-VEGF: si sospende il solo bevacizumab, mentre l'atezolizumab può continuare."
+        },
+        {
+          "text": "Riduco la dose di bevacizumab",
+          "grade": "wrong",
+          "why": "Il bevacizumab non si riduce di dose: si sospende e si riprende."
+        },
+        {
+          "text": "Sospendo entrambi i farmaci in modo definitivo",
+          "grade": "wrong",
+          "why": "Eccessivo: la tossicità è dovuta al solo bevacizumab ed è in genere reversibile."
+        },
+        {
+          "text": "Proseguo senza modifiche e controllo tra 3 mesi",
+          "grade": "wrong",
+          "why": "Con proteinuria ≥2 g/24 h il bevacizumab va sospeso; la sindrome nefrosica è la complicanza da prevenire."
+        }
+      ],
+      "explanation": "Nella combinazione si attribuisce la tossicità al farmaco giusto: proteinuria e ipertensione all'anti-VEGF, epatite o tiroidite all'immunoterapia.",
+      "result": "Dopo 4 settimane proteinuria 0,8 g/24 h e PA 130/80: bevacizumab ripreso. Dopo 14 mesi progressione con noduli polmonari. Child-Pugh A6, PS 1, AFP 520 ng/mL."
+    },
+    {
+      "title": "2ª linea",
+      "question": "Quale 2ª linea proponi?",
+      "options": [
+        {
+          "text": "Lenvatinib o sorafenib",
+          "grade": "best",
+          "why": "Dopo atezolizumab-bevacizumab mancano studi randomizzati: i TKI di 1ª linea sono l'opzione più usata e raccomandata."
+        },
+        {
+          "text": "Cabozantinib",
+          "grade": "ok",
+          "why": "Attivo (CELESTIAL), ma studiato dopo sorafenib: dopo immunoterapia è un'opzione, non la prima scelta."
+        },
+        {
+          "text": "Regorafenib",
+          "grade": "wrong",
+          "why": "RESORCE ha arruolato solo pazienti che avevano tollerato sorafenib: il paziente non l'ha mai ricevuto."
+        },
+        {
+          "text": "Nivolumab in monoterapia",
+          "grade": "wrong",
+          "why": "Il paziente è in progressione durante un anti-PD-L1: non ha senso ritrattare con un anti-PD-1."
+        }
+      ],
+      "explanation": "Le 2ª linee approvate (regorafenib, cabozantinib, ramucirumab con AFP ≥400) sono state studiate dopo sorafenib. Dopo l'immunoterapia si usa un TKI di 1ª linea, mantenendo la funzione epatica come vincolo principale.",
+      "evidence": [
+        {
+          "trial": "REFLECT",
+          "finding": "lenvatinib vs sorafenib in 1ª linea: OS 13,6 vs 12,3 mesi (non inferiorità)"
+        },
+        {
+          "trial": "REACH-2",
+          "finding": "ramucirumab dopo sorafenib con AFP ≥400 ng/mL: OS 8,5 vs 7,3 mesi (HR 0,71)"
+        }
+      ],
+      "result": "Inizia lenvatinib 12 mg/die (peso ≥60 kg)."
+    }
+  ],
+  "closing": "Punti da ricordare: diagnosi radiologica nel cirrotico; BCLC, Child-Pugh e PS insieme; EGDS e varici prima del bevacizumab; STRIDE se il rischio emorragico è alto; tossicità da anti-VEGF vs da IO; dopo IO un TKI di 1ª linea."
+}
